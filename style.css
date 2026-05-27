@@ -768,6 +768,34 @@ h1 {
   gap: 12px;
 }
 
+.contact-whatsapp-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.contact-whatsapp-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 14px;
+  border-radius: 14px;
+  background: rgba(255, 122, 24, 0.08);
+  border: 1px solid rgba(255, 122, 24, 0.18);
+  color: #ffd7b5;
+  font-size: 0.92rem;
+  font-weight: 800;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.contact-whatsapp-chip:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 122, 24, 0.14);
+  border-color: rgba(255, 122, 24, 0.3);
+}
+
 .contact-data {
   display: grid;
   gap: 12px;
@@ -921,6 +949,10 @@ h1 {
   .hero-buttons .btn,
   .contact-row .btn {
     flex: 1 1 100%;
+  }
+
+  .contact-whatsapp-list {
+    grid-template-columns: 1fr;
   }
 
   .product-grid,
