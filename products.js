@@ -7,7 +7,7 @@ const HAODE_PRODUCTS = [
     name: 'iPhone INCELL FHD',
     description: 'Pantalla para el mercado mexicano con respuesta estable y rotación rápida para mayoristas.',
     priceText: 'Precio de mayoreo disponible',
-    image: 'assets/products/iphone-incell-fhd.svg',
+    image: 'assets/products/iphone-incell/iphone-incell-01.jpg',
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: iPhone INCELL FHD\nCantidad:\nCiudad:',
   },
   {
@@ -16,7 +16,7 @@ const HAODE_PRODUCTS = [
     name: 'iPhone OLED Premium',
     description: 'Acabado premium para clientes que buscan mejor brillo, color y una presentación más alta.',
     priceText: 'Precio de mayoreo disponible',
-    image: 'assets/products/iphone-oled-premium.svg',
+    image: 'assets/products/iphone-oled/iphone-oled-01.jpg',
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: iPhone OLED Premium\nCantidad:\nCiudad:',
   },
   {
@@ -25,7 +25,7 @@ const HAODE_PRODUCTS = [
     name: 'Samsung INCELL con marco',
     description: 'Opción confiable para negocios de reparación y reventa con flujo rápido de inventario.',
     priceText: 'Precio de mayoreo disponible',
-    image: 'assets/products/samsung-incell-con-marco.svg',
+    image: 'assets/products/samsung-incell/samsung-incell-01.jpg',
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: Samsung INCELL con marco\nCantidad:\nCiudad:',
   },
   {
@@ -34,7 +34,7 @@ const HAODE_PRODUCTS = [
     name: 'Samsung OLED con marco',
     description: 'Pantalla de nivel premium para clientes que priorizan calidad visual y mayor valor percibido.',
     priceText: 'Precio de mayoreo disponible',
-    image: 'assets/products/samsung-oled-con-marco.svg',
+    image: 'assets/products/samsung-oled/samsung-oled-01.jpg',
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: Samsung OLED con marco\nCantidad:\nCiudad:',
   },
 ];
