@@ -413,6 +413,52 @@ h1 {
   padding: 24px;
 }
 
+.quote-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.quote-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quote-form span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffd7b5;
+}
+
+.quote-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  outline: none;
+}
+
+.quote-form input::placeholder {
+  color: rgba(186, 178, 168, 0.75);
+}
+
+.quote-form input:focus {
+  border-color: rgba(255, 122, 24, 0.4);
+  box-shadow: 0 0 0 4px rgba(255, 122, 24, 0.12);
+}
+
+.quote-submit {
+  min-height: 48px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
 .products-hero {
   padding: 28px 0 10px;
 }
@@ -886,6 +932,10 @@ h1 {
   .catalog-card {
     grid-template-columns: 1fr;
   }
+
+  .quote-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -954,6 +1004,15 @@ h1 {
 
   .contact-whatsapp-list {
     grid-template-columns: 1fr;
+  }
+
+  .quote-form {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-submit {
+    min-height: 52px;
+    font-size: 1rem;
   }
 
   .product-grid,
