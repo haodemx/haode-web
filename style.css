@@ -481,6 +481,51 @@ h1 {
   margin-bottom: 10px;
 }
 
+.catalog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.filter-chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 122, 24, 0.3);
+}
+
+.filter-chip.is-active {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: #16110d;
+  border-color: transparent;
+  box-shadow: 0 16px 32px rgba(255, 122, 24, 0.24);
+}
+
+.catalog-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .product-page-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -562,10 +607,24 @@ h1 {
   font-size: 1.25rem;
 }
 
+.catalog-category {
+  margin: 0;
+  color: #ffbc80;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .catalog-content p {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.catalog-price {
+  color: #ffd7b5;
+  font-weight: 800;
 }
 
 .showcase-grid {
@@ -1034,6 +1093,18 @@ h1 {
 
   .contact-whatsapp-list {
     grid-template-columns: 1fr;
+  }
+
+  .catalog-toolbar {
+    align-items: flex-start;
+  }
+
+  .catalog-filters {
+    width: 100%;
+  }
+
+  .filter-chip {
+    flex: 1 1 calc(50% - 10px);
   }
 
   .quote-form {
