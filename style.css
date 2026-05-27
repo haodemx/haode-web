@@ -574,6 +574,35 @@ h1 {
   gap: 14px;
 }
 
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.trust-card {
+  border-radius: 18px;
+  min-height: 160px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 122, 24, 0.12), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.025);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.trust-card strong {
+  font-size: 1.08rem;
+}
+
+.trust-card span {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .showcase-card {
   border-radius: 18px;
   min-height: 210px;
@@ -925,7 +954,8 @@ h1 {
   .showcase-grid,
   .product-page-grid,
   .product-grid,
-  .benefit-grid {
+  .benefit-grid,
+  .trust-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1018,7 +1048,8 @@ h1 {
   .product-grid,
   .showcase-grid,
   .product-page-grid,
-  .benefit-grid {
+  .benefit-grid,
+  .trust-grid {
     grid-template-columns: 1fr;
   }
 
