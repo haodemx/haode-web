@@ -864,9 +864,42 @@ function createProductCard(product) {
   quality.className = 'shop-quality';
   quality.textContent = product.quality;
 
-  const price = document.createElement('p');
-  price.className = 'shop-price';
-  price.textContent = product.lowestPriceText || 'Consultar';
+  const priceWrap = document.createElement('div');
+  priceWrap.className = 'shop-price-wrap';
+
+  const priceTable = document.createElement('table');
+  priceTable.className = 'price-table';
+  priceTable.setAttribute('aria-label', `Precios por cantidad de ${product.name}`);
+
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+  const quantityHead = document.createElement('th');
+  quantityHead.scope = 'col';
+  quantityHead.textContent = 'Cantidad';
+  const priceHead = document.createElement('th');
+  priceHead.scope = 'col';
+  priceHead.textContent = 'Precio';
+  headerRow.append(quantityHead, priceHead);
+  thead.appendChild(headerRow);
+
+  const tbody = document.createElement('tbody');
+  product.priceTable.forEach((row) => {
+    const tr = document.createElement('tr');
+    const quantity = document.createElement('th');
+    quantity.scope = 'row';
+    quantity.textContent = row.quantity;
+    const price = document.createElement('td');
+    price.textContent = row.price;
+    tr.append(quantity, price);
+    tbody.appendChild(tr);
+  });
+  priceTable.append(thead, tbody);
+
+  const note = document.createElement('p');
+  note.className = 'shop-note';
+  note.textContent = 'Precios por cantidad. Caja es el mejor precio publicado; más volumen se cotiza por WhatsApp.';
+
+  priceWrap.append(priceTable, note);
 
   const actions = document.createElement('div');
   actions.className = 'shop-actions';
@@ -884,7 +917,7 @@ function createProductCard(product) {
   details.textContent = 'Ver detalles';
 
   actions.append(whatsapp, details);
-  content.append(title, quality, price, actions);
+  content.append(title, quality, priceWrap, actions);
 
   article.append(overlay, media, content);
   return article;

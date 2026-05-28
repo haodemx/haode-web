@@ -19,26 +19,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$230 MXN"
+        "price": "$180 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$213.9 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$202.4 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$165 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "IPHONE 11 INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 6 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11",
     "description": "iPhone 11 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -62,26 +62,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$280 MXN"
+        "price": "$200 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$260.4 MXN"
+        "price": "$195 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$246.4 MXN"
+        "price": "$190 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$190 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$185 MXN"
       }
     ],
-    "priceSource": "IPHONE 11 PRO INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ 11PRO INCELL-FHD Plus MOVE IC    Tamaño original 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro",
     "description": "iPhone 11 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -104,26 +104,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$275 MXN"
+        "price": "$220 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$255.75 MXN"
+        "price": "$210 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$242 MXN"
+        "price": "$200 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$195 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$190 MXN"
       }
     ],
-    "priceSource": "IPHONE 11 PRO MAX INCELL",
+    "priceSource": "60HZ 11PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
     "description": "iPhone 11 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -146,26 +146,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$290 MXN"
+        "price": "$220 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$269.7 MXN"
+        "price": "$210 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$255.2 MXN"
+        "price": "$200 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$195 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$190 MXN"
       }
     ],
-    "priceSource": "IPHONE 12/12 PRO INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ 12/12PRO INCELL-FHD Plus MOVE IC    Tamaño original 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
     "description": "iPhone 12 / 12 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -188,26 +188,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$340 MXN"
+        "price": "$230 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$316.2 MXN"
+        "price": "$220 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$299.2 MXN"
+        "price": "$210 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$200 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$195 MXN"
       }
     ],
-    "priceSource": "IPHONE 12 MINI INCELL AG C/CAJITA (MOVER IC)",
+    "priceSource": "60HZ 12mini INCELL-FHD Plus MOVE IC    Tamaño original 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
     "description": "iPhone 12 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -230,26 +230,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$340 MXN"
+        "price": "$220 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$316.2 MXN"
+        "price": "$210 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$299.2 MXN"
+        "price": "$200 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$195 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$190 MXN"
       }
     ],
-    "priceSource": "IPHONE 12 PRO MAX INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ 11PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
     "description": "iPhone 12 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -272,26 +272,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$310 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$288.3 MXN"
+        "price": "$245 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$272.8 MXN"
+        "price": "$240 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$235 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$230 MXN"
       }
     ],
-    "priceSource": "IPHONE 13 INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 22 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
     "description": "iPhone 13 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -314,26 +314,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$340 MXN"
+        "price": "$260 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$316.2 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$299.2 MXN"
+        "price": "$245 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$240 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$235 MXN"
       }
     ],
-    "priceSource": "IPHONE 13 MINI INCELL AG C/CAJITA (MOVER IC)",
+    "priceSource": "60HZ 13 mini INCELL-FHD Plus MOVE IC    Tamaño original 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
     "description": "iPhone 13 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -356,26 +356,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$340 MXN"
+        "price": "$300 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$316.2 MXN"
+        "price": "$290 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$299.2 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$280 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$275 MXN"
       }
     ],
-    "priceSource": "IPHONE 13 PRO INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ 13PRO INCELL-FHD Plus MOVE IC    Tamaño original 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
     "description": "iPhone 13 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -398,26 +398,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$400 MXN"
+        "price": "$350 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$372 MXN"
+        "price": "$340 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$352 MXN"
+        "price": "$335 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$330 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$325 MXN"
       }
     ],
-    "priceSource": "IPHONE 13 PRO MAX INCELL 90HZ AG C/CAJA (MOVER IC)",
+    "priceSource": "120HZ 13PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
     "description": "iPhone 13 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -440,26 +440,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$330 MXN"
+        "price": "$800 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$306.9 MXN"
+        "price": "$750 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$290.4 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$550 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 INCELL (MOVER IC)",
+    "priceSource": "S21 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_ABC5043E9C344DA19DDC616F23263F58\",1) 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
     "description": "iPhone 14 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -482,26 +482,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$360 MXN"
+        "price": "$800 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$334.8 MXN"
+        "price": "$750 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$316.8 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$550 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 PLUS  INCELL JH C/CAJITA (MOVER IC)",
+    "priceSource": "S21 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_ABC5043E9C344DA19DDC616F23263F58\",1) 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
     "description": "iPhone 14 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -524,26 +524,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$450 MXN"
+        "price": "$350 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$418.5 MXN"
+        "price": "$340 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$396 MXN"
+        "price": "$330 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$320 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$310 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 PRO FDH AG C/CAJA (MOVER IC) ",
+    "priceSource": "120HZ 14PRO INCELL-FHD Plus MOVE IC    Tamaño original 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
     "description": "iPhone 14 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -566,26 +566,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$450 MXN"
+        "price": "$380 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$418.5 MXN"
+        "price": "$350 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$396 MXN"
+        "price": "$340 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$330 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$310 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 PRO MAX INCELL 120HZ AG C/CAJA (MOVER IC) ",
+    "priceSource": "120HZ 14PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
     "description": "iPhone 14 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -607,26 +607,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$400 MXN"
+        "price": "$300 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$372 MXN"
+        "price": "$290 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$352 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$280 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$275 MXN"
       }
     ],
-    "priceSource": "IPHONE 15 INCELL ZY C/CAJA (MOVER IC)",
+    "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 40 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
     "description": "iPhone 15 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -648,26 +648,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$430 MXN"
+        "price": "$300 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$399.9 MXN"
+        "price": "$290 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$378.4 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$280 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$275 MXN"
       }
     ],
-    "priceSource": "IPHONE 15 PLUS INCELL JH C/CAJITA (MOVER IC)",
+    "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 40 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Plus",
     "description": "iPhone 15 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -688,26 +688,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$470 MXN"
+        "price": "$350 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$437.1 MXN"
+        "price": "$340 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$413.6 MXN"
+        "price": "$335 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$330 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$320 MXN"
       }
     ],
-    "priceSource": "IPHONE 15 PRO INCELL 120HZ ZY C/CAJA (MOVER IC)",
+    "priceSource": "120HZ 15PRO INCELL-FHD Plus MOVE IC    Tamaño original 45",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro",
     "description": "iPhone 15 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -730,26 +730,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$500 MXN"
+        "price": "$400 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$465 MXN"
+        "price": "$380 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$440 MXN"
+        "price": "$370 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$350 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$330 MXN"
       }
     ],
-    "priceSource": "IPHONE 15 PRO MAX INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "120HZ 15PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original =DISPIMG(\"ID_3E57B57A00D94EBDB22517C7A6F7062A\",1) 48",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
     "description": "iPhone 15 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -772,26 +772,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$470 MXN"
+        "price": "$400 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$437.1 MXN"
+        "price": "$380 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$413.6 MXN"
+        "price": "$350 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$330 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$320 MXN"
       }
     ],
-    "priceSource": "IPHONE 16 INCELL GX-YK (MOVER IC)",
+    "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original =DISPIMG(\"ID_38486903343C488992FAAEF28734EE2C\",1) 51 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
     "description": "iPhone 16 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -814,26 +814,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$225 MXN"
+        "price": "$180 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$209.25 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$198 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$165 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "IPHONE X INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ X INCELL-FHD Plus Tamaño original 1",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone X",
     "description": "iPhone X para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -856,26 +856,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$225 MXN"
+        "price": "$180 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$209.25 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$198 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$165 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "IPHONE XR INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ XR INCELL-FHD Plus Tamaño original 5",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR",
     "description": "iPhone XR para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -898,26 +898,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$225 MXN"
+        "price": "$180 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$209.25 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$198 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$165 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "IPHONE XS INCELL AG C/CAJA (MOVER IC)",
+    "priceSource": "60HZ XS INCELL-FHD Plus Tamaño original 3",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS",
     "description": "iPhone XS para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -940,26 +940,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$260 MXN"
+        "price": "$200 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$241.8 MXN"
+        "price": "$190 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$228.8 MXN"
+        "price": "$185 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$180 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$175 MXN"
       }
     ],
-    "priceSource": "IPHONE XS MAX INCELL",
+    "priceSource": "60HZ XS MAX INCELL-FHD Plus MOVE IC    Tamaño original 10",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
     "description": "iPhone XS Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -971,7 +971,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 11",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/11/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/11/video-01.mp4"
@@ -979,15 +979,15 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$570 MXN"
+        "price": "$185 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$530.1 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$501.6 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -998,7 +998,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "IPHONE 11 PRO OLED GX (MOVER IC)",
+    "priceSource": "60HZ OLED PREMIUM Tamaño original 7 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11",
     "description": "iPhone 11 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1010,7 +1010,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 11 Pro",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/11pro/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/11pro/video-01.mp4"
@@ -1018,15 +1018,15 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$570 MXN"
+        "price": "$200 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$530.1 MXN"
+        "price": "$190 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$501.6 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -1037,7 +1037,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "IPHONE 11 PRO OLED GX (MOVER IC)",
+    "priceSource": "60HZ 11PRO OLED PREMIUM Tamaño original 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro",
     "description": "iPhone 11 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1059,26 +1059,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$680 MXN"
+        "price": "$600 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$632.4 MXN"
+        "price": "$590 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$598.4 MXN"
+        "price": "$580 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$550 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$535 MXN"
       }
     ],
-    "priceSource": "IPHONE 11 PRO MAX OLED AG C/CAJITA (MOVER IC)",
+    "priceSource": "11PRO MAX OLED PREMIUM MOVE IC Tamaño original 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
     "description": "iPhone 11 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1090,7 +1090,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 12 / 12 Pro",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/12-12pro/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/12-12pro/video-01.mp4"
@@ -1102,22 +1102,22 @@ window.HAODE_PRODUCTS_DATA = [
       },
       {
         "quantity": "5+ pzs",
-        "price": "$604.5 MXN"
+        "price": "$640 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$572 MXN"
+        "price": "$630 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$615 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       }
     ],
-    "priceSource": "IPHONE 12/ 12 PRO  OLED GX C/CAJA MOVER IC)",
+    "priceSource": "12/12PRO OLED PREMIUM MOVE IC Tamaño original 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
     "description": "iPhone 12 / 12 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1129,7 +1129,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 12 mini",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/12mini/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/12mini/video-01.mp4"
@@ -1137,15 +1137,15 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$960 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$892.8 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$844.8 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -1156,7 +1156,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "IPHONE 12 MINI OLED GX C/CAJA MOVER IC)",
+    "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
     "description": "iPhone 12 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1168,7 +1168,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 12 Pro",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/12pro/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/12pro/video-01.mp4"
@@ -1180,22 +1180,22 @@ window.HAODE_PRODUCTS_DATA = [
       },
       {
         "quantity": "5+ pzs",
-        "price": "$604.5 MXN"
+        "price": "$640 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$572 MXN"
+        "price": "$630 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$615 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       }
     ],
-    "priceSource": "IPHONE 12/ 12 PRO  OLED GX C/CAJA MOVER IC)",
+    "priceSource": "12/12PRO OLED PREMIUM MOVE IC Tamaño original 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro",
     "description": "iPhone 12 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1217,26 +1217,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$950 MXN"
+        "price": "$850 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$883.5 MXN"
+        "price": "$830 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$836 MXN"
+        "price": "$800 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$750 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$730 MXN"
       }
     ],
-    "priceSource": "IPHONE 12 PRO MAX OLED GX C/CAJA MOVER IC)",
+    "priceSource": "12PRO MAX OLED PREMIUM MOVE IC Tamaño original 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
     "description": "iPhone 12 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1258,26 +1258,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$780 MXN"
+        "price": "$730 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$725.4 MXN"
+        "price": "$720 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$686.4 MXN"
+        "price": "$710 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$630 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       }
     ],
-    "priceSource": "IPHONE 13 OLED GX C/CAJA MOVER IC)",
+    "priceSource": "OLED PREMIUM MOVE IC Tamaño original 23 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
     "description": "iPhone 13 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1289,7 +1289,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 13 mini",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/13mini/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/13mini/video-01.mp4"
@@ -1297,15 +1297,15 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,130 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,050.9 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$994.4 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -1316,7 +1316,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "IPHONE 13 MINI OLED GX C/CAJA MOVER IC)",
+    "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
     "description": "iPhone 13 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1338,26 +1338,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$920 MXN"
+        "price": "$800 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$855.6 MXN"
+        "price": "$780 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$809.6 MXN"
+        "price": "$750 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$730 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$700 MXN"
       }
     ],
-    "priceSource": "IPHONE 13 PRO OLED GX C/CAJA MOVER IC)",
+    "priceSource": "13PRO OLED PREMIUM MOVE IC Tamaño original 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
     "description": "iPhone 13 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1379,26 +1379,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,000 MXN"
+        "price": "$600 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$930 MXN"
+        "price": "$590 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$880 MXN"
+        "price": "$580 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$550 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$535 MXN"
       }
     ],
-    "priceSource": "IPHONE 13 PRO MAX OLED GX C/CAJA (MOVER IC)",
+    "priceSource": "11PRO MAX OLED PREMIUM MOVE IC Tamaño original 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
     "description": "iPhone 13 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1420,26 +1420,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$750 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$697.5 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$660 MXN"
+        "price": "$650 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$630 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 OLED ZY C/CAJA MOVER IC)",
+    "priceSource": "OLED PREMIUM MOVE IC Tamaño original 29 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
     "description": "iPhone 14 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1461,26 +1461,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,000 MXN"
+        "price": "$900 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$930 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
         "price": "$880 MXN"
       },
       {
+        "quantity": "100 pzs surtido",
+        "price": "$850 MXN"
+      },
+      {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$830 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$800 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 PLUS OLED GX C/CAJA MOVER IC)",
+    "priceSource": "14 plus OLED PREMIUM MOVE IC Tamaño original 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
     "description": "iPhone 14 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1492,7 +1492,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 14 Pro",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/14pro/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/14pro/video-01.mp4"
@@ -1500,26 +1500,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,350 MXN"
+        "price": "$1,200 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,255.5 MXN"
+        "price": "$1,150 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,188 MXN"
+        "price": "$1,100 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$1,050 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$1,000 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 PRO OLED GX C/CAJA MOVER IC)",
+    "priceSource": "14PRO SOFT OLED PREMIUM MOVE IC Tamaño original 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
     "description": "iPhone 14 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1541,26 +1541,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,500 MXN"
+        "price": "$1,000 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,395 MXN"
+        "price": "$950 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,320 MXN"
+        "price": "$900 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$850 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$800 MXN"
       }
     ],
-    "priceSource": "IPHONE 14 PRO MAX OLED GX C/CAJA MOVER IC)",
+    "priceSource": "14PRO MAX OLED PREMIUM MOVE IC Tamaño original 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
     "description": "iPhone 14 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1572,7 +1572,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 15",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/15/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/15/video-01.mp4"
@@ -1580,26 +1580,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,350 MXN"
+        "price": "$1,200 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,255.5 MXN"
+        "price": "$1,150 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,188 MXN"
+        "price": "$1,100 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$1,050 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$1,000 MXN"
       }
     ],
-    "priceSource": "IPHONE 15 OLED GX C/CAJA MOVER IC)",
+    "priceSource": "SOFT OLED PREMIUM MOVE IC Tamaño original 42 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
     "description": "iPhone 15 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1611,7 +1611,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 15 Plus",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/15plus/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/15plus/video-01.mp4"
@@ -1650,7 +1650,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 15 Pro Max",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/15promax/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/15promax/video-01.mp4"
@@ -1658,26 +1658,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,700 MXN"
+        "price": "$1,200 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,581 MXN"
+        "price": "$1,100 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,496 MXN"
+        "price": "$1,000 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$900 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$850 MXN"
       }
     ],
-    "priceSource": "IPHONE 15 PRO MAX OLED GX C/CAJA MOVER IC)",
+    "priceSource": "15PRO MAX OLED PREMIUM MOVE IC Tamaño original 49",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
     "description": "iPhone 15 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1689,7 +1689,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 16",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/16/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/16/video-01.mp4"
@@ -1697,15 +1697,15 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,500 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,395 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,320 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -1716,7 +1716,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "IPHONE 16 OLED GX C/CAJA MOVER IC)",
+    "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
     "description": "iPhone 16 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1728,7 +1728,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 16 Plus",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/16plus/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/16plus/video-01.mp4"
@@ -1767,7 +1767,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 16 Pro",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/16pro/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/16pro/video-01.mp4"
@@ -1775,26 +1775,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$2,000 MXN"
+        "price": "$1,500 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,860 MXN"
+        "price": "$1,450 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,760 MXN"
+        "price": "$1,400 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$1,350 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$1,300 MXN"
       }
     ],
-    "priceSource": "IPHONE 16 PRO OLED AG C/CAJA MOVER IC)",
+    "priceSource": "16PRO OLED PREMIUM MOVE IC Tamaño original 58",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
     "description": "iPhone 16 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1806,7 +1806,8 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone 16 Pro Max",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/16promax/main.jpg",
+      "assets/products/iphone-oled/16promax/gallery-01.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/16promax/video-01.mp4"
@@ -1814,26 +1815,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$2,300 MXN"
+        "price": "$1,600 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$2,139 MXN"
+        "price": "$1,550 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$2,024 MXN"
+        "price": "$1,500 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$1,450 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$1,400 MXN"
       }
     ],
-    "priceSource": "IPHONE 16 PRO MAX OLED GX C/CAJA MOVER IC)",
+    "priceSource": "16 PROMAX OLED PREMIUM MOVE IC Tamaño original 59",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
     "description": "iPhone 16 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1845,7 +1846,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para iPhone X",
     "quality": "OLED PREMIUM",
     "images": [
-      "assets/products/iphone-oled/main.jpg"
+      "assets/products/iphone-oled/x/main.jpg"
     ],
     "videos": [
       "assets/products/iphone-oled/x/video-01.mp4"
@@ -1853,15 +1854,15 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$500 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$465 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$440 MXN"
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -1872,7 +1873,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "IPHONE X GX OLED C/CAJA MOVER IC)",
+    "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone X",
     "description": "iPhone X para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -1894,28 +1895,110 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
+        "price": "$580 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$570 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$560 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$550 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$540 MXN"
+      }
+    ],
+    "priceSource": "XS MAX OLED PREMIUM MOVE IC Tamaño original 11",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
+    "description": "iPhone XS Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-note-10",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung Note 10",
+    "name": "Pantalla para Samsung Note 10",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/note-10/main.jpg",
+      "assets/products/samsung-incell/note-10/gallery-01.jpg",
+      "assets/products/samsung-incell/note-10/gallery-02.jpg",
+      "assets/products/samsung-incell/note-10/gallery-03.jpg"
+    ],
+    "videos": [
+      "assets/products/samsung-incell/note-10/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
         "price": "$650 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$604.5 MXN"
+        "price": "$600 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$572 MXN"
+        "price": "$580 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$570 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$550 MXN"
       }
     ],
-    "priceSource": "IPHONE XS MAX OLED GX C/CAJA MOVER IC)",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
-    "description": "iPhone XS Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "priceSource": "NOTE 10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_AFED27E77F2B465FB46B8FFA1CEAFABA\",1) 41",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
+    "description": "Samsung Note 10 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-note-10-plus",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung Note 10 Plus",
+    "name": "Pantalla para Samsung Note 10 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/note-10-plus/main.jpg",
+      "assets/products/samsung-incell/note-10-plus/gallery-01.jpg",
+      "assets/products/samsung-incell/note-10-plus/gallery-02.jpg",
+      "assets/products/samsung-incell/note-10-plus/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$650 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$580 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$570 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$550 MXN"
+      }
+    ],
+    "priceSource": "NOTE 10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_AFED27E77F2B465FB46B8FFA1CEAFABA\",1) 41",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
+    "description": "Samsung Note 10 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-incell-note-20-ultra",
@@ -1927,34 +2010,200 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/note-20-ultra/main.jpg",
       "assets/products/samsung-incell/note-20-ultra/gallery-01.jpg",
-      "assets/products/samsung-incell/note-20-ultra/gallery-02.jpg"
+      "assets/products/samsung-incell/note-20-ultra/gallery-02.jpg",
+      "assets/products/samsung-incell/note-20-ultra/gallery-03.jpg"
     ],
     "videos": [],
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$800 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$780 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$750 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$700 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$680 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "NOTE 20 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_D46E065009374993AEF3BB32BA8A139B\",1) 48",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
     "description": "Samsung Note 20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-note-8",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung Note 8",
+    "name": "Pantalla para Samsung Note 8",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/note-8/main.jpg",
+      "assets/products/samsung-incell/note-8/gallery-01.jpg",
+      "assets/products/samsung-incell/note-8/gallery-02.jpg",
+      "assets/products/samsung-incell/note-8/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$570 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$550 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$520 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$500 MXN"
+      }
+    ],
+    "priceSource": "NOTE 8 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_74814455A2EA46D3841B13CD1DB0ADFF\",1) 39",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 8",
+    "description": "Samsung Note 8 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-note-9",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung Note 9",
+    "name": "Pantalla para Samsung Note 9",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/note-9/main.jpg",
+      "assets/products/samsung-incell/note-9/gallery-01.jpg",
+      "assets/products/samsung-incell/note-9/gallery-02.jpg",
+      "assets/products/samsung-incell/note-9/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$570 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$550 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$520 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$500 MXN"
+      }
+    ],
+    "priceSource": "NOTE 9 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_D6DC935D3096400D91454FE3AB79A3C7\",1) 40",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
+    "description": "Samsung Note 9 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s10",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S10",
+    "name": "Pantalla para Samsung S10",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s10/main.jpg",
+      "assets/products/samsung-incell/s10/gallery-01.jpg",
+      "assets/products/samsung-incell/s10/gallery-02.jpg",
+      "assets/products/samsung-incell/s10/gallery-03.jpg"
+    ],
+    "videos": [
+      "assets/products/samsung-incell/s10/video-01.mp4",
+      "assets/products/samsung-incell/s10/video-02.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$500 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$470 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$410 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$390 MXN"
+      }
+    ],
+    "priceSource": "S10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_E1799CFB5B05409C9402814C66DEC26A\",1) 5",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10",
+    "description": "Samsung S10 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s10-plus",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S10 Plus",
+    "name": "Pantalla para Samsung S10 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s10-plus/main.jpg",
+      "assets/products/samsung-incell/s10-plus/gallery-01.jpg",
+      "assets/products/samsung-incell/s10-plus/gallery-02.jpg",
+      "assets/products/samsung-incell/s10-plus/gallery-03.jpg"
+    ],
+    "videos": [
+      "assets/products/samsung-incell/s10-plus/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$500 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$470 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$410 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$390 MXN"
+      }
+    ],
+    "priceSource": "S10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_E1799CFB5B05409C9402814C66DEC26A\",1) 5",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10 Plus",
+    "description": "Samsung S10 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-incell-s20",
@@ -1966,7 +2215,8 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s20/main.jpg",
       "assets/products/samsung-incell/s20/gallery-01.jpg",
-      "assets/products/samsung-incell/s20/gallery-02.jpg"
+      "assets/products/samsung-incell/s20/gallery-02.jpg",
+      "assets/products/samsung-incell/s20/gallery-03.jpg"
     ],
     "videos": [
       "assets/products/samsung-incell/s20/video-01.mp4"
@@ -1974,28 +2224,152 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$520 MXN"
+        "price": "$500 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$483.6 MXN"
+        "price": "$480 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$457.6 MXN"
+        "price": "$460 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$450 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$440 MXN"
       }
     ],
-    "priceSource": "SAMSUNG S20 INCELL C/MARCO",
+    "priceSource": "S20  C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_76B3047E56C343B5A7666ABF4F0423BF\",1) 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20",
     "description": "Samsung S20 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s20-fe",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S20 FE",
+    "name": "Pantalla para Samsung S20 FE",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s20-fe/main.jpg",
+      "assets/products/samsung-incell/s20-fe/gallery-01.jpg",
+      "assets/products/samsung-incell/s20-fe/gallery-02.jpg",
+      "assets/products/samsung-incell/s20-fe/gallery-03.jpg"
+    ],
+    "videos": [
+      "assets/products/samsung-incell/s20-fe/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$350 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$330 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$320 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$300 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$290 MXN"
+      }
+    ],
+    "priceSource": "S20FE C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_D0979D1F6F2B4222BC2319E6A1024553\",1) 12",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 FE",
+    "description": "Samsung S20 FE para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s20-plus",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S20 Plus",
+    "name": "Pantalla para Samsung S20 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s20-plus/main.jpg",
+      "assets/products/samsung-incell/s20-plus/gallery-01.jpg",
+      "assets/products/samsung-incell/s20-plus/gallery-02.jpg",
+      "assets/products/samsung-incell/s20-plus/gallery-03.jpg"
+    ],
+    "videos": [
+      "assets/products/samsung-incell/s20-plus/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$500 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$480 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$460 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$440 MXN"
+      }
+    ],
+    "priceSource": "S20  C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_76B3047E56C343B5A7666ABF4F0423BF\",1) 9",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
+    "description": "Samsung S20 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s20-ultra",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S20 Ultra",
+    "name": "Pantalla para Samsung S20 Ultra",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s20-ultra/main.jpg",
+      "assets/products/samsung-incell/s20-ultra/gallery-01.jpg",
+      "assets/products/samsung-incell/s20-ultra/gallery-02.jpg",
+      "assets/products/samsung-incell/s20-ultra/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$650 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$620 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$580 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$560 MXN"
+      }
+    ],
+    "priceSource": "S20 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_1171137BB6E94C0D8F8949AB82D11093\",1) 13",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
+    "description": "Samsung S20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-incell-s21",
@@ -2007,34 +2381,75 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s21/main.jpg",
       "assets/products/samsung-incell/s21/gallery-01.jpg",
-      "assets/products/samsung-incell/s21/gallery-02.jpg"
+      "assets/products/samsung-incell/s21/gallery-02.jpg",
+      "assets/products/samsung-incell/s21/gallery-03.jpg"
     ],
     "videos": [],
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$550 MXN"
+        "price": "$800 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$511.5 MXN"
+        "price": "$750 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$484 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$550 MXN"
       }
     ],
-    "priceSource": "SAMSUNG S21 INCELL C/MARCO",
+    "priceSource": "S21 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_ABC5043E9C344DA19DDC616F23263F58\",1) 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
     "description": "Samsung S21 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s21-ultra",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S21 Ultra",
+    "name": "Pantalla para Samsung S21 Ultra",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s21-ultra/main.jpg",
+      "assets/products/samsung-incell/s21-ultra/gallery-01.jpg",
+      "assets/products/samsung-incell/s21-ultra/gallery-02.jpg",
+      "assets/products/samsung-incell/s21-ultra/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$550 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$530 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$500 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$480 MXN"
+      }
+    ],
+    "priceSource": "S21 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_E51E9167BA034AD29DC55C214D21216E\",1) 17",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
+    "description": "Samsung S21 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-incell-s22-ultra",
@@ -2046,34 +2461,36 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s22-ultra/main.jpg",
       "assets/products/samsung-incell/s22-ultra/gallery-01.jpg",
-      "assets/products/samsung-incell/s22-ultra/gallery-02.jpg"
+      "assets/products/samsung-incell/s22-ultra/gallery-02.jpg",
+      "assets/products/samsung-incell/s22-ultra/gallery-03.jpg"
     ],
     "videos": [
-      "assets/products/samsung-incell/s22-ultra/video-01.mp4"
+      "assets/products/samsung-incell/s22-ultra/video-01.mp4",
+      "assets/products/samsung-incell/s22-ultra/video-02.mp4"
     ],
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$800 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$750 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$700 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$650 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "S22 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_062C47EBB7C54AF58A12784C6CDDA3B7\",1) 23",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
     "description": "Samsung S22 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -2087,7 +2504,8 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s23-ultra/main.jpg",
       "assets/products/samsung-incell/s23-ultra/gallery-01.jpg",
-      "assets/products/samsung-incell/s23-ultra/gallery-02.jpg"
+      "assets/products/samsung-incell/s23-ultra/gallery-02.jpg",
+      "assets/products/samsung-incell/s23-ultra/gallery-03.jpg"
     ],
     "videos": [
       "assets/products/samsung-incell/s23-ultra/video-01.mp4"
@@ -2095,26 +2513,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$700 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$680 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$650 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$620 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$600 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "S23 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_84BAE874680B4B4EAA10EB38716D0FA7\",1) 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
     "description": "Samsung S23 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -2134,6 +2552,349 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
+        "price": "$1,000 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$950 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$900 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$850 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$800 MXN"
+      }
+    ],
+    "priceSource": "S24 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa 34",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
+    "description": "Samsung S24 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s8",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S8",
+    "name": "Pantalla para Samsung S8",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s8/main.jpg",
+      "assets/products/samsung-incell/s8/gallery-01.jpg",
+      "assets/products/samsung-incell/s8/gallery-02.jpg",
+      "assets/products/samsung-incell/s8/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$430 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$380 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$360 MXN"
+      }
+    ],
+    "priceSource": "S8 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_CC4757E52BAF43BBA7C03FC9D6B6D941\",1) 1",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8",
+    "description": "Samsung S8 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s8-plus",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S8 Plus",
+    "name": "Pantalla para Samsung S8 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s8-plus/main.jpg",
+      "assets/products/samsung-incell/s8-plus/gallery-01.jpg",
+      "assets/products/samsung-incell/s8-plus/gallery-02.jpg",
+      "assets/products/samsung-incell/s8-plus/gallery-03.jpg"
+    ],
+    "videos": [
+      "assets/products/samsung-incell/s8-plus/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$430 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$380 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$360 MXN"
+      }
+    ],
+    "priceSource": "S8 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_CC4757E52BAF43BBA7C03FC9D6B6D941\",1) 1",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8 Plus",
+    "description": "Samsung S8 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s9",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S9",
+    "name": "Pantalla para Samsung S9",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s9/main.jpg",
+      "assets/products/samsung-incell/s9/gallery-01.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$430 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$380 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$370 MXN"
+      }
+    ],
+    "priceSource": "S9 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_8A4B9FD11AF4403ABF0A7F26BE441722\",1) 3",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9",
+    "description": "Samsung S9 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s9-plus",
+    "category": "Samsung INCELL",
+    "brand": "Samsung",
+    "model": "Samsung S9 Plus",
+    "name": "Pantalla para Samsung S9 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s9-plus/main.jpg",
+      "assets/products/samsung-incell/s9-plus/gallery-01.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$430 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$380 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$370 MXN"
+      }
+    ],
+    "priceSource": "S9 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_8A4B9FD11AF4403ABF0A7F26BE441722\",1) 3",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
+    "description": "Samsung S9 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-note-10",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung Note 10",
+    "name": "Pantalla para Samsung Note 10",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/note-10/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,500 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1,400 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$1,300 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,200 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,100 MXN"
+      }
+    ],
+    "priceSource": "NOTE 10 OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 42",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
+    "description": "Samsung Note 10 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-note-10-plus",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung Note 10 Plus",
+    "name": "Pantalla para Samsung Note 10 Plus",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/note-10-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,000 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$950 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$900 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$880 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "NOTE 10+ OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 44",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
+    "description": "Samsung Note 10 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-note-20",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung Note 20",
+    "name": "Pantalla para Samsung Note 20",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/note-20/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,200 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1,100 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$1,000 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$900 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$850 MXN"
+      }
+    ],
+    "priceSource": "NOTE 20  OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 47",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20",
+    "description": "Samsung Note 20 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-note-20-ultra",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung Note 20 Ultra",
+    "name": "Pantalla para Samsung Note 20 Ultra",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/note-20-ultra/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,500 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1,450 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$1,400 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,370 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,350 MXN"
+      }
+    ],
+    "priceSource": "NOTE 20 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 49",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
+    "description": "Samsung Note 20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-note-9",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung Note 9",
+    "name": "Pantalla para Samsung Note 9",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/note-9/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
         "price": "Consultar"
       },
       {
@@ -2154,8 +2915,45 @@ window.HAODE_PRODUCTS_DATA = [
       }
     ],
     "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
-    "description": "Samsung S24 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
+    "description": "Samsung Note 9 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s20",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S20",
+    "name": "Pantalla para Samsung S20",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s20/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20",
+    "description": "Samsung S20 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-oled-s20-plus",
@@ -2175,15 +2973,52 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,200 MXN"
+        "price": "$1,100 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,116 MXN"
+        "price": "$1,050 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,056 MXN"
+        "price": "$1,000 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$950 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$900 MXN"
+      }
+    ],
+    "priceSource": "S20 PLUS OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 11",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
+    "description": "Samsung S20 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s20-ultra",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S20 Ultra",
+    "name": "Pantalla para Samsung S20 Ultra",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s20-ultra/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -2194,9 +3029,83 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "SAMSUNG S20 PLUS OLED C/M ",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
-    "description": "Samsung S20 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
+    "description": "Samsung S20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s21",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S21",
+    "name": "Pantalla para Samsung S21",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s21/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
+    "description": "Samsung S21 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s21-plus",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S21 Plus",
+    "name": "Pantalla para Samsung S21 Plus",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s21-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
+    "description": "Samsung S21 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-oled-s21-ultra",
@@ -2216,15 +3125,52 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,650 MXN"
+        "price": "$1,600 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,534.5 MXN"
+        "price": "$1,550 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,452 MXN"
+        "price": "$1,500 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,450 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,400 MXN"
+      }
+    ],
+    "priceSource": "S21 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 18",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
+    "description": "Samsung S21 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s22-plus",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S22 Plus",
+    "name": "Pantalla para Samsung S22 Plus",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s22-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -2235,9 +3181,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "SAMSUNG S21 ULTRA OLED BIG C/M ",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
-    "description": "Samsung S21 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
+    "description": "Samsung S22 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-oled-s22-ultra",
@@ -2257,15 +3203,52 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,600 MXN"
+        "price": "$1,750 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,488 MXN"
+        "price": "$1,700 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,408 MXN"
+        "price": "$1,650 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,550 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,500 MXN"
+      }
+    ],
+    "priceSource": "S22 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 24",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
+    "description": "Samsung S22 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s23-plus",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S23 Plus",
+    "name": "Pantalla para Samsung S23 Plus",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s23-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -2276,9 +3259,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "NEGRO/PLATEADO/LILA/ VERDE SAMSUNG S22 ULTRA OLED BIG CM",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
-    "description": "Samsung S22 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
+    "description": "Samsung S23 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-oled-s23-ultra",
@@ -2298,15 +3281,52 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,650 MXN"
+        "price": "$1,600 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,534.5 MXN"
+        "price": "$1,580 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,452 MXN"
+        "price": "$1,550 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,500 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,400 MXN"
+      }
+    ],
+    "priceSource": "S23 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 30",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
+    "description": "Samsung S23 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s24-plus",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S24 Plus",
+    "name": "Pantalla para Samsung S24 Plus",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s24-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -2317,9 +3337,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "NEGRO/GRIS/LILA/ VERDE SAMSUNG S23 ULTRA  OLED BIG C/M ",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
-    "description": "Samsung S23 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
+    "description": "Samsung S24 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "samsung-oled-s24-ultra",
@@ -2339,26 +3359,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,950 MXN"
+        "price": "$1,800 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,813.5 MXN"
+        "price": "$1,750 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,716 MXN"
+        "price": "$1,700 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$1,650 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$1,600 MXN"
       }
     ],
-    "priceSource": "NEGRO/DORADO/GRIS SAMSUNG S24 ULTRA OLED BIG CM",
+    "priceSource": "S24 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
     "description": "Samsung S24 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -2380,15 +3400,52 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$2,200 MXN"
+        "price": "$2,000 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$2,046 MXN"
+        "price": "$1,900 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,936 MXN"
+        "price": "$1,800 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,750 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,700 MXN"
+      }
+    ],
+    "priceSource": "S25 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 37",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S25 Ultra",
+    "description": "Samsung S25 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-oled-s9-plus",
+    "category": "Samsung OLED",
+    "brand": "Samsung",
+    "model": "Samsung S9 Plus",
+    "name": "Pantalla para Samsung S9 Plus",
+    "quality": "OLED CON MARCO",
+    "images": [
+      "assets/products/samsung-oled/s9-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
       },
       {
         "quantity": "100 pzs/modelo",
@@ -2399,12 +3456,12 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "Consultar"
       }
     ],
-    "priceSource": "NEGRO/PLATEADO SAMSUNG S25 ULTRA OLED C/M ",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S25 Ultra",
-    "description": "Samsung S25 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
+    "description": "Samsung S9 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
-  "generatedAt": "2026-05-28T17:16:15.339Z",
-  "workbook": "LCD MOVIL ALAY-GO 13 ABRIL(3).xlsx"
+  "generatedAt": "2026-05-28T18:33:52.537Z",
+  "workbook": "HL CDMX 2026 MAYO.xlsx"
 };

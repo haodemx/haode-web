@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js"
   }
 }

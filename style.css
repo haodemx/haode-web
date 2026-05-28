@@ -1596,15 +1596,15 @@ body.catalog-page .catalog-count {
 }
 
 body.catalog-page .shop-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 18px;
 }
 
 body.catalog-page .shop-card {
-  border-radius: 16px;
+  border-radius: 18px;
   background: #fff;
-  border: 1px solid rgba(32, 27, 21, 0.1);
-  box-shadow: 0 10px 24px rgba(64, 45, 18, 0.08);
+  border: 1px solid #dbe3ee;
+  box-shadow: 0 12px 28px rgba(35, 55, 84, 0.09);
   position: relative;
   overflow: hidden;
   min-height: 100%;
@@ -1622,15 +1622,15 @@ body.catalog-page .shop-card-link {
 }
 
 body.catalog-page .shop-media {
-  background:
-    linear-gradient(180deg, rgba(255, 122, 24, 0.06), rgba(255, 255, 255, 0.96)),
-    #fff;
+  background: #f8fbff;
   position: relative;
   z-index: 1;
+  margin: 24px 24px 0;
+  aspect-ratio: 1 / 1;
 }
 
 body.catalog-page .shop-media img {
-  padding: 16px;
+  padding: 0;
   object-fit: contain;
 }
 
@@ -1643,22 +1643,27 @@ body.catalog-page .shop-brand {
 body.catalog-page .shop-content {
   position: relative;
   z-index: 1;
-  gap: 10px;
+  gap: 14px;
+  padding: 26px 28px 28px;
 }
 
 body.catalog-page .shop-content h3 {
-  font-size: 1.03rem;
+  font-size: 1.35rem;
   line-height: 1.32;
-  color: #1d1b18;
+  color: #121827;
 }
 
 body.catalog-page .shop-quality {
-  color: #c06a18;
+  color: #566378;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 body.catalog-page .shop-note {
   margin: 0;
-  font-size: 0.92rem;
+  color: #6d7890;
+  font-size: 0.96rem;
   line-height: 1.6;
 }
 
@@ -1671,32 +1676,45 @@ body.catalog-page .shop-price-title {
 }
 
 body.catalog-page .price-table {
-  border: 1px solid rgba(32, 27, 21, 0.08);
+  border: 1px solid #dbe3ee;
   border-radius: 12px;
+  border-collapse: separate;
+  border-spacing: 0;
   overflow: hidden;
 }
 
 body.catalog-page .price-table th,
 body.catalog-page .price-table td {
-  padding: 8px 10px;
-  font-size: 0.88rem;
-  color: #2a261f;
-  background: #fff;
+  padding: 10px 14px;
+  font-size: 0.96rem;
+  color: #48566d;
+  background: #fbfcfe;
+}
+
+body.catalog-page .price-table thead th {
+  background: #eef4ff;
+  color: #174ea6;
+  font-weight: 800;
 }
 
 body.catalog-page .price-table tr + tr th,
 body.catalog-page .price-table tr + tr td {
-  border-top: 1px solid rgba(32, 27, 21, 0.08);
+  border-top: 1px solid #e5ebf3;
 }
 
 body.catalog-page .price-table td {
-  color: #b75b0a;
+  color: #121827;
   font-weight: 800;
   text-align: right;
 }
 
 body.catalog-page .shop-cta {
   margin-top: 4px;
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #fff;
+  min-height: 54px;
+  font-size: 1.02rem;
 }
 
 body.catalog-page .shop-actions {

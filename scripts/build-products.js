@@ -9,6 +9,7 @@ const GENERATED_DATA_FILE = path.join(DATA_DIR, 'products.generated.js');
 const STRUCTURE_DOC_FILE = path.join(DOCS_DIR, 'product-structure.md');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const ROBOTS_FILE = path.join(ROOT, 'robots.txt');
+const SERIES_CHECK_FILE = path.join(ROOT, 'assets', 'products', 'series-update-check.md');
 const SITE_URL = 'https://haodemx.github.io/haode-web';
 
 const CATEGORY_CONFIG = [
@@ -42,6 +43,9 @@ const CATEGORY_CONFIG = [
         '15pro': 'iPhone 15 Pro',
         '15promax': 'iPhone 15 Pro Max',
         '16': 'iPhone 16',
+        '16plus': 'iPhone 16 Plus',
+        '16pro': 'iPhone 16 Pro',
+        '16promax': 'iPhone 16 Pro Max',
       };
       return aliases[slug] || `iPhone ${slug.toUpperCase()}`;
     },
@@ -49,15 +53,15 @@ const CATEGORY_CONFIG = [
       const base = model.replace(/^IPHONE\s+/i, '');
       if (slug === '14pro') {
         return [
-          `IPHONE ${base} FDH`,
-          `IPHONE ${base} FHD`,
-          `IPHONE ${base} INCELL`,
+          `${base} FDH`,
+          `${base} FHD`,
+          `${base} INCELL`,
         ];
       }
       return [
-        `IPHONE ${base} INCELL`,
-        `IPHONE ${base} FHD`,
-        `IPHONE ${base} FDH`,
+        `${base} INCELL`,
+        `${base} FHD`,
+        `${base} FDH`,
       ];
     },
     fallbackImage: 'assets/products/iphone-incell/main.jpg',
@@ -99,9 +103,9 @@ const CATEGORY_CONFIG = [
     priceQueries(model) {
       const base = model.replace(/^IPHONE\s+/i, '');
       return [
-        `IPHONE ${base} OLED`,
-        `IPHONE ${base} SOFT OLED`,
-        `IPHONE ${base} GX`,
+        `${base} OLED`,
+        `${base} SOFT OLED`,
+        `${base} GX`,
       ];
     },
     fallbackImage: 'assets/products/iphone-oled/main.jpg',
@@ -114,10 +118,26 @@ const CATEGORY_CONFIG = [
     modelLabel(slug) {
       const aliases = {
         s20: 'Samsung S20',
+        's20-plus': 'Samsung S20 Plus',
+        's20-fe': 'Samsung S20 FE',
+        's20-ultra': 'Samsung S20 Ultra',
         s21: 'Samsung S21',
+        's21-ultra': 'Samsung S21 Ultra',
+        s8: 'Samsung S8',
+        's8-plus': 'Samsung S8 Plus',
+        s9: 'Samsung S9',
+        's9-plus': 'Samsung S9 Plus',
+        s10: 'Samsung S10',
+        's10-plus': 'Samsung S10 Plus',
+        s10e: 'Samsung S10E',
         's22-ultra': 'Samsung S22 Ultra',
         's23-ultra': 'Samsung S23 Ultra',
         's24-ultra': 'Samsung S24 Ultra',
+        'note-8': 'Samsung Note 8',
+        'note-9': 'Samsung Note 9',
+        'note-10': 'Samsung Note 10',
+        'note-10-plus': 'Samsung Note 10 Plus',
+        'note-20': 'Samsung Note 20',
         'note-20-ultra': 'Samsung Note 20 Ultra',
       };
       return aliases[slug] || `Samsung ${slug.toUpperCase()}`;
@@ -125,8 +145,8 @@ const CATEGORY_CONFIG = [
     priceQueries(model) {
       const base = model.replace(/^SAMSUNG\s+/i, '');
       return [
-        `SAMSUNG ${base} INCELL C/MARCO`,
-        `SAMSUNG ${base} INCELL`,
+        `${base} INCELL`,
+        `${base} INCELL C/MARCO`,
       ];
     },
     fallbackImage: 'assets/products/samsung-incell/main.jpg',
@@ -139,19 +159,32 @@ const CATEGORY_CONFIG = [
     modelLabel(slug) {
       const aliases = {
         's20-plus': 'Samsung S20 Plus',
+        's20-ultra': 'Samsung S20 Ultra',
+        s20: 'Samsung S20',
+        s21: 'Samsung S21',
+        's21-plus': 'Samsung S21 Plus',
         's21-ultra': 'Samsung S21 Ultra',
+        's22-plus': 'Samsung S22 Plus',
         's22-ultra': 'Samsung S22 Ultra',
+        's23-plus': 'Samsung S23 Plus',
         's23-ultra': 'Samsung S23 Ultra',
+        's24-plus': 'Samsung S24 Plus',
         's24-ultra': 'Samsung S24 Ultra',
         's25-ultra': 'Samsung S25 Ultra',
+        's9-plus': 'Samsung S9 Plus',
+        'note-9': 'Samsung Note 9',
+        'note-10': 'Samsung Note 10',
+        'note-10-plus': 'Samsung Note 10 Plus',
+        'note-20': 'Samsung Note 20',
+        'note-20-ultra': 'Samsung Note 20 Ultra',
       };
       return aliases[slug] || `Samsung ${slug.toUpperCase()}`;
     },
     priceQueries(model) {
       const base = model.replace(/^SAMSUNG\s+/i, '');
       return [
-        `SAMSUNG ${base} OLED`,
-        `SAMSUNG ${base} OLED BIG`,
+        `${base} OLED`,
+        `${base} OLED BIG`,
       ];
     },
     fallbackImage: 'assets/products/samsung-oled/main.jpg',
@@ -164,9 +197,10 @@ const VIDEO_EXTENSIONS = new Set(['.mp4', '.mov', '.webm']);
 const MAIN_IMAGE_FALLBACK = 'assets/products/placeholder.svg';
 
 const SOURCE_ROOTS = [
+  '/Users/mac/Downloads',
+  '/Users/mac/Desktop/广告图片/价格表',
   '/Users/mac/Desktop/haode产品素材/同行报价单',
   '/Users/mac/Desktop/haode产品素材',
-  '/Users/mac/Downloads',
 ];
 
 function ensureDir(dirPath) {
@@ -196,7 +230,8 @@ function findWorkbook() {
     }
   }
 
-  const preferred = candidates.find((file) => /lcd movi|hl cdmx 2026 mayo/i.test(path.basename(file)));
+  const preferred = candidates.find((file) => /hl cdmx 2026 mayo/i.test(path.basename(file)))
+    || candidates.find((file) => /lcd movi/i.test(path.basename(file)));
   return preferred || candidates[0] || null;
 }
 
@@ -326,6 +361,9 @@ function normalizeText(value) {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toUpperCase()
+    .replace(/PROMAX/g, 'PRO MAX')
+    .replace(/\+/g, ' PLUS ')
+    .replace(/([0-9])(?=(PRO|MAX|PLUS|MINI|ULTRA|FE)\b)/g, '$1 ')
     .replace(/[^A-Z0-9]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
@@ -342,9 +380,16 @@ function getNumericValues(values) {
   return Array.isArray(values) ? values.filter((value) => typeof value === 'number' && Number.isFinite(value)) : [];
 }
 
+function getPriceValues(values) {
+  return getNumericValues(values)
+    .map((value) => Math.abs(value))
+    .filter((value) => value >= 100)
+    .slice(0, 5);
+}
+
 function formatPrice(value) {
   if (value === null || value === undefined || value === '') return 'Consultar';
-  const numeric = Number(value);
+  const numeric = Math.abs(Number(value));
   if (!Number.isFinite(numeric) || numeric <= 0) return 'Consultar';
   return `$${numeric.toLocaleString('es-MX')} MXN`;
 }
@@ -364,6 +409,11 @@ function priceScore(rowText, queryTokens) {
 
   let score = queryTokens.length * 10;
   const variantMarkers = new Set(['PRO', 'MAX', 'PLUS', 'MINI', 'ULTRA', 'FE', 'LITE', 'XL']);
+  const techIndex = tokens.findIndex((token) => ['INCELL', 'OLED', 'FHD', 'FDH', 'GX'].includes(token));
+  const rowModelTokens = techIndex >= 0 ? tokens.slice(0, techIndex) : tokens;
+  const queryVariantTokens = queryTokens.filter((token) => variantMarkers.has(token));
+  const rowVariantTokens = rowModelTokens.filter((token) => variantMarkers.has(token));
+  if (rowVariantTokens.some((token) => !queryVariantTokens.includes(token))) return -Infinity;
   const extras = tokens.filter((token) => !queryTokens.includes(token) && variantMarkers.has(token));
   score -= extras.length * 5;
 
@@ -382,17 +432,18 @@ function pickPriceRow(rows, query) {
   let best = null;
 
   for (const row of rows) {
-    const rowText = row.text || '';
+    const searchableNumbers = getNumericValues(row.numbers).filter((value) => Math.abs(value) < 100);
+    const rowText = `${row.text || ''} ${searchableNumbers.join(' ')}`;
     const score = priceScore(rowText, queryTokens);
     if (!Number.isFinite(score)) continue;
 
-    const numbers = getNumericValues(row.numbers);
+    const numbers = getPriceValues(row.numbers);
     if (!numbers.length) continue;
 
     const candidate = {
       rowText,
       score,
-      numbers: numbers.slice(0, 3),
+      numbers,
       sheet: row.sheet,
     };
 
@@ -550,8 +601,11 @@ function buildCatalog() {
         model: product.model,
         id: product.id,
         mainImage: product.images[0] || config.fallbackImage,
+        galleryImages: product.images.slice(1),
         hasGallery: product.images.length > 1,
         videoCount: product.videos.length,
+        videos: product.videos,
+        isMissingImage: !product.images[0] || product.images[0] === config.fallbackImage || product.images[0] === MAIN_IMAGE_FALLBACK,
         hasPrice: product.prices.some((row) => row.price !== 'Consultar'),
         priceSource: product.priceSource || 'Consultar',
       });
@@ -626,6 +680,63 @@ function writeReport(reports, workbookPath) {
   fs.writeFileSync(path.join(DOCS_DIR, 'product-build-report.md'), lines.join('\n'), 'utf8');
 }
 
+function writeSeriesCheckReport(reports, workbookPath) {
+  ensureDir(path.dirname(SERIES_CHECK_FILE));
+  const targetCategories = ['iPhone OLED', 'Samsung INCELL', 'Samsung OLED'];
+  const targetReports = reports.filter((entry) => targetCategories.includes(entry.category));
+  const byCategory = new Map();
+  for (const category of targetCategories) {
+    byCategory.set(category, targetReports.filter((entry) => entry.category === category));
+  }
+
+  const missingImages = targetReports.filter((entry) => entry.isMissingImage);
+  const missingPrices = targetReports.filter((entry) => !entry.hasPrice);
+
+  const lines = [];
+  lines.push('# Series Update Check');
+  lines.push('');
+  lines.push(`- Workbook: ${path.basename(workbookPath)}`);
+  lines.push(`- Generated: ${new Date().toISOString()}`);
+  lines.push('');
+
+  for (const category of targetCategories) {
+    const items = byCategory.get(category);
+    const withPrice = items.filter((item) => item.hasPrice).length;
+    const withVideo = items.filter((item) => item.videoCount > 0).length;
+    lines.push(`## ${category}`);
+    lines.push(`- Productos actualizados: ${items.length}`);
+    lines.push(`- Con precio: ${withPrice}`);
+    lines.push(`- Con video: ${withVideo}`);
+    lines.push('');
+    lines.push('| Producto | Imagen principal | Galería | Video | Precio | Fuente precio |');
+    lines.push('| --- | --- | --- | --- | --- | --- |');
+    for (const item of items) {
+      const gallery = item.galleryImages.length ? item.galleryImages.join('<br>') : 'Sin galería';
+      const video = item.videos.length ? item.videos.join('<br>') : 'No';
+      const price = item.hasPrice ? 'Sí' : 'No';
+      lines.push(`| ${item.model} | ${item.mainImage} | ${gallery} | ${video} | ${price} | ${item.priceSource.replace(/\|/g, '\\|')} |`);
+    }
+    lines.push('');
+  }
+
+  lines.push('## Faltan imágenes');
+  if (missingImages.length) {
+    missingImages.forEach((item) => lines.push(`- ${item.category}: ${item.model}`));
+  } else {
+    lines.push('- Ninguno');
+  }
+  lines.push('');
+  lines.push('## Faltan precios');
+  if (missingPrices.length) {
+    missingPrices.forEach((item) => lines.push(`- ${item.category}: ${item.model}`));
+  } else {
+    lines.push('- Ninguno');
+  }
+  lines.push('');
+
+  fs.writeFileSync(SERIES_CHECK_FILE, lines.join('\n'), 'utf8');
+}
+
 function writeSeoFiles(products) {
   const urls = [
     `${SITE_URL}/`,
@@ -657,6 +768,7 @@ function main() {
   writeGeneratedData(products, workbookPath);
   writeStructureDoc();
   writeReport(reports, workbookPath);
+  writeSeriesCheckReport(reports, workbookPath);
   writeSeoFiles(products);
   console.log(`Generated ${products.length} products from ${path.basename(workbookPath)}`);
 }
