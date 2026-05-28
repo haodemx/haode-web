@@ -1,5 +1,24 @@
 const WHATSAPP_PHONE = '523326684296';
-const PRICE_TEXT = 'Precio de mayoreo disponible';
+const CATEGORY_PRICING = {
+  'iPhone INCELL': {
+    menudeo: '$180 MXN',
+    mayoreo5: '$175 MXN',
+  },
+  'iPhone OLED': {
+    menudeo: '$185 MXN',
+    mayoreo5: '$180 MXN',
+  },
+  'Samsung INCELL': {
+    menudeo: '$350 MXN',
+    mayoreo5: '$330 MXN',
+  },
+  'Samsung OLED': {
+    menudeo: '$1000 MXN',
+    mayoreo5: '$950 MXN',
+  },
+};
+
+const PRICE_NOTE = 'Precios de HL CDMX 2026 MAYO · actualización mensual';
 
 const PRODUCT_MAIN_IMAGES = {
   'iPhone INCELL': 'assets/products/iphone-incell/main.jpg',
@@ -37,7 +56,7 @@ const HAODE_PRODUCTS = [
     category: 'iPhone INCELL',
     name: 'iPhone INCELL FHD',
     description: 'Pantalla para el mercado mexicano con respuesta estable y rotación rápida para mayoristas.',
-    priceText: PRICE_TEXT,
+    priceText: `Menudeo desde ${CATEGORY_PRICING['iPhone INCELL'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['iPhone INCELL'].mayoreo5}`,
     image: PRODUCT_MAIN_IMAGES['iPhone INCELL'],
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: iPhone INCELL FHD\nCantidad:\nCiudad:',
   },
@@ -46,7 +65,7 @@ const HAODE_PRODUCTS = [
     category: 'iPhone OLED',
     name: 'iPhone OLED Premium',
     description: 'Acabado premium para clientes que buscan mejor brillo, color y una presentación más alta.',
-    priceText: PRICE_TEXT,
+    priceText: `Menudeo desde ${CATEGORY_PRICING['iPhone OLED'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['iPhone OLED'].mayoreo5}`,
     image: PRODUCT_MAIN_IMAGES['iPhone OLED'],
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: iPhone OLED Premium\nCantidad:\nCiudad:',
   },
@@ -55,7 +74,7 @@ const HAODE_PRODUCTS = [
     category: 'Samsung INCELL',
     name: 'Samsung INCELL con marco',
     description: 'Opción confiable para negocios de reparación y reventa con flujo rápido de inventario.',
-    priceText: PRICE_TEXT,
+    priceText: `Menudeo desde ${CATEGORY_PRICING['Samsung INCELL'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['Samsung INCELL'].mayoreo5}`,
     image: PRODUCT_MAIN_IMAGES['Samsung INCELL'],
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: Samsung INCELL con marco\nCantidad:\nCiudad:',
   },
@@ -64,7 +83,7 @@ const HAODE_PRODUCTS = [
     category: 'Samsung OLED',
     name: 'Samsung OLED con marco',
     description: 'Pantalla de nivel premium para clientes que priorizan calidad visual y mayor valor percibido.',
-    priceText: PRICE_TEXT,
+    priceText: `Menudeo desde ${CATEGORY_PRICING['Samsung OLED'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['Samsung OLED'].mayoreo5}`,
     image: PRODUCT_MAIN_IMAGES['Samsung OLED'],
     whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: Samsung OLED con marco\nCantidad:\nCiudad:',
   },
@@ -212,6 +231,11 @@ function renderProductsPage() {
 
   renderCards();
   renderGallery();
+
+  const note = document.querySelector('[data-price-note]');
+  if (note) {
+    note.textContent = PRICE_NOTE;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', renderProductsPage);

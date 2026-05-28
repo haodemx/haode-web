@@ -942,6 +942,12 @@ h1 {
   line-height: 1.65;
 }
 
+.product-price {
+  color: #ffd7b5 !important;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
 .benefit-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
