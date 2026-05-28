@@ -1,9 +1,9 @@
 # HAODE Auto Product Report
 
 - Workbook: HL CDMX 2026 MAYO.xlsx
-- Generated: 2026-05-28T18:33:52.539Z
+- Generated: 2026-05-28T19:18:33.429Z
 
-## iPhone INCELL
+## iphone-incell
 - Productos: 23
 - Con precio: 23
 - Con video: 23
@@ -37,7 +37,7 @@ MARCO ORIGINA Pantalla completa =DISPIMG("ID_ABC5043E9C344DA19DDC616F23263F58",1
 | iPhone XS | assets/products/iphone-incell/xs/main.jpg | 1 | Sí | 60HZ XS INCELL-FHD Plus Tamaño original 3 |
 | iPhone XS Max | assets/products/iphone-incell/xsmax/main.jpg | 1 | Sí | 60HZ XS MAX INCELL-FHD Plus MOVE IC    Tamaño original 10 |
 
-## iPhone OLED
+## iphone-oled
 - Productos: 24
 - Con precio: 18
 - Con video: 24
@@ -70,7 +70,7 @@ MARCO ORIGINA Pantalla completa =DISPIMG("ID_ABC5043E9C344DA19DDC616F23263F58",1
 | iPhone X | assets/products/iphone-oled/x/main.jpg | 1 | Consultar | Consultar |
 | iPhone XS Max | assets/products/iphone-oled/xsmax/main.jpg | 1 | Sí | XS MAX OLED PREMIUM MOVE IC Tamaño original 11 |
 
-## Samsung INCELL
+## samsung-incell
 - Productos: 20
 - Con precio: 20
 - Con video: 9
@@ -119,7 +119,7 @@ MARCO ORIGINA Pantalla completa =DISPIMG("ID_8A4B9FD11AF4403ABF0A7F26BE441722",1
 | Samsung S9 Plus | assets/products/samsung-incell/s9-plus/main.jpg | 0 | Sí | S9 C/M INCELL-HD+
 MARCO ORIGINA Pantalla completa =DISPIMG("ID_8A4B9FD11AF4403ABF0A7F26BE441722",1) 3 |
 
-## Samsung OLED
+## samsung-oled
 - Productos: 19
 - Con precio: 10
 - Con video: 6

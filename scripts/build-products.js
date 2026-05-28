@@ -14,7 +14,7 @@ const SITE_URL = 'https://haodemx.github.io/haode-web';
 
 const CATEGORY_CONFIG = [
   {
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     folder: 'iphone-incell',
     brand: 'iPhone',
     quality: 'INCELL FHD',
@@ -67,7 +67,7 @@ const CATEGORY_CONFIG = [
     fallbackImage: 'assets/products/iphone-incell/main.jpg',
   },
   {
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     folder: 'iphone-oled',
     brand: 'iPhone',
     quality: 'OLED PREMIUM',
@@ -111,7 +111,7 @@ const CATEGORY_CONFIG = [
     fallbackImage: 'assets/products/iphone-oled/main.jpg',
   },
   {
-    category: 'Samsung INCELL',
+    category: 'samsung-incell',
     folder: 'samsung-incell',
     brand: 'Samsung',
     quality: 'INCELL CON MARCO',
@@ -152,7 +152,7 @@ const CATEGORY_CONFIG = [
     fallbackImage: 'assets/products/samsung-incell/main.jpg',
   },
   {
-    category: 'Samsung OLED',
+    category: 'samsung-oled',
     folder: 'samsung-oled',
     brand: 'Samsung',
     quality: 'OLED CON MARCO',
@@ -682,7 +682,7 @@ function writeReport(reports, workbookPath) {
 
 function writeSeriesCheckReport(reports, workbookPath) {
   ensureDir(path.dirname(SERIES_CHECK_FILE));
-  const targetCategories = ['iPhone OLED', 'Samsung INCELL', 'Samsung OLED'];
+  const targetCategories = ['iphone-oled', 'samsung-incell', 'samsung-oled'];
   const targetReports = reports.filter((entry) => targetCategories.includes(entry.category));
   const byCategory = new Map();
   for (const category of targetCategories) {

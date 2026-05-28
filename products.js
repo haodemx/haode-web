@@ -3,7 +3,7 @@ const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['1 pza', '5+ pzs', '100 pzs surtido', '100 pzs/modelo', 'Caja/modelo'];
 
 const CATEGORY_META = {
-  'iPhone INCELL': {
+  'iphone-incell': {
     brand: 'iPhone',
     title: 'iPhone INCELL',
     subtitle: 'Opciones de entrada para técnicos, talleres y clientes que buscan una buena relación precio-rendimiento.',
@@ -14,7 +14,7 @@ const CATEGORY_META = {
       'assets/products/iphone-incell/gallery-03.jpg',
     ],
   },
-  'iPhone OLED': {
+  'iphone-oled': {
     brand: 'iPhone',
     title: 'iPhone OLED',
     subtitle: 'Pantallas premium para un acabado visual superior y una experiencia más cercana al original.',
@@ -25,7 +25,7 @@ const CATEGORY_META = {
       'assets/products/iphone-oled/gallery-03.jpg',
     ],
   },
-  'Samsung INCELL': {
+  'samsung-incell': {
     brand: 'Samsung',
     title: 'Samsung INCELL',
     subtitle: 'Pantallas con marco para instalación rápida y compra por mayoreo en CDMX.',
@@ -36,7 +36,7 @@ const CATEGORY_META = {
       'assets/products/samsung-incell/gallery-03.jpg',
     ],
   },
-  'Samsung OLED': {
+  'samsung-oled': {
     brand: 'Samsung',
     title: 'Samsung OLED',
     subtitle: 'Pantallas de gama alta para modelos Galaxy con mejor calidad visual.',
@@ -47,6 +47,20 @@ const CATEGORY_META = {
       'assets/products/samsung-oled/gallery-03.jpg',
     ],
   },
+};
+
+const CATEGORY_SLUGS = Object.keys(CATEGORY_META);
+const CATEGORY_ALIASES = {
+  all: 'all',
+  todos: 'all',
+  'iPhone INCELL': 'iphone-incell',
+  'iPhone OLED': 'iphone-oled',
+  'Samsung INCELL': 'samsung-incell',
+  'Samsung OLED': 'samsung-oled',
+  'iphone-incell': 'iphone-incell',
+  'iphone-oled': 'iphone-oled',
+  'samsung-incell': 'samsung-incell',
+  'samsung-oled': 'samsung-oled',
 };
 
 const IPHONE_INCELL_MEDIA = {
@@ -411,16 +425,16 @@ const SAMSUNG_OLED_MEDIA = {
 };
 
 const CATEGORY_MEDIA = {
-  'iPhone INCELL': IPHONE_INCELL_MEDIA,
-  'iPhone OLED': IPHONE_OLED_MEDIA,
-  'Samsung INCELL': SAMSUNG_INCELL_MEDIA,
-  'Samsung OLED': SAMSUNG_OLED_MEDIA,
+  'iphone-incell': IPHONE_INCELL_MEDIA,
+  'iphone-oled': IPHONE_OLED_MEDIA,
+  'samsung-incell': SAMSUNG_INCELL_MEDIA,
+  'samsung-oled': SAMSUNG_OLED_MEDIA,
 };
 
 const PRODUCT_DEFINITIONS = [
   {
     id: 'iphone-x-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone X',
     quality: 'INCELL FHD+',
     prices: [180, 175, 170, 165, 155],
@@ -428,7 +442,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-xs-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone XS',
     quality: 'INCELL FHD+',
     prices: [180, 175, 170, 165, 155],
@@ -436,7 +450,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-xr-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone XR',
     quality: 'INCELL FHD+',
     prices: [180, 175, 170, 165, 155],
@@ -444,7 +458,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-11-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 11',
     quality: 'INCELL FHD+',
     prices: [180, 175, 170, 165, 155],
@@ -452,7 +466,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-11-pro-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 11 Pro',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [200, 195, 190, 190, 185],
@@ -460,7 +474,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-11-pro-max-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 11 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [220, 210, 200, 195, 190],
@@ -468,7 +482,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-12-mini-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 12 mini',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [230, 220, 210, 200, 195],
@@ -476,7 +490,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-12-pro-max-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 12 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [250, 240, 235, 230, 220],
@@ -484,7 +498,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-13-mini-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 13 mini',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [260, 250, 245, 240, 235],
@@ -492,7 +506,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-13-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 13',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [250, 245, 240, 235, 230],
@@ -500,7 +514,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-13-pro-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 13 Pro',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [300, 290, 285, 280, 275],
@@ -508,7 +522,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-13-pro-max-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 13 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [350, 340, 335, 330, 325],
@@ -516,7 +530,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-14-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 14',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [260, 250, 245, 240, 230],
@@ -524,7 +538,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-14-plus-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 14 Plus',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [300, 290, 280, 275, 265],
@@ -532,7 +546,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-14-pro-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 14 Pro',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [350, 340, 330, 320, 310],
@@ -540,7 +554,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-14-pro-max-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 14 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [380, 350, 340, 330, 310],
@@ -548,7 +562,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-15-incell',
-    category: 'iPhone INCELL',
+    category: 'iphone-incell',
     name: 'Pantalla para iPhone 15',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [300, 290, 285, 280, 275],
@@ -556,7 +570,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-xs-max-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone XS MAX',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [320, 297.6, 281.6, null, null],
@@ -564,7 +578,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-11-pro-max-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 11 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [680, 632.4, 598.4, null, null],
@@ -572,7 +586,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-12-pro-max-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 12 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [950, 883.5, 836, null, null],
@@ -580,7 +594,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-13-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 13',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [780, 725.4, 686.4, null, null],
@@ -588,7 +602,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-13-pro-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 13 Pro',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [920, 855.6, 809.6, null, null],
@@ -596,7 +610,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-13-pro-max-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 13 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [1100, 1023, 968, null, null],
@@ -604,7 +618,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-14-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 14',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [750, 697.5, 660, null, null],
@@ -612,7 +626,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-14-plus-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 14 Plus',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [1000, 930, 880, null, null],
@@ -620,7 +634,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'iphone-14-pro-max-oled',
-    category: 'iPhone OLED',
+    category: 'iphone-oled',
     name: 'Pantalla para iPhone 14 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
     prices: [1600, 1488, 1408, null, null],
@@ -628,7 +642,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s20-incell',
-    category: 'Samsung INCELL',
+    category: 'samsung-incell',
     name: 'Pantalla para Samsung S20',
     quality: 'INCELL-HD+ CON MARCO',
     prices: [520, 483.6, 457.6, null, null],
@@ -636,7 +650,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s21-incell',
-    category: 'Samsung INCELL',
+    category: 'samsung-incell',
     name: 'Pantalla para Samsung S21',
     quality: 'INCELL-HD+ CON MARCO',
     prices: [550, 511.5, 484, null, null],
@@ -644,7 +658,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s22-ultra-incell',
-    category: 'Samsung INCELL',
+    category: 'samsung-incell',
     name: 'Pantalla para Samsung S22 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
     prices: [null, null, null, null, null],
@@ -652,7 +666,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s23-ultra-incell',
-    category: 'Samsung INCELL',
+    category: 'samsung-incell',
     name: 'Pantalla para Samsung S23 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
     prices: [null, null, null, null, null],
@@ -660,7 +674,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s24-ultra-incell',
-    category: 'Samsung INCELL',
+    category: 'samsung-incell',
     name: 'Pantalla para Samsung S24 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
     prices: [null, null, null, null, null],
@@ -668,7 +682,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-note-20-ultra-incell',
-    category: 'Samsung INCELL',
+    category: 'samsung-incell',
     name: 'Pantalla para Samsung Note 20 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
     prices: [null, null, null, null, null],
@@ -676,7 +690,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s20-plus-oled',
-    category: 'Samsung OLED',
+    category: 'samsung-oled',
     name: 'Pantalla para Samsung S20 Plus',
     quality: 'OLED PREMIUM C/M',
     prices: [1200, 1116, 1056, null, null],
@@ -684,7 +698,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s21-ultra-oled',
-    category: 'Samsung OLED',
+    category: 'samsung-oled',
     name: 'Pantalla para Samsung S21 Ultra',
     quality: 'OLED PREMIUM C/M',
     prices: [1650, 1534.5, 1452, null, null],
@@ -692,7 +706,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s22-ultra-oled',
-    category: 'Samsung OLED',
+    category: 'samsung-oled',
     name: 'Pantalla para Samsung S22 Ultra',
     quality: 'OLED PREMIUM C/M',
     prices: [1600, 1488, 1408, null, null],
@@ -700,7 +714,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s23-ultra-oled',
-    category: 'Samsung OLED',
+    category: 'samsung-oled',
     name: 'Pantalla para Samsung S23 Ultra',
     quality: 'OLED PREMIUM C/M',
     prices: [1650, 1534.5, 1452, null, null],
@@ -708,7 +722,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s24-ultra-oled',
-    category: 'Samsung OLED',
+    category: 'samsung-oled',
     name: 'Pantalla para Samsung S24 Ultra',
     quality: 'OLED PREMIUM C/M',
     prices: [1950, 1813.5, 1716, null, null],
@@ -716,7 +730,7 @@ const PRODUCT_DEFINITIONS = [
   },
   {
     id: 'samsung-s25-ultra-oled',
-    category: 'Samsung OLED',
+    category: 'samsung-oled',
     name: 'Pantalla para Samsung S25 Ultra',
     quality: 'OLED PREMIUM C/M',
     prices: [2200, 2046, 1936, null, null],
@@ -786,19 +800,25 @@ function getProductUrl(productId) {
 }
 
 function getCategoryHash(category) {
-  if (category === 'Todos') return '';
-  return `#${category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+  const categorySlug = normalizeCategory(category);
+  if (categorySlug === 'all') return '';
+  return `#${categorySlug}`;
 }
 
 function getCategoryFromHash(hash) {
   const normalizedHash = String(hash || '').replace(/^#/, '').toLowerCase();
-  if (!normalizedHash) return 'Todos';
-  return Object.keys(CATEGORY_META).find((category) => getCategoryHash(category).slice(1) === normalizedHash) || 'Todos';
+  if (!normalizedHash) return 'all';
+  return CATEGORY_SLUGS.includes(normalizedHash) ? normalizedHash : 'all';
+}
+
+function normalizeCategory(category) {
+  return CATEGORY_ALIASES[category] || CATEGORY_ALIASES[String(category || '').trim()] || 'all';
 }
 
 function createProduct(definition) {
-  const categoryMeta = CATEGORY_META[definition.category];
-  const categoryMedia = CATEGORY_MEDIA[definition.category]?.[definition.id] || null;
+  const category = normalizeCategory(definition.category);
+  const categoryMeta = CATEGORY_META[category];
+  const categoryMedia = CATEGORY_MEDIA[category]?.[definition.id] || null;
   const mediaImages = Array.isArray(definition.images) && definition.images.length ? definition.images.filter(Boolean) : null;
   const priceTable = buildPriceTable(definition.prices || definition.priceTable);
   const mainImage = definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
@@ -807,7 +827,7 @@ function createProduct(definition) {
   return {
     id: definition.id,
     brand: definition.brand || categoryMeta.brand,
-    category: definition.category,
+    category,
     model: definition.model || name,
     name,
     quality: definition.quality,
@@ -828,12 +848,13 @@ const PRODUCT_SOURCE = GENERATED_PRODUCT_DEFINITIONS || PRODUCT_DEFINITIONS;
 const PRODUCTS = PRODUCT_SOURCE.map(createProduct);
 const PRODUCT_BY_ID = new Map(PRODUCTS.map((product) => [product.id, product]));
 
-function createFilterButton(label, isActive = false) {
+function createFilterButton(category, isActive = false) {
+  const meta = CATEGORY_META[category];
   const button = document.createElement('button');
   button.type = 'button';
   button.className = `filter-chip${isActive ? ' is-active' : ''}`;
-  button.textContent = label;
-  button.dataset.filter = label;
+  button.textContent = category === 'all' ? 'Todos' : meta.title;
+  button.dataset.category = category;
   return button;
 }
 
@@ -944,48 +965,57 @@ function renderCatalogPage() {
     priceNote.textContent = 'Precios por cantidad en MXN. Consulta disponibilidad por WhatsApp para confirmar tu pedido.';
   }
 
-  const categories = ['Todos', ...Object.keys(CATEGORY_META)];
-  let activeFilter = 'Todos';
+  const categories = ['all', ...CATEGORY_SLUGS];
+  let activeFilter = 'all';
 
-  function renderSections() {
+  function renderCategorySection(category, products) {
+    const meta = CATEGORY_META[category];
+    const section = document.createElement('section');
+    section.className = 'catalog-section';
+    section.dataset.category = category;
+
+    const head = document.createElement('div');
+    head.className = 'catalog-section-head';
+
+    const titleWrap = document.createElement('div');
+    const kicker = document.createElement('p');
+    kicker.className = 'section-kicker';
+    kicker.textContent = meta.brand;
+    const heading = document.createElement('h2');
+    heading.textContent = meta.title;
+    const subtitle = document.createElement('p');
+    subtitle.className = 'catalog-section-subtitle';
+    subtitle.textContent = meta.subtitle;
+    titleWrap.append(kicker, heading, subtitle);
+
+    const count = document.createElement('p');
+    count.className = 'catalog-count';
+    count.textContent = `${products.length} modelos`;
+
+    head.append(titleWrap, count);
+
+    const grid = document.createElement('div');
+    grid.className = 'product-page-grid shop-grid';
+
+    products.forEach((product) => {
+      grid.appendChild(createProductCard(product));
+    });
+
+    section.append(head, grid);
+    sectionsRoot.appendChild(section);
+  }
+
+  function renderFilteredProducts(category) {
     sectionsRoot.innerHTML = '';
 
-    Object.entries(CATEGORY_META).forEach(([category, meta]) => {
-      const categoryProducts = PRODUCTS.filter((product) => product.category === category);
-      const section = document.createElement('section');
-      section.className = 'catalog-section';
-      section.dataset.category = category;
-
-      const head = document.createElement('div');
-      head.className = 'catalog-section-head';
-
-      const titleWrap = document.createElement('div');
-      const kicker = document.createElement('p');
-      kicker.className = 'section-kicker';
-      kicker.textContent = meta.brand;
-      const heading = document.createElement('h2');
-      heading.textContent = meta.title;
-      const subtitle = document.createElement('p');
-      subtitle.className = 'catalog-section-subtitle';
-      subtitle.textContent = meta.subtitle;
-      titleWrap.append(kicker, heading, subtitle);
-
-      const count = document.createElement('p');
-      count.className = 'catalog-count';
-      count.textContent = `${categoryProducts.length} modelos`;
-
-      head.append(titleWrap, count);
-
-      const grid = document.createElement('div');
-      grid.className = 'product-page-grid shop-grid';
-
-      categoryProducts.forEach((product) => {
-        grid.appendChild(createProductCard(product));
+    if (category === 'all') {
+      CATEGORY_SLUGS.forEach((categorySlug) => {
+        renderCategorySection(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug));
       });
+      return;
+    }
 
-      section.append(head, grid);
-      sectionsRoot.appendChild(section);
-    });
+    renderCategorySection(category, PRODUCTS.filter((product) => product.category === category));
   }
 
   function scrollToProductSections() {
@@ -993,18 +1023,17 @@ function renderCatalogPage() {
   }
 
   function setActiveFilter(nextFilter, options = {}) {
-    activeFilter = nextFilter;
+    activeFilter = normalizeCategory(nextFilter);
     Array.from(filterBar.querySelectorAll('.filter-chip')).forEach((button) => {
-      button.classList.toggle('is-active', button.dataset.filter === nextFilter);
-      button.setAttribute('aria-pressed', String(button.dataset.filter === nextFilter));
+      const isActive = button.dataset.category === activeFilter;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
     });
 
-    Array.from(sectionsRoot.querySelectorAll('.catalog-section')).forEach((section) => {
-      section.hidden = activeFilter !== 'Todos' && section.dataset.category !== activeFilter;
-    });
+    renderFilteredProducts(activeFilter);
 
     if (options.syncHash !== false) {
-      const nextHash = getCategoryHash(nextFilter);
+      const nextHash = getCategoryHash(activeFilter);
       const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`;
       window.history.replaceState(null, '', nextUrl);
     }
@@ -1021,12 +1050,11 @@ function renderCatalogPage() {
     button.addEventListener('click', (event) => {
       event.preventDefault();
       event.stopPropagation();
-      setActiveFilter(category, { scroll: true });
+      setActiveFilter(button.dataset.category, { scroll: true });
     });
     filterBar.appendChild(button);
   });
 
-  renderSections();
   setActiveFilter(getCategoryFromHash(window.location.hash), { syncHash: false, scroll: Boolean(window.location.hash) });
 
   window.addEventListener('hashchange', () => {

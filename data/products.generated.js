@@ -1,7 +1,7 @@
 window.HAODE_PRODUCTS_DATA = [
   {
     "id": "iphone-incell-11",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 11",
     "name": "Pantalla para iPhone 11",
@@ -44,7 +44,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-11pro",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 11 Pro",
     "name": "Pantalla para iPhone 11 Pro",
@@ -87,7 +87,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-11promax",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 11 Pro Max",
     "name": "Pantalla para iPhone 11 Pro Max",
@@ -129,7 +129,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-12-12pro",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 12 / 12 Pro",
     "name": "Pantalla para iPhone 12 / 12 Pro",
@@ -171,7 +171,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-12mini",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 12 mini",
     "name": "Pantalla para iPhone 12 mini",
@@ -213,7 +213,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-12promax",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 12 Pro Max",
     "name": "Pantalla para iPhone 12 Pro Max",
@@ -255,7 +255,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-13",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 13",
     "name": "Pantalla para iPhone 13",
@@ -297,7 +297,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-13mini",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 13 mini",
     "name": "Pantalla para iPhone 13 mini",
@@ -339,7 +339,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-13pro",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 13 Pro",
     "name": "Pantalla para iPhone 13 Pro",
@@ -381,7 +381,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-13promax",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 13 Pro Max",
     "name": "Pantalla para iPhone 13 Pro Max",
@@ -423,7 +423,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-14",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 14",
     "name": "Pantalla para iPhone 14",
@@ -465,7 +465,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-14plus",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 14 Plus",
     "name": "Pantalla para iPhone 14 Plus",
@@ -507,7 +507,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-14pro",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 14 Pro",
     "name": "Pantalla para iPhone 14 Pro",
@@ -549,7 +549,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-14promax",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 14 Pro Max",
     "name": "Pantalla para iPhone 14 Pro Max",
@@ -591,7 +591,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-15",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 15",
     "name": "Pantalla para iPhone 15",
@@ -632,7 +632,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-15plus",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 15 Plus",
     "name": "Pantalla para iPhone 15 Plus",
@@ -673,7 +673,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-15pro",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 15 Pro",
     "name": "Pantalla para iPhone 15 Pro",
@@ -713,7 +713,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-15promax",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 15 Pro Max",
     "name": "Pantalla para iPhone 15 Pro Max",
@@ -755,7 +755,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-16",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 16",
     "name": "Pantalla para iPhone 16",
@@ -797,7 +797,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-x",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone X",
     "name": "Pantalla para iPhone X",
@@ -839,7 +839,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-xr",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone XR",
     "name": "Pantalla para iPhone XR",
@@ -881,7 +881,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-xs",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone XS",
     "name": "Pantalla para iPhone XS",
@@ -923,7 +923,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-incell-xsmax",
-    "category": "iPhone INCELL",
+    "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone XS Max",
     "name": "Pantalla para iPhone XS Max",
@@ -965,7 +965,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-11",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 11",
     "name": "Pantalla para iPhone 11",
@@ -1004,7 +1004,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-11pro",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 11 Pro",
     "name": "Pantalla para iPhone 11 Pro",
@@ -1043,7 +1043,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-11promax",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 11 Pro Max",
     "name": "Pantalla para iPhone 11 Pro Max",
@@ -1084,7 +1084,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-12-12pro",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 12 / 12 Pro",
     "name": "Pantalla para iPhone 12 / 12 Pro",
@@ -1123,7 +1123,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-12mini",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 12 mini",
     "name": "Pantalla para iPhone 12 mini",
@@ -1162,7 +1162,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-12pro",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 12 Pro",
     "name": "Pantalla para iPhone 12 Pro",
@@ -1201,7 +1201,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-12promax",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 12 Pro Max",
     "name": "Pantalla para iPhone 12 Pro Max",
@@ -1242,7 +1242,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-13",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 13",
     "name": "Pantalla para iPhone 13",
@@ -1283,7 +1283,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-13mini",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 13 mini",
     "name": "Pantalla para iPhone 13 mini",
@@ -1322,7 +1322,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-13pro",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 13 Pro",
     "name": "Pantalla para iPhone 13 Pro",
@@ -1363,7 +1363,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-13promax",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 13 Pro Max",
     "name": "Pantalla para iPhone 13 Pro Max",
@@ -1404,7 +1404,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-14",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 14",
     "name": "Pantalla para iPhone 14",
@@ -1445,7 +1445,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-14plus",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 14 Plus",
     "name": "Pantalla para iPhone 14 Plus",
@@ -1486,7 +1486,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-14pro",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 14 Pro",
     "name": "Pantalla para iPhone 14 Pro",
@@ -1525,7 +1525,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-14promax",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 14 Pro Max",
     "name": "Pantalla para iPhone 14 Pro Max",
@@ -1566,7 +1566,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-15",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 15",
     "name": "Pantalla para iPhone 15",
@@ -1605,7 +1605,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-15plus",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 15 Plus",
     "name": "Pantalla para iPhone 15 Plus",
@@ -1644,7 +1644,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-15promax",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 15 Pro Max",
     "name": "Pantalla para iPhone 15 Pro Max",
@@ -1683,7 +1683,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-16",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 16",
     "name": "Pantalla para iPhone 16",
@@ -1722,7 +1722,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-16plus",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 16 Plus",
     "name": "Pantalla para iPhone 16 Plus",
@@ -1761,7 +1761,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-16pro",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 16 Pro",
     "name": "Pantalla para iPhone 16 Pro",
@@ -1800,7 +1800,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-16promax",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 16 Pro Max",
     "name": "Pantalla para iPhone 16 Pro Max",
@@ -1840,7 +1840,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-x",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone X",
     "name": "Pantalla para iPhone X",
@@ -1879,7 +1879,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "iphone-oled-xsmax",
-    "category": "iPhone OLED",
+    "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone XS Max",
     "name": "Pantalla para iPhone XS Max",
@@ -1920,7 +1920,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-note-10",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung Note 10",
     "name": "Pantalla para Samsung Note 10",
@@ -1962,7 +1962,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-note-10-plus",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung Note 10 Plus",
     "name": "Pantalla para Samsung Note 10 Plus",
@@ -2002,7 +2002,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-note-20-ultra",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung Note 20 Ultra",
     "name": "Pantalla para Samsung Note 20 Ultra",
@@ -2042,7 +2042,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-note-8",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung Note 8",
     "name": "Pantalla para Samsung Note 8",
@@ -2082,7 +2082,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-note-9",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung Note 9",
     "name": "Pantalla para Samsung Note 9",
@@ -2122,7 +2122,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s10",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S10",
     "name": "Pantalla para Samsung S10",
@@ -2165,7 +2165,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s10-plus",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S10 Plus",
     "name": "Pantalla para Samsung S10 Plus",
@@ -2207,7 +2207,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s20",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S20",
     "name": "Pantalla para Samsung S20",
@@ -2249,7 +2249,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s20-fe",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S20 FE",
     "name": "Pantalla para Samsung S20 FE",
@@ -2291,7 +2291,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s20-plus",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S20 Plus",
     "name": "Pantalla para Samsung S20 Plus",
@@ -2333,7 +2333,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s20-ultra",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S20 Ultra",
     "name": "Pantalla para Samsung S20 Ultra",
@@ -2373,7 +2373,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s21",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S21",
     "name": "Pantalla para Samsung S21",
@@ -2413,7 +2413,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s21-ultra",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S21 Ultra",
     "name": "Pantalla para Samsung S21 Ultra",
@@ -2453,7 +2453,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s22-ultra",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S22 Ultra",
     "name": "Pantalla para Samsung S22 Ultra",
@@ -2496,7 +2496,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s23-ultra",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S23 Ultra",
     "name": "Pantalla para Samsung S23 Ultra",
@@ -2538,7 +2538,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s24-ultra",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S24 Ultra",
     "name": "Pantalla para Samsung S24 Ultra",
@@ -2577,7 +2577,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s8",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S8",
     "name": "Pantalla para Samsung S8",
@@ -2617,7 +2617,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s8-plus",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S8 Plus",
     "name": "Pantalla para Samsung S8 Plus",
@@ -2659,7 +2659,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s9",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S9",
     "name": "Pantalla para Samsung S9",
@@ -2697,7 +2697,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-incell-s9-plus",
-    "category": "Samsung INCELL",
+    "category": "samsung-incell",
     "brand": "Samsung",
     "model": "Samsung S9 Plus",
     "name": "Pantalla para Samsung S9 Plus",
@@ -2735,7 +2735,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-note-10",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung Note 10",
     "name": "Pantalla para Samsung Note 10",
@@ -2772,7 +2772,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-note-10-plus",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung Note 10 Plus",
     "name": "Pantalla para Samsung Note 10 Plus",
@@ -2809,7 +2809,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-note-20",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung Note 20",
     "name": "Pantalla para Samsung Note 20",
@@ -2846,7 +2846,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-note-20-ultra",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung Note 20 Ultra",
     "name": "Pantalla para Samsung Note 20 Ultra",
@@ -2883,7 +2883,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-note-9",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung Note 9",
     "name": "Pantalla para Samsung Note 9",
@@ -2920,7 +2920,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s20",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S20",
     "name": "Pantalla para Samsung S20",
@@ -2957,7 +2957,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s20-plus",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S20 Plus",
     "name": "Pantalla para Samsung S20 Plus",
@@ -2998,7 +2998,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s20-ultra",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S20 Ultra",
     "name": "Pantalla para Samsung S20 Ultra",
@@ -3035,7 +3035,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s21",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S21",
     "name": "Pantalla para Samsung S21",
@@ -3072,7 +3072,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s21-plus",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S21 Plus",
     "name": "Pantalla para Samsung S21 Plus",
@@ -3109,7 +3109,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s21-ultra",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S21 Ultra",
     "name": "Pantalla para Samsung S21 Ultra",
@@ -3150,7 +3150,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s22-plus",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S22 Plus",
     "name": "Pantalla para Samsung S22 Plus",
@@ -3187,7 +3187,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s22-ultra",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S22 Ultra",
     "name": "Pantalla para Samsung S22 Ultra",
@@ -3228,7 +3228,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s23-plus",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S23 Plus",
     "name": "Pantalla para Samsung S23 Plus",
@@ -3265,7 +3265,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s23-ultra",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S23 Ultra",
     "name": "Pantalla para Samsung S23 Ultra",
@@ -3306,7 +3306,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s24-plus",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S24 Plus",
     "name": "Pantalla para Samsung S24 Plus",
@@ -3343,7 +3343,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s24-ultra",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S24 Ultra",
     "name": "Pantalla para Samsung S24 Ultra",
@@ -3384,7 +3384,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s25-ultra",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S25 Ultra",
     "name": "Pantalla para Samsung S25 Ultra",
@@ -3425,7 +3425,7 @@ window.HAODE_PRODUCTS_DATA = [
   },
   {
     "id": "samsung-oled-s9-plus",
-    "category": "Samsung OLED",
+    "category": "samsung-oled",
     "brand": "Samsung",
     "model": "Samsung S9 Plus",
     "name": "Pantalla para Samsung S9 Plus",
@@ -3462,6 +3462,6 @@ window.HAODE_PRODUCTS_DATA = [
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
-  "generatedAt": "2026-05-28T18:33:52.537Z",
+  "generatedAt": "2026-05-28T19:18:33.425Z",
   "workbook": "HL CDMX 2026 MAYO.xlsx"
 };

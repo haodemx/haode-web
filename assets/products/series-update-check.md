@@ -1,9 +1,9 @@
 # Series Update Check
 
 - Workbook: HL CDMX 2026 MAYO.xlsx
-- Generated: 2026-05-28T18:33:52.541Z
+- Generated: 2026-05-28T19:18:33.430Z
 
-## iPhone OLED
+## iphone-oled
 - Productos actualizados: 24
 - Con precio: 18
 - Con video: 24
@@ -35,7 +35,7 @@
 | iPhone X | assets/products/iphone-oled/x/main.jpg | Sin galería | assets/products/iphone-oled/x/video-01.mp4 | No | Consultar |
 | iPhone XS Max | assets/products/iphone-oled/xsmax/main.jpg | assets/products/iphone-oled/xsmax/gallery-01.jpg<br>assets/products/iphone-oled/xsmax/gallery-02.jpg | assets/products/iphone-oled/xsmax/video-01.mp4 | Sí | XS MAX OLED PREMIUM MOVE IC Tamaño original 11 |
 
-## Samsung INCELL
+## samsung-incell
 - Productos actualizados: 20
 - Con precio: 20
 - Con video: 9
@@ -83,7 +83,7 @@ MARCO ORIGINA Pantalla completa =DISPIMG("ID_8A4B9FD11AF4403ABF0A7F26BE441722",1
 | Samsung S9 Plus | assets/products/samsung-incell/s9-plus/main.jpg | assets/products/samsung-incell/s9-plus/gallery-01.jpg | No | Sí | S9 C/M INCELL-HD+
 MARCO ORIGINA Pantalla completa =DISPIMG("ID_8A4B9FD11AF4403ABF0A7F26BE441722",1) 3 |
 
-## Samsung OLED
+## samsung-oled
 - Productos actualizados: 19
 - Con precio: 10
 - Con video: 6
@@ -114,18 +114,18 @@ MARCO ORIGINA Pantalla completa =DISPIMG("ID_8A4B9FD11AF4403ABF0A7F26BE441722",1
 - Ninguno
 
 ## Faltan precios
-- iPhone OLED: iPhone 12 mini
-- iPhone OLED: iPhone 13 mini
-- iPhone OLED: iPhone 15 Plus
-- iPhone OLED: iPhone 16
-- iPhone OLED: iPhone 16 Plus
-- iPhone OLED: iPhone X
-- Samsung OLED: Samsung Note 9
-- Samsung OLED: Samsung S20
-- Samsung OLED: Samsung S20 Ultra
-- Samsung OLED: Samsung S21
-- Samsung OLED: Samsung S21 Plus
-- Samsung OLED: Samsung S22 Plus
-- Samsung OLED: Samsung S23 Plus
-- Samsung OLED: Samsung S24 Plus
-- Samsung OLED: Samsung S9 Plus
+- iphone-oled: iPhone 12 mini
+- iphone-oled: iPhone 13 mini
+- iphone-oled: iPhone 15 Plus
+- iphone-oled: iPhone 16
+- iphone-oled: iPhone 16 Plus
+- iphone-oled: iPhone X
+- samsung-oled: Samsung Note 9
+- samsung-oled: Samsung S20
+- samsung-oled: Samsung S20 Ultra
+- samsung-oled: Samsung S21
+- samsung-oled: Samsung S21 Plus
+- samsung-oled: Samsung S22 Plus
+- samsung-oled: Samsung S23 Plus
+- samsung-oled: Samsung S24 Plus
+- samsung-oled: Samsung S9 Plus
