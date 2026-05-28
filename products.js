@@ -955,6 +955,76 @@ function createProductCard(product) {
   return article;
 }
 
+function getRelatedProducts(product, limit = 3) {
+  const sameCategory = PRODUCTS.filter((item) => item.category === product.category && item.id !== product.id);
+  const fallback = PRODUCTS.filter((item) => item.id !== product.id && item.category !== product.category);
+  return [...sameCategory, ...fallback].slice(0, limit);
+}
+
+function createZoomModal() {
+  let modal = document.querySelector('[data-detail-zoom-modal]');
+  if (modal) return modal;
+
+  modal = document.createElement('div');
+  modal.className = 'detail-zoom-modal';
+  modal.hidden = true;
+  modal.setAttribute('data-detail-zoom-modal', '');
+  modal.innerHTML = `
+    <div class="detail-zoom-frame" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+      <button type="button" class="detail-zoom-close" aria-label="Cerrar ampliación">×</button>
+      <img alt="" />
+    </div>
+  `;
+
+  const frame = modal.querySelector('img');
+  const closeButton = modal.querySelector('.detail-zoom-close');
+
+  const closeModal = () => {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    frame.src = '';
+    frame.alt = '';
+  };
+
+  closeButton.addEventListener('click', closeModal);
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modal.hidden) {
+      closeModal();
+    }
+  });
+
+  modal._open = (src, alt) => {
+    frame.src = src;
+    frame.alt = alt || '';
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  };
+  modal._close = closeModal;
+
+  document.body.appendChild(modal);
+  return modal;
+}
+
+function attachZoom(imageEl, src, alt) {
+  if (!imageEl) return;
+  imageEl.tabIndex = 0;
+  imageEl.setAttribute('role', 'button');
+  imageEl.setAttribute('aria-label', `Ampliar imagen de ${alt}`);
+  imageEl.addEventListener('click', () => {
+    createZoomModal()._open(src, alt);
+  });
+  imageEl.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      createZoomModal()._open(src, alt);
+    }
+  });
+}
+
 function renderCatalogPage() {
   const filterBar = document.querySelector('[data-product-filters]');
   const sectionsRoot = document.querySelector('[data-product-sections]');
@@ -1132,6 +1202,7 @@ function renderProductDetailPage() {
     mainImageEl.onerror = () => {
       if (mainImageEl.src !== PLACEHOLDER_IMAGE) mainImageEl.src = PLACEHOLDER_IMAGE;
     };
+    attachZoom(mainImageEl, new URL(product.mainImage || PLACEHOLDER_IMAGE, currentUrl).href, product.name);
   }
 
   if (priceEl) priceEl.textContent = product.lowestPriceText || 'Consultar';
@@ -1156,6 +1227,7 @@ function renderProductDetailPage() {
       img.onerror = () => {
         if (img.src !== PLACEHOLDER_IMAGE) img.src = PLACEHOLDER_IMAGE;
       };
+      attachZoom(img, new URL(src, currentUrl).href, `${product.name} foto ${index + 1}`);
       galleryEl.appendChild(img);
     });
 
@@ -1174,6 +1246,10 @@ function renderProductDetailPage() {
         const frame = document.createElement('video');
         frame.controls = true;
         frame.playsInline = true;
+        frame.autoplay = true;
+        frame.muted = true;
+        frame.loop = true;
+        frame.preload = 'metadata';
         frame.src = video;
         videosEl.appendChild(frame);
       });
@@ -1196,6 +1272,14 @@ function renderProductDetailPage() {
       price.textContent = row.price;
       tr.append(qty, price);
       tableBody.appendChild(tr);
+    });
+  }
+
+  const relatedRoot = page.querySelector('[data-related-products]');
+  if (relatedRoot) {
+    relatedRoot.innerHTML = '';
+    getRelatedProducts(product).forEach((item) => {
+      relatedRoot.appendChild(createProductCard(item));
     });
   }
 }
