@@ -49,6 +49,7 @@ const CATEGORY_META = {
   },
 };
 
+// iPhone INCELL cover art is sourced from each model folder's main.jpg.
 const IPHONE_INCELL_MEDIA = {
   "iphone-x-incell": {
     "mainImage": "assets/products/iphone-incell/x/main.jpg",
