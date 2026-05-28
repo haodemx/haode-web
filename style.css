@@ -1018,6 +1018,105 @@ h1 {
   line-height: 1.3;
 }
 
+.tracking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tracking-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 116px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  box-shadow: 0 14px 30px rgba(35, 55, 84, 0.08);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.tracking-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 122, 24, 0.28);
+  box-shadow: 0 18px 34px rgba(67, 47, 20, 0.12);
+}
+
+.tracking-mark {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 122, 24, 0.1);
+  color: #8b4a14;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.tracking-estafeta .tracking-mark {
+  background: #ffe8d3;
+  color: #b75b0a;
+}
+
+.tracking-fedex .tracking-mark {
+  background: #efe7ff;
+  color: #4d2f8c;
+}
+
+.tracking-dhl .tracking-mark {
+  background: #fff0ba;
+  color: #9f2d16;
+}
+
+.tracking-paquetexpress .tracking-mark {
+  background: #e8f4ff;
+  color: #185a8d;
+}
+
+.tracking-copy h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1.1rem;
+}
+
+.tracking-copy p {
+  margin: 6px 0 0;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.tracking-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: #241609;
+  font-size: 1.35rem;
+  font-weight: 900;
+  box-shadow: 0 12px 24px rgba(255, 122, 24, 0.22);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.tracking-card:hover .tracking-arrow {
+  transform: translateX(3px);
+  box-shadow: 0 14px 28px rgba(255, 122, 24, 0.28);
+}
+
+.tracking-note {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 122, 24, 0.07);
+  border: 1px solid rgba(255, 122, 24, 0.16);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -1375,6 +1474,7 @@ body.warranty-page .contact-whatsapp-chip {
 
   .showcase-grid,
   .video-showcase-grid,
+  .tracking-grid,
   .product-page-grid,
   .shop-grid,
   .product-grid,
@@ -1490,6 +1590,7 @@ body.warranty-page .contact-whatsapp-chip {
   .product-grid,
   .showcase-grid,
   .video-showcase-grid,
+  .tracking-grid,
   .product-page-grid,
   .shop-grid,
   .gallery-section-grid,
