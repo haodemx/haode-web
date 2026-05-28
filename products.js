@@ -49,7 +49,6 @@ const CATEGORY_META = {
   },
 };
 
-// iPhone INCELL cover art is sourced from each model folder's main.jpg.
 const IPHONE_INCELL_MEDIA = {
   "iphone-x-incell": {
     "mainImage": "assets/products/iphone-incell/x/main.jpg",
@@ -237,6 +236,187 @@ const IPHONE_INCELL_MEDIA = {
   }
 };
 
+const IPHONE_OLED_MEDIA = {
+  'iphone-xs-max-oled': {
+    mainImage: 'assets/products/iphone-oled/xsmax/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/xsmax/gallery-01.jpg',
+      'assets/products/iphone-oled/xsmax/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/xsmax/video-01.mp4'],
+  },
+  'iphone-11-pro-max-oled': {
+    mainImage: 'assets/products/iphone-oled/11promax/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/11promax/gallery-01.jpg',
+      'assets/products/iphone-oled/11promax/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/11promax/video-01.mp4'],
+  },
+  'iphone-12-pro-max-oled': {
+    mainImage: 'assets/products/iphone-oled/12promax/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/12promax/gallery-01.jpg',
+      'assets/products/iphone-oled/12promax/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/12promax/video-01.mp4'],
+  },
+  'iphone-13-oled': {
+    mainImage: 'assets/products/iphone-oled/13/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/13/gallery-01.jpg',
+      'assets/products/iphone-oled/13/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/13/video-01.mp4'],
+  },
+  'iphone-13-pro-oled': {
+    mainImage: 'assets/products/iphone-oled/13pro/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/13pro/gallery-01.jpg',
+      'assets/products/iphone-oled/13pro/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/13pro/video-01.mp4'],
+  },
+  'iphone-13-pro-max-oled': {
+    mainImage: 'assets/products/iphone-oled/13promax/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/13promax/gallery-01.jpg',
+      'assets/products/iphone-oled/13promax/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/13promax/video-01.mp4'],
+  },
+  'iphone-14-oled': {
+    mainImage: 'assets/products/iphone-oled/14/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/14/gallery-01.jpg',
+      'assets/products/iphone-oled/14/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/14/video-01.mp4'],
+  },
+  'iphone-14-plus-oled': {
+    mainImage: 'assets/products/iphone-oled/14plus/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/14plus/gallery-01.jpg',
+      'assets/products/iphone-oled/14plus/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/14plus/video-01.mp4'],
+  },
+  'iphone-14-pro-max-oled': {
+    mainImage: 'assets/products/iphone-oled/14promax/main.jpg',
+    galleryImages: [
+      'assets/products/iphone-oled/14promax/gallery-01.jpg',
+      'assets/products/iphone-oled/14promax/gallery-02.jpg',
+    ],
+    videos: ['assets/products/iphone-oled/14promax/video-01.mp4'],
+  },
+};
+
+const SAMSUNG_INCELL_MEDIA = {
+  'samsung-s20-incell': {
+    mainImage: 'assets/products/samsung-incell/s20/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-incell/s20/gallery-01.jpg',
+      'assets/products/samsung-incell/s20/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-incell/s20/video-01.mp4'],
+  },
+  'samsung-s21-incell': {
+    mainImage: 'assets/products/samsung-incell/s21/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-incell/s21/gallery-01.jpg',
+      'assets/products/samsung-incell/s21/gallery-02.jpg',
+    ],
+    videos: [],
+  },
+  'samsung-s22-ultra-incell': {
+    mainImage: 'assets/products/samsung-incell/s22-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-incell/s22-ultra/gallery-01.jpg',
+      'assets/products/samsung-incell/s22-ultra/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-incell/s22-ultra/video-01.mp4'],
+  },
+  'samsung-s23-ultra-incell': {
+    mainImage: 'assets/products/samsung-incell/s23-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-incell/s23-ultra/gallery-01.jpg',
+      'assets/products/samsung-incell/s23-ultra/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-incell/s23-ultra/video-01.mp4'],
+  },
+  'samsung-s24-ultra-incell': {
+    mainImage: 'assets/products/samsung-incell/s24-ultra/main.jpg',
+    galleryImages: [],
+    videos: [],
+  },
+  'samsung-note-20-ultra-incell': {
+    mainImage: 'assets/products/samsung-incell/note-20-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-incell/note-20-ultra/gallery-01.jpg',
+      'assets/products/samsung-incell/note-20-ultra/gallery-02.jpg',
+    ],
+    videos: [],
+  },
+};
+
+const SAMSUNG_OLED_MEDIA = {
+  'samsung-s20-plus-oled': {
+    mainImage: 'assets/products/samsung-oled/s20-plus/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-oled/s20-plus/gallery-01.jpg',
+      'assets/products/samsung-oled/s20-plus/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-oled/s20-plus/video-01.mp4'],
+  },
+  'samsung-s21-ultra-oled': {
+    mainImage: 'assets/products/samsung-oled/s21-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-oled/s21-ultra/gallery-01.jpg',
+      'assets/products/samsung-oled/s21-ultra/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-oled/s21-ultra/video-01.mp4'],
+  },
+  'samsung-s22-ultra-oled': {
+    mainImage: 'assets/products/samsung-oled/s22-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-oled/s22-ultra/gallery-01.jpg',
+      'assets/products/samsung-oled/s22-ultra/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-oled/s22-ultra/video-01.mp4'],
+  },
+  'samsung-s23-ultra-oled': {
+    mainImage: 'assets/products/samsung-oled/s23-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-oled/s23-ultra/gallery-01.jpg',
+      'assets/products/samsung-oled/s23-ultra/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-oled/s23-ultra/video-01.mp4'],
+  },
+  'samsung-s24-ultra-oled': {
+    mainImage: 'assets/products/samsung-oled/s24-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-oled/s24-ultra/gallery-01.jpg',
+      'assets/products/samsung-oled/s24-ultra/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-oled/s24-ultra/video-01.mp4'],
+  },
+  'samsung-s25-ultra-oled': {
+    mainImage: 'assets/products/samsung-oled/s25-ultra/main.jpg',
+    galleryImages: [
+      'assets/products/samsung-oled/s25-ultra/gallery-01.jpg',
+      'assets/products/samsung-oled/s25-ultra/gallery-02.jpg',
+    ],
+    videos: ['assets/products/samsung-oled/s25-ultra/video-01.mp4'],
+  },
+};
+
+const CATEGORY_MEDIA = {
+  'iPhone INCELL': IPHONE_INCELL_MEDIA,
+  'iPhone OLED': IPHONE_OLED_MEDIA,
+  'Samsung INCELL': SAMSUNG_INCELL_MEDIA,
+  'Samsung OLED': SAMSUNG_OLED_MEDIA,
+};
+
 const PRODUCT_DEFINITIONS = [
   {
     id: 'iphone-x-incell',
@@ -379,7 +559,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone XS MAX',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [580, 570, 560, 550, 540],
+    prices: [320, 297.6, 281.6, null, null],
     description: 'Pantalla OLED premium para clientes que buscan mejor calidad visual.',
   },
   {
@@ -387,7 +567,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 11 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [600, 590, 580, 550, 535],
+    prices: [680, 632.4, 598.4, null, null],
     description: 'OLED premium con una tabla clara para venta por pieza o por volumen.',
   },
   {
@@ -395,7 +575,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 12 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [850, 830, 800, 750, 730],
+    prices: [950, 883.5, 836, null, null],
     description: 'Una de las referencias OLED más consultadas en CDMX.',
   },
   {
@@ -403,7 +583,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 13',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [730, 720, 710, 630, 600],
+    prices: [780, 725.4, 686.4, null, null],
     description: 'Pantalla OLED con disponibilidad para técnicos y distribuidores.',
   },
   {
@@ -411,7 +591,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 13 Pro',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [800, 780, 750, 730, 700],
+    prices: [920, 855.6, 809.6, null, null],
     description: 'Opción premium para reparación con mejor respuesta visual.',
   },
   {
@@ -419,7 +599,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 13 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [900, 850, 800, 770, 750],
+    prices: [1100, 1023, 968, null, null],
     description: 'Alta rotación para compras por mayoreo en CDMX y envío nacional.',
   },
   {
@@ -427,7 +607,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 14',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [700, 680, 650, 630, 600],
+    prices: [750, 697.5, 660, null, null],
     description: 'Pantalla OLED pensada para clientes que piden mejor acabado.',
   },
   {
@@ -435,7 +615,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 14 Plus',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [900, 880, 850, 830, 800],
+    prices: [1000, 930, 880, null, null],
     description: 'Referencia premium para 14 Plus con compra por volumen.',
   },
   {
@@ -443,7 +623,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iPhone OLED',
     name: 'Pantalla para iPhone 14 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [1000, 950, 900, 850, 800],
+    prices: [1600, 1488, 1408, null, null],
     description: 'Pantalla premium para 14 Pro Max con precios escalonados por cantidad.',
   },
   {
@@ -451,7 +631,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung INCELL',
     name: 'Pantalla para Samsung S20',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [500, 480, 460, 450, 440],
+    prices: [520, 483.6, 457.6, null, null],
     description: 'Producto Samsung con marco para instalación rápida.',
   },
   {
@@ -459,7 +639,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung INCELL',
     name: 'Pantalla para Samsung S21',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [800, 750, 700, 600, 550],
+    prices: [550, 511.5, 484, null, null],
     description: 'Pantalla con marco para talleres y reventa en CDMX.',
   },
   {
@@ -467,7 +647,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung INCELL',
     name: 'Pantalla para Samsung S22 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [800, 750, 700, 650, 600],
+    prices: [null, null, null, null, null],
     description: 'Opción INCELL para S22 Ultra con compra sencilla por WhatsApp.',
   },
   {
@@ -475,7 +655,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung INCELL',
     name: 'Pantalla para Samsung S23 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [700, 680, 650, 620, 600],
+    prices: [null, null, null, null, null],
     description: 'Pantalla Samsung con marco enfocada en mayoreo y stock local.',
   },
   {
@@ -483,7 +663,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung INCELL',
     name: 'Pantalla para Samsung S24 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [1000, 950, 900, 850, 800],
+    prices: [null, null, null, null, null],
     description: 'Producto de gama alta para rotación en talleres y distribuidores.',
   },
   {
@@ -491,7 +671,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung INCELL',
     name: 'Pantalla para Samsung Note 20 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [800, 780, 750, 700, 680],
+    prices: [null, null, null, null, null],
     description: 'Pantalla Note 20 Ultra con disponibilidad para cotización inmediata.',
   },
   {
@@ -499,7 +679,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung OLED',
     name: 'Pantalla para Samsung S20 Plus',
     quality: 'OLED PREMIUM C/M',
-    prices: [1100, 1050, 1000, 950, 900],
+    prices: [1200, 1116, 1056, null, null],
     description: 'Pantalla OLED premium para S20 Plus con enfoque profesional.',
   },
   {
@@ -507,7 +687,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung OLED',
     name: 'Pantalla para Samsung S21 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1600, 1550, 1500, 1450, 1400],
+    prices: [1650, 1534.5, 1452, null, null],
     description: 'Gama alta con tabla de precios por cantidad para distribuidores.',
   },
   {
@@ -515,7 +695,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung OLED',
     name: 'Pantalla para Samsung S22 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1750, 1700, 1650, 1550, 1500],
+    prices: [1600, 1488, 1408, null, null],
     description: 'Una de las referencias premium más consultadas en Samsung.',
   },
   {
@@ -523,7 +703,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung OLED',
     name: 'Pantalla para Samsung S23 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1600, 1580, 1550, 1500, 1400],
+    prices: [1650, 1534.5, 1452, null, null],
     description: 'Pantalla premium para un acabado cercano al original.',
   },
   {
@@ -531,7 +711,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung OLED',
     name: 'Pantalla para Samsung S24 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1800, 1750, 1700, 1650, 1600],
+    prices: [1950, 1813.5, 1716, null, null],
     description: 'Producto premium con foco en mayoreo y atención a distribuidores.',
   },
   {
@@ -539,20 +719,30 @@ const PRODUCT_DEFINITIONS = [
     category: 'Samsung OLED',
     name: 'Pantalla para Samsung S25 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [2000, 1900, 1800, 1750, 1700],
+    prices: [2200, 2046, 1936, null, null],
     description: 'Pantalla OLED premium para S25 Ultra con compra por cantidad.',
   },
 ];
 
 function buildPriceTable(values) {
-  return QUANTITY_LABELS.map((quantity, index) => ({
-    quantity,
-    price: formatPrice(values?.[index]),
-  }));
+  return QUANTITY_LABELS.map((quantity, index) => {
+    const entry = Array.isArray(values) ? values[index] : undefined;
+    const rawPrice = entry && typeof entry === 'object' && 'price' in entry ? entry.price : entry;
+    return {
+      quantity,
+      price: formatPrice(rawPrice),
+    };
+  });
 }
 
 function formatPrice(value) {
   if (value === null || value === undefined || value === '' || Number.isNaN(Number(value))) {
+    if (typeof value === 'string') {
+      const text = value.trim();
+      if (!text || /consultar/i.test(text)) return 'Consultar';
+      if (/^\$/.test(text)) return /MXN/i.test(text) ? text : `${text} MXN`;
+      return text;
+    }
     return 'Consultar';
   }
   const numeric = Number(value);
@@ -576,33 +766,55 @@ function buildWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 }
 
+function setMetaContent(selector, content) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute('content', content);
+}
+
+function setCanonicalUrl(url) {
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'canonical';
+    document.head.appendChild(link);
+  }
+  link.href = url;
+}
+
 function getProductUrl(productId) {
   return `producto.html?id=${encodeURIComponent(productId)}`;
 }
 
 function createProduct(definition) {
   const categoryMeta = CATEGORY_META[definition.category];
-  const categoryMedia = definition.category === 'iPhone INCELL' ? IPHONE_INCELL_MEDIA[definition.id] : null;
-  const priceTable = buildPriceTable(definition.prices);
-  const mainImage = definition.mainImage || categoryMedia?.mainImage || categoryMeta.mainImage;
-  const galleryImages = definition.galleryImages || categoryMedia?.galleryImages || categoryMeta.galleryImages;
+  const categoryMedia = CATEGORY_MEDIA[definition.category]?.[definition.id] || null;
+  const mediaImages = Array.isArray(definition.images) && definition.images.length ? definition.images.filter(Boolean) : null;
+  const priceTable = buildPriceTable(definition.prices || definition.priceTable);
+  const mainImage = definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
+  const galleryImages = definition.galleryImages || (mediaImages ? mediaImages.slice(1) : null) || categoryMedia?.galleryImages || categoryMeta.galleryImages || [];
+  const name = definition.name || `Pantalla para ${definition.model || definition.title || definition.id}`;
   return {
     id: definition.id,
-    brand: categoryMeta.brand,
+    brand: definition.brand || categoryMeta.brand,
     category: definition.category,
-    name: definition.name,
+    model: definition.model || name,
+    name,
     quality: definition.quality,
     mainImage,
-    galleryImages: [mainImage, ...(galleryImages || [])].filter(Boolean),
+    galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== mainImage))),
     videos: definition.videos || categoryMedia?.videos || [],
     priceTable,
-    description: definition.description,
-    whatsappText: `Hola HAODE, quiero cotizar: ${definition.name}`,
+    description: definition.description || `${name} para mayoreo y menudeo en México.`,
+    whatsappText: definition.whatsappText || `Hola HAODE, quiero cotizar: ${name}`,
     lowestPriceText: buildLowestPriceText(priceTable),
   };
 }
 
-const PRODUCTS = PRODUCT_DEFINITIONS.map(createProduct);
+const GENERATED_PRODUCT_DEFINITIONS = Array.isArray(window.HAODE_PRODUCTS_DATA) && window.HAODE_PRODUCTS_DATA.length
+  ? window.HAODE_PRODUCTS_DATA
+  : null;
+const PRODUCT_SOURCE = GENERATED_PRODUCT_DEFINITIONS || PRODUCT_DEFINITIONS;
+const PRODUCTS = PRODUCT_SOURCE.map(createProduct);
 const PRODUCT_BY_ID = new Map(PRODUCTS.map((product) => [product.id, product]));
 
 function createFilterButton(label, isActive = false) {
@@ -788,6 +1000,30 @@ function renderProductDetailPage() {
   }
 
   document.title = `${product.name} | HAODE México`;
+  const currentUrl = new URL(window.location.href);
+  const detailUrl = `${currentUrl.origin}${currentUrl.pathname}?id=${encodeURIComponent(product.id)}`;
+  const metaDescription = `${product.name} en HAODE México. ${product.description}`;
+  const metaKeywords = [
+    `${product.brand} ${product.model}`,
+    product.category,
+    'pantallas iPhone México',
+    'pantallas Samsung OLED México',
+    'pantallas INCELL México',
+    'pantallas mayoreo CDMX',
+    'refacciones celulares México',
+    'pantallas para reparación celular',
+    'pantallas para técnicos',
+    'pantallas para distribuidores',
+  ].join(', ');
+
+  setCanonicalUrl(detailUrl);
+  setMetaContent('meta[name="description"]', metaDescription);
+  setMetaContent('meta[name="keywords"]', metaKeywords);
+  setMetaContent('meta[property="og:title"]', `${product.name} | HAODE México`);
+  setMetaContent('meta[property="og:description"]', metaDescription);
+  setMetaContent('meta[property="og:image"]', new URL(product.mainImage || PLACEHOLDER_IMAGE, currentUrl).href);
+  setMetaContent('meta[property="og:url"]', detailUrl);
+  setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
 
   if (titleEl) titleEl.textContent = product.name;
   if (subtitleEl) subtitleEl.textContent = CATEGORY_META[product.category].title;
@@ -814,7 +1050,7 @@ function renderProductDetailPage() {
 
   if (galleryEl) {
     galleryEl.innerHTML = '';
-    const galleryImages = [...new Set([product.mainImage, ...product.galleryImages].filter(Boolean))];
+    const galleryImages = [...new Set((product.galleryImages || []).filter(Boolean))];
     galleryImages.slice(0, 4).forEach((src, index) => {
       const img = document.createElement('img');
       img.src = src;
