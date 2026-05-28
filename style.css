@@ -1347,11 +1347,31 @@ h1 {
 
 .footer-inner {
   padding: 18px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
 }
 
 .footer-inner small {
   color: var(--muted);
   font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
 }
 
 .floating-cta {
@@ -1548,6 +1568,10 @@ body.warranty-page .contact-whatsapp-chip {
   .hero-badges,
   .contact-row {
     width: 100%;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
   }
 
   .hero-buttons .btn,
