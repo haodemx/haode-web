@@ -1,93 +1,184 @@
 const WHATSAPP_PHONE = '523326684296';
-const CATEGORY_PRICING = {
-  'iPhone INCELL': {
-    menudeo: '$180 MXN',
-    mayoreo5: '$175 MXN',
-  },
-  'iPhone OLED': {
-    menudeo: '$185 MXN',
-    mayoreo5: '$180 MXN',
-  },
-  'Samsung INCELL': {
-    menudeo: '$350 MXN',
-    mayoreo5: '$330 MXN',
-  },
-  'Samsung OLED': {
-    menudeo: '$1000 MXN',
-    mayoreo5: '$950 MXN',
-  },
-};
+const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 
-const PRICE_NOTE = 'Precios de HL CDMX 2026 MAYO · actualización mensual';
-
-const PRODUCT_MAIN_IMAGES = {
-  'iPhone INCELL': 'assets/products/iphone-incell/main.jpg',
-  'iPhone OLED': 'assets/products/iphone-oled/main.jpg',
-  'Samsung INCELL': 'assets/products/samsung-incell/main.jpg',
-  'Samsung OLED': 'assets/products/samsung-oled/main.jpg',
-};
-
-const PRODUCT_GALLERY_IMAGES = {
+const CATEGORY_IMAGE_POOLS = {
   'iPhone INCELL': [
+    'assets/products/iphone-incell/main.jpg',
     'assets/products/iphone-incell/gallery-01.jpg',
     'assets/products/iphone-incell/gallery-02.jpg',
     'assets/products/iphone-incell/gallery-03.jpg',
   ],
   'iPhone OLED': [
+    'assets/products/iphone-oled/main.jpg',
     'assets/products/iphone-oled/gallery-01.jpg',
     'assets/products/iphone-oled/gallery-02.jpg',
     'assets/products/iphone-oled/gallery-03.jpg',
   ],
   'Samsung INCELL': [
+    'assets/products/samsung-incell/main.jpg',
     'assets/products/samsung-incell/gallery-01.jpg',
     'assets/products/samsung-incell/gallery-02.jpg',
     'assets/products/samsung-incell/gallery-03.jpg',
   ],
   'Samsung OLED': [
+    'assets/products/samsung-oled/main.jpg',
     'assets/products/samsung-oled/gallery-01.jpg',
     'assets/products/samsung-oled/gallery-02.jpg',
     'assets/products/samsung-oled/gallery-03.jpg',
   ],
 };
 
-const HAODE_PRODUCTS = [
+const PRICE_TABLE = [
+  ['1 pza', 'Consultar'],
+  ['5+ pzs', 'Mayoreo'],
+  ['100 pzs surtido', 'Precio especial'],
+  ['Caja/modelo', 'Mejor precio'],
+];
+
+const PRODUCTS = [
   {
-    id: 'iphone-incell-fhd',
+    id: 'iphone-incell-x',
     category: 'iPhone INCELL',
-    name: 'iPhone INCELL FHD',
-    description: 'Pantalla para el mercado mexicano con respuesta estable y rotación rápida para mayoristas.',
-    priceText: `Menudeo desde ${CATEGORY_PRICING['iPhone INCELL'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['iPhone INCELL'].mayoreo5}`,
-    image: PRODUCT_MAIN_IMAGES['iPhone INCELL'],
-    whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: iPhone INCELL FHD\nCantidad:\nCiudad:',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone X',
+    quality: 'INCELL FHD',
+    image: pickCategoryImage('iPhone INCELL', 0),
   },
   {
-    id: 'iphone-oled-premium',
+    id: 'iphone-incell-xr',
+    category: 'iPhone INCELL',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone XR',
+    quality: 'INCELL FHD',
+    image: pickCategoryImage('iPhone INCELL', 1),
+  },
+  {
+    id: 'iphone-incell-11',
+    category: 'iPhone INCELL',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 11',
+    quality: 'INCELL FHD',
+    image: pickCategoryImage('iPhone INCELL', 2),
+  },
+  {
+    id: 'iphone-incell-12',
+    category: 'iPhone INCELL',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 12',
+    quality: 'INCELL FHD',
+    image: pickCategoryImage('iPhone INCELL', 3),
+  },
+  {
+    id: 'iphone-incell-13',
+    category: 'iPhone INCELL',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 13',
+    quality: 'INCELL FHD',
+    image: pickCategoryImage('iPhone INCELL', 0),
+  },
+  {
+    id: 'iphone-incell-14',
+    category: 'iPhone INCELL',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 14',
+    quality: 'INCELL FHD',
+    image: pickCategoryImage('iPhone INCELL', 1),
+  },
+  {
+    id: 'iphone-oled-11pm',
     category: 'iPhone OLED',
-    name: 'iPhone OLED Premium',
-    description: 'Acabado premium para clientes que buscan mejor brillo, color y una presentación más alta.',
-    priceText: `Menudeo desde ${CATEGORY_PRICING['iPhone OLED'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['iPhone OLED'].mayoreo5}`,
-    image: PRODUCT_MAIN_IMAGES['iPhone OLED'],
-    whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: iPhone OLED Premium\nCantidad:\nCiudad:',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 11 Pro Max',
+    quality: 'OLED PREMIUM',
+    image: pickCategoryImage('iPhone OLED', 0),
   },
   {
-    id: 'samsung-incell-con-marco',
+    id: 'iphone-oled-12pm',
+    category: 'iPhone OLED',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 12 Pro Max',
+    quality: 'OLED PREMIUM',
+    image: pickCategoryImage('iPhone OLED', 1),
+  },
+  {
+    id: 'iphone-oled-13pm',
+    category: 'iPhone OLED',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 13 Pro Max',
+    quality: 'OLED PREMIUM',
+    image: pickCategoryImage('iPhone OLED', 2),
+  },
+  {
+    id: 'iphone-oled-14pm',
+    category: 'iPhone OLED',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 14 Pro Max',
+    quality: 'OLED PREMIUM',
+    image: pickCategoryImage('iPhone OLED', 3),
+  },
+  {
+    id: 'iphone-oled-15pm',
+    category: 'iPhone OLED',
+    brand: 'iPhone',
+    name: 'Pantalla para iPhone 15 Pro Max',
+    quality: 'OLED PREMIUM',
+    image: pickCategoryImage('iPhone OLED', 0),
+  },
+  {
+    id: 'samsung-incell-a',
     category: 'Samsung INCELL',
-    name: 'Samsung INCELL con marco',
-    description: 'Opción confiable para negocios de reparación y reventa con flujo rápido de inventario.',
-    priceText: `Menudeo desde ${CATEGORY_PRICING['Samsung INCELL'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['Samsung INCELL'].mayoreo5}`,
-    image: PRODUCT_MAIN_IMAGES['Samsung INCELL'],
-    whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: Samsung INCELL con marco\nCantidad:\nCiudad:',
+    brand: 'Samsung',
+    name: 'Pantalla para Samsung Serie A',
+    quality: 'INCELL CON MARCO',
+    image: pickCategoryImage('Samsung INCELL', 0),
   },
   {
-    id: 'samsung-oled-con-marco',
+    id: 'samsung-incell-s',
+    category: 'Samsung INCELL',
+    brand: 'Samsung',
+    name: 'Pantalla para Samsung Serie S',
+    quality: 'INCELL CON MARCO',
+    image: pickCategoryImage('Samsung INCELL', 1),
+  },
+  {
+    id: 'samsung-oled-s22u',
     category: 'Samsung OLED',
-    name: 'Samsung OLED con marco',
-    description: 'Pantalla de nivel premium para clientes que priorizan calidad visual y mayor valor percibido.',
-    priceText: `Menudeo desde ${CATEGORY_PRICING['Samsung OLED'].menudeo} · Mayoreo 5 pzs desde ${CATEGORY_PRICING['Samsung OLED'].mayoreo5}`,
-    image: PRODUCT_MAIN_IMAGES['Samsung OLED'],
-    whatsappText: 'Hola HAODE, quiero cotizar:\nProducto: Samsung OLED con marco\nCantidad:\nCiudad:',
+    brand: 'Samsung',
+    name: 'Pantalla Samsung S22 Ultra',
+    quality: 'OLED CON MARCO',
+    image: pickCategoryImage('Samsung OLED', 0),
+  },
+  {
+    id: 'samsung-oled-s23u',
+    category: 'Samsung OLED',
+    brand: 'Samsung',
+    name: 'Pantalla Samsung S23 Ultra',
+    quality: 'OLED CON MARCO',
+    image: pickCategoryImage('Samsung OLED', 1),
+  },
+  {
+    id: 'samsung-oled-s24u',
+    category: 'Samsung OLED',
+    brand: 'Samsung',
+    name: 'Pantalla Samsung S24 Ultra',
+    quality: 'OLED CON MARCO',
+    image: pickCategoryImage('Samsung OLED', 2),
+  },
+  {
+    id: 'samsung-oled-s25u',
+    category: 'Samsung OLED',
+    brand: 'Samsung',
+    name: 'Pantalla Samsung S25 Ultra',
+    quality: 'OLED CON MARCO',
+    image: pickCategoryImage('Samsung OLED', 3),
   },
 ];
+
+function pickCategoryImage(category, index) {
+  const pool = CATEGORY_IMAGE_POOLS[category] || [];
+  if (!pool.length) return PLACEHOLDER_IMAGE;
+  return pool[index % pool.length] || PLACEHOLDER_IMAGE;
+}
 
 function buildWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
@@ -102,115 +193,99 @@ function createFilterButton(label, isActive = false) {
   return button;
 }
 
-function createCatalogCard(product) {
+function createPriceTable() {
+  const table = document.createElement('table');
+  table.className = 'price-table';
+  const tbody = document.createElement('tbody');
+
+  PRICE_TABLE.forEach(([quantity, price]) => {
+    const row = document.createElement('tr');
+    const qty = document.createElement('th');
+    qty.scope = 'row';
+    qty.textContent = quantity;
+    const value = document.createElement('td');
+    value.textContent = price;
+    row.append(qty, value);
+    tbody.appendChild(row);
+  });
+
+  table.appendChild(tbody);
+  return table;
+}
+
+function createProductCard(product) {
   const article = document.createElement('article');
-  article.className = 'catalog-card';
+  article.className = 'shop-card';
   article.dataset.category = product.category;
 
-  const image = document.createElement('div');
-  image.className = 'catalog-image';
-  image.style.background = `linear-gradient(180deg, rgba(255, 122, 24, 0.28), rgba(20, 20, 26, 0.95)), url('${product.image}') center/cover no-repeat`;
-  image.setAttribute('aria-hidden', 'true');
+  const media = document.createElement('div');
+  media.className = 'shop-media';
+
+  const image = document.createElement('img');
+  image.src = product.image || PLACEHOLDER_IMAGE;
+  image.alt = product.name;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  image.onerror = () => {
+    if (image.src !== PLACEHOLDER_IMAGE) {
+      image.src = PLACEHOLDER_IMAGE;
+    }
+  };
+
+  const brand = document.createElement('span');
+  brand.className = 'shop-brand';
+  brand.textContent = product.brand;
+
+  media.append(image, brand);
 
   const content = document.createElement('div');
-  content.className = 'catalog-content';
+  content.className = 'shop-content';
 
   const title = document.createElement('h3');
   title.textContent = product.name;
 
-  const category = document.createElement('p');
-  category.className = 'catalog-category';
-  category.textContent = product.category;
+  const quality = document.createElement('p');
+  quality.className = 'shop-quality';
+  quality.textContent = product.quality;
 
-  const description = document.createElement('p');
-  description.textContent = product.description;
+  const priceWrap = document.createElement('div');
+  priceWrap.className = 'shop-price-wrap';
 
-  const price = document.createElement('p');
-  price.className = 'catalog-price';
-  price.textContent = product.priceText;
+  const priceTitle = document.createElement('p');
+  priceTitle.className = 'shop-price-title';
+  priceTitle.textContent = 'Cantidad / Precio';
 
-  const link = document.createElement('a');
-  link.className = 'btn btn-primary';
-  link.href = buildWhatsAppUrl(product.whatsappText);
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  link.textContent = 'Consultar por WhatsApp';
+  priceWrap.append(priceTitle, createPriceTable());
 
-  content.append(title, category, description, price, link);
-  article.append(image, content);
+  const cta = document.createElement('a');
+  cta.className = 'btn btn-primary shop-cta';
+  cta.href = buildWhatsAppUrl(`Hola HAODE, quiero cotizar: ${product.name}`);
+  cta.target = '_blank';
+  cta.rel = 'noopener noreferrer';
+  cta.textContent = 'Cotizar por WhatsApp';
+
+  content.append(title, quality, priceWrap, cta);
+  article.append(media, content);
 
   return article;
 }
 
-function createGalleryCard(category, images) {
-  const article = document.createElement('article');
-  article.className = 'gallery-card';
-
-  const heading = document.createElement('div');
-  heading.className = 'gallery-card-head';
-
-  const title = document.createElement('h3');
-  title.textContent = category;
-
-  const label = document.createElement('span');
-  label.textContent = 'Galería';
-
-  heading.append(title, label);
-
-  const imageGrid = document.createElement('div');
-  imageGrid.className = 'gallery-image-grid';
-
-  const visibleImages = images.filter(Boolean).slice(0, 3);
-  if (visibleImages.length === 0) {
-    const placeholder = document.createElement('div');
-    placeholder.className = 'gallery-placeholder';
-    placeholder.textContent = 'Sin imágenes disponibles';
-    imageGrid.appendChild(placeholder);
-  } else {
-    visibleImages.forEach((src, index) => {
-      const figure = document.createElement('figure');
-      figure.className = `gallery-shot${index === 0 ? ' is-main' : ''}`;
-
-      const image = document.createElement('img');
-      image.src = src;
-      image.alt = `${category} imagen ${index + 1}`;
-      image.loading = 'lazy';
-
-      figure.appendChild(image);
-      imageGrid.appendChild(figure);
-    });
-  }
-
-  article.append(heading, imageGrid);
-  return article;
-}
-
-function renderProductsPage() {
+function renderShop() {
   const filterBar = document.querySelector('[data-product-filters]');
   const grid = document.querySelector('[data-product-grid]');
-  const galleryGrid = document.querySelector('[data-product-gallery]');
   if (!filterBar || !grid) return;
 
-  const categories = ['Todos', ...new Set(HAODE_PRODUCTS.map((product) => product.category))];
+  const categories = ['Todos', ...new Set(PRODUCTS.map((product) => product.category))];
   let activeFilter = 'Todos';
 
   function renderCards() {
     grid.innerHTML = '';
-    const filteredProducts = activeFilter === 'Todos'
-      ? HAODE_PRODUCTS
-      : HAODE_PRODUCTS.filter((product) => product.category === activeFilter);
+    const visibleProducts = activeFilter === 'Todos'
+      ? PRODUCTS
+      : PRODUCTS.filter((product) => product.category === activeFilter);
 
-    filteredProducts.forEach((product) => {
-      grid.appendChild(createCatalogCard(product));
-    });
-  }
-
-  function renderGallery() {
-    if (!galleryGrid) return;
-    galleryGrid.innerHTML = '';
-
-    Object.entries(PRODUCT_GALLERY_IMAGES).forEach(([category, images]) => {
-      galleryGrid.appendChild(createGalleryCard(category, images));
+    visibleProducts.forEach((product) => {
+      grid.appendChild(createProductCard(product));
     });
   }
 
@@ -230,14 +305,8 @@ function renderProductsPage() {
   });
 
   renderCards();
-  renderGallery();
-
-  const note = document.querySelector('[data-price-note]');
-  if (note) {
-    note.textContent = PRICE_NOTE;
-  }
 }
 
-document.addEventListener('DOMContentLoaded', renderProductsPage);
+document.addEventListener('DOMContentLoaded', renderShop);
 
-window.HAODE_PRODUCTS = HAODE_PRODUCTS;
+window.HAODE_PRODUCTS = PRODUCTS;
