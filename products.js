@@ -1,39 +1,12 @@
 const WHATSAPP_PHONE = '523326684296';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 
-const CATEGORY_IMAGE_POOLS = {
-  'iPhone INCELL': [
-    'assets/products/iphone-incell/main.jpg',
-    'assets/products/iphone-incell/gallery-01.jpg',
-    'assets/products/iphone-incell/gallery-02.jpg',
-    'assets/products/iphone-incell/gallery-03.jpg',
-  ],
-  'iPhone OLED': [
-    'assets/products/iphone-oled/main.jpg',
-    'assets/products/iphone-oled/gallery-01.jpg',
-    'assets/products/iphone-oled/gallery-02.jpg',
-    'assets/products/iphone-oled/gallery-03.jpg',
-  ],
-  'Samsung INCELL': [
-    'assets/products/samsung-incell/main.jpg',
-    'assets/products/samsung-incell/gallery-01.jpg',
-    'assets/products/samsung-incell/gallery-02.jpg',
-    'assets/products/samsung-incell/gallery-03.jpg',
-  ],
-  'Samsung OLED': [
-    'assets/products/samsung-oled/main.jpg',
-    'assets/products/samsung-oled/gallery-01.jpg',
-    'assets/products/samsung-oled/gallery-02.jpg',
-    'assets/products/samsung-oled/gallery-03.jpg',
-  ],
+const CATEGORY_MAIN_IMAGES = {
+  'iPhone INCELL': 'assets/products/iphone-incell/main.jpg',
+  'iPhone OLED': 'assets/products/iphone-oled/main.jpg',
+  'Samsung INCELL': 'assets/products/samsung-incell/main.jpg',
+  'Samsung OLED': 'assets/products/samsung-oled/main.jpg',
 };
-
-const PRICE_TABLE = [
-  ['1 pza', 'Consultar'],
-  ['5+ pzs', 'Mayoreo'],
-  ['100 pzs surtido', 'Precio especial'],
-  ['Caja/modelo', 'Mejor precio'],
-];
 
 const PRODUCTS = [
   {
@@ -41,143 +14,165 @@ const PRODUCTS = [
     category: 'iPhone INCELL',
     brand: 'iPhone',
     name: 'Pantalla para iPhone X',
-    quality: 'INCELL FHD',
-    image: pickCategoryImage('iPhone INCELL', 0),
+    description: 'INCELL FHD',
+    priceText: 'Precio mayoreo: $175 MXN',
   },
   {
     id: 'iphone-incell-xr',
     category: 'iPhone INCELL',
     brand: 'iPhone',
     name: 'Pantalla para iPhone XR',
-    quality: 'INCELL FHD',
-    image: pickCategoryImage('iPhone INCELL', 1),
+    description: 'INCELL FHD',
+    priceText: 'Precio mayoreo: $175 MXN',
   },
   {
     id: 'iphone-incell-11',
     category: 'iPhone INCELL',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 11',
-    quality: 'INCELL FHD',
-    image: pickCategoryImage('iPhone INCELL', 2),
+    description: 'INCELL FHD',
+    priceText: 'Precio mayoreo: $175 MXN',
   },
   {
     id: 'iphone-incell-12',
     category: 'iPhone INCELL',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 12',
-    quality: 'INCELL FHD',
-    image: pickCategoryImage('iPhone INCELL', 3),
+    description: 'INCELL FHD',
+    priceText: 'Precio mayoreo: $210 MXN',
   },
   {
     id: 'iphone-incell-13',
     category: 'iPhone INCELL',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 13',
-    quality: 'INCELL FHD',
-    image: pickCategoryImage('iPhone INCELL', 0),
+    description: 'INCELL FHD',
+    priceText: 'Precio mayoreo: $245 MXN',
   },
   {
     id: 'iphone-incell-14',
     category: 'iPhone INCELL',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 14',
-    quality: 'INCELL FHD',
-    image: pickCategoryImage('iPhone INCELL', 1),
+    description: 'INCELL FHD',
+    priceText: 'Precio mayoreo: $250 MXN',
   },
   {
     id: 'iphone-oled-11pm',
     category: 'iPhone OLED',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 11 Pro Max',
-    quality: 'OLED PREMIUM',
-    image: pickCategoryImage('iPhone OLED', 0),
+    description: 'OLED PREMIUM',
+    priceText: 'Precio mayoreo: $590 MXN',
   },
   {
     id: 'iphone-oled-12pm',
     category: 'iPhone OLED',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 12 Pro Max',
-    quality: 'OLED PREMIUM',
-    image: pickCategoryImage('iPhone OLED', 1),
+    description: 'OLED PREMIUM',
+    priceText: 'Precio mayoreo: $830 MXN',
   },
   {
     id: 'iphone-oled-13pm',
     category: 'iPhone OLED',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 13 Pro Max',
-    quality: 'OLED PREMIUM',
-    image: pickCategoryImage('iPhone OLED', 2),
+    description: 'OLED PREMIUM',
+    priceText: 'Precio mayoreo: $850 MXN',
   },
   {
     id: 'iphone-oled-14pm',
     category: 'iPhone OLED',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 14 Pro Max',
-    quality: 'OLED PREMIUM',
-    image: pickCategoryImage('iPhone OLED', 3),
+    description: 'OLED PREMIUM',
+    priceText: 'Precio mayoreo: $950 MXN',
   },
   {
     id: 'iphone-oled-15pm',
     category: 'iPhone OLED',
     brand: 'iPhone',
     name: 'Pantalla para iPhone 15 Pro Max',
-    quality: 'OLED PREMIUM',
-    image: pickCategoryImage('iPhone OLED', 0),
+    description: 'OLED PREMIUM',
+    priceText: 'Precio mayoreo: $1,100 MXN',
   },
   {
-    id: 'samsung-incell-a',
+    id: 'samsung-incell-s20',
     category: 'Samsung INCELL',
     brand: 'Samsung',
-    name: 'Pantalla para Samsung Serie A',
-    quality: 'INCELL CON MARCO',
-    image: pickCategoryImage('Samsung INCELL', 0),
+    name: 'Pantalla para Samsung S20',
+    description: 'INCELL CON MARCO',
+    priceText: 'Precio mayoreo: $480 MXN',
   },
   {
-    id: 'samsung-incell-s',
+    id: 'samsung-incell-s21',
     category: 'Samsung INCELL',
     brand: 'Samsung',
-    name: 'Pantalla para Samsung Serie S',
-    quality: 'INCELL CON MARCO',
-    image: pickCategoryImage('Samsung INCELL', 1),
+    name: 'Pantalla para Samsung S21',
+    description: 'INCELL CON MARCO',
+    priceText: 'Precio mayoreo: $750 MXN',
+  },
+  {
+    id: 'samsung-incell-s22',
+    category: 'Samsung INCELL',
+    brand: 'Samsung',
+    name: 'Pantalla para Samsung S22 Ultra',
+    description: 'INCELL CON MARCO',
+    priceText: 'Precio mayoreo: $550 MXN',
+  },
+  {
+    id: 'samsung-incell-s23',
+    category: 'Samsung INCELL',
+    brand: 'Samsung',
+    name: 'Pantalla para Samsung S23 Ultra',
+    description: 'INCELL CON MARCO',
+    priceText: 'Precio mayoreo: $630 MXN',
+  },
+  {
+    id: 'samsung-incell-s24',
+    category: 'Samsung INCELL',
+    brand: 'Samsung',
+    name: 'Pantalla para Samsung S24 Ultra',
+    description: 'INCELL CON MARCO',
+    priceText: 'Precio mayoreo: $950 MXN',
   },
   {
     id: 'samsung-oled-s22u',
     category: 'Samsung OLED',
     brand: 'Samsung',
-    name: 'Pantalla Samsung S22 Ultra',
-    quality: 'OLED CON MARCO',
-    image: pickCategoryImage('Samsung OLED', 0),
+    name: 'Pantalla para Samsung S22 Ultra',
+    description: 'OLED PREMIUM CON MARCO',
+    priceText: 'Precio mayoreo: $1,700 MXN',
   },
   {
     id: 'samsung-oled-s23u',
     category: 'Samsung OLED',
     brand: 'Samsung',
-    name: 'Pantalla Samsung S23 Ultra',
-    quality: 'OLED CON MARCO',
-    image: pickCategoryImage('Samsung OLED', 1),
+    name: 'Pantalla para Samsung S23 Ultra',
+    description: 'OLED PREMIUM CON MARCO',
+    priceText: 'Precio mayoreo: $1,580 MXN',
   },
   {
     id: 'samsung-oled-s24u',
     category: 'Samsung OLED',
     brand: 'Samsung',
-    name: 'Pantalla Samsung S24 Ultra',
-    quality: 'OLED CON MARCO',
-    image: pickCategoryImage('Samsung OLED', 2),
+    name: 'Pantalla para Samsung S24 Ultra',
+    description: 'OLED PREMIUM CON MARCO',
+    priceText: 'Precio mayoreo: $1,750 MXN',
   },
   {
     id: 'samsung-oled-s25u',
     category: 'Samsung OLED',
     brand: 'Samsung',
-    name: 'Pantalla Samsung S25 Ultra',
-    quality: 'OLED CON MARCO',
-    image: pickCategoryImage('Samsung OLED', 3),
+    name: 'Pantalla para Samsung S25 Ultra',
+    description: 'OLED PREMIUM CON MARCO',
+    priceText: 'Precio mayoreo: $1,900 MXN',
   },
 ];
 
-function pickCategoryImage(category, index) {
-  const pool = CATEGORY_IMAGE_POOLS[category] || [];
-  if (!pool.length) return PLACEHOLDER_IMAGE;
-  return pool[index % pool.length] || PLACEHOLDER_IMAGE;
+function getMainImage(category) {
+  return CATEGORY_MAIN_IMAGES[category] || PLACEHOLDER_IMAGE;
 }
 
 function buildWhatsAppUrl(message) {
@@ -193,26 +188,6 @@ function createFilterButton(label, isActive = false) {
   return button;
 }
 
-function createPriceTable() {
-  const table = document.createElement('table');
-  table.className = 'price-table';
-  const tbody = document.createElement('tbody');
-
-  PRICE_TABLE.forEach(([quantity, price]) => {
-    const row = document.createElement('tr');
-    const qty = document.createElement('th');
-    qty.scope = 'row';
-    qty.textContent = quantity;
-    const value = document.createElement('td');
-    value.textContent = price;
-    row.append(qty, value);
-    tbody.appendChild(row);
-  });
-
-  table.appendChild(tbody);
-  return table;
-}
-
 function createProductCard(product) {
   const article = document.createElement('article');
   article.className = 'shop-card';
@@ -222,7 +197,7 @@ function createProductCard(product) {
   media.className = 'shop-media';
 
   const image = document.createElement('img');
-  image.src = product.image || PLACEHOLDER_IMAGE;
+  image.src = product.image || getMainImage(product.category) || PLACEHOLDER_IMAGE;
   image.alt = product.name;
   image.loading = 'lazy';
   image.decoding = 'async';
@@ -246,25 +221,20 @@ function createProductCard(product) {
 
   const quality = document.createElement('p');
   quality.className = 'shop-quality';
-  quality.textContent = product.quality;
+  quality.textContent = product.description;
 
-  const priceWrap = document.createElement('div');
-  priceWrap.className = 'shop-price-wrap';
-
-  const priceTitle = document.createElement('p');
-  priceTitle.className = 'shop-price-title';
-  priceTitle.textContent = 'Cantidad / Precio';
-
-  priceWrap.append(priceTitle, createPriceTable());
+  const price = document.createElement('p');
+  price.className = 'shop-price';
+  price.textContent = product.priceText || 'Precio de mayoreo disponible';
 
   const cta = document.createElement('a');
   cta.className = 'btn btn-primary shop-cta';
-  cta.href = buildWhatsAppUrl(`Hola HAODE, quiero cotizar: ${product.name}`);
+  cta.href = buildWhatsAppUrl(product.whatsappText || `Hola HAODE, quiero cotizar: ${product.name}`);
   cta.target = '_blank';
   cta.rel = 'noopener noreferrer';
   cta.textContent = 'Cotizar por WhatsApp';
 
-  content.append(title, quality, priceWrap, cta);
+  content.append(title, quality, price, cta);
   article.append(media, content);
 
   return article;
@@ -273,9 +243,14 @@ function createProductCard(product) {
 function renderShop() {
   const filterBar = document.querySelector('[data-product-filters]');
   const grid = document.querySelector('[data-product-grid]');
+  const priceNote = document.querySelector('[data-price-note]');
   if (!filterBar || !grid) return;
 
-  const categories = ['Todos', ...new Set(PRODUCTS.map((product) => product.category))];
+  if (priceNote) {
+    priceNote.textContent = 'Precios actualizados según HL CDMX 2026 MAYO · consulta disponibilidad por WhatsApp.';
+  }
+
+  const categories = ['Todos', 'iPhone INCELL', 'iPhone OLED', 'Samsung INCELL', 'Samsung OLED'];
   let activeFilter = 'Todos';
 
   function renderCards() {
