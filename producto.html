@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Detalle de producto HAODE México con galería, video y tabla completa de precios." />
+  <meta name="keywords" content="HAODE México, detalle de producto, pantallas iPhone México, pantallas Samsung México" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HAODE MÉXICO" />
+  <meta property="og:title" content="Producto HAODE México" />
+  <meta property="og:description" content="Detalle de pantalla con galería, video y precios por cantidad." />
+  <meta property="og:image" content="https://haodemx.github.io/haode-web/assets/logo/logo.png" />
+  <meta property="og:url" content="https://haodemx.github.io/haode-web/producto.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Producto HAODE México</title>
+  <link rel="icon" href="assets/logo/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="product-detail-page">
+  <header class="topbar catalog-topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="HAODE MÉXICO">
+        <img class="brand-logo" src="assets/logo/logo.png" alt="Logo oficial de HAODE" />
+        <span class="brand-copy">
+          <strong>HAODE</strong>
+          <small>MÉXICO</small>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="garantia.html">Garantía</a>
+        <a data-detail-back href="productos.html">Volver al catálogo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <div class="wrap detail-shell" data-product-detail>
+      <div class="detail-top">
+        <div>
+          <span class="detail-kicker" data-detail-brand>HAODE</span>
+          <h1 class="detail-title" data-detail-title>Producto HAODE México</h1>
+          <p class="catalog-intro" data-detail-subtitle>Pantalla con stock local en CDMX.</p>
+          <p class="catalog-warning">No manejamos pago en línea. Consulta precios y disponibilidad por WhatsApp.</p>
+        </div>
+        <a class="btn btn-secondary detail-back" data-detail-back href="productos.html">Volver al catálogo</a>
+      </div>
+
+      <div class="detail-grid">
+        <section class="detail-visual" aria-label="Galería del producto">
+          <img class="detail-main-image" data-detail-main-image src="assets/products/placeholder.svg" alt="Imagen principal del producto" />
+
+          <div class="detail-gallery-wrap">
+            <h2>Galería</h2>
+            <div class="detail-gallery" data-detail-gallery></div>
+          </div>
+
+          <div class="detail-video-wrap">
+            <h2>Video</h2>
+            <div class="detail-videos" data-detail-videos></div>
+          </div>
+        </section>
+
+        <aside class="detail-info">
+          <article class="detail-card">
+            <p class="detail-meta" data-detail-quality>INCELL FHD+</p>
+            <p class="detail-description" data-detail-description>Descripción del producto.</p>
+            <div>
+              <p class="detail-price">Precio de mayoreo</p>
+              <p class="detail-price-note" data-detail-price>Consultar</p>
+            </div>
+
+            <div class="detail-buttons">
+              <a class="btn btn-primary" data-detail-whatsapp href="https://wa.me/523326684296" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+              <a class="btn btn-secondary" href="productos.html">Ver más productos</a>
+            </div>
+          </article>
+
+          <article class="detail-card">
+            <h2>Precio completo</h2>
+            <table class="detail-price-table" aria-label="Tabla completa de precios">
+              <tbody data-detail-price-body>
+                <tr>
+                  <th scope="row">1 pza</th>
+                  <td>Consultar</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer catalog-footer">
+    <div class="wrap footer-inner">
+      <small>© HAODE MÉXICO · CDMX · México · Mayoreo y menudeo · Envíos nacionales</small>
+    </div>
+  </footer>
+
+  <a class="floating-cta" href="https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20cotizar" target="_blank" rel="noopener noreferrer">
+    Contactar por WhatsApp
+  </a>
+
+  <script src="products.js"></script>
+</body>
+</html>
