@@ -785,6 +785,17 @@ function getProductUrl(productId) {
   return `producto.html?id=${encodeURIComponent(productId)}`;
 }
 
+function getCategoryHash(category) {
+  if (category === 'Todos') return '';
+  return `#${category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+}
+
+function getCategoryFromHash(hash) {
+  const normalizedHash = String(hash || '').replace(/^#/, '').toLowerCase();
+  if (!normalizedHash) return 'Todos';
+  return Object.keys(CATEGORY_META).find((category) => getCategoryHash(category).slice(1) === normalizedHash) || 'Todos';
+}
+
 function createProduct(definition) {
   const categoryMeta = CATEGORY_META[definition.category];
   const categoryMedia = CATEGORY_MEDIA[definition.category]?.[definition.id] || null;
@@ -977,26 +988,50 @@ function renderCatalogPage() {
     });
   }
 
-  function setActiveFilter(nextFilter) {
+  function scrollToProductSections() {
+    sectionsRoot.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function setActiveFilter(nextFilter, options = {}) {
     activeFilter = nextFilter;
     Array.from(filterBar.querySelectorAll('.filter-chip')).forEach((button) => {
       button.classList.toggle('is-active', button.dataset.filter === nextFilter);
+      button.setAttribute('aria-pressed', String(button.dataset.filter === nextFilter));
     });
 
     Array.from(sectionsRoot.querySelectorAll('.catalog-section')).forEach((section) => {
       section.hidden = activeFilter !== 'Todos' && section.dataset.category !== activeFilter;
     });
+
+    if (options.syncHash !== false) {
+      const nextHash = getCategoryHash(nextFilter);
+      const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`;
+      window.history.replaceState(null, '', nextUrl);
+    }
+
+    if (options.scroll) {
+      scrollToProductSections();
+    }
   }
 
   filterBar.innerHTML = '';
   categories.forEach((category, index) => {
     const button = createFilterButton(category, index === 0);
-    button.addEventListener('click', () => setActiveFilter(category));
+    button.setAttribute('aria-pressed', String(index === 0));
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      setActiveFilter(category, { scroll: true });
+    });
     filterBar.appendChild(button);
   });
 
   renderSections();
-  setActiveFilter('Todos');
+  setActiveFilter(getCategoryFromHash(window.location.hash), { syncHash: false, scroll: Boolean(window.location.hash) });
+
+  window.addEventListener('hashchange', () => {
+    setActiveFilter(getCategoryFromHash(window.location.hash), { syncHash: false, scroll: true });
+  });
 }
 
 function renderProductDetailPage() {
