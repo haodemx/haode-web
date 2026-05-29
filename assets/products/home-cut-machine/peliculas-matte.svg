@@ -1,0 +1,48 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Películas Matte HAODE</title>
+  <desc id="desc">Tarjeta visual para películas Matte con estilo HAODE.</desc>
+  <rect width="1200" height="1200" rx="56" fill="#F8F4EE"/>
+  <rect x="34" y="34" width="1132" height="1132" rx="50" stroke="#FF7A1A" stroke-width="4"/>
+  <circle cx="600" cy="226" r="82" fill="#FFF" stroke="#FF7A1A" stroke-width="12"/>
+  <path d="M600 168 L615 218 L669 226 L615 234 L600 284 L585 234 L531 226 L585 218 Z" fill="#FF7A1A"/>
+  <text x="600" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="78" font-weight="800" fill="#1F1F1F">PELÍCULAS MATTE</text>
+  <text x="600" y="436" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#6F655C">acabado suave · anti reflejo · sensación premium</text>
+
+  <g transform="translate(180 520)">
+    <rect x="0" y="0" width="840" height="320" rx="36" fill="#FFFFFF" stroke="#E8D8C8"/>
+    <rect x="52" y="52" width="736" height="216" rx="28" fill="url(#m1)" stroke="#D9D1C8"/>
+    <rect x="102" y="92" width="180" height="136" rx="28" fill="#B7BCC3" opacity="0.95"/>
+    <rect x="302" y="92" width="180" height="136" rx="28" fill="#A6ABB2" opacity="0.9"/>
+    <rect x="502" y="92" width="180" height="136" rx="28" fill="#8F949B" opacity="0.88"/>
+    <path d="M114 114C154 94 208 98 232 122C245 135 247 152 242 172C228 227 144 219 116 176C96 145 94 127 114 114Z" fill="#F2D7A7" opacity="0.25"/>
+    <path d="M314 114C354 94 408 98 432 122C445 135 447 152 442 172C428 227 344 219 316 176C296 145 294 127 314 114Z" fill="#F2D7A7" opacity="0.25"/>
+    <path d="M514 114C554 94 608 98 632 122C645 135 647 152 642 172C628 227 544 219 516 176C496 145 494 127 514 114Z" fill="#F2D7A7" opacity="0.25"/>
+    <text x="420" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6F655C">Compatible con corte profesional y pantalla curva</text>
+  </g>
+
+  <g transform="translate(146 898)">
+    <rect width="908" height="120" rx="28" fill="#FFF" stroke="#FF7A1A" stroke-width="3"/>
+    <g transform="translate(52 28)">
+      <circle cx="28" cy="28" r="28" fill="#FF7A1A" fill-opacity="0.12"/>
+      <path d="M15 29h26M28 16v26" stroke="#FF7A1A" stroke-width="4" stroke-linecap="round"/>
+      <text x="72" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#1F1F1F">Reducción de reflejo</text>
+    </g>
+    <g transform="translate(342 28)">
+      <circle cx="28" cy="28" r="28" fill="#FF7A1A" fill-opacity="0.12"/>
+      <path d="M14 35c8-10 21-16 28-16 8 0 20 6 28 16" stroke="#FF7A1A" stroke-width="4" stroke-linecap="round"/>
+      <text x="72" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#1F1F1F">Tacto suave</text>
+    </g>
+    <g transform="translate(610 28)">
+      <circle cx="28" cy="28" r="28" fill="#FF7A1A" fill-opacity="0.12"/>
+      <path d="M16 27h24M16 37h16" stroke="#FF7A1A" stroke-width="4" stroke-linecap="round"/>
+      <text x="72" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#1F1F1F">Protección diaria</text>
+    </g>
+  </g>
+
+  <defs>
+    <linearGradient id="m1" x1="52" y1="52" x2="788" y2="268" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF7F2"/>
+      <stop offset="1" stop-color="#E5E2DD"/>
+    </linearGradient>
+  </defs>
+</svg>

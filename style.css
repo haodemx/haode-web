@@ -1233,6 +1233,12 @@ h1 {
   display: block;
 }
 
+.new-product-visual img.cut-machine-image {
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+}
+
 .new-product-visual::after {
   content: "";
   position: absolute;
@@ -1369,6 +1375,13 @@ h1 {
   display: block;
 }
 
+.micas-category-media img.cut-machine-image,
+.micas-overview-media img.cut-machine-image {
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+}
+
 .micas-category-media video {
   position: absolute;
   inset: 0;
@@ -1451,6 +1464,21 @@ h1 {
 
 .micas-feature-list li {
   font-size: 0.9rem;
+}
+
+.micas-hd-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 10px;
+  height: 100%;
+}
+
+.micas-hd-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 14px;
 }
 
 .new-page-links .btn {
