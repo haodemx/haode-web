@@ -780,6 +780,13 @@ function buildWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 }
 
+const SITE_ORIGIN = 'https://haodemx.github.io/haode-web';
+
+function buildSiteUrl(pathname = '') {
+  const cleanPath = String(pathname || '').replace(/^\/+/, '');
+  return `${SITE_ORIGIN}/${cleanPath}`;
+}
+
 function setMetaContent(selector, content) {
   const el = document.querySelector(selector);
   if (el) el.setAttribute('content', content);
@@ -796,7 +803,7 @@ function setCanonicalUrl(url) {
 }
 
 function getProductUrl(productId) {
-  return `producto.html?id=${encodeURIComponent(productId)}`;
+  return buildSiteUrl(`producto/${encodeURIComponent(productId)}/`);
 }
 
 function getCategoryHash(category) {
@@ -1104,7 +1111,7 @@ function renderCatalogPage() {
 
     if (options.syncHash !== false) {
       const nextHash = getCategoryHash(activeFilter);
-      const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`;
+      const nextUrl = `${buildSiteUrl('productos.html')}${window.location.search}${nextHash}`;
       window.history.replaceState(null, '', nextUrl);
     }
 
@@ -1159,15 +1166,14 @@ function renderProductDetailPage() {
         <p class="section-kicker">Producto no encontrado</p>
         <h1>No pudimos abrir este producto</h1>
         <p>Regresa al catálogo para elegir otra pantalla HAODE.</p>
-        <a class="btn btn-primary" href="productos.html">Volver al catálogo</a>
+        <a class="btn btn-primary" href="${buildSiteUrl('productos.html')}">Volver al catálogo</a>
       </div>
     `;
     return;
   }
 
   document.title = `${product.name} | HAODE México`;
-  const currentUrl = new URL(window.location.href);
-  const detailUrl = `${currentUrl.origin}${currentUrl.pathname}?id=${encodeURIComponent(product.id)}`;
+  const detailUrl = `${buildSiteUrl(`producto/${encodeURIComponent(product.id)}/`)}`;
   const metaDescription = `${product.name} en HAODE México. ${product.description}`;
   const metaKeywords = [
     `${product.brand} ${product.model}`,
@@ -1187,7 +1193,7 @@ function renderProductDetailPage() {
   setMetaContent('meta[name="keywords"]', metaKeywords);
   setMetaContent('meta[property="og:title"]', `${product.name} | HAODE México`);
   setMetaContent('meta[property="og:description"]', metaDescription);
-  setMetaContent('meta[property="og:image"]', new URL(product.mainImage || PLACEHOLDER_IMAGE, currentUrl).href);
+  setMetaContent('meta[property="og:image"]', new URL(product.mainImage || PLACEHOLDER_IMAGE, `${SITE_ORIGIN}/`).href);
   setMetaContent('meta[property="og:url"]', detailUrl);
   setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
 
@@ -1202,7 +1208,7 @@ function renderProductDetailPage() {
     mainImageEl.onerror = () => {
       if (mainImageEl.src !== PLACEHOLDER_IMAGE) mainImageEl.src = PLACEHOLDER_IMAGE;
     };
-    attachZoom(mainImageEl, new URL(product.mainImage || PLACEHOLDER_IMAGE, currentUrl).href, product.name);
+    attachZoom(mainImageEl, new URL(product.mainImage || PLACEHOLDER_IMAGE, `${SITE_ORIGIN}/`).href, product.name);
   }
 
   if (priceEl) priceEl.textContent = product.lowestPriceText || 'Consultar';
@@ -1212,7 +1218,7 @@ function renderProductDetailPage() {
   }
 
   if (backLink) {
-    backLink.href = 'productos.html';
+    backLink.href = buildSiteUrl('productos.html');
   }
 
   if (galleryEl) {
@@ -1227,7 +1233,7 @@ function renderProductDetailPage() {
       img.onerror = () => {
         if (img.src !== PLACEHOLDER_IMAGE) img.src = PLACEHOLDER_IMAGE;
       };
-      attachZoom(img, new URL(src, currentUrl).href, `${product.name} foto ${index + 1}`);
+      attachZoom(img, new URL(src, `${SITE_ORIGIN}/`).href, `${product.name} foto ${index + 1}`);
       galleryEl.appendChild(img);
     });
 
