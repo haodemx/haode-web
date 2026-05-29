@@ -41,6 +41,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://haodemx.github.io/haode-web/ai-smart-glasses-w630.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://haodemx.github.io/haode-web/productos-ai.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
