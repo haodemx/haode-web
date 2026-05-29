@@ -1721,6 +1721,16 @@ h1 {
   gap: 18px;
 }
 
+.ai-mouse-page .ai-product-hero-image,
+.ai-mouse-page .ai-product-gallery img {
+  cursor: zoom-in;
+}
+
+.ai-mouse-page .ai-product-gallery img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(35, 55, 84, 0.12);
+}
+
 .ai-detail-section-title {
   margin: 0 0 10px;
   font-size: 1.12rem;
