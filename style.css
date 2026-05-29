@@ -1126,6 +1126,73 @@ h1 {
   justify-content: center;
 }
 
+.new-arrival-card-ai {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: stretch;
+}
+
+.new-arrival-card-ai .new-arrival-media {
+  min-height: 100%;
+  padding: 18px;
+}
+
+.new-arrival-collage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  height: 100%;
+  min-height: 360px;
+}
+
+.new-arrival-collage figure {
+  position: relative;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  box-shadow: 0 14px 24px rgba(35, 55, 84, 0.08);
+}
+
+.new-arrival-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.new-arrival-collage .new-arrival-tag {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  z-index: 1;
+}
+
+.new-arrival-card-ai .new-arrival-content {
+  justify-content: center;
+  padding: 22px;
+}
+
+.ai-promo-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ai-promo-pill-list li {
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 122, 24, 0.08);
+  border: 1px solid rgba(255, 122, 24, 0.16);
+  color: #8b4a14;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
 .new-products-grid {
   margin-top: 6px;
 }
@@ -3175,6 +3242,14 @@ body.product-detail-page .detail-zoom-close {
 @media (max-width: 1080px) {
   body.catalog-page .shop-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .new-arrival-card-ai {
+    grid-template-columns: 1fr;
+  }
+
+  .new-arrival-collage {
+    min-height: 300px;
   }
 
   body.product-detail-page .detail-grid {
