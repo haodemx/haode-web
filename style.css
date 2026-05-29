@@ -3119,6 +3119,24 @@ body.lk032-page .detail-gallery img {
   background: #fff;
 }
 
+body.lk030-page .detail-main-image,
+body.lk030-page .detail-gallery img {
+  object-fit: contain;
+  background: #fff;
+}
+
+body.lk030-page .lk030-colors-display {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(35, 55, 84, 0.08);
+  padding: 10px;
+}
+
 body.product-detail-page .detail-videos {
   display: grid;
   gap: 10px;
