@@ -1237,6 +1237,178 @@ h1 {
   min-width: 170px;
 }
 
+.ai-product-detail-shell {
+  padding: 24px;
+}
+
+.ai-product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 18px;
+}
+
+.ai-product-visual,
+.ai-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ai-product-hero-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(35, 55, 84, 0.08);
+}
+
+.ai-product-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ai-product-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  background: #fff;
+}
+
+.ai-product-card {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(35, 55, 84, 0.08);
+}
+
+.ai-product-kicker {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 122, 24, 0.1);
+  border: 1px solid rgba(255, 122, 24, 0.18);
+  color: #b75b0a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ai-product-title {
+  margin: 14px 0 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.ai-product-subtitle {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.ai-price-box {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 122, 24, 0.06);
+  border: 1px solid rgba(255, 122, 24, 0.14);
+}
+
+.ai-price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.ai-price-row span:first-child {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.ai-price-row strong {
+  color: #1f1f1f;
+  font-size: 1.08rem;
+}
+
+.ai-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ai-feature-list li {
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 122, 24, 0.08);
+  border: 1px solid rgba(255, 122, 24, 0.18);
+  color: #8b4a14;
+  font-weight: 700;
+}
+
+.ai-spec-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  border-radius: 14px;
+}
+
+.ai-spec-table th,
+.ai-spec-table td {
+  padding: 11px 12px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(32, 27, 21, 0.08);
+}
+
+.ai-spec-table th {
+  width: 46%;
+  text-align: left;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.ai-spec-table td {
+  color: #121827;
+  font-weight: 800;
+  text-align: right;
+}
+
+.ai-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ai-detail-actions .btn {
+  flex: 1 1 180px;
+}
+
+.ai-detail-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.ai-detail-section-title {
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+}
+
 .tracking-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1721,6 +1893,10 @@ body.warranty-page .contact-whatsapp-chip {
     grid-template-columns: 1fr;
   }
 
+  .ai-product-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .quote-form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1852,6 +2028,14 @@ body.warranty-page .contact-whatsapp-chip {
     flex: 1 1 100%;
   }
 
+  .ai-product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-detail-actions .btn {
+    flex: 1 1 100%;
+  }
+
   .products-hero-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -1873,6 +2057,10 @@ body.warranty-page .contact-whatsapp-chip {
   .gallery-shot.is-main {
     grid-row: auto;
     min-height: 220px;
+  }
+
+  .ai-product-gallery {
+    grid-template-columns: 1fr;
   }
 
   .glass-tile.alt {
