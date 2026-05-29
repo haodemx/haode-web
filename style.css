@@ -1242,6 +1242,23 @@ h1 {
   pointer-events: none;
 }
 
+.image-pending-badge {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 122, 24, 0.22);
+  color: var(--orange);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(35, 55, 84, 0.08);
+}
+
 .new-product-content {
   display: flex;
   flex-direction: column;
