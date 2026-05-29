@@ -33,3 +33,30 @@ function attachQuoteForm(form) {
 }
 
 document.querySelectorAll('[data-quote-form]').forEach(attachQuoteForm);
+
+function attachHoverVideos() {
+  document.querySelectorAll('[data-hover-video-card]').forEach((card) => {
+    const video = card.querySelector('video');
+    if (!video) return;
+
+    const playVideo = () => {
+      if (video.readyState >= 1) {
+        video.play().catch(() => {});
+      } else {
+        video.addEventListener('loadeddata', () => video.play().catch(() => {}), { once: true });
+      }
+    };
+
+    const resetVideo = () => {
+      video.pause();
+      video.currentTime = 0;
+    };
+
+    card.addEventListener('mouseenter', playVideo);
+    card.addEventListener('mouseleave', resetVideo);
+    card.addEventListener('focusin', playVideo);
+    card.addEventListener('focusout', resetVideo);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', attachHoverVideos);
