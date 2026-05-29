@@ -1440,6 +1440,19 @@ h1 {
   line-height: 1.5;
 }
 
+.micas-feature-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  display: grid;
+  gap: 4px;
+  line-height: 1.5;
+}
+
+.micas-feature-list li {
+  font-size: 0.9rem;
+}
+
 .new-page-links .btn {
   min-width: 170px;
 }
