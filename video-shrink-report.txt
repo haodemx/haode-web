@@ -1,0 +1,4 @@
+Referenced videos: 77
+Inventory videos: 78
+Unused videos moved: 1
+Referenced videos compressed: 55
