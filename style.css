@@ -1197,6 +1197,111 @@ h1 {
   margin-top: 6px;
 }
 
+.home-category-grid {
+  margin-top: 6px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.home-category-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(32, 27, 21, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 122, 24, 0.06), rgba(255, 255, 255, 0.94)),
+    #ffffff;
+  box-shadow: 0 12px 28px rgba(35, 55, 84, 0.09);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.home-category-card:hover,
+.home-category-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(255, 122, 24, 0.28);
+  box-shadow: 0 16px 30px rgba(64, 45, 18, 0.12);
+}
+
+.home-category-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.45), transparent 32%),
+    linear-gradient(145deg, rgba(255, 122, 24, 0.14), rgba(248, 251, 255, 0.96));
+  padding: 12px;
+}
+
+.home-category-media::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(32, 27, 21, 0.06);
+  pointer-events: none;
+}
+
+.home-category-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+
+.home-category-media-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.home-category-media-split img {
+  min-width: 0;
+}
+
+.home-category-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 16px 18px;
+}
+
+.home-category-content h3 {
+  margin: 0;
+  font-size: 1.16rem;
+  line-height: 1.15;
+}
+
+.home-category-content p {
+  margin: 0;
+  color: #6f655c;
+  line-height: 1.55;
+}
+
+.home-category-kicker {
+  margin: 0;
+  color: #b75b0a;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.home-category-cta {
+  align-self: flex-start;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff9d42, #ff7a1a);
+  color: #1f1f1f;
+  font-weight: 800;
+  box-shadow: 0 10px 20px rgba(255, 122, 24, 0.2);
+}
+
 .new-product-card {
   display: flex;
   flex-direction: column;
@@ -2454,6 +2559,7 @@ body.warranty-page .contact-whatsapp-chip {
   .showcase-grid,
   .video-showcase-grid,
   .new-arrivals-grid,
+  .home-category-grid,
   .micas-category-grid,
   .micas-overview-grid,
   .new-products-grid,
@@ -2582,6 +2688,7 @@ body.warranty-page .contact-whatsapp-chip {
   .showcase-grid,
   .video-showcase-grid,
   .new-arrivals-grid,
+  .home-category-grid,
   .new-products-grid,
   .tracking-grid,
   .product-page-grid,
