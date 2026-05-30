@@ -1810,7 +1810,7 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/iphone-oled/16promax/gallery-01.jpg"
     ],
     "videos": [
-      "assets/products/iphone-oled/16promax/video-01.mp4"
+      "assets/products/iphone-oled/16promax/16promax.mp4"
     ],
     "prices": [
       {
