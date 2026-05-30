@@ -745,7 +745,7 @@ function writeSeoFiles(products) {
   ];
 
   products.forEach((product) => {
-    urls.push(`${SITE_URL}/producto.html?id=${encodeURIComponent(product.id)}`);
+    urls.push(`${SITE_URL}/producto/${encodeURIComponent(product.id)}/`);
   });
 
   const sitemapEntries = urls
