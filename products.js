@@ -1104,7 +1104,8 @@ function renderProductDetailPage() {
   if (!page) return;
 
   const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
+  const pathMatch = window.location.pathname.match(/\/producto\/([^/]+)\/?$/);
+  const id = params.get('id') || (pathMatch ? decodeURIComponent(pathMatch[1]) : null);
   const product = PRODUCT_BY_ID.get(id);
 
   const titleEl = page.querySelector('[data-detail-title]');
