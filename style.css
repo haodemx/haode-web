@@ -503,6 +503,9 @@ h1 {
 }
 
 .filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 42px;
   padding: 0 14px;
   border-radius: 999px;
@@ -511,6 +514,7 @@ h1 {
   color: var(--text);
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
 }
 
