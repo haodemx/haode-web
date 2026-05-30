@@ -3,7 +3,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
-const SOURCE_ROOT = '/Users/mac/Desktop/haode产品素材';
+const SOURCE_ROOT = process.env.HAODE_SOURCE_ROOT || '';
 const TARGET_ROOT = path.join(ROOT, 'assets', 'products');
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp']);

@@ -196,12 +196,10 @@ const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
 const VIDEO_EXTENSIONS = new Set(['.mp4', '.mov', '.webm']);
 const MAIN_IMAGE_FALLBACK = 'assets/products/placeholder.svg';
 
-const SOURCE_ROOTS = [
-  '/Users/mac/Downloads',
-  '/Users/mac/Desktop/广告图片/价格表',
-  '/Users/mac/Desktop/haode产品素材/同行报价单',
-  '/Users/mac/Desktop/haode产品素材',
-];
+const SOURCE_ROOTS = (process.env.HAODE_SOURCE_ROOTS || '')
+  .split(path.delimiter)
+  .map((entry) => entry.trim())
+  .filter(Boolean);
 
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
@@ -237,7 +235,6 @@ function findWorkbook() {
 
 function runPythonWorkbookReader(workbookPath) {
   const pythonCandidates = [
-    '/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',
     process.env.PYTHON,
     'python3',
     'python',
@@ -642,7 +639,7 @@ function writeStructureDoc() {
     `- \`assets/products/samsung-incell/<modelo>/\`\n` +
     `- \`assets/products/samsung-oled/<modelo>/\`\n\n` +
     `## Regla de precios\n\n` +
-    `El generador busca automáticamente el precio en el Excel disponible en \`/Users/mac/Desktop/haode产品素材/同行报价单\` o en \`/Users/mac/Desktop/haode产品素材\`.\n` +
+    `El generador busca automáticamente el precio en las carpetas indicadas por \`HAODE_SOURCE_ROOTS\`.\n` +
     `Si un modelo no aparece en la hoja, el sitio mostrará \`Consultar\`.\n`;
   fs.writeFileSync(STRUCTURE_DOC_FILE, content, 'utf8');
 }

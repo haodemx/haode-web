@@ -19,5 +19,5 @@ Este proyecto se genera automáticamente a partir de la carpeta `assets/products
 
 ## Regla de precios
 
-El generador busca automáticamente el precio en el Excel disponible en `/Users/mac/Desktop/haode产品素材/同行报价单` o en `/Users/mac/Desktop/haode产品素材`.
+El generador busca automáticamente el precio en las carpetas indicadas por `HAODE_SOURCE_ROOTS`.
 Si un modelo no aparece en la hoja, el sitio mostrará `Consultar`.

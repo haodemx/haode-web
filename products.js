@@ -781,10 +781,23 @@ function buildWhatsAppUrl(message) {
 }
 
 const SITE_ORIGIN = 'https://haodemx.github.io/haode-web';
+const SITE_BASE_PATH = '/haode-web';
 
 function buildSiteUrl(pathname = '') {
   const cleanPath = String(pathname || '').replace(/^\/+/, '');
+  return `${SITE_BASE_PATH}/${cleanPath}`;
+}
+
+function buildAbsoluteSiteUrl(pathname = '') {
+  const cleanPath = String(pathname || '').replace(/^\/+/, '');
   return `${SITE_ORIGIN}/${cleanPath}`;
+}
+
+function buildAssetUrl(pathname = '') {
+  const rawPath = String(pathname || '').trim();
+  if (!rawPath) return `${SITE_BASE_PATH}/assets/products/placeholder.svg`;
+  if (/^(?:https?:)?\/\//.test(rawPath) || rawPath.startsWith('/')) return rawPath;
+  return `${SITE_BASE_PATH}/${rawPath.replace(/^\/+/, '')}`;
 }
 
 function setMetaContent(selector, content) {
@@ -879,12 +892,13 @@ function createProductCard(product) {
   media.className = 'shop-media';
 
   const image = document.createElement('img');
-  image.src = product.mainImage || PLACEHOLDER_IMAGE;
+  image.src = buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
   image.alt = product.name;
   image.loading = 'lazy';
   image.decoding = 'async';
   image.onerror = () => {
-    if (image.src !== PLACEHOLDER_IMAGE) image.src = PLACEHOLDER_IMAGE;
+    const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
+    if (image.src !== fallback) image.src = fallback;
   };
 
   const brand = document.createElement('span');
@@ -1036,14 +1050,11 @@ function renderCatalogPage() {
   const filterBar = document.querySelector('[data-product-filters]');
   const sectionsRoot = document.querySelector('[data-product-sections]');
   const priceNote = document.querySelector('[data-price-note]');
-  if (!filterBar || !sectionsRoot) return;
+  if (!sectionsRoot) return;
 
   if (priceNote) {
     priceNote.textContent = 'Precios por cantidad en MXN. Consulta disponibilidad por WhatsApp para confirmar tu pedido.';
   }
-
-  const categories = ['all', ...CATEGORY_SLUGS];
-  let activeFilter = 'all';
 
   function renderCategorySection(category, products) {
     const meta = CATEGORY_META[category];
@@ -1082,60 +1093,9 @@ function renderCatalogPage() {
     sectionsRoot.appendChild(section);
   }
 
-  function renderFilteredProducts(category) {
-    sectionsRoot.innerHTML = '';
-
-    if (category === 'all') {
-      CATEGORY_SLUGS.forEach((categorySlug) => {
-        renderCategorySection(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug));
-      });
-      return;
-    }
-
-    renderCategorySection(category, PRODUCTS.filter((product) => product.category === category));
-  }
-
-  function scrollToProductSections() {
-    sectionsRoot.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  function setActiveFilter(nextFilter, options = {}) {
-    activeFilter = normalizeCategory(nextFilter);
-    Array.from(filterBar.querySelectorAll('.filter-chip')).forEach((button) => {
-      const isActive = button.dataset.category === activeFilter;
-      button.classList.toggle('is-active', isActive);
-      button.setAttribute('aria-pressed', String(isActive));
-    });
-
-    renderFilteredProducts(activeFilter);
-
-    if (options.syncHash !== false) {
-      const nextHash = getCategoryHash(activeFilter);
-      const nextUrl = `${buildSiteUrl('productos.html')}${window.location.search}${nextHash}`;
-      window.history.replaceState(null, '', nextUrl);
-    }
-
-    if (options.scroll) {
-      scrollToProductSections();
-    }
-  }
-
-  filterBar.innerHTML = '';
-  categories.forEach((category, index) => {
-    const button = createFilterButton(category, index === 0);
-    button.setAttribute('aria-pressed', String(index === 0));
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      setActiveFilter(button.dataset.category, { scroll: true });
-    });
-    filterBar.appendChild(button);
-  });
-
-  setActiveFilter(getCategoryFromHash(window.location.hash), { syncHash: false, scroll: Boolean(window.location.hash) });
-
-  window.addEventListener('hashchange', () => {
-    setActiveFilter(getCategoryFromHash(window.location.hash), { syncHash: false, scroll: true });
+  sectionsRoot.innerHTML = '';
+  CATEGORY_SLUGS.forEach((categorySlug) => {
+    renderCategorySection(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug));
   });
 }
 
@@ -1166,14 +1126,14 @@ function renderProductDetailPage() {
         <p class="section-kicker">Producto no encontrado</p>
         <h1>No pudimos abrir este producto</h1>
         <p>Regresa al catálogo para elegir otra pantalla HAODE.</p>
-        <a class="btn btn-primary" href="${buildSiteUrl('productos.html')}">Volver al catálogo</a>
+        <a class="btn btn-primary" href="${buildSiteUrl('productos/')}">Volver al catálogo</a>
       </div>
     `;
     return;
   }
 
   document.title = `${product.name} | HAODE México`;
-  const detailUrl = `${buildSiteUrl(`producto/${encodeURIComponent(product.id)}/`)}`;
+  const detailUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(product.id)}/`);
   const metaDescription = `${product.name} en HAODE México. ${product.description}`;
   const metaKeywords = [
     `${product.brand} ${product.model}`,
@@ -1193,7 +1153,7 @@ function renderProductDetailPage() {
   setMetaContent('meta[name="keywords"]', metaKeywords);
   setMetaContent('meta[property="og:title"]', `${product.name} | HAODE México`);
   setMetaContent('meta[property="og:description"]', metaDescription);
-  setMetaContent('meta[property="og:image"]', new URL(product.mainImage || PLACEHOLDER_IMAGE, `${SITE_ORIGIN}/`).href);
+  setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
   setMetaContent('meta[property="og:url"]', detailUrl);
   setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
 
@@ -1203,12 +1163,13 @@ function renderProductDetailPage() {
   if (qualityEl) qualityEl.textContent = product.quality;
   if (descriptionEl) descriptionEl.textContent = product.description;
   if (mainImageEl) {
-    mainImageEl.src = product.mainImage || PLACEHOLDER_IMAGE;
+    mainImageEl.src = buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
     mainImageEl.alt = product.name;
     mainImageEl.onerror = () => {
-      if (mainImageEl.src !== PLACEHOLDER_IMAGE) mainImageEl.src = PLACEHOLDER_IMAGE;
+      const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
+      if (mainImageEl.src !== fallback) mainImageEl.src = fallback;
     };
-    attachZoom(mainImageEl, new URL(product.mainImage || PLACEHOLDER_IMAGE, `${SITE_ORIGIN}/`).href, product.name);
+    attachZoom(mainImageEl, new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href, product.name);
   }
 
   if (priceEl) priceEl.textContent = product.lowestPriceText || 'Consultar';
@@ -1218,7 +1179,7 @@ function renderProductDetailPage() {
   }
 
   if (backLink) {
-    backLink.href = buildSiteUrl('productos.html');
+    backLink.href = buildSiteUrl('productos/');
   }
 
   if (galleryEl) {
@@ -1226,14 +1187,15 @@ function renderProductDetailPage() {
     const galleryImages = [...new Set((product.galleryImages || []).filter(Boolean))];
     galleryImages.slice(0, 4).forEach((src, index) => {
       const img = document.createElement('img');
-      img.src = src;
+      img.src = buildAssetUrl(src);
       img.alt = `${product.name} foto ${index + 1}`;
       img.loading = 'lazy';
       img.decoding = 'async';
       img.onerror = () => {
-        if (img.src !== PLACEHOLDER_IMAGE) img.src = PLACEHOLDER_IMAGE;
+        const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
+        if (img.src !== fallback) img.src = fallback;
       };
-      attachZoom(img, new URL(src, `${SITE_ORIGIN}/`).href, `${product.name} foto ${index + 1}`);
+      attachZoom(img, new URL(buildAssetUrl(src), `${SITE_ORIGIN}/`).href, `${product.name} foto ${index + 1}`);
       galleryEl.appendChild(img);
     });
 
@@ -1256,7 +1218,7 @@ function renderProductDetailPage() {
         frame.muted = true;
         frame.loop = true;
         frame.preload = 'metadata';
-        frame.src = video;
+        frame.src = buildAssetUrl(video);
         videosEl.appendChild(frame);
       });
     } else {

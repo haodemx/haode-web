@@ -1,3 +1,4 @@
+(function () {
 const WHATSAPP_PHONE = '523326684296';
 
 function buildWhatsAppMessage(data) {
@@ -60,3 +61,4 @@ function attachHoverVideos() {
 }
 
 document.addEventListener('DOMContentLoaded', attachHoverVideos);
+})();

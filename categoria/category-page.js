@@ -9,7 +9,7 @@
     if (imagePath.startsWith('/')) {
       return imagePath;
     }
-    return `../../${imagePath}`;
+    return `/haode-web/${imagePath.replace(/^\/+/, '')}`;
   }
 
   function buildWhatsappUrl(item) {
