@@ -1807,11 +1807,13 @@ window.HAODE_PRODUCTS_DATA = [
     "quality": "SOFT OLED PREMIUM MOVE IC",
     "images": [
       "assets/products/iphone-oled/16promax/main.jpg",
-      "assets/products/iphone-oled/16promax/gallery-01.jpg"
+      "assets/products/iphone-oled/16promax/gallery-01.jpg",
+      "assets/products/iphone-oled/16promax/gallery-02.jpg",
+      "assets/products/iphone-oled/16promax/gallery-03.png",
+      "assets/products/iphone-oled/16promax/gallery-04.png",
+      "assets/products/iphone-oled/16promax/gallery-05.png"
     ],
-    "videos": [
-      "assets/products/iphone-oled/16promax/video-01.mp4"
-    ],
+    "videos": [],
     "prices": [
       {
         "quantity": "1 pza",
