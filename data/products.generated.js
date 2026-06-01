@@ -3781,6 +3781,45 @@ window.HAODE_PRODUCTS_DATA = [
     "priceSource": "120HZ 17 PROMAX INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
     "description": "iPhone 17 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-oled-16promax-hard",
+    "category": "iphone-oled",
+    "brand": "iPhone",
+    "model": "iPhone 16 Pro Max",
+    "name": "Pantalla para iPhone 16 Pro Max Hard OLED",
+    "quality": "OLED PREMIUM MOVE IC",
+    "images": [
+      "assets/products/iphone-oled/16promax-hard/main.jpg"
+    ],
+    "videos": [
+      "assets/products/iphone-oled/16promax-hard/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,600 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1,550 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$1,500 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,450 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,400 MXN"
+      }
+    ],
+    "priceSource": "16 PROMAX OLED PREMIUM MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Hard OLED",
+    "description": "iPhone 16 Pro Max Hard OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
