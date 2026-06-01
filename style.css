@@ -371,44 +371,31 @@ h1 {
   align-content: stretch;
 }
 
-.glass-tile {
-  min-height: 150px;
+.hero-store-card {
+  min-height: 170px;
   border-radius: 16px;
-  border: 1px solid rgba(32, 27, 21, 0.08);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 248, 240, 0.92)),
-    linear-gradient(180deg, rgba(255, 122, 24, 0.12), rgba(255, 255, 255, 0.92));
-  position: relative;
+  border: 1px solid rgba(32, 27, 21, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 246, 236, 0.92));
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.glass-tile::before {
-  content: "";
-  position: absolute;
-  inset: 10% 14%;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 122, 24, 0.16);
+.hero-store-card video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  background: #121212;
 }
 
-.glass-tile::after {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  background: rgba(255, 122, 24, 0.16);
-}
-
-.glass-tile.alt {
-  transform: translateY(18px);
-}
-
-.glass-tile.alt-2 {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 248, 240, 0.94)),
-    linear-gradient(180deg, rgba(255, 122, 24, 0.22), rgba(255, 255, 255, 0.92));
+.hero-store-card h3 {
+  margin: 0;
+  padding: 10px 12px 12px;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  color: #8b4a14;
+  font-weight: 800;
 }
 
 .section {
@@ -1257,15 +1244,6 @@ h1 {
   object-fit: cover;
   display: block;
   border-radius: 14px;
-}
-
-.home-store-grid .home-category-media video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 14px;
-  background: #111;
 }
 
 .home-category-media-split {
@@ -2610,10 +2588,6 @@ body.warranty-page .contact-whatsapp-chip {
 }
 
 @media (max-width: 760px) {
-  #productos .home-store-grid {
-    padding-bottom: 86px;
-  }
-
   body.catalog-page .contact-map-card iframe {
     height: 300px;
   }
@@ -2771,10 +2745,6 @@ body.warranty-page .contact-whatsapp-chip {
 
   .ai-product-gallery {
     grid-template-columns: 1fr;
-  }
-
-  .glass-tile.alt {
-    transform: none;
   }
 
   .section-head {
