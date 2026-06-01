@@ -791,7 +791,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$320 MXN"
       }
     ],
-    "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original =DISPIMG(\"ID_38486903343C488992FAAEF28734EE2C\",1) 51 16",
+    "priceSource": "60HZ 16 INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
     "description": "iPhone 16 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3477,26 +3477,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$300 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$280 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$275 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$270 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$260 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "60HZ 16E INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
     "description": "iPhone 16e para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3517,26 +3517,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$400 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$380 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$360 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$350 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$330 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "60HZ 16PLUS INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
     "description": "iPhone 16 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3557,26 +3557,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$700 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$680 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$660 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$650 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$620 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "120HZ 16PRO INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
     "description": "iPhone 16 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3597,26 +3597,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$750 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$730 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$700 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$680 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$650 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "120HZ 16 PROMAX INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
     "description": "iPhone 16 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3637,26 +3637,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$1000 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$950 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$920 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$900 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$850 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "120HZ 17 INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
     "description": "iPhone 17 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3677,26 +3677,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$2500 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$2400 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$2300 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$2200 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$2100 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "120HZ 17 AIR INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
     "description": "iPhone 17 Air para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3717,26 +3717,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$850 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$800 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$755 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$750 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$700 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "120HZ 17PRO INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
     "description": "iPhone 17 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
@@ -3757,26 +3757,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "Consultar"
+        "price": "$900 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "Consultar"
+        "price": "$850 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "Consultar"
+        "price": "$805 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "Consultar"
+        "price": "$800 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "Consultar"
+        "price": "$750 MXN"
       }
     ],
-    "priceSource": "Consultar",
+    "priceSource": "120HZ 17 PROMAX INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
     "description": "iPhone 17 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   }
