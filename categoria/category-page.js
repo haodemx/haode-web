@@ -23,6 +23,10 @@
 
     const image = item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
 
+    const detailHref = document.body.dataset.category === 'iphone-incell'
+      ? `/haode-web/producto.html?id=${encodeURIComponent(item.id)}`
+      : `/haode-web/producto/${item.id}/`;
+
     article.innerHTML = `
       <div class="new-product-visual">
         <img src="${toAssetPath(image)}" alt="${item.name || item.model || 'Producto'}" loading="lazy" />
@@ -33,7 +37,7 @@
         <p>${item.description || 'Consulta disponibilidad por WhatsApp.'}</p>
         <p class="new-arrival-note">${item.quality || ''}${item.priceText ? ` · ${item.priceText}` : ''}</p>
         <div class="new-product-actions">
-          <a class="btn btn-secondary" href="/haode-web/producto/${item.id}/">Ver detalles</a>
+          <a class="btn btn-secondary" href="${detailHref}">Ver detalles</a>
           <a class="btn btn-primary" href="${buildWhatsappUrl(item)}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
         </div>
       </div>
