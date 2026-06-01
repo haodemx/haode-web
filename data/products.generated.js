@@ -1803,8 +1803,8 @@ window.HAODE_PRODUCTS_DATA = [
     "category": "iphone-oled",
     "brand": "iPhone",
     "model": "iPhone 16 Pro Max",
-    "name": "Pantalla para iPhone 16 Pro Max",
-    "quality": "OLED PREMIUM",
+    "name": "Pantalla para iPhone 16 Pro Max Soft OLED",
+    "quality": "SOFT OLED PREMIUM MOVE IC",
     "images": [
       "assets/products/iphone-oled/16promax/main.jpg",
       "assets/products/iphone-oled/16promax/gallery-01.jpg"
@@ -1815,28 +1815,28 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,600 MXN"
+        "price": "$2,000 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,550 MXN"
+        "price": "$1,950 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,500 MXN"
+        "price": "$1,900 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "$1,450 MXN"
+        "price": "$1,850 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "$1,400 MXN"
+        "price": "$1,800 MXN"
       }
     ],
-    "priceSource": "16 PROMAX OLED PREMIUM MOVE IC Tamaño original 59",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
-    "description": "iPhone 16 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "priceSource": "16 PROMAX SOFT OLED PREMIUM MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Soft OLED",
+    "description": "iPhone 16 Pro Max Soft OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
     "id": "iphone-oled-x",
