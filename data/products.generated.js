@@ -1802,45 +1802,6 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "iPhone 16 Pro Max Soft OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
-    "id": "iphone-oled-x",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone X",
-    "name": "Pantalla para iPhone X",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/x/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/x/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone X",
-    "description": "iPhone X para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
     "id": "iphone-oled-xsmax",
     "category": "iphone-oled",
     "brand": "iPhone",
