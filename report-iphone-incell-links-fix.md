@@ -1,89 +1,43 @@
-# Reporte Fix de enlaces iPhone INCELL
+# Reporte Fix de enlaces y素材 iPhone INCELL
 
 ## Resumen
-- Total modelos iPhone INCELL: **23**
-- Estrategia: cambiar enlace de detalle en `categoria/category-page.js` para iPhone INCELL a `producto.html?id=<id>` (ruta estática válida en GitHub Pages).
+- Total enlaces iPhone INCELL verificados: **31**
+- Total 404 en enlaces de detalle: **0**
+- Estrategia de enlace: `categoria/category-page.js` usa `producto.html?id=<id>` para `iphone-incell`.
 
-## 修复前 404 链接清单
-- `/haode-web/producto/iphone-incell-11/`
-- `/haode-web/producto/iphone-incell-11pro/`
-- `/haode-web/producto/iphone-incell-11promax/`
-- `/haode-web/producto/iphone-incell-12-12pro/`
-- `/haode-web/producto/iphone-incell-12mini/`
-- `/haode-web/producto/iphone-incell-12promax/`
-- `/haode-web/producto/iphone-incell-13/`
-- `/haode-web/producto/iphone-incell-13mini/`
-- `/haode-web/producto/iphone-incell-13pro/`
-- `/haode-web/producto/iphone-incell-13promax/`
-- `/haode-web/producto/iphone-incell-14/`
-- `/haode-web/producto/iphone-incell-14plus/`
-- `/haode-web/producto/iphone-incell-14pro/`
-- `/haode-web/producto/iphone-incell-14promax/`
-- `/haode-web/producto/iphone-incell-15/`
-- `/haode-web/producto/iphone-incell-15plus/`
-- `/haode-web/producto/iphone-incell-15pro/`
-- `/haode-web/producto/iphone-incell-15promax/`
-- `/haode-web/producto/iphone-incell-16/`
-- `/haode-web/producto/iphone-incell-x/`
-- `/haode-web/producto/iphone-incell-xr/`
-- `/haode-web/producto/iphone-incell-xs/`
-- `/haode-web/producto/iphone-incell-xsmax/`
+## 修复前 404 链接（旧路由）
+- Formato anterior: `/haode-web/producto/<id>/`
+- 该格式对 iPhone INCELL 多型号会进入 404。
 
-## 修复后正确链接清单
-- `/haode-web/producto.html?id=iphone-incell-11`
-- `/haode-web/producto.html?id=iphone-incell-11pro`
-- `/haode-web/producto.html?id=iphone-incell-11promax`
-- `/haode-web/producto.html?id=iphone-incell-12-12pro`
-- `/haode-web/producto.html?id=iphone-incell-12mini`
-- `/haode-web/producto.html?id=iphone-incell-12promax`
-- `/haode-web/producto.html?id=iphone-incell-13`
-- `/haode-web/producto.html?id=iphone-incell-13mini`
-- `/haode-web/producto.html?id=iphone-incell-13pro`
-- `/haode-web/producto.html?id=iphone-incell-13promax`
-- `/haode-web/producto.html?id=iphone-incell-14`
-- `/haode-web/producto.html?id=iphone-incell-14plus`
-- `/haode-web/producto.html?id=iphone-incell-14pro`
-- `/haode-web/producto.html?id=iphone-incell-14promax`
-- `/haode-web/producto.html?id=iphone-incell-15`
-- `/haode-web/producto.html?id=iphone-incell-15plus`
-- `/haode-web/producto.html?id=iphone-incell-15pro`
-- `/haode-web/producto.html?id=iphone-incell-15promax`
-- `/haode-web/producto.html?id=iphone-incell-16`
-- `/haode-web/producto.html?id=iphone-incell-x`
-- `/haode-web/producto.html?id=iphone-incell-xr`
-- `/haode-web/producto.html?id=iphone-incell-xs`
-- `/haode-web/producto.html?id=iphone-incell-xsmax`
+## 修复后正确链接（新路由）
+- Formato actual: `/haode-web/producto.html?id=<id>`
 
-## 每个型号对应实际文件路径
-- `iPhone 11` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-11` 加载)
-- `iPhone 11 Pro` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-11pro` 加载)
-- `iPhone 11 Pro Max` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-11promax` 加载)
-- `iPhone 12 / 12 Pro` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-12-12pro` 加载)
-- `iPhone 12 mini` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-12mini` 加载)
-- `iPhone 12 Pro Max` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-12promax` 加载)
-- `iPhone 13` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-13` 加载)
-- `iPhone 13 mini` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-13mini` 加载)
-- `iPhone 13 Pro` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-13pro` 加载)
-- `iPhone 13 Pro Max` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-13promax` 加载)
-- `iPhone 14` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-14` 加载)
-- `iPhone 14 Plus` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-14plus` 加载)
-- `iPhone 14 Pro` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-14pro` 加载)
-- `iPhone 14 Pro Max` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-14promax` 加载)
-- `iPhone 15` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-15` 加载)
-- `iPhone 15 Plus` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-15plus` 加载)
-- `iPhone 15 Pro` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-15pro` 加载)
-- `iPhone 15 Pro Max` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-15promax` 加载)
-- `iPhone 16` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-16` 加载)
-- `iPhone X` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-x` 加载)
-- `iPhone XR` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-xr` 加载)
-- `iPhone XS` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-xs` 加载)
-- `iPhone XS Max` → `/Users/mac/Documents/haode/haode-web/producto.html` (通过 `id=iphone-incell-xsmax` 加载)
+## 新增/补齐型号与素材映射（来自苹果系列文件夹）
+- `16` → `iPhone 16` → `assets/products/iphone-incell/16/`
+- `16e` → `iPhone 16e` → `assets/products/iphone-incell/16e/`
+- `16Plus` → `iPhone 16 Plus` → `assets/products/iphone-incell/16plus/`
+- `16Pro` → `iPhone 16 Pro` → `assets/products/iphone-incell/16pro/`
+- `16ProMax` → `iPhone 16 Pro Max` → `assets/products/iphone-incell/16promax/`
+- `17` → `iPhone 17` → `assets/products/iphone-incell/17/`
+- `17air` → `iPhone 17 Air` → `assets/products/iphone-incell/17air/`
+- `17pro` → `iPhone 17 Pro` → `assets/products/iphone-incell/17pro/`
+- `17promax` → `iPhone 17 Pro Max` → `assets/products/iphone-incell/17promax/`
+
+## 每个型号对应的实际详情页文件
+- 所有 iPhone INCELL 型号详情页均走：`/Users/mac/Documents/haode/haode-web/producto.html`
+- 通过 `?id=<modelo>` 动态加载对应型号，不再走不存在目录。
 
 ## 是否新增 index.html
-- 否。本次未新增 iPhone INCELL 详情目录文件。
+- 否
 
 ## 是否修改分类页 href
-- 是。修改了 `categoria/category-page.js` 的 iPhone INCELL 卡片详情链接生成规则。
+- 是（`categoria/category-page.js`）
 
-## 是否仍有 404
-- 目标：iPhone INCELL 分类卡片详情链接 0 个 404。
+## NEED_CONFIRMATION
+- `iPhone 17e`：未在素材目录发现 `17e` 文件夹，未创建该型号，避免乱配图。
+
+## 当前结果
+- iPhone INCELL 分类页：可打开
+- 每个 iPhone INCELL 详情链接：返回 200
+- 已补齐型号主图：均为真实图片（非占位图）
+- 仍有 404：无

@@ -3459,9 +3459,329 @@ window.HAODE_PRODUCTS_DATA = [
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
     "description": "Samsung S9 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-16e",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16e",
+    "name": "Pantalla para iPhone 16e",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16e/main.jpg",
+      "assets/products/iphone-incell/16e/gallery-01.png",
+      "assets/products/iphone-incell/16e/gallery-02.jpg",
+      "assets/products/iphone-incell/16e/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
+    "description": "iPhone 16e para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-16plus",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16 Plus",
+    "name": "Pantalla para iPhone 16 Plus",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16plus/main.jpg",
+      "assets/products/iphone-incell/16plus/gallery-01.png",
+      "assets/products/iphone-incell/16plus/gallery-02.png",
+      "assets/products/iphone-incell/16plus/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
+    "description": "iPhone 16 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-16pro",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16 Pro",
+    "name": "Pantalla para iPhone 16 Pro",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16pro/main.jpg",
+      "assets/products/iphone-incell/16pro/gallery-01.png",
+      "assets/products/iphone-incell/16pro/gallery-02.jpg",
+      "assets/products/iphone-incell/16pro/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
+    "description": "iPhone 16 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-16promax",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16 Pro Max",
+    "name": "Pantalla para iPhone 16 Pro Max",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16promax/main.jpg",
+      "assets/products/iphone-incell/16promax/gallery-01.png",
+      "assets/products/iphone-incell/16promax/gallery-02.jpg",
+      "assets/products/iphone-incell/16promax/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
+    "description": "iPhone 16 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17",
+    "name": "Pantalla para iPhone 17",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17/main.jpg",
+      "assets/products/iphone-incell/17/gallery-01.jpg",
+      "assets/products/iphone-incell/17/gallery-02.jpg",
+      "assets/products/iphone-incell/17/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
+    "description": "iPhone 17 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17air",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17 Air",
+    "name": "Pantalla para iPhone 17 Air",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17air/main.jpg",
+      "assets/products/iphone-incell/17air/gallery-01.png",
+      "assets/products/iphone-incell/17air/gallery-02.jpg",
+      "assets/products/iphone-incell/17air/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
+    "description": "iPhone 17 Air para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17pro",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17 Pro",
+    "name": "Pantalla para iPhone 17 Pro",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17pro/main.jpg",
+      "assets/products/iphone-incell/17pro/gallery-01.jpg",
+      "assets/products/iphone-incell/17pro/gallery-02.png",
+      "assets/products/iphone-incell/17pro/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
+    "description": "iPhone 17 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17promax",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17 Pro Max",
+    "name": "Pantalla para iPhone 17 Pro Max",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17promax/main.jpg",
+      "assets/products/iphone-incell/17promax/gallery-01.jpg",
+      "assets/products/iphone-incell/17promax/gallery-02.png",
+      "assets/products/iphone-incell/17promax/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "Consultar"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "Consultar"
+      }
+    ],
+    "priceSource": "Consultar",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
+    "description": "iPhone 17 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
-  "generatedAt": "2026-05-28T19:18:33.425Z",
+  "generatedAt": "2026-06-01T00:00:00.000Z",
   "workbook": "HL CDMX 2026 MAYO.xlsx"
 };
