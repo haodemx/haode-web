@@ -391,11 +391,19 @@ h1 {
 
 .hero-store-card h3 {
   margin: 0;
-  padding: 10px 12px 12px;
+  padding: 10px 12px 4px;
   font-size: 0.9rem;
   line-height: 1.25;
   color: #8b4a14;
   font-weight: 800;
+}
+
+.hero-store-card p {
+  margin: 0;
+  padding: 0 12px 12px;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: #6f655c;
 }
 
 .section {
