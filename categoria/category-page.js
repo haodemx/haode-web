@@ -23,9 +23,7 @@
 
     const image = item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
 
-    const detailHref = document.body.dataset.category === 'iphone-incell'
-      ? `/haode-web/producto.html?id=${encodeURIComponent(item.id)}`
-      : `/haode-web/producto/${item.id}/`;
+    const detailHref = `/haode-web/producto/${item.id}/`;
 
     article.innerHTML = `
       <div class="new-product-visual">

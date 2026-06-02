@@ -800,6 +800,42 @@ function buildAssetUrl(pathname = '') {
   return `${SITE_BASE_PATH}/${rawPath.replace(/^\/+/, '')}`;
 }
 
+function compactPhoneRouteSegment(segment) {
+  const normalized = String(segment || '').trim().toLowerCase();
+  if (!normalized) return '';
+  if (normalized === 'xs-max') return 'xsmax';
+  return normalized
+    .replace(/-pro-max/g, 'promax')
+    .replace(/-pro/g, 'pro')
+    .replace(/-plus/g, 'plus')
+    .replace(/-mini/g, 'mini')
+    .replace(/-/g, '');
+}
+
+function resolveProductIdFromRoute(routeSlug) {
+  const normalized = String(routeSlug || '').trim().replace(/^\/+|\/+$/g, '').toLowerCase();
+  if (!normalized) return null;
+  if (PRODUCT_BY_ID.has(normalized)) return normalized;
+  const routeAliases = {
+    'iphone-incell-12': 'iphone-incell-12-12pro',
+    'iphone-incell-12pro': 'iphone-incell-12-12pro',
+    'iphone-incell-12-pro': 'iphone-incell-12-12pro',
+  };
+  if (routeAliases[normalized]) return routeAliases[normalized];
+
+  const incellMatch = normalized.match(/^iphone-(.+)-incell$/);
+  if (incellMatch) return `iphone-incell-${compactPhoneRouteSegment(incellMatch[1])}`;
+
+  const oledMatch = normalized.match(/^iphone-(.+)-oled$/);
+  if (oledMatch) return `iphone-oled-${compactPhoneRouteSegment(oledMatch[1])}`;
+
+  return normalized;
+}
+
+function getPublicProductRouteSlug(productId) {
+  return String(productId || '').trim();
+}
+
 function setMetaContent(selector, content) {
   const el = document.querySelector(selector);
   if (el) el.setAttribute('content', content);
@@ -816,7 +852,7 @@ function setCanonicalUrl(url) {
 }
 
 function getProductUrl(productId) {
-  return buildSiteUrl(`producto/${encodeURIComponent(productId)}/`);
+  return buildSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(productId))}/`);
 }
 
 function getCategoryHash(category) {
@@ -1105,7 +1141,8 @@ function renderProductDetailPage() {
 
   const params = new URLSearchParams(window.location.search);
   const pathMatch = window.location.pathname.match(/\/producto\/([^/]+)\/?$/);
-  const id = params.get('id') || (pathMatch ? decodeURIComponent(pathMatch[1]) : null);
+  const routeSlug = params.get('id') || (pathMatch ? decodeURIComponent(pathMatch[1]) : null);
+  const id = routeSlug ? resolveProductIdFromRoute(routeSlug) : null;
   const product = PRODUCT_BY_ID.get(id);
 
   const titleEl = page.querySelector('[data-detail-title]');
@@ -1134,7 +1171,7 @@ function renderProductDetailPage() {
   }
 
   document.title = `${product.name} | HAODE México`;
-  const detailUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(product.id)}/`);
+  const detailUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(product.id))}/`);
   const metaDescription = `${product.name} en HAODE México. ${product.description}`;
   const metaKeywords = [
     `${product.brand} ${product.model}`,
