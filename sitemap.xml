@@ -1,351 +1,635 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://haodemx.github.io/haode-web/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/productos/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/productos-ai/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/iphone-incell/</loc>
-    <lastmod>2026-05-30</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/iphone-oled/</loc>
-    <lastmod>2026-05-30</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/samsung-incell/</loc>
-    <lastmod>2026-05-30</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/samsung-oled/</loc>
-    <lastmod>2026-05-30</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/pantallas/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/maquinas-de-hidrogel/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/gafas-inteligentes-ai/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/categoria/camaras-inteligentes/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/ai-productos.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/micas.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/ai-productos.html</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/pantallas/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/iphone-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/iphone-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/samsung-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/samsung-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/camaras-inteligentes/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/gafas-inteligentes-ai/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/categoria/maquinas-de-hidrogel/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/garantia/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/ai-mouse.html</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/ai-smart-glasses-s1.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/ai-smart-glasses-aimb-g3.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/ai-smart-glasses-aimb-g5.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/ai-smart-glasses-s1.html</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/ai-smart-glasses-w630.html</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/lk-030-mini-camara-retro-digital/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/lk-032-camara-inteligente-con-gimbal/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/x200t-cortadora-inteligente-de-micas/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/funda-magnetica-estilo-iphone-17-pro-max/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/</loc>
-    <lastmod>2026-05-30</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-16promax/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-x-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-xs-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-xr-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-11-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-11-pro-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-11-pro-max-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-12-mini-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-12-pro-max-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-mini-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-pro-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-pro-max-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-plus-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-pro-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-pro-max-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-15-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
-  </url>
-  <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-xs-max-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-11-pro-max-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-12-mini-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-12-pro-max-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-12-pro-max-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-mini-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-13-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-pro-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-pro-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-pro-max-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-13-pro-max-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-13-pro-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-14-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-plus-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-14-plus-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-pro-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-14-pro-max-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-14-pro-max-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s20-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-15-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s21-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-11/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s22-ultra-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-11pro/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s23-ultra-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-11promax/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s24-ultra-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-12-12pro/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-note-20-ultra-incell/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-12mini/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s20-plus-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-12promax/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s21-ultra-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-13/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s22-ultra-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-13mini/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s23-ultra-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-13pro/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s24-ultra-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-13promax/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
-    <loc>https://haodemx.github.io/haode-web/producto/samsung-s25-ultra-oled/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-14/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-14plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-14pro/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-14promax/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-15/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-15plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-15pro/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-15promax/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-16/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-16e/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-16plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-16pro/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-16promax/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-17/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-17air/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-17pro/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-17promax/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-x/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-xr/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-xs/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-incell-xsmax/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-11/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-11pro/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-11promax/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-12-12pro/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-12mini/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-12pro/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-12promax/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-13/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-13mini/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-13pro/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-13promax/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-14/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-14plus/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-14pro/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-14promax/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-15/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-15plus/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-15promax/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-16/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-16plus/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-16pro/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-16promax/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-16promax-hard/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-x/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </url>
   <url>
     <loc>https://haodemx.github.io/haode-web/producto/iphone-oled-xsmax/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-x-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-xr-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-xs-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/iphone-xs-max-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/lk-030-mini-camara-retro-digital/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/lk-032-camara-inteligente-con-gimbal/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-note-10/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-note-10-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-note-20-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-note-8/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-note-9/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s10/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s10-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s20/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s20-fe/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s20-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s20-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s21/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s21-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s22-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s23-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s24-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s8/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s8-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s9/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-incell-s9-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-note-20-ultra-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-note-10/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-note-10-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-note-20/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-note-20-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-note-9/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s20/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s20-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s20-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s21/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s21-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s21-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s22-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s22-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s23-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s23-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s24-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s24-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s25-ultra/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-oled-s9-plus/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s20-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s20-plus-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s21-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s21-ultra-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s22-ultra-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s22-ultra-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s23-ultra-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s23-ultra-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s24-ultra-incell/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s24-ultra-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/samsung-s25-ultra-oled/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://haodemx.github.io/haode-web/producto/x200t-cortadora-inteligente-de-micas/</loc>
+    <lastmod>2026-06-03</lastmod>
   </url>
 </urlset>
