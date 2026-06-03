@@ -123,15 +123,30 @@
 
   <main class="catalog-main">
     <section class="catalog-hero">
-      <div class="wrap">
-        <p class="section-kicker">Catálogo oficial</p>
-        <h1>Pantallas HAODE México</h1>
-        <p class="catalog-intro">Catálogo visual de pantallas con stock local en CDMX para técnicos, talleres y distribuidores. Precios por cantidad en MXN.</p>
-        <p class="catalog-warning">No manejamos pago en línea. Consulta precios y disponibilidad por WhatsApp.</p>
-        <div class="catalog-actions">
-          <a class="btn btn-primary" href="https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20consultar%20el%20cat%C3%A1logo" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
-          <a class="btn btn-secondary" href="/haode-web/">Volver al inicio</a>
+      <div class="wrap catalog-hero-grid">
+        <div class="catalog-hero-copy">
+          <p class="section-kicker">Catálogo oficial</p>
+          <h1>Pantallas HAODE México</h1>
+          <p class="catalog-intro">Catálogo visual de pantallas con stock local en CDMX para técnicos, talleres y distribuidores. Precios por cantidad en MXN.</p>
+          <p class="catalog-warning">No manejamos pago en línea. Consulta precios y disponibilidad por WhatsApp.</p>
+          <div class="catalog-actions">
+            <a class="btn btn-primary" href="https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20consultar%20el%20cat%C3%A1logo" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
+            <a class="btn btn-secondary" href="/haode-web/">Volver al inicio</a>
+          </div>
         </div>
+
+        <aside class="hero-category-card" aria-labelledby="hero-category-title">
+          <p class="section-kicker">Filtros</p>
+          <h2 id="hero-category-title">Selecciona una categoría</h2>
+          <p>Accede rápidamente a cada línea de pantallas HAODE.</p>
+          <div class="catalog-filters hero-category-filters" data-product-filters>
+            <a class="filter-chip is-active" href="/haode-web/productos/" aria-current="page">Todos</a>
+            <a class="filter-chip" href="/haode-web/categoria/iphone-incell/">iPhone INCELL</a>
+            <a class="filter-chip" href="/haode-web/categoria/iphone-oled/">iPhone OLED</a>
+            <a class="filter-chip" href="/haode-web/categoria/samsung-incell/">Samsung INCELL</a>
+            <a class="filter-chip" href="/haode-web/categoria/samsung-oled/">Samsung OLED</a>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -185,19 +200,10 @@
       <div class="wrap section-shell catalog-shell">
         <div class="section-head section-head-compact">
           <div>
-            <p class="section-kicker">Filtros</p>
-            <h2>Selecciona una categoría y cotiza por cantidad</h2>
+            <p class="section-kicker">Catálogo</p>
+            <h2>Modelos disponibles para cotizar por cantidad</h2>
           </div>
           <p data-price-note>Precios por cantidad en MXN. Consulta disponibilidad por WhatsApp para confirmar tu pedido.</p>
-        </div>
-        <div class="catalog-toolbar">
-          <div class="catalog-filters" data-product-filters>
-            <a class="filter-chip is-active" href="/haode-web/productos/" aria-current="page">Todos</a>
-            <a class="filter-chip" href="/haode-web/categoria/iphone-incell/">iPhone INCELL</a>
-            <a class="filter-chip" href="/haode-web/categoria/iphone-oled/">iPhone OLED</a>
-            <a class="filter-chip" href="/haode-web/categoria/samsung-incell/">Samsung INCELL</a>
-            <a class="filter-chip" href="/haode-web/categoria/samsung-oled/">Samsung OLED</a>
-          </div>
         </div>
       </div>
     </section>
