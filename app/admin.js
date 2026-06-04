@@ -17,6 +17,7 @@ const adminStatus = document.querySelector("[data-admin-status]");
 const syncSamplesButton = document.querySelector("[data-sync-samples]");
 const importJsonButton = document.querySelector("[data-import-json]");
 const importRealButton = document.querySelector("[data-import-real]");
+const syncCorrectedPricesButton = document.querySelector("[data-sync-corrected-prices]");
 const bulkActiveButton = document.querySelector("[data-bulk-active]");
 const bulkInactiveButton = document.querySelector("[data-bulk-inactive]");
 const totalProductsStat = document.querySelector("[data-stat-total]");
@@ -132,8 +133,34 @@ function productJsonToFirestore(product, fallbackOrder) {
   };
 }
 
+function productJsonToCatalogSync(product, fallbackOrder) {
+  return {
+    id: String(product.id || "").trim(),
+    categoria: product.categoria || product.category || defaultCategory,
+    nombre: product.nombre || product.name || "Producto HAODE",
+    modelo: product.modelo || product.model || "Consultar modelo",
+    descripcion: product.descripcion || product.description || "",
+    precioPublico: Number(product.precioPublico ?? product.publicPrice ?? 0),
+    precioMayoreo: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
+    imagen: String(product.imagen || product.image || "").trim(),
+    stock: normalizeStock(product.stock),
+    activo: product.activo !== false,
+    orden: Number(product.orden ?? product.order ?? fallbackOrder)
+  };
+}
+
 function isAllowedAdmin(user) {
   return Boolean(user?.email && firebaseAdminEmails.includes(user.email));
+}
+
+function requireAdminSession() {
+  const user = auth?.currentUser;
+
+  if (!isAllowedAdmin(user)) {
+    throw new Error("Debes iniciar sesion con un administrador autorizado.");
+  }
+
+  return user;
 }
 
 async function setupFirebase() {
@@ -386,6 +413,108 @@ async function importRealHaodeProducts() {
   await importProductsJson();
 }
 
+async function syncCorrectedPricesToFirestore() {
+  requireAdminSession();
+
+  const confirmed = window.confirm("Esto actualizará precios y datos del catálogo en Firestore. ¿Continuar?");
+
+  if (!confirmed) {
+    setStatus(adminStatus, "Sincronizacion cancelada.");
+    return;
+  }
+
+  setStatus(adminStatus, "Leyendo products.json...");
+  await loadProducts();
+
+  const response = await fetch("/haode-web/app/products.json", { cache: "no-store" });
+
+  if (!response.ok) {
+    throw new Error(`No se pudo leer products.json: ${response.status}`);
+  }
+
+  const localProducts = await response.json();
+
+  if (!Array.isArray(localProducts)) {
+    throw new Error("products.json no tiene formato de lista.");
+  }
+
+  const { doc, serverTimestamp, setDoc } = window.HAODE_FIREBASE.firestoreModule;
+  const byId = new Map();
+  const byCategoryModel = new Map();
+
+  currentProducts.forEach((product) => {
+    const idKey = normalizeKey(product.id);
+    const docIdKey = normalizeKey(product.docId);
+    const categoryModelKey = `${normalizeKey(product.categoria)}|${normalizeKey(product.modelo)}`;
+
+    if (idKey) {
+      byId.set(idKey, product);
+    }
+
+    if (docIdKey) {
+      byId.set(docIdKey, product);
+    }
+
+    if (categoryModelKey !== "|") {
+      byCategoryModel.set(categoryModelKey, product);
+    }
+  });
+
+  const result = {
+    updated: 0,
+    created: 0,
+    skipped: 0,
+    errors: 0
+  };
+  const processedDocIds = new Set();
+
+  for (const [index, product] of localProducts.entries()) {
+    const data = productJsonToCatalogSync(product, index + 100);
+    const idKey = normalizeKey(data.id);
+    const categoryModelKey = `${normalizeKey(data.categoria)}|${normalizeKey(data.modelo)}`;
+
+    if (!data.id || !data.nombre || !data.modelo) {
+      result.skipped += 1;
+      continue;
+    }
+
+    const matchedProduct = byId.get(idKey) || byCategoryModel.get(categoryModelKey);
+    const targetDocId = matchedProduct?.docId || data.id;
+
+    if (processedDocIds.has(targetDocId)) {
+      result.skipped += 1;
+      continue;
+    }
+
+    processedDocIds.add(targetDocId);
+
+    try {
+      await setDoc(doc(db, "products", targetDocId), {
+        ...data,
+        updatedAt: serverTimestamp()
+      }, { merge: true });
+
+      if (matchedProduct) {
+        result.updated += 1;
+      } else {
+        result.created += 1;
+        byId.set(idKey, { docId: targetDocId, ...data });
+        byCategoryModel.set(categoryModelKey, { docId: targetDocId, ...data });
+      }
+    } catch (error) {
+      console.error("No se pudo sincronizar producto", data.id, error);
+      result.errors += 1;
+    }
+  }
+
+  await loadProducts();
+  setStatus(
+    adminStatus,
+    `Sincronizacion terminada. updated: ${result.updated}, created: ${result.created}, skipped: ${result.skipped}, errors: ${result.errors}.`,
+    result.errors ? "error" : "ok"
+  );
+}
+
 async function setAllProductsActive(active) {
   if (!currentProducts.length) {
     setStatus(adminStatus, "No hay productos para actualizar.", "error");
@@ -497,6 +626,16 @@ importRealButton.addEventListener("click", async () => {
     await importRealHaodeProducts();
   } catch (error) {
     setStatus(adminStatus, `No se pudo importar catalogo HAODE: ${error.message}`, "error");
+  }
+});
+syncCorrectedPricesButton.addEventListener("click", async () => {
+  try {
+    syncCorrectedPricesButton.disabled = true;
+    await syncCorrectedPricesToFirestore();
+  } catch (error) {
+    setStatus(adminStatus, `No se pudo sincronizar precios: ${error.message}`, "error");
+  } finally {
+    syncCorrectedPricesButton.disabled = false;
   }
 });
 bulkActiveButton.addEventListener("click", async () => {
