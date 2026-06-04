@@ -1,4 +1,7 @@
+import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
+
 const WHATSAPP_NUMBER = "523326684296";
+const PRODUCTS_JSON_URL = "/haode-web/app/products.json";
 
 const categories = [
   { id: "pantallas", label: "Pantallas" },
@@ -7,112 +10,13 @@ const categories = [
   { id: "fundas", label: "Fundas" }
 ];
 
-const products = [
-  {
-    id: "iphone-11-incell",
-    category: "pantallas",
-    name: "Pantalla para iPhone 11",
-    model: "iPhone 11 INCELL FHD",
-    publicPrice: 180,
-    wholesalePrice: 170,
-    image: "/haode-web/assets/products/iphone-incell/11/main.jpg"
-  },
-  {
-    id: "iphone-13-incell",
-    category: "pantallas",
-    name: "Pantalla para iPhone 13",
-    model: "iPhone 13 INCELL FHD",
-    publicPrice: 350,
-    wholesalePrice: 320,
-    image: "/haode-web/assets/products/iphone-incell/13/main.jpg"
-  },
-  {
-    id: "samsung-s23-ultra-incell",
-    category: "pantallas",
-    name: "Pantalla Samsung S23 Ultra",
-    model: "S23 Ultra INCELL",
-    publicPrice: 800,
-    wholesalePrice: 680,
-    image: "/haode-web/assets/products/samsung-incell/s23-ultra/main.jpg"
-  },
-  {
-    id: "micas-hd-clear",
-    category: "micas",
-    name: "Micas HD Clear",
-    model: "Paquete 50 piezas",
-    publicPrice: 450,
-    wholesalePrice: 375,
-    image: "/haode-web/assets/products/micas-hd-clear/main.png"
-  },
-  {
-    id: "micas-mate",
-    category: "micas",
-    name: "Micas Mate",
-    model: "Peliculas para corte",
-    publicPrice: 450,
-    wholesalePrice: 375,
-    image: "/haode-web/assets/products/home-cut-machine/micas-mate.svg"
-  },
-  {
-    id: "micas-privacidad",
-    category: "micas",
-    name: "Micas Privacidad",
-    model: "Peliculas privacy",
-    publicPrice: 500,
-    wholesalePrice: 420,
-    image: "/haode-web/assets/products/home-cut-machine/micas-privacidad.svg"
-  },
-  {
-    id: "w630-ai-pro",
-    category: "gafas-ai",
-    name: "W630 AI PRO",
-    model: "Gafas AI blancas",
-    publicPrice: 1900,
-    wholesalePrice: 1600,
-    image: "/haode-web/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg"
-  },
-  {
-    id: "aimb-g5-ai-sports",
-    category: "gafas-ai",
-    name: "AIMB-G5 AI SPORTS",
-    model: "Gafas AI deportivas",
-    publicPrice: 1800,
-    wholesalePrice: 1400,
-    image: "/haode-web/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg"
-  },
-  {
-    id: "s1-ai-classic",
-    category: "gafas-ai",
-    name: "HAODE AI CLASSIC S1",
-    model: "Gafas AI classic",
-    publicPrice: 1500,
-    wholesalePrice: 1200,
-    image: "/haode-web/assets/products/productos-ai/s1-ai-classic/main.png"
-  },
-  {
-    id: "funda-premium-17-pro-max",
-    category: "fundas",
-    name: "Funda Premium Aluminio",
-    model: "Estilo iPhone 17 Pro Max",
-    publicPrice: 85,
-    wholesalePrice: 75,
-    image: "/haode-web/assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/main.jpg"
-  },
-  {
-    id: "funda-magnetica-17-pro-max",
-    category: "fundas",
-    name: "Funda Magnetica",
-    model: "Estilo iPhone 17 Pro Max",
-    publicPrice: 100,
-    wholesalePrice: 90,
-    image: "/haode-web/assets/products/fundas/funda-magnetica-estilo-iphone-17-pro-max/azul-silicon.jpg"
-  }
-];
+let products = [];
 
 const state = {
   activeCategory: categories[0].id,
   priceMode: "public",
-  cart: new Map()
+  cart: new Map(),
+  dataSource: "Cargando"
 };
 
 const money = new Intl.NumberFormat("es-MX", {
@@ -131,12 +35,83 @@ const cartTotalEl = document.querySelector("[data-cart-total]");
 const whatsappLinkEl = document.querySelector("[data-whatsapp-link]");
 const cartCountEls = document.querySelectorAll("[data-cart-count], [data-cart-count-bottom]");
 
+function normalizeProduct(product) {
+  return {
+    id: String(product.id || "").trim(),
+    category: product.categoria || product.category || "pantallas",
+    name: product.nombre || product.name || "Producto HAODE",
+    model: product.modelo || product.model || "Consultar modelo",
+    description: product.descripcion || product.description || "",
+    publicPrice: Number(product.precioPublico ?? product.publicPrice ?? 0),
+    wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
+    image: product.imagen || product.image || "/haode-web/assets/products/placeholder.svg",
+    stock: product.stock || "Consultar",
+    active: product.activo !== false,
+    order: Number(product.orden ?? product.order ?? 9999)
+  };
+}
+
+function activeProducts(items) {
+  return items
+    .map(normalizeProduct)
+    .filter((product) => product.id && product.active)
+    .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"));
+}
+
+async function loadFirestoreProducts() {
+  if (!isFirebaseConfigured()) {
+    throw new Error("Firebase no configurado");
+  }
+
+  const [{ initializeApp }, firestore] = await Promise.all([
+    import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"),
+    import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js")
+  ]);
+  const { getFirestore, collection, getDocs, query, where } = firestore;
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const productsQuery = query(
+    collection(db, "products"),
+    where("activo", "==", true)
+  );
+  const snapshot = await getDocs(productsQuery);
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+}
+
+async function loadLocalProducts() {
+  const response = await fetch(PRODUCTS_JSON_URL, { cache: "no-store" });
+
+  if (!response.ok) {
+    throw new Error(`No se pudo cargar products.json: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+async function loadProducts() {
+  try {
+    const firestoreProducts = await loadFirestoreProducts();
+    products = activeProducts(firestoreProducts);
+    state.dataSource = "Firestore";
+  } catch (error) {
+    console.info("HAODE app usando products.json fallback:", error.message);
+    const localProducts = await loadLocalProducts();
+    products = activeProducts(localProducts);
+    state.dataSource = "products.json";
+  }
+
+  if (!products.some((product) => product.category === state.activeCategory)) {
+    state.activeCategory = products[0]?.category || categories[0].id;
+  }
+}
+
 function priceFor(product) {
   return state.priceMode === "wholesale" ? product.wholesalePrice : product.publicPrice;
 }
 
 function formatPrice(value) {
-  return `${money.format(value)} MXN`;
+  return `${money.format(Number(value) || 0)} MXN`;
 }
 
 function renderCategories() {
@@ -148,10 +123,20 @@ function renderCategories() {
     .join("");
 }
 
+function productStockMarkup(product) {
+  return product.stock ? `<span class="stock-badge">${product.stock}</span>` : "";
+}
+
 function renderProducts() {
   const visibleProducts = products.filter((product) => product.category === state.activeCategory);
 
   productCountEl.textContent = `${visibleProducts.length} productos`;
+
+  if (!visibleProducts.length) {
+    productGridEl.innerHTML = '<div class="empty-cart">No hay productos activos en esta categoria.</div>';
+    return;
+  }
+
   productGridEl.innerHTML = visibleProducts
     .map((product) => {
       return `
@@ -160,7 +145,10 @@ function renderProducts() {
             <img src="${product.image}" alt="${product.name}" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>${product.name}</h3>
+            <div class="product-title-row">
+              <h3>${product.name}</h3>
+              ${productStockMarkup(product)}
+            </div>
             <p class="model">Modelo: ${product.model}</p>
             <div class="price-lines">
               <span>Precio publico <strong>${formatPrice(product.publicPrice)}</strong></span>
@@ -329,6 +317,17 @@ priceModeEl.addEventListener("change", (event) => {
   renderCart();
 });
 
-renderCategories();
-renderProducts();
-renderCart();
+async function init() {
+  renderCategories();
+  productGridEl.innerHTML = '<div class="empty-cart">Cargando productos HAODE...</div>';
+  renderCart();
+  await loadProducts();
+  renderCategories();
+  renderProducts();
+  renderCart();
+}
+
+init().catch((error) => {
+  console.error("No se pudo iniciar HAODE app:", error);
+  productGridEl.innerHTML = '<div class="empty-cart">No se pudieron cargar los productos. Intenta de nuevo por WhatsApp.</div>';
+});

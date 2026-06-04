@@ -306,6 +306,21 @@ a {
   overflow-wrap: anywhere;
 }
 
+.product-title-row {
+  display: grid;
+  gap: 6px;
+}
+
+.stock-badge {
+  justify-self: start;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--orange-soft);
+  color: var(--orange-dark);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
 .model {
   margin: 5px 0 8px;
   color: var(--muted);

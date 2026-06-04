@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#ff7a1a" />
+  <link rel="icon" href="/haode-web/assets/logo/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/haode-web/assets/logo/logo.png" />
+  <link rel="stylesheet" href="/haode-web/app/admin.css" />
+  <title>HAODE Admin | Productos</title>
+</head>
+<body>
+  <header class="admin-header">
+    <a class="brand" href="/haode-web/app/">
+      <img src="/haode-web/assets/logo/logo.png" alt="Logo HAODE" />
+      <span>
+        <strong>HAODE Admin</strong>
+        <small>Productos Firestore</small>
+      </span>
+    </a>
+    <button class="secondary-button" type="button" data-logout hidden>Cerrar sesion</button>
+  </header>
+
+  <main class="admin-shell">
+    <section class="notice" data-config-notice hidden>
+      Firebase todavia no esta configurado. Completa <strong>app/firebase-config.js</strong> para activar login y Firestore.
+    </section>
+
+    <section class="login-panel" data-login-panel>
+      <div>
+        <p class="eyebrow">Acceso administrador</p>
+        <h1>Inicia sesion con correo autorizado</h1>
+        <p>Solo administradores autorizados por Firestore rules pueden escribir productos.</p>
+      </div>
+      <form class="login-form" data-login-form>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+        <button class="primary-button" type="submit">Entrar</button>
+      </form>
+      <p class="status-text" data-login-status></p>
+    </section>
+
+    <section class="admin-grid" data-admin-panel hidden>
+      <form class="product-form" data-product-form>
+        <div class="form-head">
+          <div>
+            <p class="eyebrow">Producto</p>
+            <h2 data-form-title>Nuevo producto</h2>
+          </div>
+          <button class="secondary-button" type="button" data-new-product>Limpiar</button>
+        </div>
+
+        <input type="hidden" name="docId" />
+
+        <label>
+          ID
+          <input name="id" placeholder="iphone-11-incell" required />
+        </label>
+        <label>
+          Categoria
+          <select name="categoria" required>
+            <option value="pantallas">Pantallas</option>
+            <option value="micas">Micas</option>
+            <option value="gafas-ai">Gafas AI</option>
+            <option value="fundas">Fundas</option>
+          </select>
+        </label>
+        <label>
+          Nombre
+          <input name="nombre" placeholder="Pantalla para iPhone 11" required />
+        </label>
+        <label>
+          Modelo
+          <input name="modelo" placeholder="iPhone 11 INCELL FHD" required />
+        </label>
+        <label class="wide">
+          Descripcion
+          <textarea name="descripcion" rows="3" placeholder="Descripcion breve para el catalogo"></textarea>
+        </label>
+        <label>
+          Precio publico
+          <input name="precioPublico" type="number" min="0" step="1" required />
+        </label>
+        <label>
+          Precio mayoreo
+          <input name="precioMayoreo" type="number" min="0" step="1" required />
+        </label>
+        <label class="wide">
+          Imagen URL
+          <input name="imagen" placeholder="/haode-web/assets/products/..." required />
+        </label>
+        <label>
+          Stock
+          <input name="stock" placeholder="Disponible" />
+        </label>
+        <label>
+          Orden
+          <input name="orden" type="number" step="1" value="100" />
+        </label>
+        <label class="toggle-row">
+          <input name="activo" type="checkbox" checked />
+          Producto activo
+        </label>
+
+        <button class="primary-button wide" type="submit">Guardar producto</button>
+        <p class="status-text wide" data-form-status></p>
+      </form>
+
+      <section class="products-panel">
+        <div class="list-head">
+          <div>
+            <p class="eyebrow">Firestore</p>
+            <h2>Productos</h2>
+          </div>
+          <button class="secondary-button" type="button" data-refresh>Actualizar</button>
+        </div>
+        <div class="product-list" data-admin-products></div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="/haode-web/app/admin.js"></script>
+</body>
+</html>
