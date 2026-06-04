@@ -18,6 +18,69 @@ let db;
 let firebaseReady = false;
 let currentProducts = [];
 
+const sampleProducts = [
+  {
+    docId: "iphone-oled-sample",
+    data: {
+      categoria: "pantallas",
+      nombre: "iPhone OLED",
+      modelo: "Serie iPhone OLED",
+      descripcion: "Pantalla OLED para modelos iPhone seleccionados. Producto de ejemplo para iniciar Firestore.",
+      precioPublico: 850,
+      precioMayoreo: 720,
+      imagen: "/haode-web/assets/products/iphone-oled/main.jpg",
+      stock: "disponible",
+      activo: true,
+      orden: 1
+    }
+  },
+  {
+    docId: "iphone-incell-sample",
+    data: {
+      categoria: "pantallas",
+      nombre: "iPhone INCELL",
+      modelo: "Serie iPhone INCELL FHD",
+      descripcion: "Pantalla INCELL para reparacion y mayoreo. Producto de ejemplo para iniciar Firestore.",
+      precioPublico: 350,
+      precioMayoreo: 300,
+      imagen: "/haode-web/assets/products/iphone-incell/main.jpg",
+      stock: "disponible",
+      activo: true,
+      orden: 2
+    }
+  },
+  {
+    docId: "samsung-amoled-sample",
+    data: {
+      categoria: "pantallas",
+      nombre: "Samsung AMOLED",
+      modelo: "Serie Samsung AMOLED",
+      descripcion: "Pantalla AMOLED Samsung para talleres y distribuidores. Producto de ejemplo para iniciar Firestore.",
+      precioPublico: 1200,
+      precioMayoreo: 980,
+      imagen: "/haode-web/assets/products/samsung-oled/main.jpg",
+      stock: "disponible",
+      activo: true,
+      orden: 3
+    }
+  },
+  {
+    docId: "samsung-incell-sample",
+    data: {
+      categoria: "pantallas",
+      nombre: "Samsung INCELL",
+      modelo: "Serie Samsung INCELL",
+      descripcion: "Pantalla Samsung INCELL para rotacion de taller. Producto de ejemplo para iniciar Firestore.",
+      precioPublico: 650,
+      precioMayoreo: 560,
+      imagen: "/haode-web/assets/products/samsung-incell/main.jpg",
+      stock: "disponible",
+      activo: true,
+      orden: 4
+    }
+  }
+];
+
 function setStatus(element, message, type = "") {
   element.textContent = message;
   element.className = `status-text ${type}`.trim();
@@ -61,6 +124,7 @@ async function setupFirebase() {
 
     showAdmin();
     await loadProducts();
+    await seedSampleProductsIfEmpty();
   });
 }
 
@@ -94,7 +158,7 @@ function productFromForm() {
       stock: String(formData.get("stock") || "Consultar").trim(),
       activo: formData.get("activo") === "on",
       orden: Number(formData.get("orden") || 9999),
-      updatedAt: new Date().toISOString()
+      updatedAt: window.HAODE_FIREBASE.firestoreModule.serverTimestamp()
     }
   };
 }
@@ -175,6 +239,26 @@ async function loadProducts() {
   renderProducts();
 }
 
+async function seedSampleProductsIfEmpty() {
+  if (currentProducts.length) {
+    return;
+  }
+
+  const { doc, serverTimestamp, writeBatch } = window.HAODE_FIREBASE.firestoreModule;
+  const batch = writeBatch(db);
+
+  sampleProducts.forEach((product) => {
+    batch.set(doc(db, "products", product.docId), {
+      ...product.data,
+      updatedAt: serverTimestamp()
+    }, { merge: true });
+  });
+
+  productList.innerHTML = '<div class="admin-card"><p>Creando productos de ejemplo...</p></div>';
+  await batch.commit();
+  await loadProducts();
+}
+
 loginForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -236,7 +320,7 @@ productList.addEventListener("click", async (event) => {
     if (product) {
       await updateDoc(doc(db, "products", product.docId), {
         activo: product.activo === false,
-        updatedAt: new Date().toISOString()
+        updatedAt: window.HAODE_FIREBASE.firestoreModule.serverTimestamp()
       });
       await loadProducts();
     }

@@ -92,6 +92,9 @@ async function loadLocalProducts() {
 async function loadProducts() {
   try {
     const firestoreProducts = await loadFirestoreProducts();
+    if (!firestoreProducts.length) {
+      throw new Error("Firestore sin productos activos");
+    }
     products = activeProducts(firestoreProducts);
     state.dataSource = "Firestore";
   } catch (error) {

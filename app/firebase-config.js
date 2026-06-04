@@ -1,12 +1,14 @@
 export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  appId: ""
+  apiKey: "AIzaSyDSDQVR_spJjvJxIpLa4k6tqoDoRhTfpPw",
+  authDomain: "haode-app.firebaseapp.com",
+  projectId: "haode-app",
+  storageBucket: "haode-app.firebasestorage.app",
+  messagingSenderId: "811262279914",
+  appId: "1:811262279914:web:5708f82d50add4a0541793"
 };
 
 export const firebaseAdminEmails = [
-  "admin@haode.mx"
+  "cristi3an@gmail.com"
 ];
 
 export function isFirebaseConfigured() {
