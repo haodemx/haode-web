@@ -18,6 +18,7 @@ const syncSamplesButton = document.querySelector("[data-sync-samples]");
 const importJsonButton = document.querySelector("[data-import-json]");
 const importRealButton = document.querySelector("[data-import-real]");
 const syncCorrectedPricesButton = document.querySelector("[data-sync-corrected-prices]");
+const deleteSeedProductsButton = document.querySelector("[data-delete-seed-products]");
 const bulkActiveButton = document.querySelector("[data-bulk-active]");
 const bulkInactiveButton = document.querySelector("[data-bulk-inactive]");
 const totalProductsStat = document.querySelector("[data-stat-total]");
@@ -30,6 +31,18 @@ let db;
 let firebaseReady = false;
 let currentProducts = [];
 const defaultCategory = "Pantallas iPhone OLED";
+const seedProductNames = new Set([
+  "iphone oled",
+  "iphone incell",
+  "samsung amoled",
+  "samsung incell"
+]);
+const seedDescriptionParts = [
+  "serie iphone oled",
+  "serie iphone incell fhd",
+  "serie samsung amoled",
+  "serie samsung incell"
+];
 
 const sampleProducts = [
   {
@@ -161,6 +174,16 @@ function requireAdminSession() {
   }
 
   return user;
+}
+
+function isSeedProduct(product) {
+  const name = normalizeKey(product.nombre);
+  const model = String(product.modelo || "").trim();
+  const description = normalizeKey(product.descripcion);
+
+  return seedProductNames.has(name)
+    || !model
+    || seedDescriptionParts.some((part) => description.includes(part));
 }
 
 async function setupFirebase() {
@@ -515,6 +538,42 @@ async function syncCorrectedPricesToFirestore() {
   );
 }
 
+async function deleteSeedProducts() {
+  requireAdminSession();
+
+  setStatus(adminStatus, "Buscando productos de prueba...");
+  await loadProducts();
+
+  const seedProducts = currentProducts.filter(isSeedProduct);
+
+  if (!seedProducts.length) {
+    const categories = new Set(currentProducts.map((product) => String(product.categoria || "").trim()).filter(Boolean));
+    setStatus(adminStatus, `No se encontraron productos de prueba. Eliminados: 0, restantes: ${currentProducts.length}, categorias: ${categories.size}.`, "ok");
+    return;
+  }
+
+  const confirmed = window.confirm(`Se eliminaran ${seedProducts.length} productos de prueba de Firestore. ¿Continuar?`);
+
+  if (!confirmed) {
+    setStatus(adminStatus, "Eliminacion cancelada.");
+    return;
+  }
+
+  const { doc, writeBatch } = window.HAODE_FIREBASE.firestoreModule;
+  const batch = writeBatch(db);
+
+  seedProducts.forEach((product) => {
+    batch.delete(doc(db, "products", product.docId));
+  });
+
+  setStatus(adminStatus, `Eliminando ${seedProducts.length} productos de prueba...`);
+  await batch.commit();
+  await loadProducts();
+
+  const categories = new Set(currentProducts.map((product) => String(product.categoria || "").trim()).filter(Boolean));
+  setStatus(adminStatus, `Eliminados: ${seedProducts.length}, restantes: ${currentProducts.length}, categorias: ${categories.size}.`, "ok");
+}
+
 async function setAllProductsActive(active) {
   if (!currentProducts.length) {
     setStatus(adminStatus, "No hay productos para actualizar.", "error");
@@ -636,6 +695,16 @@ syncCorrectedPricesButton.addEventListener("click", async () => {
     setStatus(adminStatus, `No se pudo sincronizar precios: ${error.message}`, "error");
   } finally {
     syncCorrectedPricesButton.disabled = false;
+  }
+});
+deleteSeedProductsButton.addEventListener("click", async () => {
+  try {
+    deleteSeedProductsButton.disabled = true;
+    await deleteSeedProducts();
+  } catch (error) {
+    setStatus(adminStatus, `No se pudieron eliminar productos de prueba: ${error.message}`, "error");
+  } finally {
+    deleteSeedProductsButton.disabled = false;
   }
 });
 bulkActiveButton.addEventListener("click", async () => {
