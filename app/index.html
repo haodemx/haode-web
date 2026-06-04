@@ -49,8 +49,8 @@
     <section class="toolbar" aria-label="Filtros de productos">
       <div class="category-tabs" data-categories></div>
       <label class="search-box">
-        <span>Buscar modelo</span>
-        <input type="search" data-search-products placeholder="iPhone 13, S23 Ultra..." autocomplete="off" />
+        <span>Buscar</span>
+        <input type="search" data-search-products placeholder="iPhone 13, S23 Ultra, AI..." autocomplete="off" />
       </label>
       <label class="price-mode">
         <span>Precio para total</span>
@@ -64,12 +64,34 @@
     <section class="products-section" aria-labelledby="products-title">
       <div class="section-title">
         <div>
-          <p>Catalogo MVP</p>
-          <h2 id="products-title">Productos destacados</h2>
+          <p>Catalogo</p>
+          <h2 id="products-title">Productos</h2>
         </div>
         <span data-product-count>0 productos</span>
       </div>
       <div class="product-grid" data-product-grid></div>
+    </section>
+
+    <section class="products-section" data-latest-section>
+      <div class="section-title">
+        <div>
+          <p>Ultimos lanzamientos</p>
+          <h2>Nuevos productos</h2>
+        </div>
+        <span>8 más recientes</span>
+      </div>
+      <div class="product-grid" data-latest-products></div>
+    </section>
+
+    <section class="products-section" data-featured-section>
+      <div class="section-title">
+        <div>
+          <p>Selección HAODE</p>
+          <h2>Destacados HAODE</h2>
+        </div>
+        <span>AI, cortadora, fundas y pantallas</span>
+      </div>
+      <div class="product-grid" data-featured-products></div>
     </section>
   </main>
 
@@ -84,6 +106,25 @@
       </div>
 
       <div class="cart-items" data-cart-items></div>
+
+      <form class="checkout-form" data-checkout-form>
+        <label>
+          Nombre
+          <input type="text" data-customer-name placeholder="Nombre completo" autocomplete="name" required />
+        </label>
+        <label>
+          Teléfono
+          <input type="tel" data-customer-phone placeholder="55 1234 5678" autocomplete="tel" required />
+        </label>
+        <label>
+          Ciudad
+          <input type="text" data-customer-city placeholder="Ciudad" autocomplete="address-level2" required />
+        </label>
+        <label>
+          Comentario
+          <textarea data-customer-comment placeholder="Detalles adicionales para el pedido"></textarea>
+        </label>
+      </form>
 
       <div class="cart-footer">
         <div class="cart-total">

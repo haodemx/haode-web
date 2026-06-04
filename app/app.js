@@ -32,6 +32,10 @@ const money = new Intl.NumberFormat("es-MX", {
 
 const categoryEl = document.querySelector("[data-categories]");
 const productGridEl = document.querySelector("[data-product-grid]");
+const latestGridEl = document.querySelector("[data-latest-products]");
+const featuredGridEl = document.querySelector("[data-featured-products]");
+const latestSectionEl = document.querySelector("[data-latest-section]");
+const featuredSectionEl = document.querySelector("[data-featured-section]");
 const productCountEl = document.querySelector("[data-product-count]");
 const priceModeEl = document.querySelector("[data-price-mode]");
 const searchProductsEl = document.querySelector("[data-search-products]");
@@ -39,7 +43,12 @@ const cartDrawerEl = document.querySelector("[data-cart-drawer]");
 const cartItemsEl = document.querySelector("[data-cart-items]");
 const cartTotalEl = document.querySelector("[data-cart-total]");
 const whatsappLinkEl = document.querySelector("[data-whatsapp-link]");
+const customerNameEl = document.querySelector("[data-customer-name]");
+const customerPhoneEl = document.querySelector("[data-customer-phone]");
+const customerCityEl = document.querySelector("[data-customer-city]");
+const customerCommentEl = document.querySelector("[data-customer-comment]");
 const cartCountEls = document.querySelectorAll("[data-cart-count], [data-cart-count-bottom]");
+const checkoutInputs = [customerNameEl, customerPhoneEl, customerCityEl, customerCommentEl];
 
 function normalizeProduct(product) {
   return {
@@ -154,45 +163,89 @@ function productStockMarkup(product) {
   return `<span class="stock-badge stock-${product.stock.replace(" ", "-")}">${product.stock}</span>`;
 }
 
+function productCardHtml(product) {
+  return `
+    <article class="product-card">
+      <div class="product-media">
+        <img src="${product.image}" alt="${product.name}" loading="lazy" />
+      </div>
+      <div class="product-info">
+        <div class="product-title-row">
+          <h3>${product.name}</h3>
+          ${productStockMarkup(product)}
+        </div>
+        <p class="model">Modelo: ${product.model}</p>
+        <div class="price-lines">
+          <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
+          <span>Precio mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
+        </div>
+        <div class="product-description" data-product-description="${product.id}" hidden>
+          <p>${product.description || "Sin detalles adicionales disponibles."}</p>
+        </div>
+        <div class="product-actions">
+          <button class="text-button" type="button" data-show-details="${product.id}">Ver detalles</button>
+          <button class="outline-button" type="button" data-add-wholesale="${product.id}">Solicitar mayoreo</button>
+          <button class="add-button" type="button" data-add-product="${product.id}">Agregar al carrito</button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderProductSections() {
+  const query = state.searchQuery.trim().toLowerCase();
+  const latestProducts = products
+    .slice()
+    .sort((a, b) => b.order - a.order || b.id.localeCompare(a.id))
+    .slice(0, 8);
+  const featuredScreens = products
+    .filter((product) => product.category.includes("Pantallas"))
+    .sort((a, b) => a.order - b.order)
+    .slice(0, 4);
+  const featuredAi = products
+    .filter((product) => product.category === "Gafas AI")
+    .slice(0, 1);
+  const featuredMachine = products
+    .filter((product) => product.category === "Máquinas de Mica")
+    .slice(0, 1);
+  const featuredCase = products
+    .filter((product) => product.category === "Fundas")
+    .slice(0, 1);
+
+  const featuredProducts = [...featuredAi, ...featuredMachine, ...featuredCase, ...featuredScreens];
+  const uniqueProducts = new Map();
+  featuredProducts.forEach((product) => uniqueProducts.set(product.id, product));
+
+  const hideSection = Boolean(query);
+  latestSectionEl.hidden = hideSection;
+  featuredSectionEl.hidden = hideSection;
+
+  if (!query) {
+    latestGridEl.innerHTML = latestProducts.length
+      ? latestProducts.map(productCardHtml).join("")
+      : '<div class="empty-cart">Aún no hay lanzamientos nuevos.</div>';
+    featuredGridEl.innerHTML = uniqueProducts.size
+      ? Array.from(uniqueProducts.values()).map(productCardHtml).join("")
+      : '<div class="empty-cart">Aún no hay destacados activos.</div>';
+  }
+}
+
 function renderProducts() {
   const query = state.searchQuery.trim().toLowerCase();
   const visibleProducts = products.filter((product) => {
     const matchesCategory = query ? true : product.category === state.activeCategory;
     const matchesSearch = !query || [product.name, product.model, product.description]
+      .concat(product.category)
       .some((value) => String(value || "").toLowerCase().includes(query));
     return matchesCategory && matchesSearch;
   });
 
   productCountEl.textContent = `${visibleProducts.length} productos`;
+  productGridEl.innerHTML = visibleProducts.length
+    ? visibleProducts.map(productCardHtml).join("")
+    : '<div class="empty-cart">No hay productos activos para esta busqueda.</div>';
 
-  if (!visibleProducts.length) {
-    productGridEl.innerHTML = '<div class="empty-cart">No hay productos activos para esta busqueda.</div>';
-    return;
-  }
-
-  productGridEl.innerHTML = visibleProducts
-    .map((product) => {
-      return `
-        <article class="product-card">
-          <div class="product-media">
-            <img src="${product.image}" alt="${product.name}" loading="lazy" />
-          </div>
-          <div class="product-info">
-            <div class="product-title-row">
-              <h3>${product.name}</h3>
-              ${productStockMarkup(product)}
-            </div>
-            <p class="model">Modelo: ${product.model}</p>
-            <div class="price-lines">
-              <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
-              <span>Precio mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
-            </div>
-            <button class="add-button" type="button" data-add-product="${product.id}">Agregar</button>
-          </div>
-        </article>
-      `;
-    })
-    .join("");
+  renderProductSections();
 }
 
 function getCartItems() {
@@ -213,15 +266,28 @@ function cartCount() {
 function buildWhatsappUrl() {
   const items = getCartItems();
   const priceLabel = state.priceMode === "wholesale" ? "mayoreo" : "publico";
+  const clientName = (customerNameEl?.value || "").trim();
+  const clientPhone = (customerPhoneEl?.value || "").trim();
+  const clientCity = (customerCityEl?.value || "").trim();
+  const clientComment = (customerCommentEl?.value || "").trim();
+  const priceTypeLabel = state.priceMode === "wholesale" ? "Mayoreo" : "Menudeo";
+
   const lines = [
     "Hola HAODE, quiero hacer este pedido:",
     "",
+    `Cliente: ${clientName || "Sin nombre"}`,
+    `Telefono: ${clientPhone || "Sin telefono"}`,
+    `Ciudad: ${clientCity || "Sin ciudad"}`,
+    `Tipo de precio: ${priceTypeLabel}`,
+    "",
     ...items.map((item) => {
       const subtotal = priceFor(item.product) * item.quantity;
-      return `- ${item.product.name} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Subtotal ${priceLabel}: ${formatPrice(subtotal)}`;
+      return `- ${item.product.name} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Subtotal (${priceLabel}): ${formatPrice(subtotal)}`;
     }),
     "",
-    `Total estimado (${priceLabel}): ${formatPrice(cartTotal())}`,
+    `Total estimado (${priceTypeLabel.toLowerCase()}): ${formatPrice(cartTotal())}`,
+    "",
+    `Comentario: ${clientComment || "Sin comentario"}`,
     "",
     "Por favor confirma disponibilidad, precio final y envio. Entiendo que no hay pago en linea y se confirma por WhatsApp."
   ];
@@ -232,6 +298,11 @@ function buildWhatsappUrl() {
 function renderCart() {
   const items = getCartItems();
   const totalItems = cartCount();
+  const customerReady = [
+    (customerNameEl?.value || "").trim(),
+    (customerPhoneEl?.value || "").trim(),
+    (customerCityEl?.value || "").trim()
+  ].every(Boolean);
 
   cartCountEls.forEach((el) => {
     el.textContent = String(totalItems);
@@ -242,6 +313,7 @@ function renderCart() {
     cartTotalEl.textContent = formatPrice(0);
     whatsappLinkEl.href = "#";
     whatsappLinkEl.classList.add("disabled");
+    whatsappLinkEl.classList.remove("expanded");
     return;
   }
 
@@ -272,11 +344,23 @@ function renderCart() {
     .join("");
 
   cartTotalEl.textContent = formatPrice(cartTotal());
-  whatsappLinkEl.href = buildWhatsappUrl();
-  whatsappLinkEl.classList.remove("disabled");
+
+  whatsappLinkEl.classList.toggle("disabled", !customerReady);
+  whatsappLinkEl.href = customerReady ? buildWhatsappUrl() : "#";
+  whatsappLinkEl.classList.toggle("expanded", customerReady);
 }
 
-function addProduct(productId) {
+function setPriceMode(priceMode) {
+  state.priceMode = priceMode;
+  priceModeEl.value = priceMode;
+  renderCart();
+}
+
+function addProduct(productId, forcedMode = null) {
+  if (forcedMode && state.priceMode !== forcedMode) {
+    setPriceMode(forcedMode);
+  }
+
   state.cart.set(productId, (state.cart.get(productId) || 0) + 1);
   renderCart();
 }
@@ -306,6 +390,8 @@ function closeCart() {
 document.addEventListener("click", (event) => {
   const categoryButton = event.target.closest("[data-category]");
   const addButton = event.target.closest("[data-add-product]");
+  const addWholesaleButton = event.target.closest("[data-add-wholesale]");
+  const detailButton = event.target.closest("[data-show-details]");
   const increaseButton = event.target.closest("[data-increase]");
   const decreaseButton = event.target.closest("[data-decrease]");
   const removeButton = event.target.closest("[data-remove]");
@@ -321,6 +407,26 @@ document.addEventListener("click", (event) => {
   if (addButton) {
     addProduct(addButton.dataset.addProduct);
     openCart();
+  }
+
+  if (addWholesaleButton) {
+    addProduct(addWholesaleButton.dataset.addWholesale, "wholesale");
+    openCart();
+  }
+
+  if (detailButton) {
+    const productId = detailButton.dataset.showDetails;
+    const detailsEl = document.querySelector(`[data-product-description="${productId}"]`);
+    const isHidden = detailsEl?.hasAttribute("hidden");
+    if (detailsEl) {
+      if (isHidden) {
+        detailsEl.removeAttribute("hidden");
+        detailButton.textContent = "Ocultar detalles";
+      } else {
+        detailsEl.setAttribute("hidden", "true");
+        detailButton.textContent = "Ver detalles";
+      }
+    }
   }
 
   if (increaseButton) {
@@ -353,6 +459,10 @@ priceModeEl.addEventListener("change", (event) => {
 searchProductsEl.addEventListener("input", (event) => {
   state.searchQuery = event.target.value;
   renderProducts();
+});
+
+checkoutInputs.forEach((element) => {
+  element.addEventListener("input", renderCart);
 });
 
 async function init() {

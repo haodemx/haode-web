@@ -306,6 +306,7 @@ a {
   display: flex;
   min-width: 0;
   flex-direction: column;
+  gap: 8px;
 }
 
 .product-info h3 {
@@ -353,7 +354,7 @@ a {
 .price-lines {
   display: grid;
   gap: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-size: 0.88rem;
 }
 
@@ -372,8 +373,42 @@ a {
 
 .add-button {
   align-self: flex-start;
-  min-height: 38px;
+  min-height: 42px;
   padding: 0 16px;
+}
+
+.product-description {
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 8px;
+  background: #fff8f1;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.product-description p {
+  margin: 0;
+}
+
+.product-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.text-button,
+.outline-button {
+  min-height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fffaf5;
+  color: var(--orange-dark);
+  font-weight: 860;
+}
+
+.outline-button {
+  border-color: rgba(255, 122, 26, 0.38);
 }
 
 .cart-drawer {
@@ -508,6 +543,38 @@ a {
   font-weight: 850;
 }
 
+.checkout-form {
+  padding: 0 18px 8px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+}
+
+.checkout-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 850;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fffaf5;
+  color: var(--ink);
+  padding: 10px;
+  font: inherit;
+}
+
+.checkout-form textarea {
+  min-height: 56px;
+  resize: vertical;
+}
+
 .cart-footer {
   padding: 14px 18px calc(18px + env(safe-area-inset-bottom));
   border-top: 1px solid var(--line);
@@ -540,7 +607,8 @@ a {
 
 .whatsapp-button {
   display: grid;
-  min-height: 50px;
+  min-height: 58px;
+  font-size: 1rem;
   place-items: center;
   padding: 0 18px;
   text-align: center;
@@ -574,8 +642,10 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 44px;
+  min-height: 52px;
+  font-size: 0.98rem;
   border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(232, 95, 0, 0.22);
   font-weight: 850;
 }
 
@@ -642,6 +712,16 @@ a {
   }
 
   .product-card {
-    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .product-media {
+    min-height: 160px;
+  }
+
+  .add-button,
+  .text-button,
+  .outline-button {
+    min-height: 40px;
   }
 }

@@ -19,6 +19,10 @@ const importJsonButton = document.querySelector("[data-import-json]");
 const importRealButton = document.querySelector("[data-import-real]");
 const bulkActiveButton = document.querySelector("[data-bulk-active]");
 const bulkInactiveButton = document.querySelector("[data-bulk-inactive]");
+const totalProductsStat = document.querySelector("[data-stat-total]");
+const activeProductsStat = document.querySelector("[data-stat-active]");
+const outOfStockProductsStat = document.querySelector("[data-stat-out-of-stock]");
+const categoriesStat = document.querySelector("[data-stat-categories]");
 
 let auth;
 let db;
@@ -237,6 +241,7 @@ function resetForm() {
 
 function renderProducts() {
   if (!currentProducts.length) {
+    updateStats();
     productList.innerHTML = '<div class="admin-card"><p>No hay productos en Firestore.</p></div>';
     return;
   }
@@ -268,6 +273,27 @@ function renderProducts() {
       </article>
     `;
   }).join("");
+
+  updateStats();
+}
+
+function updateStats() {
+  if (!currentProducts.length) {
+    totalProductsStat.textContent = "0";
+    activeProductsStat.textContent = "0";
+    outOfStockProductsStat.textContent = "0";
+    categoriesStat.textContent = "0";
+    return;
+  }
+
+  const activeCount = currentProducts.filter((product) => product.activo !== false).length;
+  const outOfStockCount = currentProducts.filter((product) => (product.stock || "").toLowerCase() === "agotado").length;
+  const categorySet = new Set(currentProducts.map((product) => String(product.categoria || "").trim()).filter(Boolean));
+
+  totalProductsStat.textContent = String(currentProducts.length);
+  activeProductsStat.textContent = String(activeCount);
+  outOfStockProductsStat.textContent = String(outOfStockCount);
+  categoriesStat.textContent = String(categorySet.size);
 }
 
 async function loadProducts() {
