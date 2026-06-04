@@ -31,6 +31,13 @@
         <span>Pedido por WhatsApp</span>
       </div>
     </div>
+    <label class="price-mode price-mode-header" aria-label="Tipo de precio para calcular el total">
+      <span>Precio para total</span>
+      <select data-price-mode aria-label="Tipo de precio para calcular el total">
+        <option value="public">Menudeo</option>
+        <option value="wholesale">Mayoreo</option>
+      </select>
+    </label>
     <button class="cart-pill" type="button" data-open-cart aria-label="Abrir carrito">
       <span>Carrito</span>
       <strong data-cart-count>0</strong>
@@ -52,13 +59,6 @@
         <span>Buscar</span>
         <input type="search" data-search-products placeholder="iPhone 13, S23 Ultra, AI..." autocomplete="off" />
       </label>
-      <label class="price-mode">
-        <span>Precio para total</span>
-        <select data-price-mode aria-label="Tipo de precio para calcular el total">
-          <option value="public">Menudeo</option>
-          <option value="wholesale">Mayoreo</option>
-        </select>
-      </label>
     </section>
 
     <section class="products-section" aria-labelledby="products-title">
@@ -67,7 +67,10 @@
           <p>Catalogo</p>
           <h2 id="products-title">Productos</h2>
         </div>
-        <span data-product-count>0 productos</span>
+        <div class="product-count">
+          <strong data-product-count>0 productos</strong>
+          <span data-total-products>0 productos</span>
+        </div>
       </div>
       <div class="product-grid" data-product-grid></div>
     </section>

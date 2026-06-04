@@ -4,6 +4,7 @@ const WHATSAPP_NUMBER = "523326684296";
 const PRODUCTS_JSON_URL = "/haode-web/app/products.json";
 
 const categories = [
+  { id: "Todos", label: "Todos" },
   { id: "Pantallas iPhone OLED", label: "iPhone OLED" },
   { id: "Pantallas iPhone INCELL", label: "iPhone INCELL" },
   { id: "Pantallas Samsung AMOLED", label: "Samsung AMOLED" },
@@ -21,7 +22,12 @@ const state = {
   priceMode: "public",
   searchQuery: "",
   cart: new Map(),
-  dataSource: "Cargando"
+  dataSource: "Cargando",
+  diagnostics: {
+    firestoreTotal: null,
+    firestoreActive: null,
+    normalizedTotal: 0
+  }
 };
 
 const money = new Intl.NumberFormat("es-MX", {
@@ -37,6 +43,7 @@ const featuredGridEl = document.querySelector("[data-featured-products]");
 const latestSectionEl = document.querySelector("[data-latest-section]");
 const featuredSectionEl = document.querySelector("[data-featured-section]");
 const productCountEl = document.querySelector("[data-product-count]");
+const totalProductsEl = document.querySelector("[data-total-products]");
 const priceModeEl = document.querySelector("[data-price-mode]");
 const searchProductsEl = document.querySelector("[data-search-products]");
 const cartDrawerEl = document.querySelector("[data-cart-drawer]");
@@ -51,8 +58,10 @@ const cartCountEls = document.querySelectorAll("[data-cart-count], [data-cart-co
 const checkoutInputs = [customerNameEl, customerPhoneEl, customerCityEl, customerCommentEl];
 
 function normalizeProduct(product) {
+  const productDocId = String(product.docId || "").trim();
+  const productId = String(product.id || "").trim();
   return {
-    id: String(product.id || "").trim(),
+    id: productId || productDocId,
     category: product.categoria || product.category || categories[0].id,
     name: product.nombre || product.name || "Producto HAODE",
     model: product.modelo || product.model || "Consultar modelo",
@@ -93,20 +102,45 @@ async function loadFirestoreProducts() {
     throw new Error("Firebase no configurado");
   }
 
-  const [{ initializeApp }, firestore] = await Promise.all([
+  const [{ getApp, getApps, initializeApp }, firestore] = await Promise.all([
     import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"),
     import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js")
   ]);
   const { getFirestore, collection, getDocs, query, where } = firestore;
 
-  const app = initializeApp(firebaseConfig);
+  const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
   const db = getFirestore(app);
   const productsQuery = query(
     collection(db, "products"),
     where("activo", "==", true)
   );
   const snapshot = await getDocs(productsQuery);
-  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  return snapshot.docs.map((doc) => ({
+    docId: doc.id,
+    ...doc.data(),
+    id: doc.data().id || doc.id
+  }));
+}
+
+async function loadAllFirestoreProducts() {
+  if (!isFirebaseConfigured()) {
+    throw new Error("Firebase no configurado");
+  }
+
+  const [{ getApp, getApps, initializeApp }, firestore] = await Promise.all([
+    import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"),
+    import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js")
+  ]);
+  const { getFirestore, collection, getDocs } = firestore;
+
+  const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const snapshot = await getDocs(collection(db, "products"));
+  return snapshot.docs.map((doc) => ({
+    docId: doc.id,
+    ...doc.data(),
+    id: doc.data().id || doc.id
+  }));
 }
 
 async function loadLocalProducts() {
@@ -122,6 +156,14 @@ async function loadLocalProducts() {
 async function loadProducts() {
   try {
     const firestoreProducts = await loadFirestoreProducts();
+    try {
+      const allProducts = await loadAllFirestoreProducts();
+      state.diagnostics.firestoreTotal = allProducts.length;
+    } catch {
+      state.diagnostics.firestoreTotal = null;
+    }
+
+    state.diagnostics.firestoreActive = firestoreProducts.length;
     if (!firestoreProducts.length) {
       throw new Error("Firestore sin productos activos");
     }
@@ -134,10 +176,21 @@ async function loadProducts() {
     console.info("HAODE app usando products.json fallback:", error.message);
     const localProducts = await loadLocalProducts();
     products = activeProducts(localProducts);
+    state.diagnostics.firestoreTotal = null;
+    state.diagnostics.firestoreActive = null;
     state.dataSource = "products.json";
   }
 
-  if (!products.some((product) => product.category === state.activeCategory)) {
+  state.diagnostics.normalizedTotal = products.length;
+  window.HAODE_DIAGNOSTICS = {
+    firestoreTotal: state.diagnostics.firestoreTotal,
+    firestoreActivo: state.diagnostics.firestoreActive,
+    productosActivos: state.diagnostics.normalizedTotal,
+    productosVisibles: Math.max(products.length, 0),
+    fuente: state.dataSource
+  };
+
+  if (state.activeCategory !== "Todos" && !products.some((product) => product.category === state.activeCategory)) {
     state.activeCategory = products[0]?.category || categories[0].id;
   }
 }
@@ -233,7 +286,7 @@ function renderProductSections() {
 function renderProducts() {
   const query = state.searchQuery.trim().toLowerCase();
   const visibleProducts = products.filter((product) => {
-    const matchesCategory = query ? true : product.category === state.activeCategory;
+    const matchesCategory = query || state.activeCategory === "Todos" ? true : product.category === state.activeCategory;
     const matchesSearch = !query || [product.name, product.model, product.description]
       .concat(product.category)
       .some((value) => String(value || "").toLowerCase().includes(query));
@@ -241,6 +294,12 @@ function renderProducts() {
   });
 
   productCountEl.textContent = `${visibleProducts.length} productos`;
+  if (totalProductsEl) {
+    totalProductsEl.textContent = `Total productos: ${products.length}`;
+  }
+  if (window.HAODE_DIAGNOSTICS) {
+    window.HAODE_DIAGNOSTICS.productosVisibles = visibleProducts.length;
+  }
   productGridEl.innerHTML = visibleProducts.length
     ? visibleProducts.map(productCardHtml).join("")
     : '<div class="empty-cart">No hay productos activos para esta busqueda.</div>';
