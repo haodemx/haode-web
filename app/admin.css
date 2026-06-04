@@ -92,6 +92,7 @@ a {
 
 .notice,
 .login-panel,
+.ops-panel,
 .product-form,
 .products-panel {
   border: 1px solid var(--line);
@@ -199,8 +200,20 @@ textarea {
 }
 
 .product-form,
+.ops-panel,
 .products-panel {
   padding: 16px;
+}
+
+.ops-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.ops-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .form-head,
@@ -310,6 +323,11 @@ textarea {
   .admin-grid {
     grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr);
     align-items: start;
+  }
+
+  .ops-panel {
+    grid-template-columns: minmax(220px, 1fr) 2fr;
+    align-items: center;
   }
 
   .product-form {

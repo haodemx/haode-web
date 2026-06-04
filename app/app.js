@@ -45,10 +45,20 @@ function normalizeProduct(product) {
     publicPrice: Number(product.precioPublico ?? product.publicPrice ?? 0),
     wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
     image: product.imagen || product.image || "/haode-web/assets/products/placeholder.svg",
-    stock: product.stock || "Consultar",
+    stock: normalizeStock(product.stock),
     active: product.activo !== false,
     order: Number(product.orden ?? product.order ?? 9999)
   };
+}
+
+function normalizeStock(stock) {
+  const value = String(stock || "disponible").trim().toLowerCase();
+
+  if (value === "bajo pedido" || value === "agotado") {
+    return value;
+  }
+
+  return "disponible";
 }
 
 function activeProducts(items) {
@@ -127,7 +137,7 @@ function renderCategories() {
 }
 
 function productStockMarkup(product) {
-  return product.stock ? `<span class="stock-badge">${product.stock}</span>` : "";
+  return `<span class="stock-badge stock-${product.stock.replace(" ", "-")}">${product.stock}</span>`;
 }
 
 function renderProducts() {
@@ -154,7 +164,7 @@ function renderProducts() {
             </div>
             <p class="model">Modelo: ${product.model}</p>
             <div class="price-lines">
-              <span>Precio publico <strong>${formatPrice(product.publicPrice)}</strong></span>
+              <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
               <span>Precio mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
             </div>
             <button class="add-button" type="button" data-add-product="${product.id}">Agregar</button>

@@ -48,6 +48,20 @@
     </section>
 
     <section class="admin-grid" data-admin-panel hidden>
+      <section class="ops-panel wide">
+        <div>
+          <p class="eyebrow">Sesion activa</p>
+          <h2 data-admin-email>Administrador</h2>
+        </div>
+        <div class="ops-actions">
+          <button class="secondary-button" type="button" data-sync-samples>Sincronizar ejemplos</button>
+          <button class="secondary-button" type="button" data-import-json>Importar products.json</button>
+          <button class="secondary-button" type="button" data-bulk-active>Subir todos</button>
+          <button class="danger-button" type="button" data-bulk-inactive>Bajar todos</button>
+        </div>
+        <p class="status-text wide" data-admin-status></p>
+      </section>
+
       <form class="product-form" data-product-form>
         <div class="form-head">
           <div>
@@ -98,7 +112,11 @@
         </label>
         <label>
           Stock
-          <input name="stock" placeholder="Disponible" />
+          <select name="stock">
+            <option value="disponible">disponible</option>
+            <option value="bajo pedido">bajo pedido</option>
+            <option value="agotado">agotado</option>
+          </select>
         </label>
         <label>
           Orden

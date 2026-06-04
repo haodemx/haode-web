@@ -315,10 +315,23 @@ a {
   justify-self: start;
   padding: 4px 8px;
   border-radius: 999px;
-  background: var(--orange-soft);
-  color: var(--orange-dark);
   font-size: 0.72rem;
   font-weight: 900;
+}
+
+.stock-disponible {
+  background: #e9f8ef;
+  color: #067647;
+}
+
+.stock-bajo-pedido {
+  background: var(--orange-soft);
+  color: var(--orange-dark);
+}
+
+.stock-agotado {
+  background: #f2f4f7;
+  color: var(--muted);
 }
 
 .model {

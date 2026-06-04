@@ -12,6 +12,12 @@ const formStatus = document.querySelector("[data-form-status]");
 const productList = document.querySelector("[data-admin-products]");
 const refreshButton = document.querySelector("[data-refresh]");
 const newProductButton = document.querySelector("[data-new-product]");
+const adminEmailEl = document.querySelector("[data-admin-email]");
+const adminStatus = document.querySelector("[data-admin-status]");
+const syncSamplesButton = document.querySelector("[data-sync-samples]");
+const importJsonButton = document.querySelector("[data-import-json]");
+const bulkActiveButton = document.querySelector("[data-bulk-active]");
+const bulkInactiveButton = document.querySelector("[data-bulk-inactive]");
 
 let auth;
 let db;
@@ -22,6 +28,7 @@ const sampleProducts = [
   {
     docId: "iphone-oled-sample",
     data: {
+      id: "iphone-oled-sample",
       categoria: "pantallas",
       nombre: "iPhone OLED",
       modelo: "Serie iPhone OLED",
@@ -37,6 +44,7 @@ const sampleProducts = [
   {
     docId: "iphone-incell-sample",
     data: {
+      id: "iphone-incell-sample",
       categoria: "pantallas",
       nombre: "iPhone INCELL",
       modelo: "Serie iPhone INCELL FHD",
@@ -52,6 +60,7 @@ const sampleProducts = [
   {
     docId: "samsung-amoled-sample",
     data: {
+      id: "samsung-amoled-sample",
       categoria: "pantallas",
       nombre: "Samsung AMOLED",
       modelo: "Serie Samsung AMOLED",
@@ -67,6 +76,7 @@ const sampleProducts = [
   {
     docId: "samsung-incell-sample",
     data: {
+      id: "samsung-incell-sample",
       categoria: "pantallas",
       nombre: "Samsung INCELL",
       modelo: "Serie Samsung INCELL",
@@ -84,6 +94,36 @@ const sampleProducts = [
 function setStatus(element, message, type = "") {
   element.textContent = message;
   element.className = `status-text ${type}`.trim();
+}
+
+function normalizeKey(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
+function normalizeStock(stock) {
+  const value = String(stock || "disponible").trim().toLowerCase();
+
+  if (value === "bajo pedido" || value === "agotado") {
+    return value;
+  }
+
+  return "disponible";
+}
+
+function productJsonToFirestore(product, fallbackOrder) {
+  return {
+    id: String(product.id || "").trim(),
+    categoria: product.categoria || product.category || "pantallas",
+    nombre: product.nombre || product.name || "Producto HAODE",
+    modelo: product.modelo || product.model || "Consultar modelo",
+    descripcion: product.descripcion || product.description || "",
+    precioPublico: Number(product.precioPublico ?? product.publicPrice ?? 0),
+    precioMayoreo: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
+    imagen: product.imagen || product.image || "/haode-web/assets/products/placeholder.svg",
+    stock: normalizeStock(product.stock),
+    activo: product.activo !== false,
+    orden: Number(product.orden ?? product.order ?? fallbackOrder)
+  };
 }
 
 function isAllowedAdmin(user) {
@@ -122,7 +162,7 @@ async function setupFirebase() {
       return;
     }
 
-    showAdmin();
+    showAdmin(user);
     await loadProducts();
     await seedSampleProductsIfEmpty();
   });
@@ -132,12 +172,14 @@ function showLogin() {
   loginPanel.hidden = false;
   adminPanel.hidden = true;
   logoutButton.hidden = true;
+  adminEmailEl.textContent = "Administrador";
 }
 
-function showAdmin() {
+function showAdmin(user) {
   loginPanel.hidden = true;
   adminPanel.hidden = false;
   logoutButton.hidden = false;
+  adminEmailEl.textContent = user?.email || "Administrador";
 }
 
 function productFromForm() {
@@ -155,7 +197,7 @@ function productFromForm() {
       precioPublico: Number(formData.get("precioPublico") || 0),
       precioMayoreo: Number(formData.get("precioMayoreo") || 0),
       imagen: String(formData.get("imagen") || "").trim(),
-      stock: String(formData.get("stock") || "Consultar").trim(),
+      stock: normalizeStock(formData.get("stock")),
       activo: formData.get("activo") === "on",
       orden: Number(formData.get("orden") || 9999),
       updatedAt: window.HAODE_FIREBASE.firestoreModule.serverTimestamp()
@@ -173,7 +215,7 @@ function fillForm(product) {
   productForm.elements.precioPublico.value = product.precioPublico ?? 0;
   productForm.elements.precioMayoreo.value = product.precioMayoreo ?? 0;
   productForm.elements.imagen.value = product.imagen || "";
-  productForm.elements.stock.value = product.stock || "";
+  productForm.elements.stock.value = normalizeStock(product.stock);
   productForm.elements.orden.value = product.orden ?? 9999;
   productForm.elements.activo.checked = product.activo !== false;
   formTitle.textContent = "Editar producto";
@@ -244,6 +286,10 @@ async function seedSampleProductsIfEmpty() {
     return;
   }
 
+  await syncSampleProducts();
+}
+
+async function syncSampleProducts() {
   const { doc, serverTimestamp, writeBatch } = window.HAODE_FIREBASE.firestoreModule;
   const batch = writeBatch(db);
 
@@ -254,9 +300,75 @@ async function seedSampleProductsIfEmpty() {
     }, { merge: true });
   });
 
-  productList.innerHTML = '<div class="admin-card"><p>Creando productos de ejemplo...</p></div>';
+  setStatus(adminStatus, "Sincronizando productos de ejemplo...");
   await batch.commit();
   await loadProducts();
+  setStatus(adminStatus, "Productos de ejemplo sincronizados.", "ok");
+}
+
+async function importProductsJson() {
+  const { doc, serverTimestamp, writeBatch } = window.HAODE_FIREBASE.firestoreModule;
+  const response = await fetch("/haode-web/app/products.json", { cache: "no-store" });
+
+  if (!response.ok) {
+    throw new Error(`No se pudo leer products.json: ${response.status}`);
+  }
+
+  const localProducts = await response.json();
+  const existingIds = new Set(currentProducts.map((product) => normalizeKey(product.id || product.docId)));
+  const existingModels = new Set(currentProducts.map((product) => normalizeKey(product.modelo)));
+  const batch = writeBatch(db);
+  let imported = 0;
+
+  localProducts.forEach((product, index) => {
+    const data = productJsonToFirestore(product, index + 100);
+    const idKey = normalizeKey(data.id);
+    const modelKey = normalizeKey(data.modelo);
+
+    if (!data.id || existingIds.has(idKey) || existingModels.has(modelKey)) {
+      return;
+    }
+
+    existingIds.add(idKey);
+    existingModels.add(modelKey);
+    imported += 1;
+    batch.set(doc(db, "products", data.id), {
+      ...data,
+      updatedAt: serverTimestamp()
+    }, { merge: true });
+  });
+
+  if (!imported) {
+    setStatus(adminStatus, "No hay productos nuevos para importar.", "ok");
+    return;
+  }
+
+  setStatus(adminStatus, `Importando ${imported} productos...`);
+  await batch.commit();
+  await loadProducts();
+  setStatus(adminStatus, `${imported} productos importados desde products.json.`, "ok");
+}
+
+async function setAllProductsActive(active) {
+  if (!currentProducts.length) {
+    setStatus(adminStatus, "No hay productos para actualizar.", "error");
+    return;
+  }
+
+  const { doc, serverTimestamp, writeBatch } = window.HAODE_FIREBASE.firestoreModule;
+  const batch = writeBatch(db);
+
+  currentProducts.forEach((product) => {
+    batch.update(doc(db, "products", product.docId), {
+      activo: active,
+      updatedAt: serverTimestamp()
+    });
+  });
+
+  setStatus(adminStatus, active ? "Subiendo productos..." : "Bajando productos...");
+  await batch.commit();
+  await loadProducts();
+  setStatus(adminStatus, active ? "Productos subidos." : "Productos bajados.", "ok");
 }
 
 loginForm.addEventListener("submit", async (event) => {
@@ -329,6 +441,34 @@ productList.addEventListener("click", async (event) => {
 
 refreshButton.addEventListener("click", loadProducts);
 newProductButton.addEventListener("click", resetForm);
+syncSamplesButton.addEventListener("click", async () => {
+  try {
+    await syncSampleProducts();
+  } catch (error) {
+    setStatus(adminStatus, `No se pudo sincronizar: ${error.message}`, "error");
+  }
+});
+importJsonButton.addEventListener("click", async () => {
+  try {
+    await importProductsJson();
+  } catch (error) {
+    setStatus(adminStatus, `No se pudo importar: ${error.message}`, "error");
+  }
+});
+bulkActiveButton.addEventListener("click", async () => {
+  try {
+    await setAllProductsActive(true);
+  } catch (error) {
+    setStatus(adminStatus, `No se pudo subir: ${error.message}`, "error");
+  }
+});
+bulkInactiveButton.addEventListener("click", async () => {
+  try {
+    await setAllProductsActive(false);
+  } catch (error) {
+    setStatus(adminStatus, `No se pudo bajar: ${error.message}`, "error");
+  }
+});
 
 setupFirebase().catch((error) => {
   configNotice.hidden = false;
