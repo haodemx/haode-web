@@ -4,10 +4,14 @@ const WHATSAPP_NUMBER = "523326684296";
 const PRODUCTS_JSON_URL = "/haode-web/app/products.json";
 
 const categories = [
-  { id: "pantallas", label: "Pantallas" },
-  { id: "micas", label: "Micas" },
-  { id: "gafas-ai", label: "Gafas AI" },
-  { id: "fundas", label: "Fundas" }
+  { id: "Pantallas iPhone OLED", label: "iPhone OLED" },
+  { id: "Pantallas iPhone INCELL", label: "iPhone INCELL" },
+  { id: "Pantallas Samsung AMOLED", label: "Samsung AMOLED" },
+  { id: "Pantallas Samsung INCELL", label: "Samsung INCELL" },
+  { id: "Micas", label: "Micas" },
+  { id: "Máquinas de Mica", label: "Máquinas de Mica" },
+  { id: "Gafas AI", label: "Gafas AI" },
+  { id: "Fundas", label: "Fundas" }
 ];
 
 let products = [];
@@ -15,6 +19,7 @@ let products = [];
 const state = {
   activeCategory: categories[0].id,
   priceMode: "public",
+  searchQuery: "",
   cart: new Map(),
   dataSource: "Cargando"
 };
@@ -29,6 +34,7 @@ const categoryEl = document.querySelector("[data-categories]");
 const productGridEl = document.querySelector("[data-product-grid]");
 const productCountEl = document.querySelector("[data-product-count]");
 const priceModeEl = document.querySelector("[data-price-mode]");
+const searchProductsEl = document.querySelector("[data-search-products]");
 const cartDrawerEl = document.querySelector("[data-cart-drawer]");
 const cartItemsEl = document.querySelector("[data-cart-items]");
 const cartTotalEl = document.querySelector("[data-cart-total]");
@@ -38,7 +44,7 @@ const cartCountEls = document.querySelectorAll("[data-cart-count], [data-cart-co
 function normalizeProduct(product) {
   return {
     id: String(product.id || "").trim(),
-    category: product.categoria || product.category || "pantallas",
+    category: product.categoria || product.category || categories[0].id,
     name: product.nombre || product.name || "Producto HAODE",
     model: product.modelo || product.model || "Consultar modelo",
     description: product.descripcion || product.description || "",
@@ -66,6 +72,11 @@ function activeProducts(items) {
     .map(normalizeProduct)
     .filter((product) => product.id && product.active)
     .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"));
+}
+
+function hasRealCatalog(items) {
+  const categoryIds = new Set(categories.map((category) => category.id));
+  return items.some((product) => categoryIds.has(product.categoria || product.category));
 }
 
 async function loadFirestoreProducts() {
@@ -105,6 +116,9 @@ async function loadProducts() {
     if (!firestoreProducts.length) {
       throw new Error("Firestore sin productos activos");
     }
+    if (!hasRealCatalog(firestoreProducts)) {
+      throw new Error("Firestore sin catalogo HAODE real");
+    }
     products = activeProducts(firestoreProducts);
     state.dataSource = "Firestore";
   } catch (error) {
@@ -141,12 +155,18 @@ function productStockMarkup(product) {
 }
 
 function renderProducts() {
-  const visibleProducts = products.filter((product) => product.category === state.activeCategory);
+  const query = state.searchQuery.trim().toLowerCase();
+  const visibleProducts = products.filter((product) => {
+    const matchesCategory = query ? true : product.category === state.activeCategory;
+    const matchesSearch = !query || [product.name, product.model, product.description]
+      .some((value) => String(value || "").toLowerCase().includes(query));
+    return matchesCategory && matchesSearch;
+  });
 
   productCountEl.textContent = `${visibleProducts.length} productos`;
 
   if (!visibleProducts.length) {
-    productGridEl.innerHTML = '<div class="empty-cart">No hay productos activos en esta categoria.</div>';
+    productGridEl.innerHTML = '<div class="empty-cart">No hay productos activos para esta busqueda.</div>';
     return;
   }
 
@@ -328,6 +348,11 @@ document.addEventListener("click", (event) => {
 priceModeEl.addEventListener("change", (event) => {
   state.priceMode = event.target.value;
   renderCart();
+});
+
+searchProductsEl.addEventListener("input", (event) => {
+  state.searchQuery = event.target.value;
+  renderProducts();
 });
 
 async function init() {

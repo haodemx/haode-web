@@ -16,6 +16,7 @@ const adminEmailEl = document.querySelector("[data-admin-email]");
 const adminStatus = document.querySelector("[data-admin-status]");
 const syncSamplesButton = document.querySelector("[data-sync-samples]");
 const importJsonButton = document.querySelector("[data-import-json]");
+const importRealButton = document.querySelector("[data-import-real]");
 const bulkActiveButton = document.querySelector("[data-bulk-active]");
 const bulkInactiveButton = document.querySelector("[data-bulk-inactive]");
 
@@ -23,13 +24,14 @@ let auth;
 let db;
 let firebaseReady = false;
 let currentProducts = [];
+const defaultCategory = "Pantallas iPhone OLED";
 
 const sampleProducts = [
   {
     docId: "iphone-oled-sample",
     data: {
       id: "iphone-oled-sample",
-      categoria: "pantallas",
+      categoria: "Pantallas iPhone OLED",
       nombre: "iPhone OLED",
       modelo: "Serie iPhone OLED",
       descripcion: "Pantalla OLED para modelos iPhone seleccionados. Producto de ejemplo para iniciar Firestore.",
@@ -45,7 +47,7 @@ const sampleProducts = [
     docId: "iphone-incell-sample",
     data: {
       id: "iphone-incell-sample",
-      categoria: "pantallas",
+      categoria: "Pantallas iPhone INCELL",
       nombre: "iPhone INCELL",
       modelo: "Serie iPhone INCELL FHD",
       descripcion: "Pantalla INCELL para reparacion y mayoreo. Producto de ejemplo para iniciar Firestore.",
@@ -61,7 +63,7 @@ const sampleProducts = [
     docId: "samsung-amoled-sample",
     data: {
       id: "samsung-amoled-sample",
-      categoria: "pantallas",
+      categoria: "Pantallas Samsung AMOLED",
       nombre: "Samsung AMOLED",
       modelo: "Serie Samsung AMOLED",
       descripcion: "Pantalla AMOLED Samsung para talleres y distribuidores. Producto de ejemplo para iniciar Firestore.",
@@ -77,7 +79,7 @@ const sampleProducts = [
     docId: "samsung-incell-sample",
     data: {
       id: "samsung-incell-sample",
-      categoria: "pantallas",
+      categoria: "Pantallas Samsung INCELL",
       nombre: "Samsung INCELL",
       modelo: "Serie Samsung INCELL",
       descripcion: "Pantalla Samsung INCELL para rotacion de taller. Producto de ejemplo para iniciar Firestore.",
@@ -113,7 +115,7 @@ function normalizeStock(stock) {
 function productJsonToFirestore(product, fallbackOrder) {
   return {
     id: String(product.id || "").trim(),
-    categoria: product.categoria || product.category || "pantallas",
+    categoria: product.categoria || product.category || defaultCategory,
     nombre: product.nombre || product.name || "Producto HAODE",
     modelo: product.modelo || product.model || "Consultar modelo",
     descripcion: product.descripcion || product.description || "",
@@ -190,7 +192,7 @@ function productFromForm() {
     docId: String(formData.get("docId") || id).trim(),
     data: {
       id,
-      categoria: String(formData.get("categoria") || "pantallas"),
+      categoria: String(formData.get("categoria") || defaultCategory),
       nombre: String(formData.get("nombre") || "").trim(),
       modelo: String(formData.get("modelo") || "").trim(),
       descripcion: String(formData.get("descripcion") || "").trim(),
@@ -208,7 +210,7 @@ function productFromForm() {
 function fillForm(product) {
   productForm.elements.docId.value = product.docId || product.id;
   productForm.elements.id.value = product.id || "";
-  productForm.elements.categoria.value = product.categoria || "pantallas";
+  productForm.elements.categoria.value = product.categoria || defaultCategory;
   productForm.elements.nombre.value = product.nombre || "";
   productForm.elements.modelo.value = product.modelo || "";
   productForm.elements.descripcion.value = product.descripcion || "";
@@ -226,7 +228,7 @@ function fillForm(product) {
 function resetForm() {
   productForm.reset();
   productForm.elements.docId.value = "";
-  productForm.elements.categoria.value = "pantallas";
+  productForm.elements.categoria.value = defaultCategory;
   productForm.elements.activo.checked = true;
   productForm.elements.orden.value = "100";
   formTitle.textContent = "Nuevo producto";
@@ -316,21 +318,25 @@ async function importProductsJson() {
 
   const localProducts = await response.json();
   const existingIds = new Set(currentProducts.map((product) => normalizeKey(product.id || product.docId)));
-  const existingModels = new Set(currentProducts.map((product) => normalizeKey(product.modelo)));
+  const existingDocIds = new Set(currentProducts.map((product) => normalizeKey(product.docId)));
+  const existingKeys = new Set(currentProducts.map((product) => `${normalizeKey(product.categoria)}|${normalizeKey(product.modelo)}`));
   const batch = writeBatch(db);
   let imported = 0;
+  let skipped = 0;
 
   localProducts.forEach((product, index) => {
     const data = productJsonToFirestore(product, index + 100);
     const idKey = normalizeKey(data.id);
-    const modelKey = normalizeKey(data.modelo);
+    const productKey = `${normalizeKey(data.categoria)}|${normalizeKey(data.modelo)}`;
 
-    if (!data.id || existingIds.has(idKey) || existingModels.has(modelKey)) {
+    if (!data.id || existingIds.has(idKey) || existingDocIds.has(idKey) || existingKeys.has(productKey)) {
+      skipped += 1;
       return;
     }
 
     existingIds.add(idKey);
-    existingModels.add(modelKey);
+    existingDocIds.add(idKey);
+    existingKeys.add(productKey);
     imported += 1;
     batch.set(doc(db, "products", data.id), {
       ...data,
@@ -339,14 +345,19 @@ async function importProductsJson() {
   });
 
   if (!imported) {
-    setStatus(adminStatus, "No hay productos nuevos para importar.", "ok");
+    setStatus(adminStatus, `No hay productos nuevos para importar. Omitidos: ${skipped}.`, "ok");
     return;
   }
 
   setStatus(adminStatus, `Importando ${imported} productos...`);
   await batch.commit();
   await loadProducts();
-  setStatus(adminStatus, `${imported} productos importados desde products.json.`, "ok");
+  setStatus(adminStatus, `${imported} productos importados desde products.json. Omitidos: ${skipped}.`, "ok");
+}
+
+async function importRealHaodeProducts() {
+  setStatus(adminStatus, "Importando catalogo real HAODE...");
+  await importProductsJson();
 }
 
 async function setAllProductsActive(active) {
@@ -400,8 +411,8 @@ productForm.addEventListener("submit", async (event) => {
   const { doc, setDoc } = window.HAODE_FIREBASE.firestoreModule;
   const { docId, data } = productFromForm();
 
-  if (!docId || !data.id || !data.nombre || !data.modelo || !data.imagen) {
-    setStatus(formStatus, "Completa ID, nombre, modelo e imagen.", "error");
+  if (!docId || !data.id || !data.nombre || !data.modelo) {
+    setStatus(formStatus, "Completa ID, nombre y modelo.", "error");
     return;
   }
 
@@ -453,6 +464,13 @@ importJsonButton.addEventListener("click", async () => {
     await importProductsJson();
   } catch (error) {
     setStatus(adminStatus, `No se pudo importar: ${error.message}`, "error");
+  }
+});
+importRealButton.addEventListener("click", async () => {
+  try {
+    await importRealHaodeProducts();
+  } catch (error) {
+    setStatus(adminStatus, `No se pudo importar catalogo HAODE: ${error.message}`, "error");
   }
 });
 bulkActiveButton.addEventListener("click", async () => {
