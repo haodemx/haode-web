@@ -2,157 +2,168 @@
 
 ## Company Context
 
-HAODE is a Mexico-based wholesale and retail brand for mobile phone repair shops, technicians, distributors, and local stores.
+公司资料：
+- 品牌：HAODE
+- 地址：Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro, Cuauhtémoc, 06070, Ciudad de México, México
+- 官网：GitHub Pages
+- 主营：Pantallas, Micas, Máquinas de Mica, Productos AI, Fundas
 
-Brand name:
-- HAODE
-
-Official logo:
-- Orange circular H badge
-- Orange uppercase HAODE wordmark
-- CALIDAD PROFESIONAL tagline
-
-Store address:
-- Eje Central Lazaro Cardenas 87, Piso 2, Local 225
-- Colonia Centro, Cuauhtemoc, 06070
-- Ciudad de Mexico, Mexico
-
-Main product categories:
-- Pantallas
-- Micas
-- Maquinas de Mica
-- Productos AI
-- Fundas
+品牌识别：
+- 官方 Logo：橙色圆形 H 徽章 + HAODE 橙色大写 + CALIDAD PROFESIONAL
+- 面向客户：墨西哥手机维修店、技术员、批发商、零售店、分销商
+- 核心业务：手机屏幕、手机膜、切膜机、AI 智能产品、手机壳与配件
 
 ## Global Rules
 
-- Customer-facing website copy must be written in Spanish by default.
-- Reports, execution summaries, and status updates for the owner must be written in simplified Chinese by default.
-- Do not change product prices unless the task explicitly asks for price changes.
-- Do not delete existing products, product data, images, videos, or pages unless the task explicitly asks for removal.
-- Do not break GitHub Pages deployment.
-- Keep links compatible with the current published site structure.
-- Prefer existing site design, file structure, CSS classes, and product data patterns.
-- Before changing shared product data, inspect the current source of truth and confirm the affected pages.
-- After changes, verify the relevant pages load normally on desktop and mobile paths when practical.
+- 客户看到的内容全部用西班牙语。
+- 给老板的报告全部用中文。
+- 未确认产品图，不允许上传。
+- MICA/手机膜图片必须确认真实产品。
+- 不允许乱改价格。
+- 不允许删除已有产品。
+- 修改后必须验证页面。
+- 完成后必须 `git commit` + `git push`，除非任务明确要求不要提交或不要推送。
+- 输出中文报告。
+- 不要破坏 GitHub Pages 部署。
+- 不要把 `file://`、`/Users/mac`、`localhost`、`127.0.0.1` 等本地路径写进客户可见页面。
+- 不要把导航、canonical、Open Graph 或 sitemap 指向未启用的域名。
+- 优先沿用现有文件结构、页面风格、CSS 类名和产品数据格式。
 
 ## Web Agent
 
-Responsibilities:
-- Maintain the HAODE website structure, navigation, layout, pages, and GitHub Pages compatibility.
-- Keep public paths stable for existing pages and products.
-- Fix broken links, missing images, missing videos, layout issues, and mobile display issues.
-- Ensure navigation uses the correct project paths and does not point to local machine paths or inactive domains.
+调用方式：
+- 老板说“调用 Web Agent”时，默认负责官网页面、路径、显示、部署和前端稳定性问题。
 
-Rules:
-- Do not introduce `file://`, `/Users/mac`, `localhost`, or local-only links into customer-facing pages.
-- Do not use inactive custom domains unless the task explicitly asks for domain migration.
-- Do not change page design globally unless requested.
-- Keep WhatsApp buttons working and product names included in quote messages when possible.
+负责：
+- 修页面
+- 修 404
+- 修图片路径
+- 修移动端
+- 修 SEO meta
+- 修 sitemap
+- GitHub Pages 验证
+
+执行要求：
+- 先定位问题页面和真实文件。
+- 检查 HTML、CSS、JS、产品数据、图片和视频路径。
+- 修复后验证页面是否能打开、图片是否显示、按钮是否正常。
+- 不改价格，不删除产品，不做无关设计改版。
 
 ## Product Agent
 
-Responsibilities:
-- Add, update, and audit products.
-- Keep product category, title, description, retail price, wholesale price, images, videos, SEO fields, and detail pages aligned.
-- Confirm product assets before using them.
+调用方式：
+- 老板说“调用 Product Agent”时，默认负责新品上架、产品资料修正、图片/视频匹配、产品详情页和分类归档。
 
-Required product upload fields:
-- Title
-- Description
-- Category
-- Retail price
-- Wholesale price
-- Images
-- Videos
-- SEO keywords
+新品上架必须包含：
+- 西班牙语标题
+- 西班牙语描述
+- 分类
+- 零售价
+- 批发价
+- 图片
+- 视频
+- SEO 关键词
+- WhatsApp 下单文案
 
-Product image rules:
-- Unconfirmed product images must not be uploaded or used as final product images.
-- Do not use the wrong model image for another product.
-- Do not use iPhone 15, iPhone 16 Pro, or iPhone 16 Pro Max images for iPhone 16 INCELL.
-- Micas products must use real mica, hydrogel film, cutting film, or confirmed consumable images.
-- Micas products must not use screen, OLED, INCELL, AMOLED, flex cable, or display assembly images.
-- If a correct image is missing, use a clearly marked HAODE placeholder and report the missing asset.
+执行要求：
+- 先确认素材来源。
+- 图片必须与产品型号一致。
+- 视频必须与产品型号或系列一致。
+- 产品列表页、分类页、详情页三处资料必须一致。
+- 未确认图片时保留占位并写入报告，不乱用别的型号图片。
 
 ## SEO Agent
 
-Responsibilities:
-- Maintain SEO metadata only when requested.
-- Keep title, meta description, keywords, Open Graph, canonical URLs, sitemap, robots, and JSON-LD consistent.
-- Use Spanish SEO copy for the Mexican market.
+调用方式：
+- 老板说“调用 SEO Agent”时，默认负责 Google 收录基础、页面标题、描述、关键词、结构化数据和 sitemap/robots 检查。
 
-Rules:
-- Do not add new SEO work when the task says not to do SEO.
-- Do not change product data or prices while only doing SEO.
-- Do not point canonical or Open Graph URLs to inactive domains.
+关键词重点：
+- pantallas iPhone México
+- pantallas Samsung México
+- pantallas OLED México
+- pantallas INCELL México
+- refacciones celulares CDMX
+- mayoreo pantallas celulares México
+
+执行要求：
+- 客户可见 SEO 文案使用西班牙语。
+- 不改产品价格。
+- 不改变产品结构，除非 SEO 任务明确要求。
+- canonical、Open Graph、sitemap 必须与当前部署域名一致。
 
 ## Marketing Agent
 
-Responsibilities:
-- Prepare Spanish marketing text for HAODE pages, product cards, WhatsApp messages, category sections, and promotions.
-- Keep copy practical for Mexican repair shops, technicians, distributors, and store owners.
+调用方式：
+- 老板说“调用 Marketing Agent”时，默认负责宣传文案、社交媒体内容、WhatsApp 群发和短视频脚本。
 
-Tone:
-- Clear
-- Commercial
-- Professional
-- Direct
-- Suitable for wholesale and retail customers
+每天生成：
+- Facebook 帖子
+- Instagram 帖子
+- TikTok 短视频文案
+- WhatsApp 群发文案
 
-Rules:
-- Avoid hard advertising unless the user asks for it.
-- Do not invent technical features, stock status, warranty terms, or discounts.
-- Do not display prices in promotional sections unless the task explicitly requests prices.
+要求：
+- 全部西班牙语。
+- 面向墨西哥手机维修店。
+- 语气专业、直接、适合批发和门店客户。
+- 不编造库存、功能、优惠、价格或保修条件。
 
 ## Google Business Agent
 
-Responsibilities:
-- Support Google Business Profile content, store information, location text, categories, service descriptions, posts, and customer-facing business summaries.
+调用方式：
+- 老板说“调用 Google Business Agent”时，默认负责 Google 商家资料、门店介绍、产品发布、图片/视频建议和评论回复。
 
-Fixed business information:
-- Brand: HAODE
-- Address: Eje Central Lazaro Cardenas 87, Piso 2, Local 225, Colonia Centro, Cuauhtemoc, 06070, Ciudad de Mexico, Mexico
-- Business focus: phone screens, micas, mica cutting machines, AI products, phone cases, repair shop supplies, wholesale and retail.
+使用固定门店地址：
+- Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro, Cuauhtémoc, 06070, Ciudad de México, México
 
-Rules:
-- Do not change the official address unless the user explicitly provides a new confirmed address.
-- Do not claim services, hours, or warranty conditions that are not confirmed.
-- Keep Google-facing copy in Spanish unless the user requests Chinese.
+生成：
+- 商家说明
+- 产品发布文案
+- 图片上传建议
+- 视频上传建议
+- 评论回复模板
+- 每周更新计划
+
+执行要求：
+- Google 商家内容使用西班牙语。
+- 不更改门店地址，除非老板提供新的确认地址。
+- 不编造营业时间、服务范围、价格或保修。
 
 ## Git Workflow
 
-- Check `git status` before committing.
-- Commit only the files relevant to the task whenever possible.
-- Do not revert user changes or unrelated dirty files.
-- Do not amend commits unless the user explicitly asks.
-- Push only when the task explicitly asks for push, or when the current task instructions include push.
-- If the working tree contains unrelated changes, do not include them in the task commit.
-- After commit and push, report the commit id and push status in Chinese.
+- 开始前检查 `git status`。
+- 只提交与当前任务相关的文件。
+- 不回滚老板或其他流程留下的无关改动。
+- 不使用交互式 Git。
+- 默认提交到当前分支。
+- 任务明确要求推送时，执行 `git push origin main`。
+- 如果 push 失败，报告失败原因。
+- 完成后中文报告必须包含 commit id 和 push 结果。
 
 ## Verification Checklist
 
-Before reporting completion, verify the relevant items for the task:
-
-- The edited page opens normally.
-- Images are not broken.
-- Videos load when expected.
-- Product detail links do not return 404.
-- WhatsApp buttons still work.
-- Navigation links remain correct.
-- Mobile layout is not obviously broken.
-- No customer-facing page contains `file://`, `/Users/mac`, `localhost`, `squarespace`, `under construction`, or inactive custom domain links.
-- Prices were not changed unless requested.
-- Existing products were not deleted.
+每次完成任务前检查：
+- 目标文件是否创建或修改成功。
+- 目标页面是否能正常打开。
+- 图片是否存在且不破图。
+- 视频是否存在且路径正确。
+- 产品详情链接不进入 404。
+- WhatsApp 按钮正常。
+- 手机端没有明显错位。
+- 导航链接正确。
+- 没有 `file://`、`/Users/mac`、`localhost`、`127.0.0.1`、`squarespace`、`under construction`。
+- 没有误改价格。
+- 没有删除已有产品。
+- `git status` 已检查。
 
 ## Forbidden Actions
 
-- Do not use unconfirmed product images.
-- Do not replace a product image with a different model image.
-- Do not use screen product images for Micas products.
-- Do not delete existing product materials without explicit instruction.
-- Do not change prices unless explicitly requested.
-- Do not break GitHub Pages deployment.
-- Do not introduce local filesystem paths into website links.
-- Do not point navigation or SEO URLs to inactive domains.
-- Do not overwrite user changes outside the requested scope.
+- 禁止使用未确认产品图片。
+- 禁止用错误型号图片替代正确型号图片。
+- 禁止用屏幕图或包装图冒充 MICA/手机膜产品图。
+- 禁止未经要求修改价格。
+- 禁止删除已有产品资料。
+- 禁止破坏 GitHub Pages 部署。
+- 禁止把本地路径写入客户页面。
+- 禁止把页面链接指向未启用域名。
+- 禁止为了完成任务而覆盖无关文件。
