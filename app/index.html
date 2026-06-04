@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="HAODE Tienda: app móvil para cotizar pantallas, micas, gafas AI y fundas por WhatsApp." />
+  <meta name="theme-color" content="#ff7a1a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="HAODE Tienda" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HAODE MEXICO" />
+  <meta property="og:title" content="HAODE Tienda | Shopping App" />
+  <meta property="og:description" content="Arma tu pedido HAODE y envialo por WhatsApp. Sin pagos en linea." />
+  <meta property="og:image" content="https://haodemx.github.io/haode-web/assets/logo/logo.png" />
+  <meta property="og:url" content="https://haodemx.github.io/haode-web/app/" />
+  <link rel="canonical" href="https://haodemx.github.io/haode-web/app/" />
+  <link rel="manifest" href="/haode-web/app/manifest.json" />
+  <link rel="icon" href="/haode-web/assets/logo/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/haode-web/assets/logo/logo.png" />
+  <link rel="stylesheet" href="/haode-web/app/app.css" />
+  <title>HAODE Tienda | Shopping App</title>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="/haode-web/assets/logo/logo.png" alt="Logo HAODE" />
+      <div>
+        <strong>HAODE Tienda</strong>
+        <span>Pedido por WhatsApp</span>
+      </div>
+    </div>
+    <button class="cart-pill" type="button" data-open-cart aria-label="Abrir carrito">
+      <span>Carrito</span>
+      <strong data-cart-count>0</strong>
+    </button>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p>HAODE Shopping App</p>
+        <h1>Cotiza rapido, confirma por WhatsApp.</h1>
+        <span>Selecciona productos, ajusta cantidades y envia tu pedido. No aceptamos pagos en linea.</span>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Filtros de productos">
+      <div class="category-tabs" data-categories></div>
+      <label class="price-mode">
+        <span>Precio para total</span>
+        <select data-price-mode aria-label="Tipo de precio para calcular el total">
+          <option value="public">Publico</option>
+          <option value="wholesale">Mayoreo</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="products-section" aria-labelledby="products-title">
+      <div class="section-title">
+        <div>
+          <p>Catalogo MVP</p>
+          <h2 id="products-title">Productos destacados</h2>
+        </div>
+        <span data-product-count>0 productos</span>
+      </div>
+      <div class="product-grid" data-product-grid></div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+    <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-head">
+        <div>
+          <p>Pedido HAODE</p>
+          <h2 id="cart-title">Carrito</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-cart aria-label="Cerrar carrito">x</button>
+      </div>
+
+      <div class="cart-items" data-cart-items></div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total estimado</span>
+          <strong data-cart-total>$0 MXN</strong>
+        </div>
+        <p class="cart-note">El total es referencia para cotizacion. HAODE confirma disponibilidad, precio final y envio por WhatsApp.</p>
+        <a class="whatsapp-button disabled" href="#" target="_blank" rel="noopener noreferrer" data-whatsapp-link>Enviar pedido por WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <nav class="bottom-bar" aria-label="Acciones rapidas">
+    <a href="/haode-web/">Inicio</a>
+    <button type="button" data-open-cart>
+      <span>Carrito</span>
+      <strong data-cart-count-bottom>0</strong>
+    </button>
+  </nav>
+
+  <script src="/haode-web/app/app.js"></script>
+</body>
+</html>
