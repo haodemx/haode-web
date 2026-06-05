@@ -964,45 +964,6 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "iPhone XS Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
-    "id": "iphone-oled-11pro",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 11 Pro",
-    "name": "Pantalla para iPhone 11 Pro",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/11pro/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/11pro/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$200 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$190 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "60HZ 11PRO OLED PREMIUM Tamaño original 9",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro",
-    "description": "iPhone 11 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
     "id": "iphone-oled-11promax",
     "category": "iphone-oled",
     "brand": "iPhone",

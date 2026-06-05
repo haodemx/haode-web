@@ -1,18 +1,5 @@
 [
   {
-    "id": "iphone-oled-11pro",
-    "categoria": "Pantallas iPhone OLED",
-    "nombre": "Pantalla para iPhone 11 Pro",
-    "modelo": "iPhone 11 Pro OLED PREMIUM",
-    "descripcion": "Pantalla para iPhone 11 Pro OLED PREMIUM para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
-    "precioPublico": 200,
-    "precioMayoreo": 190,
-    "imagen": "/haode-web/assets/products/iphone-oled/11pro/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 10
-  },
-  {
     "id": "iphone-oled-11promax",
     "categoria": "Pantallas iPhone OLED",
     "nombre": "Pantalla para iPhone 11 Pro Max",

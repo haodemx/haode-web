@@ -461,9 +461,11 @@ async function syncCorrectedPricesToFirestore() {
     throw new Error("products.json no tiene formato de lista.");
   }
 
-  const { doc, serverTimestamp, setDoc } = window.HAODE_FIREBASE.firestoreModule;
+  const { doc, serverTimestamp, setDoc, writeBatch } = window.HAODE_FIREBASE.firestoreModule;
   const byId = new Map();
   const byCategoryModel = new Map();
+  const localIds = new Set();
+  const localCategoryModels = new Set();
 
   currentProducts.forEach((product) => {
     const idKey = normalizeKey(product.id);
@@ -487,7 +489,8 @@ async function syncCorrectedPricesToFirestore() {
     updated: 0,
     created: 0,
     skipped: 0,
-    errors: 0
+    errors: 0,
+    pruned: 0
   };
   const processedDocIds = new Set();
 
@@ -501,6 +504,8 @@ async function syncCorrectedPricesToFirestore() {
       continue;
     }
 
+    localIds.add(idKey);
+    localCategoryModels.add(categoryModelKey);
     const matchedProduct = byId.get(idKey) || byCategoryModel.get(categoryModelKey);
     const targetDocId = matchedProduct?.docId || data.id;
 
@@ -530,10 +535,30 @@ async function syncCorrectedPricesToFirestore() {
     }
   }
 
+  const staleProducts = currentProducts.filter((product) => {
+    const idKey = normalizeKey(product.id);
+    const docIdKey = normalizeKey(product.docId);
+    const categoryModelKey = `${normalizeKey(product.categoria)}|${normalizeKey(product.modelo)}`;
+    return !localIds.has(idKey)
+      && !localIds.has(docIdKey)
+      && !localCategoryModels.has(categoryModelKey);
+  });
+
+  if (staleProducts.length) {
+    const batch = writeBatch(db);
+
+    staleProducts.forEach((product) => {
+      batch.delete(doc(db, "products", product.docId));
+    });
+
+    await batch.commit();
+    result.pruned = staleProducts.length;
+  }
+
   await loadProducts();
   setStatus(
     adminStatus,
-    `Sincronizacion terminada. updated: ${result.updated}, created: ${result.created}, skipped: ${result.skipped}, errors: ${result.errors}.`,
+    `Sincronizacion terminada. updated: ${result.updated}, created: ${result.created}, pruned: ${result.pruned}, skipped: ${result.skipped}, errors: ${result.errors}.`,
     result.errors ? "error" : "ok"
   );
 }
