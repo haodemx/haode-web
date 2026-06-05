@@ -47,6 +47,34 @@ const CATEGORY_META = {
       'assets/products/samsung-oled/gallery-03.jpg',
     ],
   },
+  'gafas-ai': {
+    brand: 'HAODE',
+    title: 'Gafas AI',
+    subtitle: 'Productos inteligentes HAODE para venta en tienda, técnicos y mayoreo.',
+    mainImage: 'assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg',
+    galleryImages: [],
+  },
+  micas: {
+    brand: 'HAODE',
+    title: 'Micas',
+    subtitle: 'Micas y películas para protección celular en mostrador y mayoreo.',
+    mainImage: 'assets/products/micas-hd-clear/main.png',
+    galleryImages: [],
+  },
+  'maquinas-de-mica': {
+    brand: 'HAODE',
+    title: 'Máquinas de Mica',
+    subtitle: 'Máquinas y herramientas para corte profesional de micas.',
+    mainImage: 'assets/products/cut-machine/x200t/main.jpg',
+    galleryImages: [],
+  },
+  fundas: {
+    brand: 'HAODE',
+    title: 'Fundas',
+    subtitle: 'Fundas y accesorios para venta rápida en tienda.',
+    mainImage: 'assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/main.jpg',
+    galleryImages: [],
+  },
 };
 
 const CATEGORY_SLUGS = Object.keys(CATEGORY_META);
@@ -57,10 +85,20 @@ const CATEGORY_ALIASES = {
   'iPhone OLED': 'iphone-oled',
   'Samsung INCELL': 'samsung-incell',
   'Samsung OLED': 'samsung-oled',
+  'Gafas AI': 'gafas-ai',
+  'Productos AI': 'gafas-ai',
+  'Micas': 'micas',
+  'Máquinas de Mica': 'maquinas-de-mica',
+  'Maquinas de Mica': 'maquinas-de-mica',
+  'Fundas': 'fundas',
   'iphone-incell': 'iphone-incell',
   'iphone-oled': 'iphone-oled',
   'samsung-incell': 'samsung-incell',
   'samsung-oled': 'samsung-oled',
+  'gafas-ai': 'gafas-ai',
+  micas: 'micas',
+  'maquinas-de-mica': 'maquinas-de-mica',
+  fundas: 'fundas',
 };
 
 const IPHONE_INCELL_MEDIA = {

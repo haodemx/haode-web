@@ -9,20 +9,22 @@
 | products-master 当前 CSV | 101 |
 | 当前最新价格表 | 54 |
 | Firestore | 94 |
-| 网站 | 101 |
+| 网站 | 103 |
 | App | 96 |
 
 ## 核心指标
 
 | 指标 | 当前值 |
 | --- | ---: |
-| 产品总数 | 161 |
-| 缺产品数量 | 75 |
+| 产品总数 | 110 |
+| 主库总数 | 161 |
+| 已忽略历史产品 | 51 |
+| 缺产品数量 | 23 |
 | 重复产品数量 | 0 |
 | 价格异常数量 | 7 |
 | 分类异常数量 | 0 |
-| 图片完整率 | 68.3% |
-| 视频完整率 | 37.9% |
+| 图片完整率 | 100.0% |
+| 视频完整率 | 55.5% |
 
 ## 每日自动比对范围
 
@@ -30,6 +32,13 @@
 - Firestore `products`
 - 网站 `data/products.generated.js`
 - App `app/products.json`
+
+## 监控口径
+
+- `historical=true` / `ignored_by_product_control=true` 的产品保留在主库。
+- 这些产品不删除、不上传、不改价格。
+- 这些产品不计入缺产品、图片缺失、视频缺失、价格异常和完整率统计。
+- 当前忽略对象：6 月价格表派生的 `pantallas-iphone-...` SKU，共 51 个。
 
 ## 自动验证规则
 
@@ -53,8 +62,7 @@ npm run product-validate
 ## 缺产品
 
 - aimb-g5-ai-sports | AIMB-G5 AI SPORTS | Gafas AI deportivas | 缺: website
-- funda-magnetica-17-pro-max | Funda Magnetica | Estilo iPhone 17 Pro Max | 缺: firestore, website
-- funda-premium-17-pro-max | Funda Premium Aluminio | Estilo iPhone 17 Pro Max | 缺: website
+- funda-magnetica-17-pro-max | Funda Magnetica | Estilo iPhone 17 Pro Max | 缺: firestore
 - iphone-oled-12-12pro | Pantalla para iPhone 12 / 12 Pro | iPhone 12 / 12 Pro OLED PREMIUM | 缺: firestore
 - iphone-oled-12mini | Pantalla para iPhone 12 mini | iPhone 12 mini OLED PREMIUM | 缺: firestore, app
 - iphone-oled-13mini | Pantalla para iPhone 13 mini | iPhone 13 mini OLED PREMIUM | 缺: firestore, app
@@ -76,13 +84,6 @@ npm run product-validate
 - samsung-oled-s9-plus | Pantalla para Samsung S9 Plus | Samsung S9 Plus OLED CON MARCO | 缺: firestore, app
 - w630-ai-pro | W630 AI PRO | Gafas AI blancas | 缺: website
 - x200t-cortadora-micas | HAODE X200T Cortadora Inteligente de Micas | X200T | 缺: website
-- pantallas-iphone-incell-iphone-x-pantalla-para-iphone-x | Pantalla para iPhone X | X | 缺: firestore, website, app
-- pantallas-iphone-incell-iphone-xs-pantalla-para-iphone-xs | Pantalla para iPhone XS | XS | 缺: firestore, website, app
-- pantallas-iphone-oled-iphone-xs-pantalla-para-iphone-xs | Pantalla para iPhone XS | XS | 缺: firestore, website, app
-- pantallas-iphone-incell-iphone-xr-pantalla-para-iphone-xr | Pantalla para iPhone XR | XR | 缺: firestore, website, app
-- pantallas-iphone-incell-iphone-11-pantalla-para-iphone-11 | Pantalla para iPhone 11 | 11 | 缺: firestore, website, app
-- pantallas-iphone-oled-iphone-11-pantalla-para-iphone-11 | Pantalla para iPhone 11 | 11 | 缺: firestore, website, app
-- 其余 45 条见 `data/products-master.xlsx` 的 exceptions 工作表
 
 ## 价格异常
 
@@ -100,37 +101,7 @@ npm run product-validate
 
 ## 图片缺失
 
-- pantallas-iphone-incell-iphone-x-pantalla-para-iphone-x | Pantalla para iPhone X | X
-- pantallas-iphone-incell-iphone-xs-pantalla-para-iphone-xs | Pantalla para iPhone XS | XS
-- pantallas-iphone-oled-iphone-xs-pantalla-para-iphone-xs | Pantalla para iPhone XS | XS
-- pantallas-iphone-incell-iphone-xr-pantalla-para-iphone-xr | Pantalla para iPhone XR | XR
-- pantallas-iphone-incell-iphone-11-pantalla-para-iphone-11 | Pantalla para iPhone 11 | 11
-- pantallas-iphone-oled-iphone-11-pantalla-para-iphone-11 | Pantalla para iPhone 11 | 11
-- pantallas-iphone-incell-iphone-11pro-pantalla-para-iphone-11pro | Pantalla para iPhone 11PRO | 11PRO
-- pantallas-iphone-incell-iphone-xs-max-pantalla-para-iphone-xs-max | Pantalla para iPhone XS MAX | XS MAX
-- pantallas-iphone-oled-iphone-xs-max-pantalla-para-iphone-xs-max | Pantalla para iPhone XS MAX | XS MAX
-- pantallas-iphone-incell-iphone-11pro-max-pantalla-para-iphone-11pro-max | Pantalla para iPhone 11PRO MAX | 11PRO MAX
-- pantallas-iphone-oled-iphone-11pro-max-pantalla-para-iphone-11pro-max | Pantalla para iPhone 11PRO MAX | 11PRO MAX
-- pantallas-iphone-incell-iphone-12mini-pantalla-para-iphone-12mini | Pantalla para iPhone 12mini | 12mini
-- pantallas-iphone-incell-iphone-12-12pro-pantalla-para-iphone-12-12pro | Pantalla para iPhone 12/12PRO | 12/12PRO
-- pantallas-iphone-oled-iphone-12-12pro-pantalla-para-iphone-12-12pro | Pantalla para iPhone 12/12PRO | 12/12PRO
-- pantallas-iphone-incell-iphone-12pro-max-pantalla-para-iphone-12pro-max | Pantalla para iPhone 12PRO MAX | 12PRO MAX
-- pantallas-iphone-oled-iphone-12pro-max-pantalla-para-iphone-12pro-max | Pantalla para iPhone 12PRO MAX | 12PRO MAX
-- pantallas-iphone-incell-iphone-13-mini-pantalla-para-iphone-13-mini | Pantalla para iPhone 13 mini | 13 mini
-- pantallas-iphone-incell-iphone-13-pantalla-para-iphone-13 | Pantalla para iPhone 13 | 13
-- pantallas-iphone-oled-iphone-13-pantalla-para-iphone-13 | Pantalla para iPhone 13 | 13
-- pantallas-iphone-incell-iphone-13pro-pantalla-para-iphone-13pro | Pantalla para iPhone 13PRO | 13PRO
-- pantallas-iphone-oled-iphone-13pro-pantalla-para-iphone-13pro | Pantalla para iPhone 13PRO | 13PRO
-- pantallas-iphone-incell-iphone-13pro-max-pantalla-para-iphone-13pro-max | Pantalla para iPhone 13PRO MAX | 13PRO MAX
-- pantallas-iphone-oled-iphone-13pro-max-pantalla-para-iphone-13pro-max | Pantalla para iPhone 13PRO MAX | 13PRO MAX
-- pantallas-iphone-incell-iphone-14-pantalla-para-iphone-14 | Pantalla para iPhone 14 | 14
-- pantallas-iphone-oled-iphone-14-pantalla-para-iphone-14 | Pantalla para iPhone 14 | 14
-- pantallas-iphone-incell-iphone-14-plus-pantalla-para-iphone-14-plus | Pantalla para iPhone 14 plus | 14 plus
-- pantallas-iphone-oled-iphone-14-plus-pantalla-para-iphone-14-plus | Pantalla para iPhone 14 plus | 14 plus
-- pantallas-iphone-incell-iphone-14pro-pantalla-para-iphone-14pro | Pantalla para iPhone 14PRO | 14PRO
-- pantallas-iphone-oled-iphone-14pro-pantalla-para-iphone-14pro | Pantalla para iPhone 14PRO | 14PRO
-- pantallas-iphone-incell-iphone-14pro-max-pantalla-para-iphone-14pro-max | Pantalla para iPhone 14PRO MAX | 14PRO MAX
-- 其余 21 条见 `data/products-master.xlsx` 的 exceptions 工作表
+- 无
 
 ## 视频缺失
 
@@ -164,4 +135,4 @@ npm run product-validate
 - samsung-oled-note-20 | Pantalla para Samsung Note 20 | Samsung Note 20 OLED CON MARCO
 - samsung-oled-note-20-ultra | Pantalla para Samsung Note 20 Ultra | Samsung Note 20 Ultra OLED CON MARCO
 - samsung-oled-note-9 | Pantalla para Samsung Note 9 | Samsung Note 9 OLED CON MARCO
-- 其余 70 条见 `data/products-master.xlsx` 的 exceptions 工作表
+- 其余 19 条见 `data/products-master.xlsx` 的 exceptions 工作表

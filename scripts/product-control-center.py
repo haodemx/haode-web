@@ -53,6 +53,7 @@ CATEGORY_MAP = {
     "gafas-inteligentes-ai": "Gafas AI",
     "maquinas-de-hidrogel": "Máquinas de Mica",
     "camaras-inteligentes": "Cámaras AI",
+    "fundas": "Fundas",
 }
 
 MAIN_HEADERS = [
@@ -461,8 +462,20 @@ def mismatch(values: list[str]) -> bool:
     return len(set(cleaned)) > 1
 
 
+def ignored_by_product_control(product: ProductRecord) -> bool:
+    """Historical price-list rows that are not real published products yet."""
+    source_names = {"firestore", "website", "app"}
+    missing_all_publish_targets = source_names.isdisjoint(product.sources)
+    return (
+        missing_all_publish_targets
+        and product.sku.startswith("pantallas-iphone-")
+        and product.category in {"Pantallas iPhone INCELL", "Pantallas iPhone OLED"}
+    )
+
+
 def build_checks(products: dict[str, ProductRecord]) -> dict[str, Any]:
     source_names = ["firestore", "website", "app"]
+    ignored_products = []
     missing_products = []
     price_errors = []
     category_errors = []
@@ -471,6 +484,10 @@ def build_checks(products: dict[str, ProductRecord]) -> dict[str, Any]:
     duplicate_groups = defaultdict(list)
 
     for product in products.values():
+        if ignored_by_product_control(product):
+            ignored_products.append(product)
+            continue
+
         missing = [source for source in source_names if source not in product.sources]
         if missing:
             missing_products.append((product, missing))
@@ -496,9 +513,11 @@ def build_checks(products: dict[str, ProductRecord]) -> dict[str, Any]:
             duplicate_groups[duplicate_key].append(product)
 
     duplicates = [items for items in duplicate_groups.values() if len(items) > 1]
-    total = len(products)
+    total = len(products) - len(ignored_products)
     return {
         "total": total,
+        "master_total": len(products),
+        "ignored_products": ignored_products,
         "missing_products": missing_products,
         "duplicates": duplicates,
         "price_errors": price_errors,
@@ -511,6 +530,9 @@ def build_checks(products: dict[str, ProductRecord]) -> dict[str, Any]:
 
 
 def status_for(product: ProductRecord, checks: dict[str, Any]) -> str:
+    if any(item.sku == product.sku for item in checks["ignored_products"]):
+        return "ignored_by_product_control=true / historical=true"
+
     issues = []
     if any(item[0].sku == product.sku for item in checks["missing_products"]):
         issues.append("缺平台")
@@ -547,6 +569,8 @@ def write_workbook(products: dict[str, ProductRecord], checks: dict[str, Any], s
     checks_ws = workbook.create_sheet("daily-check")
     checks_ws.append(["检查项", "数量"])
     checks_ws.append(["产品总数", checks["total"]])
+    checks_ws.append(["主库总数", checks["master_total"]])
+    checks_ws.append(["忽略历史产品数", len(checks["ignored_products"])])
     checks_ws.append(["缺产品数量", len(checks["missing_products"])])
     checks_ws.append(["重复产品数量", sum(len(group) for group in checks["duplicates"])])
     checks_ws.append(["价格异常数量", len(checks["price_errors"])])
@@ -567,6 +591,19 @@ def write_workbook(products: dict[str, ProductRecord], checks: dict[str, Any], s
     for label, key in [("价格错误", "price_errors"), ("分类错误", "category_errors"), ("图片缺失", "image_missing"), ("视频缺失", "video_missing")]:
         for product in checks[key]:
             exceptions_ws.append([label, product.sku, product.name, product.model, ""])
+
+    ignored_ws = workbook.create_sheet("ignored-by-product-control")
+    ignored_ws.append(["SKU", "产品名称", "型号", "分类", "historical", "ignored_by_product_control", "原因"])
+    for product in sorted(checks["ignored_products"], key=lambda item: item.sku):
+        ignored_ws.append([
+            product.sku,
+            product.name,
+            product.model,
+            product.category,
+            True,
+            True,
+            "价格表派生 SKU；Firestore / 网站 / App 三端均未上线；不纳入健康统计",
+        ])
 
     sources_ws = workbook.create_sheet("sources")
     sources_ws.append(["来源", "产品数"])
@@ -623,6 +660,8 @@ def write_health_report(products: dict[str, ProductRecord], checks: dict[str, An
 | 指标 | 当前值 |
 | --- | ---: |
 | 产品总数 | {checks['total']} |
+| 主库总数 | {checks['master_total']} |
+| 已忽略历史产品 | {len(checks['ignored_products'])} |
 | 缺产品数量 | {len(checks['missing_products'])} |
 | 重复产品数量 | {duplicate_count} |
 | 价格异常数量 | {len(checks['price_errors'])} |
@@ -636,6 +675,13 @@ def write_health_report(products: dict[str, ProductRecord], checks: dict[str, An
 - Firestore `products`
 - 网站 `data/products.generated.js`
 - App `app/products.json`
+
+## 监控口径
+
+- `historical=true` / `ignored_by_product_control=true` 的产品保留在主库。
+- 这些产品不删除、不上传、不改价格。
+- 这些产品不计入缺产品、图片缺失、视频缺失、价格异常和完整率统计。
+- 当前忽略对象：6 月价格表派生的 `pantallas-iphone-...` SKU，共 {len(checks['ignored_products'])} 个。
 
 ## 自动验证规则
 
@@ -712,6 +758,8 @@ def main() -> int:
 
     summary = {
         "products": checks["total"],
+        "masterProducts": checks["master_total"],
+        "ignoredProducts": len(checks["ignored_products"]),
         "missingProducts": len(checks["missing_products"]),
         "duplicateProducts": sum(len(group) for group in checks["duplicates"]),
         "priceErrors": len(checks["price_errors"]),
