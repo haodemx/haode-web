@@ -845,6 +845,20 @@
     "orden": 660
   },
   {
+    "id": "samsung-incell-s10e",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S10E",
+    "modelo": "Samsung S10E INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S10E INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 800,
+    "precioMayoreo": 780,
+    "imagen": "/haode-web/assets/products/samsung-incell/s10e/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 665,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
     "id": "samsung-incell-s20",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S20",
@@ -910,6 +924,34 @@
     "orden": 710
   },
   {
+    "id": "samsung-incell-s21-fe",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S21 FE",
+    "modelo": "Samsung S21 FE INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S21 FE INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 400,
+    "precioMayoreo": 380,
+    "imagen": "/haode-web/assets/products/samsung-incell/s21-fe/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 712,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s21-plus",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S21 Plus",
+    "modelo": "Samsung S21 Plus INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S21 Plus INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 450,
+    "precioMayoreo": 430,
+    "imagen": "/haode-web/assets/products/samsung-incell/s21-plus/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 714,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
     "id": "samsung-incell-s21-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S21 Ultra",
@@ -921,6 +963,34 @@
     "stock": "disponible",
     "activo": true,
     "orden": 720
+  },
+  {
+    "id": "samsung-incell-s22",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S22",
+    "modelo": "Samsung S22 INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S22 INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 600,
+    "precioMayoreo": 550,
+    "imagen": "/haode-web/assets/products/samsung-incell/s22/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 722,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s22-plus",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S22 Plus",
+    "modelo": "Samsung S22 Plus INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S22 Plus INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 600,
+    "precioMayoreo": 570,
+    "imagen": "/haode-web/assets/products/samsung-incell/s22-plus/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 724,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
     "id": "samsung-incell-s22-ultra",
@@ -936,6 +1006,34 @@
     "orden": 730
   },
   {
+    "id": "samsung-incell-s23",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S23",
+    "modelo": "Samsung S23 INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S23 INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 650,
+    "precioMayoreo": 630,
+    "imagen": "/haode-web/assets/products/samsung-incell/s23/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 732,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s23-plus",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S23 Plus",
+    "modelo": "Samsung S23 Plus INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S23 Plus INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 650,
+    "precioMayoreo": 630,
+    "imagen": "/haode-web/assets/products/samsung-incell/s23-plus/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 734,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
     "id": "samsung-incell-s23-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S23 Ultra",
@@ -947,6 +1045,34 @@
     "stock": "disponible",
     "activo": true,
     "orden": 740
+  },
+  {
+    "id": "samsung-incell-s24",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S24",
+    "modelo": "Samsung S24 INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S24 INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 1000,
+    "precioMayoreo": 950,
+    "imagen": "/haode-web/assets/products/samsung-incell/s24/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 742,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s24-plus",
+    "categoria": "Pantallas Samsung INCELL",
+    "nombre": "Pantalla para Samsung S24 Plus",
+    "modelo": "Samsung S24 Plus INCELL CON MARCO",
+    "descripcion": "Pantalla para Samsung S24 Plus INCELL CON MARCO para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "precioPublico": 1000,
+    "precioMayoreo": 950,
+    "imagen": "/haode-web/assets/products/samsung-incell/s24-plus/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 744,
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
     "id": "samsung-incell-s24-ultra",

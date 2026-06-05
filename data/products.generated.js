@@ -796,6 +796,326 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "iPhone 16 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
+    "id": "iphone-incell-16e",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16e",
+    "name": "Pantalla para iPhone 16e",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16e/main.jpg",
+      "assets/products/iphone-incell/16e/gallery-01.png",
+      "assets/products/iphone-incell/16e/gallery-02.jpg",
+      "assets/products/iphone-incell/16e/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$300 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$280 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$275 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$270 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$260 MXN"
+      }
+    ],
+    "priceSource": "60HZ 16E INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
+    "description": "iPhone 16e para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-16plus",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16 Plus",
+    "name": "Pantalla para iPhone 16 Plus",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16plus/main.jpg",
+      "assets/products/iphone-incell/16plus/gallery-01.png",
+      "assets/products/iphone-incell/16plus/gallery-02.png",
+      "assets/products/iphone-incell/16plus/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$380 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$360 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$350 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$330 MXN"
+      }
+    ],
+    "priceSource": "60HZ 16PLUS INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
+    "description": "iPhone 16 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-16pro",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16 Pro",
+    "name": "Pantalla para iPhone 16 Pro",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16pro/main.jpg",
+      "assets/products/iphone-incell/16pro/gallery-01.png",
+      "assets/products/iphone-incell/16pro/gallery-02.jpg",
+      "assets/products/iphone-incell/16pro/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$700 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$680 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$660 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$650 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$620 MXN"
+      }
+    ],
+    "priceSource": "120HZ 16PRO INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
+    "description": "iPhone 16 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-16promax",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 16 Pro Max",
+    "name": "Pantalla para iPhone 16 Pro Max",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/16promax/main.jpg",
+      "assets/products/iphone-incell/16promax/gallery-01.png",
+      "assets/products/iphone-incell/16promax/gallery-02.jpg",
+      "assets/products/iphone-incell/16promax/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$750 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$730 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$700 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$680 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$650 MXN"
+      }
+    ],
+    "priceSource": "120HZ 16 PROMAX INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
+    "description": "iPhone 16 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17",
+    "name": "Pantalla para iPhone 17",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17/main.jpg",
+      "assets/products/iphone-incell/17/gallery-01.jpg",
+      "assets/products/iphone-incell/17/gallery-02.jpg",
+      "assets/products/iphone-incell/17/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1000 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$950 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$920 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$900 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$850 MXN"
+      }
+    ],
+    "priceSource": "120HZ 17 INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
+    "description": "iPhone 17 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17air",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17 Air",
+    "name": "Pantalla para iPhone 17 Air",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17air/main.jpg",
+      "assets/products/iphone-incell/17air/gallery-01.png",
+      "assets/products/iphone-incell/17air/gallery-02.jpg",
+      "assets/products/iphone-incell/17air/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$2500 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$2400 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$2300 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$2200 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$2100 MXN"
+      }
+    ],
+    "priceSource": "120HZ 17 AIR INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
+    "description": "iPhone 17 Air para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17pro",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17 Pro",
+    "name": "Pantalla para iPhone 17 Pro",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17pro/main.jpg",
+      "assets/products/iphone-incell/17pro/gallery-01.jpg",
+      "assets/products/iphone-incell/17pro/gallery-02.png",
+      "assets/products/iphone-incell/17pro/gallery-03.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$850 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$800 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$755 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$750 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$700 MXN"
+      }
+    ],
+    "priceSource": "120HZ 17PRO INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
+    "description": "iPhone 17 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "iphone-incell-17promax",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 17 Pro Max",
+    "name": "Pantalla para iPhone 17 Pro Max",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/17promax/main.jpg",
+      "assets/products/iphone-incell/17promax/gallery-01.jpg",
+      "assets/products/iphone-incell/17promax/gallery-02.png",
+      "assets/products/iphone-incell/17promax/gallery-03.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$900 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$850 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$805 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$800 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$750 MXN"
+      }
+    ],
+    "priceSource": "120HZ 17 PROMAX INCELL-FHD Plus MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
+    "description": "iPhone 17 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
     "id": "iphone-incell-x",
     "category": "iphone-incell",
     "brand": "iPhone",
@@ -1763,6 +2083,45 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "iPhone 16 Pro Max Soft OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
+    "id": "iphone-oled-16promax-hard",
+    "category": "iphone-oled",
+    "brand": "iPhone",
+    "model": "iPhone 16 Pro Max",
+    "name": "Pantalla para iPhone 16 Pro Max Hard OLED",
+    "quality": "OLED PREMIUM MOVE IC",
+    "images": [
+      "assets/products/iphone-oled/16promax-hard/main.jpg"
+    ],
+    "videos": [
+      "assets/products/iphone-oled/16promax-hard/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,600 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1,550 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$1,500 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$1,450 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$1,400 MXN"
+      }
+    ],
+    "priceSource": "16 PROMAX OLED PREMIUM MOVE IC",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Hard OLED",
+    "description": "iPhone 16 Pro Max Hard OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
     "id": "iphone-oled-xsmax",
     "category": "iphone-oled",
     "brand": "iPhone",
@@ -2091,6 +2450,44 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "Samsung S10 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
+    "id": "samsung-incell-s10e",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S10E",
+    "name": "Pantalla para Samsung S10E",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s10e/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$800 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$780 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$750 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$730 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$700 MXN"
+      }
+    ],
+    "priceSource": "S10E C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10E",
+    "description": "Pantalla para Samsung S10E INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
     "id": "samsung-incell-s20",
     "category": "samsung-incell",
     "brand": "Samsung",
@@ -2297,6 +2694,82 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "Samsung S21 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
+    "id": "samsung-incell-s21-fe",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S21 FE",
+    "name": "Pantalla para Samsung S21 FE",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s21-fe/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$380 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$370 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$360 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$350 MXN"
+      }
+    ],
+    "priceSource": "S21 FE C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 FE",
+    "description": "Pantalla para Samsung S21 FE INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s21-plus",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S21 Plus",
+    "name": "Pantalla para Samsung S21 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s21-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$430 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$420 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$385 MXN"
+      }
+    ],
+    "priceSource": "S21 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
+    "description": "Pantalla para Samsung S21 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
     "id": "samsung-incell-s21-ultra",
     "category": "samsung-incell",
     "brand": "Samsung",
@@ -2335,6 +2808,82 @@ window.HAODE_PRODUCTS_DATA = [
     "priceSource": "S21 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_E51E9167BA034AD29DC55C214D21216E\",1) 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
     "description": "Samsung S21 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s22",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S22",
+    "name": "Pantalla para Samsung S22",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s22/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$550 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$530 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$500 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$480 MXN"
+      }
+    ],
+    "priceSource": "S22 C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22",
+    "description": "Pantalla para Samsung S22 INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s22-plus",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S22 Plus",
+    "name": "Pantalla para Samsung S22 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s22-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$570 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$550 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$530 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$500 MXN"
+      }
+    ],
+    "priceSource": "S22 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
+    "description": "Pantalla para Samsung S22 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
     "id": "samsung-incell-s22-ultra",
@@ -2380,6 +2929,82 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "Samsung S22 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   },
   {
+    "id": "samsung-incell-s23",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S23",
+    "name": "Pantalla para Samsung S23",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s23/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$650 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$630 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$620 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$580 MXN"
+      }
+    ],
+    "priceSource": "S23 C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23",
+    "description": "Pantalla para Samsung S23 INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s23-plus",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S23 Plus",
+    "name": "Pantalla para Samsung S23 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s23-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$650 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$630 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$620 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$600 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$580 MXN"
+      }
+    ],
+    "priceSource": "S23 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
+    "description": "Pantalla para Samsung S23 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
     "id": "samsung-incell-s23-ultra",
     "category": "samsung-incell",
     "brand": "Samsung",
@@ -2420,6 +3045,82 @@ window.HAODE_PRODUCTS_DATA = [
     "priceSource": "S23 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_84BAE874680B4B4EAA10EB38716D0FA7\",1) 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
     "description": "Samsung S23 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "samsung-incell-s24",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S24",
+    "name": "Pantalla para Samsung S24",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s24/main.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,000 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$950 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$900 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$850 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$800 MXN"
+      }
+    ],
+    "priceSource": "S24 C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24",
+    "description": "Pantalla para Samsung S24 INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
+  },
+  {
+    "id": "samsung-incell-s24-plus",
+    "category": "samsung-incell",
+    "brand": "Samsung",
+    "model": "Samsung S24 Plus",
+    "name": "Pantalla para Samsung S24 Plus",
+    "quality": "INCELL CON MARCO",
+    "images": [
+      "assets/products/samsung-incell/s24-plus/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1,000 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$950 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$900 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$850 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$800 MXN"
+      }
+    ],
+    "priceSource": "S24 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
+    "description": "Pantalla para Samsung S24 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
     "id": "samsung-incell-s24-ultra",
@@ -3344,368 +4045,9 @@ window.HAODE_PRODUCTS_DATA = [
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
     "description": "Samsung S9 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-16e",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 16e",
-    "name": "Pantalla para iPhone 16e",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/16e/main.jpg",
-      "assets/products/iphone-incell/16e/gallery-01.png",
-      "assets/products/iphone-incell/16e/gallery-02.jpg",
-      "assets/products/iphone-incell/16e/gallery-03.png"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$300 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$280 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$275 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$270 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$260 MXN"
-      }
-    ],
-    "priceSource": "60HZ 16E INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
-    "description": "iPhone 16e para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-16plus",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 16 Plus",
-    "name": "Pantalla para iPhone 16 Plus",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/16plus/main.jpg",
-      "assets/products/iphone-incell/16plus/gallery-01.png",
-      "assets/products/iphone-incell/16plus/gallery-02.png",
-      "assets/products/iphone-incell/16plus/gallery-03.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$400 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$380 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$360 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$350 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$330 MXN"
-      }
-    ],
-    "priceSource": "60HZ 16PLUS INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
-    "description": "iPhone 16 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-16pro",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 16 Pro",
-    "name": "Pantalla para iPhone 16 Pro",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/16pro/main.jpg",
-      "assets/products/iphone-incell/16pro/gallery-01.png",
-      "assets/products/iphone-incell/16pro/gallery-02.jpg",
-      "assets/products/iphone-incell/16pro/gallery-03.png"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$700 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$680 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$660 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$650 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$620 MXN"
-      }
-    ],
-    "priceSource": "120HZ 16PRO INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
-    "description": "iPhone 16 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-16promax",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 16 Pro Max",
-    "name": "Pantalla para iPhone 16 Pro Max",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/16promax/main.jpg",
-      "assets/products/iphone-incell/16promax/gallery-01.png",
-      "assets/products/iphone-incell/16promax/gallery-02.jpg",
-      "assets/products/iphone-incell/16promax/gallery-03.png"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$750 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$730 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$700 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$680 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$650 MXN"
-      }
-    ],
-    "priceSource": "120HZ 16 PROMAX INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
-    "description": "iPhone 16 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-17",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 17",
-    "name": "Pantalla para iPhone 17",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/17/main.jpg",
-      "assets/products/iphone-incell/17/gallery-01.jpg",
-      "assets/products/iphone-incell/17/gallery-02.jpg",
-      "assets/products/iphone-incell/17/gallery-03.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$1000 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$950 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$920 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$900 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$850 MXN"
-      }
-    ],
-    "priceSource": "120HZ 17 INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
-    "description": "iPhone 17 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-17air",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 17 Air",
-    "name": "Pantalla para iPhone 17 Air",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/17air/main.jpg",
-      "assets/products/iphone-incell/17air/gallery-01.png",
-      "assets/products/iphone-incell/17air/gallery-02.jpg",
-      "assets/products/iphone-incell/17air/gallery-03.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$2500 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$2400 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$2300 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$2200 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$2100 MXN"
-      }
-    ],
-    "priceSource": "120HZ 17 AIR INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
-    "description": "iPhone 17 Air para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-17pro",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 17 Pro",
-    "name": "Pantalla para iPhone 17 Pro",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/17pro/main.jpg",
-      "assets/products/iphone-incell/17pro/gallery-01.jpg",
-      "assets/products/iphone-incell/17pro/gallery-02.png",
-      "assets/products/iphone-incell/17pro/gallery-03.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$850 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$800 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$755 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$750 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$700 MXN"
-      }
-    ],
-    "priceSource": "120HZ 17PRO INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
-    "description": "iPhone 17 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-incell-17promax",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 17 Pro Max",
-    "name": "Pantalla para iPhone 17 Pro Max",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/17promax/main.jpg",
-      "assets/products/iphone-incell/17promax/gallery-01.jpg",
-      "assets/products/iphone-incell/17promax/gallery-02.png",
-      "assets/products/iphone-incell/17promax/gallery-03.png"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$900 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$850 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$805 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$800 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$750 MXN"
-      }
-    ],
-    "priceSource": "120HZ 17 PROMAX INCELL-FHD Plus MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
-    "description": "iPhone 17 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
-  },
-  {
-    "id": "iphone-oled-16promax-hard",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 16 Pro Max",
-    "name": "Pantalla para iPhone 16 Pro Max Hard OLED",
-    "quality": "OLED PREMIUM MOVE IC",
-    "images": [
-      "assets/products/iphone-oled/16promax-hard/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/16promax-hard/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$1,600 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$1,550 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$1,500 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$1,450 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$1,400 MXN"
-      }
-    ],
-    "priceSource": "16 PROMAX OLED PREMIUM MOVE IC",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Hard OLED",
-    "description": "iPhone 16 Pro Max Hard OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
-  "generatedAt": "2026-06-01T00:00:00.000Z",
-  "workbook": "HL CDMX 2026 MAYO.xlsx"
+  "generatedAt": "2026-06-05T19:35:57.650Z",
+  "workbook": "HL CDMX 2026 06xlsx.xlsx"
 };
