@@ -1,5 +1,20 @@
 # HAODE AI TEAM
 
+## Required Codex Skills
+
+For HAODE tasks, default to:
+
+- `superpowers` for task goal, impacted files, execution plan, risks, verification, final results, commit id, push status, and next step.
+- `guidelines` for HAODE brand, product upload, image confirmation, website modification, marketing, git, and verification standards.
+- `karpathy-rules` for small, simple, code-read, verified changes.
+- `firecrawl` for competitor/supplier product-page extraction when `FIRECRAWL_API_KEY` is available.
+
+Also follow the root HAODE rules:
+
+- `/Users/mac/Documents/haode/AGENTS.md`
+- `/Users/mac/Documents/haode/GUIDELINES.md`
+- `/Users/mac/Documents/haode/HAODE_RULES.md`
+
 ## Company Context
 
 公司资料：
