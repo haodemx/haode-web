@@ -32,7 +32,7 @@
       </div>
       <div class="new-product-content">
         <h3>${item.name || item.model || 'Producto HAODE'}</h3>
-        <p>${item.description || 'Consulta disponibilidad por WhatsApp.'}</p>
+        <p>${item.description || 'Producto HAODE México con atención por WhatsApp para técnicos, talleres y distribuidores. Confirma disponibilidad actual, modelo y cantidad antes de comprar.'}</p>
         <p class="new-arrival-note">${item.quality || ''}${item.priceText ? ` · ${item.priceText}` : ''}</p>
         <div class="new-product-actions">
           <a class="btn btn-secondary" href="${detailHref}">Ver detalles</a>

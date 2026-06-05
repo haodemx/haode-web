@@ -573,7 +573,7 @@ function buildProductDefinition(config, slug, workbookRows) {
     prices,
     priceSource,
     whatsappText: `Hola HAODE, quiero cotizar: Pantalla para ${model}`,
-    description: `${model} para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp.`,
+    description: `Pantalla para ${model} disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta refacción para celular se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.`,
   };
 }
 

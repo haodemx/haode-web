@@ -40,7 +40,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 6 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11",
-    "description": "iPhone 11 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 11 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-11pro",
@@ -83,7 +83,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 11PRO INCELL-FHD Plus MOVE IC    Tamaño original 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro",
-    "description": "iPhone 11 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 11 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-11promax",
@@ -125,7 +125,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 11PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
-    "description": "iPhone 11 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 11 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-12-12pro",
@@ -167,7 +167,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 12/12PRO INCELL-FHD Plus MOVE IC    Tamaño original 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
-    "description": "iPhone 12 / 12 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 12 / 12 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-12mini",
@@ -209,7 +209,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 12mini INCELL-FHD Plus MOVE IC    Tamaño original 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
-    "description": "iPhone 12 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 12 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-12promax",
@@ -251,7 +251,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 11PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
-    "description": "iPhone 12 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 12 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-13",
@@ -293,7 +293,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 22 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
-    "description": "iPhone 13 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-13mini",
@@ -335,7 +335,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 13 mini INCELL-FHD Plus MOVE IC    Tamaño original 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
-    "description": "iPhone 13 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-13pro",
@@ -377,7 +377,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 13PRO INCELL-FHD Plus MOVE IC    Tamaño original 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
-    "description": "iPhone 13 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-13promax",
@@ -419,7 +419,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 13PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
-    "description": "iPhone 13 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-14",
@@ -461,7 +461,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S21 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_ABC5043E9C344DA19DDC616F23263F58\",1) 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
-    "description": "iPhone 14 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-14plus",
@@ -503,7 +503,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S21 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_ABC5043E9C344DA19DDC616F23263F58\",1) 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
-    "description": "iPhone 14 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-14pro",
@@ -545,7 +545,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 14PRO INCELL-FHD Plus MOVE IC    Tamaño original 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
-    "description": "iPhone 14 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-14promax",
@@ -587,7 +587,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 14PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
-    "description": "iPhone 14 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-15",
@@ -628,7 +628,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 40 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
-    "description": "iPhone 15 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 15 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-15plus",
@@ -669,7 +669,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ INCELL-FHD Plus MOVE IC    Tamaño original 40 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Plus",
-    "description": "iPhone 15 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 15 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-15pro",
@@ -709,7 +709,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 15PRO INCELL-FHD Plus MOVE IC    Tamaño original 45",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro",
-    "description": "iPhone 15 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 15 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-15promax",
@@ -751,7 +751,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 15PRO MAX INCELL-FHD Plus MOVE IC    Tamaño original =DISPIMG(\"ID_3E57B57A00D94EBDB22517C7A6F7062A\",1) 48",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
-    "description": "iPhone 15 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 15 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-16",
@@ -793,7 +793,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 16 INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
-    "description": "iPhone 16 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-16e",
@@ -833,7 +833,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 16E INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
-    "description": "iPhone 16e para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16e disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-16plus",
@@ -873,7 +873,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ 16PLUS INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
-    "description": "iPhone 16 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-16pro",
@@ -913,7 +913,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 16PRO INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
-    "description": "iPhone 16 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-16promax",
@@ -953,7 +953,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 16 PROMAX INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
-    "description": "iPhone 16 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-17",
@@ -993,7 +993,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 17 INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
-    "description": "iPhone 17 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 17 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-17air",
@@ -1033,7 +1033,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 17 AIR INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
-    "description": "iPhone 17 Air para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 17 Air disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-17pro",
@@ -1073,7 +1073,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 17PRO INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
-    "description": "iPhone 17 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 17 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-17promax",
@@ -1113,7 +1113,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "120HZ 17 PROMAX INCELL-FHD Plus MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
-    "description": "iPhone 17 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 17 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-x",
@@ -1155,7 +1155,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ X INCELL-FHD Plus Tamaño original 1",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone X",
-    "description": "iPhone X para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone X disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-xr",
@@ -1197,7 +1197,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ XR INCELL-FHD Plus Tamaño original 5",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR",
-    "description": "iPhone XR para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone XR disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-xs",
@@ -1239,7 +1239,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ XS INCELL-FHD Plus Tamaño original 3",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS",
-    "description": "iPhone XS para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone XS disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-incell-xsmax",
@@ -1281,7 +1281,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "60HZ XS MAX INCELL-FHD Plus MOVE IC    Tamaño original 10",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
-    "description": "iPhone XS Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone XS Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-11promax",
@@ -1322,7 +1322,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "11PRO MAX OLED PREMIUM MOVE IC Tamaño original 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
-    "description": "iPhone 11 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 11 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-12-12pro",
@@ -1361,7 +1361,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "12/12PRO OLED PREMIUM MOVE IC Tamaño original 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
-    "description": "iPhone 12 / 12 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 12 / 12 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-12mini",
@@ -1400,7 +1400,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
-    "description": "iPhone 12 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 12 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-12pro",
@@ -1439,7 +1439,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "12/12PRO OLED PREMIUM MOVE IC Tamaño original 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro",
-    "description": "iPhone 12 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 12 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-12promax",
@@ -1480,7 +1480,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "12PRO MAX OLED PREMIUM MOVE IC Tamaño original 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
-    "description": "iPhone 12 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 12 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-13",
@@ -1521,7 +1521,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "OLED PREMIUM MOVE IC Tamaño original 23 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
-    "description": "iPhone 13 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-13mini",
@@ -1560,7 +1560,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
-    "description": "iPhone 13 mini para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-13pro",
@@ -1601,7 +1601,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "13PRO OLED PREMIUM MOVE IC Tamaño original 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
-    "description": "iPhone 13 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-13promax",
@@ -1642,7 +1642,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "11PRO MAX OLED PREMIUM MOVE IC Tamaño original 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
-    "description": "iPhone 13 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 13 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-14",
@@ -1683,7 +1683,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "OLED PREMIUM MOVE IC Tamaño original 29 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
-    "description": "iPhone 14 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-14plus",
@@ -1724,7 +1724,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "14 plus OLED PREMIUM MOVE IC Tamaño original 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
-    "description": "iPhone 14 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-14pro",
@@ -1763,7 +1763,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "14PRO SOFT OLED PREMIUM MOVE IC Tamaño original 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
-    "description": "iPhone 14 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-14promax",
@@ -1804,7 +1804,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "14PRO MAX OLED PREMIUM MOVE IC Tamaño original 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
-    "description": "iPhone 14 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 14 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-15",
@@ -1843,7 +1843,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "SOFT OLED PREMIUM MOVE IC Tamaño original 42 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
-    "description": "iPhone 15 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 15 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-15plus",
@@ -1882,7 +1882,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Plus",
-    "description": "iPhone 15 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 15 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-15promax",
@@ -1921,7 +1921,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "15PRO MAX OLED PREMIUM MOVE IC Tamaño original 49",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
-    "description": "iPhone 15 Pro Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 15 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-16",
@@ -1960,7 +1960,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
-    "description": "iPhone 16 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-16plus",
@@ -1999,7 +1999,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
-    "description": "iPhone 16 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-16pro",
@@ -2038,7 +2038,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "16PRO OLED PREMIUM MOVE IC Tamaño original 58",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
-    "description": "iPhone 16 Pro para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-16promax",
@@ -2080,7 +2080,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "16 PROMAX SOFT OLED PREMIUM MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Soft OLED",
-    "description": "iPhone 16 Pro Max Soft OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 Pro Max Soft OLED disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-16promax-hard",
@@ -2119,7 +2119,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "16 PROMAX OLED PREMIUM MOVE IC",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Hard OLED",
-    "description": "iPhone 16 Pro Max Hard OLED para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone 16 Pro Max Hard OLED disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-xsmax",
@@ -2160,7 +2160,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "XS MAX OLED PREMIUM MOVE IC Tamaño original 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
-    "description": "iPhone XS Max para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para iPhone XS Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-note-10",
@@ -2202,7 +2202,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_AFED27E77F2B465FB46B8FFA1CEAFABA\",1) 41",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
-    "description": "Samsung Note 10 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 10 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-note-10-plus",
@@ -2242,7 +2242,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_AFED27E77F2B465FB46B8FFA1CEAFABA\",1) 41",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
-    "description": "Samsung Note 10 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 10 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-note-20-ultra",
@@ -2282,7 +2282,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 20 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_D46E065009374993AEF3BB32BA8A139B\",1) 48",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
-    "description": "Samsung Note 20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-note-8",
@@ -2322,7 +2322,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 8 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_74814455A2EA46D3841B13CD1DB0ADFF\",1) 39",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 8",
-    "description": "Samsung Note 8 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 8 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-note-9",
@@ -2362,7 +2362,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 9 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_D6DC935D3096400D91454FE3AB79A3C7\",1) 40",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
-    "description": "Samsung Note 9 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 9 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s10",
@@ -2405,7 +2405,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_E1799CFB5B05409C9402814C66DEC26A\",1) 5",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10",
-    "description": "Samsung S10 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S10 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s10-plus",
@@ -2447,7 +2447,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S10 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_E1799CFB5B05409C9402814C66DEC26A\",1) 5",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10 Plus",
-    "description": "Samsung S10 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S10 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s10e",
@@ -2484,7 +2484,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S10E C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10E",
-    "description": "Pantalla para Samsung S10E INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S10E disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -2527,7 +2527,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S20  C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_76B3047E56C343B5A7666ABF4F0423BF\",1) 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20",
-    "description": "Samsung S20 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S20 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s20-fe",
@@ -2569,7 +2569,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S20FE C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_D0979D1F6F2B4222BC2319E6A1024553\",1) 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 FE",
-    "description": "Samsung S20 FE para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S20 FE disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s20-plus",
@@ -2611,7 +2611,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S20  C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_76B3047E56C343B5A7666ABF4F0423BF\",1) 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
-    "description": "Samsung S20 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S20 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s20-ultra",
@@ -2651,7 +2651,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S20 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_1171137BB6E94C0D8F8949AB82D11093\",1) 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
-    "description": "Samsung S20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s21",
@@ -2691,7 +2691,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S21 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_ABC5043E9C344DA19DDC616F23263F58\",1) 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
-    "description": "Samsung S21 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S21 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s21-fe",
@@ -2728,7 +2728,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S21 FE C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 FE",
-    "description": "Pantalla para Samsung S21 FE INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S21 FE disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -2766,7 +2766,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S21 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
-    "description": "Pantalla para Samsung S21 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S21 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -2807,7 +2807,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S21 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_E51E9167BA034AD29DC55C214D21216E\",1) 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
-    "description": "Samsung S21 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S21 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s22",
@@ -2844,7 +2844,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S22 C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22",
-    "description": "Pantalla para Samsung S22 INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S22 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -2882,7 +2882,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S22 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
-    "description": "Pantalla para Samsung S22 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S22 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -2926,7 +2926,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S22 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_062C47EBB7C54AF58A12784C6CDDA3B7\",1) 23",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
-    "description": "Samsung S22 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S22 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s23",
@@ -2963,7 +2963,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S23 C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23",
-    "description": "Pantalla para Samsung S23 INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S23 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -3001,7 +3001,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S23 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
-    "description": "Pantalla para Samsung S23 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S23 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -3044,7 +3044,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S23 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_84BAE874680B4B4EAA10EB38716D0FA7\",1) 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
-    "description": "Samsung S23 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S23 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s24",
@@ -3081,7 +3081,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S24 C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24",
-    "description": "Pantalla para Samsung S24 INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S24 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -3119,7 +3119,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S24 PLUS C/M INCELL-HD+ MARCO ORIGINAL",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
-    "description": "Pantalla para Samsung S24 Plus INCELL con marco para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "description": "Pantalla para Samsung S24 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
   },
   {
@@ -3159,7 +3159,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S24 Ultra C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
-    "description": "Samsung S24 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S24 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s8",
@@ -3199,7 +3199,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S8 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_CC4757E52BAF43BBA7C03FC9D6B6D941\",1) 1",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8",
-    "description": "Samsung S8 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S8 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s8-plus",
@@ -3241,7 +3241,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S8 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_CC4757E52BAF43BBA7C03FC9D6B6D941\",1) 1",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8 Plus",
-    "description": "Samsung S8 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S8 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s9",
@@ -3279,7 +3279,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S9 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_8A4B9FD11AF4403ABF0A7F26BE441722\",1) 3",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9",
-    "description": "Samsung S9 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S9 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s9-plus",
@@ -3317,7 +3317,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S9 C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_8A4B9FD11AF4403ABF0A7F26BE441722\",1) 3",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
-    "description": "Samsung S9 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S9 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-note-10",
@@ -3354,7 +3354,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 10 OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 42",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
-    "description": "Samsung Note 10 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 10 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-note-10-plus",
@@ -3391,7 +3391,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 10+ OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 44",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
-    "description": "Samsung Note 10 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 10 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-note-20",
@@ -3428,7 +3428,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 20  OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 47",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20",
-    "description": "Samsung Note 20 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 20 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-note-20-ultra",
@@ -3465,7 +3465,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "NOTE 20 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 49",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
-    "description": "Samsung Note 20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-note-9",
@@ -3502,7 +3502,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
-    "description": "Samsung Note 9 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung Note 9 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s20",
@@ -3539,7 +3539,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20",
-    "description": "Samsung S20 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S20 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s20-plus",
@@ -3580,7 +3580,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S20 PLUS OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
-    "description": "Samsung S20 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S20 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s20-ultra",
@@ -3617,7 +3617,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
-    "description": "Samsung S20 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s21",
@@ -3654,7 +3654,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
-    "description": "Samsung S21 para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S21 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s21-plus",
@@ -3691,7 +3691,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
-    "description": "Samsung S21 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S21 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s21-ultra",
@@ -3732,7 +3732,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S21 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
-    "description": "Samsung S21 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S21 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s22-plus",
@@ -3769,7 +3769,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
-    "description": "Samsung S22 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S22 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s22-ultra",
@@ -3810,7 +3810,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S22 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
-    "description": "Samsung S22 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S22 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s23-plus",
@@ -3847,7 +3847,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
-    "description": "Samsung S23 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S23 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s23-ultra",
@@ -3888,7 +3888,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S23 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 30",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
-    "description": "Samsung S23 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S23 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s24-plus",
@@ -3925,7 +3925,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
-    "description": "Samsung S24 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S24 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s24-ultra",
@@ -3966,7 +3966,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S24 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
-    "description": "Samsung S24 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S24 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s25-ultra",
@@ -4007,7 +4007,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "S25 Ultra OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S25 Ultra",
-    "description": "Samsung S25 Ultra para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S25 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s9-plus",
@@ -4044,7 +4044,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "Consultar",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
-    "description": "Samsung S9 Plus para mayoreo y menudeo en México. Consulta disponibilidad por WhatsApp."
+    "description": "Pantalla para Samsung S9 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "funda-premium-17-pro-max",
@@ -4071,7 +4071,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "App products.json",
     "whatsappText": "Hola HAODE, quiero cotizar: Funda Premium Aluminio",
-    "description": "Funda premium estilo aluminio para venta de mostrador. Consulta disponibilidad por WhatsApp."
+    "description": "Funda Premium Aluminio disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta funda para iPhone se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "funda-magnetica-17-pro-max",
@@ -4098,7 +4098,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "App products.json",
     "whatsappText": "Hola HAODE, quiero cotizar: Funda Magnetica",
-    "description": "Funda magnetica con kit de silicon para estilo iPhone 17 Pro Max. Consulta disponibilidad por WhatsApp."
+    "description": "Funda Magnetica disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta funda para iPhone se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "haode-ai-g3-smart-glasses",
@@ -4123,7 +4123,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "老板确认 2026-06-05",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI G3",
-    "description": "Gafas inteligentes con AI para clientes en Mexico. Incluyen camara HD, grabacion de foto, video y audio, conectividad WiFi, Bluetooth y funciones inteligentes segun version. Compatible con Android y iPhone. Ideal para ventas, viajes, contenido y uso diario. Consultar disponibilidad de funciones segun version."
+    "description": "Gafas Inteligentes AI G3 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "haode-ai-w610-smart-glasses",
@@ -4148,7 +4148,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "老板确认 2026-06-05",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI W610",
-    "description": "Gafas inteligentes con AI para clientes en Mexico. Incluyen camara HD, grabacion de foto, video y audio, conectividad WiFi, Bluetooth y funciones inteligentes segun version. Compatible con Android y iPhone. Ideal para ventas, viajes, contenido y uso diario. Consultar disponibilidad de funciones segun version."
+    "description": "Gafas Inteligentes AI W610 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "s1-ai-classic",
@@ -4173,7 +4173,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "products-master/app confirmed existing price",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE AI CLASSIC S1",
-    "description": "Gafas inteligentes estilo classic con funciones de audio y asistente. Disponible para menudeo y mayoreo HAODE."
+    "description": "HAODE AI CLASSIC S1 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "aimb-g5-ai-sports",
@@ -4198,7 +4198,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "products-master/app confirmed existing price",
     "whatsappText": "Hola HAODE, quiero cotizar: AIMB-G5 AI SPORTS",
-    "description": "Gafas AI estilo deportivo para catalogo HAODE. Consulta disponibilidad, colores y precio por WhatsApp."
+    "description": "AIMB-G5 AI SPORTS disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "w630-ai-pro",
@@ -4223,7 +4223,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "products-master/app confirmed existing price",
     "whatsappText": "Hola HAODE, quiero cotizar: W630 AI PRO",
-    "description": "Gafas inteligentes con camara, conectividad y funciones AI para uso diario. Producto HAODE para venta por WhatsApp."
+    "description": "W630 AI PRO disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
