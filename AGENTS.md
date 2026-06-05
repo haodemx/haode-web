@@ -29,6 +29,73 @@
 - 不要把导航、canonical、Open Graph 或 sitemap 指向未启用的域名。
 - 优先沿用现有文件结构、页面风格、CSS 类名和产品数据格式。
 
+## Default Automation Rules
+
+凡涉及产品，自动调用：
+- `haode-product-control-center`
+
+凡涉及价格，自动调用：
+- `haode-price-confirmation`
+
+凡涉及上传产品，自动调用：
+- `haode-product-control-center`
+- `haode-price-confirmation`
+- `haode-product-upload`
+
+凡涉及促销，自动调用：
+- `haode-product-control-center`
+- `haode-marketing-design`
+- `haode-crm-sales`
+
+凡涉及网站产品异常，自动调用：
+- `haode-website-maintenance`
+- `haode-product-control-center`
+
+没有老板确认，禁止：
+- 自动改价
+- 自动覆盖产品
+- 自动替换图片
+- 自动发布价格
+
+## AUTO COMMIT POLICY
+
+以下任务完成后，无需老板确认，必须自动执行：
+- 自动验证
+- 自动 `git commit`
+- 自动 `git push`
+
+无需老板确认的任务：
+1. 图片修复
+2. 视频修复
+3. SEO修复
+4. App同步
+5. 网站同步
+6. 产品描述更新
+7. Google Business内容
+8. Marketing内容
+9. 报告生成
+10. AGENTS规则更新
+11. 已验证的重复产品修复
+12. 已验证的数据同步
+
+必须老板确认的任务：
+1. 修改价格
+2. 删除产品
+3. 新增产品类别
+4. 修改品牌
+5. 修改公司资料
+6. 修改门店地址
+7. 删除大量数据
+
+以后默认：
+验证成功
+↓
+自动提交
+↓
+自动推送
+
+不要再询问是否提交。
+
 ## Web Agent
 
 调用方式：
