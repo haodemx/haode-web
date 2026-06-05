@@ -4099,9 +4099,135 @@ window.HAODE_PRODUCTS_DATA = [
     "priceSource": "App products.json",
     "whatsappText": "Hola HAODE, quiero cotizar: Funda Magnetica",
     "description": "Funda magnetica con kit de silicon para estilo iPhone 17 Pro Max. Consulta disponibilidad por WhatsApp."
+  },
+  {
+    "id": "haode-ai-g3-smart-glasses",
+    "category": "gafas-ai",
+    "brand": "HAODE",
+    "model": "HAODE AI G3 Smart Glasses",
+    "name": "Gafas Inteligentes AI G3",
+    "quality": "HAODE AI G3 Smart Glasses",
+    "images": [
+      "assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1700 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1300 MXN"
+      }
+    ],
+    "priceSource": "老板确认 2026-06-05",
+    "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI G3",
+    "description": "Gafas inteligentes con AI para clientes en Mexico. Incluyen camara HD, grabacion de foto, video y audio, conectividad WiFi, Bluetooth y funciones inteligentes segun version. Compatible con Android y iPhone. Ideal para ventas, viajes, contenido y uso diario. Consultar disponibilidad de funciones segun version."
+  },
+  {
+    "id": "haode-ai-w610-smart-glasses",
+    "category": "gafas-ai",
+    "brand": "HAODE",
+    "model": "HAODE AI W610 Smart Glasses",
+    "name": "Gafas Inteligentes AI W610",
+    "quality": "HAODE AI W610 Smart Glasses",
+    "images": [
+      "assets/products/placeholder.svg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1800 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1500 MXN"
+      }
+    ],
+    "priceSource": "老板确认 2026-06-05",
+    "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI W610",
+    "description": "Gafas inteligentes con AI para clientes en Mexico. Incluyen camara HD, grabacion de foto, video y audio, conectividad WiFi, Bluetooth y funciones inteligentes segun version. Compatible con Android y iPhone. Ideal para ventas, viajes, contenido y uso diario. Consultar disponibilidad de funciones segun version."
+  },
+  {
+    "id": "s1-ai-classic",
+    "category": "gafas-ai",
+    "brand": "HAODE",
+    "model": "Gafas AI classic",
+    "name": "HAODE AI CLASSIC S1",
+    "quality": "Gafas AI classic",
+    "images": [
+      "assets/products/productos-ai/s1-ai-classic/main.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1500 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1200 MXN"
+      }
+    ],
+    "priceSource": "products-master/app confirmed existing price",
+    "whatsappText": "Hola HAODE, quiero cotizar: HAODE AI CLASSIC S1",
+    "description": "Gafas inteligentes estilo classic con funciones de audio y asistente. Disponible para menudeo y mayoreo HAODE."
+  },
+  {
+    "id": "aimb-g5-ai-sports",
+    "category": "gafas-ai",
+    "brand": "HAODE",
+    "model": "Gafas AI deportivas",
+    "name": "AIMB-G5 AI SPORTS",
+    "quality": "Gafas AI deportivas",
+    "images": [
+      "assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1800 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1400 MXN"
+      }
+    ],
+    "priceSource": "products-master/app confirmed existing price",
+    "whatsappText": "Hola HAODE, quiero cotizar: AIMB-G5 AI SPORTS",
+    "description": "Gafas AI estilo deportivo para catalogo HAODE. Consulta disponibilidad, colores y precio por WhatsApp."
+  },
+  {
+    "id": "w630-ai-pro",
+    "category": "gafas-ai",
+    "brand": "HAODE",
+    "model": "Gafas AI blancas",
+    "name": "W630 AI PRO",
+    "quality": "Gafas AI blancas",
+    "images": [
+      "assets/products/productos-ai/w630-ai-smart-glasses/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$1900 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$1600 MXN"
+      }
+    ],
+    "priceSource": "products-master/app confirmed existing price",
+    "whatsappText": "Hola HAODE, quiero cotizar: W630 AI PRO",
+    "description": "Gafas inteligentes con camara, conectividad y funciones AI para uso diario. Producto HAODE para venta por WhatsApp."
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
   "generatedAt": "2026-06-05T19:35:57.650Z",
-  "workbook": "HL CDMX 2026 06xlsx.xlsx"
+  "workbook": "HL CDMX 2026 06xlsx.xlsx",
+  "updatedFor": "AI glasses 5-product audit 2026-06-05"
 };
