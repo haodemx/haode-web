@@ -7,6 +7,8 @@
     "build-products": "node scripts/build-products.js",
     "test-catalog-filters": "node scripts/test-catalog-filters.js",
     "product-control": "node scripts/product-control-system.js",
+    "product-control-center": "/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/product-control-center.py",
+    "product-validate": "/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/product-control-center.py --validate-only",
     "daily-website-audit": "node scripts/daily-website-audit.js"
   }
 }
