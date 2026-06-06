@@ -7,7 +7,7 @@ const categories = [
   { id: "Todos", label: "Todos" },
   { id: "Pantallas iPhone OLED", label: "iPhone OLED" },
   { id: "Pantallas iPhone INCELL", label: "iPhone INCELL" },
-  { id: "Pantallas Samsung OLED", label: "Samsung AMOLED/OLED" },
+  { id: "Pantallas Samsung OLED", label: "Samsung AMOLED" },
   { id: "Pantallas Samsung INCELL", label: "Samsung INCELL" },
   { id: "Pantallas Samsung Original", label: "Samsung Original" },
   { id: "Micas", label: "Micas" },
