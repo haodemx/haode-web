@@ -4133,7 +4133,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Gafas Inteligentes AI W610",
     "quality": "HAODE AI W610 Smart Glasses",
     "images": [
-      "assets/products/placeholder.svg"
+      "assets/products/productos-ai/w610-ai-smart-glasses/main.jpg"
     ],
     "videos": [],
     "prices": [
