@@ -16,6 +16,15 @@ const categories = [
   { id: "Fundas", label: "Fundas" }
 ];
 
+const categoryAliases = {
+  fundas: "Fundas",
+  "Fundas y Accesorios": "Fundas"
+};
+
+const categorySearchAliases = {
+  Fundas: "Fundas y Accesorios"
+};
+
 const requiredAiGlassesIds = [
   "s1-ai-classic",
   "aimb-g5-ai-sports",
@@ -69,9 +78,10 @@ const checkoutInputs = [customerNameEl, customerPhoneEl, customerCityEl, custome
 function normalizeProduct(product) {
   const productDocId = String(product.docId || "").trim();
   const productId = String(product.id || "").trim();
+  const rawCategory = product.categoria || product.category || categories[0].id;
   return {
     id: productId || productDocId,
-    category: product.categoria || product.category || categories[0].id,
+    category: categoryAliases[rawCategory] || rawCategory,
     name: product.nombre || product.name || "Producto HAODE",
     model: product.modelo || product.model || "Consultar modelo",
     description: product.descripcion || product.description || "",
@@ -310,7 +320,7 @@ function renderProducts() {
   const queryTokens = query.split(/\s+/).filter(Boolean);
   const visibleProducts = products.filter((product) => {
     const matchesCategory = query || state.activeCategory === "Todos" ? true : product.category === state.activeCategory;
-    const searchText = [product.name, product.model, product.description, product.category]
+    const searchText = [product.name, product.model, product.description, product.category, categorySearchAliases[product.category]]
       .map((value) => String(value || "").toLowerCase())
       .join(" ");
     const matchesSearch = !queryTokens.length || queryTokens.every((token) => searchText.includes(token));

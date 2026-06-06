@@ -9,6 +9,11 @@ const EXPECTED_CATEGORIES = [
   'iphone-oled',
   'samsung-incell',
   'samsung-oled',
+  'samsung-original',
+  'gafas-ai',
+  'micas',
+  'maquinas-de-mica',
+  'fundas',
 ];
 
 const context = { window: {} };
