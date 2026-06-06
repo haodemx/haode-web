@@ -111,6 +111,18 @@ Also follow the root HAODE rules:
 
 不要再询问是否提交。
 
+## New Skill Binding
+
+This website repository is formally connected to the new HAODE Skills.
+
+- Website/App repairs, image paths, data sync, SEO, QA, deploy: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.
+- Live/external verification: add `firecrawl` only when needed.
+- New product handoff: use `haode-product-upload` and `haode-marketing-factory` only after product facts, prices, and assets are confirmed.
+- Video/material handoff: use `video-use`, `remotion-skills`, `seedance2-skill`, or `generative-media-skills` only when the website task explicitly includes media output.
+- Workflow source: `/Users/mac/Documents/haode/HAODE-AUTOMATION/WORKFLOWS/WEBSITE_QA_WORKFLOW.md`.
+
+Do not modify public website content, prices, categories, or images unless the task explicitly requests it.
+
 ## Web Agent
 
 调用方式：

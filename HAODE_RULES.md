@@ -13,3 +13,10 @@ Required website workflow:
 3. Verify desktop/mobile page effect when UI is affected.
 4. Check links, assets, WhatsApp buttons, SEO paths, and 404 risk when relevant.
 5. Commit and push when feasible and in scope.
+
+## Connected Skills
+
+- Website/App: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.
+- Live/external verification: `firecrawl` when needed.
+- Workflow source: `/Users/mac/Documents/haode/HAODE-AUTOMATION/WORKFLOWS/WEBSITE_QA_WORKFLOW.md`.
+- Guardrail: do not change website content, prices, categories, or images unless the task explicitly asks for it.
