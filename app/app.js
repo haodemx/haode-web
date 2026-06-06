@@ -15,6 +15,14 @@ const categories = [
   { id: "Fundas", label: "Fundas" }
 ];
 
+const requiredAiGlassesIds = [
+  "s1-ai-classic",
+  "aimb-g5-ai-sports",
+  "haode-ai-g3-smart-glasses",
+  "w630-ai-pro",
+  "haode-ai-w610-smart-glasses"
+];
+
 let products = [];
 
 const state = {
@@ -97,6 +105,25 @@ function hasRealCatalog(items) {
   return items.some((product) => categoryIds.has(product.categoria || product.category));
 }
 
+function missingRequiredAiGlasses(items) {
+  const ids = new Set(items.map((product) => product.id));
+  return requiredAiGlassesIds.filter((id) => !ids.has(id));
+}
+
+function withRequiredAiGlasses(primaryItems, localItems) {
+  const productsById = new Map(primaryItems.map((product) => [product.id, product]));
+  const localById = new Map(localItems.map((product) => [product.id, product]));
+
+  for (const id of requiredAiGlassesIds) {
+    if (!productsById.has(id) && localById.has(id)) {
+      productsById.set(id, localById.get(id));
+    }
+  }
+
+  return Array.from(productsById.values())
+    .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"));
+}
+
 async function loadFirestoreProducts() {
   if (!isFirebaseConfigured()) {
     throw new Error("Firebase no configurado");
@@ -154,6 +181,9 @@ async function loadLocalProducts() {
 }
 
 async function loadProducts() {
+  const localProducts = await loadLocalProducts();
+  const normalizedLocalProducts = activeProducts(localProducts);
+
   try {
     const firestoreProducts = await loadFirestoreProducts();
     try {
@@ -170,12 +200,15 @@ async function loadProducts() {
     if (!hasRealCatalog(firestoreProducts)) {
       throw new Error("Firestore sin catalogo HAODE real");
     }
-    products = activeProducts(firestoreProducts);
-    state.dataSource = "Firestore";
+    const normalizedFirestoreProducts = activeProducts(firestoreProducts);
+    const missingAiGlasses = missingRequiredAiGlasses(normalizedFirestoreProducts);
+    products = withRequiredAiGlasses(normalizedFirestoreProducts, normalizedLocalProducts);
+    state.dataSource = missingAiGlasses.length
+      ? `Firestore + products.json (${missingAiGlasses.length} Gafas AI)`
+      : "Firestore";
   } catch (error) {
     console.info("HAODE app usando products.json fallback:", error.message);
-    const localProducts = await loadLocalProducts();
-    products = activeProducts(localProducts);
+    products = normalizedLocalProducts;
     state.diagnostics.firestoreTotal = null;
     state.diagnostics.firestoreActive = null;
     state.dataSource = "products.json";
