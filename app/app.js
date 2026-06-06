@@ -7,8 +7,9 @@ const categories = [
   { id: "Todos", label: "Todos" },
   { id: "Pantallas iPhone OLED", label: "iPhone OLED" },
   { id: "Pantallas iPhone INCELL", label: "iPhone INCELL" },
-  { id: "Pantallas Samsung AMOLED", label: "Samsung AMOLED" },
+  { id: "Pantallas Samsung OLED", label: "Samsung AMOLED/OLED" },
   { id: "Pantallas Samsung INCELL", label: "Samsung INCELL" },
+  { id: "Pantallas Samsung Original", label: "Samsung Original" },
   { id: "Micas", label: "Micas" },
   { id: "Máquinas de Mica", label: "Máquinas de Mica" },
   { id: "Gafas AI", label: "Gafas AI" },
@@ -183,9 +184,10 @@ async function loadLocalProducts() {
 async function loadProducts() {
   const localProducts = await loadLocalProducts();
   const normalizedLocalProducts = activeProducts(localProducts);
+  products = normalizedLocalProducts;
+  state.dataSource = "products.json";
 
   try {
-    const firestoreProducts = await loadFirestoreProducts();
     try {
       const allProducts = await loadAllFirestoreProducts();
       state.diagnostics.firestoreTotal = allProducts.length;
@@ -193,25 +195,12 @@ async function loadProducts() {
       state.diagnostics.firestoreTotal = null;
     }
 
+    const firestoreProducts = await loadFirestoreProducts();
     state.diagnostics.firestoreActive = firestoreProducts.length;
-    if (!firestoreProducts.length) {
-      throw new Error("Firestore sin productos activos");
-    }
-    if (!hasRealCatalog(firestoreProducts)) {
-      throw new Error("Firestore sin catalogo HAODE real");
-    }
-    const normalizedFirestoreProducts = activeProducts(firestoreProducts);
-    const missingAiGlasses = missingRequiredAiGlasses(normalizedFirestoreProducts);
-    products = withRequiredAiGlasses(normalizedFirestoreProducts, normalizedLocalProducts);
-    state.dataSource = missingAiGlasses.length
-      ? `Firestore + products.json (${missingAiGlasses.length} Gafas AI)`
-      : "Firestore";
   } catch (error) {
-    console.info("HAODE app usando products.json fallback:", error.message);
-    products = normalizedLocalProducts;
+    console.info("HAODE app usando products.json:", error.message);
     state.diagnostics.firestoreTotal = null;
     state.diagnostics.firestoreActive = null;
-    state.dataSource = "products.json";
   }
 
   state.diagnostics.normalizedTotal = products.length;
@@ -318,11 +307,13 @@ function renderProductSections() {
 
 function renderProducts() {
   const query = state.searchQuery.trim().toLowerCase();
+  const queryTokens = query.split(/\s+/).filter(Boolean);
   const visibleProducts = products.filter((product) => {
     const matchesCategory = query || state.activeCategory === "Todos" ? true : product.category === state.activeCategory;
-    const matchesSearch = !query || [product.name, product.model, product.description]
-      .concat(product.category)
-      .some((value) => String(value || "").toLowerCase().includes(query));
+    const searchText = [product.name, product.model, product.description, product.category]
+      .map((value) => String(value || "").toLowerCase())
+      .join(" ");
+    const matchesSearch = !queryTokens.length || queryTokens.every((token) => searchText.includes(token));
     return matchesCategory && matchesSearch;
   });
 
