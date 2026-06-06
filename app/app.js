@@ -9,7 +9,7 @@ const categories = [
   { id: "Pantallas iPhone INCELL", label: "iPhone INCELL" },
   { id: "Pantallas Samsung OLED", label: "Samsung AMOLED" },
   { id: "Pantallas Samsung INCELL", label: "Samsung INCELL" },
-  { id: "Pantallas Samsung Original", label: "Samsung Original" },
+  { id: "Pantallas Samsung Original", label: "Samsung TIPO ORIGINAL" },
   { id: "Micas", label: "Micas" },
   { id: "Máquinas de Mica", label: "Máquinas de Mica" },
   { id: "Gafas AI", label: "Gafas AI" },
@@ -18,7 +18,8 @@ const categories = [
 
 const categoryAliases = {
   fundas: "Fundas",
-  "Fundas y Accesorios": "Fundas"
+  "Fundas y Accesorios": "Fundas",
+  "Pantallas Samsung AMOLED": "Pantallas Samsung OLED"
 };
 
 const categorySearchAliases = {
@@ -75,15 +76,61 @@ const customerCommentEl = document.querySelector("[data-customer-comment]");
 const cartCountEls = document.querySelectorAll("[data-cart-count], [data-cart-count-bottom]");
 const checkoutInputs = [customerNameEl, customerPhoneEl, customerCityEl, customerCommentEl];
 
+function samsungQualityFor(category, model) {
+  const text = `${category || ""} ${model || ""}`.toUpperCase();
+
+  if (text.includes("TIPO ORIGINAL")) {
+    return {
+      label: "TIPO ORIGINAL",
+      spec: "TIPO ORIGINAL CON MARCO"
+    };
+  }
+
+  if (text.includes("AMOLED") || text.includes("OLED")) {
+    return {
+      label: "AMOLED",
+      spec: "AMOLED CON MARCO"
+    };
+  }
+
+  if (text.includes("INCELL")) {
+    return {
+      label: "INCELL",
+      spec: "INCELL CON MARCO"
+    };
+  }
+
+  return null;
+}
+
+function productDisplayName(name, category) {
+  const normalizedName = String(name || "Producto HAODE").replace(/\s+/g, " ").trim();
+
+  if (!String(category || "").includes("Pantallas Samsung")) {
+    return normalizedName;
+  }
+
+  return normalizedName
+    .replace(/^Pantalla\s+para\s+Samsung\b/i, "Pantalla Samsung")
+    .replace(/\s+(TIPO\s+ORIGINAL|AMOLED|OLED|INCELL)\s+CON\s+MARCO\b/gi, "")
+    .trim();
+}
+
 function normalizeProduct(product) {
   const productDocId = String(product.docId || "").trim();
   const productId = String(product.id || "").trim();
   const rawCategory = product.categoria || product.category || categories[0].id;
+  const name = product.nombre || product.name || "Producto HAODE";
+  const model = product.modelo || product.model || "Consultar modelo";
+  const quality = samsungQualityFor(categoryAliases[rawCategory] || rawCategory, model);
+
   return {
     id: productId || productDocId,
     category: categoryAliases[rawCategory] || rawCategory,
-    name: product.nombre || product.name || "Producto HAODE",
-    model: product.modelo || product.model || "Consultar modelo",
+    name,
+    displayName: productDisplayName(name, categoryAliases[rawCategory] || rawCategory),
+    model,
+    quality,
     description: product.descripcion || product.description || "",
     publicPrice: Number(product.precioPublico ?? product.publicPrice ?? 0),
     wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
@@ -249,6 +296,15 @@ function productStockMarkup(product) {
 }
 
 function productCardHtml(product) {
+  const qualityMarkup = product.quality
+    ? `
+        <div class="quality-row" aria-label="Calidad de pantalla">
+          <span class="quality-badge">${product.quality.label}</span>
+          <span class="quality-spec">${product.quality.spec}</span>
+        </div>
+      `
+    : "";
+
   return `
     <article class="product-card">
       <div class="product-media">
@@ -256,9 +312,10 @@ function productCardHtml(product) {
       </div>
       <div class="product-info">
         <div class="product-title-row">
-          <h3>${product.name}</h3>
+          <h3>${product.displayName}</h3>
           ${productStockMarkup(product)}
         </div>
+        ${qualityMarkup}
         <p class="model">Modelo: ${product.model}</p>
         <div class="price-lines">
           <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
@@ -320,7 +377,16 @@ function renderProducts() {
   const queryTokens = query.split(/\s+/).filter(Boolean);
   const visibleProducts = products.filter((product) => {
     const matchesCategory = query || state.activeCategory === "Todos" ? true : product.category === state.activeCategory;
-    const searchText = [product.name, product.model, product.description, product.category, categorySearchAliases[product.category]]
+    const searchText = [
+      product.name,
+      product.displayName,
+      product.model,
+      product.quality?.label,
+      product.quality?.spec,
+      product.description,
+      product.category,
+      categorySearchAliases[product.category]
+    ]
       .map((value) => String(value || "").toLowerCase())
       .join(" ");
     const matchesSearch = !queryTokens.length || queryTokens.every((token) => searchText.includes(token));

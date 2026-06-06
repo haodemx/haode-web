@@ -390,11 +390,43 @@ a {
   color: var(--muted);
 }
 
+.quality-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.quality-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 9px;
+  border: 1px solid rgba(255, 122, 26, 0.34);
+  border-radius: 999px;
+  background: var(--orange-soft);
+  color: var(--orange-dark);
+  font-size: 0.72rem;
+  font-weight: 950;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.quality-spec {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
 .model {
-  margin: 5px 0 8px;
+  margin: 0 0 8px;
   color: var(--muted);
   font-size: 0.86rem;
   font-weight: 750;
+  overflow-wrap: anywhere;
 }
 
 .price-lines {
