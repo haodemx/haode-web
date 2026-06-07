@@ -1134,6 +1134,7 @@ function renderCatalogPage() {
     const meta = CATEGORY_META[category];
     const section = document.createElement('section');
     section.className = 'catalog-section';
+    section.id = category;
     section.dataset.category = category;
 
     const head = document.createElement('div');
