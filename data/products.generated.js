@@ -4074,6 +4074,41 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "Funda Premium Aluminio disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta funda para iPhone se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
+    "id": "funda-premium-aluminio-plus",
+    "category": "fundas",
+    "brand": "HAODE",
+    "model": "13 Pro a 16 Pro Max",
+    "name": "Funda Premium Aluminio Plus",
+    "quality": "Premium Aluminio",
+    "images": [
+      "assets/products/fundas/funda-premium-aluminio-plus/main.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/01-A53B7C3E-9975-48E9-A0E4-CB8CDAEBDC63.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/02-E8E267BE-CBFD-49B2-BF1C-7CABB1C1FEDA.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/03-10E278C7-2FB0-4FE9-912F-656C930C4221.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/04-4A11A8FA-F085-4913-A1B3-013B61E76F25.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/05-71D8EF61-9678-42FF-A981-10E998C8F140.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/06-E2266069-EC37-4660-A16C-0EC7E7288E31.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/07-43A86429-0D49-4871-BA70-307CCEA7F7EA.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/08-0CD0905B-4CF5-4430-A0C3-480BDCA15197.webp"
+    ],
+    "videos": [
+      "assets/products/fundas/funda-premium-aluminio-plus/video-01.mp4"
+    ],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$85 MXN"
+      },
+      {
+        "quantity": "10+ pzs",
+        "price": "$75 MXN"
+      }
+    ],
+    "priceSource": "Confirmado por HAODE",
+    "whatsappText": "Hola HAODE, quiero cotizar: Funda Premium Aluminio Plus",
+    "description": "Funda Premium Aluminio Plus disponible en HAODE México para tiendas de accesorios, técnicos y distribuidores. Panel metálico con acabado premium para iPhone Pro y Pro Max, compatible con modelos 13 Pro, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro, 15 Pro Max, 16 Pro y 16 Pro Max. Disponible en Black, Blue, Silver y Orange."
+  },
+  {
     "id": "funda-magnetica-17-pro-max",
     "category": "fundas",
     "brand": "HAODE",

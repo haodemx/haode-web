@@ -72,7 +72,7 @@ const CATEGORY_META = {
     brand: 'HAODE',
     title: 'Fundas',
     subtitle: 'Fundas y accesorios para venta rápida en tienda.',
-    mainImage: 'assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/main.jpg',
+    mainImage: 'assets/products/fundas/funda-premium-aluminio-plus/main.webp',
     galleryImages: [],
   },
 };
