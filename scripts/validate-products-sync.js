@@ -87,6 +87,23 @@ function collectCategoryPageSlugs() {
     .map((entry) => entry.name);
 }
 
+function slugFromSiteUrl(value) {
+  const text = String(value || '').trim();
+  const match = text.match(/\/producto\/([^/?#]+)\/?/);
+  return match ? match[1] : '';
+}
+
+function extractProductPageSlugs(text) {
+  const canonicalMatch = text.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)
+    || text.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical["']/i);
+  const ogMatch = text.match(/<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["']/i)
+    || text.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:url["']/i);
+  return {
+    canonicalSlug: canonicalMatch ? slugFromSiteUrl(canonicalMatch[1]) : '',
+    ogSlug: ogMatch ? slugFromSiteUrl(ogMatch[1]) : '',
+  };
+}
+
 function issue(list, severity, type, sku, detail) {
   list.push({ severity, type, sku, detail });
 }
@@ -165,6 +182,13 @@ function main() {
     const filePath = path.join(PRODUCT_DIR, slug, 'index.html');
     const text = fs.readFileSync(filePath, 'utf8');
     const isRedirect = /http-equiv=["']refresh|window\.location|location\.href/i.test(text);
+    const pageSlugs = extractProductPageSlugs(text);
+    if (pageSlugs.canonicalSlug && pageSlugs.canonicalSlug !== slug) {
+      issue(issues, 'warn', 'ROUTE_CANONICAL_SLUG_MISMATCH', slug, `canonical slug is ${pageSlugs.canonicalSlug}`);
+    }
+    if (pageSlugs.ogSlug && pageSlugs.ogSlug !== slug) {
+      issue(issues, 'warn', 'ROUTE_OG_SLUG_MISMATCH', slug, `OG URL slug is ${pageSlugs.ogSlug}`);
+    }
     if (!websiteById.has(slug) && !isRedirect) {
       issue(issues, 'warn', 'STATIC_PAGE_WITHOUT_WEBSITE_PRODUCT', slug, `producto/${slug}/index.html does not match website product data`);
     }

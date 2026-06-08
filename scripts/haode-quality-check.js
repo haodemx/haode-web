@@ -6,6 +6,24 @@ const SITE_URL = 'https://haodemx.github.io/haode-web';
 const PUBLIC_EXTENSIONS = new Set(['.html', '.js', '.css', '.xml', '.txt', '.webmanifest', '.json']);
 const PUBLIC_DIRS = new Set(['app', 'categoria', 'contacto', 'distribuidores', 'garantia', 'micas', 'producto', 'productos', 'productos-ai']);
 const FORBIDDEN = ['file://', 'localhost', '127.0.0.1', '/Users/mac', 'squarespace', 'under construction'];
+const KEY_REPORTS = [
+  'reports/product-data-consistency-audit.md',
+  'reports/video-missing-audit.md',
+  'reports/owner-confirmation-checklist.md',
+];
+const KEY_PAGES = [
+  'index.html',
+  'productos.html',
+  'productos/index.html',
+  'producto.html',
+  'micas.html',
+  'productos-ai.html',
+  'contacto/index.html',
+  'app/index.html',
+  'app/products.json',
+  'sitemap.xml',
+  'robots.txt',
+];
 
 function walk(dir, files = []) {
   fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
@@ -82,6 +100,14 @@ function checkJsonLd(filePath, text, issues) {
   }
 }
 
+function extractSitemapUrls(text) {
+  const urls = [];
+  const re = /<loc>\s*([^<\s]+)\s*<\/loc>/gi;
+  let match;
+  while ((match = re.exec(text))) urls.push(match[1]);
+  return urls;
+}
+
 function main() {
   const issues = [];
   const files = walk(ROOT).filter(isPublicFile);
@@ -99,6 +125,7 @@ function main() {
     });
   });
 
+  let redirectPages = 0;
   htmlFiles.forEach((file) => {
     const text = read(file);
     checkJsonLd(file, text, issues);
@@ -114,6 +141,7 @@ function main() {
 
     const refreshMatch = text.match(/http-equiv=["']refresh["'][^>]+content=["'][^"']*url=([^"']+)["']/i);
     if (refreshMatch) {
+      redirectPages += 1;
       const target = resolveInternalTarget(file, refreshMatch[1].trim());
       if (target && !fs.existsSync(target)) add(issues, 'warn', 'REDIRECT_TARGET_MISSING', file, refreshMatch[1].trim());
     }
@@ -128,7 +156,14 @@ function main() {
     add(issues, 'error', 'SITEMAP_MISSING', sitemap, 'sitemap.xml missing');
   } else {
     const sitemapText = read(sitemap);
+    const sitemapUrls = extractSitemapUrls(sitemapText);
     if (!sitemapText.includes(SITE_URL)) add(issues, 'error', 'SITEMAP_SITE_URL_MISSING', sitemap, SITE_URL);
+    if (!sitemapUrls.length) add(issues, 'error', 'SITEMAP_NO_LOC_ENTRIES', sitemap, 'no <loc> entries found');
+    sitemapUrls.forEach((url) => {
+      if (!url.startsWith(SITE_URL)) add(issues, 'error', 'SITEMAP_URL_DOMAIN', sitemap, url);
+      const target = resolveInternalTarget(sitemap, url);
+      if (target && !fs.existsSync(target)) add(issues, 'warn', 'SITEMAP_TARGET_MISSING', sitemap, url);
+    });
     htmlFiles.forEach((file) => {
       const rel = relative(file);
       if (rel === '404.html' || rel.includes('/admin')) return;
@@ -142,6 +177,14 @@ function main() {
 
   if (!fs.existsSync(appProducts)) add(issues, 'error', 'APP_PRODUCTS_MISSING', appProducts, 'app/products.json missing');
   if (!fs.existsSync(reportsDir)) add(issues, 'error', 'REPORTS_DIR_MISSING', reportsDir, 'reports directory missing');
+  KEY_REPORTS.forEach((report) => {
+    const target = path.join(ROOT, report);
+    if (!fs.existsSync(target)) add(issues, 'error', 'KEY_REPORT_MISSING', target, `${report} missing`);
+  });
+  KEY_PAGES.forEach((page) => {
+    const target = path.join(ROOT, page);
+    if (!fs.existsSync(target)) add(issues, 'error', 'KEY_PAGE_MISSING', target, `${page} missing`);
+  });
 
   const counts = issues.reduce((acc, item) => {
     acc[item.severity] = (acc[item.severity] || 0) + 1;
@@ -151,6 +194,7 @@ function main() {
     status: counts.error ? 'FAIL' : 'PASS',
     scannedFiles: files.length,
     htmlFiles: htmlFiles.length,
+    redirectPages,
     errors: counts.error || 0,
     warnings: counts.warn || 0,
   };
