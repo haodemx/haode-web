@@ -148,6 +148,13 @@ function normalizeProduct(product) {
     discountPrice: Number(product.discountPrice ?? 0),
     discountPercent: Number(product.discountPercent ?? 0),
     offerBadge: product.offerBadge || "",
+    offerTitle: product.offerTitle || "",
+    offerSubtitle: product.offerSubtitle || "",
+    offerPromoLabel: product.offerPromoLabel || "",
+    offerDisplayPrice: product.offerDisplayPrice || "",
+    offerDisplayNote: product.offerDisplayNote || "",
+    offerImage: product.offerImage || "",
+    offerSort: Number(product.offerSort ?? product.orden ?? product.order ?? 9999),
     offerStartDate: product.offerStartDate || "",
     offerEndDate: product.offerEndDate || ""
   };
@@ -406,7 +413,7 @@ function activeOffers() {
   const today = new Date();
 
   return products.filter((product) => {
-    if (!product.specialOffer || product.offerActive === false || !product.discountPrice) {
+    if (!product.specialOffer || product.offerActive === false || (!product.discountPrice && !product.offerDisplayPrice)) {
       return false;
     }
 
@@ -414,26 +421,38 @@ function activeOffers() {
     const endsAt = product.offerEndDate ? new Date(product.offerEndDate) : null;
 
     return (!startsAt || startsAt <= today) && (!endsAt || endsAt >= today);
-  });
+  }).sort((a, b) => a.offerSort - b.offerSort || a.order - b.order || a.id.localeCompare(b.id));
 }
 
 function offerCardHtml(product) {
   const originalPrice = product.originalPrice || product.publicPrice;
   const badge = product.offerBadge || (product.discountPercent ? `-${product.discountPercent}%` : "Oferta");
-
-  return `
-    <article class="offer-card" data-focus-product="${product.id}">
-      <div class="offer-media">
-        <img src="${product.image}" alt="${product.name}" loading="lazy" />
-        <span>${badge}</span>
-      </div>
-      <div class="offer-info">
-        <h3>${product.displayName}</h3>
-        <p>${product.model}</p>
+  const offerImage = product.offerImage || product.image;
+  const offerTitle = product.offerTitle || product.displayName;
+  const offerSubtitle = product.offerSubtitle || product.model;
+  const priceMarkup = product.offerDisplayPrice
+    ? `
+        ${product.offerPromoLabel ? `<span class="offer-promo-label">${product.offerPromoLabel}</span>` : ""}
+        <strong class="offer-display-price">${product.offerDisplayPrice}</strong>
+        ${product.offerDisplayNote ? `<p class="offer-display-note">${product.offerDisplayNote}</p>` : ""}
+      `
+    : `
         <div class="offer-prices">
           <del>${formatPrice(originalPrice)}</del>
           <strong>${formatPrice(product.discountPrice)}</strong>
         </div>
+      `;
+
+  return `
+    <article class="offer-card${product.offerDisplayPrice ? " featured-offer-card" : ""}" data-focus-product="${product.id}">
+      <div class="offer-media">
+        <img src="${offerImage}" alt="${offerTitle}" loading="lazy" />
+        <span>${badge}</span>
+      </div>
+      <div class="offer-info">
+        <h3>${offerTitle}</h3>
+        <p>${offerSubtitle}</p>
+        ${priceMarkup}
         <div class="offer-actions">
           <button class="add-button" type="button" data-add-product="${product.id}">Agregar al carrito</button>
           <button class="text-button" type="button" data-focus-product="${product.id}">Ver detalles</button>
@@ -450,6 +469,7 @@ function renderOffers() {
 
   const offers = activeOffers();
   offerCarouselEl?.classList.toggle("offers-empty", !offers.length);
+  offerCarouselEl?.classList.toggle("offers-single", offers.length === 1);
 
   if (!offers.length) {
     offersTrackEl.innerHTML = `
@@ -491,6 +511,9 @@ function moveOffer(delta) {
 
 function startOfferAutoplay() {
   window.clearInterval(state.offerTimer);
+  if (activeOffers().length <= 1) {
+    return;
+  }
   state.offerTimer = window.setInterval(() => moveOffer(1), 4000);
 }
 

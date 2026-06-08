@@ -244,7 +244,17 @@
     "imagen": "/haode-web/assets/products/iphone-incell/11pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 200
+    "orden": 200,
+    "specialOffer": true,
+    "offerActive": true,
+    "offerTitle": "Pantalla iPhone 11 Pro FHD",
+    "offerSubtitle": "Alto brillo 591 cd/m²",
+    "offerBadge": "Oferta",
+    "offerPromoLabel": "PROMOCIÓN DE FÁBRICA",
+    "offerDisplayPrice": "$170 MXN / pieza",
+    "offerDisplayNote": "Caja cerrada (290 pzs) · Total caja: $49,300 MXN",
+    "offerImage": "/haode-web/assets/promotions/iphone-11-pro-fhd/factory-promo.png",
+    "offerSort": 1
   },
   {
     "id": "iphone-incell-11promax",

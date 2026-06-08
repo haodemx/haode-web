@@ -311,7 +311,9 @@ a {
 }
 
 .offers-empty .offer-controls,
-.offers-empty .offer-dots {
+.offers-empty .offer-dots,
+.offers-single .offer-controls,
+.offers-single .offer-dots {
   display: none;
 }
 
@@ -336,6 +338,12 @@ a {
 }
 
 .offers-empty .offers-track {
+  display: block;
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+.offers-single .offers-track {
   display: block;
   overflow: visible;
   padding-bottom: 0;
@@ -373,6 +381,10 @@ a {
   border-radius: 16px;
   background: #ffffff;
   scroll-snap-align: start;
+}
+
+.featured-offer-card {
+  grid-template-rows: minmax(220px, 260px) minmax(0, 1fr);
 }
 
 .offer-media {
@@ -439,6 +451,35 @@ a {
 .offer-prices strong {
   color: #dc2626;
   font-size: 1.05rem;
+}
+
+.offer-promo-label {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 122, 26, 0.12);
+  color: var(--orange-dark);
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.offer-display-price {
+  color: #dc2626;
+  font-size: 1.22rem;
+  font-weight: 950;
+  line-height: 1.1;
+}
+
+.offer-info .offer-display-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 780;
+  line-height: 1.35;
 }
 
 .offer-actions {
