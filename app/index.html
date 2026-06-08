@@ -31,13 +31,6 @@
         <span>Pedido por WhatsApp</span>
       </div>
     </div>
-    <label class="price-mode price-mode-header" aria-label="Tipo de precio para calcular el total">
-      <span>Precio para total</span>
-      <select data-price-mode aria-label="Tipo de precio para calcular el total">
-        <option value="public">Menudeo</option>
-        <option value="wholesale">Mayoreo</option>
-      </select>
-    </label>
     <button class="cart-pill" type="button" data-open-cart aria-label="Abrir carrito">
       <span>Carrito</span>
       <strong data-cart-count>0</strong>
@@ -45,12 +38,88 @@
   </header>
 
   <main class="app-shell">
-    <section class="hero">
-      <div>
-        <p>HAODE Shopping App</p>
-        <h1>Cotiza rapido, confirma por WhatsApp.</h1>
-        <span>Selecciona productos, ajusta cantidades y envia tu pedido. No aceptamos pagos en linea.</span>
+    <section class="hero" aria-label="Guia de precios y ofertas HAODE">
+      <div class="hero-pricing">
+        <p>Guia de precios HAODE</p>
+        <h1>Precios claros, compra facil</h1>
+        <span>Selecciona tu cantidad y obten el mejor precio.</span>
+
+        <div class="price-type-grid" aria-label="Tipos principales de precio">
+          <article>
+            <strong>Menudeo</strong>
+            <span>1 - 9 piezas</span>
+          </article>
+          <article>
+            <strong>Mayoreo</strong>
+            <span>10+ piezas</span>
+          </article>
+        </div>
+
+        <div class="quantity-pricing-card">
+          <h2>Tabla de precios por cantidad</h2>
+          <div class="quantity-table" role="table" aria-label="Tabla de precios por cantidad">
+            <div role="row">
+              <strong role="columnheader">Cantidad</strong>
+              <strong role="columnheader">Precio por pieza</strong>
+            </div>
+            <div role="row">
+              <span>1 - 9 piezas</span>
+              <span>Precio menudeo</span>
+            </div>
+            <div role="row">
+              <span>10 - 29 piezas</span>
+              <span>Precio mayoreo</span>
+            </div>
+            <div role="row">
+              <span>30 - 49 piezas</span>
+              <span>Precio especial</span>
+            </div>
+            <div role="row">
+              <span>50 - 99 piezas</span>
+              <span>Precio volumen</span>
+            </div>
+            <div role="row">
+              <span>100+ piezas</span>
+              <span>Precio distribuidor</span>
+            </div>
+          </div>
+          <p>Los precios pueden variar segun modelo y cantidad.</p>
+        </div>
       </div>
+
+      <div class="offers-panel" data-offer-carousel>
+        <div class="offers-head">
+          <div>
+            <p>Promociones activas</p>
+            <h2>🔥 Ofertas especiales</h2>
+          </div>
+          <div class="offer-controls">
+            <button type="button" data-offer-prev aria-label="Oferta anterior">&lt;</button>
+            <button type="button" data-offer-next aria-label="Oferta siguiente">&gt;</button>
+          </div>
+        </div>
+        <div class="offers-track" data-offers-track aria-live="polite"></div>
+        <div class="offer-dots" data-offer-dots aria-label="Indicadores de ofertas"></div>
+      </div>
+    </section>
+
+    <section class="service-grid" aria-label="Ventajas de comprar en HAODE">
+      <article>
+        <strong>Producto 100% Original</strong>
+        <span>Garantia de calidad HAODE</span>
+      </article>
+      <article>
+        <strong>Envios rapidos</strong>
+        <span>A toda la CDMX y Republica</span>
+      </article>
+      <article>
+        <strong>Precios competitivos</strong>
+        <span>Mejores precios por volumen</span>
+      </article>
+      <article>
+        <strong>Pedido por WhatsApp</strong>
+        <span>Atencion rapida y personalizada</span>
+      </article>
     </section>
 
     <section class="toolbar" aria-label="Filtros de productos">

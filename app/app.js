@@ -38,9 +38,10 @@ let products = [];
 
 const state = {
   activeCategory: categories[0].id,
-  priceMode: "public",
   searchQuery: "",
   cart: new Map(),
+  activeOfferIndex: 0,
+  offerTimer: null,
   dataSource: "Cargando",
   diagnostics: {
     firestoreTotal: null,
@@ -63,7 +64,6 @@ const latestSectionEl = document.querySelector("[data-latest-section]");
 const featuredSectionEl = document.querySelector("[data-featured-section]");
 const productCountEl = document.querySelector("[data-product-count]");
 const totalProductsEl = document.querySelector("[data-total-products]");
-const priceModeEl = document.querySelector("[data-price-mode]");
 const searchProductsEl = document.querySelector("[data-search-products]");
 const cartDrawerEl = document.querySelector("[data-cart-drawer]");
 const cartItemsEl = document.querySelector("[data-cart-items]");
@@ -75,6 +75,9 @@ const customerCityEl = document.querySelector("[data-customer-city]");
 const customerCommentEl = document.querySelector("[data-customer-comment]");
 const cartCountEls = document.querySelectorAll("[data-cart-count], [data-cart-count-bottom]");
 const checkoutInputs = [customerNameEl, customerPhoneEl, customerCityEl, customerCommentEl];
+const offersTrackEl = document.querySelector("[data-offers-track]");
+const offerDotsEl = document.querySelector("[data-offer-dots]");
+const offerCarouselEl = document.querySelector("[data-offer-carousel]");
 
 function samsungQualityFor(category, model) {
   const text = `${category || ""} ${model || ""}`.toUpperCase();
@@ -134,11 +137,38 @@ function normalizeProduct(product) {
     description: product.descripcion || product.description || "",
     publicPrice: Number(product.precioPublico ?? product.publicPrice ?? 0),
     wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
+    priceTiers: normalizePriceTiers(product.priceTiers || product.quantityPricing || product.preciosPorCantidad),
     image: product.imagen || product.image || "/haode-web/assets/products/placeholder.svg",
     stock: normalizeStock(product.stock),
     active: product.activo !== false,
-    order: Number(product.orden ?? product.order ?? 9999)
+    order: Number(product.orden ?? product.order ?? 9999),
+    specialOffer: product.specialOffer === true,
+    offerActive: product.offerActive !== false,
+    originalPrice: Number(product.originalPrice ?? 0),
+    discountPrice: Number(product.discountPrice ?? 0),
+    discountPercent: Number(product.discountPercent ?? 0),
+    offerBadge: product.offerBadge || "",
+    offerStartDate: product.offerStartDate || "",
+    offerEndDate: product.offerEndDate || ""
   };
+}
+
+function normalizePriceTiers(tiers) {
+  if (!Array.isArray(tiers)) {
+    return [];
+  }
+
+  return tiers
+    .map((tier) => ({
+      minQty: Number(tier.minQty ?? tier.minQuantity ?? tier.cantidadMinima ?? tier.min ?? 0),
+      maxQty: tier.maxQty === null || tier.maxQty === undefined
+        ? null
+        : Number(tier.maxQty ?? tier.maxQuantity ?? tier.cantidadMaxima ?? tier.max),
+      price: Number(tier.price ?? tier.precio ?? tier.unitPrice ?? tier.precioUnitario ?? 0),
+      label: tier.label || tier.nombre || "Precio por cantidad"
+    }))
+    .filter((tier) => tier.minQty > 0 && tier.price > 0)
+    .sort((a, b) => a.minQty - b.minQty);
 }
 
 function normalizeStock(stock) {
@@ -274,8 +304,33 @@ async function loadProducts() {
   }
 }
 
-function priceFor(product) {
-  return state.priceMode === "wholesale" ? product.wholesalePrice : product.publicPrice;
+function priceRuleFor(product, quantity = 1) {
+  const matchingTier = product.priceTiers
+    .filter((tier) => quantity >= tier.minQty && (tier.maxQty === null || quantity <= tier.maxQty))
+    .pop();
+
+  if (matchingTier) {
+    return {
+      unitPrice: matchingTier.price,
+      label: matchingTier.label
+    };
+  }
+
+  if (quantity >= 10) {
+    return {
+      unitPrice: product.wholesalePrice || product.publicPrice,
+      label: "Precio mayoreo"
+    };
+  }
+
+  return {
+    unitPrice: product.publicPrice,
+    label: "Precio menudeo"
+  };
+}
+
+function priceFor(product, quantity = 1) {
+  return priceRuleFor(product, quantity).unitPrice;
 }
 
 function formatPrice(value) {
@@ -323,6 +378,7 @@ function productCardHtml(product) {
         </div>
         <div class="product-description" data-product-description="${product.id}" hidden>
           <p>${product.description || "Sin detalles adicionales disponibles."}</p>
+          ${product.priceTiers.length ? priceTiersMarkup(product) : ""}
         </div>
         <div class="product-actions">
           <button class="text-button" type="button" data-show-details="${product.id}">Ver detalles</button>
@@ -332,6 +388,124 @@ function productCardHtml(product) {
       </div>
     </article>
   `;
+}
+
+function priceTiersMarkup(product) {
+  return `
+    <div class="detail-tiers">
+      <strong>Precios por cantidad</strong>
+      ${product.priceTiers.map((tier) => {
+        const range = tier.maxQty ? `${tier.minQty} - ${tier.maxQty} piezas` : `${tier.minQty}+ piezas`;
+        return `<span>${range}: ${formatPrice(tier.price)} · ${tier.label}</span>`;
+      }).join("")}
+    </div>
+  `;
+}
+
+function activeOffers() {
+  const today = new Date();
+
+  return products.filter((product) => {
+    if (!product.specialOffer || product.offerActive === false || !product.discountPrice) {
+      return false;
+    }
+
+    const startsAt = product.offerStartDate ? new Date(product.offerStartDate) : null;
+    const endsAt = product.offerEndDate ? new Date(product.offerEndDate) : null;
+
+    return (!startsAt || startsAt <= today) && (!endsAt || endsAt >= today);
+  });
+}
+
+function offerCardHtml(product) {
+  const originalPrice = product.originalPrice || product.publicPrice;
+  const badge = product.offerBadge || (product.discountPercent ? `-${product.discountPercent}%` : "Oferta");
+
+  return `
+    <article class="offer-card" data-focus-product="${product.id}">
+      <div class="offer-media">
+        <img src="${product.image}" alt="${product.name}" loading="lazy" />
+        <span>${badge}</span>
+      </div>
+      <div class="offer-info">
+        <h3>${product.displayName}</h3>
+        <p>${product.model}</p>
+        <div class="offer-prices">
+          <del>${formatPrice(originalPrice)}</del>
+          <strong>${formatPrice(product.discountPrice)}</strong>
+        </div>
+        <div class="offer-actions">
+          <button class="add-button" type="button" data-add-product="${product.id}">Agregar al carrito</button>
+          <button class="text-button" type="button" data-focus-product="${product.id}">Ver detalles</button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderOffers() {
+  if (!offersTrackEl || !offerDotsEl) {
+    return;
+  }
+
+  const offers = activeOffers();
+
+  if (!offers.length) {
+    offersTrackEl.innerHTML = '<div class="empty-cart">Proximamente nuevas ofertas especiales.</div>';
+    offerDotsEl.innerHTML = "";
+    return;
+  }
+
+  if (state.activeOfferIndex >= offers.length) {
+    state.activeOfferIndex = 0;
+  }
+
+  const orderedOffers = offers
+    .slice(state.activeOfferIndex)
+    .concat(offers.slice(0, state.activeOfferIndex));
+
+  offersTrackEl.innerHTML = orderedOffers.map(offerCardHtml).join("");
+  offerDotsEl.innerHTML = offers
+    .map((offer, index) => {
+      const active = index === state.activeOfferIndex ? " active" : "";
+      return `<button class="${active}" type="button" data-offer-dot="${index}" aria-label="Ver oferta ${index + 1}"></button>`;
+    })
+    .join("");
+}
+
+function moveOffer(delta) {
+  const offers = activeOffers();
+  if (!offers.length) {
+    return;
+  }
+
+  state.activeOfferIndex = (state.activeOfferIndex + delta + offers.length) % offers.length;
+  renderOffers();
+}
+
+function startOfferAutoplay() {
+  window.clearInterval(state.offerTimer);
+  state.offerTimer = window.setInterval(() => moveOffer(1), 4000);
+}
+
+function focusProduct(productId) {
+  const product = products.find((item) => item.id === productId);
+  if (!product) {
+    return;
+  }
+
+  state.activeCategory = "Todos";
+  state.searchQuery = product.displayName || product.name;
+  searchProductsEl.value = state.searchQuery;
+  renderCategories();
+  renderProducts();
+  document.querySelector("[data-product-grid]")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const detailsEl = document.querySelector(`[data-product-description="${productId}"]`);
+  const detailButton = document.querySelector(`[data-show-details="${productId}"]`);
+  if (detailsEl && detailButton) {
+    detailsEl.removeAttribute("hidden");
+    detailButton.textContent = "Ocultar detalles";
+  }
 }
 
 function renderProductSections() {
@@ -405,6 +579,7 @@ function renderProducts() {
     : '<div class="empty-cart">No hay productos activos para esta busqueda.</div>';
 
   renderProductSections();
+  renderOffers();
 }
 
 function getCartItems() {
@@ -415,7 +590,7 @@ function getCartItems() {
 }
 
 function cartTotal() {
-  return getCartItems().reduce((total, item) => total + priceFor(item.product) * item.quantity, 0);
+  return getCartItems().reduce((total, item) => total + priceFor(item.product, item.quantity) * item.quantity, 0);
 }
 
 function cartCount() {
@@ -424,12 +599,10 @@ function cartCount() {
 
 function buildWhatsappUrl() {
   const items = getCartItems();
-  const priceLabel = state.priceMode === "wholesale" ? "mayoreo" : "publico";
   const clientName = (customerNameEl?.value || "").trim();
   const clientPhone = (customerPhoneEl?.value || "").trim();
   const clientCity = (customerCityEl?.value || "").trim();
   const clientComment = (customerCommentEl?.value || "").trim();
-  const priceTypeLabel = state.priceMode === "wholesale" ? "Mayoreo" : "Menudeo";
 
   const lines = [
     "Hola HAODE, quiero hacer este pedido:",
@@ -437,14 +610,15 @@ function buildWhatsappUrl() {
     `Cliente: ${clientName || "Sin nombre"}`,
     `Telefono: ${clientPhone || "Sin telefono"}`,
     `Ciudad: ${clientCity || "Sin ciudad"}`,
-    `Tipo de precio: ${priceTypeLabel}`,
+    "Tipo de precio: automatico por cantidad",
     "",
     ...items.map((item) => {
-      const subtotal = priceFor(item.product) * item.quantity;
-      return `- ${item.product.name} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Subtotal (${priceLabel}): ${formatPrice(subtotal)}`;
+      const priceRule = priceRuleFor(item.product, item.quantity);
+      const subtotal = priceRule.unitPrice * item.quantity;
+      return `- ${item.product.name} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado por cantidad: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
     }),
     "",
-    `Total estimado (${priceTypeLabel.toLowerCase()}): ${formatPrice(cartTotal())}`,
+    `Total estimado: ${formatPrice(cartTotal())}`,
     "",
     `Comentario: ${clientComment || "Sin comentario"}`,
     "",
@@ -478,7 +652,8 @@ function renderCart() {
 
   cartItemsEl.innerHTML = items
     .map((item) => {
-      const subtotal = priceFor(item.product) * item.quantity;
+      const priceRule = priceRuleFor(item.product, item.quantity);
+      const subtotal = priceRule.unitPrice * item.quantity;
       return `
         <article class="cart-item">
           <img src="${item.product.image}" alt="${item.product.name}" loading="lazy" />
@@ -493,6 +668,7 @@ function renderCart() {
               </div>
               <strong>${formatPrice(subtotal)}</strong>
             </div>
+            <p class="applied-price">Precio aplicado por cantidad: ${priceRule.label} · ${formatPrice(priceRule.unitPrice)} c/u</p>
             <div class="cart-row">
               <button class="remove-button" type="button" data-remove="${item.product.id}">Eliminar</button>
             </div>
@@ -509,18 +685,13 @@ function renderCart() {
   whatsappLinkEl.classList.toggle("expanded", customerReady);
 }
 
-function setPriceMode(priceMode) {
-  state.priceMode = priceMode;
-  priceModeEl.value = priceMode;
+function addProduct(productId) {
+  state.cart.set(productId, (state.cart.get(productId) || 0) + 1);
   renderCart();
 }
 
-function addProduct(productId, forcedMode = null) {
-  if (forcedMode && state.priceMode !== forcedMode) {
-    setPriceMode(forcedMode);
-  }
-
-  state.cart.set(productId, (state.cart.get(productId) || 0) + 1);
+function addWholesaleProduct(productId) {
+  state.cart.set(productId, Math.max(state.cart.get(productId) || 0, 10));
   renderCart();
 }
 
@@ -556,6 +727,10 @@ document.addEventListener("click", (event) => {
   const removeButton = event.target.closest("[data-remove]");
   const openCartButton = event.target.closest("[data-open-cart]");
   const closeCartButton = event.target.closest("[data-close-cart]");
+  const offerPrevButton = event.target.closest("[data-offer-prev]");
+  const offerNextButton = event.target.closest("[data-offer-next]");
+  const offerDotButton = event.target.closest("[data-offer-dot]");
+  const focusProductButton = event.target.closest("[data-focus-product]");
 
   if (categoryButton) {
     state.activeCategory = categoryButton.dataset.category;
@@ -569,8 +744,28 @@ document.addEventListener("click", (event) => {
   }
 
   if (addWholesaleButton) {
-    addProduct(addWholesaleButton.dataset.addWholesale, "wholesale");
+    addWholesaleProduct(addWholesaleButton.dataset.addWholesale);
     openCart();
+  }
+
+  if (offerPrevButton) {
+    moveOffer(-1);
+    startOfferAutoplay();
+  }
+
+  if (offerNextButton) {
+    moveOffer(1);
+    startOfferAutoplay();
+  }
+
+  if (offerDotButton) {
+    state.activeOfferIndex = Number(offerDotButton.dataset.offerDot) || 0;
+    renderOffers();
+    startOfferAutoplay();
+  }
+
+  if (focusProductButton && !event.target.closest("[data-add-product]")) {
+    focusProduct(focusProductButton.dataset.focusProduct);
   }
 
   if (detailButton) {
@@ -610,15 +805,13 @@ document.addEventListener("click", (event) => {
   }
 });
 
-priceModeEl.addEventListener("change", (event) => {
-  state.priceMode = event.target.value;
-  renderCart();
-});
-
 searchProductsEl.addEventListener("input", (event) => {
   state.searchQuery = event.target.value;
   renderProducts();
 });
+
+offerCarouselEl?.addEventListener("mouseenter", () => window.clearInterval(state.offerTimer));
+offerCarouselEl?.addEventListener("mouseleave", startOfferAutoplay);
 
 checkoutInputs.forEach((element) => {
   element.addEventListener("input", renderCart);
@@ -631,6 +824,7 @@ async function init() {
   await loadProducts();
   renderCategories();
   renderProducts();
+  startOfferAutoplay();
   renderCart();
 }
 
