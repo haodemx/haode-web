@@ -26,3 +26,14 @@ Required website workflow:
 - Live/external verification: `firecrawl` when needed.
 - Workflow source: `/Users/mac/Documents/haode/HAODE-AUTOMATION/WORKFLOWS/WEBSITE_QA_WORKFLOW.md`.
 - Guardrail: do not change website content, prices, categories, or images unless the task explicitly asks for it.
+
+## Product/App Sync Enforcement
+
+- Every new product upload must update website product data and `app/products.json` together.
+- New product upload is never website-only.
+- New product upload is never app-only.
+- `app/products.json` is the current app product data path.
+- If `app/products.json` cannot be found or updated, stop.
+- If SKU, price, category, image, video policy, availability, or product claim is unclear, stop for owner confirmation.
+- If all required data is available and validation passes, low-risk website/app sync work may commit and push automatically.
+- Protected fields require owner confirmation: prices, images, videos, WhatsApp numbers, product names, specs, claims, categories, SKU, slug, availability, customer data, deleting files, brand, company data, and store address.
