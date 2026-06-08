@@ -449,9 +449,15 @@ function renderOffers() {
   }
 
   const offers = activeOffers();
+  offerCarouselEl?.classList.toggle("offers-empty", !offers.length);
 
   if (!offers.length) {
-    offersTrackEl.innerHTML = '<div class="empty-cart">Proximamente nuevas ofertas especiales.</div>';
+    offersTrackEl.innerHTML = `
+      <div class="offers-empty-state">
+        <strong>Proximamente nuevas ofertas especiales.</strong>
+        <span>Estamos preparando promociones seleccionadas para ti.</span>
+      </div>
+    `;
     offerDotsEl.innerHTML = "";
     return;
   }

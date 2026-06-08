@@ -310,6 +310,11 @@ a {
   gap: 6px;
 }
 
+.offers-empty .offer-controls,
+.offers-empty .offer-dots {
+  display: none;
+}
+
 .offer-controls button {
   width: 34px;
   height: 34px;
@@ -328,6 +333,35 @@ a {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 4px;
+}
+
+.offers-empty .offers-track {
+  display: block;
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+.offers-empty-state {
+  display: grid;
+  min-height: 150px;
+  align-content: center;
+  gap: 8px;
+  padding: 22px;
+  border: 1px dashed rgba(255, 122, 26, 0.35);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--muted);
+}
+
+.offers-empty-state strong {
+  color: var(--ink);
+  font-size: 1.02rem;
+}
+
+.offers-empty-state span {
+  color: var(--muted);
+  font-weight: 740;
+  line-height: 1.4;
 }
 
 .offer-card {
