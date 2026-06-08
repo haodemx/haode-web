@@ -37,6 +37,8 @@ Also follow the root HAODE rules:
 - 不允许乱改价格。
 - 不允许删除已有产品。
 - 修改后必须验证页面。
+- 新品上传必须在同一流程同时更新官网产品数据和 `app/products.json`。
+- 新品上传禁止只更新官网或只更新 App。
 - 完成后必须 `git commit` + `git push`，除非任务明确要求不要提交或不要推送。
 - 输出中文报告。
 - 不要破坏 GitHub Pages 部署。
@@ -56,6 +58,11 @@ Also follow the root HAODE rules:
 - `haode-product-control-center`
 - `haode-price-confirmation`
 - `haode-product-upload`
+
+新品上传同步规则：
+- 必须同时更新网站产品数据、分类/详情路由和 `app/products.json`。
+- 验证必须包含网站与 App 产品一致性检查。
+- 缺少 App 同步视为任务未完成，禁止提交和推送。
 
 凡涉及促销，自动调用：
 - `haode-product-control-center`

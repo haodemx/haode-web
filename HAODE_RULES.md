@@ -14,6 +14,12 @@ Required website workflow:
 4. Check links, assets, WhatsApp buttons, SEO paths, and 404 risk when relevant.
 5. Commit and push when feasible and in scope.
 
+## Product/App Sync Rule
+
+- Every new product upload must update both the website product data and `app/products.json` in the same workflow.
+- New product upload is never website-only and never app-only.
+- Product upload validation must check website/app consistency before commit and push.
+
 ## Connected Skills
 
 - Website/App: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.

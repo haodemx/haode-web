@@ -1,0 +1,30 @@
+name: HAODE Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  haode-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies if needed
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ] && grep -q '"dependencies"\|"devDependencies"' package.json; then
+            npm install
+          else
+            echo "No npm dependencies to install."
+          fi
+
+      - name: Run HAODE checks
+        run: npm run haode:check

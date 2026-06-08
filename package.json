@@ -11,6 +11,9 @@
     "product-control": "node scripts/product-control-system.js",
     "product-control-center": "/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/product-control-center.py",
     "product-validate": "/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/product-control-center.py --validate-only",
-    "daily-website-audit": "node scripts/daily-website-audit.js"
+    "daily-website-audit": "node scripts/daily-website-audit.js",
+    "haode:product-sync": "node scripts/validate-products-sync.js",
+    "haode:quality-check": "node scripts/haode-quality-check.js",
+    "haode:check": "npm run haode:product-sync && npm run haode:quality-check"
   }
 }
