@@ -27,7 +27,7 @@
 
     article.innerHTML = `
       <div class="new-product-visual">
-        <img src="${toAssetPath(image)}" alt="${item.name || item.model || 'Producto'}" loading="lazy" />
+        <img src="${toAssetPath(image)}" alt="${item.name || item.model || 'Producto'}" loading="lazy" decoding="async" />
         <span class="new-arrival-tag">ACTIVO</span>
       </div>
       <div class="new-product-content">

@@ -1242,6 +1242,7 @@ function renderProductDetailPage() {
   if (mainImageEl) {
     mainImageEl.src = buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
     mainImageEl.alt = product.name;
+    mainImageEl.decoding = 'async';
     mainImageEl.onerror = () => {
       const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
       if (mainImageEl.src !== fallback) mainImageEl.src = fallback;
