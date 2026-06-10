@@ -2,6 +2,75 @@ import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
 
 const WHATSAPP_NUMBER = "523326684296";
 const PRODUCTS_JSON_URL = "/haode-web/app/products.json";
+const SERVICE_WORKER_URL = "/haode-web/service-worker.js";
+
+let deferredInstallPrompt = null;
+
+function isStandaloneMode() {
+  return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+}
+
+function setupPwaInstallPrompt() {
+  const bannerEl = document.querySelector("[data-install-banner]");
+  const titleEl = document.querySelector("[data-install-title]");
+  const copyEl = document.querySelector("[data-install-copy]");
+  const buttonEl = document.querySelector("[data-install-button]");
+
+  if (!bannerEl || !titleEl || !copyEl || !buttonEl || isStandaloneMode()) {
+    return;
+  }
+
+  const ua = window.navigator.userAgent || "";
+  const isIos = /iphone|ipad|ipod/i.test(ua);
+
+  if (isIos) {
+    bannerEl.hidden = false;
+    bannerEl.classList.add("ios");
+    titleEl.textContent = "Safari → Compartir → Agregar a pantalla de inicio";
+    copyEl.textContent = "Instala HAODE desde Safari para abrirlo como app en tu iPhone.";
+    return;
+  }
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    bannerEl.hidden = false;
+    titleEl.textContent = "Instalar App HAODE";
+    copyEl.textContent = "Agrega HAODE a tu pantalla de inicio y abre el catalogo como app.";
+  });
+
+  buttonEl.addEventListener("click", async () => {
+    if (!deferredInstallPrompt) {
+      return;
+    }
+
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    bannerEl.hidden = true;
+  });
+
+  window.addEventListener("appinstalled", () => {
+    deferredInstallPrompt = null;
+    bannerEl.hidden = true;
+  });
+}
+
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: "/haode-web/" })
+      .catch((error) => {
+        console.info("HAODE PWA no pudo registrar service worker:", error.message);
+      });
+  });
+}
+
+setupPwaInstallPrompt();
+registerServiceWorker();
 
 const categories = [
   { id: "Todos", label: "Todos" },

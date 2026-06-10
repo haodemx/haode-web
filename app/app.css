@@ -166,6 +166,62 @@ a {
   margin: 0 auto;
 }
 
+.install-banner {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 106, 0, 0.24);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(86, 46, 9, 0.1);
+}
+
+.install-banner[hidden] {
+  display: none;
+}
+
+.install-banner p {
+  margin: 0 0 5px;
+  color: var(--orange-dark);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.install-banner strong,
+.install-banner span {
+  display: block;
+}
+
+.install-banner strong {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.install-banner span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.install-button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: #ff6a00;
+  color: #ffffff;
+  padding: 0 18px;
+  font-weight: 850;
+}
+
+.install-banner.ios .install-button {
+  display: none;
+}
+
 .hero {
   display: grid;
   gap: 16px;
@@ -1115,6 +1171,12 @@ a {
   .app-header {
     padding-right: max(24px, calc((100vw - 1120px) / 2));
     padding-left: max(24px, calc((100vw - 1120px) / 2));
+  }
+
+  .install-banner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 16px 18px;
   }
 
   .hero {

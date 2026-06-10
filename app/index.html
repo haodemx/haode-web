@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="HAODE Tienda: app móvil para cotizar pantallas, micas, gafas AI y fundas por WhatsApp." />
-  <meta name="theme-color" content="#ff7a1a" />
+  <meta name="theme-color" content="#ff6a00" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="HAODE Tienda" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="HAODE" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="HAODE MEXICO" />
   <meta property="og:title" content="HAODE Tienda | Shopping App" />
@@ -16,9 +16,9 @@
   <meta property="og:image" content="https://haodemx.github.io/haode-web/assets/logo/logo.png" />
   <meta property="og:url" content="https://haodemx.github.io/haode-web/app/" />
   <link rel="canonical" href="https://haodemx.github.io/haode-web/app/" />
-  <link rel="manifest" href="/haode-web/app/manifest.json" />
-  <link rel="icon" href="/haode-web/assets/logo/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="/haode-web/assets/logo/logo.png" />
+  <link rel="manifest" href="/haode-web/manifest.webmanifest" />
+  <link rel="icon" href="/haode-web/assets/icons/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/haode-web/assets/icons/apple-touch-icon.png" />
   <link rel="stylesheet" href="/haode-web/app/app.css" />
   <title>HAODE Tienda | Shopping App</title>
 </head>
@@ -38,6 +38,15 @@
   </header>
 
   <main class="app-shell">
+    <section class="install-banner" data-install-banner hidden aria-label="Instalar HAODE App">
+      <div>
+        <p>HAODE App</p>
+        <strong data-install-title>Instalar App HAODE</strong>
+        <span data-install-copy>Acceso rápido desde la pantalla de inicio.</span>
+      </div>
+      <button class="install-button" type="button" data-install-button>Instalar App HAODE</button>
+    </section>
+
     <section class="hero" aria-label="Guia de precios y ofertas HAODE">
       <div class="hero-pricing">
         <p>Guia de precios HAODE</p>

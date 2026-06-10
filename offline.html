@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff6a00" />
+  <title>HAODE sin conexión</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --orange: #ff6a00;
+      --bg: #000000;
+      --card: #15110e;
+      --text: #fff7ef;
+      --muted: #cdb9a8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      min-height: 100vh;
+      margin: 0;
+      place-items: center;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(calc(100% - 32px), 420px);
+      padding: 28px;
+      border: 1px solid rgba(255, 106, 0, 0.28);
+      border-radius: 18px;
+      background: var(--card);
+      text-align: center;
+    }
+
+    img {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 18px 0 10px;
+      font-size: 1.45rem;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      margin-top: 22px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: var(--orange);
+      color: #ffffff;
+      font-weight: 850;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/haode-web/assets/icons/haode-icon-192.png" alt="HAODE" />
+    <h1>HAODE no tiene conexión</h1>
+    <p>Revisa tu internet y vuelve a intentar. Algunas páginas visitadas antes pueden abrirse sin conexión.</p>
+    <a href="/haode-web/app/">Volver a HAODE App</a>
+  </main>
+</body>
+</html>

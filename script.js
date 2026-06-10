@@ -1,5 +1,21 @@
 (function () {
 const WHATSAPP_PHONE = '523326684296';
+const SERVICE_WORKER_URL = '/haode-web/service-worker.js';
+
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) {
+    return;
+  }
+
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: '/haode-web/' })
+      .catch((error) => {
+        console.info('HAODE PWA no pudo registrar service worker:', error.message);
+      });
+  });
+}
+
+registerServiceWorker();
 
 function buildWhatsAppMessage(data) {
   const lines = [
