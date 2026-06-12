@@ -166,6 +166,56 @@ a {
   margin: 0 auto;
 }
 
+.junio-promo-banner {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 106, 0, 0.34);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(255, 209, 168, 0.56), transparent 34%),
+    linear-gradient(135deg, #251207 0%, #ff6a00 58%, #ff8a1f 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 44px rgba(232, 95, 0, 0.24);
+}
+
+.junio-promo-banner p,
+.junio-promo-banner h1,
+.junio-promo-banner span {
+  margin: 0;
+}
+
+.junio-promo-banner p {
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.junio-promo-banner h1 {
+  margin-top: 6px;
+  font-size: clamp(1.55rem, 7vw, 2.4rem);
+  line-height: 0.96;
+  overflow-wrap: anywhere;
+}
+
+.junio-promo-banner span,
+.junio-promo-banner strong {
+  display: block;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.junio-promo-banner strong {
+  justify-self: flex-start;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
 .install-banner {
   display: grid;
   gap: 12px;
@@ -842,6 +892,41 @@ a {
 
 .price-lines strong {
   color: var(--ink);
+}
+
+.promo-price-lines {
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid rgba(255, 106, 0, 0.26);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff7ed 0%, #fff 58%, #fff0e3 100%);
+}
+
+.promo-price-lines span {
+  color: #6c5546;
+  font-weight: 850;
+}
+
+.promo-price-lines .promo-app-price {
+  color: var(--orange-dark);
+  font-size: 0.95rem;
+}
+
+.promo-price-lines .promo-app-price strong {
+  color: var(--orange);
+  font-size: 1.05rem;
+}
+
+.promo-price-lines .promo-savings {
+  justify-content: flex-start;
+  gap: 6px;
+  color: #11814b;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+}
+
+.promo-price-lines .promo-savings strong {
+  color: #11814b;
 }
 
 .add-button {

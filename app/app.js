@@ -2,6 +2,8 @@ import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
 
 const WHATSAPP_NUMBER = "523326684296";
 const PRODUCTS_JSON_URL = "/haode-web/app/products.json";
+const PROMO_JUNIO = true;
+const PROMO_JUNIO_PRICES_URL = "/haode-web/app/promo-junio-prices.json";
 const SERVICE_WORKER_URL = "/haode-web/service-worker.js";
 
 let deferredInstallPrompt = null;
@@ -112,6 +114,7 @@ const state = {
   activeOfferIndex: 0,
   offerTimer: null,
   dataSource: "Cargando",
+  promoPrices: new Map(),
   diagnostics: {
     firestoreTotal: null,
     firestoreActive: null,
@@ -380,7 +383,74 @@ async function loadProducts() {
   }
 }
 
+async function loadPromoPrices() {
+  state.promoPrices = new Map();
+
+  if (!PROMO_JUNIO) {
+    return;
+  }
+
+  try {
+    const response = await fetch(PROMO_JUNIO_PRICES_URL, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`No se pudo cargar promo junio: ${response.status}`);
+    }
+
+    const data = await response.json();
+    state.promoPrices = new Map(
+      Object.entries(data)
+        .map(([id, price]) => [
+          id,
+          {
+            publicPrice: Number(price.precioMostrador ?? 0),
+            appPrice: Number(price.precioAppJunio ?? 0),
+            source: price.source || ""
+          }
+        ])
+        .filter(([, price]) => price.publicPrice > 0 && price.appPrice > 0)
+    );
+  } catch (error) {
+    console.info("HAODE app sin promoción junio:", error.message);
+    state.promoPrices = new Map();
+  }
+}
+
+function promoPriceFor(product) {
+  if (!PROMO_JUNIO || !product?.id) {
+    return null;
+  }
+
+  const promo = state.promoPrices.get(product.id);
+  if (!promo) {
+    return null;
+  }
+
+  const publicPrice = promo.publicPrice || product.publicPrice;
+  const appPrice = promo.appPrice || product.wholesalePrice || product.publicPrice;
+
+  if (!publicPrice || !appPrice) {
+    return null;
+  }
+
+  return {
+    publicPrice,
+    appPrice,
+    savings: Math.max(publicPrice - appPrice, 0),
+    source: promo.source
+  };
+}
+
 function priceRuleFor(product, quantity = 1) {
+  const promo = promoPriceFor(product);
+
+  if (promo) {
+    return {
+      unitPrice: promo.appPrice,
+      label: "Precio APP Junio",
+      promo
+    };
+  }
+
   const matchingTier = product.priceTiers
     .filter((tier) => quantity >= tier.minQty && (tier.maxQty === null || quantity <= tier.maxQty))
     .pop();
@@ -426,6 +496,27 @@ function productStockMarkup(product) {
   return `<span class="stock-badge stock-${product.stock.replace(" ", "-")}">${product.stock}</span>`;
 }
 
+function productPriceMarkup(product) {
+  const promo = promoPriceFor(product);
+
+  if (!promo) {
+    return `
+      <div class="price-lines">
+        <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
+        <span>Precio mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="price-lines promo-price-lines">
+      <span>Precio Mostrador: <strong>${formatPrice(promo.publicPrice)}</strong></span>
+      <span class="promo-app-price">Precio APP Junio: <strong>${formatPrice(promo.appPrice)}</strong></span>
+      <span class="promo-savings">AHORRAS <strong>${formatPrice(promo.savings)}</strong></span>
+    </div>
+  `;
+}
+
 function productCardHtml(product) {
   const qualityMarkup = product.quality
     ? `
@@ -448,10 +539,7 @@ function productCardHtml(product) {
         </div>
         ${qualityMarkup}
         <p class="model">Modelo: ${product.model}</p>
-        <div class="price-lines">
-          <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
-          <span>Precio mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
-        </div>
+        ${productPriceMarkup(product)}
         <div class="product-description" data-product-description="${product.id}" hidden>
           <p>${product.description || "Sin detalles adicionales disponibles."}</p>
           ${product.priceTiers.length ? priceTiersMarkup(product) : ""}
@@ -708,12 +796,12 @@ function buildWhatsappUrl() {
     `Cliente: ${clientName || "Sin nombre"}`,
     `Telefono: ${clientPhone || "Sin telefono"}`,
     `Ciudad: ${clientCity || "Sin ciudad"}`,
-    "Tipo de precio: automatico por cantidad",
+    `Tipo de precio: ${PROMO_JUNIO ? "Precio APP Junio" : "automatico por cantidad"}`,
     "",
     ...items.map((item) => {
       const priceRule = priceRuleFor(item.product, item.quantity);
       const subtotal = priceRule.unitPrice * item.quantity;
-      return `- ${item.product.name} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado por cantidad: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
+      return `- ${item.product.name} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
     }),
     "",
     `Total estimado: ${formatPrice(cartTotal())}`,
@@ -766,7 +854,7 @@ function renderCart() {
               </div>
               <strong>${formatPrice(subtotal)}</strong>
             </div>
-            <p class="applied-price">Precio aplicado por cantidad: ${priceRule.label} · ${formatPrice(priceRule.unitPrice)} c/u</p>
+            <p class="applied-price">Precio aplicado: ${priceRule.label} · ${formatPrice(priceRule.unitPrice)} c/u</p>
             <div class="cart-row">
               <button class="remove-button" type="button" data-remove="${item.product.id}">Eliminar</button>
             </div>
@@ -920,6 +1008,7 @@ async function init() {
   productGridEl.innerHTML = '<div class="empty-cart">Cargando productos HAODE...</div>';
   renderCart();
   await loadProducts();
+  await loadPromoPrices();
   renderCategories();
   renderProducts();
   startOfferAutoplay();

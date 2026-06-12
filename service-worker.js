@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-06-10-01";
+const CACHE_VERSION = "haode-pwa-v2026-06-11-01";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -13,6 +13,7 @@ const APP_SHELL_URLS = [
   "/haode-web/products.js",
   "/haode-web/app/app.css",
   "/haode-web/app/app.js",
+  "/haode-web/app/promo-junio-prices.json",
   "/haode-web/app/firebase-config.js",
   "/haode-web/manifest.webmanifest",
   "/haode-web/assets/logo/logo.png",
@@ -48,7 +49,9 @@ function isHtmlRequest(request) {
 }
 
 function isFreshDataRequest(url) {
-  return url.pathname.endsWith("/products.json") || url.pathname.endsWith("/products.generated.js");
+  return url.pathname.endsWith("/products.json")
+    || url.pathname.endsWith("/promo-junio-prices.json")
+    || url.pathname.endsWith("/products.generated.js");
 }
 
 async function networkFirst(request) {
