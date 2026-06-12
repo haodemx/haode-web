@@ -1,5 +1,8 @@
 _backup/
 .DS_Store
+node_modules/
+test-results/
+playwright-report/
 *.mov
 *.MOV
 *.avi

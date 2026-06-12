@@ -3,10 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "build": "npm run haode:check",
     "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js",
     "publish-products": "node scripts/publish-products.js",
     "verify-products": "node scripts/verify-products.js",
+    "browser-test": "playwright test",
+    "browser-test:headed": "playwright test --headed",
+    "browser-test:ui": "playwright test --ui",
+    "haode:app-qa": "playwright test tests/haode-app.spec.js",
     "test-catalog-filters": "node scripts/test-catalog-filters.js",
     "product-control": "node scripts/product-control-system.js",
     "product-control-center": "/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/product-control-center.py",
@@ -15,5 +20,8 @@
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
     "haode:check": "npm run haode:product-sync && npm run haode:quality-check"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
   }
 }
