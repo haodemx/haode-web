@@ -23,8 +23,8 @@ test.describe("HAODE Tienda app QA", () => {
     const initialCount = Number((await cartCount.textContent()) || "0");
     await productCards.first().getByRole("button", { name: "Agregar al carrito" }).click();
     await expect(cartCount).toHaveText(String(initialCount + 1));
+    await expect(page.locator("[data-cart-drawer]")).toHaveClass(/open/);
 
-    await page.locator("[data-open-cart]").first().click();
     await page.locator("[data-customer-name]").fill("Cliente QA HAODE");
     await page.locator("[data-customer-phone]").fill("5512345678");
     await page.locator("[data-customer-city]").fill("CDMX");
