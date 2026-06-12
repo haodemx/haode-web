@@ -9,10 +9,13 @@ Use this skill for HAODE website and APP page browser testing, post-deploy verif
 
 ## Trigger Conditions
 
+- Homepage changes.
 - APP page changes.
 - Product card changes.
 - Product image changes.
+- Price display changes.
 - Price logic changes.
+- Quantity-price logic changes.
 - Cart changes.
 - WhatsApp checkout changes.
 - Homepage banner or ofertas especiales changes.
@@ -24,14 +27,28 @@ Use this skill for HAODE website and APP page browser testing, post-deploy verif
 2. Run `npm run build`.
 3. Run `npm run browser-test`.
 4. If a test fails, report the screenshot path or exact error reason.
-5. Fix the scoped issue and rerun the failing check.
-6. Finish with a QA report in Chinese.
+5. If `browser-test` fails, do not commit or push unless the owner explicitly allows it.
+6. Fix the scoped issue and rerun the failing check.
+7. Finish with a QA report in Chinese.
+
+## Required QA Report
+
+- Build result.
+- Browser-test result.
+- Whether the live URL was checked.
+- Whether broken images exist.
+- Whether horizontal overflow exists.
+- Whether incorrect oferta products exist.
+- Whether follow-up fixes are needed.
 
 ## Key Checks
 
 - Do not use incorrect product images.
 - Do not change prices without owner confirmation.
 - `Ofertas especiales` only shows owner-specified products.
+- Do not auto-generate discount products.
+- Do not randomly choose promotion products from normal products.
+- Do not restore demo promotion data.
 - Product cards show only menudeo / mayoreo price lines unless the current confirmed promotion requires another label.
 - Cart applies price by quantity.
 - WhatsApp order message uses the correct applied price.

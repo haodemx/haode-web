@@ -8,6 +8,7 @@ For HAODE tasks, default to:
 - `guidelines` for HAODE brand, product upload, image confirmation, website modification, marketing, git, and verification standards.
 - `karpathy-rules` for small, simple, code-read, verified changes.
 - `firecrawl` for competitor/supplier product-page extraction when `FIRECRAWL_API_KEY` is available.
+- `haode-browser-qa` for HAODE APP, website page, product card, image, price display, quantity-price logic, cart, WhatsApp checkout, ofertas especiales, and GitHub Pages deployment verification.
 
 Also follow the root HAODE rules:
 
@@ -37,6 +38,8 @@ Also follow the root HAODE rules:
 - 不允许乱改价格。
 - 不允许删除已有产品。
 - 修改后必须验证页面。
+- 任何网站或 APP 修改完成后，必须运行 `npm run build` 和 `npm run browser-test`。
+- 如果 `browser-test` 失败，不允许 `git commit` 或 `git push`，除非老板明确允许。
 - 新品上传必须在同一流程同时更新官网产品数据和 `app/products.json`。
 - 新品上传禁止只更新官网或只更新 App。
 - 完成后必须 `git commit` + `git push`，除非任务明确要求不要提交或不要推送。
@@ -68,6 +71,10 @@ Also follow the root HAODE rules:
 - `haode-product-control-center`
 - `haode-marketing-design`
 - `haode-crm-sales`
+- `haode-browser-qa`
+
+凡涉及首页、APP 页面、商品卡、产品图片、价格显示、数量价格逻辑、购物车、WhatsApp 下单、Ofertas especiales 或 GitHub Pages 部署验证，自动调用：
+- `haode-browser-qa`
 
 凡涉及网站产品异常，自动调用：
 - `haode-website-maintenance`
@@ -123,6 +130,7 @@ Also follow the root HAODE rules:
 This website repository is formally connected to the new HAODE Skills.
 
 - Website/App repairs, image paths, data sync, SEO, QA, deploy: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.
+- Browser QA gate for homepage, APP pages, product cards, images, price display, quantity-price logic, cart, WhatsApp checkout, ofertas especiales, and GitHub Pages verification: `haode-browser-qa`.
 - Live/external verification: add `firecrawl` only when needed.
 - New product handoff: use `haode-product-upload` and `haode-marketing-factory` only after product facts, prices, and assets are confirmed.
 - Video/material handoff: use `video-use`, `remotion-skills`, `seedance2-skill`, or `generative-media-skills` only when the website task explicitly includes media output.
@@ -244,18 +252,32 @@ Do not modify public website content, prices, categories, or images unless the t
 ## Verification Checklist
 
 每次完成任务前检查：
+- 如果修改涉及网站或 APP，`npm run build` 已通过。
+- 如果修改涉及网站或 APP，`npm run browser-test` 已通过。
+- 如果 `browser-test` 失败，未提交或推送，除非老板明确允许。
 - 目标文件是否创建或修改成功。
 - 目标页面是否能正常打开。
+- 线上地址是否已检查。
 - 图片是否存在且不破图。
+- 是否存在 broken image。
 - 视频是否存在且路径正确。
 - 产品详情链接不进入 404。
 - WhatsApp 按钮正常。
 - 手机端没有明显错位。
+- 手机端没有横向溢出。
+- Ofertas especiales 没有错误特价产品。
 - 导航链接正确。
 - 没有 `file://`、`/Users/mac`、`localhost`、`127.0.0.1`、`squarespace`、`under construction`。
 - 没有误改价格。
 - 没有删除已有产品。
 - `git status` 已检查。
+
+## Ofertas Especiales Guardrail
+
+- `Ofertas especiales` 只能显示老板指定的产品。
+- 禁止自动生成折扣产品。
+- 禁止从普通产品里随机挑选促销产品。
+- 禁止恢复演示促销数据。
 
 ## Forbidden Actions
 
