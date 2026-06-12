@@ -1423,7 +1423,7 @@
     "precioMayoreo": 3400,
     "imagen": "/haode-web/assets/products/placeholder.svg",
     "stock": "agotado",
-    "activo": true,
+    "activo": false,
     "orden": 890
   },
   {
