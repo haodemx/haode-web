@@ -97,6 +97,44 @@ const categorySearchAliases = {
   Fundas: "Fundas y Accesorios"
 };
 
+const heroShowcaseItems = [
+  {
+    title: "Pantallas iPhone",
+    subtitle: "OLED / INCELL / Diagnóstico",
+    image: "/haode-web/assets/products/iphone-oled/main.jpg",
+    badge: "Más vendido",
+    targetSearch: "Pantallas iPhone"
+  },
+  {
+    title: "Samsung TIPO ORIGINAL",
+    subtitle: "Con marco · Calidad 1:1",
+    image: "/haode-web/assets/products/samsung-original/s24-ultra/main.png",
+    badge: "Calidad 1:1",
+    targetCategory: "Pantallas Samsung Original"
+  },
+  {
+    title: "Micas profesionales",
+    subtitle: "HD / Matte / Privacidad · Corte profesional",
+    image: "/haode-web/assets/products/home-cut-machine/x200t.jpg",
+    badge: "Mayoreo",
+    targetCategory: "Micas"
+  },
+  {
+    title: "Productos AI",
+    subtitle: "Gafas inteligentes y accesorios",
+    image: "/haode-web/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg",
+    badge: "Nuevo",
+    targetCategory: "Gafas AI"
+  },
+  {
+    title: "Fundas para iPhone",
+    subtitle: "Estilo 17 Pro Max · Mayoreo disponible",
+    image: "/haode-web/assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/main.jpg",
+    badge: "Disponible",
+    targetCategory: "Fundas"
+  }
+];
+
 const requiredAiGlassesIds = [
   "s1-ai-classic",
   "aimb-g5-ai-sports",
@@ -111,6 +149,8 @@ const state = {
   activeCategory: categories[0].id,
   searchQuery: "",
   cart: new Map(),
+  activeShowcaseIndex: 0,
+  showcaseTimer: null,
   activeOfferIndex: 0,
   offerTimer: null,
   dataSource: "Cargando",
@@ -150,6 +190,9 @@ const checkoutInputs = [customerNameEl, customerPhoneEl, customerCityEl, custome
 const offersTrackEl = document.querySelector("[data-offers-track]");
 const offerDotsEl = document.querySelector("[data-offer-dots]");
 const offerCarouselEl = document.querySelector("[data-offer-carousel]");
+const heroShowcaseEl = document.querySelector("[data-hero-showcase]");
+const showcaseTrackEl = document.querySelector("[data-showcase-track]");
+const showcaseDotsEl = document.querySelector("[data-showcase-dots]");
 
 function samsungQualityFor(category, model) {
   const text = `${category || ""} ${model || ""}`.toUpperCase();
@@ -490,6 +533,78 @@ function renderCategories() {
       return `<button class="${active}" type="button" data-category="${category.id}">${category.label}</button>`;
     })
     .join("");
+}
+
+function heroShowcaseCardHtml(item) {
+  const targetAttr = item.targetCategory
+    ? `data-showcase-category="${item.targetCategory}"`
+    : `data-showcase-search="${item.targetSearch || item.title}"`;
+
+  return `
+    <article class="hero-showcase-card">
+      <div class="hero-showcase-media">
+        <img src="${item.image}" alt="${item.title}" loading="eager" />
+      </div>
+      <div class="hero-showcase-info">
+        <span class="hero-showcase-badge">${item.badge}</span>
+        <h3>${item.title}</h3>
+        <p>${item.subtitle}</p>
+        <button class="hero-showcase-button" type="button" ${targetAttr}>Ver productos</button>
+      </div>
+    </article>
+  `;
+}
+
+function renderHeroShowcase() {
+  if (!showcaseTrackEl || !showcaseDotsEl || !heroShowcaseItems.length) {
+    return;
+  }
+
+  if (state.activeShowcaseIndex >= heroShowcaseItems.length) {
+    state.activeShowcaseIndex = 0;
+  }
+
+  heroShowcaseEl?.classList.toggle("hero-showcase-single", heroShowcaseItems.length === 1);
+  showcaseTrackEl.innerHTML = heroShowcaseCardHtml(heroShowcaseItems[state.activeShowcaseIndex]);
+  showcaseDotsEl.innerHTML = heroShowcaseItems
+    .map((item, index) => {
+      const active = index === state.activeShowcaseIndex ? " active" : "";
+      return `<button class="${active}" type="button" data-showcase-dot="${index}" aria-label="Ver ${item.title}"></button>`;
+    })
+    .join("");
+}
+
+function moveHeroShowcase(delta) {
+  if (!heroShowcaseItems.length) {
+    return;
+  }
+
+  state.activeShowcaseIndex = (state.activeShowcaseIndex + delta + heroShowcaseItems.length) % heroShowcaseItems.length;
+  renderHeroShowcase();
+}
+
+function startHeroShowcaseAutoplay() {
+  window.clearInterval(state.showcaseTimer);
+  if (heroShowcaseItems.length <= 1) {
+    return;
+  }
+
+  state.showcaseTimer = window.setInterval(() => moveHeroShowcase(1), 3000);
+}
+
+function filterShowcaseProducts({ category, search }) {
+  if (category && categories.some((item) => item.id === category)) {
+    state.activeCategory = category;
+    state.searchQuery = "";
+  } else {
+    state.activeCategory = "Todos";
+    state.searchQuery = search || category || "";
+  }
+
+  searchProductsEl.value = state.searchQuery;
+  renderCategories();
+  renderProducts();
+  document.querySelector("[data-product-grid]")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function productStockMarkup(product) {
@@ -917,6 +1032,11 @@ document.addEventListener("click", (event) => {
   const offerNextButton = event.target.closest("[data-offer-next]");
   const offerDotButton = event.target.closest("[data-offer-dot]");
   const focusProductButton = event.target.closest("[data-focus-product]");
+  const showcasePrevButton = event.target.closest("[data-showcase-prev]");
+  const showcaseNextButton = event.target.closest("[data-showcase-next]");
+  const showcaseDotButton = event.target.closest("[data-showcase-dot]");
+  const showcaseCategoryButton = event.target.closest("[data-showcase-category]");
+  const showcaseSearchButton = event.target.closest("[data-showcase-search]");
 
   if (categoryButton) {
     state.activeCategory = categoryButton.dataset.category;
@@ -948,6 +1068,30 @@ document.addEventListener("click", (event) => {
     state.activeOfferIndex = Number(offerDotButton.dataset.offerDot) || 0;
     renderOffers();
     startOfferAutoplay();
+  }
+
+  if (showcasePrevButton) {
+    moveHeroShowcase(-1);
+    startHeroShowcaseAutoplay();
+  }
+
+  if (showcaseNextButton) {
+    moveHeroShowcase(1);
+    startHeroShowcaseAutoplay();
+  }
+
+  if (showcaseDotButton) {
+    state.activeShowcaseIndex = Number(showcaseDotButton.dataset.showcaseDot) || 0;
+    renderHeroShowcase();
+    startHeroShowcaseAutoplay();
+  }
+
+  if (showcaseCategoryButton) {
+    filterShowcaseProducts({ category: showcaseCategoryButton.dataset.showcaseCategory });
+  }
+
+  if (showcaseSearchButton) {
+    filterShowcaseProducts({ search: showcaseSearchButton.dataset.showcaseSearch });
   }
 
   if (focusProductButton && !event.target.closest("[data-add-product]")) {
@@ -998,12 +1142,16 @@ searchProductsEl.addEventListener("input", (event) => {
 
 offerCarouselEl?.addEventListener("mouseenter", () => window.clearInterval(state.offerTimer));
 offerCarouselEl?.addEventListener("mouseleave", startOfferAutoplay);
+heroShowcaseEl?.addEventListener("mouseenter", () => window.clearInterval(state.showcaseTimer));
+heroShowcaseEl?.addEventListener("mouseleave", startHeroShowcaseAutoplay);
 
 checkoutInputs.forEach((element) => {
   element.addEventListener("input", renderCart);
 });
 
 async function init() {
+  renderHeroShowcase();
+  startHeroShowcaseAutoplay();
   renderCategories();
   productGridEl.innerHTML = '<div class="empty-cart">Cargando productos HAODE...</div>';
   renderCart();
