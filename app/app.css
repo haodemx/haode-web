@@ -1048,7 +1048,8 @@ a {
   color: var(--ink);
 }
 
-.promo-price-lines {
+.promo-price-lines,
+.app-june-price-lines {
   gap: 6px;
   padding: 8px;
   border: 1px solid rgba(255, 106, 0, 0.26);
@@ -1056,17 +1057,20 @@ a {
   background: linear-gradient(135deg, #fff7ed 0%, #fff 58%, #fff0e3 100%);
 }
 
-.promo-price-lines span {
+.promo-price-lines span,
+.app-june-price-lines span {
   color: #6c5546;
   font-weight: 850;
 }
 
-.promo-price-lines .promo-app-price {
+.promo-price-lines .promo-app-price,
+.app-june-price-lines .promo-app-price {
   color: var(--orange-dark);
   font-size: 0.95rem;
 }
 
-.promo-price-lines .promo-app-price strong {
+.promo-price-lines .promo-app-price strong,
+.app-june-price-lines .promo-app-price strong {
   color: var(--orange);
   font-size: 1.05rem;
 }

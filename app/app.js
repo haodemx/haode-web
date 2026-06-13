@@ -252,6 +252,7 @@ function normalizeProduct(product) {
     quality,
     description: product.descripcion || product.description || "",
     publicPrice: Number(product.precioPublico ?? product.publicPrice ?? 0),
+    appJunePrice: Number(product.precioAppJunio ?? product.appJunePrice ?? 0),
     wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
     priceTiers: normalizePriceTiers(product.priceTiers || product.quantityPricing || product.preciosPorCantidad),
     image: product.imagen || product.image || "/haode-web/assets/products/placeholder.svg",
@@ -495,6 +496,20 @@ function priceRuleFor(product, quantity = 1) {
     };
   }
 
+  if (product.appJunePrice > 0) {
+    if (quantity >= 10) {
+      return {
+        unitPrice: product.wholesalePrice || product.appJunePrice,
+        label: "Precio Mayoreo"
+      };
+    }
+
+    return {
+      unitPrice: product.appJunePrice,
+      label: "Precio APP Junio"
+    };
+  }
+
   const matchingTier = product.priceTiers
     .filter((tier) => quantity >= tier.minQty && (tier.maxQty === null || quantity <= tier.maxQty))
     .pop();
@@ -614,6 +629,16 @@ function productStockMarkup(product) {
 
 function productPriceMarkup(product) {
   const promo = promoPriceFor(product);
+
+  if (product.appJunePrice > 0) {
+    return `
+      <div class="price-lines app-june-price-lines">
+        <span>Precio Mostrador <strong>${formatPrice(product.publicPrice)}</strong></span>
+        <span class="promo-app-price">Precio APP Junio <strong>${formatPrice(product.appJunePrice)}</strong></span>
+        <span>Precio Mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
+      </div>
+    `;
+  }
 
   if (!promo) {
     return `

@@ -1487,5 +1487,175 @@
     "stock": "bajo pedido",
     "activo": true,
     "orden": 930
+  },
+  {
+    "id": "samsung-original-z-flip7",
+    "categoria": "Pantallas Samsung Original",
+    "nombre": "Pantalla Samsung Z Flip7",
+    "modelo": "Samsung Z Flip7 TIPO ORIGINAL CON MARCO",
+    "descripcion": "Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
+    "precioPublico": 5800,
+    "precioAppJunio": 5600,
+    "precioMayoreo": 5500,
+    "imagen": "/haode-web/assets/products/samsung-original/z-flip7/main.png",
+    "stock": "bajo pedido",
+    "activo": true,
+    "orden": 940,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 1,
+        "price": 5800,
+        "label": "Precio Mostrador"
+      },
+      {
+        "minQty": 2,
+        "maxQty": 9,
+        "price": 5600,
+        "label": "Precio APP Junio"
+      },
+      {
+        "minQty": 10,
+        "maxQty": null,
+        "price": 5500,
+        "label": "Precio Mayoreo"
+      }
+    ]
+  },
+  {
+    "id": "samsung-original-z-fold3",
+    "categoria": "Pantallas Samsung Original",
+    "nombre": "Pantalla Samsung Z Fold3",
+    "modelo": "Samsung Z Fold3 TIPO ORIGINAL CON MARCO",
+    "descripcion": "Pantalla Samsung Z Fold3 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
+    "precioPublico": 4500,
+    "precioAppJunio": 4400,
+    "precioMayoreo": 4300,
+    "imagen": "/haode-web/assets/products/samsung-original/z-fold3/main.png",
+    "stock": "bajo pedido",
+    "activo": true,
+    "orden": 950,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 1,
+        "price": 4500,
+        "label": "Precio Mostrador"
+      },
+      {
+        "minQty": 2,
+        "maxQty": 9,
+        "price": 4400,
+        "label": "Precio APP Junio"
+      },
+      {
+        "minQty": 10,
+        "maxQty": null,
+        "price": 4300,
+        "label": "Precio Mayoreo"
+      }
+    ]
+  },
+  {
+    "id": "samsung-original-z-fold4",
+    "categoria": "Pantallas Samsung Original",
+    "nombre": "Pantalla Samsung Z Fold4",
+    "modelo": "Samsung Z Fold4 TIPO ORIGINAL CON MARCO",
+    "descripcion": "Pantalla Samsung Z Fold4 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
+    "precioPublico": 6000,
+    "precioAppJunio": 5900,
+    "precioMayoreo": 5800,
+    "imagen": "/haode-web/assets/products/samsung-original/z-fold4/main.png",
+    "stock": "bajo pedido",
+    "activo": true,
+    "orden": 960,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 1,
+        "price": 6000,
+        "label": "Precio Mostrador"
+      },
+      {
+        "minQty": 2,
+        "maxQty": 9,
+        "price": 5900,
+        "label": "Precio APP Junio"
+      },
+      {
+        "minQty": 10,
+        "maxQty": null,
+        "price": 5800,
+        "label": "Precio Mayoreo"
+      }
+    ]
+  },
+  {
+    "id": "samsung-original-z-fold5",
+    "categoria": "Pantallas Samsung Original",
+    "nombre": "Pantalla Samsung Z Fold5",
+    "modelo": "Samsung Z Fold5 TIPO ORIGINAL CON MARCO",
+    "descripcion": "Pantalla Samsung Z Fold5 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
+    "precioPublico": 7500,
+    "precioAppJunio": 7400,
+    "precioMayoreo": 7300,
+    "imagen": "/haode-web/assets/products/samsung-original/z-fold5/main.png",
+    "stock": "bajo pedido",
+    "activo": true,
+    "orden": 970,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 1,
+        "price": 7500,
+        "label": "Precio Mostrador"
+      },
+      {
+        "minQty": 2,
+        "maxQty": 9,
+        "price": 7400,
+        "label": "Precio APP Junio"
+      },
+      {
+        "minQty": 10,
+        "maxQty": null,
+        "price": 7300,
+        "label": "Precio Mayoreo"
+      }
+    ]
+  },
+  {
+    "id": "samsung-original-z-fold6",
+    "categoria": "Pantallas Samsung Original",
+    "nombre": "Pantalla Samsung Z Fold6",
+    "modelo": "Samsung Z Fold6 TIPO ORIGINAL CON MARCO",
+    "descripcion": "Pantalla Samsung Z Fold6 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
+    "precioPublico": 9800,
+    "precioAppJunio": 9700,
+    "precioMayoreo": 9600,
+    "imagen": "/haode-web/assets/products/samsung-original/z-fold6/main.png",
+    "stock": "bajo pedido",
+    "activo": true,
+    "orden": 980,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 1,
+        "price": 9800,
+        "label": "Precio Mostrador"
+      },
+      {
+        "minQty": 2,
+        "maxQty": 9,
+        "price": 9700,
+        "label": "Precio APP Junio"
+      },
+      {
+        "minQty": 10,
+        "maxQty": null,
+        "price": 9600,
+        "label": "Precio Mayoreo"
+      }
+    ]
   }
 ]
