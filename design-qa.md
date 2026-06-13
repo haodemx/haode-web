@@ -1,30 +1,53 @@
-# HAODE APP Samsung Fold/Flip QA
+# HAODE APP Promociones Activas Carousel QA
 
 Fecha: 2026-06-13
 
-## Alcance
+## Source visual truth path
 
-Validacion de alta en APP HAODE para:
+- User brief and screenshot context for Promociones Activas carousel.
+- Existing HAODE APP visual system: `/Users/mac/Documents/haode/haode-web/app/`.
 
-- Pantalla Samsung Z Flip7
-- Pantalla Samsung Z Fold3
-- Pantalla Samsung Z Fold4
-- Pantalla Samsung Z Fold5
-- Pantalla Samsung Z Fold6
+## Implementation screenshot path
 
-## Fuentes visuales confirmadas
+- Desktop full page: `/private/tmp/haode-offers-carousel-desktop.png`
+- Mobile full page: `/private/tmp/haode-offers-carousel-mobile.png`
+- Desktop focused region: `/private/tmp/haode-offers-section-desktop.png`
+- Mobile focused region: `/private/tmp/haode-offers-section-mobile.png`
 
-- Z Flip7: `/Users/mac/Desktop/haode产品素材/Z FLIP /z7.png`
-- Z Fold3: `/Users/mac/Desktop/haode产品素材/Z FLIP /ChatGPT Image 2026年6月13日 13_12_14 (1).png`
-- Z Fold4: `/Users/mac/Desktop/haode产品素材/Z FLIP /ChatGPT Image 2026年6月13日 13_12_14 (2).png`
-- Z Fold5: `/Users/mac/Desktop/haode产品素材/Z FLIP /ChatGPT Image 2026年6月13日 13_12_15 (3).png`
-- Z Fold6: `/Users/mac/Desktop/haode产品素材/Z FLIP /ChatGPT Image 2026年6月13日 13_12_15 (4).png`
+## Viewport
 
-## Evidencia local
+- Desktop: 1440 x 1200
+- Mobile: 390 x 1200
 
-- Desktop: `/private/tmp/haode-zfold-products-desktop.png`
-- Mobile: `/private/tmp/haode-zfold-products-mobile.png`
+## State
 
-## Resultado
+- APP homepage.
+- Promociones Activas / Ofertas especiales.
+- Initial slide: Pantalla iPhone 14 FHD.
+- Autoplay validated after 5 seconds.
+- Manual controls validated: previous arrow, next arrow, and bottom dots.
 
-PASS. Los 5 productos aparecen una sola vez en Samsung TIPO ORIGINAL, muestran bajo pedido, TIPO ORIGINAL, TIPO ORIGINAL CON MARCO, modelo completo, tres precios, imagen cargada, Ver detalles, Solicitar mayoreo y Agregar al carrito.
+## Full-view comparison evidence
+
+The full-page screenshots confirm the offer module remains in the same homepage location and no other homepage module was moved or redesigned.
+
+## Focused region comparison evidence
+
+Focused screenshots confirm the offer carousel shows exactly one product card at a time. The card is centered, wider, image area is larger, product copy is readable, and the buttons keep normal proportions on desktop and mobile.
+
+## Findings
+
+- No P0/P1/P2 findings.
+- P3 follow-up: mobile can keep the two buttons stacked when space is narrow; this is acceptable because neither button is squeezed or clipped.
+
+## Patches made since previous QA pass
+
+- Fixed the carousel order to start with Pantalla iPhone 14 FHD, then Pantalla iPhone 11 Pro FHD.
+- Kept only the two owner-specified offer IDs in the active offer carousel.
+- Enlarged and centered the single offer card.
+- Increased offer image area and product text spacing.
+- Preserved Agregar al carrito and Ver detalles controls.
+
+## Final result
+
+final result: passed
