@@ -47,6 +47,9 @@ Focused screenshots confirm the offer carousel shows exactly one product card at
 - Enlarged and centered the single offer card.
 - Increased offer image area and product text spacing.
 - Preserved Agregar al carrito and Ver detalles controls.
+- Added versioned APP CSS/JS URLs so browsers do not keep the previous two-card layout from PWA cache.
+- Updated the service worker cache version to clear the old APP shell.
+- Added a CSS guard so extra offer cards cannot appear side by side if stale markup is present.
 
 ## Final result
 

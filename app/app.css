@@ -598,6 +598,10 @@ a {
   padding: 2px 0 4px;
 }
 
+.offers-track > .offer-card:not(:first-child) {
+  display: none;
+}
+
 .offers-empty .offers-track {
   display: block;
   overflow: visible;

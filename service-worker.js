@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-06-11-01";
+const CACHE_VERSION = "haode-pwa-v2026-06-13-offers-single-01";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
