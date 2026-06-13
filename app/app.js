@@ -142,6 +142,7 @@ const requiredAiGlassesIds = [
   "w630-ai-pro",
   "haode-ai-w610-smart-glasses"
 ];
+const clearanceOfferIds = ["iphone-incell-11pro", "iphone-incell-14"];
 
 let products = [];
 
@@ -685,6 +686,10 @@ function activeOffers() {
   const today = new Date();
 
   return products.filter((product) => {
+    if (!clearanceOfferIds.includes(product.id)) {
+      return false;
+    }
+
     if (!product.specialOffer || product.offerActive === false || (!product.discountPrice && !product.offerDisplayPrice)) {
       return false;
     }
@@ -758,11 +763,7 @@ function renderOffers() {
     state.activeOfferIndex = 0;
   }
 
-  const orderedOffers = offers
-    .slice(state.activeOfferIndex)
-    .concat(offers.slice(0, state.activeOfferIndex));
-
-  offersTrackEl.innerHTML = orderedOffers.map(offerCardHtml).join("");
+  offersTrackEl.innerHTML = offerCardHtml(offers[state.activeOfferIndex]);
   offerDotsEl.innerHTML = offers
     .map((offer, index) => {
       const active = index === state.activeOfferIndex ? " active" : "";
@@ -786,7 +787,7 @@ function startOfferAutoplay() {
   if (activeOffers().length <= 1) {
     return;
   }
-  state.offerTimer = window.setInterval(() => moveOffer(1), 4000);
+  state.offerTimer = window.setInterval(() => moveOffer(1), 5000);
 }
 
 function focusProduct(productId) {

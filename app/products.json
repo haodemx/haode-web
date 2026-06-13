@@ -371,7 +371,17 @@
     "imagen": "/haode-web/assets/products/iphone-incell/14/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 290
+    "orden": 290,
+    "specialOffer": true,
+    "offerActive": true,
+    "offerTitle": "Pantalla iPhone 14 FHD",
+    "offerSubtitle": "Alto brillo 709 cd/m²",
+    "offerBadge": "Oferta",
+    "offerPromoLabel": "PROMOCIÓN DE FÁBRICA",
+    "offerDisplayPrice": "$185 MXN / pieza",
+    "offerDisplayNote": "Precio por caja",
+    "offerImage": "/haode-web/assets/promotions/iphone-14-fhd/factory-promo.png",
+    "offerSort": 2
   },
   {
     "id": "iphone-incell-14plus",

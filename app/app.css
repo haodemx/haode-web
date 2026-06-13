@@ -592,12 +592,8 @@ a {
 }
 
 .offers-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(190px, 1fr);
-  gap: 10px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  display: block;
+  overflow: hidden;
   padding-bottom: 4px;
 }
 
@@ -1443,10 +1439,6 @@ a {
     padding: 20px;
   }
 
-  .offers-track {
-    grid-auto-columns: calc((100% - 20px) / 3);
-  }
-
   .service-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1484,6 +1476,10 @@ a {
 }
 
 @media (max-width: 520px) {
+  .offer-controls {
+    display: none;
+  }
+
   .hero-showcase-card {
     grid-template-columns: 1fr;
     min-height: 0;
