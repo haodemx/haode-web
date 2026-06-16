@@ -4433,6 +4433,36 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV."
   },
   {
+    "id": "lk-018-camara-accion-hd",
+    "category": "camaras-inteligentes",
+    "brand": "HAODE",
+    "model": "LK-018",
+    "name": "LK-018 Cámara de Acción HD | Pantalla Abatible | HAODE México",
+    "quality": "Cámara de Acción HD",
+    "images": [
+      "assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
+      "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-01.png",
+      "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-02.png",
+      "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-03.png",
+      "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-04.png",
+      "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-05.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "Menudeo",
+        "price": "$1,200 MXN"
+      },
+      {
+        "quantity": "Mayoreo",
+        "price": "$1,000 MXN"
+      }
+    ],
+    "priceSource": "老板确认 2026-06-16",
+    "whatsappText": "Hola HAODE, quiero cotizar: LK-018 Cámara de Acción HD",
+    "description": "Cámara de acción HD compacta con pantalla abatible y diseño magnético. Ideal para grabar contenido diario, viajes, actividades, manos libres y tomas en primera persona."
+  },
+  {
     "id": "w630-ai-pro",
     "category": "gafas-ai",
     "brand": "HAODE",

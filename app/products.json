@@ -1757,6 +1757,19 @@
     "orden": 902
   },
   {
+    "id": "lk-018-camara-accion-hd",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "LK-018 Cámara de Acción HD",
+    "modelo": "Pantalla abatible y diseño magnético",
+    "descripcion": "Cámara de acción HD compacta con pantalla abatible y diseño magnético. Ideal para grabar contenido diario, viajes, actividades, manos libres y tomas en primera persona.",
+    "precioPublico": 1200,
+    "precioMayoreo": 1000,
+    "imagen": "/haode-web/assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 903
+  },
+  {
     "id": "samsung-original-z-fold6",
     "categoria": "Pantallas Samsung Original",
     "nombre": "Pantalla Samsung Z Fold6",
