@@ -4047,6 +4047,124 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "Pantalla para Samsung S9 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
+    "id": "mica-hd",
+    "category": "micas",
+    "brand": "HAODE",
+    "model": "MICA HD",
+    "name": "MICA HD",
+    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "images": [
+      "assets/products/micas/hd/main.png",
+      "assets/products/micas/hd/gallery-01.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 paquete / 50 pzs",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "10 paquetes",
+        "price": "$400 c/u"
+      },
+      {
+        "quantity": "50 paquetes",
+        "price": "$350 c/u"
+      }
+    ],
+    "priceSource": "Lista Micas HAODE 2026-06: paquete 50 pzs",
+    "whatsappText": "Hola HAODE, quiero cotizar MICA HD por paquete de 50 pzs",
+    "description": "Mica transparente para corte profesional. Ideal para uso diario y alta claridad.\n\nBeneficios:\n- Alta transparencia\n- Protección diaria\n- Compatible con corte profesional\n- Paquete de 50 pzs"
+  },
+  {
+    "id": "mica-matte",
+    "category": "micas",
+    "brand": "HAODE",
+    "model": "MICA MATTE",
+    "name": "MICA MATTE",
+    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "images": [
+      "assets/products/micas/matte/main.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 paquete / 50 pzs",
+        "price": "$450 MXN"
+      },
+      {
+        "quantity": "10 paquetes",
+        "price": "$400 c/u"
+      },
+      {
+        "quantity": "50 paquetes",
+        "price": "$350 c/u"
+      }
+    ],
+    "priceSource": "Lista Micas HAODE 2026-06: paquete 50 pzs",
+    "whatsappText": "Hola HAODE, quiero cotizar MICA MATTE por paquete de 50 pzs",
+    "description": "Mica matte con acabado suave y antirreflejo para uso diario.\n\nBeneficios:\n- Acabado mate\n- Menos reflejo\n- Tacto suave\n- Protección diaria\n- Paquete de 50 pzs"
+  },
+  {
+    "id": "mica-privacidad-hd",
+    "category": "micas",
+    "brand": "HAODE",
+    "model": "MICA PRIVACIDAD HD",
+    "name": "MICA PRIVACIDAD HD",
+    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "images": [
+      "assets/products/micas/privacidad-hd/main.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 paquete / 50 pzs",
+        "price": "$850 MXN"
+      },
+      {
+        "quantity": "10 paquetes",
+        "price": "$800 c/u"
+      },
+      {
+        "quantity": "50 paquetes",
+        "price": "$750 c/u"
+      }
+    ],
+    "priceSource": "Lista Micas HAODE 2026-06: paquete 50 pzs",
+    "whatsappText": "Hola HAODE, quiero cotizar MICA PRIVACIDAD HD por paquete de 50 pzs",
+    "description": "Mica de privacidad HD para proteger la información en lugares públicos.\n\nBeneficios:\n- Privacidad lateral\n- Protección visual\n- Uso diario\n- Acabado limpio\n- Paquete de 50 pzs"
+  },
+  {
+    "id": "mica-privacidad-matte",
+    "category": "micas",
+    "brand": "HAODE",
+    "model": "MICA PRIVACIDAD MATTE",
+    "name": "MICA PRIVACIDAD MATTE",
+    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "images": [
+      "assets/products/micas/privacidad-matte/main.png",
+      "assets/products/micas/privacidad-matte/gallery-01.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 paquete / 50 pzs",
+        "price": "$850 MXN"
+      },
+      {
+        "quantity": "10 paquetes",
+        "price": "$800 c/u"
+      },
+      {
+        "quantity": "50 paquetes",
+        "price": "$750 c/u"
+      }
+    ],
+    "priceSource": "Lista Micas HAODE 2026-06: paquete 50 pzs",
+    "whatsappText": "Hola HAODE, quiero cotizar MICA PRIVACIDAD MATTE por paquete de 50 pzs",
+    "description": "Mica de privacidad matte con acabado antirreflejo y protección visual.\n\nBeneficios:\n- Privacidad lateral\n- Acabado matte\n- Menos reflejo\n- Protección diaria\n- Paquete de 50 pzs"
+  },
+  {
     "id": "funda-premium-17-pro-max",
     "category": "fundas",
     "brand": "HAODE",
@@ -4261,8 +4379,3 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "W630 AI PRO disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   }
 ];
-window.HAODE_PRODUCTS_BUILD = {
-  "generatedAt": "2026-06-05T19:35:57.650Z",
-  "workbook": "HL CDMX 2026 06xlsx.xlsx",
-  "updatedFor": "AI glasses 5-product audit 2026-06-05"
-};

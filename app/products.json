@@ -1190,45 +1190,6 @@
     "orden": 790
   },
   {
-    "id": "micas-hd-clear-50",
-    "categoria": "Micas",
-    "nombre": "Micas HD Clear",
-    "modelo": "Paquete 50 piezas",
-    "descripcion": "Micas HD Clear para venta en tienda, taller y mayoreo. Material para proteccion diaria con cotizacion por WhatsApp.",
-    "precioPublico": 450,
-    "precioMayoreo": 375,
-    "imagen": "/haode-web/assets/products/micas-hd-clear/main.png",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 800
-  },
-  {
-    "id": "micas-mate-corte",
-    "categoria": "Micas",
-    "nombre": "Micas Mate",
-    "modelo": "Peliculas para corte",
-    "descripcion": "Micas Mate con acabado antirreflejo para corte profesional y venta en mostrador. Consulta compatibilidad y stock por WhatsApp.",
-    "precioPublico": 450,
-    "precioMayoreo": 375,
-    "imagen": "/haode-web/assets/products/home-cut-machine/micas-mate.svg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 810
-  },
-  {
-    "id": "micas-privacidad-corte",
-    "categoria": "Micas",
-    "nombre": "Micas Privacidad",
-    "modelo": "Peliculas privacy",
-    "descripcion": "Micas de privacidad para proteger informacion en pantalla. Opcion para tiendas y tecnicos que venden proteccion celular.",
-    "precioPublico": 500,
-    "precioMayoreo": 420,
-    "imagen": "/haode-web/assets/products/home-cut-machine/micas-privacidad.svg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 820
-  },
-  {
     "id": "samsung-original-s21-ultra",
     "categoria": "Pantallas Samsung Original",
     "nombre": "Pantalla para Samsung S21 Ultra",
@@ -1253,6 +1214,138 @@
     "stock": "bajo pedido",
     "activo": true,
     "orden": 830
+  },
+  {
+    "id": "mica-hd",
+    "categoria": "Micas",
+    "nombre": "MICA HD",
+    "modelo": "Paquete 50 pzs",
+    "descripcion": "Mica transparente para corte profesional. Ideal para uso diario y alta claridad. Beneficios: Alta transparencia, Protección diaria, Compatible con corte profesional, Paquete de 50 pzs.",
+    "precioPublico": 450,
+    "precioMayoreo": 400,
+    "imagen": "/haode-web/assets/products/micas/hd/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 800,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 9,
+        "price": 450,
+        "label": "1 paquete / 50 pzs"
+      },
+      {
+        "minQty": 10,
+        "maxQty": 49,
+        "price": 400,
+        "label": "10 paquetes"
+      },
+      {
+        "minQty": 50,
+        "maxQty": null,
+        "price": 350,
+        "label": "50 paquetes"
+      }
+    ]
+  },
+  {
+    "id": "mica-matte",
+    "categoria": "Micas",
+    "nombre": "MICA MATTE",
+    "modelo": "Paquete 50 pzs",
+    "descripcion": "Mica matte con acabado suave y antirreflejo para uso diario. Beneficios: Acabado mate, Menos reflejo, Tacto suave, Protección diaria, Paquete de 50 pzs.",
+    "precioPublico": 450,
+    "precioMayoreo": 400,
+    "imagen": "/haode-web/assets/products/micas/matte/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 810,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 9,
+        "price": 450,
+        "label": "1 paquete / 50 pzs"
+      },
+      {
+        "minQty": 10,
+        "maxQty": 49,
+        "price": 400,
+        "label": "10 paquetes"
+      },
+      {
+        "minQty": 50,
+        "maxQty": null,
+        "price": 350,
+        "label": "50 paquetes"
+      }
+    ]
+  },
+  {
+    "id": "mica-privacidad-hd",
+    "categoria": "Micas",
+    "nombre": "MICA PRIVACIDAD HD",
+    "modelo": "Paquete 50 pzs",
+    "descripcion": "Mica de privacidad HD para proteger la información en lugares públicos. Beneficios: Privacidad lateral, Protección visual, Uso diario, Acabado limpio, Paquete de 50 pzs.",
+    "precioPublico": 850,
+    "precioMayoreo": 800,
+    "imagen": "/haode-web/assets/products/micas/privacidad-hd/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 820,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 9,
+        "price": 850,
+        "label": "1 paquete / 50 pzs"
+      },
+      {
+        "minQty": 10,
+        "maxQty": 49,
+        "price": 800,
+        "label": "10 paquetes"
+      },
+      {
+        "minQty": 50,
+        "maxQty": null,
+        "price": 750,
+        "label": "50 paquetes"
+      }
+    ]
+  },
+  {
+    "id": "mica-privacidad-matte",
+    "categoria": "Micas",
+    "nombre": "MICA PRIVACIDAD MATTE",
+    "modelo": "Paquete 50 pzs",
+    "descripcion": "Mica de privacidad matte con acabado antirreflejo y protección visual. Beneficios: Privacidad lateral, Acabado matte, Menos reflejo, Protección diaria, Paquete de 50 pzs.",
+    "precioPublico": 850,
+    "precioMayoreo": 800,
+    "imagen": "/haode-web/assets/products/micas/privacidad-matte/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 830,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 9,
+        "price": 850,
+        "label": "1 paquete / 50 pzs"
+      },
+      {
+        "minQty": 10,
+        "maxQty": 49,
+        "price": 800,
+        "label": "10 paquetes"
+      },
+      {
+        "minQty": 50,
+        "maxQty": null,
+        "price": 750,
+        "label": "50 paquetes"
+      }
+    ]
   },
   {
     "id": "x200t-cortadora-micas",

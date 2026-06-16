@@ -449,21 +449,6 @@
     "precioAppJunio": 1350,
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
-  "micas-hd-clear-50": {
-    "precioMostrador": 450,
-    "precioAppJunio": 375,
-    "source": "products.json:precioMayoreo fallback"
-  },
-  "micas-mate-corte": {
-    "precioMostrador": 450,
-    "precioAppJunio": 375,
-    "source": "products.json:precioMayoreo fallback"
-  },
-  "micas-privacidad-corte": {
-    "precioMostrador": 500,
-    "precioAppJunio": 420,
-    "source": "products.json:precioMayoreo fallback"
-  },
   "samsung-original-s21-ultra": {
     "precioMostrador": 2500,
     "precioAppJunio": 2200,

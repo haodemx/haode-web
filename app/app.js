@@ -630,6 +630,15 @@ function productStockMarkup(product) {
 function productPriceMarkup(product) {
   const promo = promoPriceFor(product);
 
+  if (product.category === "Micas") {
+    return `
+      <div class="price-lines">
+        <span>Paquete 50 pzs <strong>${formatPrice(product.publicPrice)}</strong></span>
+        <span>Mayoreo desde <strong>${formatPrice(product.wholesalePrice)}</strong></span>
+      </div>
+    `;
+  }
+
   if (product.appJunePrice > 0) {
     return `
       <div class="price-lines app-june-price-lines">

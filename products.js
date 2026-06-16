@@ -57,8 +57,8 @@ const CATEGORY_META = {
   micas: {
     brand: 'HAODE',
     title: 'Micas',
-    subtitle: 'Micas y películas para protección celular en mostrador y mayoreo.',
-    mainImage: 'assets/products/micas-hd-clear/main.png',
+    subtitle: 'Micas para protección celular en mostrador y mayoreo.',
+    mainImage: 'assets/products/micas/hd/main.png',
     galleryImages: [],
   },
   'maquinas-de-mica': {
