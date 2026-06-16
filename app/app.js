@@ -84,6 +84,7 @@ const categories = [
   { id: "Micas", label: "Micas" },
   { id: "Máquinas de Mica", label: "Máquinas de Mica" },
   { id: "Gafas AI", label: "Gafas AI" },
+  { id: "Cámaras Inteligentes", label: "Cámaras AI" },
   { id: "Fundas", label: "Fundas" }
 ];
 
@@ -121,10 +122,10 @@ const heroShowcaseItems = [
   },
   {
     title: "Productos AI",
-    subtitle: "Gafas inteligentes y accesorios",
-    image: "/haode-web/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg",
+    subtitle: "Gafas inteligentes y cámaras digitales",
+    image: "/haode-web/assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
     badge: "Nuevo",
-    targetCategory: "Gafas AI"
+    targetCategory: "Cámaras Inteligentes"
   },
   {
     title: "Fundas para iPhone",

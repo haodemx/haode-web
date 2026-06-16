@@ -4354,6 +4354,85 @@ window.HAODE_PRODUCTS_DATA = [
     "description": "AIMB-G5 AI SPORTS disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
+    "id": "lk-007-camara-digital-4k",
+    "category": "camaras-inteligentes",
+    "brand": "HAODE",
+    "model": "LK-007",
+    "name": "Cámara Digital 4K LK-007 | Pantalla Abatible 2.4\" | HAODE México",
+    "quality": "Cámara Digital 4K",
+    "images": [
+      "assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
+      "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-01.png",
+      "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-02.png",
+      "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-03.png",
+      "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-04.png"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "Menudeo",
+        "price": "$500 MXN"
+      },
+      {
+        "quantity": "Mayoreo",
+        "price": "$400 MXN"
+      }
+    ],
+    "priceSource": "老板确认 2026-06-16",
+    "whatsappText": "Hola HAODE, quiero cotizar: Cámara Digital 4K LK-007",
+    "description": "Cámara digital compacta estilo retro con pantalla abatible de 2.4 pulgadas, ideal para tomar fotos, grabar videos y crear contenido diario. Diseño moderno, colores atractivos y uso fácil para jóvenes, viajes, regalos y uso personal."
+  },
+  {
+    "id": "lk-030-mini-camara-retro-digital",
+    "category": "camaras-inteligentes",
+    "brand": "HAODE",
+    "model": "LK-030",
+    "name": "LK-030 Mini Cámara Retro Digital",
+    "quality": "Cámara digital compacta",
+    "images": [
+      "assets/products/productos-ai/lk-030-mini-camara-retro-digital/main-red-hd.jpeg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "Menudeo",
+        "price": "$400 MXN"
+      },
+      {
+        "quantity": "Mayoreo",
+        "price": "$300 MXN"
+      }
+    ],
+    "priceSource": "老板确认 2026-06-16",
+    "whatsappText": "Hola HAODE, quiero cotizar: LK-030 Mini Cámara Retro Digital",
+    "description": "Mini cámara retro digital con pantalla abatible y formato compacto para fotos, videos, viajes, regalos y contenido diario."
+  },
+  {
+    "id": "lk-032-camara-inteligente-con-gimbal",
+    "category": "camaras-inteligentes",
+    "brand": "HAODE",
+    "model": "LK-032",
+    "name": "LK-032 Cámara Inteligente con Gimbal",
+    "quality": "Cámara inteligente con gimbal",
+    "images": [
+      "assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "Menudeo",
+        "price": "$1000 MXN"
+      },
+      {
+        "quantity": "Mayoreo",
+        "price": "$800 MXN"
+      }
+    ],
+    "priceSource": "老板确认 2026-06-16",
+    "whatsappText": "Hola HAODE, quiero cotizar: LK-032 Cámara Inteligente con Gimbal",
+    "description": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV."
+  },
+  {
     "id": "w630-ai-pro",
     "category": "gafas-ai",
     "brand": "HAODE",

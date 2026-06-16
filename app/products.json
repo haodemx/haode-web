@@ -1718,6 +1718,45 @@
     ]
   },
   {
+    "id": "lk-007-camara-digital-4k",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "Cámara Digital 4K LK-007",
+    "modelo": "Pantalla abatible 2.4 pulgadas",
+    "descripcion": "Cámara digital compacta estilo retro con pantalla abatible de 2.4 pulgadas, ideal para tomar fotos, grabar videos y crear contenido diario. Diseño moderno, colores atractivos y uso fácil para jóvenes, viajes, regalos y uso personal.",
+    "precioPublico": 500,
+    "precioMayoreo": 400,
+    "imagen": "/haode-web/assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 900
+  },
+  {
+    "id": "lk-030-mini-camara-retro-digital",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "LK-030 Mini Cámara Retro Digital",
+    "modelo": "Pantalla abatible",
+    "descripcion": "Mini cámara retro digital con pantalla abatible y formato compacto para fotos, videos, viajes, regalos y contenido diario.",
+    "precioPublico": 400,
+    "precioMayoreo": 300,
+    "imagen": "/haode-web/assets/products/productos-ai/lk-030-mini-camara-retro-digital/main-red-hd.jpeg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 901
+  },
+  {
+    "id": "lk-032-camara-inteligente-con-gimbal",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "LK-032 Cámara Inteligente con Gimbal",
+    "modelo": "Cámara inteligente con gimbal",
+    "descripcion": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV.",
+    "precioPublico": 1000,
+    "precioMayoreo": 800,
+    "imagen": "/haode-web/assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 902
+  },
+  {
     "id": "samsung-original-z-fold6",
     "categoria": "Pantallas Samsung Original",
     "nombre": "Pantalla Samsung Z Fold6",
