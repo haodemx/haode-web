@@ -668,6 +668,18 @@ function productPriceMarkup(product) {
   `;
 }
 
+function productDetailUrl(product) {
+  const detailUrls = {
+    "samsung-original-z-flip7": "/haode-web/productos/samsung-z-flip7/",
+    "samsung-original-z-fold3": "/haode-web/productos/samsung-z-fold3/",
+    "samsung-original-z-fold4": "/haode-web/productos/samsung-z-fold4/",
+    "samsung-original-z-fold5": "/haode-web/productos/samsung-z-fold5/",
+    "samsung-original-z-fold6": "/haode-web/productos/samsung-z-fold6/"
+  };
+
+  return detailUrls[product.id] || "";
+}
+
 function productCardHtml(product) {
   const qualityMarkup = product.quality
     ? `
@@ -677,6 +689,10 @@ function productCardHtml(product) {
         </div>
       `
     : "";
+  const detailUrl = productDetailUrl(product);
+  const detailAction = detailUrl
+    ? `<a class="text-button" href="${detailUrl}">Ver detalles</a>`
+    : `<button class="text-button" type="button" data-show-details="${product.id}">Ver detalles</button>`;
 
   return `
     <article class="product-card">
@@ -696,7 +712,7 @@ function productCardHtml(product) {
           ${product.priceTiers.length ? priceTiersMarkup(product) : ""}
         </div>
         <div class="product-actions">
-          <button class="text-button" type="button" data-show-details="${product.id}">Ver detalles</button>
+          ${detailAction}
           <button class="outline-button" type="button" data-add-wholesale="${product.id}">Solicitar mayoreo</button>
           <button class="add-button" type="button" data-add-product="${product.id}">Agregar al carrito</button>
         </div>
