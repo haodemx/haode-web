@@ -21,27 +21,54 @@
   <link rel="stylesheet" href="/haode-web/style.css" />
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": "https://haodemx.github.io/haode-web/productos/samsung-z-flip7/#product",
-    "name": "Pantalla Samsung Z Flip7",
-    "image": "https://haodemx.github.io/haode-web/assets/products/samsung-original/z-flip7/main.png",
-    "description": "Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO para técnicos y tiendas de reparación. Disponible bajo pedido en HAODE México, con precios para mostrador, APP y mayoreo.",
-    "brand": {
-      "@type": "Brand",
-      "name": "HAODE"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://haodemx.github.io/haode-web/productos/samsung-z-flip7/#product",
+      "name": "Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO",
+      "image": "https://haodemx.github.io/haode-web/assets/products/samsung-original/z-flip7/main.png",
+      "description": "Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO disponible en HAODE México para técnicos y tiendas de reparación. Producto bajo pedido con precios de mostrador, APP y mayoreo. Esta pantalla está pensada para reparaciones profesionales de Samsung Z Flip7, con presentación tipo original y marco incluido para facilitar el trabajo del técnico.",
+      "brand": {
+        "@type": "Brand",
+        "name": "HAODE"
+      },
+      "category": "Samsung TIPO ORIGINAL",
+      "sku": "samsung-original-z-flip7",
+      "productID": "samsung-original-z-flip7",
+      "offers": {
+        "@type": "Offer",
+        "price": "5600",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://haodemx.github.io/haode-web/productos/samsung-z-flip7/"
+      }
     },
-    "category": "Samsung TIPO ORIGINAL",
-    "sku": "samsung-original-z-flip7",
-    "productID": "samsung-original-z-flip7",
-    "offers": {
-      "@type": "Offer",
-      "price": "5600",
-      "priceCurrency": "MXN",
-      "availability": "https://schema.org/PreOrder",
-      "url": "https://haodemx.github.io/haode-web/productos/samsung-z-flip7/"
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://haodemx.github.io/haode-web/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Samsung TIPO ORIGINAL",
+          "item": "https://haodemx.github.io/haode-web/categoria/samsung-tipo-original/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pantalla Samsung Z Flip7",
+          "item": "https://haodemx.github.io/haode-web/productos/samsung-z-flip7/"
+        }
+      ]
     }
-  }
+  ]
+}
   </script>
 </head>
 <body class="product-detail-page">
@@ -55,17 +82,24 @@
         <a href="/haode-web/">Inicio</a>
         <a href="/haode-web/productos/">Pantallas</a>
         <a href="/haode-web/categoria/samsung-tipo-original/">Samsung TIPO ORIGINAL</a>
+        <a href="/haode-web/categoria/samsung-plegables/">Samsung Z Flip y Z Fold</a>
         <a href="/haode-web/app/">APP</a>
       </nav>
     </div>
   </header>
 
   <main class="detail-main">
+    <nav class="breadcrumb-nav wrap" aria-label="Breadcrumb">
+      <a href="/haode-web/">Inicio</a>
+      <a href="/haode-web/categoria/samsung-tipo-original/">Samsung TIPO ORIGINAL</a>
+      <span>Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO</span>
+    </nav>
+
     <div class="wrap detail-shell">
       <div class="detail-top">
         <div>
           <span class="detail-kicker">Samsung TIPO ORIGINAL</span>
-          <h1 class="detail-title">Pantalla Samsung Z Flip7</h1>
+          <h1 class="detail-title">Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO</h1>
           <p class="catalog-intro">Samsung Z Flip7 TIPO ORIGINAL CON MARCO</p>
           <div class="detail-highlights">
             <span>TIPO ORIGINAL</span>
@@ -77,14 +111,15 @@
       </div>
 
       <div class="detail-grid">
-        <section class="detail-visual" aria-label="Imagen de Pantalla Samsung Z Flip7">
+        <section class="detail-visual" aria-label="Imagen de Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO">
           <img class="detail-main-image" src="/haode-web/assets/products/samsung-original/z-flip7/main.png" alt="Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO HAODE" />
         </section>
 
         <aside class="detail-info">
           <article class="detail-card">
             <p class="detail-meta">Samsung TIPO ORIGINAL · Bajo pedido</p>
-            <p class="detail-description">Pantalla Samsung TIPO ORIGINAL CON MARCO para técnicos y tiendas de reparación. Disponible bajo pedido en HAODE México, con precios para mostrador, APP y mayoreo.</p>
+            <p class="detail-description">Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO disponible en HAODE México para técnicos y tiendas de reparación. Producto bajo pedido con precios de mostrador, APP y mayoreo.</p>
+            <p class="detail-description">Esta pantalla está pensada para reparaciones profesionales de Samsung Z Flip7, con presentación tipo original y marco incluido para facilitar el trabajo del técnico.</p>
             <table class="detail-price-table" aria-label="Precios de Pantalla Samsung Z Flip7">
               <tbody>
                 <tr><th scope="row">Precio Mostrador</th><td>$5,800 MXN</td></tr>
@@ -94,12 +129,36 @@
             </table>
             <div class="detail-buttons">
               <a class="btn btn-primary" href="https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20cotizar%3A%20Pantalla%20Samsung%20Z%20Flip7%20TIPO%20ORIGINAL%20CON%20MARCO" target="_blank" rel="noopener noreferrer">Solicitar mayoreo</a>
-              <a class="btn btn-secondary" href="/haode-web/app/">Volver a APP</a>
-              <a class="btn btn-secondary" href="/haode-web/productos/">Ver más productos</a>
+              <a class="btn btn-secondary" href="/haode-web/app/">Ver catálogo en HAODE APP</a>
+              <a class="btn btn-secondary" href="/haode-web/categoria/samsung-tipo-original/">Volver a Samsung TIPO ORIGINAL</a>
             </div>
           </article>
         </aside>
       </div>
+
+      <section class="detail-card detail-seo-card" aria-labelledby="ideal-samsung-z-flip7">
+        <h2 id="ideal-samsung-z-flip7">Ideal para reparaciones profesionales Samsung</h2>
+        <p>Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO se presenta como una opción bajo pedido para clientes que buscan refacciones Samsung con marco y una cotización clara desde HAODE México.</p>
+        <ul class="detail-list">
+          <li>Técnicos de reparación</li>
+          <li>Tiendas de celulares</li>
+          <li>Distribuidores de refacciones</li>
+          <li>Reparaciones profesionales Samsung</li>
+        </ul>
+      </section>
+
+      <section class="detail-card detail-seo-card" aria-labelledby="links-samsung-z-flip7">
+        <h2 id="links-samsung-z-flip7">Ver otros modelos Samsung Z Fold / Z Flip</h2>
+        <div class="seo-link-grid">
+          <a href="/haode-web/categoria/samsung-tipo-original/">Volver a Samsung TIPO ORIGINAL</a>
+          <a href="/haode-web/app/">Ver catálogo en HAODE APP</a>
+          <a href="/haode-web/categoria/samsung-plegables/">Ver colección Samsung Z Flip y Z Fold</a>
+          <a href="/haode-web/productos/samsung-z-fold3/">Pantalla Samsung Z Fold3 TIPO ORIGINAL CON MARCO</a>
+                <a href="/haode-web/productos/samsung-z-fold4/">Pantalla Samsung Z Fold4 TIPO ORIGINAL CON MARCO</a>
+                <a href="/haode-web/productos/samsung-z-fold5/">Pantalla Samsung Z Fold5 TIPO ORIGINAL CON MARCO</a>
+                <a href="/haode-web/productos/samsung-z-fold6/">Pantalla Samsung Z Fold6 TIPO ORIGINAL CON MARCO</a>
+        </div>
+      </section>
     </div>
   </main>
 </body>

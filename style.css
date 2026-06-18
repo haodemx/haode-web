@@ -3904,3 +3904,85 @@ body.product-detail-page .detail-zoom-close {
     bottom: 12px;
   }
 }
+
+/* Samsung indexing enhancement */
+.seo-link-grid,
+.app-seo-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.seo-link-grid a,
+.app-seo-links a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(20, 27, 35, 0.12);
+  border-radius: 8px;
+  background: #fff;
+  color: #16202a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.seo-link-grid a:hover,
+.seo-link-grid a:focus-visible,
+.app-seo-links a:hover,
+.app-seo-links a:focus-visible {
+  border-color: rgba(255, 106, 0, 0.55);
+  color: #d95500;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 20px;
+  color: #67717e;
+  font-size: 0.92rem;
+}
+
+.breadcrumb-nav a {
+  color: #d95500;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.breadcrumb-nav a::after {
+  content: ">";
+  margin-left: 8px;
+  color: #9aa3ad;
+  font-weight: 500;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.faq-grid article,
+.detail-seo-card {
+  border: 1px solid rgba(20, 27, 35, 0.1);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.faq-grid article {
+  padding: 18px;
+}
+
+.faq-grid h3,
+.detail-seo-card h2 {
+  margin-top: 0;
+  color: #16202a;
+}
+
+.detail-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  color: #43505c;
+}
