@@ -637,11 +637,13 @@ function renderHome() {
         </div>
       </section>
 
-      <section class="benefit-strip" aria-label="Ventajas HAODE">
-        ${benefitHtml("Stock en México", "Atención para técnicos y tiendas.", "grid")}
-        ${benefitHtml("Pedido por WhatsApp", "Envía tu carrito directo al equipo HAODE.", "whatsapp")}
-        ${benefitHtml("Calidad profesional", "Productos para reparación y mayoreo.", "shield")}
-        ${benefitHtml("Envío rápido", "Confirmación y coordinación por WhatsApp.", "truck")}
+      ${premiumSelectionHtml()}
+
+      <section class="trust-bar" aria-label="Confianza HAODE">
+        ${benefitHtml("Stock en México", "grid")}
+        ${benefitHtml("WhatsApp", "whatsapp")}
+        ${benefitHtml("Calidad HAODE", "shield")}
+        ${benefitHtml("Envío rápido", "truck")}
       </section>
 
       ${seoLinksHtml()}
@@ -650,15 +652,51 @@ function renderHome() {
   updateNavigation();
 }
 
-function benefitHtml(title, copy, icon) {
+function benefitHtml(title, icon) {
   return `
-    <article class="benefit-card">
+    <article class="trust-pill">
       ${iconSvg(icon)}
-      <span>
-        <strong>${title}</strong>
-        <span>${copy}</span>
-      </span>
+      <strong>${title}</strong>
     </article>
+  `;
+}
+
+function premiumSelectionHtml() {
+  const premiumItems = [
+    {
+      label: "Samsung TIPO ORIGINAL",
+      product: products.find((product) => product.category === "Pantallas Samsung Original" && product.image)
+    },
+    {
+      label: "iPhone OLED",
+      product: products.find((product) => product.category === "Pantallas iPhone OLED" && product.image)
+    },
+    {
+      label: "HAODE X200T",
+      product: products.find((product) => product.id === "x200t-cortadora-micas")
+    }
+  ].filter((item) => item.product);
+
+  if (!premiumItems.length) {
+    return "";
+  }
+
+  return `
+    <section class="premium-showcase" aria-labelledby="premium-showcase-title">
+      <div class="premium-showcase-copy">
+        <h2 id="premium-showcase-title">Selección premium HAODE</h2>
+        <p>Refacciones seleccionadas, stock en México y pedidos rápidos por WhatsApp.</p>
+      </div>
+      <div class="premium-showcase-grid">
+        ${premiumItems.slice(0, 3).map((item) => `
+          <a class="premium-tile" href="${appProductUrl(item.product)}" aria-label="Ver ${escapeAttr(item.product.displayName)}">
+            <span>${item.label}</span>
+            <strong>${item.product.displayName}</strong>
+            <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+          </a>
+        `).join("")}
+      </div>
+    </section>
   `;
 }
 
@@ -947,18 +985,30 @@ function renderContact() {
 }
 
 function seoLinksHtml() {
+  const chips = [
+    { label: "iPhone INCELL", href: "/haode-web/categoria/iphone-incell/", code: "IN" },
+    { label: "iPhone OLED", href: "/haode-web/categoria/iphone-oled/", code: "OLED" },
+    { label: "Samsung INCELL", href: "/haode-web/categoria/samsung-incell/", code: "SI" },
+    { label: "Samsung OLED", href: "/haode-web/categoria/samsung-oled/", code: "SO" },
+    { label: "Samsung TIPO ORIGINAL", href: "/haode-web/categoria/samsung-tipo-original/", code: "TO" },
+    { label: "Micas", href: "/haode-web/categoria/micas/", code: "MI" },
+    { label: "Productos AI", href: "/haode-web/categoria/productos-ai/", code: "AI" },
+    { label: "Fundas", href: "/haode-web/categoria/fundas/", code: "FU" }
+  ];
+
   return `
-    <section class="app-seo-section" aria-label="Categorías HAODE">
-      <p>HAODE APP permite consultar pantallas iPhone, pantallas Samsung, Samsung TIPO ORIGINAL CON MARCO, micas, fundas y productos AI para técnicos y tiendas de reparación en México.</p>
-      <div class="app-seo-links">
-        <a href="/haode-web/categoria/iphone-incell/">iPhone INCELL</a>
-        <a href="/haode-web/categoria/iphone-oled/">iPhone OLED</a>
-        <a href="/haode-web/categoria/samsung-incell/">Samsung INCELL</a>
-        <a href="/haode-web/categoria/samsung-oled/">Samsung OLED</a>
-        <a href="/haode-web/categoria/samsung-tipo-original/">Samsung TIPO ORIGINAL</a>
-        <a href="/haode-web/categoria/micas/">Micas</a>
-        <a href="/haode-web/categoria/productos-ai/">Productos AI</a>
-        <a href="/haode-web/categoria/fundas/">Fundas</a>
+    <section class="app-explore-section" aria-label="Explorar categorías HAODE">
+      <div>
+        <h2>Explora por categoría</h2>
+        <p>Catálogo profesional para técnicos y mayoristas en México.</p>
+      </div>
+      <div class="premium-chip-rail">
+        ${chips.map((chip, index) => `
+          <a class="premium-chip${index === 0 ? " is-featured" : ""}" href="${chip.href}">
+            <span>${chip.code}</span>
+            <strong>${chip.label}</strong>
+          </a>
+        `).join("")}
       </div>
     </section>
   `;
