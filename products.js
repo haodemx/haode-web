@@ -47,6 +47,13 @@ const CATEGORY_META = {
       'assets/products/samsung-oled/gallery-03.jpg',
     ],
   },
+  'oled-diagnostica': {
+    brand: 'HAODE',
+    title: 'OLED Diagnóstica',
+    subtitle: 'Pantallas OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles.',
+    mainImage: 'assets/products/placeholder.svg',
+    galleryImages: [],
+  },
   'gafas-ai': {
     brand: 'HAODE',
     title: 'Gafas AI',
@@ -96,6 +103,8 @@ const CATEGORY_ALIASES = {
   'iPhone OLED': 'iphone-oled',
   'Samsung INCELL': 'samsung-incell',
   'Samsung OLED': 'samsung-oled',
+  'Pantallas OLED Diagnóstica': 'oled-diagnostica',
+  'OLED Diagnóstica': 'oled-diagnostica',
   'Gafas AI': 'gafas-ai',
   'Productos AI': 'camaras-inteligentes',
   'Cámaras Inteligentes': 'camaras-inteligentes',
@@ -108,6 +117,7 @@ const CATEGORY_ALIASES = {
   'iphone-oled': 'iphone-oled',
   'samsung-incell': 'samsung-incell',
   'samsung-oled': 'samsung-oled',
+  'oled-diagnostica': 'oled-diagnostica',
   'gafas-ai': 'gafas-ai',
   'camaras-inteligentes': 'camaras-inteligentes',
   micas: 'micas',
@@ -907,6 +917,32 @@ function getProductUrl(productId) {
   return buildSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(productId))}/`);
 }
 
+function productMetaKeywords(product) {
+  if (product.category === 'oled-diagnostica') {
+    return [
+      `${product.brand} ${product.model}`,
+      'OLED Diagnóstica HAODE',
+      'pantallas OLED México',
+      'refacciones celulares México',
+      'pantallas para reparación profesional',
+      'pantallas para técnicos',
+      'pantallas para distribuidores',
+    ].join(', ');
+  }
+  return [
+    `${product.brand} ${product.model}`,
+    product.category,
+    'pantallas iPhone México',
+    'pantallas Samsung OLED México',
+    'pantallas INCELL México',
+    'pantallas mayoreo CDMX',
+    'refacciones celulares México',
+    'pantallas para reparación celular',
+    'pantallas para técnicos',
+    'pantallas para distribuidores',
+  ].join(', ');
+}
+
 function getCategoryHash(category) {
   const categorySlug = normalizeCategory(category);
   if (categorySlug === 'all') return '';
@@ -1226,18 +1262,7 @@ function renderProductDetailPage() {
   document.title = `${product.name} | HAODE México`;
   const detailUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(product.id))}/`);
   const metaDescription = `${product.name} en HAODE México. ${product.description}`;
-  const metaKeywords = [
-    `${product.brand} ${product.model}`,
-    product.category,
-    'pantallas iPhone México',
-    'pantallas Samsung OLED México',
-    'pantallas INCELL México',
-    'pantallas mayoreo CDMX',
-    'refacciones celulares México',
-    'pantallas para reparación celular',
-    'pantallas para técnicos',
-    'pantallas para distribuidores',
-  ].join(', ');
+  const metaKeywords = productMetaKeywords(product);
 
   setCanonicalUrl(detailUrl);
   setMetaContent('meta[name="description"]', metaDescription);

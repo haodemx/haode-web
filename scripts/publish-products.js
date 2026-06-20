@@ -82,7 +82,9 @@ function validateMasterRows(rows) {
   const blocked = [];
   const seen = new Set();
   rows.forEach((row) => {
-    const missing = ['id', 'producto_nombre', 'categoria', 'modelo', 'precio_publico', 'precio_mayoreo', 'imagen_path', 'estado']
+    const requiredFields = ['id', 'producto_nombre', 'categoria', 'modelo', 'precio_publico', 'imagen_path', 'estado'];
+    if (!String(row.categoria || '').includes('OLED Diagnóstica')) requiredFields.push('precio_mayoreo');
+    const missing = requiredFields
       .filter((field) => !String(row[field] || '').trim());
     if (missing.length) blocked.push({ sku: row.id || '(sin id)', reason: `Campos faltantes: ${missing.join(', ')}` });
     if (seen.has(row.id)) blocked.push({ sku: row.id, reason: 'SKU duplicado en products-master.csv' });

@@ -39,6 +39,7 @@ function categorySlugFromApp(category) {
   const map = {
     'Pantallas iPhone INCELL': 'iphone-incell',
     'Pantallas iPhone OLED': 'iphone-oled',
+    'Pantallas OLED Diagnóstica': 'oled-diagnostica',
     'Pantallas Samsung INCELL': 'samsung-incell',
     'Pantallas Samsung OLED': 'samsung-oled',
     'Gafas AI': 'gafas-ai',
@@ -109,6 +110,10 @@ function issue(list, severity, type, sku, detail) {
   list.push({ severity, type, sku, detail });
 }
 
+function allowsPendingWholesale(product) {
+  return String(product.categoria || product.category || '').includes('OLED Diagnóstica');
+}
+
 function main() {
   const issues = [];
   const websiteProducts = readWebsiteProducts();
@@ -171,8 +176,17 @@ function main() {
     if (!websiteById.has(sku)) {
       issue(issues, STRICT_SYNC ? 'error' : 'warn', 'WEBSITE_PRODUCT_MISSING', sku, 'app product is not present in website product data');
     }
-    if (!priceValue(product.precioPublico) || !priceValue(product.precioMayoreo)) {
-      issue(issues, 'error', 'APP_PRICE_FIELD_MISSING', sku, 'app product missing precioPublico or precioMayoreo');
+    if (!priceValue(product.precioPublico)) {
+      issue(issues, 'error', 'APP_PRICE_FIELD_MISSING', sku, 'app product missing precioPublico');
+    }
+    if (!priceValue(product.precioMayoreo)) {
+      issue(
+        issues,
+        allowsPendingWholesale(product) ? 'report' : 'error',
+        allowsPendingWholesale(product) ? 'APP_WHOLESALE_REQUIRES_CONFIRMATION' : 'APP_PRICE_FIELD_MISSING',
+        sku,
+        allowsPendingWholesale(product) ? 'app wholesale price is pending confirmation' : 'app product missing precioMayoreo'
+      );
     }
     if (!product.imagen || !fileExists(product.imagen)) {
       issue(issues, 'error', 'APP_IMAGE_PATH_MISSING', sku, 'app product has missing or unresolved imagen path');

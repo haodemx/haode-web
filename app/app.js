@@ -14,6 +14,7 @@ const categories = [
   { id: "Todos", label: "Todos", shortLabel: "Todo", group: "Todo", url: "/haode-web/app/#inicio", icon: "grid" },
   { id: "Pantallas iPhone OLED", label: "iPhone OLED", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/iphone-oled/", icon: "screen" },
   { id: "Pantallas iPhone INCELL", label: "iPhone INCELL", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/iphone-incell/", icon: "screen" },
+  { id: "Pantallas OLED Diagnóstica", label: "OLED Diagnóstica", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/oled-diagnostica/", icon: "screen" },
   { id: "Pantallas Samsung OLED", label: "Samsung AMOLED", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/samsung-oled/", icon: "screen" },
   { id: "Pantallas Samsung INCELL", label: "Samsung INCELL", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/samsung-incell/", icon: "screen" },
   { id: "Pantallas Samsung Original", label: "Samsung TIPO ORIGINAL", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/samsung-tipo-original/", icon: "screen" },
@@ -27,7 +28,8 @@ const categories = [
 const categoryAliases = {
   fundas: "Fundas",
   "Fundas y Accesorios": "Fundas",
-  "Pantallas Samsung AMOLED": "Pantallas Samsung OLED"
+  "Pantallas Samsung AMOLED": "Pantallas Samsung OLED",
+  "OLED Diagnóstica": "Pantallas OLED Diagnóstica"
 };
 
 const categorySearchAliases = {
@@ -40,7 +42,7 @@ const categoryGroups = [
     id: "Pantallas",
     title: "Pantallas",
     description: "iPhone, Samsung y calidades profesionales",
-    categoryIds: ["Pantallas iPhone OLED", "Pantallas iPhone INCELL", "Pantallas Samsung OLED", "Pantallas Samsung INCELL", "Pantallas Samsung Original"],
+    categoryIds: ["Pantallas iPhone OLED", "Pantallas iPhone INCELL", "Pantallas OLED Diagnóstica", "Pantallas Samsung OLED", "Pantallas Samsung INCELL", "Pantallas Samsung Original"],
     url: "/haode-web/categoria/pantallas/",
     icon: "screen"
   },
@@ -200,6 +202,9 @@ function normalizeStock(stock) {
 
 function samsungQualityFor(category, model) {
   const text = `${category || ""} ${model || ""}`.toUpperCase();
+  if (text.includes("OLED DIAGN")) {
+    return { label: "OLED Diagnóstica", spec: "Calidad profesional HAODE" };
+  }
   if (text.includes("TIPO ORIGINAL")) {
     return { label: "TIPO ORIGINAL", spec: "TIPO ORIGINAL CON MARCO" };
   }
@@ -417,6 +422,9 @@ function priceRuleFor(product, quantity = 1) {
     return { unitPrice: matchingTier.price, label: matchingTier.label };
   }
   if (quantity >= 10) {
+    if (product.category === "Pantallas OLED Diagnóstica" && !product.wholesalePrice) {
+      return { unitPrice: product.publicPrice, label: "Precio menudeo" };
+    }
     return { unitPrice: product.wholesalePrice || product.publicPrice, label: "Precio mayoreo" };
   }
   return { unitPrice: product.publicPrice, label: "Precio menudeo" };

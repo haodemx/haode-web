@@ -10,6 +10,7 @@ const FIRESTORE_QUEUE = path.join(ROOT, 'docs', 'reports', 'firestore-publish-qu
 const CATEGORY_TO_WEBSITE = {
   'Pantallas iPhone INCELL': 'iphone-incell',
   'Pantallas iPhone OLED': 'iphone-oled',
+  'Pantallas OLED Diagnóstica': 'oled-diagnostica',
   'Pantallas Samsung INCELL': 'samsung-incell',
   'Pantallas Samsung OLED': 'samsung-oled',
   'Gafas AI': 'gafas-ai',
@@ -117,6 +118,7 @@ function websiteAssetPath(value) {
 
 function inferBrand(row) {
   const category = row.categoria || '';
+  if (category.includes('OLED Diagnóstica')) return 'HAODE';
   if (category.includes('iPhone')) return 'iPhone';
   if (category.includes('Samsung')) return 'Samsung';
   return 'HAODE';
