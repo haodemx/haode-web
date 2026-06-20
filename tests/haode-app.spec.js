@@ -8,10 +8,10 @@ test.describe("HAODE Tienda app QA", () => {
     await page.goto(APP_URL, { waitUntil: "domcontentloaded" });
 
     await expect(page.getByText("HAODE Tienda").first()).toBeVisible();
-    await expect(page.getByText("Menudeo").first()).toBeVisible();
-    await expect(page.getByText("Mayoreo").first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Pantallas y refacciones profesionales" })).toBeVisible();
+    await expect(page.getByText("Productos destacados").first()).toBeVisible();
+    await expect(page.locator(".benefit-card").filter({ hasText: "Pedido por WhatsApp" })).toBeVisible();
     await expect(page.getByText("Carrito").first()).toBeVisible();
-    await expect(page.getByText("Ofertas especiales").first()).toBeVisible();
 
     const productCards = page.locator(".product-card");
     await expect(productCards.first()).toBeVisible({ timeout: 15000 });
@@ -21,7 +21,7 @@ test.describe("HAODE Tienda app QA", () => {
 
     const cartCount = page.locator("[data-cart-count]").first();
     const initialCount = Number((await cartCount.textContent()) || "0");
-    await productCards.first().getByRole("button", { name: "Agregar al carrito" }).click();
+    await productCards.first().getByRole("button", { name: "Agregar" }).click();
     await expect(cartCount).toHaveText(String(initialCount + 1));
     await expect(page.locator("[data-cart-drawer]")).toHaveClass(/open/);
 
@@ -33,6 +33,12 @@ test.describe("HAODE Tienda app QA", () => {
     const whatsappLink = page.locator("[data-whatsapp-link]");
     await expect(whatsappLink).not.toHaveClass(/disabled/);
     await expect(whatsappLink).toHaveAttribute("href", /wa\.me|whatsapp/);
+
+    await page.locator("[data-close-cart]").click();
+    await page.goto(`${APP_URL}#producto/x200t-cortadora-micas`, { waitUntil: "domcontentloaded" });
+    await expect(page.getByRole("heading", { name: /X200T/i })).toBeVisible();
+    await expect(page.locator("[data-product-gallery] img").first()).toBeVisible();
+    await expect(page.locator("[data-viewer-stage]")).toHaveCount(0);
 
     await expectBrokenImages(page);
 

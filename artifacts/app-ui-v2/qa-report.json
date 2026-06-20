@@ -1,0 +1,146 @@
+{
+  "baseUrl": "http://localhost:8003/haode-web/app/",
+  "results": [
+    {
+      "name": "home-360",
+      "url": "http://localhost:8003/haode-web/app/",
+      "viewport": "360x740",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-360.png"
+    },
+    {
+      "name": "home-375",
+      "url": "http://localhost:8003/haode-web/app/",
+      "viewport": "375x812",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-375.png"
+    },
+    {
+      "name": "home-390",
+      "url": "http://localhost:8003/haode-web/app/",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-390.png"
+    },
+    {
+      "name": "home-430",
+      "url": "http://localhost:8003/haode-web/app/",
+      "viewport": "430x932",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-430.png"
+    },
+    {
+      "name": "tablet-768",
+      "url": "http://localhost:8003/haode-web/app/",
+      "viewport": "768x1024",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/tablet-768.png"
+    },
+    {
+      "name": "tablet-1024",
+      "url": "http://localhost:8003/haode-web/app/",
+      "viewport": "1024x768",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/tablet-1024.png"
+    },
+    {
+      "name": "home-desktop-1440",
+      "url": "http://localhost:8003/haode-web/app/",
+      "viewport": "1440x900",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-desktop-1440.png"
+    },
+    {
+      "name": "categories",
+      "url": "http://localhost:8003/haode-web/app/#grupo/Pantallas",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/categories.png"
+    },
+    {
+      "name": "product-list",
+      "url": "http://localhost:8003/haode-web/app/#lista",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/product-list.png"
+    },
+    {
+      "name": "product-detail",
+      "url": "http://localhost:8003/haode-web/app/#producto/iphone-incell-11",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/product-detail.png"
+    },
+    {
+      "name": "x200t-detail",
+      "url": "http://localhost:8003/haode-web/app/#producto/x200t-cortadora-micas",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/x200t-detail.png"
+    },
+    {
+      "name": "cart-page",
+      "url": "http://localhost:8003/haode-web/app/#carrito",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/cart-page.png"
+    },
+    {
+      "name": "empty-cart",
+      "url": "http://localhost:8003/haode-web/app/#carrito",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/empty-cart.png"
+    }
+  ],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "requestFailures": [
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=KJilVChEOq70epzx6VeoFB4ORrWBn7VtDx4ALnrlSWhadAQw6wn54g&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=H9w6-kvfU0y9O9b8CKrkcQ&AID=0&CI=0&TYPE=xmlhttp&zx=efq8p1s4b7gy&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=pE3qI-H79jhaurfcFAQLi4FN50vFgrWZX1sh5MRlAZbdYbUZdqJO9A&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=Ci2oi-Mm_phEumdCGkW29w&AID=0&CI=0&TYPE=xmlhttp&zx=2cr23sclr4ay&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=8Vw6GniMHBdYMYDD4cMwnwne_QKW6cKfbeHYgG4Ve_CxCKB2PE-10g&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=wkeBtVUfY6brTR9B9umzFw&AID=0&CI=0&TYPE=xmlhttp&zx=pe9dzbs7yple&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=hoJDugoAMTFYo7pj9h4yyr_GCqESfVs300l5HtdYWwVDqowPOW8z7A&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=8w5Dpytuwn1-rq_vkfVoGg&AID=0&CI=1&TYPE=xmlhttp&zx=u6ofrclmv2qe&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=hoJDugoAMTFYo7pj9h4yyr_GCqESfVs300l5HtdYWwVDqowPOW8z7A&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=8w5Dpytuwn1-rq_vkfVoGg&AID=101&CI=1&TYPE=xmlhttp&zx=bm9oj5xeozym&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=hoJDugoAMTFYo7pj9h4yyr_GCqESfVs300l5HtdYWwVDqowPOW8z7A&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=8w5Dpytuwn1-rq_vkfVoGg&AID=193&CI=1&TYPE=xmlhttp&zx=z2ce4i2dqvj&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=hoJDugoAMTFYo7pj9h4yyr_GCqESfVs300l5HtdYWwVDqowPOW8z7A&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=8w5Dpytuwn1-rq_vkfVoGg&AID=195&CI=1&TYPE=xmlhttp&zx=mp50mkk3zssa&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=hoJDugoAMTFYo7pj9h4yyr_GCqESfVs300l5HtdYWwVDqowPOW8z7A&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=8w5Dpytuwn1-rq_vkfVoGg&AID=0&CI=0&TYPE=xmlhttp&zx=5jgvrydrvn8x&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=hoJDugoAMTFYo7pj9h4yyr_GCqESfVs300l5HtdYWwVDqowPOW8z7A&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=8w5Dpytuwn1-rq_vkfVoGg&AID=197&CI=1&TYPE=xmlhttp&zx=vhe7o6sunr7z&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=eHy-FacD8799C43nY7mEqd_t0-zxc3t2Ya-kEl-PbZHLc8ww6Ce6JQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=HngjCplCd0h_hQwS1-zj7w&AID=0&CI=0&TYPE=xmlhttp&zx=ks5etmkbayql&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=meN5bhzWOADrKpz0uC8wQXf7PHs9UH9ttttHR1Xxzif4mOrQ06EHAw&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=616i771FUczKkrFMDziDvQ&AID=0&CI=0&TYPE=xmlhttp&zx=2aly972ocz7q&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=9BrNbERulR8xCh-G6OqznTeARZOgwC9EEkOaGeBAftdZYVVznXl0SQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=bIOKWc2HWT0jsOyAcAcn6A&AID=0&CI=0&TYPE=xmlhttp&zx=hc6gvshw495y&t=1"
+  ],
+  "whatsappHref": "https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20hacer%20este%20pedido%3A%0A%0ACliente%3A%20Cliente%20QA%20HAODE%0ATelefono%3A%205512345678%0ACiudad%3A%20CDMX%0ATipo%20de%20precio%3A%20Precio%20APP%20Junio%0A%0A-%20Pantalla%20para%20iPhone%2011%20Pro%20Max%20%7C%20Modelo%3A%20iPhone%2011%20Pro%20Max%20OLED%20PREMIUM%20%7C%20Cantidad%3A%201%20%7C%20Precio%20aplicado%3A%20Precio%20APP%20Junio%20%24535%20MXN%20%7C%20Subtotal%3A%20%24535%20MXN%0A%0ATotal%20estimado%3A%20%24535%20MXN%0A%0AComentario%3A%20Sin%20comentario%0A%0APor%20favor%20confirma%20disponibilidad%2C%20precio%20final%20y%20envio.%20Entiendo%20que%20no%20hay%20pago%20en%20linea%20y%20se%20confirma%20por%20WhatsApp.",
+  "cartCount": "1",
+  "hasDefaultBlueLinks": [],
+  "performanceNavigation": {
+    "domContentLoaded": 12,
+    "loadEventEnd": 12,
+    "transferSize": 7616
+  }
+}
