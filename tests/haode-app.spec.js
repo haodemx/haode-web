@@ -34,11 +34,19 @@ test.describe("HAODE Tienda app QA", () => {
     await expect(whatsappLink).not.toHaveClass(/disabled/);
     await expect(whatsappLink).toHaveAttribute("href", /wa\.me|whatsapp/);
 
+    await page.locator("[data-increase]").first().click();
+    await expect(cartCount).toHaveText(String(initialCount + 2));
+    await page.locator("[data-decrease]").first().click();
+    await expect(cartCount).toHaveText(String(initialCount + 1));
+    await page.locator("[data-remove]").first().click();
+    await expect(cartCount).toHaveText(String(initialCount));
+
     await page.locator("[data-close-cart]").click();
     await page.goto(`${APP_URL}#producto/x200t-cortadora-micas`, { waitUntil: "domcontentloaded" });
     await expect(page.getByRole("heading", { name: /X200T/i })).toBeVisible();
     await expect(page.locator("[data-product-gallery] img").first()).toBeVisible();
     await expect(page.locator("[data-viewer-stage]")).toHaveCount(0);
+    await expect(page.getByText("Galería de producto")).toBeVisible();
 
     await expectBrokenImages(page);
 

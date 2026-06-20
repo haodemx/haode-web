@@ -7,6 +7,7 @@
       "viewport": "360x740",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-360.png"
     },
@@ -16,6 +17,7 @@
       "viewport": "375x812",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-375.png"
     },
@@ -25,6 +27,7 @@
       "viewport": "390x844",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-390.png"
     },
@@ -34,6 +37,7 @@
       "viewport": "430x932",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-430.png"
     },
@@ -43,6 +47,7 @@
       "viewport": "768x1024",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/tablet-768.png"
     },
@@ -52,6 +57,7 @@
       "viewport": "1024x768",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/tablet-1024.png"
     },
@@ -61,6 +67,7 @@
       "viewport": "1440x900",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/home-desktop-1440.png"
     },
@@ -70,8 +77,19 @@
       "viewport": "390x844",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/categories.png"
+    },
+    {
+      "name": "category-route",
+      "url": "http://localhost:8003/haode-web/app/#categoria/Pantallas%20iPhone%20INCELL",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "bottomNavOverlap": false,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/category-route.png"
     },
     {
       "name": "product-list",
@@ -79,6 +97,7 @@
       "viewport": "390x844",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/product-list.png"
     },
@@ -88,6 +107,7 @@
       "viewport": "390x844",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/product-detail.png"
     },
@@ -97,6 +117,7 @@
       "viewport": "390x844",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/x200t-detail.png"
     },
@@ -106,6 +127,7 @@
       "viewport": "390x844",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/cart-page.png"
     },
@@ -115,35 +137,40 @@
       "viewport": "390x844",
       "title": "HAODE APP | Pantallas y refacciones profesionales",
       "overflow": 0,
+      "bottomNavOverlap": false,
       "brokenImages": [],
       "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/empty-cart.png"
+    },
+    {
+      "name": "contact",
+      "url": "http://localhost:8003/haode-web/app/#contacto",
+      "viewport": "390x844",
+      "title": "HAODE APP | Pantallas y refacciones profesionales",
+      "overflow": 0,
+      "bottomNavOverlap": false,
+      "brokenImages": [],
+      "screenshot": "/Users/mac/Documents/haode/haode-web/artifacts/app-ui-v2/contact.png"
     }
   ],
   "consoleErrors": [],
   "consoleWarnings": [],
   "requestFailures": [
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=Ad56gG3KhYEbmQAfOVf00jYzYgq3fvYLBChlYtsE280-55jGKhgK4g&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=Z1JAp4cWgrYlkX_pnyjyag&AID=0&CI=0&TYPE=xmlhttp&zx=7h5ficoodme3&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=CVUYc751SxTliyPd_axDDH0lS-TCpjVbqK7-Xxo5CX4nxHfgLuTZeg&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=a2lUixqVWF9yTDD0rR7KgA&AID=0&CI=0&TYPE=xmlhttp&zx=chaawzecg1gf&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=RUU07OygMm8Vd9qWckm-RYZ-dXP1fKbd16CmYgfbZ4kWx0x9pXhz6w&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=tN3UTcV9I-jidmmj1wTM-g&AID=0&CI=1&TYPE=xmlhttp&zx=p5dsx5e8q2bu&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=RUU07OygMm8Vd9qWckm-RYZ-dXP1fKbd16CmYgfbZ4kWx0x9pXhz6w&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=tN3UTcV9I-jidmmj1wTM-g&AID=100&CI=1&TYPE=xmlhttp&zx=82edg5s68900&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=RUU07OygMm8Vd9qWckm-RYZ-dXP1fKbd16CmYgfbZ4kWx0x9pXhz6w&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=tN3UTcV9I-jidmmj1wTM-g&AID=198&CI=1&TYPE=xmlhttp&zx=jby9lc7196ci&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=RUU07OygMm8Vd9qWckm-RYZ-dXP1fKbd16CmYgfbZ4kWx0x9pXhz6w&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=tN3UTcV9I-jidmmj1wTM-g&AID=0&CI=0&TYPE=xmlhttp&zx=vp0zq3swlel&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=RUU07OygMm8Vd9qWckm-RYZ-dXP1fKbd16CmYgfbZ4kWx0x9pXhz6w&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=tN3UTcV9I-jidmmj1wTM-g&AID=202&CI=1&TYPE=xmlhttp&zx=1e7b7azbfk9l&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=BMmDohppp-AvojzR9CN173Rp5v4iyCjED1L472vQpMTy0V9NqAwPAQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=rI8epUQ7Z-J36Hh3xnqotA&AID=0&CI=1&TYPE=xmlhttp&zx=wkkxhzkcqy6t&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=BMmDohppp-AvojzR9CN173Rp5v4iyCjED1L472vQpMTy0V9NqAwPAQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=rI8epUQ7Z-J36Hh3xnqotA&AID=100&CI=1&TYPE=xmlhttp&zx=a8jw0412uqq&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=BMmDohppp-AvojzR9CN173Rp5v4iyCjED1L472vQpMTy0V9NqAwPAQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=rI8epUQ7Z-J36Hh3xnqotA&AID=198&CI=1&TYPE=xmlhttp&zx=41uxqs35bsbh&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=BMmDohppp-AvojzR9CN173Rp5v4iyCjED1L472vQpMTy0V9NqAwPAQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=rI8epUQ7Z-J36Hh3xnqotA&AID=200&CI=1&TYPE=xmlhttp&zx=z7iep0wfnu2c&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=BMmDohppp-AvojzR9CN173Rp5v4iyCjED1L472vQpMTy0V9NqAwPAQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=rI8epUQ7Z-J36Hh3xnqotA&AID=202&CI=1&TYPE=xmlhttp&zx=57s5n3yqwc6z&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=BMmDohppp-AvojzR9CN173Rp5v4iyCjED1L472vQpMTy0V9NqAwPAQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=rI8epUQ7Z-J36Hh3xnqotA&AID=0&CI=0&TYPE=xmlhttp&zx=s8br0dup3pn&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=cKQ3zTwxJilWEWfyj2w1g74F81pYxJPUABxyTocFm0knCy5XoWIHRA&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=HtVVaM87ZQDMyMnIhIAHpg&AID=0&CI=0&TYPE=xmlhttp&zx=7c4iut8jd2q8&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=om9_zRACErUMPpMtMzZiEJzZ4ycQ8PZn4DRA9S3fT52Oi95rL4pT1Q&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=rQir3Y90ERCR7ToCE0Q7OQ&AID=0&CI=0&TYPE=xmlhttp&zx=iaynua1l6lh&t=1",
-    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=rGrXDv-3wbLLYOOkxEmP988gzNMV3NBFw7pmr9i1tHHtvJm4aW5Fvg&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=YASidVWzf3hB24LYhogyIw&AID=0&CI=0&TYPE=xmlhttp&zx=hn5ypxmommdb&t=1"
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=lSGoVEQwgzohYM_xGG1QW_WItiUZuSxprfVhWIr2AmtfOZEqhhGC4w&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=6tWBJGH0eMPvWoatqxVAyA&AID=0&CI=0&TYPE=xmlhttp&zx=byd28ghlfb8v&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=k4fROuw3SCV1m7-uyj7PwM8oJtNREB1Qw6QlTz1h4kqcyPfcayrOuQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=ryBUhgSn1rCXWwpaBJ4qmQ&AID=0&CI=0&TYPE=xmlhttp&zx=h778ubtw80o9&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=K_R0Vpjl5oPX7VBRaIiwlGS-Jxu4r7-olb9v2pAQ1OBDCxKIi3dn0w&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=LJ-jBWbC5kKtq1WO8ejVuA&AID=0&CI=0&TYPE=xmlhttp&zx=6uyky162l9cp&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=oUb8vflESGTMl3eRFexKLxpc8I_fASaCkJhJHuYIOp4LJRW5twUMJw&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=SZQgSltoO-0yKjJeIP6vUQ&AID=0&CI=0&TYPE=xmlhttp&zx=3459rer8w9l8&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=jGbu6WKsv2vJWN_wrl4fC7FclFEJs8hOiVvvKHYIt0yYAYLxbql1Ew&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=SSZSX5dWhBZ9ZOT4f61R2g&AID=0&CI=0&TYPE=xmlhttp&zx=a0cpqbfpltqw&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=PnFVqemBXKf9Qjg9NK70-utInxiVavnAoKYliU2zrwWDAC5cJjnmSQ&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=_lnGv6XZ475_h-e5nI87WQ&AID=0&CI=0&TYPE=xmlhttp&zx=ib97ohfr7512&t=1",
+    "net::ERR_ABORTED https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=Pf00CXDTcazmpk55tA14FHwpNpIfz6liNtRs6s3hViSyYiExoicQFw&VER=8&database=projects%2Fhaode-app%2Fdatabases%2F(default)&RID=rpc&SID=Z7oaf4j3KP5nj9-PAuCP4g&AID=0&CI=0&TYPE=xmlhttp&zx=jf8a6nwvblhb&t=1"
   ],
   "whatsappHref": "https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20hacer%20este%20pedido%3A%0A%0ACliente%3A%20Cliente%20QA%20HAODE%0ATelefono%3A%205512345678%0ACiudad%3A%20CDMX%0ATipo%20de%20precio%3A%20Precio%20APP%20Junio%0A%0A-%20Pantalla%20para%20iPhone%2011%20Pro%20Max%20%7C%20Modelo%3A%20iPhone%2011%20Pro%20Max%20OLED%20PREMIUM%20%7C%20Cantidad%3A%201%20%7C%20Precio%20aplicado%3A%20Precio%20APP%20Junio%20%24535%20MXN%20%7C%20Subtotal%3A%20%24535%20MXN%0A%0ATotal%20estimado%3A%20%24535%20MXN%0A%0AComentario%3A%20Sin%20comentario%0A%0APor%20favor%20confirma%20disponibilidad%2C%20precio%20final%20y%20envio.%20Entiendo%20que%20no%20hay%20pago%20en%20linea%20y%20se%20confirma%20por%20WhatsApp.",
   "cartCount": "1",
+  "cartCountAfterIncrease": "2",
+  "cartCountAfterDecrease": "1",
+  "cartCountAfterRemove": "0",
   "hasDefaultBlueLinks": [],
   "performanceNavigation": {
-    "domContentLoaded": 11,
+    "domContentLoaded": 10,
     "loadEventEnd": 11,
     "transferSize": 7616
   }

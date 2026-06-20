@@ -837,6 +837,7 @@ function productGalleryHtml(product, images) {
   const selected = images[state.selectedGalleryIndex] || images[0] || PLACEHOLDER_IMAGE;
   return `
     <div class="gallery-stage">
+      ${isX200T(product) ? '<span class="gallery-badge">Galería de producto</span>' : ""}
       <img src="${selected}" alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.src='${product.image || PLACEHOLDER_IMAGE}'" />
     </div>
     ${thumbStripHtml(images, state.selectedGalleryIndex)}
