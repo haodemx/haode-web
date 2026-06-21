@@ -804,8 +804,9 @@ function buildPriceTable(values) {
   return QUANTITY_LABELS.map((quantity, index) => {
     const entry = Array.isArray(values) ? values[index] : undefined;
     const rawPrice = entry && typeof entry === 'object' && 'price' in entry ? entry.price : entry;
+    const rowQuantity = entry && typeof entry === 'object' && entry.quantity ? entry.quantity : quantity;
     return {
-      quantity,
+      quantity: rowQuantity,
       price: formatPrice(rawPrice),
     };
   });

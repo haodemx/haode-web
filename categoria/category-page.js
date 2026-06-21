@@ -17,13 +17,20 @@
     return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`;
   }
 
-  function priceTextFor(item) {
-    if (item.priceText) return item.priceText;
-    if (!Array.isArray(item.prices)) return '';
-    const retail = item.prices.find((price) => price.quantity === '1 pza') || item.prices[0];
-    if (!retail?.price) return '';
-    const formatted = String(retail.price).replace(/\$(\d+)\s*MXN/i, (_, amount) => `$${Number(amount).toLocaleString('es-MX')} MXN`);
-    return `1 pza ${formatted}`;
+  function formatPrice(price) {
+    return String(price || '').replace(/\$(\d+)\s*MXN/i, (_, amount) => `$${Number(amount).toLocaleString('es-MX')} MXN`);
+  }
+
+  function priceRowsFor(item) {
+    if (item.priceText) {
+      return `<p class="new-arrival-note">${item.priceText}</p>`;
+    }
+    if (!Array.isArray(item.prices) || !item.prices.length) return '';
+    const rows = item.prices.map((price) => {
+      const quantity = price.quantity || 'Precio';
+      return `<span><b>${quantity}</b><strong>${formatPrice(price.price)}</strong></span>`;
+    }).join('');
+    return `<div class="new-arrival-price-grid" aria-label="Precios">${rows}</div>`;
   }
 
   function buildProductCard(item) {
@@ -31,7 +38,7 @@
     article.className = 'new-product-card';
 
     const image = item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
-    const priceText = priceTextFor(item);
+    const priceRows = priceRowsFor(item);
 
     const detailHref = `/haode-web/producto/${item.id}/`;
 
@@ -43,7 +50,8 @@
       <div class="new-product-content">
         <h3>${item.name || item.model || 'Producto HAODE'}</h3>
         <p>${item.description || 'Producto HAODE México con atención por WhatsApp para técnicos, talleres y distribuidores. Confirma disponibilidad actual, modelo y cantidad antes de comprar.'}</p>
-        <p class="new-arrival-note">${item.quality || ''}${priceText ? ` · ${priceText}` : ''}</p>
+        <p class="new-arrival-note">${item.quality || ''}</p>
+        ${priceRows}
         <div class="new-product-actions">
           <a class="btn btn-secondary" href="${detailHref}">Ver detalles</a>
           <a class="btn btn-primary" href="${buildWhatsappUrl(item)}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>

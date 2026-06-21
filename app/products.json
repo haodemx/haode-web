@@ -1830,11 +1830,19 @@
     "modelo": "Modelo XS Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1000,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 950,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/xs-max.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10000
+    "orden": 10000,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
@@ -1843,11 +1851,19 @@
     "modelo": "Modelo 11 Pro Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1000,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 950,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/11-pro-max.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10001
+    "orden": 10001,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
@@ -1856,11 +1872,19 @@
     "modelo": "Modelo 12 / 12 Pro",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1000,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 950,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/12-12-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10002
+    "orden": 10002,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
@@ -1869,11 +1893,19 @@
     "modelo": "Modelo 12 Pro Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1200,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1050,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 10003
+    "orden": 10003,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1050,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13",
@@ -1882,11 +1914,19 @@
     "modelo": "Modelo 13",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1200,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1050,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/13-13-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10004
+    "orden": 10004,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1050,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
@@ -1895,11 +1935,19 @@
     "modelo": "Modelo 13 Pro",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1300,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1250,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/13-13-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10005
+    "orden": 10005,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1250,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
@@ -1908,11 +1956,19 @@
     "modelo": "Modelo 13 Pro Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1400,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1350,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 10006
+    "orden": 10006,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1350,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14",
@@ -1921,11 +1977,19 @@
     "modelo": "Modelo 14",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1300,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1250,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/14-14-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10007
+    "orden": 10007,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1250,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
@@ -1934,11 +1998,19 @@
     "modelo": "Modelo 14 Pro",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1500,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1450,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/14-14-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10008
+    "orden": 10008,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1450,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
@@ -1947,11 +2019,19 @@
     "modelo": "Modelo 14 Pro Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1600,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1550,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 10009
+    "orden": 10009,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1550,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
@@ -1960,11 +2040,19 @@
     "modelo": "Modelo 14 Plus",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1500,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1450,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/14-plus.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10010
+    "orden": 10010,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1450,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15",
@@ -1973,11 +2061,19 @@
     "modelo": "Modelo 15",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1600,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1550,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 10011
+    "orden": 10011,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1550,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
@@ -1986,11 +2082,19 @@
     "modelo": "Modelo 15 Pro",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 1700,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1650,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/15-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10012
+    "orden": 10012,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1650,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
@@ -1999,11 +2103,19 @@
     "modelo": "Modelo 15 Pro Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2000,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1950,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/15-pro-max.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10013
+    "orden": 10013,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1950,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
@@ -2012,11 +2124,19 @@
     "modelo": "Modelo 15 Plus",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2000,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1950,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 10014
+    "orden": 10014,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1950,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16",
@@ -2025,11 +2145,19 @@
     "modelo": "Modelo 16",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2000,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 1950,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/16.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10015
+    "orden": 10015,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1950,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
@@ -2038,11 +2166,19 @@
     "modelo": "Modelo 16 Pro",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2300,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 2250,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/16-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10016
+    "orden": 10016,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2250,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
@@ -2051,11 +2187,19 @@
     "modelo": "Modelo 16 Pro Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2500,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 2450,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/16-pro-max.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10017
+    "orden": 10017,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2450,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
@@ -2064,11 +2208,19 @@
     "modelo": "Modelo 16 Plus",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2500,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 2450,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/16-plus.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10018
+    "orden": 10018,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2450,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17",
@@ -2077,11 +2229,19 @@
     "modelo": "Modelo 17",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2500,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 2450,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/17.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10019
+    "orden": 10019,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2450,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
@@ -2090,11 +2250,19 @@
     "modelo": "Modelo 17 Pro",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 2700,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 2650,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/17-pro.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10020
+    "orden": 10020,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2650,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
@@ -2103,10 +2271,18 @@
     "modelo": "Modelo 17 Pro Max",
     "descripcion": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación.",
     "precioPublico": 3000,
-    "precioMayoreo": 0,
-    "imagen": "/haode-web/assets/products/placeholder.svg",
+    "precioMayoreo": 2950,
+    "imagen": "/haode-web/assets/products/oled-diagnostica/17-pro-max.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 10021
+    "orden": 10021,
+    "priceTiers": [
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2950,
+        "label": "Mayoreo 5 pzs"
+      }
+    ]
   }
 ]

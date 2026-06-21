@@ -1113,6 +1113,38 @@ h1 {
   font-weight: 800;
 }
 
+.new-arrival-price-grid {
+  display: grid;
+  gap: 5px;
+  margin-top: 2px;
+  color: #5f4634;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+
+.new-arrival-price-grid span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(139, 74, 20, 0.14);
+}
+
+.new-arrival-price-grid b,
+.new-arrival-price-grid strong {
+  font-weight: 800;
+}
+
+.new-arrival-price-grid b {
+  color: #8b4a14;
+}
+
+.new-arrival-price-grid strong {
+  color: #201b15;
+  text-align: right;
+  white-space: nowrap;
+}
+
 .new-arrival-actions {
   display: flex;
   flex-wrap: wrap;
