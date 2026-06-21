@@ -605,28 +605,43 @@ function renderHome() {
     ...products.filter((product) => product.category === "Gafas AI" || product.category === "Cámaras Inteligentes").slice(0, 2)
   ];
   const uniqueFeatured = Array.from(new Map(featuredProducts.map((product) => [product.id, product])).values()).slice(0, 10);
+  const promoProducts = products
+    .filter((product) => product.offerActive && (product.specialOffer || promoPriceFor(product) || product.appJunePrice > 0 || product.offerDisplayPrice))
+    .slice(0, 4);
 
   viewRootEl.innerHTML = `
     <div class="page-stack">
       <section class="hero-banner">
         <div class="hero-copy">
+          <span class="hero-badge">HAODE México</span>
           <h1>Pantallas y refacciones profesionales</h1>
-          <p>Calidad premium para técnicos y negocios que exigen lo mejor.</p>
+          <p>Catálogo rápido para técnicos, tiendas y clientes de mayoreo.</p>
           <div class="hero-actions">
             <a class="primary-button" href="#catalogo">Ver productos</a>
             <a class="secondary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
           </div>
+          <div class="hero-proof" aria-label="Beneficios HAODE">
+            <span>CDMX</span>
+            <span>Mayoreo</span>
+            <span>Pedido por WhatsApp</span>
+          </div>
         </div>
         <div class="hero-media">
-          <img src="${heroProduct.image || "/haode-web/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
+          <div class="hero-product-frame">
+            <img src="${heroProduct.image || "/haode-web/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
+          </div>
         </div>
       </section>
+
+      ${promotionsSectionHtml(promoProducts)}
+
+      ${appOrderSectionHtml()}
 
       <section class="section-block" id="categorias">
         <div class="section-head">
           <div>
             <h2>Categorías</h2>
-            <p>Entrada rápida al catálogo real de HAODE.</p>
+            <p>Entradas directas para cotizar más rápido.</p>
           </div>
         </div>
         <div class="category-rail" data-category-rail>${categoryCardsHtml()}</div>
@@ -658,6 +673,69 @@ function renderHome() {
     </div>
   `;
   updateNavigation();
+}
+
+function promotionsSectionHtml(promoProducts) {
+  if (!promoProducts.length) {
+    return "";
+  }
+
+  return `
+    <section class="promo-panel" aria-labelledby="promo-panel-title">
+      <div class="section-head">
+        <div>
+          <h2 id="promo-panel-title">Promociones activas</h2>
+          <p>Precios visibles desde datos confirmados. HAODE confirma disponibilidad por WhatsApp.</p>
+        </div>
+        <a class="text-button" href="#lista">Ver todo</a>
+      </div>
+      <div class="promo-grid">
+        ${promoProducts.map((product) => promoCardHtml(product)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function promoCardHtml(product) {
+  const promo = promoPriceFor(product);
+  const displayPrice = product.offerDisplayPrice || (promo ? formatPrice(promo.appPrice) : formatPrice(product.appJunePrice || product.publicPrice));
+  return `
+    <a class="promo-card" href="${appProductUrl(product)}" aria-label="Ver promoción ${escapeAttr(product.displayName)}">
+      <span class="promo-label">Promoción</span>
+      <img src="${product.offerImage || product.image}" alt="${escapeAttr(product.name)}" loading="lazy" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+      <strong>${product.displayName}</strong>
+      <span class="promo-price">${displayPrice}</span>
+    </a>
+  `;
+}
+
+function appOrderSectionHtml() {
+  return `
+    <section class="app-order-panel" aria-labelledby="app-order-title">
+      <div class="app-order-copy">
+        <span>HAODE APP</span>
+        <h2 id="app-order-title">Arma tu pedido desde el celular</h2>
+        <p>Busca por modelo, agrega piezas al carrito y envía la lista completa al equipo HAODE por WhatsApp.</p>
+      </div>
+      <div class="app-order-steps" aria-label="Flujo de pedido">
+        <article>
+          ${iconSvg("screen")}
+          <strong>Busca modelo</strong>
+          <span>iPhone, Samsung, micas, fundas y productos AI.</span>
+        </article>
+        <article>
+          ${iconSvg("grid")}
+          <strong>Agrega piezas</strong>
+          <span>El carrito calcula el total estimado sin pago en línea.</span>
+        </article>
+        <article>
+          ${iconSvg("whatsapp")}
+          <strong>Confirma por WhatsApp</strong>
+          <span>HAODE valida disponibilidad, precio final y envío.</span>
+        </article>
+      </div>
+    </section>
+  `;
 }
 
 function benefitHtml(title, icon) {
