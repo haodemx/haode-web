@@ -4606,7 +4606,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
     "quality": "OLED Diagnóstica · Tamaño original",
     "images": [
-      "assets/products/oled-diagnostica/main.jpg"
+      "assets/products/oled-diagnostica/12-pro-max.png"
     ],
     "videos": [],
     "prices": [
@@ -4717,7 +4717,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
     "quality": "OLED Diagnóstica · Tamaño original",
     "images": [
-      "assets/products/oled-diagnostica/main.jpg"
+      "assets/products/oled-diagnostica/13-pro-max.png"
     ],
     "videos": [],
     "prices": [
@@ -4828,7 +4828,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
     "quality": "OLED Diagnóstica · Tamaño original",
     "images": [
-      "assets/products/oled-diagnostica/main.jpg"
+      "assets/products/oled-diagnostica/14-pro-max.png"
     ],
     "videos": [],
     "prices": [
@@ -4902,7 +4902,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 15",
     "quality": "OLED Diagnóstica · Tamaño original",
     "images": [
-      "assets/products/oled-diagnostica/main.jpg"
+      "assets/products/oled-diagnostica/15.png"
     ],
     "videos": [],
     "prices": [
@@ -5013,7 +5013,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
     "quality": "OLED Diagnóstica · Tamaño original",
     "images": [
-      "assets/products/oled-diagnostica/main.jpg"
+      "assets/products/oled-diagnostica/15-plus.png"
     ],
     "videos": [],
     "prices": [
@@ -5303,6 +5303,6 @@ window.HAODE_PRODUCTS_DATA = [
   }
 ];
 window.HAODE_PRODUCTS_BUILD = {
-  "generatedAt": "2026-06-21T00:26:34.678Z",
+  "generatedAt": "2026-06-21T01:43:20.500Z",
   "source": "docs/master-data/products-master.csv"
 };
