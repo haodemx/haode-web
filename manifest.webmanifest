@@ -3,21 +3,21 @@
   "short_name": "HAODE",
   "description": "App instalable de HAODE México para consultar productos y enviar pedidos por WhatsApp.",
   "lang": "es-MX",
-  "start_url": "/haode-web/app/",
-  "scope": "/haode-web/",
+  "start_url": "/app/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#ff6a00",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/haode-web/assets/icons/haode-icon-192.png",
+      "src": "/assets/icons/haode-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/haode-web/assets/icons/haode-icon-512.png",
+      "src": "/assets/icons/haode-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

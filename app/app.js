@@ -1,28 +1,28 @@
 import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
 
 const WHATSAPP_NUMBER = "523326684296";
-const PRODUCTS_JSON_URL = "/haode-web/app/products.json";
+const PRODUCTS_JSON_URL = "/app/products.json";
 const PROMO_JUNIO = true;
-const PROMO_JUNIO_PRICES_URL = "/haode-web/app/promo-junio-prices.json";
-const SERVICE_WORKER_URL = "/haode-web/service-worker.js";
-const PLACEHOLDER_IMAGE = "/haode-web/assets/products/placeholder.svg";
+const PROMO_JUNIO_PRICES_URL = "/app/promo-junio-prices.json";
+const SERVICE_WORKER_URL = "/service-worker.js";
+const PLACEHOLDER_IMAGE = "/assets/products/placeholder.svg";
 
 let deferredInstallPrompt = null;
 let products = [];
 
 const categories = [
-  { id: "Todos", label: "Todos", shortLabel: "Todo", group: "Todo", url: "/haode-web/app/#inicio", icon: "grid" },
-  { id: "Pantallas iPhone OLED", label: "iPhone OLED", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/iphone-oled/", icon: "screen" },
-  { id: "Pantallas iPhone INCELL", label: "iPhone INCELL", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/iphone-incell/", icon: "screen" },
-  { id: "Pantallas OLED Diagnóstica", label: "OLED Diagnóstica", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/oled-diagnostica/", icon: "screen" },
-  { id: "Pantallas Samsung OLED", label: "Samsung AMOLED", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/samsung-oled/", icon: "screen" },
-  { id: "Pantallas Samsung INCELL", label: "Samsung INCELL", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/samsung-incell/", icon: "screen" },
-  { id: "Pantallas Samsung Original", label: "Samsung TIPO ORIGINAL", shortLabel: "Pantallas", group: "Pantallas", url: "/haode-web/categoria/samsung-tipo-original/", icon: "screen" },
-  { id: "Micas", label: "Micas", shortLabel: "Micas", group: "Micas", url: "/haode-web/categoria/micas/", icon: "layers" },
-  { id: "Máquinas de Mica", label: "Máquinas de Mica", shortLabel: "Micas", group: "Micas", url: "/haode-web/categoria/maquinas-de-hidrogel/", icon: "machine" },
-  { id: "Gafas AI", label: "Gafas AI", shortLabel: "AI", group: "AI", url: "/haode-web/categoria/gafas-inteligentes-ai/", icon: "spark" },
-  { id: "Cámaras Inteligentes", label: "Cámaras AI", shortLabel: "AI", group: "AI", url: "/haode-web/categoria/camaras-inteligentes/", icon: "camera" },
-  { id: "Fundas", label: "Fundas", shortLabel: "Fundas", group: "Fundas", url: "/haode-web/categoria/fundas/", icon: "case" }
+  { id: "Todos", label: "Todos", shortLabel: "Todo", group: "Todo", url: "/app/#inicio", icon: "grid" },
+  { id: "Pantallas iPhone OLED", label: "iPhone OLED", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/iphone-oled/", icon: "screen" },
+  { id: "Pantallas iPhone INCELL", label: "iPhone INCELL", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/iphone-incell/", icon: "screen" },
+  { id: "Pantallas OLED Diagnóstica", label: "OLED Diagnóstica", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/oled-diagnostica/", icon: "screen" },
+  { id: "Pantallas Samsung OLED", label: "Samsung AMOLED", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/samsung-oled/", icon: "screen" },
+  { id: "Pantallas Samsung INCELL", label: "Samsung INCELL", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/samsung-incell/", icon: "screen" },
+  { id: "Pantallas Samsung Original", label: "Samsung TIPO ORIGINAL", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/samsung-tipo-original/", icon: "screen" },
+  { id: "Micas", label: "Micas", shortLabel: "Micas", group: "Micas", url: "/categoria/micas/", icon: "layers" },
+  { id: "Máquinas de Mica", label: "Máquinas de Mica", shortLabel: "Micas", group: "Micas", url: "/categoria/maquinas-de-hidrogel/", icon: "machine" },
+  { id: "Gafas AI", label: "Gafas AI", shortLabel: "AI", group: "AI", url: "/categoria/gafas-inteligentes-ai/", icon: "spark" },
+  { id: "Cámaras Inteligentes", label: "Cámaras AI", shortLabel: "AI", group: "AI", url: "/categoria/camaras-inteligentes/", icon: "camera" },
+  { id: "Fundas", label: "Fundas", shortLabel: "Fundas", group: "Fundas", url: "/categoria/fundas/", icon: "case" }
 ];
 
 const categoryAliases = {
@@ -43,7 +43,7 @@ const categoryGroups = [
     title: "Pantallas",
     description: "iPhone, Samsung y calidades profesionales",
     categoryIds: ["Pantallas iPhone OLED", "Pantallas iPhone INCELL", "Pantallas OLED Diagnóstica", "Pantallas Samsung OLED", "Pantallas Samsung INCELL", "Pantallas Samsung Original"],
-    url: "/haode-web/categoria/pantallas/",
+    url: "/categoria/pantallas/",
     icon: "screen"
   },
   {
@@ -51,7 +51,7 @@ const categoryGroups = [
     title: "Micas",
     description: "Micas y máquinas para corte profesional",
     categoryIds: ["Micas", "Máquinas de Mica"],
-    url: "/haode-web/categoria/micas/",
+    url: "/categoria/micas/",
     icon: "layers"
   },
   {
@@ -59,7 +59,7 @@ const categoryGroups = [
     title: "AI",
     description: "Gafas, cámaras y accesorios inteligentes",
     categoryIds: ["Gafas AI", "Cámaras Inteligentes"],
-    url: "/haode-web/categoria/productos-ai/",
+    url: "/categoria/productos-ai/",
     icon: "spark"
   },
   {
@@ -67,7 +67,7 @@ const categoryGroups = [
     title: "Fundas",
     description: "Fundas para venta rápida y mayoreo",
     categoryIds: ["Fundas"],
-    url: "/haode-web/categoria/fundas/",
+    url: "/categoria/fundas/",
     icon: "case"
   },
   {
@@ -75,7 +75,7 @@ const categoryGroups = [
     title: "Accesorios",
     description: "Refacciones y productos complementarios",
     categoryIds: ["Fundas", "Micas", "Gafas AI", "Cámaras Inteligentes"],
-    url: "/haode-web/categoria/",
+    url: "/categoria/",
     icon: "grid"
   }
 ];
@@ -188,7 +188,7 @@ function registerServiceWorker() {
   }
 
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: "/haode-web/" })
+    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: "/" })
       .catch((error) => {
         console.info("HAODE PWA no pudo registrar service worker:", error.message);
       });
@@ -477,11 +477,11 @@ function priceLines(product) {
 
 function productDetailUrl(product) {
   const detailUrls = {
-    "samsung-original-z-flip7": "/haode-web/productos/samsung-z-flip7/",
-    "samsung-original-z-fold3": "/haode-web/productos/samsung-z-fold3/",
-    "samsung-original-z-fold4": "/haode-web/productos/samsung-z-fold4/",
-    "samsung-original-z-fold5": "/haode-web/productos/samsung-z-fold5/",
-    "samsung-original-z-fold6": "/haode-web/productos/samsung-z-fold6/"
+    "samsung-original-z-flip7": "/productos/samsung-z-flip7/",
+    "samsung-original-z-fold3": "/productos/samsung-z-fold3/",
+    "samsung-original-z-fold4": "/productos/samsung-z-fold4/",
+    "samsung-original-z-fold5": "/productos/samsung-z-fold5/",
+    "samsung-original-z-fold6": "/productos/samsung-z-fold6/"
   };
   return detailUrls[product.id] || "";
 }
@@ -628,7 +628,7 @@ function renderHome() {
         </div>
         <div class="hero-media">
           <div class="hero-product-frame">
-            <img src="${heroProduct.image || "/haode-web/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
+            <img src="${heroProduct.image || "/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
           </div>
         </div>
       </section>
@@ -850,7 +850,7 @@ function emptyStateHtml(title, copy) {
 function galleryImagesFor(product) {
   const images = [product.image];
   if (product.id === "x200t-cortadora-micas") {
-    images.push("/haode-web/assets/products/home-cut-machine/x200t.jpg");
+    images.push("/assets/products/home-cut-machine/x200t.jpg");
   }
   return Array.from(new Set(images.filter(Boolean)));
 }
@@ -1073,14 +1073,14 @@ function renderContact() {
 
 function seoLinksHtml() {
   const chips = [
-    { label: "iPhone INCELL", href: "/haode-web/categoria/iphone-incell/", code: "IN" },
-    { label: "iPhone OLED", href: "/haode-web/categoria/iphone-oled/", code: "OLED" },
-    { label: "Samsung INCELL", href: "/haode-web/categoria/samsung-incell/", code: "SI" },
-    { label: "Samsung OLED", href: "/haode-web/categoria/samsung-oled/", code: "SO" },
-    { label: "Samsung TIPO ORIGINAL", href: "/haode-web/categoria/samsung-tipo-original/", code: "TO" },
-    { label: "Micas", href: "/haode-web/categoria/micas/", code: "MI" },
-    { label: "Productos AI", href: "/haode-web/categoria/productos-ai/", code: "AI" },
-    { label: "Fundas", href: "/haode-web/categoria/fundas/", code: "FU" }
+    { label: "iPhone INCELL", href: "/categoria/iphone-incell/", code: "IN" },
+    { label: "iPhone OLED", href: "/categoria/iphone-oled/", code: "OLED" },
+    { label: "Samsung INCELL", href: "/categoria/samsung-incell/", code: "SI" },
+    { label: "Samsung OLED", href: "/categoria/samsung-oled/", code: "SO" },
+    { label: "Samsung TIPO ORIGINAL", href: "/categoria/samsung-tipo-original/", code: "TO" },
+    { label: "Micas", href: "/categoria/micas/", code: "MI" },
+    { label: "Productos AI", href: "/categoria/productos-ai/", code: "AI" },
+    { label: "Fundas", href: "/categoria/fundas/", code: "FU" }
   ];
 
   return `

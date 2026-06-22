@@ -42,27 +42,27 @@
 
 | Slug | File | Title | Canonical |
 | --- | --- | --- | --- |
-| funda-magnetica-estilo-iphone-17-pro-max | producto/funda-magnetica-estilo-iphone-17-pro-max/index.html | Funda Magnética Estilo iPhone 17 Pro Max | https://haodemx.github.io/haode-web/producto/funda-magnetica-estilo-iphone-17-pro-max/ |
-| funda-premium-aluminio-estilo-iphone-17-pro-max | producto/funda-premium-aluminio-estilo-iphone-17-pro-max/index.html | Funda Premium Aluminio Estilo iPhone 17 Pro Max | https://haodemx.github.io/haode-web/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/ |
-| iphone-oled-11 | producto/iphone-oled-11/index.html | Pantalla para iPhone 11 \| HAODE México | https://haodemx.github.io/haode-web/producto/iphone-oled-11/ |
-| iphone-oled-x | producto/iphone-oled-x/index.html | Pantalla para iPhone X \| HAODE México | https://haodemx.github.io/haode-web/producto/iphone-oled-x/ |
-| lk-030-mini-camara-retro-digital | producto/lk-030-mini-camara-retro-digital/index.html | LK-030 Mini Cámara Retro Digital \| HAODE México | https://haodemx.github.io/haode-web/producto/lk-030-mini-camara-retro-digital/ |
-| lk-032-camara-inteligente-con-gimbal | producto/lk-032-camara-inteligente-con-gimbal/index.html | LK-032 Cámara Inteligente con Gimbal \| HAODE México | https://haodemx.github.io/haode-web/producto/lk-032-camara-inteligente-con-gimbal/ |
-| x200t-cortadora-inteligente-de-micas | producto/x200t-cortadora-inteligente-de-micas/index.html | HAODE X200T Cortadora Inteligente de Micas \| HAODE México | https://haodemx.github.io/haode-web/producto/x200t-cortadora-inteligente-de-micas/ |
+| funda-magnetica-estilo-iphone-17-pro-max | producto/funda-magnetica-estilo-iphone-17-pro-max/index.html | Funda Magnética Estilo iPhone 17 Pro Max | https://haode.com.mx/producto/funda-magnetica-estilo-iphone-17-pro-max/ |
+| funda-premium-aluminio-estilo-iphone-17-pro-max | producto/funda-premium-aluminio-estilo-iphone-17-pro-max/index.html | Funda Premium Aluminio Estilo iPhone 17 Pro Max | https://haode.com.mx/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/ |
+| iphone-oled-11 | producto/iphone-oled-11/index.html | Pantalla para iPhone 11 \| HAODE México | https://haode.com.mx/producto/iphone-oled-11/ |
+| iphone-oled-x | producto/iphone-oled-x/index.html | Pantalla para iPhone X \| HAODE México | https://haode.com.mx/producto/iphone-oled-x/ |
+| lk-030-mini-camara-retro-digital | producto/lk-030-mini-camara-retro-digital/index.html | LK-030 Mini Cámara Retro Digital \| HAODE México | https://haode.com.mx/producto/lk-030-mini-camara-retro-digital/ |
+| lk-032-camara-inteligente-con-gimbal | producto/lk-032-camara-inteligente-con-gimbal/index.html | LK-032 Cámara Inteligente con Gimbal \| HAODE México | https://haode.com.mx/producto/lk-032-camara-inteligente-con-gimbal/ |
+| x200t-cortadora-inteligente-de-micas | producto/x200t-cortadora-inteligente-de-micas/index.html | HAODE X200T Cortadora Inteligente de Micas \| HAODE México | https://haode.com.mx/producto/x200t-cortadora-inteligente-de-micas/ |
 
 ## Static Or Redirect Slugs Not Resolving To Product Data
 
 | Slug | File | Page type | Target/canonical |
 | --- | --- | --- | --- |
-| funda-magnetica-estilo-iphone-17-pro-max | producto/funda-magnetica-estilo-iphone-17-pro-max/index.html | static | https://haodemx.github.io/haode-web/producto/funda-magnetica-estilo-iphone-17-pro-max/ |
-| funda-premium-aluminio-estilo-iphone-17-pro-max | producto/funda-premium-aluminio-estilo-iphone-17-pro-max/index.html | static | https://haodemx.github.io/haode-web/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/ |
-| index.html | producto/index.html | redirect | /haode-web/productos/ |
-| iphone-oled-11 | producto/iphone-oled-11/index.html | static | https://haodemx.github.io/haode-web/producto/iphone-oled-11/ |
-| iphone-oled-11pro | producto/iphone-oled-11pro/index.html | redirect | /haode-web/producto/iphone-incell-11pro/ |
-| iphone-oled-x | producto/iphone-oled-x/index.html | static | https://haodemx.github.io/haode-web/producto/iphone-oled-x/ |
-| lk-030-mini-camara-retro-digital | producto/lk-030-mini-camara-retro-digital/index.html | static | https://haodemx.github.io/haode-web/producto/lk-030-mini-camara-retro-digital/ |
-| lk-032-camara-inteligente-con-gimbal | producto/lk-032-camara-inteligente-con-gimbal/index.html | static | https://haodemx.github.io/haode-web/producto/lk-032-camara-inteligente-con-gimbal/ |
-| x200t-cortadora-inteligente-de-micas | producto/x200t-cortadora-inteligente-de-micas/index.html | static | https://haodemx.github.io/haode-web/producto/x200t-cortadora-inteligente-de-micas/ |
+| funda-magnetica-estilo-iphone-17-pro-max | producto/funda-magnetica-estilo-iphone-17-pro-max/index.html | static | https://haode.com.mx/producto/funda-magnetica-estilo-iphone-17-pro-max/ |
+| funda-premium-aluminio-estilo-iphone-17-pro-max | producto/funda-premium-aluminio-estilo-iphone-17-pro-max/index.html | static | https://haode.com.mx/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/ |
+| index.html | producto/index.html | redirect | /productos/ |
+| iphone-oled-11 | producto/iphone-oled-11/index.html | static | https://haode.com.mx/producto/iphone-oled-11/ |
+| iphone-oled-11pro | producto/iphone-oled-11pro/index.html | redirect | /producto/iphone-incell-11pro/ |
+| iphone-oled-x | producto/iphone-oled-x/index.html | static | https://haode.com.mx/producto/iphone-oled-x/ |
+| lk-030-mini-camara-retro-digital | producto/lk-030-mini-camara-retro-digital/index.html | static | https://haode.com.mx/producto/lk-030-mini-camara-retro-digital/ |
+| lk-032-camara-inteligente-con-gimbal | producto/lk-032-camara-inteligente-con-gimbal/index.html | static | https://haode.com.mx/producto/lk-032-camara-inteligente-con-gimbal/ |
+| x200t-cortadora-inteligente-de-micas | producto/x200t-cortadora-inteligente-de-micas/index.html | static | https://haode.com.mx/producto/x200t-cortadora-inteligente-de-micas/ |
 
 ## SKU / Slug Route Inconsistencies
 
@@ -389,25 +389,25 @@
 
 | SKU | Product title | Category | Expected URL |
 | --- | --- | --- | --- |
-| funda-premium-17-pro-max | Funda Premium Aluminio | fundas | https://haodemx.github.io/haode-web/producto/funda-premium-17-pro-max/ |
-| funda-magnetica-17-pro-max | Funda Magnetica | fundas | https://haodemx.github.io/haode-web/producto/funda-magnetica-17-pro-max/ |
-| haode-ai-g3-smart-glasses | Gafas Inteligentes AI G3 | gafas-ai | https://haodemx.github.io/haode-web/producto/haode-ai-g3-smart-glasses/ |
-| haode-ai-w610-smart-glasses | Gafas Inteligentes AI W610 | gafas-ai | https://haodemx.github.io/haode-web/producto/haode-ai-w610-smart-glasses/ |
-| s1-ai-classic | HAODE AI CLASSIC S1 | gafas-ai | https://haodemx.github.io/haode-web/producto/s1-ai-classic/ |
-| aimb-g5-ai-sports | AIMB-G5 AI SPORTS | gafas-ai | https://haodemx.github.io/haode-web/producto/aimb-g5-ai-sports/ |
-| w630-ai-pro | W630 AI PRO | gafas-ai | https://haodemx.github.io/haode-web/producto/w630-ai-pro/ |
+| funda-premium-17-pro-max | Funda Premium Aluminio | fundas | https://haode.com.mx/producto/funda-premium-17-pro-max/ |
+| funda-magnetica-17-pro-max | Funda Magnetica | fundas | https://haode.com.mx/producto/funda-magnetica-17-pro-max/ |
+| haode-ai-g3-smart-glasses | Gafas Inteligentes AI G3 | gafas-ai | https://haode.com.mx/producto/haode-ai-g3-smart-glasses/ |
+| haode-ai-w610-smart-glasses | Gafas Inteligentes AI W610 | gafas-ai | https://haode.com.mx/producto/haode-ai-w610-smart-glasses/ |
+| s1-ai-classic | HAODE AI CLASSIC S1 | gafas-ai | https://haode.com.mx/producto/s1-ai-classic/ |
+| aimb-g5-ai-sports | AIMB-G5 AI SPORTS | gafas-ai | https://haode.com.mx/producto/aimb-g5-ai-sports/ |
+| w630-ai-pro | W630 AI PRO | gafas-ai | https://haode.com.mx/producto/w630-ai-pro/ |
 
 ### Sitemap product URLs that do not resolve to final product data
 
 | Slug | URL | Static file status |
 | --- | --- | --- |
-| funda-magnetica-estilo-iphone-17-pro-max | https://haodemx.github.io/haode-web/producto/funda-magnetica-estilo-iphone-17-pro-max/ | file exists |
-| funda-premium-aluminio-estilo-iphone-17-pro-max | https://haodemx.github.io/haode-web/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/ | file exists |
-| iphone-oled-11 | https://haodemx.github.io/haode-web/producto/iphone-oled-11/ | file exists |
-| iphone-oled-x | https://haodemx.github.io/haode-web/producto/iphone-oled-x/ | file exists |
-| lk-030-mini-camara-retro-digital | https://haodemx.github.io/haode-web/producto/lk-030-mini-camara-retro-digital/ | file exists |
-| lk-032-camara-inteligente-con-gimbal | https://haodemx.github.io/haode-web/producto/lk-032-camara-inteligente-con-gimbal/ | file exists |
-| x200t-cortadora-inteligente-de-micas | https://haodemx.github.io/haode-web/producto/x200t-cortadora-inteligente-de-micas/ | file exists |
+| funda-magnetica-estilo-iphone-17-pro-max | https://haode.com.mx/producto/funda-magnetica-estilo-iphone-17-pro-max/ | file exists |
+| funda-premium-aluminio-estilo-iphone-17-pro-max | https://haode.com.mx/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/ | file exists |
+| iphone-oled-11 | https://haode.com.mx/producto/iphone-oled-11/ | file exists |
+| iphone-oled-x | https://haode.com.mx/producto/iphone-oled-x/ | file exists |
+| lk-030-mini-camara-retro-digital | https://haode.com.mx/producto/lk-030-mini-camara-retro-digital/ | file exists |
+| lk-032-camara-inteligente-con-gimbal | https://haode.com.mx/producto/lk-032-camara-inteligente-con-gimbal/ | file exists |
+| x200t-cortadora-inteligente-de-micas | https://haode.com.mx/producto/x200t-cortadora-inteligente-de-micas/ | file exists |
 
 ### Sitemap product URLs whose static target file is missing
 
@@ -445,17 +445,17 @@
 | funda-premium-17-pro-max | producto/funda-premium-17-pro-max/index.html | ../funda-premium-aluminio-estilo-iphone-17-pro-max/ | target file missing | target does not resolve to product data |
 | haode-ai-g3-smart-glasses | producto/haode-ai-g3-smart-glasses/index.html | ../../ai-smart-glasses-aimb-g3.html | target file missing | target does not resolve to product data |
 | haode-ai-w610-smart-glasses | producto/haode-ai-w610-smart-glasses/index.html | ../../ai-smart-glasses-w610.html | target file missing | target does not resolve to product data |
-| index.html | producto/index.html | /haode-web/productos/ | target file missing | target does not resolve to product data |
+| index.html | producto/index.html | /productos/ | target file missing | target does not resolve to product data |
 | s1-ai-classic | producto/s1-ai-classic/index.html | ../../ai-smart-glasses-s1.html | target file missing | target does not resolve to product data |
-| samsung-incell-s10e | producto/samsung-incell-s10e/index.html | /haode-web/producto.html?id=samsung-incell-s10e | target file missing | target does not resolve to product data |
-| samsung-incell-s21-fe | producto/samsung-incell-s21-fe/index.html | /haode-web/producto.html?id=samsung-incell-s21-fe | target file missing | target does not resolve to product data |
-| samsung-incell-s21-plus | producto/samsung-incell-s21-plus/index.html | /haode-web/producto.html?id=samsung-incell-s21-plus | target file missing | target does not resolve to product data |
-| samsung-incell-s22 | producto/samsung-incell-s22/index.html | /haode-web/producto.html?id=samsung-incell-s22 | target file missing | target does not resolve to product data |
-| samsung-incell-s22-plus | producto/samsung-incell-s22-plus/index.html | /haode-web/producto.html?id=samsung-incell-s22-plus | target file missing | target does not resolve to product data |
-| samsung-incell-s23 | producto/samsung-incell-s23/index.html | /haode-web/producto.html?id=samsung-incell-s23 | target file missing | target does not resolve to product data |
-| samsung-incell-s23-plus | producto/samsung-incell-s23-plus/index.html | /haode-web/producto.html?id=samsung-incell-s23-plus | target file missing | target does not resolve to product data |
-| samsung-incell-s24 | producto/samsung-incell-s24/index.html | /haode-web/producto.html?id=samsung-incell-s24 | target file missing | target does not resolve to product data |
-| samsung-incell-s24-plus | producto/samsung-incell-s24-plus/index.html | /haode-web/producto.html?id=samsung-incell-s24-plus | target file missing | target does not resolve to product data |
+| samsung-incell-s10e | producto/samsung-incell-s10e/index.html | /producto.html?id=samsung-incell-s10e | target file missing | target does not resolve to product data |
+| samsung-incell-s21-fe | producto/samsung-incell-s21-fe/index.html | /producto.html?id=samsung-incell-s21-fe | target file missing | target does not resolve to product data |
+| samsung-incell-s21-plus | producto/samsung-incell-s21-plus/index.html | /producto.html?id=samsung-incell-s21-plus | target file missing | target does not resolve to product data |
+| samsung-incell-s22 | producto/samsung-incell-s22/index.html | /producto.html?id=samsung-incell-s22 | target file missing | target does not resolve to product data |
+| samsung-incell-s22-plus | producto/samsung-incell-s22-plus/index.html | /producto.html?id=samsung-incell-s22-plus | target file missing | target does not resolve to product data |
+| samsung-incell-s23 | producto/samsung-incell-s23/index.html | /producto.html?id=samsung-incell-s23 | target file missing | target does not resolve to product data |
+| samsung-incell-s23-plus | producto/samsung-incell-s23-plus/index.html | /producto.html?id=samsung-incell-s23-plus | target file missing | target does not resolve to product data |
+| samsung-incell-s24 | producto/samsung-incell-s24/index.html | /producto.html?id=samsung-incell-s24 | target file missing | target does not resolve to product data |
+| samsung-incell-s24-plus | producto/samsung-incell-s24-plus/index.html | /producto.html?id=samsung-incell-s24-plus | target file missing | target does not resolve to product data |
 | w630-ai-pro | producto/w630-ai-pro/index.html | ../../ai-smart-glasses-w630.html | target file missing | target does not resolve to product data |
 
 ## Manual Review Notes

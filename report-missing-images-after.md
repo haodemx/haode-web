@@ -10,10 +10,10 @@ Generado: 2026-06-01T12:02:47.666961
 - 分类页缺图: **1**
 
 ## 图片404
-- `/haode-web/assets/products/productos-ai/featured/translator-intelligent.jpg` | 页面: `ai-productos.html`
+- `/assets/products/productos-ai/featured/translator-intelligent.jpg` | 页面: `ai-productos.html`
 
 ## 产品详情页缺图
 - 无
 
 ## 分类页缺图
-- 页面: `ai-productos.html` | 图片: `/haode-web/assets/products/productos-ai/featured/translator-intelligent.jpg`
+- 页面: `ai-productos.html` | 图片: `/assets/products/productos-ai/featured/translator-intelligent.jpg`

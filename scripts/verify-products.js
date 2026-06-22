@@ -55,7 +55,7 @@ function websitePrice(product, index) {
 
 function masterImage(row) {
   const value = row.imagen_path || '';
-  return value.startsWith('/haode-web/') ? value : `/haode-web/${value.replace(/^\/+/, '')}`;
+  return value.startsWith('/') ? value : `/${value.replace(/^\/+/, '')}`;
 }
 
 function websiteImage(row) {

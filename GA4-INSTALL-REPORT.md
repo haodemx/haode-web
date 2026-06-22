@@ -111,9 +111,9 @@ Measurement ID: `G-22TCLJDXYS`
 1. 打开 Google Analytics。
 2. 进入对应 GA4 属性。
 3. 打开 `Informes` / `Reports` -> `Tiempo real` / `Realtime`。
-4. 在浏览器打开 `https://haodemx.github.io/haode-web/`。
+4. 在浏览器打开 `https://haode.com.mx/`。
 5. 等待 10 到 60 秒，Realtime 中应出现 1 个来自当前城市/设备的访问。
-6. 再打开一个产品详情页，例如 `https://haodemx.github.io/haode-web/producto/iphone-11-incell/`，确认 Realtime 的页面路径变化。
+6. 再打开一个产品详情页，例如 `https://haode.com.mx/producto/iphone-11-incell/`，确认 Realtime 的页面路径变化。
 
 ## 验证结果
 

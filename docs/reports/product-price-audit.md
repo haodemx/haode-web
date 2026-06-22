@@ -19,7 +19,7 @@
 
 ## 发现的其他异常产品
 
-- 当前 `product-control` 仍保留 21 个价格不一致项，已写入 [product-health-report.md](/Users/mac/Documents/haode/haode-web/docs/reports/product-health-report.md)
+- 当前 `product-control` 仍保留 21 个价格不一致项，已写入 [product-health-report.md](/Users/mac/Documents/haode/docs/reports/product-health-report.md)
 - 当前仍有 40 个视频缺失项，需要后续逐一补素材
 - 当前仍有 14 个 App 漏发项，属于同步覆盖问题，不在本次改价范围
 

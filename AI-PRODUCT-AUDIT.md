@@ -43,7 +43,7 @@
 
 ## APP 状态
 
-- APP 数据文件位于 sibling 项目：`/Users/mac/Documents/haode/haode-web/app/products.json`。
+- APP 数据文件位于 sibling 项目：`/Users/mac/Documents/haode/app/products.json`。
 - 修复后 Gafas AI 中包含 5 个目标产品：
   - `s1-ai-classic`
   - `haode-ai-g3-smart-glasses`
@@ -57,18 +57,18 @@
 - `products-master.csv`：已补入 G3、W610。
 - `products.generated.js`：两个网站副本均已补齐 5 个 AI 智能眼镜产品数据。
 - `app/products.json`：已补入 G3、W610。
-- Firestore / publish queue：存在于 `/Users/mac/Documents/haode/haode-web/docs/reports/firestore-publish-queue.json`，已生成 G3、W610 待发布项；未直接线上写入。
+- Firestore / publish queue：存在于 `/Users/mac/Documents/haode/docs/reports/firestore-publish-queue.json`，已生成 G3、W610 待发布项；未直接线上写入。
 - WhatsApp Catalog：当前为分类级数据，未发现单品级 G3/W610 条目；未自动上传 WhatsApp。
 
 ## 图片状态
 
 | 产品 | 图片路径 | 状态 |
 | --- | --- | --- |
-| S1 | `/haode-web/assets/products/productos-ai/s1-ai-classic/main.png` | 已存在 |
-| G3 | `/haode-web/assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg` | 已存在，未误用 G5/W630 |
-| G5 | `/haode-web/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg` | 已存在 |
-| W630 | `/haode-web/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg` | 已存在 |
-| W610 | `/haode-web/assets/products/placeholder.svg` | 缺少真实确认图片，暂用占位图 |
+| S1 | `/assets/products/productos-ai/s1-ai-classic/main.png` | 已存在 |
+| G3 | `/assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg` | 已存在，未误用 G5/W630 |
+| G5 | `/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg` | 已存在 |
+| W630 | `/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg` | 已存在 |
+| W610 | `/assets/products/placeholder.svg` | 缺少真实确认图片，暂用占位图 |
 
 ## 价格状态
 

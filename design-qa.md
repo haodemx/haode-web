@@ -5,7 +5,7 @@ Fecha: 2026-06-13
 ## Source visual truth path
 
 - User brief and screenshot context for Promociones Activas carousel.
-- Existing HAODE APP visual system: `/Users/mac/Documents/haode/haode-web/app/`.
+- Existing HAODE APP visual system: `/Users/mac/Documents/haode/app/`.
 
 ## Implementation screenshot path
 

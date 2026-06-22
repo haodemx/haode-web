@@ -3,7 +3,7 @@ const path = require("node:path");
 const vm = require("node:vm");
 
 const ROOT = path.resolve(__dirname, "..");
-const PUBLIC_PREFIX = "/haode-web/";
+const PUBLIC_PREFIX = "/";
 const MASTER_PATH = path.join(ROOT, "docs/master-data/products-master.csv");
 const HEALTH_REPORT_PATH = path.join(ROOT, "docs/reports/product-health-report.md");
 const TODAY = process.env.HAODE_AUDIT_DATE || new Date().toISOString().slice(0, 10);

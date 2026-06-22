@@ -1,6 +1,6 @@
 (function () {
 const WHATSAPP_PHONE = '523326684296';
-const SERVICE_WORKER_URL = '/haode-web/service-worker.js';
+const SERVICE_WORKER_URL = '/service-worker.js';
 
 function registerServiceWorker() {
   if (!('serviceWorker' in navigator)) {
@@ -8,7 +8,7 @@ function registerServiceWorker() {
   }
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: '/haode-web/' })
+    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: '/' })
       .catch((error) => {
         console.info('HAODE PWA no pudo registrar service worker:', error.message);
       });

@@ -2,14 +2,14 @@
   const WHATSAPP_PHONE = '523326684296';
 
   function toAssetPath(imagePath) {
-    if (!imagePath) return '/haode-web/assets/products/placeholder.svg';
+    if (!imagePath) return '/assets/products/placeholder.svg';
     if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('//')) {
       return imagePath;
     }
     if (imagePath.startsWith('/')) {
       return imagePath;
     }
-    return `/haode-web/${imagePath.replace(/^\/+/, '')}`;
+    return `/${imagePath.replace(/^\/+/, '')}`;
   }
 
   function buildWhatsappUrl(item) {
@@ -40,7 +40,7 @@
     const image = item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
     const priceRows = priceRowsFor(item);
 
-    const detailHref = `/haode-web/producto/${item.id}/`;
+    const detailHref = `/producto/${item.id}/`;
 
     article.innerHTML = `
       <div class="new-product-visual">

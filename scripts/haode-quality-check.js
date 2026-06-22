@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const SITE_URL = 'https://haodemx.github.io/haode-web';
+const SITE_URL = 'https://haode.com.mx';
 const PUBLIC_EXTENSIONS = new Set(['.html', '.js', '.css', '.xml', '.txt', '.webmanifest', '.json']);
 const PUBLIC_DIRS = new Set(['app', 'categoria', 'contacto', 'distribuidores', 'garantia', 'micas', 'producto', 'productos', 'productos-ai']);
 const FORBIDDEN = ['file://', 'localhost', '127.0.0.1', '/Users/mac', 'squarespace', 'under construction'];
@@ -74,7 +74,7 @@ function resolveInternalTarget(fromFile, href) {
   }
   href = href.split('#')[0].split('?')[0];
   if (!href) return null;
-  if (href.startsWith('/haode-web/')) href = href.slice('/haode-web/'.length);
+  if (href.startsWith('/')) href = href.slice('/'.length);
   else if (href.startsWith('/')) href = href.slice(1);
   else href = path.join(path.dirname(relative(fromFile)), href).replace(/\\/g, '/');
   if (!href || href === '.') href = 'index.html';

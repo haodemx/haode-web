@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const today = process.env.HAODE_AUDIT_DATE || new Date().toISOString().slice(0, 10);
-const publicPrefix = "/haode-web/";
+const publicPrefix = "/";
 const requiredCategories = [
   "Pantallas iPhone OLED",
   "Pantallas iPhone INCELL",
@@ -82,7 +82,7 @@ function findVideo(product) {
 }
 
 function pageTargetExists(loc) {
-  const marker = "https://haodemx.github.io/haode-web/";
+  const marker = "https://haode.com.mx/";
 
   if (!loc.startsWith(marker)) {
     return false;

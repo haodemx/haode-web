@@ -7,7 +7,7 @@ const APP_PRODUCTS = path.join(ROOT, 'app', 'products.json');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const PRODUCT_DIR = path.join(ROOT, 'producto');
 const CATEGORY_DIR = path.join(ROOT, 'categoria');
-const SITE_URL = 'https://haodemx.github.io/haode-web';
+const SITE_URL = 'https://haode.com.mx';
 const STRICT_SYNC = process.argv.includes('--strict') || process.env.HAODE_STRICT_PRODUCT_SYNC === '1';
 
 function readWebsiteProducts() {

@@ -68,7 +68,7 @@
 ## 五、SEO 是否还有明显缺口
 
 当前状态：
-- `robots.txt` 已指向 `https://haodemx.github.io/haode-web/sitemap.xml`。
+- `robots.txt` 已指向 `https://haode.com.mx/sitemap.xml`。
 - `sitemap.xml` 存在并包含首页、productos、productos-ai、分类页和大量产品详情页。
 
 明显缺口：

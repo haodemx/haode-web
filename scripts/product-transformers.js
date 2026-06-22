@@ -107,7 +107,7 @@ function readMasterProducts() {
 function publicAssetPath(value) {
   const text = String(value || '').trim();
   if (!text) return '';
-  return text.startsWith('/haode-web/') ? text : `/haode-web/${text.replace(/^\/+/, '')}`;
+  return text.startsWith('/') ? text.replace(/^\/haode-web\//, '/') : `/${text.replace(/^\/+/, '')}`;
 }
 
 function websiteAssetPath(value) {

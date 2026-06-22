@@ -54,7 +54,7 @@ Tambien faltaban 3 URLs de compatibilidad para iPhone 12 / 12 Pro INCELL.
 
 2. `categoria/category-page.js`
    - Las tarjetas de categoria ahora enlazan a:
-     - `/haode-web/producto/{id}/`
+     - `/producto/{id}/`
 
 3. `producto/*/index.html`
    - Se generaron directorios estaticos faltantes para que GitHub Pages pueda servir cada detalle de producto sin depender de reescrituras.
@@ -87,7 +87,7 @@ Resultado:
 
 Servidor local usado:
 
-`http://127.0.0.1:8125/haode-web/`
+`http://127.0.0.1:8125/`
 
 Se probaron 20 rutas directas. Todas devolvieron HTTP 200 y no mostraron mensajes de producto no encontrado.
 

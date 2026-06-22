@@ -2,7 +2,7 @@
 Fecha: 2026-06-03
 ## Resumen
 - Sitemap XML válido: Sí
-- Base URL esperada: `https://haodemx.github.io/haode-web/`
+- Base URL esperada: `https://haode.com.mx/`
 - URLs con base correcta: 158 / 158
 - Sitemap URL total: 158
 - Páginas 200: 158
@@ -22,94 +22,94 @@ Fecha: 2026-06-03
 - Canonical presente pero distinto al sitemap URL: 0
 
 ## Productos agregados al sitemap
-- https://haodemx.github.io/haode-web/producto/iphone-incell-11/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-11pro/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-11promax/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-12-12pro/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-12mini/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-12promax/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-13/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-13mini/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-13pro/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-13promax/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-14/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-14plus/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-14pro/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-14promax/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-15/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-15plus/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-15pro/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-15promax/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-16/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-16e/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-16plus/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-16pro/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-16promax/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-17/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-17air/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-17pro/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-17promax/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-x/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-xr/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-xs/
-- https://haodemx.github.io/haode-web/producto/iphone-incell-xsmax/
-- https://haodemx.github.io/haode-web/producto/iphone-oled-16promax-hard/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-note-10/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-note-10-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-note-20-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-note-8/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-note-9/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s10/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s10-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s20/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s20-fe/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s20-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s20-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s21/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s21-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s22-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s23-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s24-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s8/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s8-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s9/
-- https://haodemx.github.io/haode-web/producto/samsung-incell-s9-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-note-10/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-note-10-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-note-20/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-note-20-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-note-9/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s20/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s20-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s20-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s21/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s21-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s21-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s22-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s22-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s23-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s23-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s24-plus/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s24-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s25-ultra/
-- https://haodemx.github.io/haode-web/producto/samsung-oled-s9-plus/
+- https://haode.com.mx/producto/iphone-incell-11/
+- https://haode.com.mx/producto/iphone-incell-11pro/
+- https://haode.com.mx/producto/iphone-incell-11promax/
+- https://haode.com.mx/producto/iphone-incell-12-12pro/
+- https://haode.com.mx/producto/iphone-incell-12mini/
+- https://haode.com.mx/producto/iphone-incell-12promax/
+- https://haode.com.mx/producto/iphone-incell-13/
+- https://haode.com.mx/producto/iphone-incell-13mini/
+- https://haode.com.mx/producto/iphone-incell-13pro/
+- https://haode.com.mx/producto/iphone-incell-13promax/
+- https://haode.com.mx/producto/iphone-incell-14/
+- https://haode.com.mx/producto/iphone-incell-14plus/
+- https://haode.com.mx/producto/iphone-incell-14pro/
+- https://haode.com.mx/producto/iphone-incell-14promax/
+- https://haode.com.mx/producto/iphone-incell-15/
+- https://haode.com.mx/producto/iphone-incell-15plus/
+- https://haode.com.mx/producto/iphone-incell-15pro/
+- https://haode.com.mx/producto/iphone-incell-15promax/
+- https://haode.com.mx/producto/iphone-incell-16/
+- https://haode.com.mx/producto/iphone-incell-16e/
+- https://haode.com.mx/producto/iphone-incell-16plus/
+- https://haode.com.mx/producto/iphone-incell-16pro/
+- https://haode.com.mx/producto/iphone-incell-16promax/
+- https://haode.com.mx/producto/iphone-incell-17/
+- https://haode.com.mx/producto/iphone-incell-17air/
+- https://haode.com.mx/producto/iphone-incell-17pro/
+- https://haode.com.mx/producto/iphone-incell-17promax/
+- https://haode.com.mx/producto/iphone-incell-x/
+- https://haode.com.mx/producto/iphone-incell-xr/
+- https://haode.com.mx/producto/iphone-incell-xs/
+- https://haode.com.mx/producto/iphone-incell-xsmax/
+- https://haode.com.mx/producto/iphone-oled-16promax-hard/
+- https://haode.com.mx/producto/samsung-incell-note-10/
+- https://haode.com.mx/producto/samsung-incell-note-10-plus/
+- https://haode.com.mx/producto/samsung-incell-note-20-ultra/
+- https://haode.com.mx/producto/samsung-incell-note-8/
+- https://haode.com.mx/producto/samsung-incell-note-9/
+- https://haode.com.mx/producto/samsung-incell-s10/
+- https://haode.com.mx/producto/samsung-incell-s10-plus/
+- https://haode.com.mx/producto/samsung-incell-s20/
+- https://haode.com.mx/producto/samsung-incell-s20-fe/
+- https://haode.com.mx/producto/samsung-incell-s20-plus/
+- https://haode.com.mx/producto/samsung-incell-s20-ultra/
+- https://haode.com.mx/producto/samsung-incell-s21/
+- https://haode.com.mx/producto/samsung-incell-s21-ultra/
+- https://haode.com.mx/producto/samsung-incell-s22-ultra/
+- https://haode.com.mx/producto/samsung-incell-s23-ultra/
+- https://haode.com.mx/producto/samsung-incell-s24-ultra/
+- https://haode.com.mx/producto/samsung-incell-s8/
+- https://haode.com.mx/producto/samsung-incell-s8-plus/
+- https://haode.com.mx/producto/samsung-incell-s9/
+- https://haode.com.mx/producto/samsung-incell-s9-plus/
+- https://haode.com.mx/producto/samsung-oled-note-10/
+- https://haode.com.mx/producto/samsung-oled-note-10-plus/
+- https://haode.com.mx/producto/samsung-oled-note-20/
+- https://haode.com.mx/producto/samsung-oled-note-20-ultra/
+- https://haode.com.mx/producto/samsung-oled-note-9/
+- https://haode.com.mx/producto/samsung-oled-s20/
+- https://haode.com.mx/producto/samsung-oled-s20-plus/
+- https://haode.com.mx/producto/samsung-oled-s20-ultra/
+- https://haode.com.mx/producto/samsung-oled-s21/
+- https://haode.com.mx/producto/samsung-oled-s21-plus/
+- https://haode.com.mx/producto/samsung-oled-s21-ultra/
+- https://haode.com.mx/producto/samsung-oled-s22-plus/
+- https://haode.com.mx/producto/samsung-oled-s22-ultra/
+- https://haode.com.mx/producto/samsung-oled-s23-plus/
+- https://haode.com.mx/producto/samsung-oled-s23-ultra/
+- https://haode.com.mx/producto/samsung-oled-s24-plus/
+- https://haode.com.mx/producto/samsung-oled-s24-ultra/
+- https://haode.com.mx/producto/samsung-oled-s25-ultra/
+- https://haode.com.mx/producto/samsung-oled-s9-plus/
 
 ## Directorios producto excluidos por canonical
-- https://haodemx.github.io/haode-web/producto/iphone-incell-12/ -> https://haodemx.github.io/haode-web/producto.html
-- https://haodemx.github.io/haode-web/producto/iphone-incell-12-pro/ -> https://haodemx.github.io/haode-web/producto.html
-- https://haodemx.github.io/haode-web/producto/iphone-incell-12pro/ -> https://haodemx.github.io/haode-web/producto.html
+- https://haode.com.mx/producto/iphone-incell-12/ -> https://haode.com.mx/producto.html
+- https://haode.com.mx/producto/iphone-incell-12-pro/ -> https://haode.com.mx/producto.html
+- https://haode.com.mx/producto/iphone-incell-12pro/ -> https://haode.com.mx/producto.html
 
 ## Páginas importantes verificadas
-- `https://haodemx.github.io/haode-web/`: 200
-- `https://haodemx.github.io/haode-web/productos/`: 200
-- `https://haodemx.github.io/haode-web/productos-ai/`: 200
-- `https://haodemx.github.io/haode-web/ai-productos.html`: 200
-- `https://haodemx.github.io/haode-web/micas.html`: 200
-- `https://haodemx.github.io/haode-web/garantia/`: 200
-- `https://haodemx.github.io/haode-web/categoria/iphone-incell/`: 200
-- `https://haodemx.github.io/haode-web/categoria/iphone-oled/`: 200
-- `https://haodemx.github.io/haode-web/categoria/samsung-incell/`: 200
-- `https://haodemx.github.io/haode-web/categoria/samsung-oled/`: 200
+- `https://haode.com.mx/`: 200
+- `https://haode.com.mx/productos/`: 200
+- `https://haode.com.mx/productos-ai/`: 200
+- `https://haode.com.mx/ai-productos.html`: 200
+- `https://haode.com.mx/micas.html`: 200
+- `https://haode.com.mx/garantia/`: 200
+- `https://haode.com.mx/categoria/iphone-incell/`: 200
+- `https://haode.com.mx/categoria/iphone-oled/`: 200
+- `https://haode.com.mx/categoria/samsung-incell/`: 200
+- `https://haode.com.mx/categoria/samsung-oled/`: 200
 
 ## Google Search Console riesgos
 - No quedan riesgos críticos detectados: sitemap XML válido, base URL correcta, 0 enlaces 404, 0 faltantes SEO y los 93 productos principales incluidos.

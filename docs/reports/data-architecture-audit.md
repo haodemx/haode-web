@@ -51,8 +51,8 @@ products.js
 
 证据：
 
-- `productos.html` 加载 `/haode-web/data/products.generated.js` 和 `/haode-web/products.js`
-- `producto.html` 加载 `/haode-web/data/products.generated.js` 和 `/haode-web/products.js`
+- `productos.html` 加载 `/data/products.generated.js` 和 `/products.js`
+- `producto.html` 加载 `/data/products.generated.js` 和 `/products.js`
 - `products.js` 优先使用 `window.HAODE_PRODUCTS_DATA`
 
 当前判断：
@@ -78,7 +78,7 @@ App fallback 使用 app/products.json
 证据：
 
 - `app/app.js` 中 `loadFirestoreProducts()` 读取 Firestore `products`
-- `app/app.js` 中 `loadLocalProducts()` 读取 `/haode-web/app/products.json`
+- `app/app.js` 中 `loadLocalProducts()` 读取 `/app/products.json`
 - `app/app.js` 中 fallback 日志为 `HAODE app usando products.json fallback`
 - `app/products.json` 请求使用 `cache: "no-store"`
 

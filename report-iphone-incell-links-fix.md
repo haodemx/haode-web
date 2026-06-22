@@ -6,11 +6,11 @@
 - Estrategia de enlace: `categoria/category-page.js` usa `producto.html?id=<id>` para `iphone-incell`.
 
 ## 修复前 404 链接（旧路由）
-- Formato anterior: `/haode-web/producto/<id>/`
+- Formato anterior: `/producto/<id>/`
 - 该格式对 iPhone INCELL 多型号会进入 404。
 
 ## 修复后正确链接（新路由）
-- Formato actual: `/haode-web/producto.html?id=<id>`
+- Formato actual: `/producto.html?id=<id>`
 
 ## 新增/补齐型号与素材映射（来自苹果系列文件夹）
 - `16` → `iPhone 16` → `assets/products/iphone-incell/16/`
@@ -24,7 +24,7 @@
 - `17promax` → `iPhone 17 Pro Max` → `assets/products/iphone-incell/17promax/`
 
 ## 每个型号对应的实际详情页文件
-- 所有 iPhone INCELL 型号详情页均走：`/Users/mac/Documents/haode/haode-web/producto.html`
+- 所有 iPhone INCELL 型号详情页均走：`/Users/mac/Documents/haode/producto.html`
 - 通过 `?id=<modelo>` 动态加载对应型号，不再走不存在目录。
 
 ## 是否新增 index.html

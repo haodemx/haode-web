@@ -47,7 +47,7 @@ La escala de espacio usa 4, 8, 12, 16, 24 y 32 px. Los controles táctiles impor
 - `#carrito`: estado del carrito y entrada al panel.
 - `#contacto`: contacto por WhatsApp.
 
-Los enlaces SEO a categorías oficiales se conservan como URLs reales de `/haode-web/categoria/...`.
+Los enlaces SEO a categorías oficiales se conservan como URLs reales de `/categoria/...`.
 
 ## Configuración 360°
 
@@ -78,5 +78,5 @@ Para X200T hoy existen dos imágenes únicas: `assets/products/cut-machine/x200t
 
 - No cambiar precios desde el UI.
 - Agregar datos nuevos en `app/products.json` respetando el esquema actual.
-- Para activar 360°, agregar imágenes reales y únicas al producto y mantener la ruta pública `/haode-web/assets/...`.
+- Para activar 360°, agregar imágenes reales y únicas al producto y mantener la ruta pública `/assets/...`.
 - Verificar siempre con `npm run build`, `npm run browser-test` y QA visual de `/app/`.

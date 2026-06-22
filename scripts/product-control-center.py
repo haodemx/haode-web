@@ -142,8 +142,6 @@ def public_path_to_file(value: str) -> Path | None:
     if not value:
         return None
     path = value
-    if path.startswith("/haode-web/"):
-        return ROOT / path.removeprefix("/haode-web/")
     if path.startswith("assets/"):
         return ROOT / path
     if path.startswith("/Users/"):

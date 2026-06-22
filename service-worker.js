@@ -3,25 +3,25 @@ const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
 const APP_SHELL_URLS = [
-  "/haode-web/",
-  "/haode-web/index.html",
-  "/haode-web/app/",
-  "/haode-web/app/index.html",
-  "/haode-web/offline.html",
-  "/haode-web/style.css",
-  "/haode-web/script.js",
-  "/haode-web/products.js",
-  "/haode-web/app/app.css",
-  "/haode-web/app/app.js",
-  "/haode-web/app/promo-junio-prices.json",
-  "/haode-web/app/firebase-config.js",
-  "/haode-web/manifest.webmanifest",
-  "/haode-web/assets/logo/logo.png",
-  "/haode-web/assets/logo/favicon.png",
-  "/haode-web/assets/icons/haode-icon-192.png",
-  "/haode-web/assets/icons/haode-icon-512.png",
-  "/haode-web/assets/icons/apple-touch-icon.png",
-  "/haode-web/assets/icons/favicon.png"
+  "/",
+  "/index.html",
+  "/app/",
+  "/app/index.html",
+  "/offline.html",
+  "/style.css",
+  "/script.js",
+  "/products.js",
+  "/app/app.css",
+  "/app/app.js",
+  "/app/promo-junio-prices.json",
+  "/app/firebase-config.js",
+  "/manifest.webmanifest",
+  "/assets/logo/logo.png",
+  "/assets/logo/favicon.png",
+  "/assets/icons/haode-icon-192.png",
+  "/assets/icons/haode-icon-512.png",
+  "/assets/icons/apple-touch-icon.png",
+  "/assets/icons/favicon.png"
 ];
 
 self.addEventListener("install", (event) => {
@@ -65,7 +65,7 @@ async function networkFirst(request) {
     return response;
   } catch (error) {
     const cached = await cache.match(request);
-    return cached || cache.match("/haode-web/offline.html");
+    return cached || cache.match("/offline.html");
   }
 }
 

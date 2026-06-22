@@ -4,7 +4,7 @@ Android WebView app independiente para abrir la HAODE App pública.
 
 No modifica el código del sitio `haode-web` ni el proyecto iOS. La app Android solo carga esta URL pública:
 
-`https://haodemx.github.io/haode-web/app/?v=ui-v2`
+`https://haode.com.mx/app/?v=ui-v2`
 
 ## Datos principales
 
@@ -91,8 +91,8 @@ adb install -r app\build\outputs\apk\debug\app-debug.apk
 
 ## Comportamiento v1
 
-- Carga directa de `https://haodemx.github.io/haode-web/app/?v=ui-v2`.
-- Navegación interna dentro de `haodemx.github.io/haode-web/app`.
+- Carga directa de `https://haode.com.mx/app/?v=ui-v2`.
+- Navegación interna dentro de `haode.com.mx/app`.
 - Compatible con rutas hash como `#producto`, `#carrito`, `#lista`.
 - Barra nativa superior con regreso, título y refrescar.
 - WebView con JavaScript y DOM Storage habilitados.
@@ -121,7 +121,7 @@ app\src\main\res\values\styles.xml
 
 - App instala sin error en emulador o teléfono.
 - App abre sin crash.
-- Carga `https://haodemx.github.io/haode-web/app/?v=ui-v2`.
+- Carga `https://haode.com.mx/app/?v=ui-v2`.
 - El título superior `HAODE México` no queda pegado al status bar ni al área de cámara.
 - Botón regresar funciona.
 - Botón refrescar funciona.

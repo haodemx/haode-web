@@ -3,8 +3,8 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
-const SITE_BASE = 'https://haodemx.github.io/haode-web/';
-const PUBLIC_PREFIX = '/haode-web/';
+const SITE_BASE = 'https://haode.com.mx/';
+const PUBLIC_PREFIX = '/';
 const TODAY = process.env.HAODE_AUDIT_DATE || new Date().toISOString().slice(0, 10);
 const REPORT_PATH = path.join(ROOT, 'docs', 'reports', 'daily-website-audit.md');
 
@@ -26,7 +26,7 @@ function rel(file) {
 function publicToFile(urlPath) {
   let clean = urlPath.split('#')[0].split('?')[0];
   if (!clean) return null;
-  if (clean.startsWith(SITE_BASE)) clean = clean.slice('https://haodemx.github.io'.length);
+  if (clean.startsWith(SITE_BASE)) clean = clean.slice(SITE_BASE.length);
   if (clean.startsWith(PUBLIC_PREFIX)) clean = clean.slice(PUBLIC_PREFIX.length);
   if (clean.startsWith('/')) return null;
   if (clean.endsWith('/')) clean += 'index.html';

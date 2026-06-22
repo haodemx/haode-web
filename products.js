@@ -843,8 +843,8 @@ function buildWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 }
 
-const SITE_ORIGIN = 'https://haodemx.github.io/haode-web';
-const SITE_BASE_PATH = '/haode-web';
+const SITE_ORIGIN = 'https://haode.com.mx';
+const SITE_BASE_PATH = '';
 
 function buildSiteUrl(pathname = '') {
   const cleanPath = String(pathname || '').replace(/^\/+/, '');

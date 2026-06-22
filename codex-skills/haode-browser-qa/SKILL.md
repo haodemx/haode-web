@@ -52,7 +52,7 @@ Use this skill for HAODE website and APP page browser testing, post-deploy verif
 - Product cards show only menudeo / mayoreo price lines unless the current confirmed promotion requires another label.
 - Cart applies price by quantity.
 - WhatsApp order message uses the correct applied price.
-- GitHub Pages path `/haode-web/app/` works.
+- GitHub Pages path `/app/` works.
 - Images do not show obvious broken-image failures.
 - Mobile viewport does not horizontally overflow.
 - Cart quantity changes after `Agregar al carrito`.
@@ -62,7 +62,7 @@ Use this skill for HAODE website and APP page browser testing, post-deploy verif
 ```bash
 npm run build
 npm run browser-test
-BASE_URL=http://localhost:8000/haode-web/app/ npm run haode:app-qa
+BASE_URL=http://localhost:8000/app/ npm run haode:app-qa
 ```
 
 ## Guardrails

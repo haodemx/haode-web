@@ -55,7 +55,7 @@ const sampleProducts = [
       descripcion: "Pantalla OLED para modelos iPhone seleccionados. Producto de ejemplo para iniciar Firestore.",
       precioPublico: 850,
       precioMayoreo: 720,
-      imagen: "/haode-web/assets/products/iphone-oled/main.jpg",
+      imagen: "/assets/products/iphone-oled/main.jpg",
       stock: "disponible",
       activo: true,
       orden: 1
@@ -71,7 +71,7 @@ const sampleProducts = [
       descripcion: "Pantalla INCELL para reparacion y mayoreo. Producto de ejemplo para iniciar Firestore.",
       precioPublico: 350,
       precioMayoreo: 300,
-      imagen: "/haode-web/assets/products/iphone-incell/main.jpg",
+      imagen: "/assets/products/iphone-incell/main.jpg",
       stock: "disponible",
       activo: true,
       orden: 2
@@ -87,7 +87,7 @@ const sampleProducts = [
       descripcion: "Pantalla AMOLED Samsung para talleres y distribuidores. Producto de ejemplo para iniciar Firestore.",
       precioPublico: 1200,
       precioMayoreo: 980,
-      imagen: "/haode-web/assets/products/samsung-oled/main.jpg",
+      imagen: "/assets/products/samsung-oled/main.jpg",
       stock: "disponible",
       activo: true,
       orden: 3
@@ -103,7 +103,7 @@ const sampleProducts = [
       descripcion: "Pantalla Samsung INCELL para rotacion de taller. Producto de ejemplo para iniciar Firestore.",
       precioPublico: 650,
       precioMayoreo: 560,
-      imagen: "/haode-web/assets/products/samsung-incell/main.jpg",
+      imagen: "/assets/products/samsung-incell/main.jpg",
       stock: "disponible",
       activo: true,
       orden: 4
@@ -139,7 +139,7 @@ function productJsonToFirestore(product, fallbackOrder) {
     descripcion: product.descripcion || product.description || "",
     precioPublico: Number(product.precioPublico ?? product.publicPrice ?? 0),
     precioMayoreo: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
-    imagen: product.imagen || product.image || "/haode-web/assets/products/placeholder.svg",
+    imagen: product.imagen || product.image || "/assets/products/placeholder.svg",
     stock: normalizeStock(product.stock),
     activo: product.activo !== false,
     orden: Number(product.orden ?? product.order ?? fallbackOrder)
@@ -303,7 +303,7 @@ function renderProducts() {
     return `
       <article class="admin-card">
         <div class="admin-card-main">
-          <img src="${product.imagen || "/haode-web/assets/products/placeholder.svg"}" alt="${product.nombre || "Producto"}" loading="lazy" />
+          <img src="${product.imagen || "/assets/products/placeholder.svg"}" alt="${product.nombre || "Producto"}" loading="lazy" />
           <div>
             <h3>${product.nombre || "Producto sin nombre"}</h3>
             <p>${product.modelo || "Sin modelo"}</p>
@@ -386,7 +386,7 @@ async function syncSampleProducts() {
 
 async function importProductsJson() {
   const { doc, serverTimestamp, writeBatch } = window.HAODE_FIREBASE.firestoreModule;
-  const response = await fetch("/haode-web/app/products.json", { cache: "no-store" });
+  const response = await fetch("/app/products.json", { cache: "no-store" });
 
   if (!response.ok) {
     throw new Error(`No se pudo leer products.json: ${response.status}`);
@@ -449,7 +449,7 @@ async function syncCorrectedPricesToFirestore() {
   setStatus(adminStatus, "Leyendo products.json...");
   await loadProducts();
 
-  const response = await fetch("/haode-web/app/products.json", { cache: "no-store" });
+  const response = await fetch("/app/products.json", { cache: "no-store" });
 
   if (!response.ok) {
     throw new Error(`No se pudo leer products.json: ${response.status}`);

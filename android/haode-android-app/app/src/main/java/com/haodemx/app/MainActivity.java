@@ -25,9 +25,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-    private static final String ENTRY_URL = "https://haodemx.github.io/haode-web/app/?v=ui-v2";
-    private static final String INTERNAL_HOST = "haodemx.github.io";
-    private static final String INTERNAL_PATH = "/haode-web/app";
+    private static final String ENTRY_URL = "https://haode.com.mx/app/?v=ui-v2";
+    private static final String INTERNAL_HOST = "haode.com.mx";
+    private static final String INTERNAL_PATH = "/app";
     private static final int HAODE_ORANGE = Color.rgb(255, 95, 5);
 
     private WebView webView;

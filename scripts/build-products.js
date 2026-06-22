@@ -10,7 +10,7 @@ const STRUCTURE_DOC_FILE = path.join(DOCS_DIR, 'product-structure.md');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const ROBOTS_FILE = path.join(ROOT, 'robots.txt');
 const SERIES_CHECK_FILE = path.join(ROOT, 'assets', 'products', 'series-update-check.md');
-const SITE_URL = 'https://haodemx.github.io/haode-web';
+const SITE_URL = 'https://haode.com.mx';
 
 const CATEGORY_CONFIG = [
   {
