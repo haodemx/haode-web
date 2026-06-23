@@ -4764,6 +4764,64 @@ body.catalog-page.catalog-reference-page .filter-chip {
   white-space: nowrap;
 }
 
+body.catalog-page.catalog-reference-page .pantallas-tools {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--catalog-line);
+  border-radius: 8px;
+  background: #fffaf6;
+}
+
+body.catalog-page.catalog-reference-page .pantallas-search {
+  display: grid;
+  gap: 7px;
+}
+
+body.catalog-page.catalog-reference-page .pantallas-search span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--catalog-orange);
+}
+
+body.catalog-page.catalog-reference-page .pantallas-search input {
+  width: 100%;
+  min-height: 42px;
+  min-width: 0;
+  padding: 0 13px;
+  border: 1px solid rgba(255, 90, 20, 0.26);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #201a16;
+  font: inherit;
+  outline: none;
+}
+
+body.catalog-page.catalog-reference-page .pantallas-search input:focus {
+  border-color: var(--catalog-orange);
+  box-shadow: 0 0 0 3px rgba(255, 90, 20, 0.14);
+}
+
+body.catalog-page.catalog-reference-page .pantallas-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+}
+
+body.catalog-page.catalog-reference-page .pantallas-filter-chips .filter-chip {
+  border-color: rgba(255, 90, 20, 0.2);
+}
+
+body.catalog-page.catalog-reference-page .pantallas-result-count {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: #5d5651;
+}
+
 body.catalog-page.catalog-reference-page .catalog-sections {
   padding-top: 20px;
 }
@@ -5442,6 +5500,29 @@ body.product-detail-page .detail-zoom-close {
   body.catalog-page.catalog-reference-page .catalog-section {
     gap: 14px;
     padding: 14px;
+  }
+
+  body.catalog-page.catalog-reference-page .pantallas-tools {
+    gap: 10px;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  body.catalog-page.catalog-reference-page .pantallas-filter-chips {
+    flex-wrap: nowrap;
+    margin: 0 -12px;
+    padding: 0 12px 3px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.catalog-page.catalog-reference-page .pantallas-filter-chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.catalog-page.catalog-reference-page .pantallas-filter-chips .filter-chip {
+    flex: 0 0 auto;
   }
 
   body.catalog-page.catalog-reference-page .catalog-category-block {
