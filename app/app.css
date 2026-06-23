@@ -596,7 +596,8 @@ img {
   grid-auto-flow: column;
   gap: 12px;
   overflow-x: auto;
-  padding: 2px 2px 10px;
+  padding: 2px 2px 14px;
+  scroll-padding-inline: 2px;
   scroll-snap-type: x mandatory;
 }
 
@@ -966,7 +967,8 @@ img {
   grid-auto-flow: column;
   gap: 14px;
   overflow-x: auto;
-  padding: 2px 2px 10px;
+  padding: 2px 2px 14px;
+  scroll-padding-inline: 2px;
   scroll-snap-type: x mandatory;
 }
 
@@ -1747,6 +1749,27 @@ img {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-banner {
+    margin-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom) - 16px);
+    min-height: auto;
+  }
+
+  .hero-media {
+    min-height: 160px;
+    border-radius: 24px;
+  }
+
+  .hero-product-frame {
+    min-height: 176px;
+    border-radius: 24px;
+  }
+
+  .hero-media img {
+    max-height: 150px;
   }
 }
 
