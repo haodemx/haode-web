@@ -1158,9 +1158,9 @@ function createProductCard(product) {
   const details = document.createElement('a');
   details.className = 'btn btn-secondary shop-details';
   details.href = getProductUrl(product.id);
-  details.textContent = 'Ver detalles';
+  details.textContent = 'Ver producto';
 
-  actions.append(whatsapp, details);
+  actions.append(details, whatsapp);
   content.append(title, quality, priceWrap, actions);
 
   article.append(overlay, media, content);
@@ -1347,8 +1347,6 @@ function renderCatalogPage() {
     const count = document.createElement('p');
     count.className = 'catalog-count';
     count.textContent = `${products.length} modelos`;
-
-    titleWrap.append(kicker, heading, subtitle);
 
     const grid = document.createElement('div');
     grid.className = 'product-page-grid shop-grid';
