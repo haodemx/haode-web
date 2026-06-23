@@ -586,189 +586,6 @@ function categoryCardsHtml() {
   }).join("");
 }
 
-function productForCategory(categoryId) {
-  return products.find((product) => product.category === categoryId && product.image && product.image !== PLACEHOLDER_IMAGE)
-    || products.find((product) => product.category === categoryId)
-    || null;
-}
-
-function categoryShowcaseHtml() {
-  const cards = [
-    {
-      title: "Pantallas INCELL",
-      copy: "iPhone y Samsung para reparación diaria.",
-      url: "/categoria/iphone-incell/",
-      product: productForCategory("Pantallas iPhone INCELL") || productForCategory("Pantallas Samsung INCELL")
-    },
-    {
-      title: "Pantallas OLED",
-      copy: "Imagen clara para trabajos profesionales.",
-      url: "/categoria/iphone-oled/",
-      product: productForCategory("Pantallas iPhone OLED") || productForCategory("Pantallas Samsung OLED")
-    },
-    {
-      title: "Samsung",
-      copy: "INCELL, OLED y TIPO ORIGINAL disponibles por categoría.",
-      url: "/categoria/samsung-incell/",
-      product: productForCategory("Pantallas Samsung INCELL") || productForCategory("Pantallas Samsung Original")
-    },
-    {
-      title: "Fundas / Micas",
-      copy: "Accesorios de rotación para mostrador y mayoreo.",
-      url: "/categoria/fundas/",
-      product: productForCategory("Fundas") || productForCategory("Micas")
-    },
-    {
-      title: "Productos AI",
-      copy: "Cámaras, gafas y accesorios inteligentes.",
-      url: "/categoria/productos-ai/",
-      product: productForCategory("Cámaras Inteligentes") || productForCategory("Gafas AI")
-    },
-    {
-      title: "Máquinas de Mica",
-      copy: "Equipo de corte para tiendas y técnicos.",
-      url: "/categoria/maquinas-de-hidrogel/",
-      product: productForCategory("Máquinas de Mica")
-    }
-  ].filter((card) => card.product);
-
-  return `
-    <section class="section-block" id="categorias">
-      <div class="section-head">
-        <div>
-          <h2>Categorías principales</h2>
-          <p>Entradas reales del catálogo HAODE para cotizar por línea.</p>
-        </div>
-      </div>
-      <div class="category-showcase-grid">
-        ${cards.map((card) => `
-          <a class="category-showcase-card" href="${card.url}" aria-label="Ver ${escapeAttr(card.title)}">
-            <img src="${card.product.image}" alt="${escapeAttr(card.product.name)}" loading="lazy" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
-            <span>
-              <strong>${card.title}</strong>
-              <small>${card.copy}</small>
-              <b>Ver productos</b>
-            </span>
-          </a>
-        `).join("")}
-      </div>
-    </section>
-  `;
-}
-
-function productSectionHtml({ id, title, copy, items, limit = 6 }) {
-  const activeItems = Array.from(new Map(items.filter(Boolean).map((product) => [product.id, product])).values()).slice(0, limit);
-  if (!activeItems.length) {
-    return "";
-  }
-
-  return `
-    <section class="section-block" id="${id}">
-      <div class="section-head">
-        <div>
-          <h2>${title}</h2>
-          <p>${copy}</p>
-        </div>
-        <a class="text-button" href="#lista">Ver catálogo</a>
-      </div>
-      <div class="product-rail">
-        ${activeItems.map((product) => productCardHtml(product, true)).join("")}
-      </div>
-    </section>
-  `;
-}
-
-function operationDailyHtml() {
-  const items = [
-    {
-      title: "Recepción de mercancía",
-      copy: "Ingreso y acomodo de productos para revisión diaria.",
-      image: "/assets/images/store-gallery/store-cdmx-01.jpg"
-    },
-    {
-      title: "Revisión de calidad",
-      copy: "Control visual antes de preparar cada pedido.",
-      image: "/assets/images/store-gallery/store-cdmx-02.jpg"
-    },
-    {
-      title: "Empaque profesional",
-      copy: "Protección para envíos y entregas locales.",
-      image: "/assets/images/store-gallery/store-cdmx-03.jpg"
-    },
-    {
-      title: "Atención rápida",
-      copy: "Soporte comercial por WhatsApp para técnicos y tiendas.",
-      image: "/assets/images/store-gallery/store-cdmx-04.jpg"
-    }
-  ];
-
-  return `
-    <section class="section-block operation-section" aria-labelledby="operation-title">
-      <div class="section-head">
-        <div>
-          <h2 id="operation-title">Operación diaria</h2>
-          <p>Material real de trabajo HAODE: recepción, revisión, empaque y atención.</p>
-        </div>
-      </div>
-      <div class="operation-grid">
-        ${items.map((item) => `
-          <article class="operation-card">
-            <img src="${item.image}" alt="${item.title} HAODE" loading="lazy" decoding="async" />
-            <div>
-              <strong>${item.title}</strong>
-              <span>${item.copy}</span>
-            </div>
-          </article>
-        `).join("")}
-      </div>
-    </section>
-  `;
-}
-
-function siteFooterHtml() {
-  return `
-    <footer class="site-footer" id="contacto">
-      <div class="footer-brand">
-        <img src="/assets/logo/logo.png" alt="Logo HAODE" loading="lazy" decoding="async" />
-        <p>Calidad profesional en piezas para celulares, pantallas, micas, fundas y productos AI.</p>
-      </div>
-      <nav aria-label="Productos">
-        <strong>Productos</strong>
-        <a href="/categoria/pantallas/">Pantallas</a>
-        <a href="/categoria/micas/">Micas</a>
-        <a href="/categoria/fundas/">Fundas</a>
-        <a href="/categoria/productos-ai/">Productos AI</a>
-      </nav>
-      <nav aria-label="Empresa">
-        <strong>Empresa</strong>
-        <a href="/">Sobre HAODE</a>
-        <a href="#novedades">Novedades</a>
-        <a href="/garantia/">Garantía</a>
-        <a href="/contacto/">Contacto</a>
-      </nav>
-      <nav aria-label="Ayuda">
-        <strong>Ayuda</strong>
-        <a href="/contacto/">Envíos y entregas</a>
-        <a href="/garantia/">Políticas</a>
-        <a href="/garantia/">Devoluciones</a>
-        <a href="mailto:haodemx@gmail.com">Soporte técnico</a>
-      </nav>
-      <address>
-        <strong>Contacto</strong>
-        <span>Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro, Cuauhtémoc, 06070, Ciudad de México</span>
-        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer">WhatsApp: +52 33 2668 4296</a>
-        <a href="mailto:haodemx@gmail.com">haodemx@gmail.com</a>
-        <span>Lunes a sábado: 10:00 - 18:00</span>
-      </address>
-      <div class="footer-cta">
-        <strong>¿Listo para hacer crecer tu negocio?</strong>
-        <span>Escríbenos por WhatsApp y recibe atención inmediata.</span>
-        <a class="primary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero cotizar productos.")}" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
-      </div>
-    </footer>
-  `;
-}
-
 function categoryOptionsHtml() {
   return categories
     .filter((category) => category.id !== "Todos")
@@ -780,12 +597,7 @@ function renderHome() {
   state.route = { name: "home" };
   state.activeCategory = "Todos";
   state.activeGroup = "";
-  const heroProducts = [
-    productForCategory("Pantallas iPhone INCELL"),
-    productForCategory("Pantallas iPhone OLED"),
-    productForCategory("Pantallas Samsung INCELL")
-  ].filter(Boolean);
-  const heroProduct = heroProducts[0] || products.find((product) => product.image) || {};
+  const heroProduct = products.find((product) => product.id === "x200t-cortadora-micas") || products.find((product) => product.image) || {};
   const featuredProducts = [
     ...products.filter((product) => product.category === "Máquinas de Mica").slice(0, 1),
     ...products.filter((product) => product.category.includes("Pantallas")).slice(0, 5),
@@ -801,60 +613,63 @@ function renderHome() {
     <div class="page-stack">
       <section class="hero-banner">
         <div class="hero-copy">
-          <span class="hero-badge">Stock local en CDMX</span>
-          <h1>HAODE MÉXICO</h1>
-          <p>Proveedor confiable de piezas para celulares, mayoreo y menudeo con envíos a todo México.</p>
+          <span class="hero-badge">HAODE México</span>
+          <h1>Pantallas y refacciones profesionales</h1>
+          <p>Catálogo rápido para técnicos, tiendas y clientes de mayoreo.</p>
           <div class="hero-actions">
             <a class="primary-button" href="#catalogo">Ver productos</a>
-            <a class="secondary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
-            <a class="outline-button hero-app-button" href="/app/">Comprar en APP</a>
+            <a class="secondary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
           </div>
           <div class="hero-proof" aria-label="Beneficios HAODE">
-            <span>Stock real en CDMX</span>
-            <span>Envíos a todo México</span>
-            <span>Mayoreo y menudeo</span>
-            <span>Atención rápida</span>
+            <span>CDMX</span>
+            <span>Mayoreo</span>
+            <span>Pedido por WhatsApp</span>
           </div>
         </div>
         <div class="hero-media">
           <div class="hero-product-frame">
-            ${heroProducts.slice(0, 3).map((product, index) => `
-              <img class="hero-device hero-device-${index + 1}" src="${product.image}" alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
-            `).join("") || `<img class="hero-device hero-device-1" src="${heroProduct.image || "/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />`}
-            <span class="hero-logo-mark">HAODE</span>
+            <img src="${heroProduct.image || "/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
           </div>
-          <aside class="hero-stock-card" aria-label="Operación HAODE">
-            <strong>Stock local en CDMX</strong>
-            <span>Inventario actualizado</span>
-            <span>Revisión de calidad</span>
-            <span>Empaque profesional</span>
-            <span>Envíos diarios</span>
-          </aside>
         </div>
       </section>
 
-      ${categoryShowcaseHtml()}
-
-      <section class="trust-grid-home" aria-label="Confianza HAODE">
-        ${benefitHtml("Stock local en CDMX", "grid", "Inventario verificado y listo para envío.")}
-        ${benefitHtml("Envíos a todo México", "truck", "Cobertura nacional con paqueterías confiables.")}
-        ${benefitHtml("Calidad profesional", "shield", "Productos probados y garantía de calidad.")}
-        ${benefitHtml("Atención rápida", "whatsapp", "Soporte técnico y comercial por WhatsApp.")}
-      </section>
-
-      ${productSectionHtml({ id: "catalogo", title: "Productos destacados", copy: "Selección dinámica desde productos activos con precio y enlace reales.", items: uniqueFeatured })}
-      ${productSectionHtml({ id: "novedades", title: "Novedades", copy: "Últimos productos de rotación para técnicos, tiendas y distribuidores.", items: sortProducts(products).slice(0, 8) })}
-      ${productSectionHtml({ id: "pantallas", title: "Pantallas", copy: "iPhone, Samsung, INCELL, OLED y líneas de diagnóstico.", items: products.filter((product) => product.category.includes("Pantallas")) })}
-      ${productSectionHtml({ id: "productos-ai", title: "Productos AI", copy: "Cámaras, gafas y accesorios inteligentes del catálogo actual.", items: products.filter((product) => ["Gafas AI", "Cámaras Inteligentes"].includes(product.category)) })}
-
       ${promotionsSectionHtml(promoProducts)}
-
-      ${operationDailyHtml()}
 
       ${appOrderSectionHtml()}
 
+      <section class="section-block" id="categorias">
+        <div class="section-head">
+          <div>
+            <h2>Categorías</h2>
+            <p>Entradas directas para cotizar más rápido.</p>
+          </div>
+        </div>
+        <div class="category-rail" data-category-rail>${categoryCardsHtml()}</div>
+      </section>
+
+      <section class="section-block" id="catalogo">
+        <div class="section-head">
+          <div>
+            <h2>Productos destacados</h2>
+            <p>Selección con datos reales de productos activos.</p>
+          </div>
+          <a class="text-button" href="#lista">Ver catálogo</a>
+        </div>
+        <div class="product-rail">
+          ${uniqueFeatured.map((product) => productCardHtml(product, true)).join("")}
+        </div>
+      </section>
+
+      ${premiumSelectionHtml()}
+
+      <section class="trust-bar" aria-label="Confianza HAODE">
+        ${benefitHtml("Stock en México", "grid")}
+        ${benefitHtml("WhatsApp", "whatsapp")}
+        ${benefitHtml("Calidad HAODE", "shield")}
+        ${benefitHtml("Envío rápido", "truck")}
+      </section>
+
       ${seoLinksHtml()}
-      ${siteFooterHtml()}
     </div>
   `;
   updateNavigation();
@@ -923,14 +738,11 @@ function appOrderSectionHtml() {
   `;
 }
 
-function benefitHtml(title, icon, copy = "") {
+function benefitHtml(title, icon) {
   return `
     <article class="trust-pill">
       ${iconSvg(icon)}
-      <span>
-        <strong>${title}</strong>
-        ${copy ? `<small>${copy}</small>` : ""}
-      </span>
+      <strong>${title}</strong>
     </article>
   `;
 }
@@ -1525,17 +1337,7 @@ function handleDocumentClick(event) {
   const viewerNextButton = event.target.closest("[data-viewer-next]");
   const focusSearchButton = event.target.closest("[data-focus-search]");
   const shareProductButton = event.target.closest("[data-share-product]");
-  const menuToggle = event.target.closest("[data-menu-toggle]");
-  const mobileMenu = document.querySelector("[data-mobile-menu]");
 
-  if (menuToggle && mobileMenu) {
-    const willOpen = mobileMenu.hidden;
-    mobileMenu.hidden = !willOpen;
-    menuToggle.setAttribute("aria-expanded", String(willOpen));
-  } else if (mobileMenu && !mobileMenu.hidden && !event.target.closest("[data-mobile-menu]") && !event.target.closest("[data-menu-toggle]")) {
-    mobileMenu.hidden = true;
-    document.querySelector("[data-menu-toggle]")?.setAttribute("aria-expanded", "false");
-  }
   if (groupLink) {
     event.preventDefault();
     window.location.hash = groupRouteUrl(groupLink.dataset.groupLink);
