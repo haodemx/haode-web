@@ -125,6 +125,72 @@ const CATEGORY_ALIASES = {
   fundas: 'fundas',
 };
 
+const CATALOG_GROUPS = [
+  {
+    id: 'pantallas',
+    kicker: 'Pantallas',
+    title: 'Pantallas',
+    subtitle: 'Familias de pantalla para técnicos y distribuidores. Esta sección no mezcla fundas, micas, baterías ni productos AI.',
+    categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'oled-diagnostica'],
+    featureCards: [
+      {
+        title: 'Samsung TIPO ORIGINAL',
+        eyebrow: 'Pantallas Samsung',
+        text: 'Pantallas Samsung TIPO ORIGINAL CON MARCO para modelos seleccionados.',
+        image: 'assets/products/samsung-original/z-fold6/main.png',
+        href: '/categoria/samsung-tipo-original/',
+        cta: 'Ver Samsung TIPO ORIGINAL',
+      },
+      {
+        title: 'Samsung AMOLED',
+        eyebrow: 'Pantallas Samsung',
+        text: 'Consulta líneas Samsung AMOLED y opciones compatibles con tu pedido.',
+        image: 'assets/products/samsung-oled/s24-ultra/main.jpg',
+        href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20cotizar%20pantallas%20Samsung%20AMOLED',
+        cta: 'Cotizar AMOLED',
+        external: true,
+      },
+    ],
+  },
+  {
+    id: 'baterias',
+    kicker: 'Baterías',
+    title: 'Baterías',
+    subtitle: 'Cotiza baterías por modelo y cantidad directamente por WhatsApp.',
+    categories: [],
+    empty: {
+      title: 'Baterías por cotización',
+      text: 'Envíanos modelo, cantidad y ciudad para confirmar disponibilidad actual.',
+      cta: 'Cotizar baterías',
+      href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20cotizar%20bater%C3%ADas',
+    },
+  },
+  {
+    id: 'fundas-micas',
+    kicker: 'Protección',
+    title: 'Fundas / Micas',
+    subtitle: 'Fundas, micas y soluciones de corte se muestran aquí como una sección independiente.',
+    categories: ['fundas', 'micas'],
+    featureCards: [
+      {
+        title: 'Máquinas de Hidrogel',
+        eyebrow: 'Micas',
+        text: 'Máquinas de corte, micas y consumibles para tiendas y técnicos.',
+        image: 'assets/products/cut-machine/x200t/main.jpg',
+        href: '/categoria/maquinas-de-hidrogel/',
+        cta: 'Ver máquinas',
+      },
+    ],
+  },
+  {
+    id: 'productos-ai',
+    kicker: 'Productos AI',
+    title: 'Productos AI',
+    subtitle: 'AI glasses, cámaras inteligentes y productos electrónicos para venta en tienda.',
+    categories: ['gafas-ai', 'camaras-inteligentes'],
+  },
+];
+
 const IPHONE_INCELL_MEDIA = {
   "iphone-x-incell": {
     "mainImage": "assets/products/iphone-incell/x/main.jpg",
@@ -1172,7 +1238,6 @@ function attachZoom(imageEl, src, alt) {
 }
 
 function renderCatalogPage() {
-  const filterBar = document.querySelector('[data-product-filters]');
   const sectionsRoot = document.querySelector('[data-product-sections]');
   const priceNote = document.querySelector('[data-price-note]');
   if (!sectionsRoot) return;
@@ -1181,17 +1246,94 @@ function renderCatalogPage() {
     priceNote.textContent = 'Precios por cantidad en MXN. Consulta disponibilidad por WhatsApp para confirmar tu pedido.';
   }
 
-  function renderCategorySection(category, products) {
-    const meta = CATEGORY_META[category];
-    const section = document.createElement('section');
-    section.className = 'catalog-section';
-    section.id = category;
-    section.dataset.category = category;
+  function createCatalogFeatureCard(card) {
+    const article = document.createElement('article');
+    article.className = 'shop-card catalog-feature-card';
 
-    const head = document.createElement('div');
-    head.className = 'catalog-section-head';
+    const link = document.createElement('a');
+    link.className = 'shop-card-link';
+    link.href = card.href;
+    link.setAttribute('aria-label', card.cta || card.title);
+    if (card.external) {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+
+    const media = document.createElement('div');
+    media.className = 'shop-media';
+
+    const image = document.createElement('img');
+    image.src = buildAssetUrl(card.image || PLACEHOLDER_IMAGE);
+    image.alt = card.title;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+
+    const brand = document.createElement('span');
+    brand.className = 'shop-brand';
+    brand.textContent = card.eyebrow || 'HAODE';
+
+    media.append(image, brand);
+
+    const content = document.createElement('div');
+    content.className = 'shop-content';
+
+    const title = document.createElement('h3');
+    title.textContent = card.title;
+
+    const text = document.createElement('p');
+    text.className = 'shop-quality';
+    text.textContent = card.text;
+
+    const actions = document.createElement('div');
+    actions.className = 'shop-actions';
+
+    const cta = document.createElement('a');
+    cta.className = 'btn btn-secondary shop-details';
+    cta.href = card.href;
+    cta.textContent = card.cta || 'Ver productos';
+    if (card.external) {
+      cta.target = '_blank';
+      cta.rel = 'noopener noreferrer';
+    }
+
+    actions.appendChild(cta);
+    content.append(title, text, actions);
+    article.append(link, media, content);
+    return article;
+  }
+
+  function createCatalogEmptyCard(empty) {
+    const article = document.createElement('article');
+    article.className = 'catalog-empty-card';
+
+    const title = document.createElement('h3');
+    title.textContent = empty.title;
+
+    const text = document.createElement('p');
+    text.textContent = empty.text;
+
+    const link = document.createElement('a');
+    link.className = 'btn btn-primary';
+    link.href = empty.href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = empty.cta;
+
+    article.append(title, text, link);
+    return article;
+  }
+
+  function renderCategoryBlock(category, products) {
+    const meta = CATEGORY_META[category];
+    if (!meta || !products.length) return null;
+
+    const block = document.createElement('section');
+    block.className = 'catalog-category-block';
+    block.id = category;
+    block.dataset.category = category;
 
     const titleWrap = document.createElement('div');
+    titleWrap.className = 'catalog-category-head';
     const kicker = document.createElement('p');
     kicker.className = 'section-kicker';
     kicker.textContent = meta.brand;
@@ -1206,7 +1348,7 @@ function renderCatalogPage() {
     count.className = 'catalog-count';
     count.textContent = `${products.length} modelos`;
 
-    head.append(titleWrap, count);
+    titleWrap.append(kicker, heading, subtitle);
 
     const grid = document.createElement('div');
     grid.className = 'product-page-grid shop-grid';
@@ -1215,13 +1357,65 @@ function renderCatalogPage() {
       grid.appendChild(createProductCard(product));
     });
 
-    section.append(head, grid);
+    block.append(titleWrap, count, grid);
+    return block;
+  }
+
+  function renderCatalogGroup(group) {
+    const section = document.createElement('section');
+    section.className = 'catalog-section';
+    section.id = group.id;
+    section.dataset.catalogGroup = group.id;
+
+    const head = document.createElement('div');
+    head.className = 'catalog-section-head';
+
+    const titleWrap = document.createElement('div');
+    const kicker = document.createElement('p');
+    kicker.className = 'section-kicker';
+    kicker.textContent = group.kicker;
+    const heading = document.createElement('h2');
+    heading.textContent = group.title;
+    const subtitle = document.createElement('p');
+    subtitle.className = 'catalog-section-subtitle';
+    subtitle.textContent = group.subtitle;
+    titleWrap.append(kicker, heading, subtitle);
+
+    const count = document.createElement('p');
+    count.className = 'catalog-count';
+    const productCount = group.categories.reduce((sum, category) => sum + PRODUCTS.filter((product) => product.category === category).length, 0);
+    count.textContent = productCount ? `${productCount} modelos` : 'Cotización directa';
+
+    head.append(titleWrap, count);
+    section.appendChild(head);
+
+    group.categories.forEach((categorySlug) => {
+      const block = renderCategoryBlock(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug));
+      if (block) section.appendChild(block);
+    });
+
+    if (Array.isArray(group.featureCards) && group.featureCards.length) {
+      const featureGrid = document.createElement('div');
+      featureGrid.className = 'product-page-grid shop-grid catalog-feature-grid';
+      group.featureCards.forEach((card) => featureGrid.appendChild(createCatalogFeatureCard(card)));
+      section.appendChild(featureGrid);
+    }
+
+    if (group.empty) {
+      section.appendChild(createCatalogEmptyCard(group.empty));
+    }
+
     sectionsRoot.appendChild(section);
   }
 
   sectionsRoot.innerHTML = '';
-  CATEGORY_SLUGS.forEach((categorySlug) => {
-    renderCategorySection(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug));
+  CATALOG_GROUPS.forEach(renderCatalogGroup);
+
+  document.querySelectorAll('[data-catalog-group-count]').forEach((el) => {
+    const group = CATALOG_GROUPS.find((item) => item.id === el.dataset.catalogGroupCount);
+    if (!group) return;
+    const count = group.categories.reduce((sum, category) => sum + PRODUCTS.filter((product) => product.category === category).length, 0);
+    el.textContent = count ? `${count} modelos` : 'Cotización';
   });
 }
 
