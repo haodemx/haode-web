@@ -140,6 +140,8 @@ const CATALOG_GROUPS = [
         image: 'assets/products/samsung-original/z-fold6/main.png',
         href: '/categoria/samsung-tipo-original/',
         cta: 'Ver Samsung TIPO ORIGINAL',
+        filterId: 'samsung-tipo-original',
+        searchText: 'Samsung TIPO ORIGINAL tipo original con marco Fold Flip Note S pantalla refaccion categoria samsung original',
       },
       {
         title: 'Samsung AMOLED',
@@ -149,6 +151,8 @@ const CATALOG_GROUPS = [
         href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20cotizar%20pantallas%20Samsung%20AMOLED',
         cta: 'Cotizar AMOLED',
         external: true,
+        filterId: 'samsung-amoled',
+        searchText: 'Samsung AMOLED pantalla amoled oled galaxy premium cotizacion',
       },
     ],
   },
@@ -189,6 +193,17 @@ const CATALOG_GROUPS = [
     subtitle: 'AI glasses, cámaras inteligentes y productos electrónicos para venta en tienda.',
     categories: ['gafas-ai', 'camaras-inteligentes'],
   },
+];
+
+const PANTALLAS_FILTERS = [
+  { id: 'all', label: 'Todas las pantallas' },
+  { id: 'iphone-incell', label: 'iPhone INCELL' },
+  { id: 'iphone-oled', label: 'iPhone OLED' },
+  { id: 'samsung-incell', label: 'Samsung INCELL' },
+  { id: 'samsung-oled', label: 'Samsung OLED' },
+  { id: 'samsung-tipo-original', label: 'Samsung TIPO ORIGINAL' },
+  { id: 'samsung-amoled', label: 'Samsung AMOLED' },
+  { id: 'oled-diagnostica', label: 'OLED Diagnóstica / Sin mensaje' },
 ];
 
 const IPHONE_INCELL_MEDIA = {
@@ -1237,6 +1252,28 @@ function attachZoom(imageEl, src, alt) {
   });
 }
 
+function normalizeCatalogSearchText(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function buildCatalogSearchText(product, meta) {
+  return normalizeCatalogSearchText([
+    product.name,
+    product.model,
+    product.brand,
+    product.category,
+    product.quality,
+    product.description,
+    meta?.title,
+    meta?.subtitle,
+  ].filter(Boolean).join(' '));
+}
+
 function renderCatalogPage() {
   const sectionsRoot = document.querySelector('[data-product-sections]');
   const priceNote = document.querySelector('[data-price-note]');
@@ -1249,6 +1286,17 @@ function renderCatalogPage() {
   function createCatalogFeatureCard(card) {
     const article = document.createElement('article');
     article.className = 'shop-card catalog-feature-card';
+    if (card.filterId) {
+      article.dataset.pantallasFeature = 'true';
+      article.dataset.pantallasFilter = card.filterId;
+      article.dataset.pantallasSearch = normalizeCatalogSearchText([
+        card.title,
+        card.eyebrow,
+        card.text,
+        card.cta,
+        card.searchText,
+      ].filter(Boolean).join(' '));
+    }
 
     const link = document.createElement('a');
     link.className = 'shop-card-link';
@@ -1302,6 +1350,48 @@ function renderCatalogPage() {
     return article;
   }
 
+  function createPantallasControls() {
+    const controls = document.createElement('div');
+    controls.className = 'pantallas-tools';
+    controls.setAttribute('data-pantallas-tools', '');
+
+    const searchWrap = document.createElement('label');
+    searchWrap.className = 'pantallas-search';
+
+    const searchLabel = document.createElement('span');
+    searchLabel.textContent = 'Buscar pantalla';
+
+    const input = document.createElement('input');
+    input.type = 'search';
+    input.autocomplete = 'off';
+    input.placeholder = 'Buscar modelo: iPhone 11, 12 Pro, S22 Ultra, A54, Note 20, Fold, Flip...';
+    input.setAttribute('data-pantallas-search-input', '');
+
+    searchWrap.append(searchLabel, input);
+
+    const chips = document.createElement('div');
+    chips.className = 'pantallas-filter-chips';
+    chips.setAttribute('aria-label', 'Filtrar por tipo de pantalla');
+
+    PANTALLAS_FILTERS.forEach((filter, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `filter-chip${index === 0 ? ' is-active' : ''}`;
+      button.textContent = filter.label;
+      button.dataset.pantallasFilterButton = filter.id;
+      if (index === 0) button.setAttribute('aria-pressed', 'true');
+      chips.appendChild(button);
+    });
+
+    const result = document.createElement('p');
+    result.className = 'pantallas-result-count';
+    result.setAttribute('data-pantallas-result-count', '');
+    result.textContent = 'Todas las pantallas';
+
+    controls.append(searchWrap, chips, result);
+    return controls;
+  }
+
   function createCatalogEmptyCard(empty) {
     const article = document.createElement('article');
     article.className = 'catalog-empty-card';
@@ -1320,6 +1410,19 @@ function renderCatalogPage() {
     link.textContent = empty.cta;
 
     article.append(title, text, link);
+    return article;
+  }
+
+  function createPantallasEmptyCard() {
+    const article = createCatalogEmptyCard({
+      title: 'No encontramos ese modelo en Pantallas.',
+      text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
+      cta: 'Consultar por WhatsApp',
+      href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20busco%20una%20pantalla%20y%20quiero%20confirmar%20disponibilidad',
+    });
+    article.classList.add('pantallas-empty-state');
+    article.hidden = true;
+    article.setAttribute('data-pantallas-empty', '');
     return article;
   }
 
@@ -1352,7 +1455,11 @@ function renderCatalogPage() {
     grid.className = 'product-page-grid shop-grid';
 
     products.forEach((product) => {
-      grid.appendChild(createProductCard(product));
+      const productCard = createProductCard(product);
+      productCard.dataset.pantallasCard = 'true';
+      productCard.dataset.pantallasFilter = category;
+      productCard.dataset.pantallasSearch = buildCatalogSearchText(product, meta);
+      grid.appendChild(productCard);
     });
 
     block.append(titleWrap, count, grid);
@@ -1387,6 +1494,10 @@ function renderCatalogPage() {
     head.append(titleWrap, count);
     section.appendChild(head);
 
+    if (group.id === 'pantallas') {
+      section.appendChild(createPantallasControls());
+    }
+
     group.categories.forEach((categorySlug) => {
       const block = renderCategoryBlock(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug));
       if (block) section.appendChild(block);
@@ -1403,7 +1514,78 @@ function renderCatalogPage() {
       section.appendChild(createCatalogEmptyCard(group.empty));
     }
 
+    if (group.id === 'pantallas') {
+      section.appendChild(createPantallasEmptyCard());
+      attachPantallasFilters(section);
+    }
+
     sectionsRoot.appendChild(section);
+  }
+
+  function attachPantallasFilters(section) {
+    const searchInput = section.querySelector('[data-pantallas-search-input]');
+    const buttons = Array.from(section.querySelectorAll('[data-pantallas-filter-button]'));
+    const resultCount = section.querySelector('[data-pantallas-result-count]');
+    const sectionCount = section.querySelector('.catalog-section-head .catalog-count');
+    const emptyState = section.querySelector('[data-pantallas-empty]');
+    let activeFilter = 'all';
+
+    const applyFilter = () => {
+      const query = normalizeCatalogSearchText(searchInput?.value || '');
+      let visibleResults = 0;
+      let visibleProducts = 0;
+
+      section.querySelectorAll('.catalog-category-block').forEach((block) => {
+        let visibleInBlock = 0;
+        block.querySelectorAll('[data-pantallas-card]').forEach((card) => {
+          const matchesFilter = activeFilter === 'all' || card.dataset.pantallasFilter === activeFilter;
+          const matchesQuery = !query || (card.dataset.pantallasSearch || '').includes(query);
+          const isVisible = matchesFilter && matchesQuery;
+          card.hidden = !isVisible;
+          if (isVisible) {
+            visibleInBlock += 1;
+            visibleResults += 1;
+            visibleProducts += 1;
+          }
+        });
+        block.hidden = visibleInBlock === 0;
+        const blockCount = block.querySelector('.catalog-count');
+        if (blockCount) blockCount.textContent = visibleInBlock ? `${visibleInBlock} modelos` : 'Sin resultados';
+      });
+
+      section.querySelectorAll('[data-pantallas-feature]').forEach((card) => {
+        const matchesFilter = activeFilter === 'all' || card.dataset.pantallasFilter === activeFilter;
+        const matchesQuery = !query || (card.dataset.pantallasSearch || '').includes(query);
+        const isVisible = matchesFilter && matchesQuery;
+        card.hidden = !isVisible;
+        if (isVisible) visibleResults += 1;
+      });
+
+      if (emptyState) emptyState.hidden = visibleResults > 0;
+      if (resultCount) {
+        const filterLabel = PANTALLAS_FILTERS.find((filter) => filter.id === activeFilter)?.label || 'Pantallas';
+        const suffix = query ? ` para "${searchInput.value.trim()}"` : '';
+        resultCount.textContent = `${visibleResults} resultados en ${filterLabel}${suffix}`;
+      }
+      if (sectionCount) {
+        sectionCount.textContent = visibleProducts ? `${visibleProducts} modelos` : 'Cotización directa';
+      }
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.pantallasFilterButton || 'all';
+        buttons.forEach((item) => {
+          const isActive = item === button;
+          item.classList.toggle('is-active', isActive);
+          item.setAttribute('aria-pressed', String(isActive));
+        });
+        applyFilter();
+      });
+    });
+
+    searchInput?.addEventListener('input', applyFilter);
+    applyFilter();
   }
 
   sectionsRoot.innerHTML = '';
