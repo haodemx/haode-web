@@ -504,58 +504,12 @@ body.home-page-reference img {
   font-weight: 850;
 }
 
-.reference-benefit-strip {
-  min-height: 86px;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  margin-top: 10px;
-  border: 1px solid var(--ref-line-orange);
-  border-radius: var(--ref-radius);
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.reference-benefit-strip article {
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  align-items: center;
-  gap: 14px;
-  padding: 16px 22px;
-  border-right: 1px solid var(--ref-line-orange);
-}
-
-.reference-benefit-strip article:last-child {
-  border-right: 0;
-}
-
-.reference-benefit-strip article > span {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #fff0e6;
-  color: var(--ref-orange);
-  border: 1px solid rgba(255, 90, 20, 0.2);
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.reference-benefit-strip h2 {
-  margin: 0 0 3px;
-  font-size: 13px;
-  line-height: 1.25;
-}
-
-.reference-benefit-strip p {
-  margin: 0;
-  color: #5d5651;
-  font-size: 11.5px;
-  line-height: 1.35;
-}
-
 .reference-section {
   padding: 16px 0 0;
+}
+
+.reference-products {
+  padding-top: 24px;
 }
 
 .reference-section-head {
@@ -1020,14 +974,6 @@ body.home-page-reference img {
     border-right: 0;
   }
 
-  .reference-benefit-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .reference-benefit-strip article {
-    border-bottom: 1px solid var(--ref-line-orange);
-  }
-
   .reference-product-carousel {
     grid-template-columns: 1fr;
   }
@@ -1135,7 +1081,6 @@ body.home-page-reference img {
   }
 
   .reference-category-row,
-  .reference-benefit-strip,
   .reference-daily-cards,
   .reference-metrics-row,
   .reference-footer-grid {
@@ -1146,8 +1091,11 @@ body.home-page-reference img {
     height: auto;
   }
 
+  .reference-products {
+    padding-top: 16px;
+  }
+
   .reference-category-card,
-  .reference-benefit-strip article,
   .reference-metrics-row div {
     border-right: 0;
   }
@@ -1161,10 +1109,6 @@ body.home-page-reference img {
   .reference-battery-visual {
     width: 84px;
     height: 100px;
-  }
-
-  .reference-benefit-strip article:last-child {
-    border-bottom: 0;
   }
 
   .reference-section-head {
