@@ -242,6 +242,12 @@ const FUNDAS_MICAS_FILTERS = [
   { id: 'hd', label: 'HD' },
 ];
 
+const PRODUCTOS_AI_FILTERS = [
+  { id: 'all', label: 'Todos' },
+  { id: 'gafas-ai', label: 'Gafas AI' },
+  { id: 'camaras-inteligentes', label: 'Cámaras inteligentes' },
+];
+
 const CATALOG_GROUPS = [
   {
     id: 'pantallas',
@@ -313,6 +319,17 @@ const CATALOG_GROUPS = [
     title: 'Productos AI',
     subtitle: 'AI glasses, cámaras inteligentes y productos electrónicos para venta en tienda.',
     categories: ['gafas-ai', 'camaras-inteligentes'],
+    controls: {
+      label: 'Buscar producto AI',
+      placeholder: 'Buscar producto AI: G5, W630, S1, cámara, LK-007...',
+      filters: PRODUCTOS_AI_FILTERS,
+      empty: {
+        title: 'No encontramos ese producto AI.',
+        text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
+        cta: 'Consultar por WhatsApp',
+        href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20busco%20un%20producto%20AI%20y%20quiero%20confirmar%20disponibilidad',
+      },
+    },
   },
 ];
 
@@ -1633,8 +1650,16 @@ function renderCatalogPage() {
     return Array.from(tags).join(' ');
   }
 
+  function getProductosAiFilterTags(product) {
+    const tags = new Set([product.category]);
+    if (product.category === 'gafas-ai') tags.add('gafas-ai');
+    if (product.category === 'camaras-inteligentes') tags.add('camaras-inteligentes');
+    return Array.from(tags).join(' ');
+  }
+
   function getCatalogFilterTags(product, groupId) {
     if (groupId === 'fundas-micas') return getFundasMicasFilterTags(product);
+    if (groupId === 'productos-ai') return getProductosAiFilterTags(product);
     return product.category;
   }
 
