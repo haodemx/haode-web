@@ -130,7 +130,7 @@ const CATALOG_GROUPS = [
     id: 'pantallas',
     kicker: 'Pantallas',
     title: 'Pantallas',
-    subtitle: 'Familias de pantalla para técnicos y distribuidores. Esta sección no mezcla fundas, micas, baterías ni productos AI.',
+    subtitle: 'Familias de pantalla para técnicos y distribuidores, organizadas por tipo y modelo.',
     categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'oled-diagnostica'],
     featureCards: [
       {
@@ -1257,12 +1257,20 @@ function normalizeCatalogSearchText(value) {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
+    .replace(/[-_/]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
+function buildCatalogSearchIndex(parts) {
+  const source = Array.isArray(parts) ? parts.filter(Boolean).join(' ') : String(parts || '');
+  const normalized = normalizeCatalogSearchText(source);
+  const compact = normalized.replace(/\s+/g, '');
+  return `${normalized} ${compact}`.trim();
+}
+
 function buildCatalogSearchText(product, meta) {
-  return normalizeCatalogSearchText([
+  return buildCatalogSearchIndex([
     product.name,
     product.model,
     product.brand,
@@ -1289,7 +1297,7 @@ function renderCatalogPage() {
     if (card.filterId) {
       article.dataset.pantallasFeature = 'true';
       article.dataset.pantallasFilter = card.filterId;
-      article.dataset.pantallasSearch = normalizeCatalogSearchText([
+      article.dataset.pantallasSearch = buildCatalogSearchIndex([
         card.title,
         card.eyebrow,
         card.text,
@@ -1506,6 +1514,9 @@ function renderCatalogPage() {
     if (Array.isArray(group.featureCards) && group.featureCards.length) {
       const featureGrid = document.createElement('div');
       featureGrid.className = 'product-page-grid shop-grid catalog-feature-grid';
+      if (group.id === 'pantallas') {
+        featureGrid.dataset.pantallasFeatureGrid = 'true';
+      }
       group.featureCards.forEach((card) => featureGrid.appendChild(createCatalogFeatureCard(card)));
       section.appendChild(featureGrid);
     }
@@ -1528,43 +1539,61 @@ function renderCatalogPage() {
     const resultCount = section.querySelector('[data-pantallas-result-count]');
     const sectionCount = section.querySelector('.catalog-section-head .catalog-count');
     const emptyState = section.querySelector('[data-pantallas-empty]');
-    let activeFilter = 'all';
+    const pantallasState = {
+      activeType: 'all',
+      query: '',
+    };
+
+    const setVisible = (element, isVisible) => {
+      if (!element) return;
+      element.hidden = !isVisible;
+      element.style.display = isVisible ? '' : 'none';
+      element.setAttribute('aria-hidden', String(!isVisible));
+    };
 
     const applyFilter = () => {
-      const query = normalizeCatalogSearchText(searchInput?.value || '');
+      pantallasState.query = normalizeCatalogSearchText(searchInput?.value || '');
+      const compactQuery = pantallasState.query.replace(/\s+/g, '');
       let visibleResults = 0;
       let visibleProducts = 0;
 
       section.querySelectorAll('.catalog-category-block').forEach((block) => {
         let visibleInBlock = 0;
         block.querySelectorAll('[data-pantallas-card]').forEach((card) => {
-          const matchesFilter = activeFilter === 'all' || card.dataset.pantallasFilter === activeFilter;
-          const matchesQuery = !query || (card.dataset.pantallasSearch || '').includes(query);
+          const matchesFilter = pantallasState.activeType === 'all' || card.dataset.pantallasFilter === pantallasState.activeType;
+          const searchText = card.dataset.pantallasSearch || '';
+          const matchesQuery = !pantallasState.query || searchText.includes(pantallasState.query) || searchText.includes(compactQuery);
           const isVisible = matchesFilter && matchesQuery;
-          card.hidden = !isVisible;
+          setVisible(card, isVisible);
           if (isVisible) {
             visibleInBlock += 1;
             visibleResults += 1;
             visibleProducts += 1;
           }
         });
-        block.hidden = visibleInBlock === 0;
+        setVisible(block, visibleInBlock > 0);
         const blockCount = block.querySelector('.catalog-count');
         if (blockCount) blockCount.textContent = visibleInBlock ? `${visibleInBlock} modelos` : 'Sin resultados';
       });
 
+      let visibleFeatures = 0;
       section.querySelectorAll('[data-pantallas-feature]').forEach((card) => {
-        const matchesFilter = activeFilter === 'all' || card.dataset.pantallasFilter === activeFilter;
-        const matchesQuery = !query || (card.dataset.pantallasSearch || '').includes(query);
+        const matchesFilter = pantallasState.activeType === 'all' || card.dataset.pantallasFilter === pantallasState.activeType;
+        const searchText = card.dataset.pantallasSearch || '';
+        const matchesQuery = !pantallasState.query || searchText.includes(pantallasState.query) || searchText.includes(compactQuery);
         const isVisible = matchesFilter && matchesQuery;
-        card.hidden = !isVisible;
-        if (isVisible) visibleResults += 1;
+        setVisible(card, isVisible);
+        if (isVisible) {
+          visibleFeatures += 1;
+          visibleResults += 1;
+        }
       });
 
-      if (emptyState) emptyState.hidden = visibleResults > 0;
+      setVisible(section.querySelector('[data-pantallas-feature-grid]'), visibleFeatures > 0);
+      setVisible(emptyState, visibleResults === 0);
       if (resultCount) {
-        const filterLabel = PANTALLAS_FILTERS.find((filter) => filter.id === activeFilter)?.label || 'Pantallas';
-        const suffix = query ? ` para "${searchInput.value.trim()}"` : '';
+        const filterLabel = PANTALLAS_FILTERS.find((filter) => filter.id === pantallasState.activeType)?.label || 'Pantallas';
+        const suffix = pantallasState.query ? ` para "${searchInput.value.trim()}"` : '';
         resultCount.textContent = `${visibleResults} resultados en ${filterLabel}${suffix}`;
       }
       if (sectionCount) {
@@ -1574,7 +1603,7 @@ function renderCatalogPage() {
 
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
-        activeFilter = button.dataset.pantallasFilterButton || 'all';
+        pantallasState.activeType = button.dataset.pantallasFilterButton || 'all';
         buttons.forEach((item) => {
           const isActive = item === button;
           item.classList.toggle('is-active', isActive);
