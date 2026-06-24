@@ -230,6 +230,18 @@ const SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS = [
   ...card,
 }));
 
+const FUNDAS_MICAS_FILTERS = [
+  { id: 'all', label: 'Todas' },
+  { id: 'fundas', label: 'Fundas' },
+  { id: 'micas', label: 'Micas' },
+  { id: 'maquinas-de-hidrogel', label: 'Máquinas de hidrogel' },
+  { id: 'estilo-iphone-17-pro-max', label: 'Estilo iPhone 17 Pro Max' },
+  { id: 'aluminio', label: 'Aluminio' },
+  { id: 'privacy', label: 'Privacy' },
+  { id: 'matte', label: 'Matte' },
+  { id: 'hd', label: 'HD' },
+];
+
 const CATALOG_GROUPS = [
   {
     id: 'pantallas',
@@ -271,6 +283,17 @@ const CATALOG_GROUPS = [
     title: 'Fundas / Micas',
     subtitle: 'Fundas, micas y soluciones de corte se muestran aquí como una sección independiente.',
     categories: ['fundas', 'micas'],
+    controls: {
+      label: 'Buscar funda o mica',
+      placeholder: 'Buscar funda, mica o modelo: 13 Pro, 14 Pro Max, 16 Pro, privacy, matte...',
+      filters: FUNDAS_MICAS_FILTERS,
+      empty: {
+        title: 'No encontramos ese producto en Fundas / Micas.',
+        text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
+        cta: 'Consultar por WhatsApp',
+        href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20busco%20una%20funda%20o%20mica%20y%20quiero%20confirmar%20disponibilidad',
+      },
+    },
     featureCards: [
       {
         title: 'Máquinas de Hidrogel',
@@ -279,6 +302,8 @@ const CATALOG_GROUPS = [
         image: 'assets/products/cut-machine/x200t/main.jpg',
         href: '/categoria/maquinas-de-hidrogel/',
         cta: 'Ver máquinas',
+        filterId: 'maquinas-de-hidrogel',
+        searchText: 'maquinas de hidrogel maquinas de mica corte profesional micas consumibles x200t',
       },
     ],
   },
@@ -1391,6 +1416,17 @@ function renderCatalogPage() {
     const article = document.createElement('article');
     article.className = 'shop-card catalog-feature-card';
     if (card.filterId) {
+      article.dataset.catalogFeature = 'true';
+      article.dataset.catalogFilter = card.filterId;
+      article.dataset.catalogSearch = buildCatalogSearchIndex([
+        card.title,
+        card.eyebrow,
+        card.text,
+        card.cta,
+        card.searchText,
+      ].filter(Boolean).join(' '));
+    }
+    if (card.filterId) {
       article.dataset.pantallasFeature = 'true';
       article.dataset.pantallasFilter = card.filterId;
       article.dataset.pantallasSearch = buildCatalogSearchIndex([
@@ -1452,6 +1488,48 @@ function renderCatalogPage() {
     content.append(title, text, actions);
     article.append(link, media, content);
     return article;
+  }
+
+  function createCatalogControls(group) {
+    const controls = document.createElement('div');
+    controls.className = 'pantallas-tools';
+    controls.dataset.catalogTools = group.id;
+
+    const searchWrap = document.createElement('label');
+    searchWrap.className = 'pantallas-search';
+
+    const searchLabel = document.createElement('span');
+    searchLabel.textContent = group.controls.label;
+
+    const input = document.createElement('input');
+    input.type = 'search';
+    input.autocomplete = 'off';
+    input.placeholder = group.controls.placeholder;
+    input.dataset.catalogSearchInput = group.id;
+
+    searchWrap.append(searchLabel, input);
+
+    const chips = document.createElement('div');
+    chips.className = 'pantallas-filter-chips';
+    chips.setAttribute('aria-label', `Filtrar ${group.title}`);
+
+    group.controls.filters.forEach((filter, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `filter-chip${index === 0 ? ' is-active' : ''}`;
+      button.textContent = filter.label;
+      button.dataset.catalogFilterButton = filter.id;
+      if (index === 0) button.setAttribute('aria-pressed', 'true');
+      chips.appendChild(button);
+    });
+
+    const result = document.createElement('p');
+    result.className = 'pantallas-result-count';
+    result.dataset.catalogResultCount = group.id;
+    result.textContent = group.title;
+
+    controls.append(searchWrap, chips, result);
+    return controls;
   }
 
   function createPantallasControls() {
@@ -1530,7 +1608,37 @@ function renderCatalogPage() {
     return article;
   }
 
-  function renderCategoryBlock(category, products) {
+  function createCatalogSearchEmptyCard(group) {
+    const article = createCatalogEmptyCard(group.controls.empty);
+    article.classList.add('pantallas-empty-state');
+    article.hidden = true;
+    article.dataset.catalogEmpty = group.id;
+    return article;
+  }
+
+  function getFundasMicasFilterTags(product) {
+    const search = normalizeCatalogSearchText([
+      product.name,
+      product.model,
+      product.category,
+      product.quality,
+      product.description,
+    ].join(' '));
+    const tags = new Set([product.category]);
+    if (search.includes('aluminio')) tags.add('aluminio');
+    if (search.includes('17 pro max')) tags.add('estilo-iphone-17-pro-max');
+    if (search.includes('privacidad') || search.includes('privacy')) tags.add('privacy');
+    if (search.includes('matte') || search.includes('mate')) tags.add('matte');
+    if (search.includes('hd')) tags.add('hd');
+    return Array.from(tags).join(' ');
+  }
+
+  function getCatalogFilterTags(product, groupId) {
+    if (groupId === 'fundas-micas') return getFundasMicasFilterTags(product);
+    return product.category;
+  }
+
+  function renderCategoryBlock(category, products, groupId = '') {
     const meta = CATEGORY_META[category];
     if (!meta || !products.length) return null;
 
@@ -1560,6 +1668,14 @@ function renderCatalogPage() {
 
     products.forEach((product) => {
       const productCard = createProductCard(product);
+      const filterTags = getCatalogFilterTags(product, groupId);
+      productCard.dataset.catalogCard = 'true';
+      productCard.dataset.catalogFilter = category;
+      productCard.dataset.catalogTags = filterTags;
+      productCard.dataset.catalogSearch = buildCatalogSearchIndex([
+        buildCatalogSearchText(product, meta),
+        filterTags,
+      ]);
       productCard.dataset.pantallasCard = 'true';
       productCard.dataset.pantallasFilter = category;
       productCard.dataset.pantallasSearch = buildCatalogSearchText(product, meta);
@@ -1600,10 +1716,12 @@ function renderCatalogPage() {
 
     if (group.id === 'pantallas') {
       section.appendChild(createPantallasControls());
+    } else if (group.controls) {
+      section.appendChild(createCatalogControls(group));
     }
 
     group.categories.forEach((categorySlug) => {
-      const block = renderCategoryBlock(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug));
+      const block = renderCategoryBlock(categorySlug, PRODUCTS.filter((product) => product.category === categorySlug), group.id);
       if (block) section.appendChild(block);
     });
 
@@ -1612,6 +1730,9 @@ function renderCatalogPage() {
       featureGrid.className = 'product-page-grid shop-grid catalog-feature-grid';
       if (group.id === 'pantallas') {
         featureGrid.dataset.pantallasFeatureGrid = 'true';
+      }
+      if (group.controls) {
+        featureGrid.dataset.catalogFeatureGrid = group.id;
       }
       group.featureCards.forEach((card) => featureGrid.appendChild(createCatalogFeatureCard(card)));
       section.appendChild(featureGrid);
@@ -1624,9 +1745,100 @@ function renderCatalogPage() {
     if (group.id === 'pantallas') {
       section.appendChild(createPantallasEmptyCard());
       attachPantallasFilters(section);
+    } else if (group.controls) {
+      section.appendChild(createCatalogSearchEmptyCard(group));
+      attachCatalogFilters(section, group);
     }
 
     sectionsRoot.appendChild(section);
+  }
+
+  function attachCatalogFilters(section, group) {
+    const searchInput = section.querySelector('[data-catalog-search-input]');
+    const buttons = Array.from(section.querySelectorAll('[data-catalog-filter-button]'));
+    const resultCount = section.querySelector('[data-catalog-result-count]');
+    const sectionCount = section.querySelector('.catalog-section-head .catalog-count');
+    const emptyState = section.querySelector('[data-catalog-empty]');
+    const state = {
+      activeType: 'all',
+      query: '',
+    };
+
+    const setVisible = (element, isVisible) => {
+      if (!element) return;
+      element.hidden = !isVisible;
+      element.style.display = isVisible ? '' : 'none';
+      element.setAttribute('aria-hidden', String(!isVisible));
+    };
+
+    const matchesActiveFilter = (element) => {
+      if (state.activeType === 'all') return true;
+      const tags = `${element.dataset.catalogFilter || ''} ${element.dataset.catalogTags || ''}`.split(/\s+/).filter(Boolean);
+      return tags.includes(state.activeType);
+    };
+
+    const matchesSearch = (element) => {
+      if (!state.query) return true;
+      const compactQuery = state.query.replace(/\s+/g, '');
+      const searchText = element.dataset.catalogSearch || '';
+      return searchText.includes(state.query) || searchText.includes(compactQuery);
+    };
+
+    const applyFilter = () => {
+      state.query = normalizeCatalogSearchText(searchInput?.value || '');
+      let visibleResults = 0;
+
+      section.querySelectorAll('.catalog-category-block').forEach((block) => {
+        let visibleInBlock = 0;
+        block.querySelectorAll('[data-catalog-card]').forEach((card) => {
+          const isVisible = matchesActiveFilter(card) && matchesSearch(card);
+          setVisible(card, isVisible);
+          if (isVisible) {
+            visibleInBlock += 1;
+            visibleResults += 1;
+          }
+        });
+        setVisible(block, visibleInBlock > 0);
+        const blockCount = block.querySelector('.catalog-count');
+        if (blockCount) blockCount.textContent = visibleInBlock ? `${visibleInBlock} modelos` : 'Sin resultados';
+      });
+
+      let visibleFeatures = 0;
+      section.querySelectorAll('[data-catalog-feature]').forEach((card) => {
+        const isVisible = matchesActiveFilter(card) && matchesSearch(card);
+        setVisible(card, isVisible);
+        if (isVisible) {
+          visibleFeatures += 1;
+          visibleResults += 1;
+        }
+      });
+
+      setVisible(section.querySelector('[data-catalog-feature-grid]'), visibleFeatures > 0);
+      setVisible(emptyState, visibleResults === 0);
+      if (resultCount) {
+        const filterLabel = group.controls.filters.find((filter) => filter.id === state.activeType)?.label || group.title;
+        const suffix = state.query ? ` para "${searchInput.value.trim()}"` : '';
+        resultCount.textContent = `${visibleResults} resultados en ${filterLabel}${suffix}`;
+      }
+      if (sectionCount) {
+        sectionCount.textContent = visibleResults ? `${visibleResults} resultados` : 'Cotización directa';
+      }
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        state.activeType = button.dataset.catalogFilterButton || 'all';
+        buttons.forEach((item) => {
+          const isActive = item === button;
+          item.classList.toggle('is-active', isActive);
+          item.setAttribute('aria-pressed', String(isActive));
+        });
+        applyFilter();
+      });
+    });
+
+    searchInput?.addEventListener('input', applyFilter);
+    applyFilter();
   }
 
   function attachPantallasFilters(section) {
