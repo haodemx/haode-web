@@ -125,6 +125,111 @@ const CATEGORY_ALIASES = {
   fundas: 'fundas',
 };
 
+const SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS = [
+  {
+    title: 'Pantalla para Samsung S21 Ultra TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/s21-ultra/main.jpg',
+    searchText: 'Samsung S21 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung S22 Plus TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/s22-plus/main.png',
+    searchText: 'Samsung S22 Plus S22+ TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung S22 Ultra TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/s22-ultra/main.jpg',
+    searchText: 'Samsung S22 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung S23 Plus TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/s23-plus/main.png',
+    searchText: 'Samsung S23 Plus S23+ TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung S23 Ultra TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/s23-ultra/main.jpg',
+    searchText: 'Samsung S23 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung S24 Ultra TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/s24-ultra/main.png',
+    searchText: 'Samsung S24 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung S25 Ultra TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/s25-ultra/main.png',
+    searchText: 'Samsung S25 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung Note 20 Ultra TIPO ORIGINAL CON MARCO',
+    image: PLACEHOLDER_IMAGE,
+    searchText: 'Samsung Note 20 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
+  },
+  {
+    title: 'Pantalla para Samsung Z Flip3 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-flip3/main.png',
+    searchText: 'Samsung Z Flip3 Z Flip 3 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
+  },
+  {
+    title: 'Pantalla para Samsung Z Flip4 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-flip4/main.png',
+    searchText: 'Samsung Z Flip4 Z Flip 4 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
+  },
+  {
+    title: 'Pantalla para Samsung Z Flip5 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-flip5/main.png',
+    searchText: 'Samsung Z Flip5 Z Flip 5 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
+  },
+  {
+    title: 'Pantalla para Samsung Z Flip6 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-flip6/main.png',
+    searchText: 'Samsung Z Flip6 Z Flip 6 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
+  },
+  {
+    title: 'Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-flip7/main.png',
+    href: '/productos/samsung-z-flip7/',
+    cta: 'Ver Pantalla Samsung Z Flip7',
+    searchText: 'Samsung Z Flip7 Z Flip 7 TIPO ORIGINAL CON MARCO pantalla plegable flip original categoria producto',
+  },
+  {
+    title: 'Pantalla Samsung Z Fold3 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-fold3/main.png',
+    href: '/productos/samsung-z-fold3/',
+    cta: 'Ver Pantalla Samsung Z Fold3',
+    searchText: 'Samsung Z Fold3 Z Fold 3 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
+  },
+  {
+    title: 'Pantalla Samsung Z Fold4 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-fold4/main.png',
+    href: '/productos/samsung-z-fold4/',
+    cta: 'Ver Pantalla Samsung Z Fold4',
+    searchText: 'Samsung Z Fold4 Z Fold 4 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
+  },
+  {
+    title: 'Pantalla Samsung Z Fold5 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-fold5/main.png',
+    href: '/productos/samsung-z-fold5/',
+    cta: 'Ver Pantalla Samsung Z Fold5',
+    searchText: 'Samsung Z Fold5 Z Fold 5 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
+  },
+  {
+    title: 'Pantalla Samsung Z Fold6 TIPO ORIGINAL CON MARCO',
+    image: 'assets/products/samsung-original/z-fold6/main.png',
+    href: '/productos/samsung-z-fold6/',
+    cta: 'Ver Pantalla Samsung Z Fold6',
+    searchText: 'Samsung Z Fold6 Z Fold 6 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
+  },
+].map((card) => ({
+  eyebrow: 'Samsung TIPO ORIGINAL',
+  text: 'Modelo bajo pedido con marco para técnicos y tiendas de reparación.',
+  href: '/app/',
+  cta: 'Ver en HAODE APP',
+  filterId: 'samsung-tipo-original',
+  ...card,
+}));
+
 const CATALOG_GROUPS = [
   {
     id: 'pantallas',
@@ -133,16 +238,7 @@ const CATALOG_GROUPS = [
     subtitle: 'Familias de pantalla para técnicos y distribuidores, organizadas por tipo y modelo.',
     categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'oled-diagnostica'],
     featureCards: [
-      {
-        title: 'Samsung TIPO ORIGINAL',
-        eyebrow: 'Pantallas Samsung',
-        text: 'Pantallas Samsung TIPO ORIGINAL CON MARCO para modelos seleccionados.',
-        image: 'assets/products/samsung-original/z-fold6/main.png',
-        href: '/categoria/samsung-tipo-original/',
-        cta: 'Ver Samsung TIPO ORIGINAL',
-        filterId: 'samsung-tipo-original',
-        searchText: 'Samsung TIPO ORIGINAL tipo original con marco Fold Flip Note S pantalla refaccion categoria samsung original',
-      },
+      ...SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS,
       {
         title: 'Samsung AMOLED',
         eyebrow: 'Pantallas Samsung',
@@ -1586,6 +1682,7 @@ function renderCatalogPage() {
         if (isVisible) {
           visibleFeatures += 1;
           visibleResults += 1;
+          visibleProducts += 1;
         }
       });
 
