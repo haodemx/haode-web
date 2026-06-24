@@ -262,7 +262,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Pantallas Samsung',
         text: 'Consulta líneas Samsung AMOLED y opciones compatibles con tu pedido.',
         image: 'assets/products/samsung-oled/s24-ultra/main.jpg',
-        href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20quiero%20cotizar%20pantallas%20Samsung%20AMOLED',
+        href: buildWhatsAppUrl(buildProductCotizacionText('Samsung AMOLED')),
         cta: 'Cotizar AMOLED',
         external: true,
         filterId: 'samsung-amoled',
@@ -344,7 +344,7 @@ const CATALOG_GROUPS = [
         title: 'No encontramos ese producto en Fundas / Micas.',
         text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
         cta: 'Consultar por WhatsApp',
-        href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20busco%20una%20funda%20o%20mica%20y%20quiero%20confirmar%20disponibilidad',
+        href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
       },
     },
     featureCards: [
@@ -374,7 +374,7 @@ const CATALOG_GROUPS = [
         title: 'No encontramos ese producto AI.',
         text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
         cta: 'Consultar por WhatsApp',
-        href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20busco%20un%20producto%20AI%20y%20quiero%20confirmar%20disponibilidad',
+        href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
       },
     },
   },
@@ -1109,6 +1109,14 @@ function buildWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 }
 
+function buildProductCotizacionText(name) {
+  return `Hola, quiero cotizar: ${name}. ¿Me pueden confirmar precio y disponibilidad?`;
+}
+
+function buildMissingModelCotizacionText() {
+  return 'Hola, no encontré el modelo en la web. ¿Me pueden ayudar a confirmar disponibilidad?';
+}
+
 const SITE_ORIGIN = 'https://haode.com.mx';
 const SITE_BASE_PATH = '';
 
@@ -1247,7 +1255,7 @@ function createProduct(definition) {
     videos: definition.videos || categoryMedia?.videos || [],
     priceTable,
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
-    whatsappText: definition.whatsappText || `Hola HAODE, quiero cotizar: ${name}`,
+    whatsappText: buildProductCotizacionText(name),
     lowestPriceText: buildLowestPriceText(priceTable),
   };
 }
@@ -1664,7 +1672,7 @@ function renderCatalogPage() {
       title: 'No encontramos ese modelo en Pantallas.',
       text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
       cta: 'Consultar por WhatsApp',
-      href: 'https://wa.me/523326684296?text=Hola%20HAODE%2C%20busco%20una%20pantalla%20y%20quiero%20confirmar%20disponibilidad',
+      href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
     });
     article.classList.add('pantallas-empty-state');
     article.hidden = true;
