@@ -4822,6 +4822,10 @@ body.catalog-page.catalog-reference-page .pantallas-result-count {
   color: #5d5651;
 }
 
+body.catalog-page.catalog-reference-page #pantallas [hidden] {
+  display: none !important;
+}
+
 body.catalog-page.catalog-reference-page .catalog-sections {
   padding-top: 20px;
 }
