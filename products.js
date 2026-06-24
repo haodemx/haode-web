@@ -203,7 +203,7 @@ const PANTALLAS_FILTERS = [
   { id: 'samsung-oled', label: 'Samsung OLED' },
   { id: 'samsung-tipo-original', label: 'Samsung TIPO ORIGINAL' },
   { id: 'samsung-amoled', label: 'Samsung AMOLED' },
-  { id: 'oled-diagnostica', label: 'iphone oled diagnostica' },
+  { id: 'oled-diagnostica', label: 'iPhone OLED Diagnóstica' },
 ];
 
 const IPHONE_INCELL_MEDIA = {
