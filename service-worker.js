@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-06-13-offers-single-01";
+const CACHE_VERSION = "haode-pwa-v2026-06-28-stable-revert-01";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -8,7 +8,7 @@ const APP_SHELL_URLS = [
   "/app/",
   "/app/index.html",
   "/offline.html",
-  "/style.css",
+  "/style.css?v=20260628-stable-revert-01",
   "/script.js",
   "/products.js",
   "/app/app.css",
