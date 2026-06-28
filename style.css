@@ -5791,3 +5791,109 @@ body.product-detail-page .detail-zoom-close {
   padding-left: 20px;
   color: #43505c;
 }
+
+/* Keep secondary pages aligned with the stable homepage system. */
+body.ai-reference-page,
+body.contact-reference-page {
+  background:
+    radial-gradient(circle at 78% 0%, rgba(255, 90, 20, 0.1), transparent 32%),
+    linear-gradient(180deg, #fffaf6 0%, #fbf7f0 100%);
+  color: #141414;
+  overflow-x: hidden;
+}
+
+body.ai-reference-page .new-page-hero,
+body.contact-reference-page .section:first-child {
+  padding: 34px 0 18px;
+}
+
+body.ai-reference-page .new-page-hero-inner,
+body.contact-reference-page .section-shell {
+  width: min(calc(100% - 48px), 1216px);
+  border: 1px solid rgba(255, 90, 20, 0.18);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 82% 10%, rgba(255, 90, 20, 0.12), transparent 30%),
+    linear-gradient(180deg, #fffaf6 0%, #ffffff 100%);
+  box-shadow: 0 14px 34px rgba(106, 68, 38, 0.08);
+}
+
+body.ai-reference-page .new-page-hero-inner {
+  min-height: 260px;
+  padding: clamp(28px, 4vw, 46px);
+}
+
+body.ai-reference-page .new-page-hero-inner h1,
+body.contact-reference-page .section-head h1 {
+  margin: 8px 0 12px;
+  color: #141414;
+  font-size: clamp(42px, 5vw, 76px);
+  font-weight: 950;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+body.ai-reference-page .hero-text,
+body.contact-reference-page .section-head p {
+  max-width: 720px;
+  color: #5b5550;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+body.ai-reference-page .new-page-links .btn,
+body.contact-reference-page .btn {
+  min-height: 44px;
+  border-radius: 8px;
+  font-weight: 850;
+}
+
+body.ai-reference-page .reference-nav-actions .reference-btn-solid,
+body.contact-reference-page .reference-nav-actions .reference-btn-solid {
+  border-color: #ff5a14;
+  background: #ff5a14;
+  color: #ffffff;
+}
+
+body.ai-reference-page .section-shell,
+body.contact-reference-page .contact-card {
+  border-color: rgba(255, 90, 20, 0.18);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(106, 68, 38, 0.06);
+}
+
+body.ai-reference-page .new-product-card {
+  border-color: rgba(255, 90, 20, 0.18);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(106, 68, 38, 0.06);
+}
+
+body.ai-reference-page .new-product-visual {
+  background: #fff7f0;
+}
+
+body.contact-reference-page .contact-map-grid {
+  gap: 18px;
+}
+
+body.contact-reference-page .contact-map-card iframe {
+  min-height: 520px;
+}
+
+@media (max-width: 760px) {
+  body.ai-reference-page .new-page-hero-inner,
+  body.contact-reference-page .section-shell {
+    width: min(calc(100% - 24px), 1216px);
+  }
+
+  body.ai-reference-page .new-page-links {
+    width: 100%;
+  }
+
+  body.ai-reference-page .new-page-links .btn,
+  body.contact-reference-page .btn {
+    width: 100%;
+  }
+}
