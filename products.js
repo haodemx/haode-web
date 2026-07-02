@@ -1119,6 +1119,7 @@ function buildMissingModelCotizacionText() {
 
 const SITE_ORIGIN = 'https://haode.com.mx';
 const SITE_BASE_PATH = '';
+const ERP_PUBLIC_STOCK_URL = 'https://erp.haode.com.mx/public-stock.json';
 
 function buildSiteUrl(pathname = '') {
   const cleanPath = String(pathname || '').replace(/^\/+/, '');
@@ -1135,6 +1136,63 @@ function buildAssetUrl(pathname = '') {
   if (!rawPath) return `${SITE_BASE_PATH}/assets/products/placeholder.svg`;
   if (/^(?:https?:)?\/\//.test(rawPath) || rawPath.startsWith('/')) return rawPath;
   return `${SITE_BASE_PATH}/${rawPath.replace(/^\/+/, '')}`;
+}
+
+function stockClassName(value) {
+  return String(value || 'ask_stock').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'ask-stock';
+}
+
+function stockLookupKey(value) {
+  return String(value || '').trim().toLowerCase();
+}
+
+function publicStockLabel(status, label) {
+  if (label) return label;
+  return {
+    available: 'Disponible',
+    low_stock: 'Bajo inventario',
+    out_of_stock: 'Agotado temporalmente',
+    ask_stock: 'Consultar inventario',
+  }[status] || 'Consultar inventario';
+}
+
+async function loadErpPublicStock() {
+  try {
+    const response = await fetch(`${ERP_PUBLIC_STOCK_URL}?v=${Date.now()}`, {
+      cache: 'no-store',
+      mode: 'cors',
+    });
+    if (!response.ok) throw new Error(`ERP stock ${response.status}`);
+    const rows = await response.json();
+    return Array.isArray(rows) ? rows : [];
+  } catch (error) {
+    console.info('HAODE ERP public stock unavailable, using static catalog stock.', error);
+    return [];
+  }
+}
+
+function applyErpPublicStock(rows) {
+  if (!Array.isArray(rows) || !rows.length) return;
+  const byKey = new Map();
+  rows.forEach((row) => {
+    [
+      row.sku,
+      row.public_name_es,
+      row.model,
+    ].filter(Boolean).forEach((value) => byKey.set(stockLookupKey(value), row));
+  });
+
+  PRODUCTS.forEach((product) => {
+    const row = byKey.get(stockLookupKey(product.sku))
+      || byKey.get(stockLookupKey(product.id))
+      || byKey.get(stockLookupKey(product.name))
+      || byKey.get(stockLookupKey(product.model));
+    if (!row) return;
+    product.sku = row.sku || product.sku;
+    product.stockStatus = row.stock_status || 'ask_stock';
+    product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
+    product.erpStockUpdatedAt = row.updated_at || '';
+  });
 }
 
 function compactPhoneRouteSegment(segment) {
@@ -1245,6 +1303,7 @@ function createProduct(definition) {
   const name = definition.name || `Pantalla para ${definition.model || definition.title || definition.id}`;
   return {
     id: definition.id,
+    sku: definition.sku || definition.SKU || definition.id,
     brand: definition.brand || categoryMeta.brand,
     category,
     model: definition.model || name,
@@ -1257,6 +1316,8 @@ function createProduct(definition) {
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
     whatsappText: buildProductCotizacionText(name),
     lowestPriceText: buildLowestPriceText(priceTable),
+    stockStatus: 'ask_stock',
+    stockLabel: 'Consultar inventario',
   };
 }
 
@@ -1316,6 +1377,10 @@ function createProductCard(product) {
   quality.className = 'shop-quality';
   quality.textContent = product.quality;
 
+  const stock = document.createElement('span');
+  stock.className = `stock-badge stock-${stockClassName(product.stockStatus)}`;
+  stock.textContent = product.stockLabel || 'Consultar inventario';
+
   const priceWrap = document.createElement('div');
   priceWrap.className = 'shop-price-wrap';
 
@@ -1369,7 +1434,7 @@ function createProductCard(product) {
   details.textContent = 'Ver producto';
 
   actions.append(details, whatsapp);
-  content.append(title, quality, priceWrap, actions);
+  content.append(title, quality, stock, priceWrap, actions);
 
   article.append(overlay, media, content);
   return article;
@@ -2067,7 +2132,7 @@ function renderProductDetailPage() {
   setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
 
   if (titleEl) titleEl.textContent = product.name;
-  if (subtitleEl) subtitleEl.textContent = CATEGORY_META[product.category].title;
+  if (subtitleEl) subtitleEl.textContent = `${CATEGORY_META[product.category].title} · ${product.stockLabel || 'Consultar inventario'}`;
   if (brandEl) brandEl.textContent = product.brand;
   if (qualityEl) qualityEl.textContent = product.quality;
   if (descriptionEl) descriptionEl.textContent = product.description;
@@ -2162,7 +2227,8 @@ function renderProductDetailPage() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  applyErpPublicStock(await loadErpPublicStock());
   renderCatalogPage();
   renderProductDetailPage();
 });

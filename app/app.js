@@ -2,6 +2,8 @@ import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
 
 const WHATSAPP_NUMBER = "523326684296";
 const PRODUCTS_JSON_URL = "/app/products.json";
+const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
+const ERP_WEB_ORDER_URL = "https://erp.haode.com.mx/api/public/web-orders";
 const PROMO_JUNIO = true;
 const PROMO_JUNIO_PRICES_URL = "/app/promo-junio-prices.json";
 const SERVICE_WORKER_URL = "/service-worker.js";
@@ -94,7 +96,9 @@ const state = {
   diagnostics: {
     firestoreTotal: null,
     firestoreActive: null,
-    normalizedTotal: 0
+    normalizedTotal: 0,
+    erpStockItems: 0,
+    erpStockLoaded: false
   }
 };
 
@@ -197,7 +201,20 @@ function registerServiceWorker() {
 
 function normalizeStock(stock) {
   const value = String(stock || "disponible").trim().toLowerCase();
-  return ["bajo pedido", "agotado"].includes(value) ? value : "disponible";
+  const map = {
+    available: "disponible",
+    disponible: "disponible",
+    low_stock: "bajo inventario",
+    "bajo inventario": "bajo inventario",
+    "bajo pedido": "bajo inventario",
+    out_of_stock: "agotado",
+    agotado: "agotado",
+    "agotado temporalmente": "agotado",
+    ask_stock: "consultar inventario",
+    "consultar inventario": "consultar inventario",
+    "consultar disponibilidad": "consultar inventario"
+  };
+  return map[value] || "disponible";
 }
 
 function samsungQualityFor(category, model) {
@@ -256,6 +273,7 @@ function normalizeProduct(product) {
 
   return {
     id: productId || productDocId,
+    sku: product.sku || product.SKU || productId || productDocId,
     category,
     name,
     displayName: productDisplayName(name, category),
@@ -286,6 +304,56 @@ function normalizeProduct(product) {
     offerStartDate: product.offerStartDate || "",
     offerEndDate: product.offerEndDate || ""
   };
+}
+
+function stockKey(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function stockClassName(value) {
+  return String(value || "consultar inventario")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "consultar-inventario";
+}
+
+async function loadErpPublicStock() {
+  try {
+    const response = await fetch(`${ERP_PUBLIC_STOCK_URL}?v=${Date.now()}`, { cache: "no-store", mode: "cors" });
+    if (!response.ok) throw new Error(`ERP stock ${response.status}`);
+    const rows = await response.json();
+    return Array.isArray(rows) ? rows : [];
+  } catch (error) {
+    console.info("HAODE app sin inventario ERP:", error.message);
+    return [];
+  }
+}
+
+function applyErpStock(localProducts, stockRows) {
+  if (!stockRows.length) return localProducts;
+  const bySku = new Map();
+  const byName = new Map();
+  stockRows.forEach((row) => {
+    if (row.sku) bySku.set(stockKey(row.sku), row);
+    if (row.public_name_es) byName.set(stockKey(row.public_name_es), row);
+  });
+  return localProducts.map((product) => {
+    const match = bySku.get(stockKey(product.sku)) || bySku.get(stockKey(product.id)) || byName.get(stockKey(product.name)) || byName.get(stockKey(product.displayName));
+    if (!match) return product;
+    return {
+      ...product,
+      sku: match.sku || product.sku,
+      stock: normalizeStock(match.stock_status || match.stock_label),
+      erpStockStatus: match.stock_status || "",
+      erpStockLabel: match.stock_label || "",
+      erpStockUpdatedAt: match.updated_at || ""
+    };
+  });
 }
 
 function activeProducts(items) {
@@ -327,7 +395,9 @@ async function loadLocalProducts() {
 
 async function loadProducts() {
   const localProducts = await loadLocalProducts();
-  products = activeProducts(localProducts);
+  const normalizedProducts = activeProducts(localProducts);
+  const erpStockRows = await loadErpPublicStock();
+  products = applyErpStock(normalizedProducts, erpStockRows);
 
   try {
     const [allProducts, activeFirestoreProducts] = await Promise.all([
@@ -343,12 +413,15 @@ async function loadProducts() {
   }
 
   state.diagnostics.normalizedTotal = products.length;
+  state.diagnostics.erpStockItems = erpStockRows.length;
+  state.diagnostics.erpStockLoaded = erpStockRows.length > 0;
   window.HAODE_DIAGNOSTICS = {
     firestoreTotal: state.diagnostics.firestoreTotal,
     firestoreActivo: state.diagnostics.firestoreActive,
     productosActivos: state.diagnostics.normalizedTotal,
     productosVisibles: Math.max(products.length, 0),
-    fuente: "products.json"
+    fuente: state.diagnostics.erpStockLoaded ? "products.json + erp public-stock.json" : "products.json",
+    erpStockItems: state.diagnostics.erpStockItems
   };
 }
 
@@ -512,6 +585,7 @@ function productCardHtml(product, compact = false) {
       <div class="product-body">
         <span class="product-kicker">${label}</span>
         <h3>${product.displayName}</h3>
+        <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
         <p class="model">Modelo: ${product.model}</p>
         ${priceLines(product)}
         <div class="product-actions">
@@ -886,7 +960,7 @@ function renderProductDetail(productId) {
 
         <article class="detail-panel">
           <div class="detail-copy">
-            <span class="stock-badge stock-${product.stock.replace(" ", "-")}">${product.stock}</span>
+            <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
             <h1>${product.displayName}</h1>
             <p>${product.description || "Producto HAODE para técnicos, tiendas y mayoreo. Confirma detalles por WhatsApp."}</p>
           </div>
@@ -1200,6 +1274,54 @@ function buildWhatsappUrl() {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
 
+function webOrderPayload() {
+  const items = getCartItems();
+  const clientName = (customerNameEl?.value || "").trim();
+  const clientPhone = (customerPhoneEl?.value || "").trim();
+  const clientCity = (customerCityEl?.value || "").trim();
+  const clientComment = (customerCommentEl?.value || "").trim();
+  return {
+    customer_name: clientName,
+    whatsapp: clientPhone,
+    phone: clientPhone,
+    product_sku: items[0]?.product?.sku || items[0]?.product?.id || "",
+    product_name: items[0]?.product?.name || "",
+    quantity: items[0]?.quantity || 1,
+    message: [clientCity ? `Ciudad: ${clientCity}` : "", clientComment].filter(Boolean).join(" | "),
+    delivery_method: "whatsapp",
+    source: "haode_web",
+    total: cartTotal(),
+    items: items.map((item) => {
+      const priceRule = priceRuleFor(item.product, item.quantity);
+      return {
+        product_sku: item.product.sku || item.product.id,
+        product_name: item.product.name,
+        quantity: item.quantity,
+        unit_price: priceRule.unitPrice
+      };
+    }),
+    website: ""
+  };
+}
+
+async function submitWebOrder() {
+  const payload = webOrderPayload();
+  if (!payload.customer_name || !payload.whatsapp || !payload.items.length) return null;
+  try {
+    const response = await fetch(ERP_WEB_ORDER_URL, {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (!response.ok) throw new Error(`ERP web order ${response.status}`);
+    return response.json();
+  } catch (error) {
+    console.info("HAODE app no pudo registrar pedido ERP:", error.message);
+    return null;
+  }
+}
+
 function singleProductWhatsappUrl(product) {
   const lines = [
     "Hola HAODE, quiero información de este producto:",
@@ -1323,7 +1445,7 @@ function preloadAdjacentFrame(product) {
   });
 }
 
-function handleDocumentClick(event) {
+async function handleDocumentClick(event) {
   const groupLink = event.target.closest("[data-group-link]");
   const addButton = event.target.closest("[data-add-product]");
   const increaseButton = event.target.closest("[data-increase]");
@@ -1357,6 +1479,14 @@ function handleDocumentClick(event) {
   }
   if (openCartButton) {
     openCart();
+  }
+  const whatsappOrderLink = event.target.closest("[data-whatsapp-link]");
+  if (whatsappOrderLink) {
+    event.preventDefault();
+    if (whatsappOrderLink.classList.contains("disabled")) return;
+    const url = buildWhatsappUrl();
+    await submitWebOrder();
+    window.open(url, "_blank", "noopener,noreferrer");
   }
   if (closeCartButton || event.target === cartDrawerEl) {
     closeCart();

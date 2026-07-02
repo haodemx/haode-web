@@ -1044,12 +1044,14 @@ img {
   color: #087443;
 }
 
-.stock-bajo-pedido {
+.stock-bajo-pedido,
+.stock-bajo-inventario {
   background: #fff2ea;
   color: var(--haode-orange-dark);
 }
 
-.stock-agotado {
+.stock-agotado,
+.stock-consultar-inventario {
   background: #f1f3f4;
   color: var(--haode-muted);
 }
