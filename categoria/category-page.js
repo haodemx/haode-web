@@ -1,5 +1,5 @@
 (function () {
-  const WHATSAPP_PHONE = '523326684296';
+  const WHATSAPP_PHONE = '525645866014';
 
   function toAssetPath(imagePath) {
     if (!imagePath) return '/assets/products/placeholder.svg';

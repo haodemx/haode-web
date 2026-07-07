@@ -1,9 +1,10 @@
 import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
 
-const WHATSAPP_NUMBER = "523326684296";
+const WHATSAPP_NUMBER = "525645866014";
 const PRODUCTS_JSON_URL = "/app/products.json";
 const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
 const ERP_WEB_ORDER_URL = "https://erp.haode.com.mx/api/public/web-orders";
+const DAILY_AD_URL = "/data/marketing/daily-ad-latest.json";
 const PROMO_JUNIO = true;
 const PROMO_JUNIO_PRICES_URL = "/app/promo-junio-prices.json";
 const SERVICE_WORKER_URL = "/service-worker.js";
@@ -90,6 +91,7 @@ const state = {
   route: { name: "home" },
   cart: new Map(),
   promoPrices: new Map(),
+  dailyAd: null,
   selectedGalleryIndex: 0,
   viewerIndex: 0,
   viewerStartX: 0,
@@ -454,6 +456,22 @@ async function loadPromoPrices() {
   }
 }
 
+async function loadDailyAd() {
+  state.dailyAd = null;
+  try {
+    const response = await fetch(DAILY_AD_URL, { cache: "no-store" });
+    if (!response.ok) {
+      return;
+    }
+    const data = await response.json();
+    if (data && data.status === "draft") {
+      state.dailyAd = data;
+    }
+  } catch (error) {
+    console.info("HAODE app sin banner diario:", error.message);
+  }
+}
+
 function promoPriceFor(product) {
   if (!PROMO_JUNIO || !product?.id) {
     return null;
@@ -572,7 +590,13 @@ function groupRouteUrl(groupId) {
 }
 
 function escapeAttr(value) {
-  return String(value || "").replace(/"/g, "&quot;");
+  return String(value || "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[char]));
 }
 
 function productCardHtml(product, compact = false) {
@@ -707,6 +731,8 @@ function renderHome() {
         </div>
       </section>
 
+      ${dailyAdBannerHtml()}
+
       ${promotionsSectionHtml(promoProducts)}
 
       ${appOrderSectionHtml()}
@@ -766,6 +792,27 @@ function promotionsSectionHtml(promoProducts) {
       <div class="promo-grid">
         ${promoProducts.map((product) => promoCardHtml(product)).join("")}
       </div>
+    </section>
+  `;
+}
+
+function dailyAdBannerHtml() {
+  const ad = state.dailyAd;
+  if (!ad) {
+    return "";
+  }
+  const title = ad.app_banner_title || ad.website_banner_title || "Hoy en HAODE";
+  const subtitle = ad.app_banner_subtitle || ad.website_banner_subtitle || "Consulta disponibilidad por WhatsApp.";
+  const cta = ad.cta_whatsapp || `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}`;
+
+  return `
+    <section class="daily-ad-card" aria-label="Promoción diaria HAODE">
+      <span>Publicidad diaria</span>
+      <div>
+        <h2>${escapeAttr(title)}</h2>
+        <p>${escapeAttr(subtitle)}</p>
+      </div>
+      <a class="secondary-button" href="${escapeAttr(cta)}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
     </section>
   `;
 }
@@ -1603,6 +1650,7 @@ async function init() {
   try {
     await loadProducts();
     await loadPromoPrices();
+    await loadDailyAd();
     renderRoute();
     renderCart();
   } catch (error) {

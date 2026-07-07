@@ -1,4 +1,4 @@
-const WHATSAPP_PHONE = '523326684296';
+const WHATSAPP_PHONE = '525645866014';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['1 pza', '5+ pzs', '100 pzs surtido', '100 pzs/modelo', 'Caja/modelo'];
 
@@ -282,7 +282,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Indica modelo y cantidad para confirmar disponibilidad.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/523326684296?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -291,7 +291,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Consulta opciones por modelo antes de confirmar pedido.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/523326684296?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -300,7 +300,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Confirma compatibilidad y disponibilidad por WhatsApp.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/523326684296?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -309,7 +309,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Comparte modelo exacto para revisar opciones disponibles.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/523326684296?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -318,7 +318,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Envíanos modelo y cantidad para preparar la cotización.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/523326684296?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -327,7 +327,7 @@ const CATALOG_GROUPS = [
       title: 'Baterías disponibles por cotización',
       text: 'Consulta modelos, capacidad y disponibilidad por WhatsApp.',
       cta: 'Cotizar baterías por WhatsApp',
-      href: 'https://wa.me/523326684296?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+      href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
     },
   },
   {

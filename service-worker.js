@@ -51,7 +51,8 @@ function isHtmlRequest(request) {
 function isFreshDataRequest(url) {
   return url.pathname.endsWith("/products.json")
     || url.pathname.endsWith("/promo-junio-prices.json")
-    || url.pathname.endsWith("/products.generated.js");
+    || url.pathname.endsWith("/products.generated.js")
+    || url.pathname.includes("/data/marketing/daily-ad-");
 }
 
 async function networkFirst(request) {

@@ -371,6 +371,45 @@ img {
   align-items: center;
 }
 
+.daily-ad-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 90, 10, 0.22);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #fff8f1, #f5fff9);
+  box-shadow: 0 14px 34px rgba(25, 38, 30, 0.08);
+}
+
+.daily-ad-card > span {
+  width: fit-content;
+  min-height: 28px;
+  border-radius: 999px;
+  background: rgba(255, 90, 10, 0.12);
+  color: var(--haode-orange);
+  padding: 0 10px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 28px;
+}
+
+.daily-ad-card h2,
+.daily-ad-card p {
+  margin: 0;
+}
+
+.daily-ad-card h2 {
+  color: var(--haode-black);
+  font-size: 1.45rem;
+  line-height: 1.08;
+}
+
+.daily-ad-card p {
+  color: var(--haode-muted);
+  font-weight: 650;
+  line-height: 1.45;
+}
+
 .primary-button,
 .secondary-button,
 .text-button,
