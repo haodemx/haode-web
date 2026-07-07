@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#ff7a1a" />
+  <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/admin/marketing-drafts/marketing-drafts.css" />
+  <title>HAODE Admin | Borradores de publicidad</title>
+</head>
+<body>
+  <header class="admin-header">
+    <a class="brand" href="/app/" aria-label="HAODE App">
+      <img src="/assets/logo/logo.png" alt="Logo HAODE" />
+      <span>
+        <strong>HAODE Admin</strong>
+        <small>Publicidad diaria</small>
+      </span>
+    </a>
+    <a class="secondary-button" href="/app/">Volver a APP</a>
+  </header>
+
+  <main class="admin-shell">
+    <section class="notice" role="status">
+      <strong>Modo seguro:</strong>
+      当前只是广告草稿，不会自动发 Facebook/TikTok。发布前必须由老板人工确认。
+    </section>
+
+    <section class="draft-layout" data-loading>
+      <article class="draft-panel">
+        <p class="eyebrow">Borrador diario</p>
+        <h1 data-title>Cargando borrador...</h1>
+        <p class="lead" data-headline>Lee el archivo daily-ad-latest.json.</p>
+
+        <div class="status-row" aria-label="Estado del borrador">
+          <span class="status-pill" data-status>draft</span>
+          <span class="status-note" data-local-state>Sin confirmacion local</span>
+        </div>
+
+        <dl class="meta-grid">
+          <div>
+            <dt>Producto principal</dt>
+            <dd data-product>-</dd>
+          </div>
+          <div>
+            <dt>SKU</dt>
+            <dd data-sku>-</dd>
+          </div>
+          <div>
+            <dt>Categoría</dt>
+            <dd data-category>-</dd>
+          </div>
+          <div>
+            <dt>Stock / ubicación</dt>
+            <dd data-stock>-</dd>
+          </div>
+        </dl>
+      </article>
+
+      <aside class="guardrail-panel">
+        <p class="eyebrow">Reglas</p>
+        <h2>确认后再发布</h2>
+        <ul>
+          <li>No conecta con Meta Graph API.</li>
+          <li>No conecta con TikTok Content Posting API.</li>
+          <li>No guarda tokens ni contraseñas.</li>
+          <li>Los botones solo cambian el estado visual de esta página.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="copy-grid" aria-label="Textos generados">
+      <article class="copy-card">
+        <div>
+          <p class="eyebrow">Facebook</p>
+          <h2>Feed copy</h2>
+        </div>
+        <textarea data-copy-facebook readonly></textarea>
+        <button class="secondary-button" type="button" data-copy-target="facebook">Copiar texto / 复制文案</button>
+      </article>
+
+      <article class="copy-card">
+        <div>
+          <p class="eyebrow">TikTok</p>
+          <h2>Caption</h2>
+        </div>
+        <textarea data-copy-tiktok readonly></textarea>
+        <button class="secondary-button" type="button" data-copy-target="tiktok">Copiar texto / 复制文案</button>
+      </article>
+
+      <article class="copy-card">
+        <div>
+          <p class="eyebrow">WhatsApp</p>
+          <h2>Broadcast</h2>
+        </div>
+        <textarea data-copy-whatsapp readonly></textarea>
+        <button class="secondary-button" type="button" data-copy-target="whatsapp">Copiar texto / 复制文案</button>
+      </article>
+
+      <article class="copy-card">
+        <div>
+          <p class="eyebrow">Website / App</p>
+          <h2>Banner</h2>
+        </div>
+        <textarea data-copy-banner readonly></textarea>
+        <button class="secondary-button" type="button" data-copy-target="banner">Copiar texto / 复制文案</button>
+      </article>
+    </section>
+
+    <section class="asset-panel">
+      <div>
+        <p class="eyebrow">素材</p>
+        <h2>Imagen / material</h2>
+        <p data-image-prompt>Sin prompt cargado.</p>
+      </div>
+      <div class="material-box">
+        <span>Archivo fuente</span>
+        <code>/data/marketing/daily-ad-latest.json</code>
+      </div>
+    </section>
+
+    <section class="platform-panel" aria-label="Plataformas objetivo">
+      <div>
+        <p class="eyebrow">Plataformas objetivo</p>
+        <h2>Canales preparados</h2>
+      </div>
+      <div class="platform-list">
+        <span>官网 banner</span>
+        <span>App</span>
+        <span>Facebook</span>
+        <span>TikTok</span>
+      </div>
+    </section>
+
+    <section class="actions-panel">
+      <button class="primary-button" type="button" data-approve>Aprobar / 确认</button>
+      <button class="danger-button" type="button" data-reject>Rechazar / 驳回</button>
+      <button class="secondary-button" type="button" data-copy-all>Copiar texto / 复制文案</button>
+      <p class="status-text" data-action-status>Esperando revisión del jefe.</p>
+    </section>
+  </main>
+
+  <script type="module" src="/admin/marketing-drafts/marketing-drafts.js"></script>
+</body>
+</html>
