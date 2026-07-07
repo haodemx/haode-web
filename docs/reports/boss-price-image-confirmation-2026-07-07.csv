@@ -1,0 +1,88 @@
+type,slug,name,category,current_web_price,current_app_price,master_or_excel_reference,issue,boss_public_price,boss_wholesale_price,boss_box_price,boss_decision,note
+missing_price,iphone-oled-12mini,Pantalla para iPhone 12 mini,Pantallas iPhone OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,iphone-oled-13mini,Pantalla para iPhone 13 mini,Pantallas iPhone OLED,Consultar / Consultar,无,近似参考 730 / 720 (iPhone 13 OLED PREMIUM),缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,iphone-oled-15plus,Pantalla para iPhone 15 Plus,Pantallas iPhone OLED,Consultar / Consultar,无,近似参考 1200 / 1150 (iPhone 15 SOFT OLED PREMIUM),缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,iphone-oled-16,Pantalla para iPhone 16,Pantallas iPhone OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,iphone-oled-16plus,Pantalla para iPhone 16 Plus,Pantallas iPhone OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-note-9,Pantalla para Samsung Note 9,Pantallas Samsung OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s20,Pantalla para Samsung S20,Pantallas Samsung OLED,Consultar / Consultar,无,近似参考 1100 / 1050 (Samsung S20 PLUS OLED PREMIUM),缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s20-ultra,Pantalla para Samsung S20 Ultra,Pantallas Samsung OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s21,Pantalla para Samsung S21,Pantallas Samsung OLED,Consultar / Consultar,无,近似参考 1600 / 1550 (Samsung S21 Ultra OLED PREMIUM),缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s21-plus,Pantalla para Samsung S21 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s22-plus,Pantalla para Samsung S22 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s23-plus,Pantalla para Samsung S23 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s24-plus,Pantalla para Samsung S24 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+missing_price,samsung-oled-s9-plus,Pantalla para Samsung S9 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,未匹配,缺少公开价/批发价/箱价；未确认前禁止 publish-products,,,,,不要猜价；不要用 Excel 自动覆盖；不要从相似型号推算
+abnormal_price,iphone-incell-12promax,Pantalla para iPhone 12 Pro Max,Pantallas iPhone INCELL,220 / 210,250 / 240,Master 250 / 240; Excel 近似参考 250 / 240 (iPhone 12PRO MAX INCELL FHD),官网/App/Master 差异 -30，-12.0%,,,,,待老板确认是否促销价；本轮不改价
+abnormal_price,iphone-incell-14,Pantalla para iPhone 14,Pantallas iPhone INCELL,800 / 750,260 / 250,Master 260 / 250; Excel 近似参考 260 / 250 (iPhone 14 INCELL FHD),官网/App/Master 差异 540，207.7%,,,,,App 有促销字段；仍需老板确认是否促销价；本轮不改价
+abnormal_price,iphone-incell-14plus,Pantalla para iPhone 14 Plus,Pantallas iPhone INCELL,800 / 750,300 / 290,Master 300 / 290; Excel 近似参考 300 / 290 (iPhone 14 plus INCELL FHD),官网/App/Master 差异 500，166.7%,,,,,待老板确认是否促销价；本轮不改价
+abnormal_price,iphone-incell-15plus,Pantalla para iPhone 15 Plus,Pantallas iPhone INCELL,300 / 290,330 / 310,Master 330 / 310; Excel 近似参考 330 / 310 (iPhone 15 plus INCELL FHD),官网/App/Master 差异 -30，-9.1%,,,,,待老板确认是否促销价；本轮不改价
+abnormal_price,iphone-oled-13promax,Pantalla para iPhone 13 Pro Max,Pantallas iPhone OLED,600 / 590,900 / 850,Master 900 / 850; Excel 近似参考 900 / 850 (iPhone 13PRO MAX OLED PREMIUM),官网/App/Master 差异 -300，-33.3%,,,,,待老板确认是否促销价；本轮不改价
+abnormal_price,samsung-incell-s20-plus,Pantalla para Samsung S20 Plus,Pantallas Samsung INCELL,500 / 480,550 / 520,Master 550 / 520; Excel 近似参考 550 / 520 (Samsung S20 PLUS INCELL FHD),官网/App/Master 差异 -50，-9.1%,,,,,待老板确认是否促销价；本轮不改价
+abnormal_price,samsung-incell-s9-plus,Pantalla para Samsung S9 Plus,Pantallas Samsung INCELL,450 / 430,500 / 450,Master 500 / 450; Excel 近似参考 500 / 450 (Samsung S9 PLUS INCELL FHD),官网/App/Master 差异 -50，-10.0%,,,,,待老板确认是否促销价；本轮不改价
+image_needed,samsung-incell-note-10-lite,Pantalla para Samsung Note 10 Lite,Pantallas Samsung INCELL,无,750 / 720,,placeholder / 通用图 / 待确认图; 当前图片 /assets/products/samsung-incell/main.jpg; 影响 App / 官网待上架,,,,,需要老板提供真实产品图片；不要用网图/AI图/通用图
+image_needed,samsung-incell-note-20,Pantalla para Samsung Note 20,Pantallas Samsung INCELL,无,650 / 620,,placeholder / 通用图 / 待确认图; 当前图片 /assets/products/samsung-incell/main.jpg; 影响 App / 官网待上架,,,,,需要老板提供真实产品图片；不要用网图/AI图/通用图
+image_needed,samsung-incell-s10-lite,Pantalla para Samsung S10 Lite,Pantallas Samsung INCELL,无,450 / 420,,placeholder / 通用图 / 待确认图; 当前图片 /assets/products/samsung-incell/main.jpg; 影响 App / 官网待上架,,,,,需要老板提供真实产品图片；不要用网图/AI图/通用图
+image_needed,samsung-original-note-20-ultra,Pantalla para Samsung Note 20 Ultra,Pantallas Samsung Original,无,3500 / 3400,,placeholder / 通用图 / 待确认图; 当前图片 /assets/products/placeholder.svg; 影响 App / 官网待上架,,,,,需要老板提供真实产品图片；不要用网图/AI图/通用图
+listing_sync_pending,samsung-incell-note-10-lite,Pantalla para Samsung Note 10 Lite,Pantallas Samsung INCELL,无,750 / 720,,App有，官网缺少；图片待确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-incell-note-20,Pantalla para Samsung Note 20,Pantallas Samsung INCELL,无,650 / 620,,App有，官网缺少；图片待确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-incell-s10-lite,Pantalla para Samsung S10 Lite,Pantallas Samsung INCELL,无,450 / 420,,App有，官网缺少；图片待确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-note-20-ultra,Pantalla para Samsung Note 20 Ultra,Pantallas Samsung Original,无,3500 / 3400,,App有，官网缺少；图片待确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-s21-ultra,Pantalla para Samsung S21 Ultra,Pantallas Samsung Original,无,2500 / 2400,,App有，官网缺少；Samsung Original 新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-s22-plus,Pantalla para Samsung S22 Plus,Pantallas Samsung Original,无,1700 / 1650,,App有，官网缺少；Samsung Original 新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-s22-ultra,Pantalla para Samsung S22 Ultra,Pantallas Samsung Original,无,3000 / 2900,,App有，官网缺少；Samsung Original 新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-s23-plus,Pantalla para Samsung S23 Plus,Pantallas Samsung Original,无,1800 / 1700,,App有，官网缺少；Samsung Original 新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-s23-ultra,Pantalla para Samsung S23 Ultra,Pantallas Samsung Original,无,3300 / 3200,,App有，官网缺少；Samsung Original 新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-s24-ultra,Pantalla para Samsung S24 Ultra,Pantallas Samsung Original,无,3500 / 3400,,App有，官网缺少；Samsung Original 新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-s25-ultra,Pantalla para Samsung S25 Ultra,Pantallas Samsung Original,无,3700 / 3600,,App有，官网缺少；Samsung Original 新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-flip3,Pantalla para Samsung Z Flip3,Pantallas Samsung Original,无,3300 / 3200,,App有，官网缺少；Z Flip 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-flip4,Pantalla para Samsung Z Flip4,Pantallas Samsung Original,无,3600 / 3500,,App有，官网缺少；Z Flip 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-flip5,Pantalla para Samsung Z Flip5,Pantallas Samsung Original,无,4000 / 3900,,App有，官网缺少；Z Flip 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-flip6,Pantalla para Samsung Z Flip6,Pantallas Samsung Original,无,4500 / 4400,,App有，官网缺少；Z Flip 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-flip7,Pantalla Samsung Z Flip7,Pantallas Samsung Original,无,5800 / 5500,,App有，官网缺少；Z Flip 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-fold3,Pantalla Samsung Z Fold3,Pantallas Samsung Original,无,4500 / 4300,,App有，官网缺少；Z Fold 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-fold4,Pantalla Samsung Z Fold4,Pantallas Samsung Original,无,6000 / 5800,,App有，官网缺少；Z Fold 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-fold5,Pantalla Samsung Z Fold5,Pantallas Samsung Original,无,7500 / 7300,,App有，官网缺少；Z Fold 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+listing_sync_pending,samsung-original-z-fold6,Pantalla Samsung Z Fold6,Pantallas Samsung Original,无,9800 / 9600,,App有，官网缺少；Z Fold 系列新上架需确认,,,,,官网上架前需老板确认价格/图片/分类；本轮未上架
+app_web_mismatch_pending,funda-premium-aluminio-plus,Funda Premium Aluminio Plus,Fundas,85 / 75,无,,App缺少: 官网有，App缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-incell-12promax,Pantalla para iPhone 12 Pro Max,Pantallas iPhone INCELL,220 / 210,250 / 240,,价格: 公开价/批发价不一致,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-incell-14,Pantalla para iPhone 14,Pantallas iPhone INCELL,800 / 750,260 / 250,,价格: 公开价/批发价不一致,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-incell-14plus,Pantalla para iPhone 14 Plus,Pantallas iPhone INCELL,800 / 750,300 / 290,,价格: 公开价/批发价不一致,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-incell-15plus,Pantalla para iPhone 15 Plus,Pantallas iPhone INCELL,300 / 290,330 / 310,,价格: 公开价/批发价不一致,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-oled-13promax,Pantalla para iPhone 13 Pro Max,Pantallas iPhone OLED,600 / 590,900 / 850,,价格: 公开价/批发价不一致,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-incell-s20-plus,Pantalla para Samsung S20 Plus,Pantallas Samsung INCELL,500 / 480,550 / 520,,价格: 公开价/批发价不一致,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-incell-s9-plus,Pantalla para Samsung S9 Plus,Pantallas Samsung INCELL,450 / 430,500 / 450,,价格: 公开价/批发价不一致,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-oled-12mini,Pantalla para iPhone 12 mini,Pantallas iPhone OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-oled-13mini,Pantalla para iPhone 13 mini,Pantallas iPhone OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-oled-15plus,Pantalla para iPhone 15 Plus,Pantallas iPhone OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-oled-16,Pantalla para iPhone 16,Pantallas iPhone OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,iphone-oled-16plus,Pantalla para iPhone 16 Plus,Pantallas iPhone OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-note-9,Pantalla para Samsung Note 9,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s20,Pantalla para Samsung S20,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s20-ultra,Pantalla para Samsung S20 Ultra,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s21,Pantalla para Samsung S21,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s21-plus,Pantalla para Samsung S21 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s22-plus,Pantalla para Samsung S22 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s23-plus,Pantalla para Samsung S23 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s24-plus,Pantalla para Samsung S24 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-oled-s9-plus,Pantalla para Samsung S9 Plus,Pantallas Samsung OLED,Consultar / Consultar,无,,App缺少/缺价: 官网为 Consultar，App 缺少,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-incell-note-10-lite,Pantalla para Samsung Note 10 Lite,Pantallas Samsung INCELL,无,750 / 720,,图片/路由: App有，官网缺少，且图片待确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-incell-note-20,Pantalla para Samsung Note 20,Pantallas Samsung INCELL,无,650 / 620,,图片/路由: App有，官网缺少，且图片待确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-incell-s10-lite,Pantalla para Samsung S10 Lite,Pantallas Samsung INCELL,无,450 / 420,,图片/路由: App有，官网缺少，且图片待确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-note-20-ultra,Pantalla para Samsung Note 20 Ultra,Pantallas Samsung Original,无,3500 / 3400,,图片/路由: App有，官网缺少，且图片待确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-s21-ultra,Pantalla para Samsung S21 Ultra,Pantallas Samsung Original,无,2500 / 2400,,路由/详情页/sitemap: App有，官网缺少；Samsung Original 新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-s22-plus,Pantalla para Samsung S22 Plus,Pantallas Samsung Original,无,1700 / 1650,,路由/详情页/sitemap: App有，官网缺少；Samsung Original 新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-s22-ultra,Pantalla para Samsung S22 Ultra,Pantallas Samsung Original,无,3000 / 2900,,路由/详情页/sitemap: App有，官网缺少；Samsung Original 新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-s23-plus,Pantalla para Samsung S23 Plus,Pantallas Samsung Original,无,1800 / 1700,,路由/详情页/sitemap: App有，官网缺少；Samsung Original 新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-s23-ultra,Pantalla para Samsung S23 Ultra,Pantallas Samsung Original,无,3300 / 3200,,路由/详情页/sitemap: App有，官网缺少；Samsung Original 新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-s24-ultra,Pantalla para Samsung S24 Ultra,Pantallas Samsung Original,无,3500 / 3400,,路由/详情页/sitemap: App有，官网缺少；Samsung Original 新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-s25-ultra,Pantalla para Samsung S25 Ultra,Pantallas Samsung Original,无,3700 / 3600,,路由/详情页/sitemap: App有，官网缺少；Samsung Original 新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-flip3,Pantalla para Samsung Z Flip3,Pantallas Samsung Original,无,3300 / 3200,,路由/详情页/sitemap: App有，官网缺少；Z Flip 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-flip4,Pantalla para Samsung Z Flip4,Pantallas Samsung Original,无,3600 / 3500,,路由/详情页/sitemap: App有，官网缺少；Z Flip 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-flip5,Pantalla para Samsung Z Flip5,Pantallas Samsung Original,无,4000 / 3900,,路由/详情页/sitemap: App有，官网缺少；Z Flip 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-flip6,Pantalla para Samsung Z Flip6,Pantallas Samsung Original,无,4500 / 4400,,路由/详情页/sitemap: App有，官网缺少；Z Flip 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-flip7,Pantalla Samsung Z Flip7,Pantallas Samsung Original,无,5800 / 5500,,路由/详情页/sitemap: App有，官网缺少；Z Flip 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-fold3,Pantalla Samsung Z Fold3,Pantallas Samsung Original,无,4500 / 4300,,路由/详情页/sitemap: App有，官网缺少；Z Fold 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-fold4,Pantalla Samsung Z Fold4,Pantallas Samsung Original,无,6000 / 5800,,路由/详情页/sitemap: App有，官网缺少；Z Fold 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-fold5,Pantalla Samsung Z Fold5,Pantallas Samsung Original,无,7500 / 7300,,路由/详情页/sitemap: App有，官网缺少；Z Fold 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
+app_web_mismatch_pending,samsung-original-z-fold6,Pantalla Samsung Z Fold6,Pantallas Samsung Original,无,9800 / 9600,,路由/详情页/sitemap: App有，官网缺少；Z Fold 系列新上架需确认,,,,,需要老板确认后再决定下一轮是否修复
