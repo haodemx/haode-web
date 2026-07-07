@@ -101,7 +101,9 @@ function extractProductPageSlugs(text) {
   const ogMatch = text.match(/<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["']/i)
     || text.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:url["']/i);
   return {
+    canonicalUrl: canonicalMatch ? canonicalMatch[1] : '',
     canonicalSlug: canonicalMatch ? slugFromSiteUrl(canonicalMatch[1]) : '',
+    ogUrl: ogMatch ? ogMatch[1] : '',
     ogSlug: ogMatch ? slugFromSiteUrl(ogMatch[1]) : '',
   };
 }
@@ -137,11 +139,16 @@ function main() {
   websiteProducts.forEach((product) => {
     const sku = product.id;
     const appProduct = appById.get(sku);
+    const productPagePath = path.join(PRODUCT_DIR, sku, 'index.html');
+    const productPageText = fs.existsSync(productPagePath) ? fs.readFileSync(productPagePath, 'utf8') : '';
+    const isRedirectPage = /http-equiv=["']refresh|window\.location|location\.href/i.test(productPageText);
+    const pageSlugs = productPageText ? extractProductPageSlugs(productPageText) : {};
+    const canonicalCoveredBySitemap = Boolean(isRedirectPage && pageSlugs.canonicalUrl && sitemapText.includes(pageSlugs.canonicalUrl));
     if (!appProduct) {
       issue(issues, STRICT_SYNC ? 'error' : 'warn', 'APP_PRODUCT_MISSING', sku, 'website product is not present in app/products.json');
     }
     if (!productPageExists(sku)) issue(issues, 'error', 'STATIC_PRODUCT_PAGE_MISSING', sku, `producto/${sku}/index.html missing`);
-    if (!sitemapText.includes(`${SITE_URL}/producto/${sku}/`)) {
+    if (!sitemapText.includes(`${SITE_URL}/producto/${sku}/`) && !canonicalCoveredBySitemap) {
       issue(issues, 'warn', 'SITEMAP_PRODUCT_ENTRY_MISSING', sku, `sitemap lacks ${SITE_URL}/producto/${sku}/`);
     }
     if (!categoryPages.has(product.category)) {

@@ -575,11 +575,19 @@ function priceLines(product) {
 
 function productDetailUrl(product) {
   const detailUrls = {
+    "aimb-g5-ai-sports": "/ai-smart-glasses-aimb-g5.html",
+    "funda-magnetica-17-pro-max": "/producto/funda-magnetica-estilo-iphone-17-pro-max/",
+    "funda-premium-17-pro-max": "/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/",
+    "haode-ai-g3-smart-glasses": "/ai-smart-glasses-aimb-g3.html",
+    "haode-ai-w610-smart-glasses": "/ai-smart-glasses-w610.html",
+    "s1-ai-classic": "/ai-smart-glasses-s1.html",
     "samsung-original-z-flip7": "/productos/samsung-z-flip7/",
     "samsung-original-z-fold3": "/productos/samsung-z-fold3/",
     "samsung-original-z-fold4": "/productos/samsung-z-fold4/",
     "samsung-original-z-fold5": "/productos/samsung-z-fold5/",
-    "samsung-original-z-fold6": "/productos/samsung-z-fold6/"
+    "samsung-original-z-fold6": "/productos/samsung-z-fold6/",
+    "w630-ai-pro": "/ai-smart-glasses-w630.html",
+    "x200t-cortadora-micas": "/producto/x200t-cortadora-inteligente-de-micas/"
   };
   return detailUrls[product.id] || "";
 }
