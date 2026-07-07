@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-06-28-stable-revert-01";
+const CACHE_VERSION = "haode-pwa-v2026-07-07-product-audit";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -13,6 +13,7 @@ const APP_SHELL_URLS = [
   "/products.js",
   "/app/app.css",
   "/app/app.js",
+  "/app/products.json",
   "/app/promo-junio-prices.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",

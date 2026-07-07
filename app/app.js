@@ -1,14 +1,21 @@
 import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
 
 const WHATSAPP_NUMBER = "525645866014";
-const PRODUCTS_JSON_URL = "/app/products.json";
+const APP_BASE_PATH = (() => {
+  const marker = "/app/";
+  const index = window.location.pathname.indexOf(marker);
+  return index > 0 ? window.location.pathname.slice(0, index) : "";
+})();
+const sitePath = (path) => `${APP_BASE_PATH}${path}`;
+const PRODUCTS_JSON_URL = sitePath("/app/products.json");
 const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
 const ERP_WEB_ORDER_URL = "https://erp.haode.com.mx/api/public/web-orders";
-const DAILY_AD_URL = "/data/marketing/daily-ad-latest.json";
+const DAILY_AD_URL = sitePath("/data/marketing/daily-ad-latest.json");
 const PROMO_JUNIO = true;
-const PROMO_JUNIO_PRICES_URL = "/app/promo-junio-prices.json";
-const SERVICE_WORKER_URL = "/service-worker.js";
-const PLACEHOLDER_IMAGE = "/assets/products/placeholder.svg";
+const PROMO_JUNIO_PRICES_URL = sitePath("/app/promo-junio-prices.json");
+const SERVICE_WORKER_URL = sitePath("/service-worker.js");
+const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
+const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
 
 let deferredInstallPrompt = null;
 let products = [];
@@ -194,7 +201,7 @@ function registerServiceWorker() {
   }
 
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: "/" })
+    navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: SERVICE_WORKER_SCOPE })
       .catch((error) => {
         console.info("HAODE PWA no pudo registrar service worker:", error.message);
       });
