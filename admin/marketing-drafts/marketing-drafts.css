@@ -115,6 +115,16 @@ a {
   color: var(--orange-dark);
 }
 
+.danger-notice {
+  border-color: rgba(180, 35, 24, 0.28);
+  background: #fff4f2;
+  color: #7a271a;
+}
+
+.danger-notice strong {
+  color: var(--danger);
+}
+
 .draft-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
