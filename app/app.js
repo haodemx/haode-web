@@ -8,6 +8,7 @@ const APP_BASE_PATH = (() => {
 })();
 const sitePath = (path) => `${APP_BASE_PATH}${path}`;
 const PRODUCTS_JSON_URL = sitePath("/app/products.json");
+const ERP_PUBLIC_CATALOG_URL = "https://erp.haode.com.mx/api/public/catalog";
 const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
 const ERP_WEB_ORDER_URL = "https://erp.haode.com.mx/api/public/web-orders";
 const DAILY_AD_URL = sitePath("/data/marketing/daily-ad-latest.json");
@@ -102,6 +103,9 @@ const state = {
   selectedGalleryIndex: 0,
   viewerIndex: 0,
   viewerStartX: 0,
+  attribution: {},
+  orderRequestId: "",
+  orderSubmitting: false,
   diagnostics: {
     firestoreTotal: null,
     firestoreActive: null,
@@ -149,6 +153,59 @@ function iconSvg(name) {
 
 function isStandaloneMode() {
   return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+}
+
+function appChannel() {
+  return /HAODEAndroidApp/i.test(window.navigator.userAgent || "") || document.body.classList.contains("is-webview") ? "haode_app" : "haode_web";
+}
+
+function trafficAttribution() {
+  const params = new URLSearchParams(window.location.search);
+  let stored = {};
+  try {
+    stored = JSON.parse(window.sessionStorage.getItem("haode-attribution") || "{}");
+  } catch {
+    stored = {};
+  }
+  const referrerHost = (() => {
+    try {
+      return document.referrer ? new URL(document.referrer).hostname : "";
+    } catch {
+      return "";
+    }
+  })();
+  const detectedSource = /facebook|instagram/i.test(referrerHost)
+    ? "facebook"
+    : /tiktok/i.test(referrerHost)
+      ? "tiktok"
+      : /google/i.test(referrerHost)
+        ? "google"
+        : "";
+  const attribution = {
+    source: params.get("utm_source") || params.get("source") || stored.source || detectedSource || appChannel(),
+    medium: params.get("utm_medium") || stored.medium || (appChannel() === "haode_app" ? "app" : "website"),
+    campaign: params.get("utm_campaign") || stored.campaign || "",
+    content: params.get("utm_content") || stored.content || ""
+  };
+  window.sessionStorage.setItem("haode-attribution", JSON.stringify(attribution));
+  return attribution;
+}
+
+function trackGrowthEvent(name, parameters = {}) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", name, parameters);
+  }
+}
+
+function checkoutRequestId() {
+  if (!state.orderRequestId) {
+    state.orderRequestId = window.crypto?.randomUUID?.() || `web-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  }
+  return state.orderRequestId;
+}
+
+function resetCheckoutRequest() {
+  state.orderRequestId = "";
 }
 
 function detectWebView() {
@@ -260,12 +317,13 @@ function normalizePriceTiers(tiers) {
   }
   return tiers
     .map((tier) => ({
-      minQty: Number(tier.minQty ?? tier.minQuantity ?? tier.cantidadMinima ?? tier.min ?? 0),
+      minQty: Number(tier.minQty ?? tier.minQuantity ?? tier.min_quantity ?? tier.cantidadMinima ?? tier.min ?? 0),
       maxQty: tier.maxQty === null || tier.maxQty === undefined
         ? null
         : Number(tier.maxQty ?? tier.maxQuantity ?? tier.cantidadMaxima ?? tier.max),
-      price: Number(tier.price ?? tier.precio ?? tier.unitPrice ?? tier.precioUnitario ?? 0),
-      label: tier.label || tier.nombre || "Precio por cantidad"
+      price: Number(tier.price ?? tier.precio ?? tier.unitPrice ?? tier.unit_price_mxn ?? tier.precioUnitario ?? 0),
+      label: tier.label || tier.label_es || tier.nombre || "Precio por cantidad",
+      scope: tier.scope || "single_product"
     }))
     .filter((tier) => tier.minQty > 0 && tier.price > 0)
     .sort((a, b) => a.minQty - b.minQty);
@@ -276,9 +334,11 @@ function normalizeProduct(product) {
   const productId = String(product.id || "").trim();
   const rawCategory = product.categoria || product.category || categories[0].id;
   const category = categoryAliases[rawCategory] || rawCategory;
-  const name = product.nombre || product.name || "Producto HAODE";
+  const name = product.nombre || product.name || product.public_name_es || "Producto HAODE";
   const model = product.modelo || product.model || "Consultar modelo";
-  const quality = samsungQualityFor(category, model);
+  const qualityText = product.calidad || product.quality || "";
+  const quality = samsungQualityFor(category, `${model} ${qualityText}`) || (qualityText ? { label: qualityText, spec: qualityText } : null);
+  const publicPrice = Number(product.precioPublico ?? product.publicPrice ?? product.public_price_mxn ?? 0);
 
   return {
     id: productId || productDocId,
@@ -288,13 +348,18 @@ function normalizeProduct(product) {
     displayName: productDisplayName(name, category),
     model,
     quality,
-    description: product.descripcion || product.description || "",
-    publicPrice: Number(product.precioPublico ?? product.publicPrice ?? 0),
+    description: product.descripcion || product.description || product.description_es || "",
+    publicPrice,
     appJunePrice: Number(product.precioAppJunio ?? product.appJunePrice ?? 0),
     wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
-    priceTiers: normalizePriceTiers(product.priceTiers || product.quantityPricing || product.preciosPorCantidad),
-    image: product.imagen || product.image || PLACEHOLDER_IMAGE,
-    stock: normalizeStock(product.stock),
+    priceTiers: normalizePriceTiers(product.priceTiers || product.public_price_tiers || product.quantityPricing || product.preciosPorCantidad),
+    image: product.imagen || product.image || product.image_url || PLACEHOLDER_IMAGE,
+    stock: normalizeStock(product.stock || product.stock_status || product.stock_label),
+    salesAvailable: product.sales_available !== false && publicPrice > 0,
+    erpStockStatus: product.erpStockStatus || product.stock_status || "",
+    erpStockLabel: product.erpStockLabel || product.stock_label || "",
+    erpStockUpdatedAt: product.erpStockUpdatedAt || product.updated_at || "",
+    erpCatalogSource: product.erpCatalogSource === true,
     active: product.activo !== false,
     order: Number(product.orden ?? product.order ?? 9999),
     specialOffer: product.specialOffer === true,
@@ -341,6 +406,95 @@ async function loadErpPublicStock() {
     console.info("HAODE app sin inventario ERP:", error.message);
     return [];
   }
+}
+
+function erpCategory(row) {
+  const text = `${row.category || ""} ${row.quality || ""} ${row.public_name_es || ""}`.toUpperCase();
+  if (text.includes("DIAGN")) return "Pantallas OLED Diagnóstica";
+  if (text.includes("IPHONE") && text.includes("INCELL")) return "Pantallas iPhone INCELL";
+  if (text.includes("IPHONE") && (text.includes("OLED") || text.includes("PANTALLA"))) return "Pantallas iPhone OLED";
+  if (text.includes("SAMSUNG") && (text.includes("TIPO ORIGINAL") || text.includes("ORIGINAL"))) return "Pantallas Samsung Original";
+  if (text.includes("SAMSUNG") && text.includes("INCELL")) return "Pantallas Samsung INCELL";
+  if (text.includes("SAMSUNG") && (text.includes("OLED") || text.includes("AMOLED") || text.includes("PANTALLA"))) return "Pantallas Samsung OLED";
+  if (text.includes("MICA")) return "Micas";
+  if (text.includes("FUNDA")) return "Fundas";
+  if (text.includes("GAFAS") || text.includes("LENTES") || text.includes("AI")) return "Gafas AI";
+  if (text.includes("CAMARA")) return "Cámaras Inteligentes";
+  return row.category || "Otros";
+}
+
+function erpCatalogProduct(row, order = 9999) {
+  const retailTier = (row.public_price_tiers || []).find((tier) => tier.code === "RETAIL");
+  const wholesaleTier = (row.public_price_tiers || []).find((tier) => tier.code === "WHOLESALE_5");
+  return normalizeProduct({
+    id: row.slug || String(row.sku || "").toLowerCase(),
+    sku: row.sku,
+    categoria: erpCategory(row),
+    nombre: row.public_name_es,
+    modelo: row.model,
+    calidad: row.quality,
+    descripcion: row.description_es,
+    precioPublico: row.public_price_mxn ?? retailTier?.unit_price_mxn ?? 0,
+    precioMayoreo: wholesaleTier?.unit_price_mxn ?? 0,
+    priceTiers: row.public_price_tiers,
+    imagen: row.image_url || PLACEHOLDER_IMAGE,
+    stock: row.stock_status,
+    sales_available: row.sales_available,
+    activo: true,
+    orden: order,
+    erpStockLabel: row.stock_label,
+    erpStockStatus: row.stock_status,
+    erpStockUpdatedAt: row.updated_at,
+    erpCatalogSource: true
+  });
+}
+
+async function loadErpPublicCatalog() {
+  try {
+    const response = await fetch(`${ERP_PUBLIC_CATALOG_URL}?v=${Date.now()}`, { cache: "no-store", mode: "cors" });
+    if (!response.ok) throw new Error(`ERP catalog ${response.status}`);
+    const payload = await response.json();
+    return Array.isArray(payload) ? payload : Array.isArray(payload.products) ? payload.products : [];
+  } catch (error) {
+    console.info("HAODE app usando catálogo local:", error.message);
+    return [];
+  }
+}
+
+function mergeErpCatalog(localProducts, catalogRows) {
+  if (!catalogRows.length) return localProducts;
+  const result = localProducts.map((product) => ({ ...product }));
+  const bySku = new Map(result.map((product, index) => [stockKey(product.sku), index]).filter(([key]) => key));
+  const byName = new Map(result.map((product, index) => [stockKey(product.name), index]).filter(([key]) => key));
+  catalogRows.forEach((row, catalogIndex) => {
+    const index = bySku.get(stockKey(row.sku)) ?? byName.get(stockKey(row.public_name_es));
+    const incoming = erpCatalogProduct(row, index === undefined ? 5000 + catalogIndex : result[index].order);
+    if (index === undefined) {
+      result.push(incoming);
+      return;
+    }
+    const current = result[index];
+    result[index] = {
+      ...current,
+      sku: incoming.sku || current.sku,
+      name: incoming.name || current.name,
+      displayName: incoming.displayName || current.displayName,
+      model: incoming.model || current.model,
+      quality: incoming.quality || current.quality,
+      description: incoming.description || current.description,
+      publicPrice: incoming.publicPrice,
+      wholesalePrice: incoming.wholesalePrice,
+      priceTiers: incoming.priceTiers,
+      image: row.image_url || current.image,
+      stock: incoming.stock,
+      salesAvailable: incoming.salesAvailable,
+      erpStockStatus: row.stock_status || "",
+      erpStockLabel: row.stock_label || "",
+      erpStockUpdatedAt: row.updated_at || "",
+      erpCatalogSource: true
+    };
+  });
+  return result.sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"));
 }
 
 function applyErpStock(localProducts, stockRows) {
@@ -405,8 +559,11 @@ async function loadLocalProducts() {
 async function loadProducts() {
   const localProducts = await loadLocalProducts();
   const normalizedProducts = activeProducts(localProducts);
-  const erpStockRows = await loadErpPublicStock();
-  products = applyErpStock(normalizedProducts, erpStockRows);
+  const erpCatalogRows = await loadErpPublicCatalog();
+  const erpStockRows = erpCatalogRows.length ? [] : await loadErpPublicStock();
+  products = erpCatalogRows.length
+    ? mergeErpCatalog(normalizedProducts, erpCatalogRows)
+    : applyErpStock(normalizedProducts, erpStockRows);
 
   try {
     const [allProducts, activeFirestoreProducts] = await Promise.all([
@@ -422,14 +579,14 @@ async function loadProducts() {
   }
 
   state.diagnostics.normalizedTotal = products.length;
-  state.diagnostics.erpStockItems = erpStockRows.length;
-  state.diagnostics.erpStockLoaded = erpStockRows.length > 0;
+  state.diagnostics.erpStockItems = erpCatalogRows.length || erpStockRows.length;
+  state.diagnostics.erpStockLoaded = state.diagnostics.erpStockItems > 0;
   window.HAODE_DIAGNOSTICS = {
     firestoreTotal: state.diagnostics.firestoreTotal,
     firestoreActivo: state.diagnostics.firestoreActive,
     productosActivos: state.diagnostics.normalizedTotal,
     productosVisibles: Math.max(products.length, 0),
-    fuente: state.diagnostics.erpStockLoaded ? "products.json + erp public-stock.json" : "products.json",
+    fuente: erpCatalogRows.length ? "erp public catalog 2.0 + products.json" : state.diagnostics.erpStockLoaded ? "products.json + erp public-stock.json" : "products.json",
     erpStockItems: state.diagnostics.erpStockItems
   };
 }
@@ -480,7 +637,7 @@ async function loadDailyAd() {
 }
 
 function promoPriceFor(product) {
-  if (!PROMO_JUNIO || !product?.id) {
+  if (!PROMO_JUNIO || !product?.id || product.erpCatalogSource) {
     return null;
   }
   const promo = state.promoPrices.get(product.id);
@@ -513,8 +670,12 @@ function priceRuleFor(product, quantity = 1) {
     return { unitPrice: product.appJunePrice, label: "Precio APP Junio" };
   }
 
+  const orderQuantity = Math.max(quantity, cartCount());
   const matchingTier = product.priceTiers
-    .filter((tier) => quantity >= tier.minQty && (tier.maxQty === null || quantity <= tier.maxQty))
+    .filter((tier) => {
+      const applicableQuantity = tier.scope === "mixed_order" ? orderQuantity : quantity;
+      return applicableQuantity >= tier.minQty && (tier.maxQty === null || applicableQuantity <= tier.maxQty);
+    })
     .pop();
   if (matchingTier) {
     return { unitPrice: matchingTier.price, label: matchingTier.label };
@@ -629,7 +790,7 @@ function productCardHtml(product, compact = false) {
         ${priceLines(product)}
         <div class="product-actions">
           <a class="text-button" href="${appProductUrl(product)}">Detalles</a>
-          <button class="add-button" type="button" data-add-product="${product.id}">Agregar</button>
+          <button class="add-button" type="button" data-add-product="${product.id}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Consultar"}</button>
         </div>
       </div>
     </article>
@@ -1033,8 +1194,8 @@ function renderProductDetail(productId) {
             <button class="text-button" type="button" data-share-product="${product.id}">Compartir</button>
           </div>
           <div class="sticky-actions">
-            <button class="add-button" type="button" data-add-product="${product.id}">Agregar</button>
-            <a class="whatsapp-outline" href="${singleProductWhatsappUrl(product)}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <button class="add-button" type="button" data-add-product="${product.id}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Precio pendiente"}</button>
+            <a class="whatsapp-outline" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </article>
       </section>
@@ -1324,12 +1485,13 @@ function buildWhatsappUrl() {
     ...items.map((item) => {
       const priceRule = priceRuleFor(item.product, item.quantity);
       const subtotal = priceRule.unitPrice * item.quantity;
-      return `- ${item.product.name} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
+      return `- ${item.product.name} | SKU: ${item.product.sku} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
     }),
     "",
     `Total estimado: ${formatPrice(cartTotal())}`,
     "",
     `Comentario: ${clientComment || "Sin comentario"}`,
+    `Origen: ${state.attribution.source || appChannel()}`,
     "",
     "Por favor confirma disponibilidad, precio final y envio. Entiendo que no hay pago en linea y se confirma por WhatsApp."
   ];
@@ -1351,7 +1513,12 @@ function webOrderPayload() {
     quantity: items[0]?.quantity || 1,
     message: [clientCity ? `Ciudad: ${clientCity}` : "", clientComment].filter(Boolean).join(" | "),
     delivery_method: "whatsapp",
-    source: "haode_web",
+    source: appChannel(),
+    utm_source: state.attribution.source,
+    utm_medium: state.attribution.medium,
+    utm_campaign: state.attribution.campaign,
+    utm_content: state.attribution.content,
+    client_request_id: checkoutRequestId(),
     total: cartTotal(),
     items: items.map((item) => {
       const priceRule = priceRuleFor(item.product, item.quantity);
@@ -1373,11 +1540,18 @@ async function submitWebOrder() {
     const response = await fetch(ERP_WEB_ORDER_URL, {
       method: "POST",
       mode: "cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "Idempotency-Key": payload.client_request_id },
       body: JSON.stringify(payload)
     });
     if (!response.ok) throw new Error(`ERP web order ${response.status}`);
-    return response.json();
+    const result = await response.json();
+    trackGrowthEvent("generate_lead", {
+      currency: "MXN",
+      value: payload.total,
+      source: state.attribution.source,
+      order_number: result.order_number
+    });
+    return result;
   } catch (error) {
     console.info("HAODE app no pudo registrar pedido ERP:", error.message);
     return null;
@@ -1389,10 +1563,12 @@ function singleProductWhatsappUrl(product) {
     "Hola HAODE, quiero información de este producto:",
     "",
     `${product.name}`,
+    `SKU: ${product.sku}`,
     `Modelo: ${product.model}`,
     `Precio menudeo: ${formatPrice(product.publicPrice)}`,
     `Precio mayoreo: ${formatPrice(product.wholesalePrice)}`,
     "",
+    `Origen: ${state.attribution.source || appChannel()}`,
     "Por favor confirma disponibilidad, compatibilidad y precio final."
   ];
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
@@ -1451,11 +1627,16 @@ function renderCart() {
 }
 
 function addProduct(productId) {
+  const product = products.find((item) => item.id === productId);
+  if (!product?.salesAvailable) return;
+  resetCheckoutRequest();
   state.cart.set(productId, (state.cart.get(productId) || 0) + 1);
+  trackGrowthEvent("add_to_cart", { currency: "MXN", value: product.publicPrice, items: [{ item_id: product.sku, item_name: product.name }] });
   renderCart();
 }
 
 function changeQuantity(productId, delta) {
+  resetCheckoutRequest();
   const nextQuantity = (state.cart.get(productId) || 0) + delta;
   if (nextQuantity <= 0) {
     state.cart.delete(productId);
@@ -1469,6 +1650,7 @@ function changeQuantity(productId, delta) {
 }
 
 function removeProduct(productId) {
+  resetCheckoutRequest();
   state.cart.delete(productId);
   renderCart();
   if (state.route.name === "cart") {
@@ -1521,6 +1703,7 @@ async function handleDocumentClick(event) {
   const viewerNextButton = event.target.closest("[data-viewer-next]");
   const focusSearchButton = event.target.closest("[data-focus-search]");
   const shareProductButton = event.target.closest("[data-share-product]");
+  const productWhatsappLink = event.target.closest("[data-product-whatsapp]");
 
   if (groupLink) {
     event.preventDefault();
@@ -1545,10 +1728,17 @@ async function handleDocumentClick(event) {
   const whatsappOrderLink = event.target.closest("[data-whatsapp-link]");
   if (whatsappOrderLink) {
     event.preventDefault();
-    if (whatsappOrderLink.classList.contains("disabled")) return;
+    if (whatsappOrderLink.classList.contains("disabled") || state.orderSubmitting) return;
     const url = buildWhatsappUrl();
-    await submitWebOrder();
+    state.orderSubmitting = true;
+    trackGrowthEvent("begin_checkout", { currency: "MXN", value: cartTotal(), source: state.attribution.source });
     window.open(url, "_blank", "noopener,noreferrer");
+    await submitWebOrder();
+    state.orderSubmitting = false;
+  }
+  if (productWhatsappLink) {
+    const product = products.find((item) => item.id === productWhatsappLink.dataset.productWhatsapp);
+    if (product) trackGrowthEvent("contact", { method: "whatsapp", item_id: product.sku, source: state.attribution.source });
   }
   if (closeCartButton || event.target === cartDrawerEl) {
     closeCart();
@@ -1653,6 +1843,7 @@ function setupFormListeners() {
 
 async function init() {
   detectWebView();
+  state.attribution = trafficAttribution();
   setupPwaInstallPrompt();
   registerServiceWorker();
   setupFormListeners();

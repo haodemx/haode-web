@@ -1109,8 +1109,20 @@ function buildWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 }
 
-function buildProductCotizacionText(name) {
-  return `Hola, quiero cotizar: ${name}. ¿Me pueden confirmar precio y disponibilidad?`;
+function trafficSource() {
+  const params = new URLSearchParams(window.location.search);
+  const source = params.get('utm_source') || sessionStorage.getItem('haode_traffic_source') || 'website';
+  sessionStorage.setItem('haode_traffic_source', source);
+  return source;
+}
+
+function trackWebsiteEvent(eventName, params = {}) {
+  if (typeof window.gtag === 'function') window.gtag('event', eventName, params);
+}
+
+function buildProductCotizacionText(name, sku = '') {
+  const skuLine = sku ? ` SKU: ${sku}.` : '';
+  return `Hola, quiero cotizar: ${name}.${skuLine} Origen: ${trafficSource()}. ¿Me pueden confirmar precio y disponibilidad?`;
 }
 
 function buildMissingModelCotizacionText() {
@@ -1119,6 +1131,7 @@ function buildMissingModelCotizacionText() {
 
 const SITE_ORIGIN = 'https://haode.com.mx';
 const SITE_BASE_PATH = '';
+const ERP_PUBLIC_CATALOG_URL = 'https://erp.haode.com.mx/api/public/catalog';
 const ERP_PUBLIC_STOCK_URL = 'https://erp.haode.com.mx/public-stock.json';
 
 function buildSiteUrl(pathname = '') {
@@ -1143,7 +1156,7 @@ function stockClassName(value) {
 }
 
 function stockLookupKey(value) {
-  return String(value || '').trim().toLowerCase();
+  return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 }
 
 function publicStockLabel(status, label) {
@@ -1169,6 +1182,96 @@ async function loadErpPublicStock() {
     console.info('HAODE ERP public stock unavailable, using static catalog stock.', error);
     return [];
   }
+}
+
+async function loadErpPublicCatalog() {
+  try {
+    const response = await fetch(`${ERP_PUBLIC_CATALOG_URL}?v=${Date.now()}`, { cache: 'no-store', mode: 'cors' });
+    if (!response.ok) throw new Error(`ERP catalog ${response.status}`);
+    const payload = await response.json();
+    return Array.isArray(payload) ? payload : Array.isArray(payload.products) ? payload.products : [];
+  } catch (error) {
+    console.info('HAODE ERP public catalog unavailable, using static catalog.', error);
+    return [];
+  }
+}
+
+function erpCatalogCategory(row) {
+  const text = `${row.category || ''} ${row.quality || ''} ${row.public_name_es || ''}`.toUpperCase();
+  if (text.includes('DIAGN')) return 'oled-diagnostica';
+  if (text.includes('IPHONE') && text.includes('INCELL')) return 'iphone-incell';
+  if (text.includes('IPHONE')) return 'iphone-oled';
+  if (text.includes('SAMSUNG') && text.includes('INCELL')) return 'samsung-incell';
+  if (text.includes('SAMSUNG')) return 'samsung-oled';
+  if (text.includes('MICA') && (text.includes('MAQUINA') || text.includes('HERRAMIENTA'))) return 'maquinas-de-mica';
+  if (text.includes('MICA')) return 'micas';
+  if (text.includes('FUNDA')) return 'fundas';
+  if (text.includes('CAMARA')) return 'camaras-inteligentes';
+  if (text.includes('AI') || text.includes('GAFAS') || text.includes('LENTES')) return 'gafas-ai';
+  return '';
+}
+
+function erpTierPrices(row) {
+  const tiers = new Map((row.public_price_tiers || []).map((tier) => [tier.code, tier.unit_price_mxn]));
+  return [
+    row.public_price_mxn || tiers.get('RETAIL'),
+    tiers.get('WHOLESALE_5'),
+    tiers.get('MIXED_100'),
+    tiers.get('MODEL_100'),
+    tiers.get('BOX_MODEL'),
+  ];
+}
+
+function applyErpPublicCatalog(rows) {
+  if (!Array.isArray(rows) || !rows.length) return;
+  const byKey = new Map();
+  PRODUCTS.forEach((product, index) => {
+    [product.sku, product.id, product.name, product.model].filter(Boolean).forEach((value) => byKey.set(stockLookupKey(value), index));
+  });
+
+  rows.forEach((row) => {
+    const existingIndex = byKey.get(stockLookupKey(row.sku))
+      ?? byKey.get(stockLookupKey(row.public_name_es))
+      ?? byKey.get(stockLookupKey(row.model));
+    const prices = erpTierPrices(row);
+    if (existingIndex !== undefined) {
+      const product = PRODUCTS[existingIndex];
+      product.sku = row.sku || product.sku;
+      product.name = row.public_name_es || product.name;
+      product.model = row.model || product.model;
+      product.quality = row.quality || product.quality;
+      product.description = row.description_es || product.description;
+      product.priceTable = buildPriceTable(prices);
+      product.lowestPriceText = buildLowestPriceText(product.priceTable);
+      product.stockStatus = row.stock_status || 'ask_stock';
+      product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
+      product.erpStockUpdatedAt = row.updated_at || '';
+      product.whatsappText = buildProductCotizacionText(product.name, product.sku);
+      if (row.image_url) product.mainImage = row.image_url;
+      return;
+    }
+
+    const category = erpCatalogCategory(row);
+    if (!category || !CATEGORY_META[category]) return;
+    const product = createProduct({
+      id: row.slug || String(row.sku || '').toLowerCase(),
+      sku: row.sku,
+      category,
+      brand: row.brand || 'HAODE',
+      name: row.public_name_es,
+      model: row.model,
+      quality: row.quality || CATEGORY_META[category].title,
+      description: row.description_es,
+      prices,
+      mainImage: row.image_url || PLACEHOLDER_IMAGE,
+    });
+    product.erpDynamic = true;
+    product.stockStatus = row.stock_status || 'ask_stock';
+    product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
+    product.erpStockUpdatedAt = row.updated_at || '';
+    PRODUCTS.push(product);
+    PRODUCT_BY_ID.set(product.id, product);
+  });
 }
 
 function applyErpPublicStock(rows) {
@@ -1247,6 +1350,8 @@ function setCanonicalUrl(url) {
 }
 
 function getProductUrl(productId) {
+  const product = PRODUCT_BY_ID.get(String(productId || '').trim());
+  if (product?.erpDynamic) return `/app/#producto/${encodeURIComponent(product.id)}`;
   return buildSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(productId))}/`);
 }
 
@@ -1314,7 +1419,7 @@ function createProduct(definition) {
     videos: definition.videos || categoryMedia?.videos || [],
     priceTable,
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
-    whatsappText: buildProductCotizacionText(name),
+    whatsappText: buildProductCotizacionText(name, definition.sku || definition.SKU || definition.id),
     lowestPriceText: buildLowestPriceText(priceTable),
     stockStatus: 'ask_stock',
     stockLabel: 'Consultar inventario',
@@ -2228,9 +2333,17 @@ function renderProductDetailPage() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  applyErpPublicStock(await loadErpPublicStock());
+  const catalogRows = await loadErpPublicCatalog();
+  if (catalogRows.length) applyErpPublicCatalog(catalogRows);
+  else applyErpPublicStock(await loadErpPublicStock());
   renderCatalogPage();
   renderProductDetailPage();
+});
+
+document.addEventListener('click', (event) => {
+  const whatsappLink = event.target.closest('a[href*="wa.me"]');
+  if (!whatsappLink) return;
+  trackWebsiteEvent('contact', { method: 'whatsapp', source: trafficSource() });
 });
 
 window.HAODE_PRODUCTS = PRODUCTS;
