@@ -10,7 +10,43 @@
     "imagen": "/assets/products/iphone-oled/11promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 20
+    "orden": 20,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 590,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 580,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 550,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 535,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 14"
   },
   {
     "id": "iphone-oled-12-12pro",
@@ -23,7 +59,43 @@
     "imagen": "/assets/products/iphone-oled/12-12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 30
+    "orden": 30,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 640,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 615,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 17"
   },
   {
     "id": "iphone-oled-12pro",
@@ -49,7 +121,43 @@
     "imagen": "/assets/products/iphone-oled/12promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 50
+    "orden": 50,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 830,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 800,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 750,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 730,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 19"
   },
   {
     "id": "iphone-oled-13",
@@ -62,7 +170,43 @@
     "imagen": "/assets/products/iphone-oled/13/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 60
+    "orden": 60,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 720,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 710,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 22"
   },
   {
     "id": "iphone-oled-13pro",
@@ -75,7 +219,43 @@
     "imagen": "/assets/products/iphone-oled/13pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 70
+    "orden": 70,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 780,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 750,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 730,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 24"
   },
   {
     "id": "iphone-oled-13promax",
@@ -88,7 +268,43 @@
     "imagen": "/assets/products/iphone-oled/13promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 80
+    "orden": 80,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 850,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 800,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 770,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 750,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 26"
   },
   {
     "id": "iphone-oled-14",
@@ -101,7 +317,43 @@
     "imagen": "/assets/products/iphone-oled/14/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 90
+    "orden": 90,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 28"
   },
   {
     "id": "iphone-oled-14plus",
@@ -114,7 +366,43 @@
     "imagen": "/assets/products/iphone-oled/14plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 100
+    "orden": 100,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 880,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 830,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 31"
   },
   {
     "id": "iphone-oled-14pro",
@@ -140,7 +428,43 @@
     "imagen": "/assets/products/iphone-oled/14promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 120
+    "orden": 120,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 36"
   },
   {
     "id": "iphone-oled-15",
@@ -166,7 +490,43 @@
     "imagen": "/assets/products/iphone-oled/15promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 140
+    "orden": 140,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1100,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1000,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 850,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 43"
   },
   {
     "id": "iphone-oled-16pro",
@@ -179,7 +539,43 @@
     "imagen": "/assets/products/iphone-oled/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 150
+    "orden": 150,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1450,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1300,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 49"
   },
   {
     "id": "iphone-oled-16promax",
@@ -192,7 +588,43 @@
     "imagen": "/assets/products/iphone-oled/16promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 160
+    "orden": 160,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1950,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1800,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 51"
   },
   {
     "id": "iphone-oled-xsmax",
@@ -205,7 +637,43 @@
     "imagen": "/assets/products/iphone-oled/xsmax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 170
+    "orden": 170,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 570,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 550,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 540,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 12"
   },
   {
     "id": "iphone-oled-16promax-hard",
@@ -218,7 +686,43 @@
     "imagen": "/assets/products/iphone-oled/16promax-hard/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 180
+    "orden": 180,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1550,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1450,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 50"
   },
   {
     "id": "iphone-incell-11",
@@ -231,7 +735,43 @@
     "imagen": "/assets/products/iphone-incell/11/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 190
+    "orden": 190,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 9"
   },
   {
     "id": "iphone-incell-11pro",
@@ -240,7 +780,7 @@
     "modelo": "iPhone 11 Pro INCELL FHD",
     "descripcion": "Pantalla para iPhone 11 Pro INCELL FHD para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
     "precioPublico": 200,
-    "precioMayoreo": 195,
+    "precioMayoreo": 190,
     "imagen": "/assets/products/iphone-incell/11pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -254,7 +794,43 @@
     "offerDisplayPrice": "$170 MXN / pieza",
     "offerDisplayNote": "Caja cerrada (290 pzs) · Total caja: $49,300 MXN",
     "offerImage": "/assets/promotions/iphone-11-pro-fhd/factory-promo.png",
-    "offerSort": 1
+    "offerSort": 1,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 190,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 185,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 180,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 175,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 10"
   },
   {
     "id": "iphone-incell-11promax",
@@ -267,7 +843,43 @@
     "imagen": "/assets/products/iphone-incell/11promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 210
+    "orden": 210,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 210,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 200,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 195,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 190,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 13"
   },
   {
     "id": "iphone-incell-12-12pro",
@@ -280,7 +892,43 @@
     "imagen": "/assets/products/iphone-incell/12-12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 220
+    "orden": 220,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 210,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 200,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 195,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 190,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 16"
   },
   {
     "id": "iphone-incell-12mini",
@@ -293,7 +941,43 @@
     "imagen": "/assets/products/iphone-incell/12mini/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 230
+    "orden": 230,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 220,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 210,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 200,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 195,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 15"
   },
   {
     "id": "iphone-incell-12promax",
@@ -306,7 +990,43 @@
     "imagen": "/assets/products/iphone-incell/12promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 240
+    "orden": 240,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 240,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 235,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 230,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 220,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 18"
   },
   {
     "id": "iphone-incell-13",
@@ -319,7 +1039,43 @@
     "imagen": "/assets/products/iphone-incell/13/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 250
+    "orden": 250,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 245,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 240,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 235,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 21"
   },
   {
     "id": "iphone-incell-13mini",
@@ -332,7 +1088,43 @@
     "imagen": "/assets/products/iphone-incell/13mini/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 260
+    "orden": 260,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 250,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 245,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 240,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 235,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 20"
   },
   {
     "id": "iphone-incell-13pro",
@@ -345,7 +1137,43 @@
     "imagen": "/assets/products/iphone-incell/13pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 270
+    "orden": 270,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 290,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 285,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 280,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 275,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 23"
   },
   {
     "id": "iphone-incell-13promax",
@@ -358,7 +1186,43 @@
     "imagen": "/assets/products/iphone-incell/13promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 280
+    "orden": 280,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 340,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 335,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 325,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 25"
   },
   {
     "id": "iphone-incell-14",
@@ -381,7 +1245,43 @@
     "offerDisplayPrice": "$185 MXN / pieza",
     "offerDisplayNote": "Precio por caja",
     "offerImage": "/assets/promotions/iphone-14-fhd/factory-promo.png",
-    "offerSort": 2
+    "offerSort": 2,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 250,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 245,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 240,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 27"
   },
   {
     "id": "iphone-incell-14plus",
@@ -394,7 +1294,43 @@
     "imagen": "/assets/products/iphone-incell/14plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 300
+    "orden": 300,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 290,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 280,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 275,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 265,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 30"
   },
   {
     "id": "iphone-incell-14pro",
@@ -407,7 +1343,43 @@
     "imagen": "/assets/products/iphone-incell/14pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 310
+    "orden": 310,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 340,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 33"
   },
   {
     "id": "iphone-incell-14promax",
@@ -420,7 +1392,43 @@
     "imagen": "/assets/products/iphone-incell/14promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 320
+    "orden": 320,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 350,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 35"
   },
   {
     "id": "iphone-incell-15",
@@ -433,7 +1441,43 @@
     "imagen": "/assets/products/iphone-incell/15/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 330
+    "orden": 330,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 290,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 285,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 280,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 275,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 37"
   },
   {
     "id": "iphone-incell-15plus",
@@ -446,7 +1490,43 @@
     "imagen": "/assets/products/iphone-incell/15plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 340
+    "orden": 340,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 310,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 290,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 275,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 39"
   },
   {
     "id": "iphone-incell-15pro",
@@ -459,7 +1539,43 @@
     "imagen": "/assets/products/iphone-incell/15pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 350
+    "orden": 350,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 340,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 335,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 320,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 40"
   },
   {
     "id": "iphone-incell-15promax",
@@ -472,7 +1588,43 @@
     "imagen": "/assets/products/iphone-incell/15promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 360
+    "orden": 360,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 370,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 330,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 42"
   },
   {
     "id": "iphone-incell-16",
@@ -485,7 +1637,43 @@
     "imagen": "/assets/products/iphone-incell/16/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 370
+    "orden": 370,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 320,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 44"
   },
   {
     "id": "iphone-incell-x",
@@ -498,7 +1686,43 @@
     "imagen": "/assets/products/iphone-incell/x/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 380
+    "orden": 380,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 6"
   },
   {
     "id": "iphone-incell-xr",
@@ -511,7 +1735,43 @@
     "imagen": "/assets/products/iphone-incell/xr/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 390
+    "orden": 390,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 8"
   },
   {
     "id": "iphone-incell-xs",
@@ -524,7 +1784,43 @@
     "imagen": "/assets/products/iphone-incell/xs/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 400
+    "orden": 400,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 7"
   },
   {
     "id": "samsung-incell-s8",
@@ -532,12 +1828,48 @@
     "nombre": "Pantalla para Samsung S8",
     "modelo": "Samsung S8 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S8 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 450,
-    "precioMayoreo": 430,
+    "precioPublico": 360,
+    "precioMayoreo": 350,
     "imagen": "/assets/products/samsung-incell/s8/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 400
+    "orden": 400,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 350,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 88"
   },
   {
     "id": "iphone-incell-xsmax",
@@ -550,7 +1882,43 @@
     "imagen": "/assets/products/iphone-incell/xsmax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 410
+    "orden": 410,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 190,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 185,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 180,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 175,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 11"
   },
   {
     "id": "samsung-incell-s8-plus",
@@ -558,12 +1926,48 @@
     "nombre": "Pantalla para Samsung S8 Plus",
     "modelo": "Samsung S8 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S8 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 450,
-    "precioMayoreo": 430,
+    "precioPublico": 370,
+    "precioMayoreo": 360,
     "imagen": "/assets/products/samsung-incell/s8-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 410
+    "orden": 410,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 360,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 89"
   },
   {
     "id": "iphone-incell-16e",
@@ -576,7 +1980,43 @@
     "imagen": "/assets/products/iphone-incell/16e/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 420
+    "orden": 420,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 280,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 275,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 270,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 260,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 45"
   },
   {
     "id": "samsung-incell-s9",
@@ -584,12 +2024,48 @@
     "nombre": "Pantalla para Samsung S9",
     "modelo": "Samsung S9 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S9 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 450,
-    "precioMayoreo": 430,
+    "precioPublico": 360,
+    "precioMayoreo": 350,
     "imagen": "/assets/products/samsung-incell/s9/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 420
+    "orden": 420,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 350,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 320,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 90"
   },
   {
     "id": "iphone-incell-16plus",
@@ -602,7 +2078,43 @@
     "imagen": "/assets/products/iphone-incell/16plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 430
+    "orden": 430,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 330,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 47"
   },
   {
     "id": "samsung-incell-s9-plus",
@@ -610,12 +2122,48 @@
     "nombre": "Pantalla para Samsung S9 Plus",
     "modelo": "Samsung S9 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S9 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 500,
-    "precioMayoreo": 450,
+    "precioPublico": 370,
+    "precioMayoreo": 360,
     "imagen": "/assets/products/samsung-incell/s9-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 430
+    "orden": 430,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 360,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 330,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 91"
   },
   {
     "id": "iphone-incell-16pro",
@@ -628,7 +2176,43 @@
     "imagen": "/assets/products/iphone-incell/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 440
+    "orden": 440,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 620,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 48"
   },
   {
     "id": "samsung-incell-s10",
@@ -636,12 +2220,48 @@
     "nombre": "Pantalla para Samsung S10",
     "modelo": "Samsung S10 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S10 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 500,
-    "precioMayoreo": 470,
+    "precioPublico": 380,
+    "precioMayoreo": 370,
     "imagen": "/assets/products/samsung-incell/s10/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 440
+    "orden": 440,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 370,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 340,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 92"
   },
   {
     "id": "iphone-incell-16promax",
@@ -654,7 +2274,43 @@
     "imagen": "/assets/products/iphone-incell/16promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 450
+    "orden": 450,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 730,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 700,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 680,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 650,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 52"
   },
   {
     "id": "samsung-incell-s10-plus",
@@ -662,12 +2318,48 @@
     "nombre": "Pantalla para Samsung S10 Plus",
     "modelo": "Samsung S10 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S10 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 500,
-    "precioMayoreo": 470,
+    "precioPublico": 380,
+    "precioMayoreo": 370,
     "imagen": "/assets/products/samsung-incell/s10-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 450
+    "orden": 450,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 370,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 400,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 93"
   },
   {
     "id": "iphone-incell-17",
@@ -680,7 +2372,43 @@
     "imagen": "/assets/products/iphone-incell/17/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 460
+    "orden": 460,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 920,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 850,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 53"
   },
   {
     "id": "samsung-incell-s10e",
@@ -688,12 +2416,48 @@
     "nombre": "Pantalla para Samsung S10E",
     "modelo": "Samsung S10E INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S10E INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 800,
-    "precioMayoreo": 780,
+    "precioPublico": 400,
+    "precioMayoreo": 380,
     "imagen": "/assets/products/samsung-incell/s10e/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 460
+    "orden": 460,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 370,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 94"
   },
   {
     "id": "iphone-incell-17air",
@@ -706,7 +2470,43 @@
     "imagen": "/assets/products/iphone-incell/17air/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 470
+    "orden": 470,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2200,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2100,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 55"
   },
   {
     "id": "samsung-incell-s10-lite",
@@ -719,7 +2519,43 @@
     "imagen": "/assets/products/samsung-incell/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 470
+    "orden": 470,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 420,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 380,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 330,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 95"
   },
   {
     "id": "iphone-incell-17pro",
@@ -732,7 +2568,43 @@
     "imagen": "/assets/products/iphone-incell/17pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 480
+    "orden": 480,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 800,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 755,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 750,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 54"
   },
   {
     "id": "samsung-incell-s20",
@@ -758,7 +2630,43 @@
     "imagen": "/assets/products/iphone-incell/17promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 490
+    "orden": 490,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 850,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 805,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 800,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 750,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 57"
   },
   {
     "id": "samsung-incell-s20-plus",
@@ -767,11 +2675,47 @@
     "modelo": "Samsung S20 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S20 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
     "precioPublico": 550,
-    "precioMayoreo": 520,
+    "precioMayoreo": 530,
     "imagen": "/assets/products/samsung-incell/s20-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 490
+    "orden": 490,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 520,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 470,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 98"
   },
   {
     "id": "samsung-incell-s20-fe",
@@ -784,7 +2728,43 @@
     "imagen": "/assets/products/samsung-incell/s20-fe/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 500
+    "orden": 500,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 330,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 310,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 290,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 100"
   },
   {
     "id": "samsung-incell-s20-ultra",
@@ -797,7 +2777,43 @@
     "imagen": "/assets/products/samsung-incell/s20-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 510
+    "orden": 510,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 620,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 600,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 580,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 560,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 101"
   },
   {
     "id": "samsung-incell-s21",
@@ -810,7 +2826,43 @@
     "imagen": "/assets/products/samsung-incell/s21/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 520
+    "orden": 520,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 750,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 700,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 600,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 102"
   },
   {
     "id": "samsung-incell-s21-fe",
@@ -823,7 +2875,43 @@
     "imagen": "/assets/products/samsung-incell/s21-fe/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 530
+    "orden": 530,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 370,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 350,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 103"
   },
   {
     "id": "samsung-incell-s21-plus",
@@ -836,7 +2924,43 @@
     "imagen": "/assets/products/samsung-incell/s21-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 540
+    "orden": 540,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 430,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 420,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 400,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 385,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 104"
   },
   {
     "id": "samsung-incell-s21-ultra",
@@ -844,12 +2968,48 @@
     "nombre": "Pantalla para Samsung S21 Ultra",
     "modelo": "Samsung S21 Ultra INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S21 Ultra INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 600,
-    "precioMayoreo": 550,
+    "precioPublico": 550,
+    "precioMayoreo": 530,
     "imagen": "/assets/products/samsung-incell/s21-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 550
+    "orden": 550,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 510,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 480,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 105"
   },
   {
     "id": "samsung-incell-s22",
@@ -857,12 +3017,48 @@
     "nombre": "Pantalla para Samsung S22",
     "modelo": "Samsung S22 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S22 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 600,
-    "precioMayoreo": 550,
+    "precioPublico": 500,
+    "precioMayoreo": 480,
     "imagen": "/assets/products/samsung-incell/s22/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 560
+    "orden": 560,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 108"
   },
   {
     "id": "samsung-incell-s22-plus",
@@ -870,12 +3066,48 @@
     "nombre": "Pantalla para Samsung S22 Plus",
     "modelo": "Samsung S22 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S22 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 600,
-    "precioMayoreo": 570,
+    "precioPublico": 500,
+    "precioMayoreo": 480,
     "imagen": "/assets/products/samsung-incell/s22-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 570
+    "orden": 570,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 109"
   },
   {
     "id": "samsung-incell-s22-ultra",
@@ -883,12 +3115,48 @@
     "nombre": "Pantalla para Samsung S22 Ultra",
     "modelo": "Samsung S22 Ultra INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S22 Ultra INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 800,
-    "precioMayoreo": 750,
+    "precioPublico": 600,
+    "precioMayoreo": 580,
     "imagen": "/assets/products/samsung-incell/s22-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 580
+    "orden": 580,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 580,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 570,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 111"
   },
   {
     "id": "samsung-incell-s23",
@@ -896,12 +3164,48 @@
     "nombre": "Pantalla para Samsung S23",
     "modelo": "Samsung S23 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S23 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 650,
-    "precioMayoreo": 630,
+    "precioPublico": 600,
+    "precioMayoreo": 580,
     "imagen": "/assets/products/samsung-incell/s23/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 590
+    "orden": 590,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 580,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 570,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 114"
   },
   {
     "id": "samsung-incell-s23-plus",
@@ -909,12 +3213,48 @@
     "nombre": "Pantalla para Samsung S23 Plus",
     "modelo": "Samsung S23 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S23 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 650,
-    "precioMayoreo": 630,
+    "precioPublico": 600,
+    "precioMayoreo": 580,
     "imagen": "/assets/products/samsung-incell/s23-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 600
+    "orden": 600,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 580,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 570,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 115"
   },
   {
     "id": "samsung-incell-s23-ultra",
@@ -922,12 +3262,48 @@
     "nombre": "Pantalla para Samsung S23 Ultra",
     "modelo": "Samsung S23 Ultra INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S23 Ultra INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 700,
-    "precioMayoreo": 680,
+    "precioPublico": 650,
+    "precioMayoreo": 630,
     "imagen": "/assets/products/samsung-incell/s23-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 610
+    "orden": 610,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 630,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 620,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 610,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 117"
   },
   {
     "id": "samsung-incell-s24",
@@ -935,12 +3311,48 @@
     "nombre": "Pantalla para Samsung S24",
     "modelo": "Samsung S24 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S24 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 1000,
-    "precioMayoreo": 950,
+    "precioPublico": 700,
+    "precioMayoreo": 680,
     "imagen": "/assets/products/samsung-incell/s24/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 620
+    "orden": 620,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 670,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 650,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 120"
   },
   {
     "id": "samsung-incell-s24-plus",
@@ -948,12 +3360,48 @@
     "nombre": "Pantalla para Samsung S24 Plus",
     "modelo": "Samsung S24 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S24 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 1000,
-    "precioMayoreo": 950,
+    "precioPublico": 700,
+    "precioMayoreo": 680,
     "imagen": "/assets/products/samsung-incell/s24-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 630
+    "orden": 630,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 670,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 650,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 121"
   },
   {
     "id": "samsung-incell-s24-ultra",
@@ -961,12 +3409,48 @@
     "nombre": "Pantalla para Samsung S24 Ultra",
     "modelo": "Samsung S24 Ultra INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung S24 Ultra INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 1000,
-    "precioMayoreo": 950,
+    "precioPublico": 750,
+    "precioMayoreo": 740,
     "imagen": "/assets/products/samsung-incell/s24-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 640
+    "orden": 640,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 740,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 730,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 720,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 122"
   },
   {
     "id": "samsung-incell-note-8",
@@ -974,12 +3458,48 @@
     "nombre": "Pantalla para Samsung Note 8",
     "modelo": "Samsung Note 8 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung Note 8 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 600,
-    "precioMayoreo": 570,
+    "precioPublico": 500,
+    "precioMayoreo": 480,
     "imagen": "/assets/products/samsung-incell/note-8/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 650
+    "orden": 650,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 127"
   },
   {
     "id": "samsung-incell-note-9",
@@ -987,12 +3507,48 @@
     "nombre": "Pantalla para Samsung Note 9",
     "modelo": "Samsung Note 9 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung Note 9 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 600,
-    "precioMayoreo": 570,
+    "precioPublico": 500,
+    "precioMayoreo": 480,
     "imagen": "/assets/products/samsung-incell/note-9/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 660
+    "orden": 660,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 128"
   },
   {
     "id": "samsung-incell-note-10",
@@ -1000,12 +3556,48 @@
     "nombre": "Pantalla para Samsung Note 10",
     "modelo": "Samsung Note 10 INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung Note 10 INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 650,
-    "precioMayoreo": 600,
+    "precioPublico": 550,
+    "precioMayoreo": 530,
     "imagen": "/assets/products/samsung-incell/note-10/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 670
+    "orden": 670,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 520,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 470,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 129"
   },
   {
     "id": "samsung-incell-note-10-plus",
@@ -1013,12 +3605,48 @@
     "nombre": "Pantalla para Samsung Note 10 Plus",
     "modelo": "Samsung Note 10 Plus INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung Note 10 Plus INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 650,
-    "precioMayoreo": 600,
+    "precioPublico": 550,
+    "precioMayoreo": 530,
     "imagen": "/assets/products/samsung-incell/note-10-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 680
+    "orden": 680,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 520,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 470,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 131"
   },
   {
     "id": "samsung-incell-note-10-lite",
@@ -1026,12 +3654,48 @@
     "nombre": "Pantalla para Samsung Note 10 Lite",
     "modelo": "Samsung Note 10 Lite INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung Note 10 Lite INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp. Imagen pendiente de confirmar.",
-    "precioPublico": 750,
-    "precioMayoreo": 720,
+    "precioPublico": 650,
+    "precioMayoreo": 640,
     "imagen": "/assets/products/samsung-incell/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 690
+    "orden": 690,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 640,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 620,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 610,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 132"
   },
   {
     "id": "samsung-incell-note-20",
@@ -1044,7 +3708,43 @@
     "imagen": "/assets/products/samsung-incell/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 700
+    "orden": 700,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 620,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 600,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 590,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 580,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 133"
   },
   {
     "id": "samsung-oled-s20-plus",
@@ -1057,7 +3757,43 @@
     "imagen": "/assets/products/samsung-oled/s20-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 700
+    "orden": 700,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1050,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1000,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 950,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 900,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 99"
   },
   {
     "id": "samsung-incell-note-20-ultra",
@@ -1065,12 +3801,48 @@
     "nombre": "Pantalla para Samsung Note 20 Ultra",
     "modelo": "Samsung Note 20 Ultra INCELL CON MARCO",
     "descripcion": "Pantalla para Samsung Note 20 Ultra INCELL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp.",
-    "precioPublico": 800,
-    "precioMayoreo": 780,
+    "precioPublico": 680,
+    "precioMayoreo": 670,
     "imagen": "/assets/products/samsung-incell/note-20-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 710
+    "orden": 710,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 670,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 640,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 135"
   },
   {
     "id": "samsung-oled-s21-ultra",
@@ -1083,7 +3855,43 @@
     "imagen": "/assets/products/samsung-oled/s21-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 710
+    "orden": 710,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1550,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1450,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 106"
   },
   {
     "id": "samsung-oled-s22-ultra",
@@ -1096,7 +3904,43 @@
     "imagen": "/assets/products/samsung-oled/s22-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 720
+    "orden": 720,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1700,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1650,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1550,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1500,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 112"
   },
   {
     "id": "samsung-oled-s23-ultra",
@@ -1109,7 +3953,43 @@
     "imagen": "/assets/products/samsung-oled/s23-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 730
+    "orden": 730,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1580,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1550,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 118"
   },
   {
     "id": "samsung-oled-s24-ultra",
@@ -1122,7 +4002,43 @@
     "imagen": "/assets/products/samsung-oled/s24-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 740
+    "orden": 740,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1750,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1700,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1650,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1600,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 123"
   },
   {
     "id": "samsung-oled-s25-ultra",
@@ -1135,7 +4051,43 @@
     "imagen": "/assets/products/samsung-oled/s25-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 750
+    "orden": 750,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1900,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1800,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1750,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 125"
   },
   {
     "id": "samsung-oled-note-10",
@@ -1148,7 +4100,43 @@
     "imagen": "/assets/products/samsung-oled/note-10/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 760
+    "orden": 760,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1200,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1100,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 130"
   },
   {
     "id": "samsung-oled-note-10-plus",
@@ -1174,7 +4162,43 @@
     "imagen": "/assets/products/samsung-oled/note-20/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 780
+    "orden": 780,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1100,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1000,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 850,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 134"
   },
   {
     "id": "samsung-oled-note-20-ultra",
@@ -1187,7 +4211,43 @@
     "imagen": "/assets/products/samsung-oled/note-20-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 790
+    "orden": 790,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1450,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1370,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1350,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 136"
   },
   {
     "id": "samsung-original-s21-ultra",
@@ -1200,7 +4260,43 @@
     "imagen": "/assets/products/samsung-original/s21-ultra/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 820
+    "orden": 820,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2250,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2200,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 107"
   },
   {
     "id": "samsung-original-s22-plus",
@@ -1213,7 +4309,43 @@
     "imagen": "/assets/products/samsung-original/s22-plus/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 830
+    "orden": 830,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1650,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1600,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 110"
   },
   {
     "id": "mica-hd",
@@ -1229,24 +4361,22 @@
     "orden": 800,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 9,
-        "price": 450,
-        "label": "1 paquete / 50 pzs"
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
         "minQty": 10,
-        "maxQty": 49,
-        "price": 400,
-        "label": "10 paquetes"
-      },
-      {
-        "minQty": 50,
         "maxQty": null,
         "price": 350,
-        "label": "50 paquetes"
+        "label": "10+ paquetes",
+        "scope": "single_product"
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 152"
   },
   {
     "id": "mica-matte",
@@ -1262,24 +4392,22 @@
     "orden": 810,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 9,
-        "price": 450,
-        "label": "1 paquete / 50 pzs"
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
         "minQty": 10,
-        "maxQty": 49,
-        "price": 400,
-        "label": "10 paquetes"
-      },
-      {
-        "minQty": 50,
         "maxQty": null,
         "price": 350,
-        "label": "50 paquetes"
+        "label": "10+ paquetes",
+        "scope": "single_product"
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 153"
   },
   {
     "id": "mica-privacidad-hd",
@@ -1295,24 +4423,22 @@
     "orden": 820,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 9,
-        "price": 850,
-        "label": "1 paquete / 50 pzs"
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 800,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
         "minQty": 10,
-        "maxQty": 49,
-        "price": 800,
-        "label": "10 paquetes"
-      },
-      {
-        "minQty": 50,
         "maxQty": null,
         "price": 750,
-        "label": "50 paquetes"
+        "label": "10+ paquetes",
+        "scope": "single_product"
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 154"
   },
   {
     "id": "mica-privacidad-matte",
@@ -1328,24 +4454,22 @@
     "orden": 830,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 9,
-        "price": 850,
-        "label": "1 paquete / 50 pzs"
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 800,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
         "minQty": 10,
-        "maxQty": 49,
-        "price": 800,
-        "label": "10 paquetes"
-      },
-      {
-        "minQty": 50,
         "maxQty": null,
         "price": 750,
-        "label": "50 paquetes"
+        "label": "10+ paquetes",
+        "scope": "single_product"
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 155"
   },
   {
     "id": "x200t-cortadora-micas",
@@ -1358,7 +4482,25 @@
     "imagen": "/assets/products/cut-machine/x200t/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 830
+    "orden": 830,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 6500,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "minQty": 10,
+        "maxQty": null,
+        "price": 6200,
+        "label": "10+ paquetes",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 150"
   },
   {
     "id": "samsung-original-s22-ultra",
@@ -1371,7 +4513,43 @@
     "imagen": "/assets/products/samsung-original/s22-ultra/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 840
+    "orden": 840,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2900,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2800,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2700,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2600,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 113"
   },
   {
     "id": "w630-ai-pro",
@@ -1380,11 +4558,22 @@
     "modelo": "Gafas AI blancas",
     "descripcion": "Gafas inteligentes con camara, conectividad y funciones AI para uso diario. Producto HAODE para venta por WhatsApp.",
     "precioPublico": 1900,
-    "precioMayoreo": 1600,
+    "precioMayoreo": 1700,
     "imagen": "/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 840
+    "orden": 840,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1700,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 175"
   },
   {
     "id": "aimb-g5-ai-sports",
@@ -1393,11 +4582,22 @@
     "modelo": "Gafas AI deportivas",
     "descripcion": "Gafas AI estilo deportivo para catalogo HAODE. Consulta disponibilidad, colores y precio por WhatsApp.",
     "precioPublico": 1800,
-    "precioMayoreo": 1400,
+    "precioMayoreo": 1600,
     "imagen": "/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 850
+    "orden": 850,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1600,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 174"
   },
   {
     "id": "samsung-original-s23-plus",
@@ -1410,7 +4610,43 @@
     "imagen": "/assets/products/samsung-original/s23-plus/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 850
+    "orden": 850,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1700,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1650,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1600,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1500,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 116"
   },
   {
     "id": "s1-ai-classic",
@@ -1419,11 +4655,22 @@
     "modelo": "Gafas AI classic",
     "descripcion": "Gafas inteligentes estilo classic con funciones de audio y asistente. Disponible para menudeo y mayoreo HAODE.",
     "precioPublico": 1500,
-    "precioMayoreo": 1200,
+    "precioMayoreo": 1300,
     "imagen": "/assets/products/productos-ai/s1-ai-classic/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 860
+    "orden": 860,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1300,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 178"
   },
   {
     "id": "samsung-original-s23-ultra",
@@ -1436,7 +4683,43 @@
     "imagen": "/assets/products/samsung-original/s23-ultra/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 860
+    "orden": 860,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 3200,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3100,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3000,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2900,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 119"
   },
   {
     "id": "haode-ai-g3-smart-glasses",
@@ -1445,11 +4728,22 @@
     "modelo": "HAODE AI G3 Smart Glasses",
     "descripcion": "Gafas inteligentes con AI para clientes en Mexico. Incluyen camara HD, grabacion de foto, video y audio, conectividad WiFi, Bluetooth y funciones inteligentes segun version. Compatible con Android y iPhone. Ideal para ventas, viajes, contenido y uso diario. Consultar disponibilidad de funciones segun version.",
     "precioPublico": 1700,
-    "precioMayoreo": 1300,
+    "precioMayoreo": 1500,
     "imagen": "/assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg",
     "stock": "disponible",
     "activo": true,
-    "orden": 861
+    "orden": 861,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1500,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 177"
   },
   {
     "id": "haode-ai-w610-smart-glasses",
@@ -1457,12 +4751,23 @@
     "nombre": "Gafas Inteligentes AI W610",
     "modelo": "HAODE AI W610 Smart Glasses",
     "descripcion": "Gafas inteligentes con AI para clientes en Mexico. Incluyen camara HD, grabacion de foto, video y audio, conectividad WiFi, Bluetooth y funciones inteligentes segun version. Compatible con Android y iPhone. Ideal para ventas, viajes, contenido y uso diario. Consultar disponibilidad de funciones segun version.",
-    "precioPublico": 1800,
-    "precioMayoreo": 1500,
+    "precioPublico": 1500,
+    "precioMayoreo": 1200,
     "imagen": "/assets/products/productos-ai/w610-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 862
+    "orden": 862,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1200,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 176"
   },
   {
     "id": "funda-premium-17-pro-max",
@@ -1488,7 +4793,43 @@
     "imagen": "/assets/products/samsung-original/s24-ultra/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 870
+    "orden": 870,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 3400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3200,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 3100,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 124"
   },
   {
     "id": "funda-magnetica-17-pro-max",
@@ -1514,7 +4855,43 @@
     "imagen": "/assets/products/samsung-original/s25-ultra/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 880
+    "orden": 880,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 3600,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3500,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3400,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 3300,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 126"
   },
   {
     "id": "samsung-original-note-20-ultra",
@@ -1527,7 +4904,26 @@
     "imagen": "/assets/products/placeholder.svg",
     "stock": "agotado",
     "activo": false,
-    "orden": 890
+    "orden": 890,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 3400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 137"
   },
   {
     "id": "samsung-original-z-flip3",
@@ -1540,7 +4936,26 @@
     "imagen": "/assets/products/samsung-original/z-flip3/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 900
+    "orden": 900,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 3200,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3100,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 138"
   },
   {
     "id": "samsung-original-z-flip4",
@@ -1553,7 +4968,26 @@
     "imagen": "/assets/products/samsung-original/z-flip4/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 910
+    "orden": 910,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 3500,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 139"
   },
   {
     "id": "samsung-original-z-flip5",
@@ -1566,7 +5000,26 @@
     "imagen": "/assets/products/samsung-original/z-flip5/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 920
+    "orden": 920,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 3900,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 3800,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 140"
   },
   {
     "id": "samsung-original-z-flip6",
@@ -1579,7 +5032,26 @@
     "imagen": "/assets/products/samsung-original/z-flip6/main.png",
     "stock": "bajo pedido",
     "activo": true,
-    "orden": 930
+    "orden": 930,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 4400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 4300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 141"
   },
   {
     "id": "samsung-original-z-flip7",
@@ -1589,35 +5061,34 @@
     "descripcion": "Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 5800,
     "precioAppJunio": 5600,
-    "precioMayoreo": 5500,
+    "precioMayoreo": 5600,
     "imagen": "/assets/products/samsung-original/z-flip7/main.png",
     "stock": "bajo pedido",
     "activo": true,
     "orden": 940,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 1,
-        "price": 5800,
-        "label": "Precio Mostrador"
-      },
-      {
-        "minQty": 2,
-        "maxQty": 9,
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
         "price": 5600,
-        "label": "Precio APP Junio"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
-        "minQty": 10,
+        "code": "MIXED_100",
+        "minQty": 100,
         "maxQty": null,
         "price": 5500,
-        "label": "Precio Mayoreo"
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
-    "estado": "bajo pedido"
+    "estado": "bajo pedido",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 142"
   },
   {
     "id": "samsung-original-z-fold3",
@@ -1627,35 +5098,34 @@
     "descripcion": "Pantalla Samsung Z Fold3 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 4500,
     "precioAppJunio": 4400,
-    "precioMayoreo": 4300,
+    "precioMayoreo": 4400,
     "imagen": "/assets/products/samsung-original/z-fold3/main.png",
     "stock": "bajo pedido",
     "activo": true,
     "orden": 950,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 1,
-        "price": 4500,
-        "label": "Precio Mostrador"
-      },
-      {
-        "minQty": 2,
-        "maxQty": 9,
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
         "price": 4400,
-        "label": "Precio APP Junio"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
-        "minQty": 10,
+        "code": "MIXED_100",
+        "minQty": 100,
         "maxQty": null,
         "price": 4300,
-        "label": "Precio Mayoreo"
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
-    "estado": "bajo pedido"
+    "estado": "bajo pedido",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 143"
   },
   {
     "id": "samsung-original-z-fold4",
@@ -1665,35 +5135,34 @@
     "descripcion": "Pantalla Samsung Z Fold4 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 6000,
     "precioAppJunio": 5900,
-    "precioMayoreo": 5800,
+    "precioMayoreo": 5900,
     "imagen": "/assets/products/samsung-original/z-fold4/main.png",
     "stock": "bajo pedido",
     "activo": true,
     "orden": 960,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 1,
-        "price": 6000,
-        "label": "Precio Mostrador"
-      },
-      {
-        "minQty": 2,
-        "maxQty": 9,
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
         "price": 5900,
-        "label": "Precio APP Junio"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
-        "minQty": 10,
+        "code": "MIXED_100",
+        "minQty": 100,
         "maxQty": null,
         "price": 5800,
-        "label": "Precio Mayoreo"
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
-    "estado": "bajo pedido"
+    "estado": "bajo pedido",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 144"
   },
   {
     "id": "samsung-original-z-fold5",
@@ -1703,35 +5172,34 @@
     "descripcion": "Pantalla Samsung Z Fold5 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 7500,
     "precioAppJunio": 7400,
-    "precioMayoreo": 7300,
+    "precioMayoreo": 7400,
     "imagen": "/assets/products/samsung-original/z-fold5/main.png",
     "stock": "bajo pedido",
     "activo": true,
     "orden": 970,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 1,
-        "price": 7500,
-        "label": "Precio Mostrador"
-      },
-      {
-        "minQty": 2,
-        "maxQty": 9,
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
         "price": 7400,
-        "label": "Precio APP Junio"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
-        "minQty": 10,
+        "code": "MIXED_100",
+        "minQty": 100,
         "maxQty": null,
         "price": 7300,
-        "label": "Precio Mayoreo"
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
-    "estado": "bajo pedido"
+    "estado": "bajo pedido",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 145"
   },
   {
     "id": "lk-007-camara-digital-4k",
@@ -1744,7 +5212,18 @@
     "imagen": "/assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 900
+    "orden": 900,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 187"
   },
   {
     "id": "lk-030-mini-camara-retro-digital",
@@ -1757,7 +5236,18 @@
     "imagen": "/assets/products/productos-ai/lk-030-mini-camara-retro-digital/main-red-hd.jpeg",
     "stock": "disponible",
     "activo": true,
-    "orden": 901
+    "orden": 901,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 300,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 186"
   },
   {
     "id": "lk-032-camara-inteligente-con-gimbal",
@@ -1770,7 +5260,18 @@
     "imagen": "/assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 902
+    "orden": 902,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 800,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 188"
   },
   {
     "id": "lk-018-camara-accion-hd",
@@ -1783,7 +5284,18 @@
     "imagen": "/assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 903
+    "orden": 903,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1000,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 189"
   },
   {
     "id": "samsung-original-z-fold6",
@@ -1793,35 +5305,34 @@
     "descripcion": "Pantalla Samsung Z Fold6 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 9800,
     "precioAppJunio": 9700,
-    "precioMayoreo": 9600,
+    "precioMayoreo": 9700,
     "imagen": "/assets/products/samsung-original/z-fold6/main.png",
     "stock": "bajo pedido",
     "activo": true,
     "orden": 980,
     "priceTiers": [
       {
-        "minQty": 1,
-        "maxQty": 1,
-        "price": 9800,
-        "label": "Precio Mostrador"
-      },
-      {
-        "minQty": 2,
-        "maxQty": 9,
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
         "price": 9700,
-        "label": "Precio APP Junio"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
       },
       {
-        "minQty": 10,
+        "code": "MIXED_100",
+        "minQty": 100,
         "maxQty": null,
         "price": 9600,
-        "label": "Precio Mayoreo"
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
-    "estado": "bajo pedido"
+    "estado": "bajo pedido",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 146"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
@@ -1837,12 +5348,40 @@
     "orden": 10000,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 61"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
@@ -1858,12 +5397,40 @@
     "orden": 10001,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 62"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
@@ -1879,12 +5446,40 @@
     "orden": 10002,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 63"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
@@ -1900,12 +5495,40 @@
     "orden": 10003,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1050,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1100,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1050,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1000,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 64"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13",
@@ -1921,12 +5544,40 @@
     "orden": 10004,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1050,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1100,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1050,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1000,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 66"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
@@ -1942,12 +5593,40 @@
     "orden": 10005,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1250,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1200,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1150,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1050,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 67"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
@@ -1963,12 +5642,40 @@
     "orden": 10006,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1350,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1250,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1200,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 68"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14",
@@ -1984,12 +5691,40 @@
     "orden": 10007,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1250,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1200,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1150,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1050,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 69"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
@@ -2005,12 +5740,40 @@
     "orden": 10008,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1250,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 70"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
@@ -2026,12 +5789,40 @@
     "orden": 10009,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1550,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1450,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 71"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
@@ -2047,12 +5838,40 @@
     "orden": 10010,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1250,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 72"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15",
@@ -2068,12 +5887,40 @@
     "orden": 10011,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1550,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1450,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1300,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 73"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
@@ -2089,12 +5936,40 @@
     "orden": 10012,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1650,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1600,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1550,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1500,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 74"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
@@ -2110,12 +5985,40 @@
     "orden": 10013,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 75"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
@@ -2131,12 +6034,40 @@
     "orden": 10014,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 76"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16",
@@ -2152,12 +6083,40 @@
     "orden": 10015,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 1950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 78"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
@@ -2173,12 +6132,40 @@
     "orden": 10016,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 2250,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2200,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2150,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2000,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 79"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
@@ -2194,12 +6181,40 @@
     "orden": 10017,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 2450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2300,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 80"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
@@ -2215,12 +6230,40 @@
     "orden": 10018,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 2450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2200,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 81"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17",
@@ -2236,12 +6279,40 @@
     "orden": 10019,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 2450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2400,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2350,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2300,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 82"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
@@ -2257,12 +6328,40 @@
     "orden": 10020,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 2650,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2600,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2550,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2500,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 83"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
@@ -2278,11 +6377,39 @@
     "orden": 10021,
     "priceTiers": [
       {
+        "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
         "price": 2950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2900,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2850,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2700,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
       }
-    ]
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 84"
   }
 ]

@@ -321,15 +321,17 @@ function normalizePriceTiers(tiers) {
   }
   return tiers
     .map((tier) => ({
+      code: tier.code || "",
       minQty: Number(tier.minQty ?? tier.minQuantity ?? tier.min_quantity ?? tier.cantidadMinima ?? tier.min ?? 0),
       maxQty: tier.maxQty === null || tier.maxQty === undefined
         ? null
         : Number(tier.maxQty ?? tier.maxQuantity ?? tier.cantidadMaxima ?? tier.max),
       price: Number(tier.price ?? tier.precio ?? tier.unitPrice ?? tier.unit_price_mxn ?? tier.precioUnitario ?? 0),
       label: tier.label || tier.label_es || tier.nombre || "Precio por cantidad",
-      scope: tier.scope || "single_product"
+      scope: tier.scope || "single_product",
+      autoApply: tier.autoApply !== false && (tier.scope || "single_product") !== "box_model"
     }))
-    .filter((tier) => tier.minQty > 0 && tier.price > 0)
+    .filter((tier) => tier.code !== "RETAIL" && tier.minQty > 0 && tier.price > 0)
     .sort((a, b) => a.minQty - b.minQty);
 }
 
@@ -364,6 +366,7 @@ function normalizeProduct(product) {
     erpStockLabel: product.erpStockLabel || product.stock_label || "",
     erpStockUpdatedAt: product.erpStockUpdatedAt || product.updated_at || "",
     erpCatalogSource: product.erpCatalogSource === true,
+    priceSource: product.priceSource || "",
     active: product.activo !== false,
     order: Number(product.orden ?? product.order ?? 9999),
     specialOffer: product.specialOffer === true,
@@ -478,6 +481,11 @@ function mergeErpCatalog(localProducts, catalogRows) {
       return;
     }
     const current = result[index];
+    const hasAuthoritativeLocalPrices = current.priceSource.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx");
+    const incomingTiersByCode = new Map(incoming.priceTiers.filter((tier) => tier.code).map((tier) => [tier.code, tier]));
+    const mergedTiers = hasAuthoritativeLocalPrices
+      ? current.priceTiers.map((tier) => incomingTiersByCode.get(tier.code) ? { ...tier, ...incomingTiersByCode.get(tier.code) } : tier)
+      : incoming.priceTiers;
     result[index] = {
       ...current,
       sku: incoming.sku || current.sku,
@@ -486,9 +494,10 @@ function mergeErpCatalog(localProducts, catalogRows) {
       model: incoming.model || current.model,
       quality: incoming.quality || current.quality,
       description: incoming.description || current.description,
-      publicPrice: incoming.publicPrice,
-      wholesalePrice: incoming.wholesalePrice,
-      priceTiers: incoming.priceTiers,
+      publicPrice: hasAuthoritativeLocalPrices ? current.publicPrice : incoming.publicPrice,
+      wholesalePrice: hasAuthoritativeLocalPrices ? current.wholesalePrice : incoming.wholesalePrice,
+      priceTiers: mergedTiers,
+      priceSource: current.priceSource,
       image: row.image_url || current.image,
       stock: incoming.stock,
       salesAvailable: incoming.salesAvailable,
@@ -677,6 +686,7 @@ function priceRuleFor(product, quantity = 1) {
   const orderQuantity = Math.max(quantity, cartCount());
   const matchingTier = product.priceTiers
     .filter((tier) => {
+      if (tier.autoApply === false) return false;
       const applicableQuantity = tier.scope === "mixed_order" ? orderQuantity : quantity;
       return applicableQuantity >= tier.minQty && (tier.maxQty === null || applicableQuantity <= tier.maxQty);
     })

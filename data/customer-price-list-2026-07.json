@@ -1,0 +1,2613 @@
+{
+  "sourceWorkbook": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx",
+  "sourceSheet": "Lista_Precios",
+  "currency": "MXN",
+  "rules": {
+    "exactModelAndQualityOnly": true,
+    "missingRowsAreNotPublished": true,
+    "landedCostExcluded": true
+  },
+  "rows": [
+    {
+      "section": "iphone",
+      "sourceRow": 6,
+      "model": "X",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 180,
+        "wholesale5": 175,
+        "mixed100": 170,
+        "model100": 165,
+        "boxModel": 155,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 7,
+      "model": "XS",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 180,
+        "wholesale5": 175,
+        "mixed100": 170,
+        "model100": 165,
+        "boxModel": 155,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 8,
+      "model": "XR",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 180,
+        "wholesale5": 175,
+        "mixed100": 170,
+        "model100": 165,
+        "boxModel": 155,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 9,
+      "model": "11",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 180,
+        "wholesale5": 175,
+        "mixed100": 170,
+        "model100": 165,
+        "boxModel": 155,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 10,
+      "model": "11PRO",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 200,
+        "wholesale5": 190,
+        "mixed100": 185,
+        "model100": 180,
+        "boxModel": 175,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 11,
+      "model": "XS MAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 200,
+        "wholesale5": 190,
+        "mixed100": 185,
+        "model100": 180,
+        "boxModel": 175,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 12,
+      "model": "XS MAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 580,
+        "wholesale5": 570,
+        "mixed100": 560,
+        "model100": 550,
+        "boxModel": 540,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 13,
+      "model": "11PRO MAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 220,
+        "wholesale5": 210,
+        "mixed100": 200,
+        "model100": 195,
+        "boxModel": 190,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 14,
+      "model": "11PRO MAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 600,
+        "wholesale5": 590,
+        "mixed100": 580,
+        "model100": 550,
+        "boxModel": 535,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 15,
+      "model": "12mini",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 230,
+        "wholesale5": 220,
+        "mixed100": 210,
+        "model100": 200,
+        "boxModel": 195,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 16,
+      "model": "12/12PRO",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 220,
+        "wholesale5": 210,
+        "mixed100": 200,
+        "model100": 195,
+        "boxModel": 190,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 17,
+      "model": "12/12PRO",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 650,
+        "wholesale5": 640,
+        "mixed100": 630,
+        "model100": 615,
+        "boxModel": 600,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 18,
+      "model": "12PRO MAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 250,
+        "wholesale5": 240,
+        "mixed100": 235,
+        "model100": 230,
+        "boxModel": 220,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 19,
+      "model": "12PRO MAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 850,
+        "wholesale5": 830,
+        "mixed100": 800,
+        "model100": 750,
+        "boxModel": 730,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 20,
+      "model": "13 mini",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 260,
+        "wholesale5": 250,
+        "mixed100": 245,
+        "model100": 240,
+        "boxModel": 235,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 21,
+      "model": "13",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 250,
+        "wholesale5": 245,
+        "mixed100": 240,
+        "model100": 235,
+        "boxModel": 230,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 22,
+      "model": "13",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 730,
+        "wholesale5": 720,
+        "mixed100": 710,
+        "model100": 630,
+        "boxModel": 600,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 23,
+      "model": "13PRO",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 300,
+        "wholesale5": 290,
+        "mixed100": 285,
+        "model100": 280,
+        "boxModel": 275,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 24,
+      "model": "13PRO",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 800,
+        "wholesale5": 780,
+        "mixed100": 750,
+        "model100": 730,
+        "boxModel": 700,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 25,
+      "model": "13PRO MAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale5": 340,
+        "mixed100": 335,
+        "model100": 330,
+        "boxModel": 325,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 26,
+      "model": "13PRO MAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 900,
+        "wholesale5": 850,
+        "mixed100": 800,
+        "model100": 770,
+        "boxModel": 750,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 27,
+      "model": "14",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 260,
+        "wholesale5": 250,
+        "mixed100": 245,
+        "model100": 240,
+        "boxModel": 230,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 28,
+      "model": "14",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 700,
+        "wholesale5": 680,
+        "mixed100": 650,
+        "model100": 630,
+        "boxModel": 600,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 29,
+      "model": "14",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 950,
+        "mixed100": 900,
+        "model100": 850,
+        "boxModel": 800,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 30,
+      "model": "14 plus",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 300,
+        "wholesale5": 290,
+        "mixed100": 280,
+        "model100": 275,
+        "boxModel": 265,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 31,
+      "model": "14 plus",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 900,
+        "wholesale5": 880,
+        "mixed100": 850,
+        "model100": 830,
+        "boxModel": 800,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 32,
+      "model": "14 plus",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1150,
+        "mixed100": 1100,
+        "model100": 1050,
+        "boxModel": 1000,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 33,
+      "model": "14PRO",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale5": 340,
+        "mixed100": 330,
+        "model100": 320,
+        "boxModel": 310,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 34,
+      "model": "14PRO",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1150,
+        "mixed100": 1100,
+        "model100": 1050,
+        "boxModel": 1000,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 35,
+      "model": "14PRO MAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 380,
+        "wholesale5": 350,
+        "mixed100": 340,
+        "model100": 330,
+        "boxModel": 310,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 36,
+      "model": "14PRO MAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 950,
+        "mixed100": 900,
+        "model100": 850,
+        "boxModel": 800,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 37,
+      "model": "15",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 300,
+        "wholesale5": 290,
+        "mixed100": 285,
+        "model100": 280,
+        "boxModel": 275,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 38,
+      "model": "15",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1150,
+        "mixed100": 1100,
+        "model100": 1050,
+        "boxModel": 1000,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 39,
+      "model": "15 plus",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 330,
+        "wholesale5": 310,
+        "mixed100": 300,
+        "model100": 290,
+        "boxModel": 275,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 40,
+      "model": "15PRO",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale5": 340,
+        "mixed100": 335,
+        "model100": 330,
+        "boxModel": 320,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 41,
+      "model": "15PRO",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1300,
+        "wholesale5": 1250,
+        "mixed100": 1200,
+        "model100": 1150,
+        "boxModel": 1100,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 42,
+      "model": "15PRO MAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale5": 380,
+        "mixed100": 370,
+        "model100": 350,
+        "boxModel": 330,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 43,
+      "model": "15PRO MAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1100,
+        "mixed100": 1000,
+        "model100": 900,
+        "boxModel": 850,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 44,
+      "model": "16",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale5": 380,
+        "mixed100": 350,
+        "model100": 330,
+        "boxModel": 320,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 45,
+      "model": "16E",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 300,
+        "wholesale5": 280,
+        "mixed100": 275,
+        "model100": 270,
+        "boxModel": 260,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 46,
+      "model": "16E",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 750,
+        "wholesale5": 720,
+        "mixed100": 700,
+        "model100": 670,
+        "boxModel": 650,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 47,
+      "model": "16PLUS",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale5": 380,
+        "mixed100": 360,
+        "model100": 350,
+        "boxModel": 330,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 48,
+      "model": "16PRO",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 700,
+        "wholesale5": 680,
+        "mixed100": 660,
+        "model100": 650,
+        "boxModel": 620,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 49,
+      "model": "16PRO",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1450,
+        "mixed100": 1400,
+        "model100": 1350,
+        "boxModel": 1300,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 50,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1600,
+        "wholesale5": 1550,
+        "mixed100": 1500,
+        "model100": 1450,
+        "boxModel": 1400,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 51,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 2000,
+        "wholesale5": 1950,
+        "mixed100": 1900,
+        "model100": 1850,
+        "boxModel": 1800,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 52,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 750,
+        "wholesale5": 730,
+        "mixed100": 700,
+        "model100": 680,
+        "boxModel": 650,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 53,
+      "model": "17",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 950,
+        "mixed100": 920,
+        "model100": 900,
+        "boxModel": 850,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 54,
+      "model": "17PRO",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 850,
+        "wholesale5": 800,
+        "mixed100": 755,
+        "model100": 750,
+        "boxModel": 700,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 55,
+      "model": "17 AIR",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 2500,
+        "wholesale5": 2400,
+        "mixed100": 2300,
+        "model100": 2200,
+        "boxModel": 2100,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 56,
+      "model": "17E",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 950,
+        "mixed100": 920,
+        "model100": 900,
+        "boxModel": 850,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 57,
+      "model": "17 PROMAX",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 900,
+        "wholesale5": 850,
+        "mixed100": 805,
+        "model100": 800,
+        "boxModel": 750,
+        "quantity10": null
+      },
+      "note": "Tamaño original"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 61,
+      "model": "XSMAX",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 950,
+        "mixed100": 900,
+        "model100": 850,
+        "boxModel": 800,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 62,
+      "model": "11PROMAX",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 950,
+        "mixed100": 900,
+        "model100": 850,
+        "boxModel": 800,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 63,
+      "model": "12/12PRO",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 950,
+        "mixed100": 900,
+        "model100": 850,
+        "boxModel": 800,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 64,
+      "model": "12PROMAX",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1050,
+        "mixed100": 1100,
+        "model100": 1050,
+        "boxModel": 1000,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 65,
+      "model": "12MINI",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1300,
+        "wholesale5": 1250,
+        "mixed100": 1200,
+        "model100": 1150,
+        "boxModel": 1050,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 66,
+      "model": 13,
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1050,
+        "mixed100": 1100,
+        "model100": 1050,
+        "boxModel": 1000,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 67,
+      "model": "13PRO",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1300,
+        "wholesale5": 1250,
+        "mixed100": 1200,
+        "model100": 1150,
+        "boxModel": 1050,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 68,
+      "model": "13PROMAX",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1400,
+        "wholesale5": 1350,
+        "mixed100": 1300,
+        "model100": 1250,
+        "boxModel": 1200,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 69,
+      "model": 14,
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1300,
+        "wholesale5": 1250,
+        "mixed100": 1200,
+        "model100": 1150,
+        "boxModel": 1050,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 70,
+      "model": "14PRO",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1450,
+        "mixed100": 1400,
+        "model100": 1350,
+        "boxModel": 1250,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 71,
+      "model": "14PROMAX",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1600,
+        "wholesale5": 1550,
+        "mixed100": 1500,
+        "model100": 1450,
+        "boxModel": 1400,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 72,
+      "model": "14PLUS",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1450,
+        "mixed100": 1400,
+        "model100": 1350,
+        "boxModel": 1250,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 73,
+      "model": 15,
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1600,
+        "wholesale5": 1550,
+        "mixed100": 1500,
+        "model100": 1450,
+        "boxModel": 1300,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 74,
+      "model": "15PRO",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1700,
+        "wholesale5": 1650,
+        "mixed100": 1600,
+        "model100": 1550,
+        "boxModel": 1500,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 75,
+      "model": "15PROMAX",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2000,
+        "wholesale5": 1950,
+        "mixed100": 1900,
+        "model100": 1850,
+        "boxModel": 1700,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 76,
+      "model": "15PLUS",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2000,
+        "wholesale5": 1950,
+        "mixed100": 1900,
+        "model100": 1850,
+        "boxModel": 1700,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 77,
+      "model": "16E",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 1800,
+        "wholesale5": 1750,
+        "mixed100": 1700,
+        "model100": 1650,
+        "boxModel": 1550,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 78,
+      "model": 16,
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2000,
+        "wholesale5": 1950,
+        "mixed100": 1900,
+        "model100": 1850,
+        "boxModel": 1700,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 79,
+      "model": "16PRO",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2300,
+        "wholesale5": 2250,
+        "mixed100": 2200,
+        "model100": 2150,
+        "boxModel": 2000,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 80,
+      "model": "16PROMAX",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2500,
+        "wholesale5": 2450,
+        "mixed100": 2400,
+        "model100": 2350,
+        "boxModel": 2300,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 81,
+      "model": "16PLUS",
+      "product": null,
+      "quality": "DIAGNOTICO  SOFT OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2500,
+        "wholesale5": 2450,
+        "mixed100": 2400,
+        "model100": 2350,
+        "boxModel": 2200,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 82,
+      "model": 17,
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2500,
+        "wholesale5": 2450,
+        "mixed100": 2400,
+        "model100": 2350,
+        "boxModel": 2300,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 83,
+      "model": "17PRO",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 2700,
+        "wholesale5": 2650,
+        "mixed100": 2600,
+        "model100": 2550,
+        "boxModel": 2500,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceRow": 84,
+      "model": "17PROMAX",
+      "product": null,
+      "quality": "DIAGNOTICO HARD OLED",
+      "brand": null,
+      "prices": {
+        "retail": 3000,
+        "wholesale5": 2950,
+        "mixed100": 2900,
+        "model100": 2850,
+        "boxModel": 2700,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 88,
+      "model": "S8",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 360,
+        "wholesale5": 350,
+        "mixed100": 340,
+        "model100": 320,
+        "boxModel": 310,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 89,
+      "model": "S8+",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 370,
+        "wholesale5": 360,
+        "mixed100": 350,
+        "model100": 340,
+        "boxModel": 310,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 90,
+      "model": "S9",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 360,
+        "wholesale5": 350,
+        "mixed100": 340,
+        "model100": 320,
+        "boxModel": 320,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 91,
+      "model": "S9 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 370,
+        "wholesale5": 360,
+        "mixed100": 350,
+        "model100": 340,
+        "boxModel": 330,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 92,
+      "model": "S10",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 380,
+        "wholesale5": 370,
+        "mixed100": 360,
+        "model100": 350,
+        "boxModel": 340,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 93,
+      "model": "S10 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 380,
+        "wholesale5": 370,
+        "mixed100": 360,
+        "model100": 350,
+        "boxModel": 400,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 94,
+      "model": "S10E",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale5": 380,
+        "mixed100": 370,
+        "model100": 360,
+        "boxModel": 550,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 95,
+      "model": "S10 LITE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 450,
+        "wholesale5": 420,
+        "mixed100": 400,
+        "model100": 380,
+        "boxModel": 330,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 96,
+      "model": "S20 4G",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 470,
+        "wholesale5": 460,
+        "mixed100": 450,
+        "model100": 420,
+        "boxModel": 400,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 97,
+      "model": "S20 5G",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 470,
+        "wholesale5": 460,
+        "mixed100": 450,
+        "model100": 420,
+        "boxModel": 400,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 98,
+      "model": "S20 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 550,
+        "wholesale5": 530,
+        "mixed100": 520,
+        "model100": 500,
+        "boxModel": 470,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 99,
+      "model": "S20 PLUS",
+      "product": null,
+      "quality": "OLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1100,
+        "wholesale5": 1050,
+        "mixed100": 1000,
+        "model100": 950,
+        "boxModel": 900,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 100,
+      "model": "S20FE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale5": 330,
+        "mixed100": 320,
+        "model100": 310,
+        "boxModel": 290,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 101,
+      "model": "S20 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 650,
+        "wholesale5": 620,
+        "mixed100": 600,
+        "model100": 580,
+        "boxModel": 560,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 102,
+      "model": "S21",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 800,
+        "wholesale5": 750,
+        "mixed100": 700,
+        "model100": 600,
+        "boxModel": 550,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 103,
+      "model": "S21 FE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale5": 380,
+        "mixed100": 370,
+        "model100": 360,
+        "boxModel": 350,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 104,
+      "model": "S21 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 450,
+        "wholesale5": 430,
+        "mixed100": 420,
+        "model100": 400,
+        "boxModel": 385,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 105,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 550,
+        "wholesale5": 530,
+        "mixed100": 510,
+        "model100": 500,
+        "boxModel": 480,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 106,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "OLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1600,
+        "wholesale5": 1550,
+        "mixed100": 1500,
+        "model100": 1450,
+        "boxModel": 1400,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 107,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2500,
+        "wholesale5": 2400,
+        "mixed100": 2300,
+        "model100": 2250,
+        "boxModel": 2200,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 108,
+      "model": "S22",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale5": 480,
+        "mixed100": 470,
+        "model100": 460,
+        "boxModel": 450,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 109,
+      "model": "S22 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale5": 480,
+        "mixed100": 470,
+        "model100": 460,
+        "boxModel": 450,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 110,
+      "model": "S22 PLUS",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1700,
+        "wholesale5": 1650,
+        "mixed100": 1600,
+        "model100": 1500,
+        "boxModel": 1400,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 111,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 600,
+        "wholesale5": 580,
+        "mixed100": 570,
+        "model100": 560,
+        "boxModel": 550,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 112,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1750,
+        "wholesale5": 1700,
+        "mixed100": 1650,
+        "model100": 1550,
+        "boxModel": 1500,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 113,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3000,
+        "wholesale5": 2900,
+        "mixed100": 2800,
+        "model100": 2700,
+        "boxModel": 2600,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 114,
+      "model": "S23",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 600,
+        "wholesale5": 580,
+        "mixed100": 570,
+        "model100": 560,
+        "boxModel": 550,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 115,
+      "model": "S23 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 600,
+        "wholesale5": 580,
+        "mixed100": 570,
+        "model100": 560,
+        "boxModel": 550,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 116,
+      "model": "S23 PLUS",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1800,
+        "wholesale5": 1700,
+        "mixed100": 1650,
+        "model100": 1600,
+        "boxModel": 1500,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 117,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 650,
+        "wholesale5": 630,
+        "mixed100": 620,
+        "model100": 610,
+        "boxModel": 600,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 118,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1600,
+        "wholesale5": 1580,
+        "mixed100": 1550,
+        "model100": 1500,
+        "boxModel": 1400,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 119,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3300,
+        "wholesale5": 3200,
+        "mixed100": 3100,
+        "model100": 3000,
+        "boxModel": 2900,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 120,
+      "model": "S24",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 700,
+        "wholesale5": 680,
+        "mixed100": 670,
+        "model100": 660,
+        "boxModel": 650,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 121,
+      "model": "S24 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 700,
+        "wholesale5": 680,
+        "mixed100": 670,
+        "model100": 660,
+        "boxModel": 650,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 122,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 750,
+        "wholesale5": 740,
+        "mixed100": 730,
+        "model100": 720,
+        "boxModel": 700,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 123,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1800,
+        "wholesale5": 1750,
+        "mixed100": 1700,
+        "model100": 1650,
+        "boxModel": 1600,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 124,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3500,
+        "wholesale5": 3400,
+        "mixed100": 3300,
+        "model100": 3200,
+        "boxModel": 3100,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 125,
+      "model": "S25 Ultra",
+      "product": null,
+      "quality": "AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2000,
+        "wholesale5": 1900,
+        "mixed100": 1800,
+        "model100": 1750,
+        "boxModel": 1700,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 126,
+      "model": "S25 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3700,
+        "wholesale5": 3600,
+        "mixed100": 3500,
+        "model100": 3400,
+        "boxModel": 3300,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 127,
+      "model": "NOTE 8",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale5": 480,
+        "mixed100": 470,
+        "model100": 460,
+        "boxModel": 450,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 128,
+      "model": "NOTE 9",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale5": 480,
+        "mixed100": 470,
+        "model100": 460,
+        "boxModel": 450,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 129,
+      "model": "NOTE 10",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 550,
+        "wholesale5": 530,
+        "mixed100": 520,
+        "model100": 500,
+        "boxModel": 470,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 130,
+      "model": "NOTE 10",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1400,
+        "mixed100": 1300,
+        "model100": 1200,
+        "boxModel": 1100,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 131,
+      "model": "NOTE 10+",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 550,
+        "wholesale5": 530,
+        "mixed100": 520,
+        "model100": 500,
+        "boxModel": 470,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 132,
+      "model": "NOTE10 LITE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 650,
+        "wholesale5": 640,
+        "mixed100": 630,
+        "model100": 620,
+        "boxModel": 610,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 133,
+      "model": "NOTE 20",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 650,
+        "wholesale5": 620,
+        "mixed100": 600,
+        "model100": 590,
+        "boxModel": 580,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 134,
+      "model": "NOTE 20",
+      "product": null,
+      "quality": "AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1100,
+        "mixed100": 1000,
+        "model100": 900,
+        "boxModel": 850,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 135,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 680,
+        "wholesale5": 670,
+        "mixed100": 660,
+        "model100": 650,
+        "boxModel": 640,
+        "quantity10": null
+      },
+      "note": "Pantalla completa"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 136,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1450,
+        "mixed100": 1400,
+        "model100": 1370,
+        "boxModel": 1350,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 137,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3500,
+        "wholesale5": 3400,
+        "mixed100": 3300,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 138,
+      "model": "Z FLIP3",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3300,
+        "wholesale5": 3200,
+        "mixed100": 3100,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 139,
+      "model": "Z FLIP4",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3600,
+        "wholesale5": 3500,
+        "mixed100": 3400,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 140,
+      "model": "Z FLIP5",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4000,
+        "wholesale5": 3900,
+        "mixed100": 3800,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 141,
+      "model": "Z FLIP6",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4500,
+        "wholesale5": 4400,
+        "mixed100": 4300,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 142,
+      "model": "Z FLIP7",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 5800,
+        "wholesale5": 5600,
+        "mixed100": 5500,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 143,
+      "model": "Z FOLD3",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4500,
+        "wholesale5": 4400,
+        "mixed100": 4300,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 144,
+      "model": "Z FOLD4",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 6000,
+        "wholesale5": 5900,
+        "mixed100": 5800,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 145,
+      "model": "Z FOLD5",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 7500,
+        "wholesale5": 7400,
+        "mixed100": 7300,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "samsung",
+      "sourceRow": 146,
+      "model": "Z FOLD6",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 9800,
+        "wholesale5": 9700,
+        "mixed100": 9600,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "ACTUALIZACION AUTOMATICA"
+    },
+    {
+      "section": "micas",
+      "sourceRow": 150,
+      "model": null,
+      "product": "Máquina de Micas（X200T）",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 6800,
+        "wholesale5": 6500,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": 6200
+      },
+      "note": "Mayor cantidad, menor precio."
+    },
+    {
+      "section": "micas",
+      "sourceRow": 152,
+      "model": null,
+      "product": "MICA HD",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 450,
+        "wholesale5": 400,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": 350
+      },
+      "note": null
+    },
+    {
+      "section": "micas",
+      "sourceRow": 153,
+      "model": null,
+      "product": "MICA MATTE",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 450,
+        "wholesale5": 400,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": 350
+      },
+      "note": "Personalización de logo GRATIS en compras de 5,000 micas o más."
+    },
+    {
+      "section": "micas",
+      "sourceRow": 154,
+      "model": null,
+      "product": "MICA PRIVACIDAD HD",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 850,
+        "wholesale5": 800,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": 750
+      },
+      "note": null
+    },
+    {
+      "section": "micas",
+      "sourceRow": 155,
+      "model": null,
+      "product": "MICA PRIVACIDAD MATTE",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 850,
+        "wholesale5": 800,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": 750
+      },
+      "note": null
+    },
+    {
+      "section": "ai",
+      "sourceRow": 174,
+      "model": null,
+      "product": "Gafas AI G5",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1800,
+        "wholesale5": 1600,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 175,
+      "model": null,
+      "product": "Gafas AI W630",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1900,
+        "wholesale5": 1700,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 176,
+      "model": null,
+      "product": "Gafas AI W610",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1200,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 177,
+      "model": null,
+      "product": "Gafas AI G3",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1700,
+        "wholesale5": 1500,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 178,
+      "model": null,
+      "product": "Gafas AI S1",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1300,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 179,
+      "model": null,
+      "product": "Gafas AI M89",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1500,
+        "wholesale5": 1300,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 180,
+      "model": null,
+      "product": "Gafas AI M08",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1700,
+        "wholesale5": 1500,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 181,
+      "model": null,
+      "product": "Gafas AI M02",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1600,
+        "wholesale5": 1400,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "ai",
+      "sourceRow": 182,
+      "model": null,
+      "product": "Gafas AI M95",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1600,
+        "wholesale5": 1400,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": "Producto AI"
+    },
+    {
+      "section": "cameras",
+      "sourceRow": 186,
+      "model": null,
+      "product": "LK-030",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 400,
+        "wholesale5": 300,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "cameras",
+      "sourceRow": 187,
+      "model": null,
+      "product": "LK-007",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 500,
+        "wholesale5": 400,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "cameras",
+      "sourceRow": 188,
+      "model": null,
+      "product": "LK-032",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1000,
+        "wholesale5": 800,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": null
+    },
+    {
+      "section": "cameras",
+      "sourceRow": 189,
+      "model": null,
+      "product": "LK-018",
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1200,
+        "wholesale5": 1000,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": null,
+        "quantity10": null
+      },
+      "note": null
+    }
+  ]
+}

@@ -1228,6 +1228,10 @@ function erpTierPrices(row) {
   ];
 }
 
+function hasAuthoritativeCustomerPrices(product) {
+  return String(product.priceSource || '').includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx');
+}
+
 function applyErpPublicCatalog(rows) {
   if (!Array.isArray(rows) || !rows.length) return;
   const byKey = new Map();
@@ -1247,7 +1251,9 @@ function applyErpPublicCatalog(rows) {
       product.model = row.model || product.model;
       product.quality = row.quality || product.quality;
       product.description = row.description_es || product.description;
-      product.priceTable = buildPriceTable(prices);
+      if (!hasAuthoritativeCustomerPrices(product)) {
+        product.priceTable = buildPriceTable(prices);
+      }
       product.lowestPriceText = buildLowestPriceText(product.priceTable);
       product.stockStatus = row.stock_status || 'ask_stock';
       product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
@@ -1424,6 +1430,7 @@ function createProduct(definition) {
     galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== mainImage))),
     videos: definition.videos || categoryMedia?.videos || [],
     priceTable,
+    priceSource: definition.priceSource || '',
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
     whatsappText: buildProductCotizacionText(name, definition.sku || definition.SKU || definition.id),
     lowestPriceText: buildLowestPriceText(priceTable),

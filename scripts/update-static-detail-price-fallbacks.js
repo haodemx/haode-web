@@ -126,7 +126,8 @@ function main() {
       continue;
     }
 
-    if (PROTECTED_PRICE_SKUS.has(product.id)) {
+    const hasApprovedCustomerPrice = String(product.priceSource || '').includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx');
+    if (PROTECTED_PRICE_SKUS.has(product.id) && !hasApprovedCustomerPrice) {
       skippedProtected.push(product.id);
       continue;
     }

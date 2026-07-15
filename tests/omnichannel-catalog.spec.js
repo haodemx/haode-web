@@ -104,8 +104,9 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
   await expect(pendingCard.getByRole("button")).toHaveText("Consultar");
 
   const syncedCard = page.locator(".product-card", { hasText: "HAODE X200T Cortadora Inteligente de Micas" });
-  await expect(syncedCard).toContainText("$6,700");
-  await expect(syncedCard).not.toContainText("$6,500");
+  await expect(syncedCard).toContainText("$6,800");
+  await expect(syncedCard).toContainText("$6,500");
+  await expect(syncedCard).not.toContainText("$6,700");
   await saveEvidence(page, "app-erp-catalog.png");
 });
 

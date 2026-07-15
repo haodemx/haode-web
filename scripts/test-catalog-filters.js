@@ -7,10 +7,12 @@ const DATA_FILE = path.join(ROOT, 'data', 'products.generated.js');
 const EXPECTED_CATEGORIES = [
   'iphone-incell',
   'iphone-oled',
+  'oled-diagnostica',
   'samsung-incell',
   'samsung-oled',
   'samsung-original',
   'gafas-ai',
+  'camaras-inteligentes',
   'micas',
   'maquinas-de-mica',
   'fundas',
