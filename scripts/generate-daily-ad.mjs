@@ -1,12 +1,15 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import { buildCampaignCode, buildCampaignLinks } from "./campaign-links.mjs";
+
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, "data", "marketing");
 const LATEST_PATH = path.join(OUT_DIR, "daily-ad-latest.json");
 const PRODUCTS_PATH = path.join(ROOT, "app", "products.json");
 const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
 const WHATSAPP_NUMBER = "525645866014";
+const APP_URL = "https://haode.com.mx/app/";
 
 function formatDate(date = new Date()) {
   const year = date.getFullYear();
@@ -86,6 +89,8 @@ function buildAd(product, date = new Date()) {
   const stockQty = Number(product.stock_qty ?? product.stockQty ?? product.quantity ?? product.qty);
   const stockLocation = product.stock_location || product.stockLocation || "CDMX";
   const dateKey = formatDate(date);
+  const campaignCode = buildCampaignCode({ dateKey, sku });
+  const trackingLinks = buildCampaignLinks({ appUrl: APP_URL, campaign: campaignCode, productSku: sku });
   const cta = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola HAODE, quiero información de ${name}`)}`;
 
   return {
@@ -95,6 +100,8 @@ function buildAd(product, date = new Date()) {
     sku,
     stock_location: stockLocation,
     stock_qty: Number.isFinite(stockQty) ? stockQty : null,
+    campaign_code: campaignCode,
+    tracking_links: trackingLinks,
     headline_es: `${name} disponible para tiendas y técnicos en México`,
     caption_facebook_es: `HAODE México: ${name}. Atención para técnicos, tiendas y mayoreo en CDMX. Consulta disponibilidad y cotiza directo por WhatsApp.`,
     caption_tiktok_es: `${name} en HAODE México. Pantallas, micas, fundas y productos AI para técnicos y tiendas. Cotiza por WhatsApp.`,
@@ -103,6 +110,8 @@ function buildAd(product, date = new Date()) {
     website_banner_subtitle: `${name}. Stock y disponibilidad se confirman por WhatsApp.`,
     app_banner_title: `Hoy en HAODE: ${theme}`,
     app_banner_subtitle: `${name}. Agrega al carrito o consulta por WhatsApp.`,
+    cta_website: trackingLinks.website,
+    cta_app: trackingLinks.app,
     cta_whatsapp: cta,
     image_prompt: `Foto comercial limpia de ${name} para HAODE México, fondo claro, estilo mayorista profesional, sin precios visibles, formato 1080x1080 y 1080x1920.`,
     status: "draft"

@@ -36,7 +36,7 @@ async function loadDailyAdBanner() {
     const cta = banner.querySelector('[data-daily-ad-cta]');
     if (title) title.textContent = displayText(ad.website_banner_title || ad.main_category || 'Producto destacado');
     if (subtitle) subtitle.textContent = displayText(ad.website_banner_subtitle || ad.headline_es || 'Consulta disponibilidad por WhatsApp.');
-    if (cta && ad.cta_whatsapp) cta.href = ad.cta_whatsapp;
+    if (cta && (ad.cta_website || ad.cta_whatsapp)) cta.href = ad.cta_website || ad.cta_whatsapp;
     banner.hidden = false;
   } catch (error) {
     console.info('HAODE banner diario no disponible:', error.message);

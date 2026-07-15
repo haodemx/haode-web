@@ -1110,10 +1110,16 @@ function buildWhatsAppUrl(message) {
 }
 
 function trafficSource() {
+  if (window.HaodeCampaign) return window.HaodeCampaign.capture({ channel: 'haode_web' }).source;
   const params = new URLSearchParams(window.location.search);
   const source = params.get('utm_source') || sessionStorage.getItem('haode_traffic_source') || 'website';
   sessionStorage.setItem('haode_traffic_source', source);
   return source;
+}
+
+function trafficReference() {
+  if (!window.HaodeCampaign) return trafficSource();
+  return window.HaodeCampaign.reference(window.HaodeCampaign.capture({ channel: 'haode_web' })) || 'haode_web';
 }
 
 function trackWebsiteEvent(eventName, params = {}) {
@@ -1122,7 +1128,7 @@ function trackWebsiteEvent(eventName, params = {}) {
 
 function buildProductCotizacionText(name, sku = '') {
   const skuLine = sku ? ` SKU: ${sku}.` : '';
-  return `Hola, quiero cotizar: ${name}.${skuLine} Origen: ${trafficSource()}. ¿Me pueden confirmar precio y disponibilidad?`;
+  return `Hola, quiero cotizar: ${name}.${skuLine} Origen: ${trafficReference()}. ¿Me pueden confirmar precio y disponibilidad?`;
 }
 
 function buildMissingModelCotizacionText() {

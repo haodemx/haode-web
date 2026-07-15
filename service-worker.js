@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-15-omnichannel-2";
+const CACHE_VERSION = "haode-pwa-v2026-07-15-omnichannel-3-campaigns";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -10,6 +10,7 @@ const APP_SHELL_URLS = [
   "/offline.html",
   "/style.css?v=20260628-stable-revert-01",
   "/script.js",
+  "/campaign-attribution.js",
   "/products.js",
   "/app/app.css",
   "/app/app.js",

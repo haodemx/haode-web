@@ -160,6 +160,9 @@ function appChannel() {
 }
 
 function trafficAttribution() {
+  if (window.HaodeCampaign) {
+    return window.HaodeCampaign.capture({ channel: appChannel() });
+  }
   const params = new URLSearchParams(window.location.search);
   let stored = {};
   try {
@@ -185,7 +188,8 @@ function trafficAttribution() {
     source: params.get("utm_source") || params.get("source") || stored.source || detectedSource || appChannel(),
     medium: params.get("utm_medium") || stored.medium || (appChannel() === "haode_app" ? "app" : "website"),
     campaign: params.get("utm_campaign") || stored.campaign || "",
-    content: params.get("utm_content") || stored.content || ""
+    content: params.get("utm_content") || stored.content || "",
+    landingPage: stored.landingPage || window.location.pathname || "/"
   };
   window.sessionStorage.setItem("haode-attribution", JSON.stringify(attribution));
   return attribution;
@@ -979,7 +983,7 @@ function dailyAdBannerHtml() {
   }
   const title = ad.app_banner_title || ad.website_banner_title || "Hoy en HAODE";
   const subtitle = ad.app_banner_subtitle || ad.website_banner_subtitle || "Consulta disponibilidad por WhatsApp.";
-  const cta = ad.cta_whatsapp || `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}`;
+  const cta = ad.cta_app || ad.cta_whatsapp || `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}`;
 
   return `
     <section class="daily-ad-card" aria-label="Promoción diaria HAODE">
@@ -1518,6 +1522,7 @@ function webOrderPayload() {
     utm_medium: state.attribution.medium,
     utm_campaign: state.attribution.campaign,
     utm_content: state.attribution.content,
+    landing_page: state.attribution.landingPage,
     client_request_id: checkoutRequestId(),
     total: cartTotal(),
     items: items.map((item) => {
