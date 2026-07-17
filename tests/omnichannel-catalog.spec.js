@@ -65,6 +65,23 @@ const catalog = {
       stock_status: "available",
       stock_label: "Disponible",
       updated_at: "2026-07-14T12:00:00.000Z"
+    },
+    {
+      sku: "IP-14-INCELL-FHD",
+      slug: "pantalla-iphone-14-incell-fhd",
+      public_name_es: "Pantalla iPhone 14 INCELL FHD",
+      brand: "HAODE",
+      category: "iPhone INCELL",
+      quality: "INCELL FHD",
+      model: "iPhone 14",
+      image_url: "",
+      public_price_mxn: 260,
+      public_price_tiers: [],
+      price_status: "CONFIRMED",
+      sales_available: true,
+      stock_status: "available",
+      stock_label: "Disponible",
+      updated_at: "2026-07-14T12:00:00.000Z"
     }
   ]
 };
@@ -82,6 +99,8 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
   });
 
   await page.goto(`${APP_URL}?utm_source=google_business&utm_campaign=omnichannel_2#lista`, { waitUntil: "domcontentloaded" });
+
+  await expect.poll(() => page.evaluate(() => window.HAODE_DIAGNOSTICS?.productosActivos)).toBe(catalog.products.length);
 
   const availableCard = page.locator(".product-card", { hasText: "Producto ERP exclusivo X200" });
   await expect(availableCard).toBeVisible();
@@ -107,6 +126,9 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
   await expect(syncedCard).toContainText("$6,800");
   await expect(syncedCard).toContainText("$6,500");
   await expect(syncedCard).not.toContainText("$6,700");
+
+  const mergedIphoneCards = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
+  await expect(mergedIphoneCards).toHaveCount(1);
   await saveEvidence(page, "app-erp-catalog.png");
 });
 
@@ -114,8 +136,16 @@ test("shows ERP-only products in the desktop catalog", async ({ page }) => {
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
   await page.goto("http://127.0.0.1:4173/productos/?utm_source=facebook", { waitUntil: "domcontentloaded" });
 
+  await expect.poll(() => page.evaluate(() => window.HAODE_PRODUCTS?.length)).toBe(catalog.products.length);
+
   const productCard = page.locator(".shop-card", { hasText: "Producto ERP exclusivo X200" });
   await expect(productCard).toBeVisible();
   await expect(productCard.getByRole("link", { name: "Cotizar por WhatsApp" })).toHaveAttribute("href", /ERP-ONLY-X200/);
+
+  const pendingCard = page.locator(".shop-card", { hasText: "Producto con precio pendiente" });
+  await expect(pendingCard).toBeVisible();
+  await expect(pendingCard).toHaveAttribute("data-sales-available", "false");
+  await expect(pendingCard).toContainText("Precio pendiente de confirmación");
+  await expect(pendingCard.getByRole("link", { name: "Consultar por WhatsApp" })).toHaveAttribute("href", /ERP-PENDING-PRICE/);
   await saveEvidence(page, "website-erp-catalog.png");
 });

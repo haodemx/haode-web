@@ -47,6 +47,13 @@ const CATEGORY_META = {
       'assets/products/samsung-oled/gallery-03.jpg',
     ],
   },
+  'motorola-lcd': {
+    brand: 'Motorola',
+    title: 'Motorola LCD',
+    subtitle: 'Pantallas Motorola publicadas desde el catálogo oficial de HAODE ERP.',
+    mainImage: 'assets/products/placeholder.svg',
+    galleryImages: [],
+  },
   'oled-diagnostica': {
     brand: 'HAODE',
     title: 'OLED Diagnóstica',
@@ -103,6 +110,7 @@ const CATEGORY_ALIASES = {
   'iPhone OLED': 'iphone-oled',
   'Samsung INCELL': 'samsung-incell',
   'Samsung OLED': 'samsung-oled',
+  'Pantallas Motorola': 'motorola-lcd',
   'Pantallas OLED Diagnóstica': 'oled-diagnostica',
   'OLED Diagnóstica': 'oled-diagnostica',
   'Gafas AI': 'gafas-ai',
@@ -117,6 +125,7 @@ const CATEGORY_ALIASES = {
   'iphone-oled': 'iphone-oled',
   'samsung-incell': 'samsung-incell',
   'samsung-oled': 'samsung-oled',
+  'motorola-lcd': 'motorola-lcd',
   'oled-diagnostica': 'oled-diagnostica',
   'gafas-ai': 'gafas-ai',
   'camaras-inteligentes': 'camaras-inteligentes',
@@ -254,7 +263,7 @@ const CATALOG_GROUPS = [
     kicker: 'Pantallas',
     title: 'Pantallas',
     subtitle: 'Familias de pantalla para técnicos y distribuidores, organizadas por tipo y modelo.',
-    categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'oled-diagnostica'],
+    categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'motorola-lcd', 'oled-diagnostica'],
     featureCards: [
       ...SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS,
       {
@@ -388,6 +397,7 @@ const PANTALLAS_FILTERS = [
   { id: 'samsung-oled', label: 'Samsung OLED' },
   { id: 'samsung-tipo-original', label: 'Samsung TIPO ORIGINAL' },
   { id: 'samsung-amoled', label: 'Samsung AMOLED' },
+  { id: 'motorola-lcd', label: 'Motorola LCD' },
   { id: 'oled-diagnostica', label: 'iPhone OLED Diagnóstica' },
 ];
 
@@ -1165,6 +1175,58 @@ function stockLookupKey(value) {
   return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 }
 
+function catalogQualityKey(product) {
+  const text = `${product.quality || ''} ${product.model || ''} ${product.category || ''}`
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+  if (text.includes('diagn')) {
+    if (text.includes('hard')) return 'diagnostico-hard';
+    if (text.includes('soft')) return 'diagnostico-soft';
+    return 'diagnostico';
+  }
+  if (text.includes('incell')) return 'incell';
+  if (text.includes('original')) return 'original';
+  if (text.includes('hard') && text.includes('oled')) return 'oled-hard';
+  if (text.includes('soft') && text.includes('oled')) return 'oled-soft';
+  if (text.includes('premium') && (text.includes('oled') || text.includes('amoled'))) return 'oled-premium';
+  if (text.includes('amoled')) return 'amoled';
+  if (text.includes('oled')) return 'oled';
+  if (text.includes('lcd')) return 'lcd';
+  return '';
+}
+
+function catalogScreenFamily(product) {
+  const text = `${product.category || ''} ${product.name || product.public_name_es || ''}`
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+  if (!/(pantalla|display|incell|oled|amoled|diagnost|lcd)/.test(text)) return '';
+  if (text.includes('iphone')) return 'iphone';
+  if (text.includes('samsung')) return 'samsung';
+  if (text.includes('motorola')) return 'motorola';
+  return '';
+}
+
+function catalogModelKey(product) {
+  return String(product.model || product.public_name_es || product.name || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/pro max/g, 'promax')
+    .replace(/\+/g, 'plus')
+    .replace(/\b(pantalla|display|para|modelo|haode|apple|iphone|samsung|motorola)\b/g, ' ')
+    .replace(/\b(incell|fhd|oled|amoled|premium|diagnostico|diagnostica|hard|soft|tipo|original|con marco|lcd)\b/g, ' ')
+    .replace(/[^a-z0-9]+/g, '');
+}
+
+function catalogIdentityKey(product) {
+  const family = catalogScreenFamily(product);
+  const model = catalogModelKey(product);
+  const quality = catalogQualityKey(product);
+  return family && model && quality ? `${family}|${model}|${quality}` : '';
+}
+
 function publicStockLabel(status, label) {
   if (label) return label;
   return {
@@ -1203,12 +1265,16 @@ async function loadErpPublicCatalog() {
 }
 
 function erpCatalogCategory(row) {
-  const text = `${row.category || ''} ${row.quality || ''} ${row.public_name_es || ''}`.toUpperCase();
+  const text = `${row.category || ''} ${row.quality || ''} ${row.public_name_es || ''}`
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toUpperCase();
   if (text.includes('DIAGN')) return 'oled-diagnostica';
   if (text.includes('IPHONE') && text.includes('INCELL')) return 'iphone-incell';
   if (text.includes('IPHONE')) return 'iphone-oled';
   if (text.includes('SAMSUNG') && text.includes('INCELL')) return 'samsung-incell';
   if (text.includes('SAMSUNG')) return 'samsung-oled';
+  if (text.includes('MOTOROLA')) return 'motorola-lcd';
   if (text.includes('MICA') && (text.includes('MAQUINA') || text.includes('HERRAMIENTA'))) return 'maquinas-de-mica';
   if (text.includes('MICA')) return 'micas';
   if (text.includes('FUNDA')) return 'fundas';
@@ -1234,18 +1300,38 @@ function hasAuthoritativeCustomerPrices(product) {
 
 function applyErpPublicCatalog(rows) {
   if (!Array.isArray(rows) || !rows.length) return;
-  const byKey = new Map();
-  PRODUCTS.forEach((product, index) => {
-    [product.sku, product.id, product.name, product.model].filter(Boolean).forEach((value) => byKey.set(stockLookupKey(value), index));
+  const localProducts = PRODUCTS.slice();
+  const catalogProducts = [];
+  const usedLocalIndexes = new Set();
+  const bySku = new Map();
+  const byName = new Map();
+  const identityCandidates = new Map();
+  localProducts.forEach((product, index) => {
+    [product.sku, product.id].filter(Boolean).forEach((value) => bySku.set(stockLookupKey(value), index));
+    if (product.name) byName.set(stockLookupKey(product.name), index);
+    const identity = catalogIdentityKey(product);
+    if (!identity) return;
+    const matches = identityCandidates.get(identity) || [];
+    matches.push(index);
+    identityCandidates.set(identity, matches);
   });
 
   rows.forEach((row) => {
-    const existingIndex = byKey.get(stockLookupKey(row.sku))
-      ?? byKey.get(stockLookupKey(row.public_name_es))
-      ?? byKey.get(stockLookupKey(row.model));
+    const identityMatches = identityCandidates.get(catalogIdentityKey({
+      category: erpCatalogCategory(row),
+      name: row.public_name_es,
+      model: row.model,
+      quality: row.quality,
+    })) || [];
+    const identityIndex = identityMatches.length === 1 ? identityMatches[0] : undefined;
+    const candidateIndex = bySku.get(stockLookupKey(row.sku))
+      ?? byName.get(stockLookupKey(row.public_name_es))
+      ?? identityIndex;
+    const existingIndex = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;
     const prices = erpTierPrices(row);
     if (existingIndex !== undefined) {
-      const product = PRODUCTS[existingIndex];
+      usedLocalIndexes.add(existingIndex);
+      const product = localProducts[existingIndex];
       product.sku = row.sku || product.sku;
       product.name = row.public_name_es || product.name;
       product.model = row.model || product.model;
@@ -1257,9 +1343,12 @@ function applyErpPublicCatalog(rows) {
       product.lowestPriceText = buildLowestPriceText(product.priceTable);
       product.stockStatus = row.stock_status || 'ask_stock';
       product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
+      product.salesAvailable = row.sales_available !== false;
+      product.priceStatus = row.price_status || product.priceStatus;
       product.erpStockUpdatedAt = row.updated_at || '';
       product.whatsappText = buildProductCotizacionText(product.name, product.sku);
       if (row.image_url) product.mainImage = row.image_url;
+      catalogProducts.push(product);
       return;
     }
 
@@ -1276,14 +1365,19 @@ function applyErpPublicCatalog(rows) {
       description: row.description_es,
       prices,
       mainImage: row.image_url || PLACEHOLDER_IMAGE,
+      salesAvailable: row.sales_available !== false,
+      priceStatus: row.price_status || 'CONFIRMED',
     });
     product.erpDynamic = true;
     product.stockStatus = row.stock_status || 'ask_stock';
     product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
     product.erpStockUpdatedAt = row.updated_at || '';
-    PRODUCTS.push(product);
-    PRODUCT_BY_ID.set(product.id, product);
+    catalogProducts.push(product);
   });
+
+  PRODUCTS.splice(0, PRODUCTS.length, ...catalogProducts);
+  PRODUCT_BY_ID.clear();
+  PRODUCTS.forEach((product) => PRODUCT_BY_ID.set(product.id, product));
 }
 
 function applyErpPublicStock(rows) {
@@ -1436,6 +1530,8 @@ function createProduct(definition) {
     lowestPriceText: buildLowestPriceText(priceTable),
     stockStatus: 'ask_stock',
     stockLabel: 'Consultar inventario',
+    salesAvailable: definition.salesAvailable !== false,
+    priceStatus: definition.priceStatus || 'CONFIRMED',
   };
 }
 
@@ -1460,6 +1556,7 @@ function createProductCard(product) {
   const article = document.createElement('article');
   article.className = 'shop-card';
   article.dataset.category = product.category;
+  article.dataset.salesAvailable = String(product.salesAvailable !== false);
 
   const overlay = document.createElement('a');
   overlay.className = 'shop-card-link';
@@ -1532,7 +1629,9 @@ function createProductCard(product) {
 
   const note = document.createElement('p');
   note.className = 'shop-note';
-  note.textContent = 'Precios por cantidad. Caja es el mejor precio publicado; más volumen se cotiza por WhatsApp.';
+  note.textContent = product.salesAvailable === false
+    ? 'Precio pendiente de confirmación. Consulta disponibilidad por WhatsApp.'
+    : 'Precios por cantidad. Caja es el mejor precio publicado; más volumen se cotiza por WhatsApp.';
 
   priceWrap.append(priceTable, note);
 
@@ -1544,7 +1643,7 @@ function createProductCard(product) {
   whatsapp.href = buildWhatsAppUrl(product.whatsappText);
   whatsapp.target = '_blank';
   whatsapp.rel = 'noopener noreferrer';
-  whatsapp.textContent = 'Cotizar por WhatsApp';
+  whatsapp.textContent = product.salesAvailable === false ? 'Consultar por WhatsApp' : 'Cotizar por WhatsApp';
 
   const details = document.createElement('a');
   details.className = 'btn btn-secondary shop-details';

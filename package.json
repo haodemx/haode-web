@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npm run haode:check",
     "test:campaign-links": "node --test tests/campaign-links.test.mjs",
+    "test:daily-ad-catalog": "node --test tests/daily-ad-catalog.test.mjs",
     "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js",
     "publish-products": "node scripts/publish-products.js",
@@ -21,7 +22,7 @@
     "daily-website-audit": "node scripts/daily-website-audit.js",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:customer-prices && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:customer-prices && npm run test:daily-ad-catalog && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"

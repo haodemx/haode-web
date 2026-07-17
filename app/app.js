@@ -395,6 +395,61 @@ function stockKey(value) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
+function catalogQualityKey(value) {
+  const text = String(typeof value === "object" ? value?.label || value?.spec || "" : value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+  if (text.includes("diagn")) {
+    if (text.includes("hard")) return "diagnostico-hard";
+    if (text.includes("soft")) return "diagnostico-soft";
+    return "diagnostico";
+  }
+  if (text.includes("incell")) return "incell";
+  if (text.includes("original")) return "original";
+  if (text.includes("hard") && text.includes("oled")) return "oled-hard";
+  if (text.includes("soft") && text.includes("oled")) return "oled-soft";
+  if (text.includes("premium") && (text.includes("oled") || text.includes("amoled"))) return "oled-premium";
+  if (text.includes("amoled")) return "amoled";
+  if (text.includes("oled")) return "oled";
+  if (text.includes("lcd")) return "lcd";
+  return "";
+}
+
+function catalogScreenFamily(product) {
+  const text = `${product.category || product.categoria || ""} ${product.name || product.nombre || product.public_name_es || ""}`
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+  if (!/(pantalla|display|incell|oled|amoled|diagnost|lcd)/.test(text)) return "";
+  if (text.includes("iphone")) return "iphone";
+  if (text.includes("samsung")) return "samsung";
+  if (text.includes("motorola")) return "motorola";
+  return "";
+}
+
+function catalogModelKey(product) {
+  return String(product.model || product.modelo || product.public_name_es || product.name || product.nombre || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/pro max/g, "promax")
+    .replace(/\+/g, "plus")
+    .replace(/\b(pantalla|display|para|modelo|haode|apple|iphone|samsung|motorola)\b/g, " ")
+    .replace(/\b(incell|fhd|oled|amoled|premium|diagnostico|diagnostica|hard|soft|tipo|original|con marco|lcd)\b/g, " ")
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function catalogIdentityKey(product) {
+  const family = catalogScreenFamily(product);
+  const model = catalogModelKey(product);
+  const explicitQuality = typeof product.quality === "object"
+    ? `${product.quality?.label || ""} ${product.quality?.spec || ""}`
+    : product.quality || product.calidad || "";
+  const quality = catalogQualityKey(`${explicitQuality} ${product.model || product.modelo || ""} ${product.category || product.categoria || ""}`);
+  return family && model && quality ? `${family}|${model}|${quality}` : "";
+}
+
 function stockClassName(value) {
   return String(value || "consultar inventario")
     .trim()
@@ -470,23 +525,37 @@ async function loadErpPublicCatalog() {
 
 function mergeErpCatalog(localProducts, catalogRows) {
   if (!catalogRows.length) return localProducts;
-  const result = localProducts.map((product) => ({ ...product }));
-  const bySku = new Map(result.map((product, index) => [stockKey(product.sku), index]).filter(([key]) => key));
-  const byName = new Map(result.map((product, index) => [stockKey(product.name), index]).filter(([key]) => key));
+  const localCatalog = localProducts.map((product) => ({ ...product }));
+  const result = [];
+  const usedLocalIndexes = new Set();
+  const bySku = new Map(localCatalog.map((product, index) => [stockKey(product.sku), index]).filter(([key]) => key));
+  const byName = new Map(localCatalog.map((product, index) => [stockKey(product.name), index]).filter(([key]) => key));
+  const identityCandidates = new Map();
+  localCatalog.forEach((product, index) => {
+    const key = catalogIdentityKey(product);
+    if (!key) return;
+    const matches = identityCandidates.get(key) || [];
+    matches.push(index);
+    identityCandidates.set(key, matches);
+  });
   catalogRows.forEach((row, catalogIndex) => {
-    const index = bySku.get(stockKey(row.sku)) ?? byName.get(stockKey(row.public_name_es));
-    const incoming = erpCatalogProduct(row, index === undefined ? 5000 + catalogIndex : result[index].order);
+    const identityMatches = identityCandidates.get(catalogIdentityKey(row)) || [];
+    const identityIndex = identityMatches.length === 1 ? identityMatches[0] : undefined;
+    const candidateIndex = bySku.get(stockKey(row.sku)) ?? byName.get(stockKey(row.public_name_es)) ?? identityIndex;
+    const index = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;
+    const incoming = erpCatalogProduct(row, index === undefined ? 5000 + catalogIndex : localCatalog[index].order);
     if (index === undefined) {
       result.push(incoming);
       return;
     }
-    const current = result[index];
+    usedLocalIndexes.add(index);
+    const current = localCatalog[index];
     const hasAuthoritativeLocalPrices = current.priceSource.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx");
     const incomingTiersByCode = new Map(incoming.priceTiers.filter((tier) => tier.code).map((tier) => [tier.code, tier]));
     const mergedTiers = hasAuthoritativeLocalPrices
       ? current.priceTiers.map((tier) => incomingTiersByCode.get(tier.code) ? { ...tier, ...incomingTiersByCode.get(tier.code) } : tier)
       : incoming.priceTiers;
-    result[index] = {
+    result.push({
       ...current,
       sku: incoming.sku || current.sku,
       name: incoming.name || current.name,
@@ -505,7 +574,7 @@ function mergeErpCatalog(localProducts, catalogRows) {
       erpStockLabel: row.stock_label || "",
       erpStockUpdatedAt: row.updated_at || "",
       erpCatalogSource: true
-    };
+    });
   });
   return result.sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"));
 }

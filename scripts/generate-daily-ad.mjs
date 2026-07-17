@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 import { buildCampaignCode, buildCampaignLinks } from "./campaign-links.mjs";
 
@@ -7,7 +8,7 @@ const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, "data", "marketing");
 const LATEST_PATH = path.join(OUT_DIR, "daily-ad-latest.json");
 const PRODUCTS_PATH = path.join(ROOT, "app", "products.json");
-const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
+export const ERP_PUBLIC_CATALOG_URL = "https://erp.haode.com.mx/api/public/catalog";
 const WHATSAPP_NUMBER = "525645866014";
 const APP_URL = "https://haode.com.mx/app/";
 
@@ -59,21 +60,21 @@ async function loadJson(file) {
   return JSON.parse(await fs.readFile(file, "utf8"));
 }
 
-async function loadPublicStock() {
+export async function loadPublicCatalog() {
   try {
-    const response = await fetch(ERP_PUBLIC_STOCK_URL, { signal: AbortSignal.timeout(12000) });
+    const response = await fetch(ERP_PUBLIC_CATALOG_URL, { signal: AbortSignal.timeout(12000) });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const rows = await response.json();
-    return Array.isArray(rows) ? rows : [];
+    const payload = await response.json();
+    return Array.isArray(payload) ? payload : Array.isArray(payload.products) ? payload.products : [];
   } catch (error) {
-    console.warn(`No se pudo leer public-stock.json: ${error.message}`);
+    console.warn(`No se pudo leer el catálogo público ERP: ${error.message}`);
     return [];
   }
 }
 
-function chooseProduct(stockRows, appProducts, theme) {
-  const candidates = stockRows.length
-    ? stockRows.filter((row) => row.stock_status !== "out_of_stock")
+export function chooseProduct(catalogRows, appProducts, theme) {
+  const candidates = catalogRows.length
+    ? catalogRows.filter((row) => row.sales_available === true && row.stock_status !== "out_of_stock" && Number(row.public_price_mxn) > 0)
     : appProducts.filter((row) => row.activo !== false);
   return candidates
     .map((product) => ({ product, score: rankProduct(product, theme) }))
@@ -81,7 +82,7 @@ function chooseProduct(stockRows, appProducts, theme) {
     .at(0)?.product || candidates[0] || {};
 }
 
-function buildAd(product, date = new Date()) {
+export function buildAd(product, date = new Date()) {
   const theme = themeForDate(date);
   const name = product.public_name_es || product.nombre || product.name || "Producto HAODE";
   const sku = product.sku || product.id || "";
@@ -118,14 +119,20 @@ function buildAd(product, date = new Date()) {
   };
 }
 
-await fs.mkdir(OUT_DIR, { recursive: true });
-const [appProducts, stockRows] = await Promise.all([loadJson(PRODUCTS_PATH), loadPublicStock()]);
-const now = new Date();
-const theme = themeForDate(now);
-const product = chooseProduct(stockRows, appProducts, theme);
-const ad = buildAd(product, now);
-const datedPath = path.join(OUT_DIR, `daily-ad-${ad.date}.json`);
+export async function main() {
+  await fs.mkdir(OUT_DIR, { recursive: true });
+  const [appProducts, catalogRows] = await Promise.all([loadJson(PRODUCTS_PATH), loadPublicCatalog()]);
+  const now = new Date();
+  const theme = themeForDate(now);
+  const product = chooseProduct(catalogRows, appProducts, theme);
+  const ad = buildAd(product, now);
+  const datedPath = path.join(OUT_DIR, `daily-ad-${ad.date}.json`);
 
-await fs.writeFile(datedPath, `${JSON.stringify(ad, null, 2)}\n`);
-await fs.writeFile(LATEST_PATH, `${JSON.stringify(ad, null, 2)}\n`);
-console.log(`Generated ${path.relative(ROOT, datedPath)} and ${path.relative(ROOT, LATEST_PATH)}`);
+  await fs.writeFile(datedPath, `${JSON.stringify(ad, null, 2)}\n`);
+  await fs.writeFile(LATEST_PATH, `${JSON.stringify(ad, null, 2)}\n`);
+  console.log(`Generated ${path.relative(ROOT, datedPath)} and ${path.relative(ROOT, LATEST_PATH)}`);
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  await main();
+}
