@@ -2,7 +2,8 @@ const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
 
-const APP_URL = process.env.BASE_URL || "http://127.0.0.1:4173/app/";
+const SERVER_URL = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/app\/?$/, "").replace(/\/$/, "");
+const APP_URL = `${SERVER_URL}/app/`;
 
 async function saveEvidence(page, fileName) {
   if (!process.env.SCREENSHOT_DIR) return;
@@ -82,6 +83,23 @@ const catalog = {
       stock_status: "available",
       stock_label: "Disponible",
       updated_at: "2026-07-14T12:00:00.000Z"
+    },
+    {
+      sku: "AI-GAFAS-G3",
+      slug: "gafas-ai-g3",
+      public_name_es: "Gafas AI G3",
+      brand: "HAODE",
+      category: "Productos AI",
+      quality: "Gafas AI",
+      model: "",
+      image_url: "",
+      public_price_mxn: 1700,
+      public_price_tiers: [],
+      price_status: "CONFIRMED",
+      sales_available: true,
+      stock_status: "available",
+      stock_label: "Disponible",
+      updated_at: "2026-07-14T12:00:00.000Z"
     }
   ]
 };
@@ -129,6 +147,10 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
 
   const mergedIphoneCards = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
   await expect(mergedIphoneCards).toHaveCount(1);
+
+  const g3Card = page.locator(".product-card", { hasText: "Gafas AI G3" });
+  await expect(g3Card).toHaveCount(1);
+  await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
   await saveEvidence(page, "app-erp-catalog.png");
 });
 
@@ -147,5 +169,9 @@ test("shows ERP-only products in the desktop catalog", async ({ page }) => {
   await expect(pendingCard).toHaveAttribute("data-sales-available", "false");
   await expect(pendingCard).toContainText("Precio pendiente de confirmación");
   await expect(pendingCard.getByRole("link", { name: "Consultar por WhatsApp" })).toHaveAttribute("href", /ERP-PENDING-PRICE/);
+
+  const g3Card = page.locator(".shop-card", { hasText: "Gafas AI G3" });
+  await expect(g3Card).toHaveCount(1);
+  await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
   await saveEvidence(page, "website-erp-catalog.png");
 });

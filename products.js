@@ -1,6 +1,9 @@
 const WHATSAPP_PHONE = '525645866014';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['1 pza', '5+ pzs', '100 pzs surtido', '100 pzs/modelo', 'Caja/modelo'];
+const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
+  'AI-GAFAS-G3': 'haode-ai-g3-smart-glasses',
+};
 
 const CATEGORY_META = {
   'iphone-incell': {
@@ -1304,9 +1307,11 @@ function applyErpPublicCatalog(rows) {
   const catalogProducts = [];
   const usedLocalIndexes = new Set();
   const bySku = new Map();
+  const byId = new Map();
   const byName = new Map();
   const identityCandidates = new Map();
   localProducts.forEach((product, index) => {
+    if (product.id) byId.set(stockLookupKey(product.id), index);
     [product.sku, product.id].filter(Boolean).forEach((value) => bySku.set(stockLookupKey(value), index));
     if (product.name) byName.set(stockLookupKey(product.name), index);
     const identity = catalogIdentityKey(product);
@@ -1325,6 +1330,7 @@ function applyErpPublicCatalog(rows) {
     })) || [];
     const identityIndex = identityMatches.length === 1 ? identityMatches[0] : undefined;
     const candidateIndex = bySku.get(stockLookupKey(row.sku))
+      ?? byId.get(stockLookupKey(ERP_LOCAL_PRODUCT_ID_BY_SKU[row.sku]))
       ?? byName.get(stockLookupKey(row.public_name_es))
       ?? identityIndex;
     const existingIndex = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;

@@ -17,6 +17,9 @@ const PROMO_JUNIO_PRICES_URL = sitePath("/app/promo-junio-prices.json");
 const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
+const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
+  "AI-GAFAS-G3": "haode-ai-g3-smart-glasses"
+};
 
 let deferredInstallPrompt = null;
 let products = [];
@@ -529,6 +532,7 @@ function mergeErpCatalog(localProducts, catalogRows) {
   const result = [];
   const usedLocalIndexes = new Set();
   const bySku = new Map(localCatalog.map((product, index) => [stockKey(product.sku), index]).filter(([key]) => key));
+  const byId = new Map(localCatalog.map((product, index) => [stockKey(product.id), index]).filter(([key]) => key));
   const byName = new Map(localCatalog.map((product, index) => [stockKey(product.name), index]).filter(([key]) => key));
   const identityCandidates = new Map();
   localCatalog.forEach((product, index) => {
@@ -541,7 +545,10 @@ function mergeErpCatalog(localProducts, catalogRows) {
   catalogRows.forEach((row, catalogIndex) => {
     const identityMatches = identityCandidates.get(catalogIdentityKey(row)) || [];
     const identityIndex = identityMatches.length === 1 ? identityMatches[0] : undefined;
-    const candidateIndex = bySku.get(stockKey(row.sku)) ?? byName.get(stockKey(row.public_name_es)) ?? identityIndex;
+    const candidateIndex = bySku.get(stockKey(row.sku))
+      ?? byId.get(stockKey(ERP_LOCAL_PRODUCT_ID_BY_SKU[row.sku]))
+      ?? byName.get(stockKey(row.public_name_es))
+      ?? identityIndex;
     const index = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;
     const incoming = erpCatalogProduct(row, index === undefined ? 5000 + catalogIndex : localCatalog[index].order);
     if (index === undefined) {

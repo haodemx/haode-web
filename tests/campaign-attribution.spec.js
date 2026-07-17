@@ -1,6 +1,7 @@
 const { test, expect } = require("@playwright/test");
 
-const APP_URL = process.env.BASE_URL || "http://127.0.0.1:4173/app/";
+const SERVER_URL = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/app\/?$/, "").replace(/\/$/, "");
+const APP_URL = `${SERVER_URL}/app/`;
 
 const catalog = {
   products: [
