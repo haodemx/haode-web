@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-15-omnichannel-3-campaigns";
+const CACHE_VERSION = "haode-pwa-v2026-07-18-erp-catalog";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -12,8 +12,8 @@ const APP_SHELL_URLS = [
   "/script.js",
   "/campaign-attribution.js",
   "/products.js",
-  "/app/app.css",
-  "/app/app.js",
+  "/app/app.css?v=20260718-erp-catalog",
+  "/app/app.js?v=20260718-erp-catalog",
   "/app/products.json",
   "/app/promo-junio-prices.json",
   "/app/firebase-config.js",

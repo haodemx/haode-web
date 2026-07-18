@@ -3,6 +3,7 @@ const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['1 pza', '5+ pzs', '100 pzs surtido', '100 pzs/modelo', 'Caja/modelo'];
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
   'AI-GAFAS-G3': 'haode-ai-g3-smart-glasses',
+  'MICA-X200T': 'x200t-cortadora-micas',
 };
 
 const CATEGORY_META = {

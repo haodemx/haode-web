@@ -100,6 +100,23 @@ const catalog = {
       stock_status: "available",
       stock_label: "Disponible",
       updated_at: "2026-07-14T12:00:00.000Z"
+    },
+    {
+      sku: "MICA-X200T",
+      slug: "mica-x200t",
+      public_name_es: "Máquina de Micas X200T",
+      brand: "HAODE",
+      category: "MICA",
+      quality: "",
+      model: "Máquina de Micas X200T",
+      image_url: "",
+      public_price_mxn: 6800,
+      public_price_tiers: [],
+      price_status: "CONFIRMED",
+      sales_available: true,
+      stock_status: "available",
+      stock_label: "Disponible",
+      updated_at: "2026-07-14T12:00:00.000Z"
     }
   ]
 };
@@ -151,6 +168,10 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
   const g3Card = page.locator(".product-card", { hasText: "Gafas AI G3" });
   await expect(g3Card).toHaveCount(1);
   await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
+
+  await page.goto(`${APP_URL}#producto/x200t-cortadora-micas`, { waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("heading", { name: /X200T/i })).toBeVisible();
+  await expect(page.locator("[data-product-gallery] img").first()).toBeVisible();
   await saveEvidence(page, "app-erp-catalog.png");
 });
 

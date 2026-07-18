@@ -18,7 +18,8 @@ const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
-  "AI-GAFAS-G3": "haode-ai-g3-smart-glasses"
+  "AI-GAFAS-G3": "haode-ai-g3-smart-glasses",
+  "MICA-X200T": "x200t-cortadora-micas"
 };
 
 let deferredInstallPrompt = null;
