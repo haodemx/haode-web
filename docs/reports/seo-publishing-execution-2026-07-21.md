@@ -2,9 +2,9 @@
 
 ## 任务结论
 
-3+4+5 已完成：素材、文案、URL 清单已生成；Google Search Console 与 Google Business 已通过 Chrome 实际提交。
+3+4+5 已完成：素材、文案、URL 清单已生成；Google Search Console、Google Business 与 Facebook 已通过 Chrome 实际提交/发布。
 
-Facebook 当前打开的是 `HL Pantallas LCD (HL México)` 页面，不是明确的 HAODE 页面，且没有看到页面发帖后台入口；因此未发布 Facebook，避免发错品牌页面。WhatsApp、Instagram、TikTok/Reels 仍需要确认正确账号、主页或收件目标后执行。
+Facebook 已按老板确认的 HAODE Facebook 档案 `Display Celular HL Cdmx` 发布两条对应帖子。WhatsApp、Instagram、TikTok/Reels 仍需要确认正确账号、主页或收件目标后执行。
 
 ## 已完成
 
@@ -20,17 +20,19 @@ Facebook 当前打开的是 `HL Pantallas LCD (HL México)` 页面，不是明�
 - 通过 Google Search Console 对两个新落地页请求编入索引。
 - 通过 Google Search Console 重新提交 `https://haode.com.mx/sitemap.xml`，状态成功，已发现网页更新为 173。
 - 通过 Google Business 发布两条动态，均进入 Google 审核/发布流程。
+- 通过 Facebook `Display Celular HL Cdmx` 发布两条图文帖。
 
 ## 实际外部执行状态
 
-更新时间：2026-07-21 17:33 CST
+更新时间：2026-07-21 17:58 CST
 
 - Search Console URL 1：`https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/` 已请求编入索引。
 - Search Console URL 2：`https://haode.com.mx/pantallas-premium-iphone-samsung-fabrica/` 已请求编入索引。
 - Search Console sitemap：`https://haode.com.mx/sitemap.xml` 已重新提交，状态成功；已发现网页 173。
 - Google Business 帖 1：iPhone 11/XR 分版本价格动态已提交，进入审核/发布流程。
 - Google Business 帖 2：premium iPhone/Samsung 工厂渠道动态已提交，进入审核/发布流程。
-- Facebook：未发布。打开的页面显示为 `HL Pantallas LCD (HL México)`，非明确 HAODE 页面。
+- Facebook 帖 1：iPhone 11/XR 分版本价格图文帖已发布到 `Display Celular HL Cdmx`。
+- Facebook 帖 2：premium iPhone/Samsung 工厂渠道图文帖已发布到 `Display Celular HL Cdmx`。
 - WhatsApp：未发送。缺少明确目标群或联系人。
 - Instagram：未发布。缺少明确 HAODE/Meta 发布账号入口。
 - TikTok/Reels：未发布。缺少明确 TikTok/Reels 发布账号入口。
@@ -77,7 +79,7 @@ Facebook 当前打开的是 `HL Pantallas LCD (HL México)` 页面，不是明�
 4. Google Search Console：重新提交 sitemap。已完成。
 5. WhatsApp：发送 iPhone 11/XR $140/$155 分版本文案。待目标群/联系人。
 6. WhatsApp：发送 Premium 工厂渠道文案。待目标群/联系人。
-7. Facebook：发布两条对应帖子。待确认正确 HAODE 页面或切换到可发帖页面后台。
+7. Facebook：发布两条对应帖子。已完成。
 8. Instagram：发布两张方图和 caption。待确认正确账号。
 9. TikTok/Reels：上传两个 15 秒竖版视频。待确认正确账号。
 
