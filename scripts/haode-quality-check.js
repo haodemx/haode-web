@@ -108,6 +108,22 @@ function extractSitemapUrls(text) {
   return urls;
 }
 
+function extractCanonicalUrl(text) {
+  const match = text.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)
+    || text.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical["']/i);
+  return match ? match[1] : '';
+}
+
+function extractRobotsContent(text) {
+  const match = text.match(/<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i)
+    || text.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']robots["']/i);
+  return match ? match[1].toLowerCase() : '';
+}
+
+function isVerificationFile(filePath) {
+  return /^google[a-z0-9]+\.html$/i.test(relative(filePath));
+}
+
 function main() {
   const issues = [];
   const files = walk(ROOT).filter(isPublicFile);
@@ -129,13 +145,13 @@ function main() {
   htmlFiles.forEach((file) => {
     const text = read(file);
     checkJsonLd(file, text, issues);
-    const canonicals = extractAttributes(text, 'href').filter((href) => text.includes(`rel="canonical"`) || text.includes(`rel='canonical'`));
-    const canonicalMatch = text.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)
-      || text.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical["']/i);
-    if (canonicalMatch && !canonicalMatch[1].startsWith(SITE_URL)) {
-      add(issues, 'error', 'CANONICAL_DOMAIN', file, canonicalMatch[1]);
+    const rel = relative(file);
+    const canonicalUrl = extractCanonicalUrl(text);
+    const noindex = extractRobotsContent(text).includes('noindex');
+    if (canonicalUrl && !canonicalUrl.startsWith(SITE_URL)) {
+      add(issues, 'error', 'CANONICAL_DOMAIN', file, canonicalUrl);
     }
-    if (!canonicalMatch && relative(file) !== '404.html') {
+    if (!canonicalUrl && rel !== '404.html' && !noindex && !isVerificationFile(file)) {
       add(issues, 'warn', 'CANONICAL_MISSING', file, 'no canonical URL found');
     }
 
@@ -167,9 +183,13 @@ function main() {
     htmlFiles.forEach((file) => {
       const rel = relative(file);
       if (rel === '404.html' || rel.includes('/admin')) return;
+      const text = read(file);
+      const noindex = extractRobotsContent(text).includes('noindex');
       const urlPath = rel.endsWith('/index.html') ? rel.slice(0, -'index.html'.length) : rel;
       const expected = `${SITE_URL}/${urlPath}`.replace(/\/+$/, '/');
-      if (!sitemapText.includes(expected) && rel.startsWith('producto/')) {
+      const canonicalUrl = extractCanonicalUrl(text);
+      const canonicalCoveredBySitemap = canonicalUrl && canonicalUrl !== expected && sitemapText.includes(canonicalUrl);
+      if (!sitemapText.includes(expected) && rel.startsWith('producto/') && !noindex && !canonicalCoveredBySitemap) {
         add(issues, 'warn', 'SITEMAP_ENTRY_MISSING', file, expected);
       }
     });
