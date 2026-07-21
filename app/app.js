@@ -654,15 +654,15 @@ function renderHome() {
       <section class="hero-banner">
         <div class="hero-copy">
           <span class="hero-badge">HAODE México</span>
-          <h1>iPhone y Samsung de alta gama</h1>
-          <p>Precio directo de fábrica, stock local en CDMX y envío rápido para pedidos confirmados.</p>
+          <h1>iPhone Pro Max y Samsung Ultra</h1>
+          <p>Pantallas OLED, AMOLED, INCELL y TIPO ORIGINAL con precio directo de fábrica, stock CDMX bajo confirmación y envío para pedidos confirmados.</p>
           <div class="hero-actions">
             <a class="primary-button" href="#catalogo">Ver productos</a>
             <a class="secondary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
           </div>
           <div class="hero-proof" aria-label="Beneficios HAODE">
             <span>Fábrica</span>
-            <span>Stock CDMX</span>
+            <span>Pro Max / Ultra</span>
             <span>Mayoreo</span>
           </div>
         </div>
@@ -783,7 +783,7 @@ function appOrderSectionHtml() {
         <article>
           ${iconSvg("screen")}
           <strong>Busca modelo</strong>
-          <span>iPhone, Samsung, micas, fundas y productos AI.</span>
+          <span>iPhone Pro Max, Samsung Ultra, OLED, AMOLED, micas y más.</span>
         </article>
         <article>
           ${iconSvg("grid")}
@@ -833,7 +833,7 @@ function premiumSelectionHtml() {
     <section class="premium-showcase" aria-labelledby="premium-showcase-title">
       <div class="premium-showcase-copy">
         <h2 id="premium-showcase-title">Selección premium HAODE</h2>
-        <p>Refacciones seleccionadas, stock en México y pedidos rápidos por WhatsApp.</p>
+        <p>Pantallas premium seleccionadas, stock en México bajo confirmación y pedidos por WhatsApp.</p>
       </div>
       <div class="premium-showcase-grid">
         ${premiumItems.slice(0, 3).map((item) => `

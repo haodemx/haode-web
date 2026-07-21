@@ -5006,6 +5006,16 @@ body.catalog-page.catalog-reference-page .catalog-actions .reference-btn {
   padding: 0 16px;
 }
 
+body.catalog-page.catalog-reference-page .catalog-actions .reference-btn-solid {
+  background: var(--ref-orange);
+  color: #111111;
+}
+
+body.catalog-page.catalog-reference-page .catalog-actions .reference-btn-outline {
+  background: #ffffff;
+  color: #111111;
+}
+
 body.catalog-page.catalog-reference-page .catalog-filter-strip {
   display: flex;
   flex-wrap: wrap;
@@ -5019,6 +5029,40 @@ body.catalog-page.catalog-reference-page .filter-chip {
   border-radius: 8px;
   background: #ffffff;
   white-space: nowrap;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links a {
+  min-height: 92px;
+  padding: 14px;
+  border: 1px solid rgba(255, 95, 24, 0.2);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f1a16;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(78, 44, 18, 0.06);
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links strong,
+body.catalog-page.catalog-reference-page .catalog-priority-links span {
+  display: block;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links strong {
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links span {
+  margin-top: 7px;
+  color: #6d6259;
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 body.catalog-page.catalog-reference-page .pantallas-tools {
@@ -5742,6 +5786,16 @@ body.product-detail-page .detail-zoom-close {
 
   body.catalog-page.catalog-reference-page .catalog-filter-strip .filter-chip {
     flex: 0 0 auto;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-priority-links {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-priority-links a {
+    min-height: 0;
+    padding: 12px;
   }
 
   body.catalog-page.catalog-reference-page .hero-category-filters,
