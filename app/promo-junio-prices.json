@@ -15,24 +15,24 @@
     "source": "products.json:precioMayoreo fallback"
   },
   "iphone-oled-12promax": {
-    "precioMostrador": 850,
-    "precioAppJunio": 730,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 700,
+    "precioAppJunio": 600,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-oled-13": {
     "precioMostrador": 730,
     "precioAppJunio": 600,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-oled-13pro": {
-    "precioMostrador": 800,
+    "precioMostrador": 780,
     "precioAppJunio": 700,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-oled-13promax": {
-    "precioMostrador": 900,
-    "precioAppJunio": 750,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 800,
+    "precioAppJunio": 700,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-oled-14": {
     "precioMostrador": 700,
@@ -65,9 +65,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "iphone-oled-16pro": {
-    "precioMostrador": 1500,
-    "precioAppJunio": 1300,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 1300,
+    "precioAppJunio": 1100,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-oled-16promax": {
     "precioMostrador": 1600,
@@ -80,9 +80,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "iphone-oled-16promax-hard": {
-    "precioMostrador": 1600,
-    "precioAppJunio": 1400,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 1400,
+    "precioAppJunio": 1200,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-11": {
     "precioMostrador": 180,
@@ -91,8 +91,8 @@
   },
   "iphone-incell-11pro": {
     "precioMostrador": 200,
-    "precioAppJunio": 185,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioAppJunio": 175,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-11promax": {
     "precioMostrador": 220,
@@ -112,7 +112,7 @@
   "iphone-incell-12promax": {
     "precioMostrador": 250,
     "precioAppJunio": 220,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-13": {
     "precioMostrador": 250,
@@ -137,12 +137,12 @@
   "iphone-incell-14": {
     "precioMostrador": 260,
     "precioAppJunio": 230,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-14plus": {
     "precioMostrador": 300,
     "precioAppJunio": 265,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-14pro": {
     "precioMostrador": 350,
@@ -162,7 +162,7 @@
   "iphone-incell-15plus": {
     "precioMostrador": 330,
     "precioAppJunio": 275,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-15pro": {
     "precioMostrador": 350,
@@ -195,9 +195,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-s8": {
-    "precioMostrador": 450,
-    "precioAppJunio": 360,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 360,
+    "precioAppJunio": 310,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-xsmax": {
     "precioMostrador": 200,
@@ -205,19 +205,19 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-s8-plus": {
-    "precioMostrador": 450,
-    "precioAppJunio": 360,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 370,
+    "precioAppJunio": 310,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-16e": {
-    "precioMostrador": 300,
-    "precioAppJunio": 260,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 400,
+    "precioAppJunio": 320,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s9": {
-    "precioMostrador": 450,
-    "precioAppJunio": 370,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 360,
+    "precioAppJunio": 320,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-16plus": {
     "precioMostrador": 400,
@@ -225,9 +225,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-s9-plus": {
-    "precioMostrador": 500,
-    "precioAppJunio": 380,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 370,
+    "precioAppJunio": 330,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-16pro": {
     "precioMostrador": 700,
@@ -235,9 +235,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-s10": {
-    "precioMostrador": 500,
-    "precioAppJunio": 390,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 380,
+    "precioAppJunio": 340,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-16promax": {
     "precioMostrador": 750,
@@ -245,9 +245,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-s10-plus": {
-    "precioMostrador": 500,
+    "precioMostrador": 380,
     "precioAppJunio": 400,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-17": {
     "precioMostrador": 1000,
@@ -255,9 +255,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-s10e": {
-    "precioMostrador": 800,
-    "precioAppJunio": 700,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 600,
+    "precioAppJunio": 520,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "iphone-incell-17air": {
     "precioMostrador": 2500,
@@ -287,12 +287,12 @@
   "samsung-incell-s20-plus": {
     "precioMostrador": 550,
     "precioAppJunio": 470,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s20-fe": {
     "precioMostrador": 350,
     "precioAppJunio": 290,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s20-ultra": {
     "precioMostrador": 650,
@@ -315,79 +315,79 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-s21-ultra": {
-    "precioMostrador": 600,
+    "precioMostrador": 550,
     "precioAppJunio": 480,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s22": {
-    "precioMostrador": 600,
-    "precioAppJunio": 480,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 500,
+    "precioAppJunio": 450,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s22-plus": {
-    "precioMostrador": 600,
-    "precioAppJunio": 500,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 500,
+    "precioAppJunio": 450,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s22-ultra": {
-    "precioMostrador": 800,
-    "precioAppJunio": 600,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 600,
+    "precioAppJunio": 550,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s23": {
-    "precioMostrador": 650,
-    "precioAppJunio": 580,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 600,
+    "precioAppJunio": 550,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s23-plus": {
-    "precioMostrador": 650,
-    "precioAppJunio": 580,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 600,
+    "precioAppJunio": 550,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s23-ultra": {
-    "precioMostrador": 700,
+    "precioMostrador": 650,
     "precioAppJunio": 600,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s24": {
-    "precioMostrador": 1000,
-    "precioAppJunio": 800,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 700,
+    "precioAppJunio": 650,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s24-plus": {
-    "precioMostrador": 1000,
-    "precioAppJunio": 800,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 700,
+    "precioAppJunio": 650,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-s24-ultra": {
-    "precioMostrador": 1000,
-    "precioAppJunio": 800,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 750,
+    "precioAppJunio": 700,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-note-8": {
-    "precioMostrador": 600,
-    "precioAppJunio": 500,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 500,
+    "precioAppJunio": 450,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-note-9": {
-    "precioMostrador": 600,
-    "precioAppJunio": 500,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 500,
+    "precioAppJunio": 450,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-note-10": {
-    "precioMostrador": 650,
-    "precioAppJunio": 550,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 550,
+    "precioAppJunio": 470,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-note-10-plus": {
-    "precioMostrador": 650,
-    "precioAppJunio": 570,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 550,
+    "precioAppJunio": 470,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-note-10-lite": {
-    "precioMostrador": 750,
-    "precioAppJunio": 660,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 650,
+    "precioAppJunio": 610,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-incell-note-20": {
     "precioMostrador": 650,
@@ -400,9 +400,9 @@
     "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
   },
   "samsung-incell-note-20-ultra": {
-    "precioMostrador": 800,
-    "precioAppJunio": 680,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "precioMostrador": 680,
+    "precioAppJunio": 640,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-oled-s21-ultra": {
     "precioMostrador": 1600,
@@ -452,12 +452,12 @@
   "samsung-original-s21-ultra": {
     "precioMostrador": 2500,
     "precioAppJunio": 2200,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-original-s22-plus": {
     "precioMostrador": 1700,
     "precioAppJunio": 1400,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "x200t-cortadora-micas": {
     "precioMostrador": 6800,
@@ -467,52 +467,52 @@
   "samsung-original-s22-ultra": {
     "precioMostrador": 3000,
     "precioAppJunio": 2600,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "w630-ai-pro": {
     "precioMostrador": 1900,
-    "precioAppJunio": 1600,
-    "source": "products.json:precioMayoreo fallback"
+    "precioAppJunio": 1700,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "aimb-g5-ai-sports": {
     "precioMostrador": 1800,
-    "precioAppJunio": 1400,
-    "source": "products.json:precioMayoreo fallback"
+    "precioAppJunio": 1600,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "samsung-original-s23-plus": {
     "precioMostrador": 1800,
     "precioAppJunio": 1500,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "s1-ai-classic": {
     "precioMostrador": 1500,
-    "precioAppJunio": 1200,
-    "source": "products.json:precioMayoreo fallback"
+    "precioAppJunio": 1300,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "samsung-original-s23-ultra": {
     "precioMostrador": 3300,
     "precioAppJunio": 2900,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "haode-ai-g3-smart-glasses": {
     "precioMostrador": 1700,
-    "precioAppJunio": 1300,
-    "source": "products.json:precioMayoreo fallback"
+    "precioAppJunio": 1500,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "haode-ai-w610-smart-glasses": {
-    "precioMostrador": 1800,
-    "precioAppJunio": 1500,
-    "source": "products.json:precioMayoreo fallback"
+    "precioMostrador": 1500,
+    "precioAppJunio": 1200,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "funda-premium-17-pro-max": {
     "precioMostrador": 85,
-    "precioAppJunio": 75,
-    "source": "products.json:precioMayoreo fallback"
+    "precioAppJunio": 70,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "samsung-original-s24-ultra": {
     "precioMostrador": 3500,
     "precioAppJunio": 3100,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "funda-magnetica-17-pro-max": {
     "precioMostrador": 100,
@@ -522,31 +522,31 @@
   "samsung-original-s25-ultra": {
     "precioMostrador": 3700,
     "precioAppJunio": 3300,
-    "source": "Lista_de_Precios_HAODE_2026_Clientes.xlsx:Caja/modelo"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Caja/modelo"
   },
   "samsung-original-note-20-ultra": {
-    "precioMostrador": 3500,
-    "precioAppJunio": 3400,
-    "source": "products.json:precioMayoreo fallback"
+    "precioMostrador": 3000,
+    "precioAppJunio": 2900,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "samsung-original-z-flip3": {
-    "precioMostrador": 3300,
-    "precioAppJunio": 3200,
-    "source": "products.json:precioMayoreo fallback"
+    "precioMostrador": 3000,
+    "precioAppJunio": 2900,
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "samsung-original-z-flip4": {
     "precioMostrador": 3600,
     "precioAppJunio": 3500,
-    "source": "products.json:precioMayoreo fallback"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "samsung-original-z-flip5": {
     "precioMostrador": 4000,
     "precioAppJunio": 3900,
-    "source": "products.json:precioMayoreo fallback"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   },
   "samsung-original-z-flip6": {
     "precioMostrador": 4500,
     "precioAppJunio": 4400,
-    "source": "products.json:precioMayoreo fallback"
+    "source": "HAODE Lista_de_Precios_HAODE_20260721.pdf:Mayoreo 5 pzs"
   }
 }

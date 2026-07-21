@@ -727,16 +727,16 @@ function renderHome() {
       <section class="hero-banner">
         <div class="hero-copy">
           <span class="hero-badge">HAODE México</span>
-          <h1>Pantallas y refacciones profesionales</h1>
-          <p>Catálogo rápido para técnicos, tiendas y clientes de mayoreo.</p>
+          <h1>iPhone y Samsung de alta gama</h1>
+          <p>Precio directo de fábrica, stock local en CDMX y envío rápido para pedidos confirmados.</p>
           <div class="hero-actions">
             <a class="primary-button" href="#catalogo">Ver productos</a>
             <a class="secondary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
           </div>
           <div class="hero-proof" aria-label="Beneficios HAODE">
-            <span>CDMX</span>
+            <span>Fábrica</span>
+            <span>Stock CDMX</span>
             <span>Mayoreo</span>
-            <span>Pedido por WhatsApp</span>
           </div>
         </div>
         <div class="hero-media">
