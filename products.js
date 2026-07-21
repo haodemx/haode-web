@@ -439,18 +439,6 @@ const IPHONE_INCELL_MEDIA = {
       "assets/products/iphone-incell/xr/video-01.mp4"
     ]
   },
-  "iphone-11-incell": {
-    "mainImage": "assets/products/iphone-incell/11/main.jpg",
-    "galleryImages": [
-      "assets/products/iphone-incell/11/gallery-01.jpg",
-      "assets/products/iphone-incell/11/gallery-02.jpg",
-      "assets/products/iphone-incell/11/gallery-03.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-incell/11/video-01.mp4",
-      "assets/products/iphone-incell/11/video-02.mp4"
-    ]
-  },
   "iphone-11-pro-incell": {
     "mainImage": "assets/products/iphone-incell/11pro/main.jpg",
     "galleryImages": [
@@ -797,14 +785,6 @@ const PRODUCT_DEFINITIONS = [
     quality: 'INCELL FHD+',
     prices: [180, 175, 170, 165, 155],
     description: 'Opción práctica para técnicos con buena respuesta táctil y compatibilidad estable.',
-  },
-  {
-    id: 'iphone-11-incell',
-    category: 'iphone-incell',
-    name: 'Pantalla para iPhone 11',
-    quality: 'INCELL FHD+',
-    prices: [180, 175, 170, 165, 155],
-    description: 'Pantalla para iPhone 11 con foco en instalación sencilla y buen margen de mayoreo.',
   },
   {
     id: 'iphone-11-pro-incell',

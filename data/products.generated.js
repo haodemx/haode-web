@@ -1,48 +1,5 @@
 window.HAODE_PRODUCTS_DATA = [
   {
-    "id": "iphone-incell-11",
-    "category": "iphone-incell",
-    "brand": "iPhone",
-    "model": "iPhone 11",
-    "name": "Pantalla para iPhone 11",
-    "quality": "INCELL FHD",
-    "images": [
-      "assets/products/iphone-incell/11/main.jpg",
-      "assets/products/iphone-incell/11/gallery-01.jpg",
-      "assets/products/iphone-incell/11/gallery-02.jpg",
-      "assets/products/iphone-incell/11/gallery-03.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-incell/11/video-01.mp4",
-      "assets/products/iphone-incell/11/video-02.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$180 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$175 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$170 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$165 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$155 MXN"
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 9",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11",
-    "description": "Pantalla para iPhone 11 INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de iPhone 11 Bolsa Protectora: caja/modelo $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar."
-  },
-  {
     "id": "iphone-incell-11-bolsa-protectora",
     "category": "iphone-incell",
     "brand": "iPhone",

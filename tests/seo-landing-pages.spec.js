@@ -7,8 +7,9 @@ test("iPhone 11 and XR wholesale landing page keeps confirmed prices separated",
 
   await expect(page.getByRole("heading", { name: /Pantallas iPhone 11 y XR Mayoreo/i })).toBeVisible();
   await expect(page.locator("body")).toContainText("Bolsa Protectora caja/modelo $140 MXN");
-  await expect(page.locator("body")).toContainText("Versión estándar caja/modelo $155 MXN");
+  await expect(page.locator("body")).toContainText("XR estándar caja/modelo $155 MXN");
   await expect(page.getByRole("link", { name: /Ver iPhone 11 Bolsa/i })).toHaveAttribute("href", "/producto/iphone-incell-11-bolsa-protectora/");
+  await expect(page.getByRole("link", { name: /Ver iPhone 11 estándar/i })).toHaveCount(0);
   await expect(page.getByRole("link", { name: /Ver iPhone XR estándar/i })).toHaveAttribute("href", "/producto/iphone-incell-xr/");
 });
 
