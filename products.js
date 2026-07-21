@@ -1232,8 +1232,17 @@ function getPublicProductRouteSlug(productId) {
 }
 
 function setMetaContent(selector, content) {
-  const el = document.querySelector(selector);
-  if (el) el.setAttribute('content', content);
+  let el = document.querySelector(selector);
+  if (!el) {
+    const nameMatch = selector.match(/^meta\[name=["']([^"']+)["']\]$/);
+    const propertyMatch = selector.match(/^meta\[property=["']([^"']+)["']\]$/);
+    if (!nameMatch && !propertyMatch) return;
+    el = document.createElement('meta');
+    if (nameMatch) el.setAttribute('name', nameMatch[1]);
+    if (propertyMatch) el.setAttribute('property', propertyMatch[1]);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', content);
 }
 
 function setCanonicalUrl(url) {
@@ -1274,6 +1283,13 @@ function productMetaKeywords(product) {
     'pantallas para técnicos',
     'pantallas para distribuidores',
   ].join(', ');
+}
+
+function productSeoDescription(product) {
+  const name = String(product.name || 'Producto HAODE').replace(/\s*\|\s*HAODE.*$/i, '').trim();
+  const description = `${name} en HAODE México. Consulta precio, disponibilidad y compatibilidad por WhatsApp.`;
+  if (description.length <= 165) return description;
+  return `${name} en HAODE México. Consulta por WhatsApp.`;
 }
 
 function getCategoryHash(category) {
@@ -2119,17 +2135,21 @@ function renderProductDetailPage() {
 
   document.title = `${product.name} | HAODE México`;
   const detailUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(product.id))}/`);
-  const metaDescription = `${product.name} en HAODE México. ${product.description}`;
+  const metaDescription = productSeoDescription(product);
   const metaKeywords = productMetaKeywords(product);
+  const socialImage = new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href;
 
   setCanonicalUrl(detailUrl);
   setMetaContent('meta[name="description"]', metaDescription);
   setMetaContent('meta[name="keywords"]', metaKeywords);
   setMetaContent('meta[property="og:title"]', `${product.name} | HAODE México`);
   setMetaContent('meta[property="og:description"]', metaDescription);
-  setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
+  setMetaContent('meta[property="og:image"]', socialImage);
   setMetaContent('meta[property="og:url"]', detailUrl);
   setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
+  setMetaContent('meta[name="twitter:title"]', `${product.name} | HAODE México`);
+  setMetaContent('meta[name="twitter:description"]', metaDescription);
+  setMetaContent('meta[name="twitter:image"]', socialImage);
 
   if (titleEl) titleEl.textContent = product.name;
   if (subtitleEl) subtitleEl.textContent = `${CATEGORY_META[product.category].title} · ${product.stockLabel || 'Consultar inventario'}`;

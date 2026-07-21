@@ -108,6 +108,12 @@ function extractSitemapUrls(text) {
   return urls;
 }
 
+function extractCanonicalUrl(text) {
+  const match = text.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)
+    || text.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical["']/i);
+  return match ? match[1] : '';
+}
+
 function main() {
   const issues = [];
   const files = walk(ROOT).filter(isPublicFile);
@@ -167,9 +173,12 @@ function main() {
     htmlFiles.forEach((file) => {
       const rel = relative(file);
       if (rel === '404.html' || rel.includes('/admin')) return;
+      const text = read(file);
+      const canonicalUrl = extractCanonicalUrl(text);
       const urlPath = rel.endsWith('/index.html') ? rel.slice(0, -'index.html'.length) : rel;
       const expected = `${SITE_URL}/${urlPath}`.replace(/\/+$/, '/');
-      if (!sitemapText.includes(expected) && rel.startsWith('producto/')) {
+      const canonicalCovered = canonicalUrl && sitemapText.includes(canonicalUrl);
+      if (!sitemapText.includes(expected) && !canonicalCovered && rel.startsWith('producto/')) {
         add(issues, 'warn', 'SITEMAP_ENTRY_MISSING', file, expected);
       }
     });
