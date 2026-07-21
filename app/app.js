@@ -868,7 +868,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
         <a class="back-link" href="#inicio">Volver al inicio</a>
         <div>
           <h1>${title}</h1>
-          <p>${productsToShow.length} productos activos. Menudeo, Mayoreo y Precio APP cuando aplica.</p>
+          <p>${productsToShow.length} productos activos. Menudeo y mayoreo por cantidad.</p>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-07-product-audit";
+const CACHE_VERSION = "haode-pwa-v2026-07-21-no-junio-pricing";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -14,7 +14,6 @@ const APP_SHELL_URLS = [
   "/app/app.css",
   "/app/app.js",
   "/app/products.json",
-  "/app/promo-junio-prices.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",
   "/assets/logo/logo.png",
@@ -51,7 +50,6 @@ function isHtmlRequest(request) {
 
 function isFreshDataRequest(url) {
   return url.pathname.endsWith("/products.json")
-    || url.pathname.endsWith("/promo-junio-prices.json")
     || url.pathname.endsWith("/products.generated.js")
     || url.pathname.includes("/data/marketing/daily-ad-");
 }
