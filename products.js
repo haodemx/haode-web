@@ -10,7 +10,7 @@ const CATEGORY_META = {
   'iphone-incell': {
     brand: 'iPhone',
     title: 'iPhone INCELL',
-    subtitle: 'Opciones de entrada para técnicos, talleres y clientes que buscan una buena relación precio-rendimiento.',
+    subtitle: 'Modelos iPhone de alta rotación para técnicos, tiendas y mayoreo por cantidad.',
     mainImage: 'assets/products/iphone-incell/main.jpg',
     galleryImages: [
       'assets/products/iphone-incell/gallery-01.jpg',
@@ -21,7 +21,7 @@ const CATEGORY_META = {
   'iphone-oled': {
     brand: 'iPhone',
     title: 'iPhone OLED',
-    subtitle: 'Pantallas premium para un acabado visual superior y una experiencia más cercana al original.',
+    subtitle: 'Ruta premium para iPhone Pro, Pro Max y clientes que buscan mejor calidad visual.',
     mainImage: 'assets/products/iphone-oled/main.jpg',
     galleryImages: [
       'assets/products/iphone-oled/gallery-01.jpg',
@@ -32,7 +32,7 @@ const CATEGORY_META = {
   'samsung-incell': {
     brand: 'Samsung',
     title: 'Samsung INCELL',
-    subtitle: 'Pantallas con marco para instalación rápida y compra por mayoreo en CDMX.',
+    subtitle: 'Opciones Samsung para reparación profesional, compra recurrente y mayoreo por cantidad.',
     mainImage: 'assets/products/samsung-incell/main.jpg',
     galleryImages: [
       'assets/products/samsung-incell/gallery-01.jpg',
@@ -43,7 +43,7 @@ const CATEGORY_META = {
   'samsung-oled': {
     brand: 'Samsung',
     title: 'Samsung OLED',
-    subtitle: 'Pantallas de gama alta para modelos Galaxy con mejor calidad visual.',
+    subtitle: 'Pantallas Galaxy Ultra, Plus y líneas premium con mejor calidad visual.',
     mainImage: 'assets/products/samsung-oled/main.jpg',
     galleryImages: [
       'assets/products/samsung-oled/gallery-01.jpg',
@@ -266,7 +266,7 @@ const CATALOG_GROUPS = [
     id: 'pantallas',
     kicker: 'Pantallas',
     title: 'Pantallas',
-    subtitle: 'Familias de pantalla para técnicos y distribuidores, organizadas por tipo y modelo.',
+    subtitle: 'Entrada rápida a iPhone Pro Max, Samsung Ultra, OLED, AMOLED, INCELL y Samsung TIPO ORIGINAL.',
     categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'motorola-lcd', 'oled-diagnostica'],
     featureCards: [
       ...SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS,
@@ -836,7 +836,7 @@ const PRODUCT_DEFINITIONS = [
     name: 'Pantalla para iPhone 12 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
     prices: [250, 240, 235, 230, 220],
-    description: 'Pantalla INCELL para 12 Pro Max con foco en stock local en CDMX.',
+    description: 'Pantalla INCELL para 12 Pro Max con disponibilidad por confirmar en CDMX.',
   },
   {
     id: 'iphone-13-mini-incell',

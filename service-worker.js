@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-18-erp-catalog";
+const CACHE_VERSION = "haode-pwa-v2026-07-21-high-end-seo";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -13,9 +13,8 @@ const APP_SHELL_URLS = [
   "/campaign-attribution.js",
   "/products.js",
   "/app/app.css?v=20260718-erp-catalog",
-  "/app/app.js?v=20260718-erp-catalog",
+  "/app/app.js?v=20260721-high-end-seo",
   "/app/products.json",
-  "/app/promo-junio-prices.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",
   "/assets/logo/logo.png",
@@ -52,7 +51,6 @@ function isHtmlRequest(request) {
 
 function isFreshDataRequest(url) {
   return url.pathname.endsWith("/products.json")
-    || url.pathname.endsWith("/promo-junio-prices.json")
     || url.pathname.endsWith("/products.generated.js")
     || url.pathname.includes("/data/marketing/daily-ad-");
 }
