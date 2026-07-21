@@ -370,6 +370,7 @@ function normalizeProduct(product) {
     active: product.activo !== false,
     order: Number(product.orden ?? product.order ?? 9999),
     specialOffer: product.specialOffer === true,
+    localOnly: product.localOnly === true,
     offerActive: product.offerActive !== false,
     originalPrice: Number(product.originalPrice ?? 0),
     discountPrice: Number(product.discountPrice ?? 0),
@@ -554,7 +555,8 @@ function mergeErpCatalog(localProducts, catalogRows) {
     }
     usedLocalIndexes.add(index);
     const current = localCatalog[index];
-    const hasAuthoritativeLocalPrices = current.priceSource.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx");
+    const hasAuthoritativeLocalPrices = current.priceSource.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx")
+      || current.priceSource.includes("Lista_de_Precios_HAODE_20260721.pdf");
     const incomingTiersByCode = new Map(incoming.priceTiers.filter((tier) => tier.code).map((tier) => [tier.code, tier]));
     const mergedTiers = hasAuthoritativeLocalPrices
       ? current.priceTiers.map((tier) => incomingTiersByCode.get(tier.code) ? { ...tier, ...incomingTiersByCode.get(tier.code) } : tier)
@@ -580,6 +582,13 @@ function mergeErpCatalog(localProducts, catalogRows) {
       erpCatalogSource: true
     });
   });
+
+  localCatalog.forEach((product, index) => {
+    if (!usedLocalIndexes.has(index) && product.localOnly) {
+      result.push(product);
+    }
+  });
+
   return result.sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, "es"));
 }
 
@@ -1445,6 +1454,7 @@ function renderRoute() {
 
 function updateNavigation() {
   const routeName = state.route.name;
+  document.body.dataset.route = routeName;
   document.querySelectorAll("[data-nav]").forEach((item) => {
     const nav = item.dataset.nav;
     item.classList.toggle("is-active", (

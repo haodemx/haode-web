@@ -729,7 +729,7 @@
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 11",
     "modelo": "iPhone 11 INCELL FHD",
-    "descripcion": "Pantalla para iPhone 11 INCELL FHD para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "descripcion": "Pantalla para iPhone 11 INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de iPhone 11 Bolsa Protectora: caja/modelo $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
     "precioPublico": 180,
     "precioMayoreo": 175,
     "imagen": "/assets/products/iphone-incell/11/main.jpg",
@@ -772,6 +772,66 @@
       }
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 9"
+  },
+  {
+    "id": "iphone-incell-11-bolsa-protectora",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 11 Bolsa Protectora",
+    "modelo": "iPhone 11 Bolsa Protectora INCELL FHD",
+    "descripcion": "Pantalla para iPhone 11 Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de caja/modelo confirmado en $140 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "precioPublico": 160,
+    "precioMayoreo": 155,
+    "imagen": "/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+    "stock": "consultar inventario",
+    "activo": true,
+    "orden": 191,
+    "localOnly": true,
+    "specialOffer": true,
+    "offerActive": true,
+    "offerTitle": "iPhone 11 Bolsa Protectora",
+    "offerSubtitle": "INCELL FHD · Bolsa Protectora",
+    "offerBadge": "Caja $140",
+    "offerPromoLabel": "BOLSA PROTECTORA",
+    "offerDisplayPrice": "$140 MXN / pieza",
+    "offerDisplayNote": "Caja/modelo · confirmar por WhatsApp",
+    "offerImage": "/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+    "offerSort": 1,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 155,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 150,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 145,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 140,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora"
   },
   {
     "id": "iphone-incell-11pro",
@@ -1729,7 +1789,7 @@
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone XR",
     "modelo": "iPhone XR INCELL FHD",
-    "descripcion": "Pantalla para iPhone XR INCELL FHD para reparacion celular en Mexico. Disponible para tecnicos, tiendas y mayoreo HAODE con confirmacion por WhatsApp.",
+    "descripcion": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora: caja/modelo $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
     "precioPublico": 180,
     "precioMayoreo": 175,
     "imagen": "/assets/products/iphone-incell/xr/main.jpg",
@@ -1772,6 +1832,66 @@
       }
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 8"
+  },
+  {
+    "id": "iphone-incell-xr-bolsa-protectora",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone XR Bolsa Protectora",
+    "modelo": "iPhone XR Bolsa Protectora INCELL FHD",
+    "descripcion": "Pantalla para iPhone XR Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de caja/modelo confirmado en $140 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "precioPublico": 160,
+    "precioMayoreo": 155,
+    "imagen": "/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+    "stock": "consultar inventario",
+    "activo": true,
+    "orden": 391,
+    "localOnly": true,
+    "specialOffer": true,
+    "offerActive": true,
+    "offerTitle": "iPhone XR Bolsa Protectora",
+    "offerSubtitle": "INCELL FHD · Bolsa Protectora",
+    "offerBadge": "Caja $140",
+    "offerPromoLabel": "BOLSA PROTECTORA",
+    "offerDisplayPrice": "$140 MXN / pieza",
+    "offerDisplayNote": "Caja/modelo · confirmar por WhatsApp",
+    "offerImage": "/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+    "offerSort": 2,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 155,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 150,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 145,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 140,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora"
   },
   {
     "id": "iphone-incell-xs",

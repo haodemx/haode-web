@@ -1636,6 +1636,10 @@ img {
   backdrop-filter: blur(18px);
 }
 
+body[data-route="product"] .bottom-nav {
+  display: none;
+}
+
 .bottom-nav a,
 .bottom-nav button {
   position: relative;

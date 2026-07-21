@@ -686,4 +686,14 @@
     <loc>https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro-max/</loc>
     <lastmod>2026-06-20</lastmod>
   </url>
+  <url>
+    <loc>https://haode.com.mx/producto/iphone-incell-11-bolsa-protectora/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://haode.com.mx/producto/iphone-incell-xr-bolsa-protectora/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>

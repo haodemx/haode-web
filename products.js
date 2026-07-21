@@ -1299,7 +1299,9 @@ function erpTierPrices(row) {
 }
 
 function hasAuthoritativeCustomerPrices(product) {
-  return String(product.priceSource || '').includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx');
+  const source = String(product.priceSource || '');
+  return source.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
+    || source.includes('Lista_de_Precios_HAODE_20260721.pdf');
 }
 
 function applyErpPublicCatalog(rows) {
@@ -1380,6 +1382,12 @@ function applyErpPublicCatalog(rows) {
     product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
     product.erpStockUpdatedAt = row.updated_at || '';
     catalogProducts.push(product);
+  });
+
+  localProducts.forEach((product, index) => {
+    if (!usedLocalIndexes.has(index) && product.localOnly) {
+      catalogProducts.push(product);
+    }
   });
 
   PRODUCTS.splice(0, PRODUCTS.length, ...catalogProducts);
@@ -1539,6 +1547,7 @@ function createProduct(definition) {
     stockLabel: 'Consultar inventario',
     salesAvailable: definition.salesAvailable !== false,
     priceStatus: definition.priceStatus || 'CONFIRMED',
+    localOnly: definition.localOnly === true,
   };
 }
 

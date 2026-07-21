@@ -44,6 +44,24 @@
     },
     {
       "section": "iphone",
+      "sourceRow": 8.1,
+      "model": "XR Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 160,
+        "wholesale5": 155,
+        "mixed100": 150,
+        "model100": 145,
+        "boxModel": 140,
+        "quantity10": null
+      },
+      "note": "Tamaño original",
+      "sourceDocument": "HAODE Lista_de_Precios_HAODE_20260721.pdf"
+    },
+    {
+      "section": "iphone",
       "sourceRow": 8,
       "model": "XR",
       "product": null,
@@ -58,6 +76,24 @@
         "quantity10": null
       },
       "note": "Tamaño original"
+    },
+    {
+      "section": "iphone",
+      "sourceRow": 9.1,
+      "model": "11 Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD",
+      "brand": "HL",
+      "prices": {
+        "retail": 160,
+        "wholesale5": 155,
+        "mixed100": 150,
+        "model100": 145,
+        "boxModel": 140,
+        "quantity10": null
+      },
+      "note": "Tamaño original",
+      "sourceDocument": "HAODE Lista_de_Precios_HAODE_20260721.pdf"
     },
     {
       "section": "iphone",

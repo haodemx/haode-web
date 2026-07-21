@@ -121,6 +121,9 @@ const catalog = {
   ]
 };
 
+const LOCAL_ONLY_PRODUCTS_FROM_CONFIRMED_PRICE_LIST = 2;
+const EXPECTED_MERGED_PRODUCT_COUNT = catalog.products.length + LOCAL_ONLY_PRODUCTS_FROM_CONFIRMED_PRICE_LIST;
+
 test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ page }) => {
   let submitted;
   await page.addInitScript(() => { window.open = () => null; });
@@ -135,7 +138,7 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
 
   await page.goto(`${APP_URL}?utm_source=google_business&utm_campaign=omnichannel_2#lista`, { waitUntil: "domcontentloaded" });
 
-  await expect.poll(() => page.evaluate(() => window.HAODE_DIAGNOSTICS?.productosActivos)).toBe(catalog.products.length);
+  await expect.poll(() => page.evaluate(() => window.HAODE_DIAGNOSTICS?.productosActivos)).toBe(EXPECTED_MERGED_PRODUCT_COUNT);
 
   const availableCard = page.locator(".product-card", { hasText: "Producto ERP exclusivo X200" });
   await expect(availableCard).toBeVisible();
@@ -169,6 +172,10 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
   await expect(g3Card).toHaveCount(1);
   await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
 
+  const localBolsaCard = page.locator(".product-card", { hasText: "iPhone 11 Bolsa Protectora" });
+  await expect(localBolsaCard).toBeVisible();
+  await expect(localBolsaCard).toContainText("$160 MXN");
+
   await page.goto(`${APP_URL}#producto/x200t-cortadora-micas`, { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { name: /X200T/i })).toBeVisible();
   await expect(page.locator("[data-product-gallery] img").first()).toBeVisible();
@@ -179,7 +186,7 @@ test("shows ERP-only products in the desktop catalog", async ({ page }) => {
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
   await page.goto("http://127.0.0.1:4173/productos/?utm_source=facebook", { waitUntil: "domcontentloaded" });
 
-  await expect.poll(() => page.evaluate(() => window.HAODE_PRODUCTS?.length)).toBe(catalog.products.length);
+  await expect.poll(() => page.evaluate(() => window.HAODE_PRODUCTS?.length)).toBe(EXPECTED_MERGED_PRODUCT_COUNT);
 
   const productCard = page.locator(".shop-card", { hasText: "Producto ERP exclusivo X200" });
   await expect(productCard).toBeVisible();
@@ -194,5 +201,10 @@ test("shows ERP-only products in the desktop catalog", async ({ page }) => {
   const g3Card = page.locator(".shop-card", { hasText: "Gafas AI G3" });
   await expect(g3Card).toHaveCount(1);
   await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
+
+  const localBolsaCard = page.locator(".shop-card", { hasText: "Pantalla para iPhone 11 Bolsa Protectora" });
+  await expect(localBolsaCard).toBeVisible();
+  await expect(localBolsaCard).toContainText("Caja/modelo");
+  await expect(localBolsaCard).toContainText("$140 MXN");
   await saveEvidence(page, "website-erp-catalog.png");
 });

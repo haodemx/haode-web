@@ -40,7 +40,45 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11",
-    "description": "Pantalla para iPhone 11 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
+    "description": "Pantalla para iPhone 11 INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de iPhone 11 Bolsa Protectora: caja/modelo $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar."
+  },
+  {
+    "id": "iphone-incell-11-bolsa-protectora",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone 11 Bolsa Protectora",
+    "name": "Pantalla para iPhone 11 Bolsa Protectora",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/11-bolsa-protectora/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$160 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$155 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$150 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$145 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$140 MXN"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Bolsa Protectora",
+    "description": "Pantalla para iPhone 11 Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de caja/modelo confirmado en $140 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "localOnly": true
   },
   {
     "id": "iphone-incell-11pro",
@@ -1197,7 +1235,45 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR",
-    "description": "Pantalla para iPhone XR disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
+    "description": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora: caja/modelo $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar."
+  },
+  {
+    "id": "iphone-incell-xr-bolsa-protectora",
+    "category": "iphone-incell",
+    "brand": "iPhone",
+    "model": "iPhone XR Bolsa Protectora",
+    "name": "Pantalla para iPhone XR Bolsa Protectora",
+    "quality": "INCELL FHD",
+    "images": [
+      "assets/products/iphone-incell/xr-bolsa-protectora/main.jpg"
+    ],
+    "videos": [],
+    "prices": [
+      {
+        "quantity": "1 pza",
+        "price": "$160 MXN"
+      },
+      {
+        "quantity": "5+ pzs",
+        "price": "$155 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$150 MXN"
+      },
+      {
+        "quantity": "100 pzs/modelo",
+        "price": "$145 MXN"
+      },
+      {
+        "quantity": "Caja/modelo",
+        "price": "$140 MXN"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR Bolsa Protectora",
+    "description": "Pantalla para iPhone XR Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de caja/modelo confirmado en $140 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "localOnly": true
   },
   {
     "id": "iphone-incell-xs",
@@ -5301,7 +5377,7 @@ window.HAODE_PRODUCTS_DATA = [
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   }
-];;
+];
 window.HAODE_PRODUCTS_BUILD = {
   "generatedAt": "2026-06-21T01:43:20.500Z",
   "source": "docs/master-data/products-master.csv"

@@ -4689,6 +4689,10 @@ body.catalog-page .floating-cta {
   color: #241609;
 }
 
+body.product-detail-page .floating-cta {
+  display: none;
+}
+
 body.catalog-page.catalog-reference-page {
   --catalog-orange: #ff5a14;
   --catalog-orange-soft: rgba(255, 90, 20, 0.12);
