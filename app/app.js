@@ -11,8 +11,6 @@ const PRODUCTS_JSON_URL = sitePath("/app/products.json");
 const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
 const ERP_WEB_ORDER_URL = "https://erp.haode.com.mx/api/public/web-orders";
 const DAILY_AD_URL = sitePath("/data/marketing/daily-ad-latest.json");
-const PROMO_JUNIO = true;
-const PROMO_JUNIO_PRICES_URL = sitePath("/app/promo-junio-prices.json");
 const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
@@ -97,7 +95,6 @@ const state = {
   sortMode: "featured",
   route: { name: "home" },
   cart: new Map(),
-  promoPrices: new Map(),
   dailyAd: null,
   selectedGalleryIndex: 0,
   viewerIndex: 0,
@@ -259,16 +256,18 @@ function normalizePriceTiers(tiers) {
     return [];
   }
   return tiers
-    .map((tier) => ({
+    .map((tier, index) => ({
       minQty: Number(tier.minQty ?? tier.minQuantity ?? tier.cantidadMinima ?? tier.min ?? 0),
       maxQty: tier.maxQty === null || tier.maxQty === undefined
         ? null
         : Number(tier.maxQty ?? tier.maxQuantity ?? tier.cantidadMaxima ?? tier.max),
       price: Number(tier.price ?? tier.precio ?? tier.unitPrice ?? tier.precioUnitario ?? 0),
-      label: tier.label || tier.nombre || "Precio por cantidad"
+      label: tier.label || tier.nombre || "Precio por cantidad",
+      autoApply: tier.autoApply !== false,
+      order: Number(tier.order ?? index)
     }))
     .filter((tier) => tier.minQty > 0 && tier.price > 0)
-    .sort((a, b) => a.minQty - b.minQty);
+    .sort((a, b) => a.order - b.order || a.minQty - b.minQty);
 }
 
 function normalizeProduct(product) {
@@ -290,7 +289,6 @@ function normalizeProduct(product) {
     quality,
     description: product.descripcion || product.description || "",
     publicPrice: Number(product.precioPublico ?? product.publicPrice ?? 0),
-    appJunePrice: Number(product.precioAppJunio ?? product.appJunePrice ?? 0),
     wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
     priceTiers: normalizePriceTiers(product.priceTiers || product.quantityPricing || product.preciosPorCantidad),
     image: product.imagen || product.image || PLACEHOLDER_IMAGE,
@@ -434,35 +432,6 @@ async function loadProducts() {
   };
 }
 
-async function loadPromoPrices() {
-  state.promoPrices = new Map();
-  if (!PROMO_JUNIO) {
-    return;
-  }
-
-  try {
-    const response = await fetch(PROMO_JUNIO_PRICES_URL, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`No se pudo cargar promo junio: ${response.status}`);
-    }
-    const data = await response.json();
-    state.promoPrices = new Map(
-      Object.entries(data)
-        .map(([id, price]) => [
-          id,
-          {
-            publicPrice: Number(price.precioMostrador ?? 0),
-            appPrice: Number(price.precioAppJunio ?? 0),
-            source: price.source || ""
-          }
-        ])
-        .filter(([, price]) => price.publicPrice > 0 && price.appPrice > 0)
-    );
-  } catch (error) {
-    console.info("HAODE app sin promoción junio:", error.message);
-  }
-}
-
 async function loadDailyAd() {
   state.dailyAd = null;
   try {
@@ -479,42 +448,9 @@ async function loadDailyAd() {
   }
 }
 
-function promoPriceFor(product) {
-  if (!PROMO_JUNIO || !product?.id) {
-    return null;
-  }
-  const promo = state.promoPrices.get(product.id);
-  if (!promo) {
-    return null;
-  }
-  const publicPrice = promo.publicPrice || product.publicPrice;
-  const appPrice = promo.appPrice || product.wholesalePrice || product.publicPrice;
-  if (!publicPrice || !appPrice) {
-    return null;
-  }
-  return {
-    publicPrice,
-    appPrice,
-    savings: Math.max(publicPrice - appPrice, 0),
-    source: promo.source
-  };
-}
-
 function priceRuleFor(product, quantity = 1) {
-  const promo = promoPriceFor(product);
-  if (promo) {
-    return { unitPrice: promo.appPrice, label: "Precio APP Junio", promo };
-  }
-
-  if (product.appJunePrice > 0) {
-    if (quantity >= 10) {
-      return { unitPrice: product.wholesalePrice || product.appJunePrice, label: "Precio Mayoreo" };
-    }
-    return { unitPrice: product.appJunePrice, label: "Precio APP Junio" };
-  }
-
   const matchingTier = product.priceTiers
-    .filter((tier) => quantity >= tier.minQty && (tier.maxQty === null || quantity <= tier.maxQty))
+    .filter((tier) => tier.autoApply && quantity >= tier.minQty && (tier.maxQty === null || quantity <= tier.maxQty))
     .pop();
   if (matchingTier) {
     return { unitPrice: matchingTier.price, label: matchingTier.label };
@@ -537,38 +473,29 @@ function formatPrice(value) {
   return number > 0 ? `${money.format(number)} MXN` : "Consultar por WhatsApp";
 }
 
+function lowestDisplayPrice(product) {
+  const values = [
+    product.publicPrice,
+    product.wholesalePrice,
+    ...product.priceTiers.map((tier) => tier.price)
+  ].filter((value) => Number(value) > 0);
+  return values.length ? Math.min(...values) : 0;
+}
+
 function priceLines(product) {
-  const promo = promoPriceFor(product);
+  const fromPrice = lowestDisplayPrice(product);
   if (product.category === "Micas") {
     return `
       <div class="price-lines">
-        <span>Paquete 50 pzs <strong>${formatPrice(product.publicPrice)}</strong></span>
-        <span>Mayoreo desde <strong>${formatPrice(product.wholesalePrice)}</strong></span>
-      </div>
-    `;
-  }
-  if (product.appJunePrice > 0) {
-    return `
-      <div class="price-lines">
-        <span>Precio Mostrador <strong>${formatPrice(product.publicPrice)}</strong></span>
-        <span class="promo-app-price">Precio APP Junio <strong>${formatPrice(product.appJunePrice)}</strong></span>
-        <span>Precio Mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
-      </div>
-    `;
-  }
-  if (promo) {
-    return `
-      <div class="price-lines">
-        <span>Precio Mostrador <strong>${formatPrice(promo.publicPrice)}</strong></span>
-        <span class="promo-app-price">Precio APP Junio <strong>${formatPrice(promo.appPrice)}</strong></span>
-        <span class="price-note">Ahorro ${formatPrice(promo.savings)}</span>
+        <span>Desde <strong>${formatPrice(fromPrice || product.wholesalePrice || product.publicPrice)}</strong></span>
+        <span class="price-note">Precio por cantidad</span>
       </div>
     `;
   }
   return `
     <div class="price-lines">
-      <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
-      <span>Precio mayoreo <strong>${formatPrice(product.wholesalePrice)}</strong></span>
+      <span>Desde <strong>${formatPrice(fromPrice || product.publicPrice)}</strong></span>
+      <span class="price-note">${product.priceTiers.length ? "Ver precios por cantidad" : "Mayoreo disponible"}</span>
     </div>
   `;
 }
@@ -719,7 +646,7 @@ function renderHome() {
   ];
   const uniqueFeatured = Array.from(new Map(featuredProducts.map((product) => [product.id, product])).values()).slice(0, 10);
   const promoProducts = products
-    .filter((product) => product.offerActive && (product.specialOffer || promoPriceFor(product) || product.appJunePrice > 0 || product.offerDisplayPrice))
+    .filter((product) => product.offerActive && (product.specialOffer || product.offerDisplayPrice))
     .slice(0, 4);
 
   viewRootEl.innerHTML = `
@@ -833,8 +760,7 @@ function dailyAdBannerHtml() {
 }
 
 function promoCardHtml(product) {
-  const promo = promoPriceFor(product);
-  const displayPrice = product.offerDisplayPrice || (promo ? formatPrice(promo.appPrice) : formatPrice(product.appJunePrice || product.publicPrice));
+  const displayPrice = product.offerDisplayPrice || formatPrice(lowestDisplayPrice(product) || product.publicPrice);
   return `
     <a class="promo-card" href="${appProductUrl(product)}" aria-label="Ver promoción ${escapeAttr(product.displayName)}">
       <span class="promo-label">Promoción</span>
@@ -1095,13 +1021,10 @@ function thumbStripHtml(images, selectedIndex, viewer = false) {
 }
 
 function priceStackHtml(product) {
-  const promo = promoPriceFor(product);
-  if (promo) {
+  if (product.priceTiers.length) {
     return `
       <div class="price-stack">
-        <span>Precio Mostrador <strong>${formatPrice(promo.publicPrice)}</strong></span>
-        <span>Precio APP Junio <strong>${formatPrice(promo.appPrice)}</strong></span>
-        <span>Ahorro <strong>${formatPrice(promo.savings)}</strong></span>
+        ${product.priceTiers.map((tier) => `<span>${tier.label}${tier.autoApply ? "" : " · confirmar por WhatsApp"} <strong>${formatPrice(tier.price)}</strong></span>`).join("")}
       </div>
     `;
   }
@@ -1319,7 +1242,7 @@ function buildWhatsappUrl() {
     `Cliente: ${clientName || "Sin nombre"}`,
     `Telefono: ${clientPhone || "Sin telefono"}`,
     `Ciudad: ${clientCity || "Sin ciudad"}`,
-    `Tipo de precio: ${PROMO_JUNIO ? "Precio APP Junio" : "automatico por cantidad"}`,
+    "Tipo de precio: automatico por cantidad",
     "",
     ...items.map((item) => {
       const priceRule = priceRuleFor(item.product, item.quantity);
@@ -1664,7 +1587,6 @@ async function init() {
 
   try {
     await loadProducts();
-    await loadPromoPrices();
     await loadDailyAd();
     renderRoute();
     renderCart();

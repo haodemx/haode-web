@@ -10,7 +10,49 @@
     "imagen": "/assets/products/iphone-oled/11promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 20
+    "orden": 20,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 600,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 590,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 580,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 550,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 535,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-12-12pro",
@@ -23,7 +65,49 @@
     "imagen": "/assets/products/iphone-oled/12-12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 30
+    "orden": 30,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 650,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 640,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 615,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-12pro",
@@ -36,7 +120,49 @@
     "imagen": "/assets/products/iphone-oled/12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 40
+    "orden": 40,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 650,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 640,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 615,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-12promax",
@@ -49,7 +175,49 @@
     "imagen": "/assets/products/iphone-oled/12promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 50
+    "orden": 50,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 700,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-13",
@@ -62,7 +230,49 @@
     "imagen": "/assets/products/iphone-oled/13/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 60
+    "orden": 60,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 730,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 700,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 680,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-13pro",
@@ -75,7 +285,49 @@
     "imagen": "/assets/products/iphone-oled/13pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 70
+    "orden": 70,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 780,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 760,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 750,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 730,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-13promax",
@@ -88,7 +340,49 @@
     "imagen": "/assets/products/iphone-oled/13promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 80
+    "orden": 80,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 800,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 780,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 760,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 750,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-14",
@@ -101,7 +395,49 @@
     "imagen": "/assets/products/iphone-oled/14/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 90
+    "orden": 90,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 700,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 630,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-14plus",
@@ -114,7 +450,49 @@
     "imagen": "/assets/products/iphone-oled/14plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 100
+    "orden": 100,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 900,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 880,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 830,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-14pro",
@@ -127,7 +505,49 @@
     "imagen": "/assets/products/iphone-oled/14pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 110
+    "orden": 110,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1200,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1150,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1100,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1050,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1000,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-14promax",
@@ -140,7 +560,49 @@
     "imagen": "/assets/products/iphone-oled/14promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 120
+    "orden": 120,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1000,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-15",
@@ -153,7 +615,49 @@
     "imagen": "/assets/products/iphone-oled/15/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 130
+    "orden": 130,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1200,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1150,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1100,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1050,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1000,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-15promax",
@@ -166,7 +670,49 @@
     "imagen": "/assets/products/iphone-oled/15promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 140
+    "orden": 140,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1200,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1100,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1000,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 850,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-16pro",
@@ -179,7 +725,49 @@
     "imagen": "/assets/products/iphone-oled/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 150
+    "orden": 150,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1300,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1250,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1200,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1150,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1100,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-16promax",
@@ -192,7 +780,49 @@
     "imagen": "/assets/products/iphone-oled/16promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 160
+    "orden": 160,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2000,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1950,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1800,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-xsmax",
@@ -205,7 +835,49 @@
     "imagen": "/assets/products/iphone-oled/xsmax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 170
+    "orden": 170,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 580,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 570,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 550,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 540,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-oled-16promax-hard",
@@ -218,7 +890,49 @@
     "imagen": "/assets/products/iphone-oled/16promax-hard/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 180
+    "orden": 180,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1400,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1350,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1300,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1250,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1200,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-11",
@@ -231,7 +945,49 @@
     "imagen": "/assets/products/iphone-incell/11/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 190
+    "orden": 190,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 180,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-11pro",
@@ -254,7 +1010,49 @@
     "offerDisplayPrice": "$170 MXN / pieza",
     "offerDisplayNote": "Caja cerrada (290 pzs) · Total caja: $49,300 MXN",
     "offerImage": "/assets/promotions/iphone-11-pro-fhd/factory-promo.png",
-    "offerSort": 1
+    "offerSort": 1,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 200,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 190,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 185,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 180,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 175,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-11promax",
@@ -267,7 +1065,49 @@
     "imagen": "/assets/products/iphone-incell/11promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 210
+    "orden": 210,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 220,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 210,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 200,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 195,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 190,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-12-12pro",
@@ -280,7 +1120,49 @@
     "imagen": "/assets/products/iphone-incell/12-12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 220
+    "orden": 220,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 220,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 210,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 200,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 195,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 190,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-12mini",
@@ -293,7 +1175,49 @@
     "imagen": "/assets/products/iphone-incell/12mini/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 230
+    "orden": 230,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 230,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 220,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 210,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 200,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 195,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-12promax",
@@ -306,7 +1230,49 @@
     "imagen": "/assets/products/iphone-incell/12promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 240
+    "orden": 240,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 250,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 240,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 235,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 230,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 220,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-13",
@@ -319,7 +1285,49 @@
     "imagen": "/assets/products/iphone-incell/13/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 250
+    "orden": 250,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 250,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 245,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 240,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 235,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-13mini",
@@ -332,7 +1340,49 @@
     "imagen": "/assets/products/iphone-incell/13mini/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 260
+    "orden": 260,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 260,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 250,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 245,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 240,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 235,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-13pro",
@@ -345,7 +1395,49 @@
     "imagen": "/assets/products/iphone-incell/13pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 270
+    "orden": 270,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 300,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 290,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 285,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 280,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 275,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-13promax",
@@ -358,7 +1450,49 @@
     "imagen": "/assets/products/iphone-incell/13promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 280
+    "orden": 280,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 350,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 340,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 335,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 325,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-14",
@@ -381,7 +1515,49 @@
     "offerDisplayPrice": "$185 MXN / pieza",
     "offerDisplayNote": "Precio por caja",
     "offerImage": "/assets/promotions/iphone-14-fhd/factory-promo.png",
-    "offerSort": 2
+    "offerSort": 2,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 260,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 250,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 245,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 240,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-14plus",
@@ -394,7 +1570,49 @@
     "imagen": "/assets/products/iphone-incell/14plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 300
+    "orden": 300,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 300,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 290,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 280,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 275,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 265,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-14pro",
@@ -407,7 +1625,49 @@
     "imagen": "/assets/products/iphone-incell/14pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 310
+    "orden": 310,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 350,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 340,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-14promax",
@@ -420,7 +1680,49 @@
     "imagen": "/assets/products/iphone-incell/14promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 320
+    "orden": 320,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 380,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 350,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-15",
@@ -433,7 +1735,49 @@
     "imagen": "/assets/products/iphone-incell/15/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 330
+    "orden": 330,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 300,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 290,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 285,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 280,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 275,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-15plus",
@@ -446,7 +1790,49 @@
     "imagen": "/assets/products/iphone-incell/15plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 340
+    "orden": 340,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 330,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 310,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 300,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 290,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 275,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-15pro",
@@ -459,7 +1845,49 @@
     "imagen": "/assets/products/iphone-incell/15pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 350
+    "orden": 350,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 350,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 340,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 335,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 320,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-15promax",
@@ -472,7 +1900,49 @@
     "imagen": "/assets/products/iphone-incell/15promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 360
+    "orden": 360,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 400,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 370,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 330,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-16",
@@ -485,7 +1955,49 @@
     "imagen": "/assets/products/iphone-incell/16/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 370
+    "orden": 370,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 400,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 320,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-x",
@@ -498,7 +2010,49 @@
     "imagen": "/assets/products/iphone-incell/x/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 380
+    "orden": 380,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 180,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-xr",
@@ -511,7 +2065,49 @@
     "imagen": "/assets/products/iphone-incell/xr/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 390
+    "orden": 390,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 180,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-xs",
@@ -524,7 +2120,49 @@
     "imagen": "/assets/products/iphone-incell/xs/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 400
+    "orden": 400,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 180,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 175,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 170,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 165,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 155,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s8",
@@ -537,7 +2175,49 @@
     "imagen": "/assets/products/samsung-incell/s8/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 400
+    "orden": 400,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 360,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 350,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-xsmax",
@@ -550,7 +2230,49 @@
     "imagen": "/assets/products/iphone-incell/xsmax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 410
+    "orden": 410,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 200,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 190,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 185,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 180,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 175,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s8-plus",
@@ -563,7 +2285,49 @@
     "imagen": "/assets/products/samsung-incell/s8-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 410
+    "orden": 410,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 370,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 360,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 310,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-16e",
@@ -576,7 +2340,49 @@
     "imagen": "/assets/products/iphone-incell/16e/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 420
+    "orden": 420,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 400,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 330,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 320,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s9",
@@ -589,7 +2395,49 @@
     "imagen": "/assets/products/samsung-incell/s9/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 420
+    "orden": 420,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 360,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 350,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 320,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-16plus",
@@ -602,7 +2450,49 @@
     "imagen": "/assets/products/iphone-incell/16plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 430
+    "orden": 430,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 400,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 330,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s9-plus",
@@ -615,7 +2505,49 @@
     "imagen": "/assets/products/samsung-incell/s9-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 430
+    "orden": 430,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 370,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 360,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 340,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 330,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-16pro",
@@ -628,7 +2560,49 @@
     "imagen": "/assets/products/iphone-incell/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 440
+    "orden": 440,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 700,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 620,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s10",
@@ -641,7 +2615,49 @@
     "imagen": "/assets/products/samsung-incell/s10/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 440
+    "orden": 440,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 380,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 370,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 340,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-16promax",
@@ -654,7 +2670,49 @@
     "imagen": "/assets/products/iphone-incell/16promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 450
+    "orden": 450,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 750,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 730,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 700,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 680,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 650,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s10-plus",
@@ -667,7 +2725,49 @@
     "imagen": "/assets/products/samsung-incell/s10-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 450
+    "orden": 450,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 380,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 370,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 400,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-17",
@@ -680,7 +2780,49 @@
     "imagen": "/assets/products/iphone-incell/17/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 460
+    "orden": 460,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1000,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 920,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 850,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s10e",
@@ -693,7 +2835,49 @@
     "imagen": "/assets/products/samsung-incell/s10e/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 460
+    "orden": 460,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 600,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 580,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 570,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 520,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-17air",
@@ -706,7 +2890,49 @@
     "imagen": "/assets/products/iphone-incell/17air/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 470
+    "orden": 470,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2400,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2300,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2200,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2100,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s10-lite",
@@ -732,7 +2958,49 @@
     "imagen": "/assets/products/iphone-incell/17pro/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 480
+    "orden": 480,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 850,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 800,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 755,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 750,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s20",
@@ -745,7 +3013,49 @@
     "imagen": "/assets/products/samsung-incell/s20/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 480
+    "orden": 480,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 450,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 440,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "iphone-incell-17promax",
@@ -758,7 +3068,49 @@
     "imagen": "/assets/products/iphone-incell/17promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 490
+    "orden": 490,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 900,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 850,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 805,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 800,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 750,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s20-plus",
@@ -771,7 +3123,49 @@
     "imagen": "/assets/products/samsung-incell/s20-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 490
+    "orden": 490,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 550,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 520,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 470,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s20-fe",
@@ -784,7 +3178,49 @@
     "imagen": "/assets/products/samsung-incell/s20-fe/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 500
+    "orden": 500,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 350,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 330,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 320,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 310,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 290,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s20-ultra",
@@ -797,7 +3233,49 @@
     "imagen": "/assets/products/samsung-incell/s20-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 510
+    "orden": 510,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 650,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 620,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 600,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 580,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 560,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s21",
@@ -810,7 +3288,49 @@
     "imagen": "/assets/products/samsung-incell/s21/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 520
+    "orden": 520,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 800,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 750,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 700,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 600,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s21-fe",
@@ -823,7 +3343,49 @@
     "imagen": "/assets/products/samsung-incell/s21-fe/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 530
+    "orden": 530,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 400,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 380,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 370,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 360,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 350,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s21-plus",
@@ -836,7 +3398,49 @@
     "imagen": "/assets/products/samsung-incell/s21-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 540
+    "orden": 540,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 450,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 430,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 420,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 400,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 385,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s21-ultra",
@@ -849,7 +3453,49 @@
     "imagen": "/assets/products/samsung-incell/s21-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 550
+    "orden": 550,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 550,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 510,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 480,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s22",
@@ -862,7 +3508,49 @@
     "imagen": "/assets/products/samsung-incell/s22/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 560
+    "orden": 560,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s22-plus",
@@ -875,7 +3563,49 @@
     "imagen": "/assets/products/samsung-incell/s22-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 570
+    "orden": 570,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s22-ultra",
@@ -888,7 +3618,49 @@
     "imagen": "/assets/products/samsung-incell/s22-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 580
+    "orden": 580,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 600,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 580,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 570,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s23",
@@ -901,7 +3673,49 @@
     "imagen": "/assets/products/samsung-incell/s23/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 590
+    "orden": 590,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 600,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 580,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 570,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s23-plus",
@@ -914,7 +3728,49 @@
     "imagen": "/assets/products/samsung-incell/s23-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 600
+    "orden": 600,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 600,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 580,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 570,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 560,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 550,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s23-ultra",
@@ -927,7 +3783,49 @@
     "imagen": "/assets/products/samsung-incell/s23-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 610
+    "orden": 610,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 650,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 630,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 620,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 610,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 600,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s24",
@@ -940,7 +3838,49 @@
     "imagen": "/assets/products/samsung-incell/s24/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 620
+    "orden": 620,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 700,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 670,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 650,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s24-plus",
@@ -953,7 +3893,49 @@
     "imagen": "/assets/products/samsung-incell/s24-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 630
+    "orden": 630,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 700,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 680,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 670,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 650,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-s24-ultra",
@@ -966,7 +3948,49 @@
     "imagen": "/assets/products/samsung-incell/s24-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 640
+    "orden": 640,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 750,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 740,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 730,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 720,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-note-8",
@@ -979,7 +4003,49 @@
     "imagen": "/assets/products/samsung-incell/note-8/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 650
+    "orden": 650,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-note-9",
@@ -992,7 +4058,49 @@
     "imagen": "/assets/products/samsung-incell/note-9/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 660
+    "orden": 660,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 480,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 470,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 460,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 450,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-note-10",
@@ -1005,7 +4113,49 @@
     "imagen": "/assets/products/samsung-incell/note-10/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 670
+    "orden": 670,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 550,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 520,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 470,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-note-10-plus",
@@ -1018,7 +4168,49 @@
     "imagen": "/assets/products/samsung-incell/note-10-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 680
+    "orden": 680,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 550,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 530,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 520,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 500,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 470,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-note-10-lite",
@@ -1057,7 +4249,49 @@
     "imagen": "/assets/products/samsung-oled/s20-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 700
+    "orden": 700,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1100,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1050,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1000,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 950,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 900,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-incell-note-20-ultra",
@@ -1070,7 +4304,49 @@
     "imagen": "/assets/products/samsung-incell/note-20-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 710
+    "orden": 710,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 680,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 670,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 660,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 650,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 640,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-s21-ultra",
@@ -1083,7 +4359,49 @@
     "imagen": "/assets/products/samsung-oled/s21-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 710
+    "orden": 710,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1600,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1550,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1450,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-s22-ultra",
@@ -1096,7 +4414,49 @@
     "imagen": "/assets/products/samsung-oled/s22-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 720
+    "orden": 720,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1750,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1700,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1650,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1550,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1500,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-s23-ultra",
@@ -1109,7 +4469,49 @@
     "imagen": "/assets/products/samsung-oled/s23-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 730
+    "orden": 730,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1600,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1580,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1550,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-s24-ultra",
@@ -1122,7 +4524,49 @@
     "imagen": "/assets/products/samsung-oled/s24-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 740
+    "orden": 740,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1800,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1750,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1700,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1650,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1600,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-s25-ultra",
@@ -1135,7 +4579,49 @@
     "imagen": "/assets/products/samsung-oled/s25-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 750
+    "orden": 750,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2000,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1900,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1800,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1750,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-note-10",
@@ -1148,7 +4634,49 @@
     "imagen": "/assets/products/samsung-oled/note-10/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 760
+    "orden": 760,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1400,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1300,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1200,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1100,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-note-10-plus",
@@ -1161,7 +4689,41 @@
     "imagen": "/assets/products/samsung-oled/note-10-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 770
+    "orden": 770,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1000,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 950,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 880,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      }
+    ]
   },
   {
     "id": "samsung-oled-note-20",
@@ -1174,7 +4736,49 @@
     "imagen": "/assets/products/samsung-oled/note-20/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 780
+    "orden": 780,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1200,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1100,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1000,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 850,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-oled-note-20-ultra",
@@ -1187,7 +4791,49 @@
     "imagen": "/assets/products/samsung-oled/note-20-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 790
+    "orden": 790,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1450,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1400,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1370,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1350,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
+      }
+    ]
   },
   {
     "id": "samsung-original-s21-ultra",
@@ -1204,33 +4850,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 2500,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 2400,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 2300,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 2250,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 2200,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1249,33 +4905,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 1700,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 1650,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 1600,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 1500,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 1400,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1294,21 +4960,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 9,
+        "maxQty": null,
         "price": 450,
-        "label": "1 paquete / 50 pzs"
+        "label": "1 paquete / 50 pzs",
+        "autoApply": true,
+        "order": 0
       },
       {
-        "minQty": 10,
-        "maxQty": 49,
+        "minQty": 1,
+        "maxQty": null,
         "price": 400,
-        "label": "10 paquetes"
+        "label": "10 paquetes",
+        "autoApply": true,
+        "order": 1
       },
       {
-        "minQty": 50,
+        "minQty": 1,
         "maxQty": null,
         "price": 350,
-        "label": "50 paquetes"
+        "label": "50 paquetes",
+        "autoApply": true,
+        "order": 2
       }
     ]
   },
@@ -1327,21 +4999,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 9,
+        "maxQty": null,
         "price": 450,
-        "label": "1 paquete / 50 pzs"
+        "label": "1 paquete / 50 pzs",
+        "autoApply": true,
+        "order": 0
       },
       {
-        "minQty": 10,
-        "maxQty": 49,
+        "minQty": 1,
+        "maxQty": null,
         "price": 400,
-        "label": "10 paquetes"
+        "label": "10 paquetes",
+        "autoApply": true,
+        "order": 1
       },
       {
-        "minQty": 50,
+        "minQty": 1,
         "maxQty": null,
         "price": 350,
-        "label": "50 paquetes"
+        "label": "50 paquetes",
+        "autoApply": true,
+        "order": 2
       }
     ]
   },
@@ -1360,21 +5038,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 9,
+        "maxQty": null,
         "price": 850,
-        "label": "1 paquete / 50 pzs"
+        "label": "1 paquete / 50 pzs",
+        "autoApply": true,
+        "order": 0
       },
       {
-        "minQty": 10,
-        "maxQty": 49,
+        "minQty": 1,
+        "maxQty": null,
         "price": 800,
-        "label": "10 paquetes"
+        "label": "10 paquetes",
+        "autoApply": true,
+        "order": 1
       },
       {
-        "minQty": 50,
+        "minQty": 1,
         "maxQty": null,
         "price": 750,
-        "label": "50 paquetes"
+        "label": "50 paquetes",
+        "autoApply": true,
+        "order": 2
       }
     ]
   },
@@ -1393,21 +5077,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 9,
+        "maxQty": null,
         "price": 850,
-        "label": "1 paquete / 50 pzs"
+        "label": "1 paquete / 50 pzs",
+        "autoApply": true,
+        "order": 0
       },
       {
-        "minQty": 10,
-        "maxQty": 49,
+        "minQty": 1,
+        "maxQty": null,
         "price": 800,
-        "label": "10 paquetes"
+        "label": "10 paquetes",
+        "autoApply": true,
+        "order": 1
       },
       {
-        "minQty": 50,
+        "minQty": 1,
         "maxQty": null,
         "price": 750,
-        "label": "50 paquetes"
+        "label": "50 paquetes",
+        "autoApply": true,
+        "order": 2
       }
     ]
   },
@@ -1439,33 +5129,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 3000,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 2900,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 2800,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 2700,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 2600,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1480,7 +5180,25 @@
     "imagen": "/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 840
+    "orden": 840,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1900,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1700,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "aimb-g5-ai-sports",
@@ -1493,7 +5211,25 @@
     "imagen": "/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 850
+    "orden": 850,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1800,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1600,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "samsung-original-s23-plus",
@@ -1510,33 +5246,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 1800,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 1700,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 1650,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 1600,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 1500,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1551,7 +5297,25 @@
     "imagen": "/assets/products/productos-ai/s1-ai-classic/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 860
+    "orden": 860,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1300,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "samsung-original-s23-ultra",
@@ -1568,33 +5332,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 3300,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 3200,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 3100,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 3000,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 2900,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1609,7 +5383,25 @@
     "imagen": "/assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg",
     "stock": "disponible",
     "activo": true,
-    "orden": 861
+    "orden": 861,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1700,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1500,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "haode-ai-w610-smart-glasses",
@@ -1622,7 +5414,25 @@
     "imagen": "/assets/products/productos-ai/w610-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 862
+    "orden": 862,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1500,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1200,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "funda-premium-17-pro-max",
@@ -1635,7 +5445,25 @@
     "imagen": "/assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 870
+    "orden": 870,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 85,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 70,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "samsung-original-s24-ultra",
@@ -1652,33 +5480,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 3500,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 3400,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 3300,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 3200,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 3100,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1693,7 +5531,25 @@
     "imagen": "/assets/products/fundas/funda-magnetica-estilo-iphone-17-pro-max/azul-silicon.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 880
+    "orden": 880,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 100,
+        "label": "1 pza",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 90,
+        "label": "5+ pzs",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "samsung-original-s25-ultra",
@@ -1710,33 +5566,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 3700,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 3600,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 3500,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 3400,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 3300,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1755,33 +5621,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 3000,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 2900,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 2800,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 2700,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 2600,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1800,33 +5676,43 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 3000,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 2900,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 2800,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       },
       {
-        "minQty": 200,
-        "maxQty": 499,
+        "minQty": 100,
+        "maxQty": null,
         "price": 2700,
-        "label": "100 pzs/modelo"
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
       },
       {
-        "minQty": 500,
+        "minQty": 1,
         "maxQty": null,
         "price": 2600,
-        "label": "Caja/modelo"
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -1845,21 +5731,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 3600,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 3500,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 3400,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ]
   },
@@ -1878,21 +5770,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 4000,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 3900,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 3800,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ]
   },
@@ -1911,21 +5809,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 4500,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 4400,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 4300,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ]
   },
@@ -1936,7 +5840,6 @@
     "modelo": "Samsung Z Flip7 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 5800,
-    "precioAppJunio": 5600,
     "precioMayoreo": 5500,
     "imagen": "/assets/products/samsung-original/z-flip7/main.png",
     "stock": "bajo pedido",
@@ -1945,21 +5848,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 5800,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 5600,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 5500,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
@@ -1974,7 +5883,6 @@
     "modelo": "Samsung Z Fold3 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla Samsung Z Fold3 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 4500,
-    "precioAppJunio": 4400,
     "precioMayoreo": 4300,
     "imagen": "/assets/products/samsung-original/z-fold3/main.png",
     "stock": "bajo pedido",
@@ -1983,21 +5891,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 4500,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 4400,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 4300,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
@@ -2012,7 +5926,6 @@
     "modelo": "Samsung Z Fold4 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla Samsung Z Fold4 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 6000,
-    "precioAppJunio": 5900,
     "precioMayoreo": 5800,
     "imagen": "/assets/products/samsung-original/z-fold4/main.png",
     "stock": "bajo pedido",
@@ -2021,21 +5934,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 6000,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 5900,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 5800,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
@@ -2050,7 +5969,6 @@
     "modelo": "Samsung Z Fold5 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla Samsung Z Fold5 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 7500,
-    "precioAppJunio": 7400,
     "precioMayoreo": 7300,
     "imagen": "/assets/products/samsung-original/z-fold5/main.png",
     "stock": "bajo pedido",
@@ -2059,21 +5977,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 7500,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 7400,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 7300,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
@@ -2092,7 +6016,25 @@
     "imagen": "/assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 900
+    "orden": 900,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 500,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 400,
+        "label": "Mayoreo",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "lk-030-mini-camara-retro-digital",
@@ -2105,7 +6047,25 @@
     "imagen": "/assets/products/productos-ai/lk-030-mini-camara-retro-digital/main-red-hd.jpeg",
     "stock": "disponible",
     "activo": true,
-    "orden": 901
+    "orden": 901,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 400,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 300,
+        "label": "Mayoreo",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "lk-032-camara-inteligente-con-gimbal",
@@ -2118,7 +6078,25 @@
     "imagen": "/assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 902
+    "orden": 902,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Mayoreo",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "lk-018-camara-accion-hd",
@@ -2131,7 +6109,25 @@
     "imagen": "/assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
     "stock": "disponible",
     "activo": true,
-    "orden": 903
+    "orden": 903,
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1200,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1000,
+        "label": "Mayoreo",
+        "autoApply": true,
+        "order": 1
+      }
+    ]
   },
   {
     "id": "samsung-original-z-fold6",
@@ -2140,7 +6136,6 @@
     "modelo": "Samsung Z Fold6 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla Samsung Z Fold6 TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Producto bajo pedido para tecnicos y tiendas. Confirma disponibilidad, compatibilidad final y tiempo de entrega por WhatsApp. Imagen de modelo verificada.",
     "precioPublico": 9800,
-    "precioAppJunio": 9700,
     "precioMayoreo": 9600,
     "imagen": "/assets/products/samsung-original/z-fold6/main.png",
     "stock": "bajo pedido",
@@ -2149,21 +6144,27 @@
     "priceTiers": [
       {
         "minQty": 1,
-        "maxQty": 1,
+        "maxQty": 4,
         "price": 9800,
-        "label": "Precio Mostrador"
+        "label": "Precio Mostrador",
+        "autoApply": true,
+        "order": 0
       },
       {
         "minQty": 5,
         "maxQty": 99,
         "price": 9700,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
       },
       {
         "minQty": 100,
-        "maxQty": 199,
+        "maxQty": null,
         "price": 9600,
-        "label": "100 pzs surtido"
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
@@ -2185,10 +6186,44 @@
     "orden": 10000,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2206,10 +6241,44 @@
     "orden": 10001,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2227,10 +6296,44 @@
     "orden": 10002,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 800,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2248,10 +6351,44 @@
     "orden": 10003,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1200,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1050,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1100,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1050,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1000,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2269,10 +6406,44 @@
     "orden": 10004,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1200,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1050,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1100,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1050,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1000,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2290,10 +6461,44 @@
     "orden": 10005,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1300,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1250,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1200,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1150,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1050,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2311,10 +6516,44 @@
     "orden": 10006,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1400,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1350,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1300,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1250,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1200,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2332,10 +6571,44 @@
     "orden": 10007,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1300,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1250,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1200,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1150,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1050,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2353,10 +6626,44 @@
     "orden": 10008,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1500,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1400,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1250,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2374,10 +6681,44 @@
     "orden": 10009,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1600,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1550,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1450,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2395,10 +6736,44 @@
     "orden": 10010,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1500,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1400,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1250,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2416,10 +6791,44 @@
     "orden": 10011,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1600,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1550,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1450,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1300,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2437,10 +6846,44 @@
     "orden": 10012,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 1700,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1650,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1600,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1550,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1500,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2458,10 +6901,44 @@
     "orden": 10013,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2479,10 +6956,44 @@
     "orden": 10014,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2500,10 +7011,44 @@
     "orden": 10015,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 1950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2521,10 +7066,44 @@
     "orden": 10016,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2300,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 2250,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2200,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2150,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2000,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2542,10 +7121,44 @@
     "orden": 10017,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2500,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 2450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2400,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2300,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2563,10 +7176,44 @@
     "orden": 10018,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2500,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 2450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2400,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2200,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2584,10 +7231,44 @@
     "orden": 10019,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2500,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 2450,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2400,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2350,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2300,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2605,10 +7286,44 @@
     "orden": 10020,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 2700,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 2650,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2600,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2550,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2500,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   },
@@ -2626,10 +7341,44 @@
     "orden": 10021,
     "priceTiers": [
       {
+        "minQty": 1,
+        "maxQty": 4,
+        "price": 3000,
+        "label": "Menudeo",
+        "autoApply": true,
+        "order": 0
+      },
+      {
         "minQty": 5,
         "maxQty": 99,
         "price": 2950,
-        "label": "Mayoreo 5 pzs"
+        "label": "Mayoreo 5 pzs",
+        "autoApply": true,
+        "order": 1
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2900,
+        "label": "100 pzs surtido",
+        "autoApply": true,
+        "order": 2
+      },
+      {
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2850,
+        "label": "100 pzs/modelo",
+        "autoApply": false,
+        "order": 3
+      },
+      {
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2700,
+        "label": "Caja/modelo",
+        "autoApply": false,
+        "order": 4
       }
     ]
   }

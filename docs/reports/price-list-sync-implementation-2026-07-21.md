@@ -10,7 +10,8 @@
 | --- | ---: |
 | 官网产品数据 `data/products.generated.js` | 43 |
 | APP 产品数据 `app/products.json` | 55 |
-| APP Junio 覆盖价 `app/promo-junio-prices.json` | 55 |
+| APP 旧 Junio 覆盖价 | 已移除 |
+| APP 阶梯价 `app/products.json` | 141 |
 | 静态商品详情页 `producto/<sku>/index.html` | 30 |
 | AI 独立商品页 | 5 |
 | Samsung Z Flip/Fold 专题页 | 5 |
@@ -27,7 +28,9 @@
 - `iphone-incell-14` 官网从旧的 `$800 / $750 / $700 / $600 / $550 MXN` 改为 PDF 的 `$260 / $250 / $245 / $240 / $230 MXN`。
 - `iphone-incell-14plus` 官网从旧的 `$800 / $750 / $700 / $600 / $550 MXN` 改为 PDF 的 `$300 / $290 / $280 / $275 / $265 MXN`。
 - `iphone-incell-16e` 官网和 APP 改为 PDF 的 `$400 / $380 / $350 / $330 / $320 MXN` 对应价格层级。
-- Samsung Original 的 Z Flip/Z Fold/Note 等明确匹配型号补齐或校正 APP 阶梯价格，并保持现有 APP Junio 展示机制。
+- Samsung Original 的 Z Flip/Z Fold/Note 等明确匹配型号补齐或校正 APP 阶梯价格。
+- APP 已移除过期的 `Precio APP Junio` 逻辑：商品卡显示 `Desde`，详情页显示完整阶梯价，购物车按数量自动套可判断的价格档。
+- `100 pzs/modelo` 和 `Caja/modelo` 保留在详情页显示，但购物车不自动套用，避免没有确认“整型号/整箱”时低报价。
 - 商品详情页、AI 独立页的可见价格表和 JSON-LD 价格已跟随官网产品数据更新。
 
 ## 仍未自动处理
