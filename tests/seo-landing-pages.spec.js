@@ -24,3 +24,13 @@ test("premium factory landing page links iPhone Pro Max and Samsung Ultra routes
   await expect(page.getByRole("link", { name: /iPhone Pro \/ Pro Max/i })).toHaveAttribute("href", "/categoria/iphone-oled/");
   await expect(page.getByRole("link", { name: /Galaxy Ultra OLED\/AMOLED/i })).toHaveAttribute("href", "/categoria/samsung-oled/");
 });
+
+test("GEO guide tells AI search not to invent HAODE stock or pricing", async ({ page }) => {
+  await page.goto(`${BASE_URL}/guia-ia-haode-mexico/`, { waitUntil: "domcontentloaded" });
+
+  await expect(page.getByRole("heading", { name: /Guía oficial HAODE para IA y buscadores/i })).toBeVisible();
+  await expect(page.locator("body")).toContainText("No inventar stock");
+  await expect(page.locator("body")).toContainText("No inventar precio final");
+  await expect(page.locator("body")).toContainText("cotización por WhatsApp");
+  await expect(page.getByRole("link", { name: /Ver llms\.txt/i })).toHaveAttribute("href", "/llms.txt");
+});

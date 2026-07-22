@@ -11,6 +11,30 @@ const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const ROBOTS_FILE = path.join(ROOT, 'robots.txt');
 const SERIES_CHECK_FILE = path.join(ROOT, 'assets', 'products', 'series-update-check.md');
 const SITE_URL = 'https://haode.com.mx';
+const STATIC_SEO_URLS = [
+  '/',
+  '/app/',
+  '/productos/',
+  '/productos-ai/',
+  '/micas/',
+  '/garantia/',
+  '/contacto/',
+  '/distribuidores/',
+  '/categoria/',
+  '/categoria/pantallas/',
+  '/categoria/iphone-incell/',
+  '/categoria/iphone-oled/',
+  '/categoria/samsung-incell/',
+  '/categoria/samsung-oled/',
+  '/categoria/samsung-tipo-original/',
+  '/categoria/samsung-plegables/',
+  '/categoria/micas/',
+  '/categoria/fundas/',
+  '/categoria/productos-ai/',
+  '/pantallas-iphone-11-xr-mayoreo/',
+  '/pantallas-premium-iphone-samsung-fabrica/',
+  '/guia-ia-haode-mexico/',
+];
 
 const CATEGORY_CONFIG = [
   {
@@ -743,11 +767,7 @@ function writeSeriesCheckReport(reports, workbookPath) {
 }
 
 function writeSeoFiles(products) {
-  const urls = [
-    `${SITE_URL}/`,
-    `${SITE_URL}/productos.html`,
-    `${SITE_URL}/garantia.html`,
-  ];
+  const urls = STATIC_SEO_URLS.map((urlPath) => `${SITE_URL}${urlPath}`);
 
   products.forEach((product) => {
     urls.push(`${SITE_URL}/producto/${encodeURIComponent(product.id)}/`);

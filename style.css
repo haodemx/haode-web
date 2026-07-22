@@ -6418,6 +6418,26 @@ body.product-detail-page .detail-zoom-close {
   text-decoration: none;
 }
 
+body.geo-guide-page .seo-link-grid a {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  min-height: 78px;
+}
+
+body.geo-guide-page .seo-link-grid strong {
+  color: #141b23;
+  line-height: 1.2;
+}
+
+body.geo-guide-page .seo-link-grid small {
+  color: #566272;
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
 .seo-link-grid a:hover,
 .seo-link-grid a:focus-visible,
 .app-seo-links a:hover,
