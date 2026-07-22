@@ -11,6 +11,16 @@ function read(relativePath) {
   return fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
 }
 
+function parseJsonLd(relativePath) {
+  const html = read(relativePath);
+  return [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
+    .map(([, json]) => JSON.parse(json.trim()));
+}
+
+function flattenGraph(blocks) {
+  return blocks.flatMap((block) => block['@graph'] || [block]);
+}
+
 test('GEO guide exposes official HAODE facts for AI search', () => {
   const llms = read('llms.txt');
   const guide = read('guia-ia-haode-mexico/index.html');
@@ -27,11 +37,7 @@ test('GEO guide exposes official HAODE facts for AI search', () => {
   assert.match(guide, /cotización por WhatsApp/);
   assert.match(guide, /HAODE México/);
 
-  const jsonLdBlocks = [...guide.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
-  assert.ok(jsonLdBlocks.length > 0, 'expected JSON-LD on GEO guide');
-  for (const [, json] of jsonLdBlocks) {
-    JSON.parse(json.trim());
-  }
+  assert.ok(parseJsonLd('guia-ia-haode-mexico/index.html').length > 0, 'expected JSON-LD on GEO guide');
 });
 
 test('GEO route is connected to homepage, sitemap and quality scripts', () => {
@@ -45,4 +51,54 @@ test('GEO route is connected to homepage, sitemap and quality scripts', () => {
   assert.ok(sitemap.includes(GEO_URL));
   assert.ok(buildProducts.includes("'/guia-ia-haode-mexico/'"));
   assert.ok(qualityCheck.includes("'guia-ia-haode-mexico'"));
+});
+
+test('core GEO landing pages expose visible FAQ and FAQPage schema', () => {
+  const pages = [
+    'index.html',
+    'categoria/pantallas/index.html',
+    'categoria/iphone-incell/index.html',
+    'categoria/iphone-oled/index.html',
+    'categoria/samsung-incell/index.html',
+    'categoria/samsung-oled/index.html',
+    'micas.html',
+    'categoria/micas/index.html',
+    'categoria/maquinas-de-hidrogel/index.html',
+    'categoria/fundas/index.html',
+    'productos-ai/index.html',
+    'contacto/index.html',
+    'distribuidores/index.html',
+  ];
+
+  for (const page of pages) {
+    const html = read(page);
+    const graph = flattenGraph(parseJsonLd(page));
+    const faq = graph.find((node) => node['@type'] === 'FAQPage');
+
+    assert.ok(faq, `${page} missing FAQPage schema`);
+    assert.ok(faq.mainEntity.length >= 3, `${page} FAQPage should have at least 3 questions`);
+    assert.match(html, /Preguntas frecuentes|Información oficial para búsqueda/, `${page} missing visible GEO/FAQ content`);
+    assert.match(html, /WhatsApp|búsqueda|busqueda/i, `${page} should explain confirmation or search context`);
+  }
+});
+
+test('llms.txt maps high-intent GEO searches to canonical HAODE pages', () => {
+  const llms = read('llms.txt');
+  const routes = [
+    '/categoria/pantallas/',
+    '/categoria/iphone-incell/',
+    '/categoria/iphone-oled/',
+    '/categoria/samsung-incell/',
+    '/categoria/samsung-oled/',
+    '/micas.html',
+    '/categoria/maquinas-de-hidrogel/',
+    '/categoria/fundas/',
+    '/productos-ai/',
+    '/distribuidores/',
+  ];
+
+  assert.match(llms, /Intenciones de busqueda recomendadas/);
+  for (const route of routes) {
+    assert.ok(llms.includes(`https://haode.com.mx${route}`), `missing llms route: ${route}`);
+  }
 });

@@ -17,6 +17,21 @@ const REQUIRED_SITEMAP_URLS = [
   `${SITE_URL}/distribuidores/`,
   `${SITE_URL}/guia-ia-haode-mexico/`,
 ];
+const REQUIRED_GEO_FAQ_PAGES = [
+  'index.html',
+  'categoria/pantallas/index.html',
+  'categoria/iphone-incell/index.html',
+  'categoria/iphone-oled/index.html',
+  'categoria/samsung-incell/index.html',
+  'categoria/samsung-oled/index.html',
+  'micas.html',
+  'categoria/micas/index.html',
+  'categoria/maquinas-de-hidrogel/index.html',
+  'categoria/fundas/index.html',
+  'productos-ai/index.html',
+  'contacto/index.html',
+  'distribuidores/index.html',
+];
 const KEY_REPORTS = [
   'reports/product-data-consistency-audit.md',
   'reports/video-missing-audit.md',
@@ -109,6 +124,25 @@ function checkJsonLd(filePath, text, issues) {
       add(issues, 'error', 'JSON_LD_INVALID', filePath, error.message);
     }
   }
+}
+
+function jsonLdNodes(text) {
+  const nodes = [];
+  const re = /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+  let match;
+  while ((match = re.exec(text))) {
+    try {
+      const parsed = JSON.parse(match[1].trim());
+      nodes.push(...(parsed['@graph'] || [parsed]));
+    } catch (_) {
+      // Invalid JSON-LD is reported by checkJsonLd.
+    }
+  }
+  return nodes;
+}
+
+function hasRequiredFaqSchema(text) {
+  return jsonLdNodes(text).some((node) => node['@type'] === 'FAQPage' && Array.isArray(node.mainEntity) && node.mainEntity.length >= 3);
 }
 
 function extractSitemapUrls(text) {
@@ -232,6 +266,18 @@ function main() {
   KEY_PAGES.forEach((page) => {
     const target = path.join(ROOT, page);
     if (!fs.existsSync(target)) add(issues, 'error', 'KEY_PAGE_MISSING', target, `${page} missing`);
+  });
+  REQUIRED_GEO_FAQ_PAGES.forEach((page) => {
+    const target = path.join(ROOT, page);
+    if (!fs.existsSync(target)) {
+      add(issues, 'error', 'GEO_FAQ_PAGE_MISSING', target, `${page} missing`);
+      return;
+    }
+    const text = read(target);
+    if (!hasRequiredFaqSchema(text)) add(issues, 'warn', 'GEO_FAQ_SCHEMA_MISSING', target, 'missing FAQPage schema with at least 3 questions');
+    if (!/Preguntas frecuentes|Información oficial para búsqueda/i.test(text)) {
+      add(issues, 'warn', 'GEO_FAQ_VISIBLE_COPY_MISSING', target, 'missing visible GEO/FAQ answer section');
+    }
   });
 
   const counts = issues.reduce((acc, item) => {
