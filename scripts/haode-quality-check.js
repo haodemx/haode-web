@@ -6,6 +6,17 @@ const SITE_URL = 'https://haode.com.mx';
 const PUBLIC_EXTENSIONS = new Set(['.html', '.js', '.css', '.xml', '.txt', '.webmanifest', '.json']);
 const PUBLIC_DIRS = new Set(['app', 'categoria', 'contacto', 'distribuidores', 'garantia', 'guia-ia-haode-mexico', 'micas', 'producto', 'productos', 'productos-ai']);
 const FORBIDDEN = ['file://', 'localhost', '127.0.0.1', '/Users/mac', 'squarespace', 'under construction'];
+const REQUIRED_SITEMAP_URLS = [
+  `${SITE_URL}/`,
+  `${SITE_URL}/app/`,
+  `${SITE_URL}/productos/`,
+  `${SITE_URL}/productos-ai/`,
+  `${SITE_URL}/micas.html`,
+  `${SITE_URL}/garantia/`,
+  `${SITE_URL}/contacto/`,
+  `${SITE_URL}/distribuidores/`,
+  `${SITE_URL}/guia-ia-haode-mexico/`,
+];
 const KEY_REPORTS = [
   'reports/product-data-consistency-audit.md',
   'reports/video-missing-audit.md',
@@ -145,6 +156,9 @@ function main() {
   htmlFiles.forEach((file) => {
     const text = read(file);
     checkJsonLd(file, text, issues);
+    if (/<\/header>\s*<\/header>/i.test(text)) {
+      add(issues, 'error', 'DUPLICATE_HEADER_CLOSE', file, 'consecutive closing header tags');
+    }
     const rel = relative(file);
     const canonicalUrl = extractCanonicalUrl(text);
     const noindex = extractRobotsContent(text).includes('noindex');
@@ -178,7 +192,21 @@ function main() {
     sitemapUrls.forEach((url) => {
       if (!url.startsWith(SITE_URL)) add(issues, 'error', 'SITEMAP_URL_DOMAIN', sitemap, url);
       const target = resolveInternalTarget(sitemap, url);
-      if (target && !fs.existsSync(target)) add(issues, 'warn', 'SITEMAP_TARGET_MISSING', sitemap, url);
+      if (target && !fs.existsSync(target)) {
+        add(issues, 'warn', 'SITEMAP_TARGET_MISSING', sitemap, url);
+      } else if (target && path.extname(target).toLowerCase() === '.html') {
+        const targetText = read(target);
+        const canonicalUrl = extractCanonicalUrl(targetText);
+        const robotsContent = extractRobotsContent(targetText);
+        const isRedirectPage = /http-equiv=["']refresh["']/i.test(targetText);
+        if (isRedirectPage) add(issues, 'warn', 'SITEMAP_REDIRECT_URL', sitemap, url);
+        if (canonicalUrl && canonicalUrl !== url && !robotsContent.includes('noindex')) {
+          add(issues, 'warn', 'SITEMAP_NON_CANONICAL_URL', sitemap, `${url} canonical=${canonicalUrl}`);
+        }
+      }
+    });
+    REQUIRED_SITEMAP_URLS.forEach((url) => {
+      if (!sitemapText.includes(`<loc>${url}</loc>`)) add(issues, 'warn', 'SITEMAP_REQUIRED_URL_MISSING', sitemap, url);
     });
     htmlFiles.forEach((file) => {
       const rel = relative(file);
