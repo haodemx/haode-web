@@ -205,16 +205,29 @@
 </head>
 <body class="home-page-reference">
   <header class="reference-header">
-    <div class="reference-wrap reference-topline" aria-label="Ventajas HAODE México">
-      <span><strong>Stock en México</strong> Envíos a todo el país</span>
-      <span><strong>Atención a talleres</strong> WhatsApp 56 4586 6014</span>
-      <span><strong>Garantía local</strong> Calidad revisada</span>
-    </div>
-    <div class="reference-wrap reference-nav-shell">
+    <div class="reference-wrap reference-topline reference-desktop-head" aria-label="Ventajas HAODE México">
       <a class="reference-logo" href="/" aria-label="HAODE México inicio">
         <img src="/assets/logo/logo.png" alt="Logo oficial de HAODE México" width="170" height="58" />
       </a>
-
+      <span class="reference-head-info reference-head-stock">
+        <strong>Stock en México</strong>
+        <small>Envíos a todo el país</small>
+      </span>
+      <a class="reference-head-info reference-head-support" href="https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20necesito%20cotizar%20refacciones" target="_blank" rel="noopener noreferrer">
+        <strong>Atención a talleres</strong>
+        <small>WhatsApp 56 4586 6014</small>
+      </a>
+      <a class="reference-head-action reference-head-account" href="/app/">
+        <strong>Iniciar</strong>
+        <small>sesión</small>
+      </a>
+      <a class="reference-head-action reference-head-cart" href="/app/#carrito">
+        <strong>Carrito</strong>
+        <small>Pedido</small>
+        <em>0</em>
+      </a>
+    </div>
+    <div class="reference-wrap reference-nav-shell">
       <input class="reference-menu-toggle" type="checkbox" id="reference-menu-toggle" aria-label="Abrir menú" />
       <label class="reference-menu-button" for="reference-menu-toggle">Menú</label>
 
@@ -223,9 +236,12 @@
         <a href="/productos/#pantallas">Pantallas</a>
         <a href="/productos/#fundas-micas">Micas</a>
         <a href="/categoria/maquinas-de-hidrogel/">Máquinas</a>
+        <a href="/productos/">Baterías</a>
+        <a href="/productos/">Flex y Partes</a>
+        <a href="/productos-ai/">Herramientas</a>
         <a href="/categoria/fundas/">Fundas</a>
-        <a href="/productos-ai/">Productos AI</a>
-        <a href="/contacto/">Contacto</a>
+        <a href="/app/#lista">Ofertas</a>
+        <a href="/productos/">Marcas</a>
       </nav>
 
       <div class="reference-nav-actions">
@@ -369,31 +385,46 @@
       </div>
     </section>
 
-    <section class="reference-wrap reference-category-row" aria-label="Categorías principales">
-      <a class="reference-category-card" href="/productos/#iphone-incell">
-        <img src="/assets/products/iphone-incell/15/main.jpg" alt="iPhone INCELL HAODE" width="84" height="108" />
-        <span><strong>iPhone INCELL</strong><small>iPhone 11/XR estándar y Bolsa Protectora con precio separado.</small><em>Ver productos</em></span>
-      </a>
-      <a class="reference-category-card" href="/productos/#iphone-oled">
-        <img src="/assets/products/iphone-oled/14/main.jpg" alt="iPhone OLED HAODE" width="84" height="108" />
-        <span><strong>iPhone OLED</strong><small>Ruta premium para iPhone Pro, Pro Max y modelos de alta gama.</small><em>Ver productos</em></span>
-      </a>
-      <a class="reference-category-card" href="/productos/#samsung-incell">
-        <img src="/assets/products/samsung-incell/s24/main.png" alt="Samsung INCELL HAODE" width="84" height="108" />
-        <span><strong>Samsung INCELL</strong><small>Opciones Samsung para reparación profesional y compra recurrente.</small><em>Ver productos</em></span>
-      </a>
-      <a class="reference-category-card" href="/productos/#samsung-oled">
-        <img src="/assets/products/samsung-oled/s23-ultra/main.jpg" alt="Samsung OLED HAODE" width="84" height="108" />
-        <span><strong>Samsung OLED</strong><small>Modelos Galaxy Ultra, Plus y líneas premium para talleres.</small><em>Ver productos</em></span>
+    <section class="reference-wrap reference-category-row reference-icon-category-row" aria-label="Categorías principales">
+      <a class="reference-category-card" href="/productos/#pantallas">
+        <span class="reference-category-symbol reference-symbol-screen" aria-hidden="true"></span>
+        <span><strong>Pantallas</strong><small>OEM y premium</small></span>
       </a>
       <a class="reference-category-card" href="/productos/#fundas-micas">
-        <img src="/assets/products/micas/hd/main.png" alt="Micas y fundas HAODE" width="84" height="108" />
-        <span><strong>Micas / Fundas</strong><small>Protección para cada equipo y estilo.</small><em>Ver productos</em></span>
+        <span class="reference-category-symbol reference-symbol-glass" aria-hidden="true"></span>
+        <span><strong>Micas</strong><small>Cristal templado e hidrogel</small></span>
+      </a>
+      <a class="reference-category-card" href="/categoria/maquinas-de-hidrogel/">
+        <span class="reference-category-symbol reference-symbol-machine" aria-hidden="true"></span>
+        <span><strong>Máquinas</strong><small>Para reparación profesional</small></span>
       </a>
       <a class="reference-category-card" href="/productos-ai/">
-        <img src="/assets/images/home-categories/productos-ai.jpg" alt="Productos AI HAODE" width="84" height="108" />
-        <span><strong>Productos AI</strong><small>Herramientas y equipos para diagnóstico y reparación avanzada.</small><em>Ver productos</em></span>
+        <span class="reference-category-symbol reference-symbol-tools" aria-hidden="true"></span>
+        <span><strong>Herramientas</strong><small>Calidad profesional</small></span>
       </a>
+      <a class="reference-category-card" href="/productos/">
+        <span class="reference-category-symbol reference-symbol-flex" aria-hidden="true"></span>
+        <span><strong>Flex y partes</strong><small>Conectores, bocinas y más</small></span>
+      </a>
+      <a class="reference-category-card" href="/categoria/fundas/">
+        <span class="reference-category-symbol reference-symbol-case" aria-hidden="true"></span>
+        <span><strong>Fundas</strong><small>Variedad para cada modelo</small></span>
+      </a>
+      <a class="reference-category-card" href="/productos/">
+        <span class="reference-category-symbol reference-symbol-battery" aria-hidden="true"></span>
+        <span><strong>Baterías</strong><small>Alto rendimiento y seguridad</small></span>
+      </a>
+    </section>
+
+    <section class="reference-bottom-whatsapp" aria-label="Cotización rápida HAODE">
+      <div class="reference-wrap reference-bottom-whatsapp-inner">
+        <div>
+          <span class="reference-whatsapp-mark" aria-hidden="true">W</span>
+          <strong>¿Necesitas cotizar o hacer un pedido grande?</strong>
+          <small>Envíanos tu lista por WhatsApp y te respondemos en minutos.</small>
+        </div>
+        <a class="reference-btn reference-btn-whatsapp" href="https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20tengo%20una%20lista%20grande%20para%20cotizar" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+      </div>
     </section>
 
     <section class="reference-wrap reference-seo-routes" aria-label="Rutas rápidas de mayoreo HAODE">

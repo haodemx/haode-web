@@ -19,11 +19,12 @@ test.describe("HAODE Tienda app QA", () => {
     await expect(productCards.first()).toBeVisible({ timeout: 15000 });
     await expect(productCards).not.toHaveCount(0);
 
-    await expect(productCards.first().locator(".price-lines")).toContainText(/\$\s*[\d,.]+/);
+    const pricedProductCards = productCards.filter({ has: page.locator(".price-lines") });
+    await expect(pricedProductCards.first().locator(".price-lines")).toContainText(/\$\s*[\d,.]+/);
 
     const cartCount = page.locator("[data-cart-count]").first();
     const initialCount = Number((await cartCount.textContent()) || "0");
-    await productCards.first().getByRole("button", { name: "Agregar" }).click();
+    await pricedProductCards.first().getByRole("button", { name: "Agregar" }).click();
     await expect(cartCount).toHaveText(String(initialCount + 1));
     await expect(page.locator("[data-cart-drawer]")).toHaveClass(/open/);
 

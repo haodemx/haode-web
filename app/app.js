@@ -819,6 +819,24 @@ function productCardHtml(product, compact = false) {
   `;
 }
 
+function homeProductRowHtml(product) {
+  const label = product.quality?.label || product.category;
+  return `
+    <article class="product-card app-home-product-card">
+      <a class="app-home-product-media" href="${appProductUrl(product)}" aria-label="Ver ${escapeAttr(product.displayName)}">
+        <img src="${product.image}" alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+      </a>
+      <div class="app-home-product-copy">
+        <span class="product-kicker">${label}</span>
+        <h3>${product.displayName}</h3>
+        <p>SKU: ${escapeAttr(product.sku || product.model || product.id)}</p>
+        <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
+      </div>
+      <button class="app-row-add" type="button" data-add-product="${product.id}" aria-label="Agregar" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "+" : "?"}</button>
+    </article>
+  `;
+}
+
 function getProductsForGroup(groupId) {
   const group = categoryGroups.find((item) => item.id === groupId);
   if (!group) {
@@ -893,10 +911,10 @@ function renderHome() {
   state.route = { name: "home" };
   state.activeCategory = "Todos";
   state.activeGroup = "";
-  const heroProduct = products.find((product) => product.id === "x200t-cortadora-micas") || products.find((product) => product.image) || {};
   const featuredProducts = [
-    ...products.filter((product) => product.category === "Máquinas de Mica").slice(0, 1),
     ...products.filter((product) => product.category.includes("Pantallas")).slice(0, 5),
+    ...products.filter((product) => product.category === "Micas").slice(0, 1),
+    ...products.filter((product) => product.category === "Máquinas de Mica").slice(0, 1),
     ...products.filter((product) => product.category === "Fundas").slice(0, 2),
     ...products.filter((product) => product.category === "Gafas AI" || product.category === "Cámaras Inteligentes").slice(0, 2)
   ];
@@ -907,34 +925,40 @@ function renderHome() {
 
   viewRootEl.innerHTML = `
     <div class="page-stack">
-      <section class="app-procurement-hero">
+      <section class="app-procurement-hero app-home-board">
         <div class="app-stock-strip" aria-label="Ventajas HAODE">
           <span><strong>Stock en México</strong> Envíos a todo el país</span>
           <span><strong>Garantía local</strong> Calidad revisada</span>
         </div>
-        <div class="app-hero-grid">
-          <div class="hero-copy">
-            <span class="hero-badge">Tienda de fábrica HAODE</span>
-            <h1>Refacciones listas para cotizar</h1>
-            <p>Pantallas, micas, máquinas, fundas y partes para talleres. Busca por SKU o modelo, arma tu lista y envíala por WhatsApp privado.</p>
-            <button class="app-quick-search" type="button" data-focus-search aria-label="Buscar por SKU o modelo">
-              <span>Buscar por SKU o modelo</span>
-              <strong>Buscar</strong>
-            </button>
-            <div class="hero-alert" aria-label="Aviso para compras grandes">
-              <strong>¿Cantidad grande?</strong>
-              <span>WhatsApp privado: HAODE confirma stock, precio final, garantía local y envío.</span>
-            </div>
-          </div>
-          <div class="app-hero-product" aria-label="Producto destacado HAODE">
-            <span>Producto destacado</span>
-            <img src="${heroProduct.image || "/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
-            <strong>${escapeAttr(heroProduct.displayName || heroProduct.name || "Producto HAODE")}</strong>
-          </div>
+        <div class="app-home-intro">
+          <span class="hero-badge">Tienda de fábrica HAODE</span>
+          <h1>Refacciones listas para cotizar</h1>
+          <button class="app-quick-search" type="button" data-focus-search aria-label="Buscar por SKU o modelo">
+            <span>Buscar por SKU o modelo</span>
+            <strong>Buscar</strong>
+          </button>
         </div>
+
+        <div class="category-rail app-home-categories" data-category-rail>${categoryCardsHtml()}</div>
+
         <div class="app-hero-actions">
           <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE México, tengo una lista grande para cotizar.")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
-          <a class="outline-button" href="#catalogo">Ver productos</a>
+          <a class="outline-button" href="#lista">Buscar más productos</a>
+        </div>
+
+        <section class="app-home-featured" aria-labelledby="app-featured-title">
+          <div class="app-home-section-head">
+            <h2 id="app-featured-title">Productos destacados</h2>
+            <a href="#lista">Ver todos</a>
+          </div>
+          <div class="app-home-product-list">
+            ${uniqueFeatured.slice(0, 4).map(homeProductRowHtml).join("")}
+          </div>
+        </section>
+
+        <div class="hero-alert" aria-label="Aviso para compras grandes">
+          <strong>¿Cantidad grande?</strong>
+          <span>WhatsApp privado: HAODE confirma stock, precio final, garantía local y envío.</span>
         </div>
         <div class="hero-proof" aria-label="Beneficios HAODE">
           <span>Fábrica directa</span>
@@ -945,16 +969,6 @@ function renderHome() {
       </section>
 
       ${dailyAdBannerHtml()}
-
-      <section class="section-block" id="categorias">
-        <div class="section-head">
-          <div>
-            <h2>Categorías</h2>
-            <p>Entra directo a las piezas que más cotiza un taller.</p>
-          </div>
-        </div>
-        <div class="category-rail" data-category-rail>${categoryCardsHtml()}</div>
-      </section>
 
       ${promotionsSectionHtml(promoProducts)}
 
@@ -1143,6 +1157,12 @@ function renderList({ group = "", category = "Todos" } = {}) {
         </div>
       </section>
 
+      <section class="app-path-strip" aria-label="Compra profesional HAODE">
+        <span><strong>Stock en México</strong> salida rápida</span>
+        <span><strong>Garantía local</strong> calidad revisada</span>
+        <span><strong>WhatsApp privado</strong> listas grandes</span>
+      </section>
+
       <section class="section-block">
         <div class="category-rail" data-category-rail>${categoryCardsHtml()}</div>
       </section>
@@ -1225,6 +1245,10 @@ function renderProductDetail(productId) {
           </div>
           ${priceStackHtml(product)}
           ${specGridHtml(product, has360, gallery.length)}
+          <div class="detail-whatsapp-note">
+            <strong>Compra como taller</strong>
+            <span>Envía lista grande por WhatsApp. HAODE confirma stock, precio final, garantía local y envío antes de cerrar el pedido.</span>
+          </div>
           <div class="detail-actions">
             ${officialUrl ? `<a class="outline-button" href="${officialUrl}">Página oficial</a>` : ""}
             <button class="text-button" type="button" data-share-product="${product.id}">Compartir</button>
@@ -1369,6 +1393,11 @@ function renderCartPage() {
           <h1>Carrito</h1>
           <p>${items.length ? `${cartCount()} piezas listas para enviar por WhatsApp.` : "Tu carrito está vacío."}</p>
         </div>
+      </section>
+      <section class="app-path-strip" aria-label="Confirmación de pedido HAODE">
+        <span><strong>Total estimado</strong> sin pago en línea</span>
+        <span><strong>Precio final</strong> confirmado por asesor</span>
+        <span><strong>Envío</strong> a todo México</span>
       </section>
       <section class="cart-page-card">
         ${items.length ? `
