@@ -202,6 +202,13 @@ function trackGrowthEvent(name, parameters = {}) {
   }
 }
 
+function attributionReference(attribution = state.attribution) {
+  if (window.HaodeCampaign?.reference) {
+    return window.HaodeCampaign.reference(attribution) || appChannel();
+  }
+  return [attribution?.source, attribution?.campaign, attribution?.content].filter(Boolean).join("/") || appChannel();
+}
+
 function checkoutRequestId() {
   if (!state.orderRequestId) {
     state.orderRequestId = window.crypto?.randomUUID?.() || `web-${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -1510,6 +1517,7 @@ function buildWhatsappUrl() {
     "",
     `Comentario: ${clientComment || "Sin comentario"}`,
     `Origen: ${state.attribution.source || appChannel()}`,
+    `Referencia: ${attributionReference()}`,
     "",
     "Por favor confirma disponibilidad, precio final y envio. Entiendo que no hay pago en linea y se confirma por WhatsApp."
   ];
@@ -1588,6 +1596,7 @@ function singleProductWhatsappUrl(product) {
     `Precio mayoreo: ${formatPrice(product.wholesalePrice)}`,
     "",
     `Origen: ${state.attribution.source || appChannel()}`,
+    `Referencia: ${attributionReference()}`,
     "Por favor confirma disponibilidad, compatibilidad y precio final."
   ];
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
