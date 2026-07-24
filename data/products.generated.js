@@ -9,7 +9,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/iphone-incell/11-bolsa-protectora/main.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-incell/11-bolsa-protectora/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -923,7 +925,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/iphone-incell/16promax/gallery-02.jpg",
       "assets/products/iphone-incell/16promax/gallery-03.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-incell/16promax/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -1204,7 +1208,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/iphone-incell/xr-bolsa-protectora/main.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-incell/xr-bolsa-protectora/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2088,7 +2094,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/iphone-oled/16promax/gallery-04.png",
       "assets/products/iphone-oled/16promax/gallery-05.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-oled/16promax/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2250,7 +2258,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/note-10-plus/gallery-02.jpg",
       "assets/products/samsung-incell/note-10-plus/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/note-10-plus/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2492,7 +2502,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s10e/main.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s10e/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -3287,7 +3299,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/s9/main.jpg",
       "assets/products/samsung-incell/s9/gallery-01.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s9/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -3325,7 +3339,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/s9-plus/main.jpg",
       "assets/products/samsung-incell/s9-plus/gallery-01.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s9-plus/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4480,7 +4496,10 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-04.png",
       "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-05.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/productos-ai/lk-018-camara-accion-hd/video-01.mp4",
+      "assets/products/productos-ai/lk-018-camara-accion-hd/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4530,7 +4549,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/xs-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4567,7 +4589,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/11-pro-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4604,7 +4629,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/12-12-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4641,7 +4669,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/12-pro-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4678,7 +4709,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/13-13-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4715,7 +4749,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/13-13-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4752,7 +4789,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/13-pro-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4789,7 +4829,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/14-14-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4826,7 +4869,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/14-14-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4863,7 +4909,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/14-pro-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4900,7 +4949,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/14-plus.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4937,7 +4989,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/15.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -4974,7 +5029,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/15-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5011,7 +5069,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/15-pro-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5048,7 +5109,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/15-plus.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5085,7 +5149,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/16.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5122,7 +5189,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/16-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5159,7 +5229,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/16-pro-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5196,7 +5269,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/16-plus.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5233,7 +5309,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/17.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5270,7 +5349,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/17-pro.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -5307,7 +5389,10 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/oled-diagnostica/17-pro-max.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/oled-diagnostica/video-01.mp4",
+      "assets/products/oled-diagnostica/video-02.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",

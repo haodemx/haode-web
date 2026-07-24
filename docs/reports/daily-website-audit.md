@@ -10,22 +10,16 @@
 
 ## 发现的问题
 
-- 产品视频缺失: iphone-incell-11-bolsa-protectora | Pantalla para iPhone 11 Bolsa Protectora | 空
 - 产品视频缺失: iphone-incell-16e | Pantalla para iPhone 16e | 空
 - 产品视频缺失: iphone-incell-16plus | Pantalla para iPhone 16 Plus | 空
 - 产品视频缺失: iphone-incell-16pro | Pantalla para iPhone 16 Pro | 空
-- 产品视频缺失: iphone-incell-16promax | Pantalla para iPhone 16 Pro Max | 空
 - 产品视频缺失: iphone-incell-17 | Pantalla para iPhone 17 | 空
 - 产品视频缺失: iphone-incell-17air | Pantalla para iPhone 17 Air | 空
 - 产品视频缺失: iphone-incell-17pro | Pantalla para iPhone 17 Pro | 空
 - 产品视频缺失: iphone-incell-17promax | Pantalla para iPhone 17 Pro Max | 空
-- 产品视频缺失: iphone-incell-xr-bolsa-protectora | Pantalla para iPhone XR Bolsa Protectora | 空
-- 产品视频缺失: iphone-oled-16promax | Pantalla para iPhone 16 Pro Max Soft OLED | 空
-- 产品视频缺失: samsung-incell-note-10-plus | Pantalla para Samsung Note 10 Plus | 空
 - 产品视频缺失: samsung-incell-note-20-ultra | Pantalla para Samsung Note 20 Ultra | 空
 - 产品视频缺失: samsung-incell-note-8 | Pantalla para Samsung Note 8 | 空
 - 产品视频缺失: samsung-incell-note-9 | Pantalla para Samsung Note 9 | 空
-- 产品视频缺失: samsung-incell-s10e | Pantalla para Samsung S10E | 空
 - 产品视频缺失: samsung-incell-s20-ultra | Pantalla para Samsung S20 Ultra | 空
 - 产品视频缺失: samsung-incell-s21 | Pantalla para Samsung S21 | 空
 - 产品视频缺失: samsung-incell-s21-fe | Pantalla para Samsung S21 FE | 空
@@ -39,8 +33,6 @@
 - 产品视频缺失: samsung-incell-s24-plus | Pantalla para Samsung S24 Plus | 空
 - 产品视频缺失: samsung-incell-s24-ultra | Pantalla para Samsung S24 Ultra | 空
 - 产品视频缺失: samsung-incell-s8 | Pantalla para Samsung S8 | 空
-- 产品视频缺失: samsung-incell-s9 | Pantalla para Samsung S9 | 空
-- 产品视频缺失: samsung-incell-s9-plus | Pantalla para Samsung S9 Plus | 空
 - 产品视频缺失: samsung-oled-note-10 | Pantalla para Samsung Note 10 | 空
 - 产品视频缺失: samsung-oled-note-10-plus | Pantalla para Samsung Note 10 Plus | 空
 - 产品视频缺失: samsung-oled-note-20 | Pantalla para Samsung Note 20 | 空
@@ -65,30 +57,7 @@
 - 产品视频缺失: lk-007-camara-digital-4k | Cámara Digital 4K LK-007 | Pantalla Abatible 2.4" | HAODE México | 空
 - 产品视频缺失: lk-030-mini-camara-retro-digital | LK-030 Mini Cámara Retro Digital | 空
 - 产品视频缺失: lk-032-camara-inteligente-con-gimbal | LK-032 Cámara Inteligente con Gimbal | 空
-- 产品视频缺失: lk-018-camara-accion-hd | LK-018 Cámara de Acción HD | Pantalla Abatible | HAODE México | 空
 - 产品视频缺失: w630-ai-pro | W630 AI PRO | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-xs-max | HAODE Pantalla OLED Diagnóstica - Modelo XS Max | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-11-pro-max | HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-12-12-pro | HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-12-pro-max | HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-13 | HAODE Pantalla OLED Diagnóstica - Modelo 13 | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-13-pro | HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-13-pro-max | HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-14 | HAODE Pantalla OLED Diagnóstica - Modelo 14 | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-14-pro | HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-14-pro-max | HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-14-plus | HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-15 | HAODE Pantalla OLED Diagnóstica - Modelo 15 | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-15-pro | HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-15-pro-max | HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-15-plus | HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-16 | HAODE Pantalla OLED Diagnóstica - Modelo 16 | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-16-pro | HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-16-pro-max | HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-16-plus | HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-17 | HAODE Pantalla OLED Diagnóstica - Modelo 17 | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-17-pro | HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro | 空
-- 产品视频缺失: haode-pantalla-oled-diagnostica-modelo-17-pro-max | HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max | 空
 
 ## 已修复内容
 
@@ -97,7 +66,7 @@
 
 ## 未修复内容
 
-- 仍有 79 个产品视频为空或缺失，因缺少已确认视频素材，本次只记录不替换。
+- 仍有 48 个产品视频为空或缺失，因缺少已确认视频素材，本次只记录不替换。
 - SEO 基础项未发现未修复问题。
 - 价格异常、APP 漏发等产品控制项不在本次自动修复范围，避免误改价格或误删产品。
 

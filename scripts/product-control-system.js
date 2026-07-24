@@ -170,7 +170,7 @@ function readAppProducts() {
     precio_publico: parseMoney(product.precioPublico),
     precio_mayoreo: parseMoney(product.precioMayoreo),
     imagen_path: toPublicPath(product.imagen || ""),
-    video_path: "",
+    video_path: toPublicPath(product.video || product.videos?.[0] || ""),
     estado: product.activo === false ? "Inactivo" : "Activo",
     source: "app/products.json"
   }));

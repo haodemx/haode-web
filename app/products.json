@@ -624,7 +624,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 51"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 51",
+    "videos": [
+      "/assets/products/iphone-oled/16promax/video-01.mp4"
+    ]
   },
   {
     "id": "iphone-oled-xsmax",
@@ -782,7 +785,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora",
+    "videos": [
+      "/assets/products/iphone-incell/11-bolsa-protectora/video-01.mp4"
+    ]
   },
   {
     "id": "iphone-incell-11pro",
@@ -1842,7 +1848,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora",
+    "videos": [
+      "/assets/products/iphone-incell/xr-bolsa-protectora/video-01.mp4"
+    ]
   },
   {
     "id": "iphone-incell-xs",
@@ -2136,7 +2145,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 90"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 90",
+    "videos": [
+      "/assets/products/samsung-incell/s9/video-01.mp4"
+    ]
   },
   {
     "id": "iphone-incell-16plus",
@@ -2234,7 +2246,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 91"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 91",
+    "videos": [
+      "/assets/products/samsung-incell/s9-plus/video-01.mp4"
+    ]
   },
   {
     "id": "iphone-incell-16pro",
@@ -2381,7 +2396,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 52"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 52",
+    "videos": [
+      "/assets/products/iphone-incell/16promax/video-01.mp4"
+    ]
   },
   {
     "id": "samsung-incell-s10-plus",
@@ -2528,7 +2546,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 94"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 94",
+    "videos": [
+      "/assets/products/samsung-incell/s10e/video-01.mp4"
+    ]
   },
   {
     "id": "iphone-incell-17air",
@@ -3717,7 +3738,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 131"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 131",
+    "videos": [
+      "/assets/products/samsung-incell/note-10-plus/video-01.mp4"
+    ]
   },
   {
     "id": "samsung-incell-note-10-lite",
@@ -4571,7 +4595,12 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 150"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 150",
+    "videos": [
+      "/assets/videos/cut-machine/x200t/video-01.mp4",
+      "/assets/videos/cut-machine/x200t/video-02.mp4",
+      "/assets/videos/cut-machine/x200t/video-03.mp4"
+    ]
   },
   {
     "id": "funda-premium-aluminio-plus",
@@ -5074,7 +5103,10 @@
         "scope": "mixed_order"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 138"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 138",
+    "videos": [
+      "/assets/products/samsung-original/z-flip-series-video-01.mp4"
+    ]
   },
   {
     "id": "lk-030-mini-camara-retro-digital",
@@ -5146,7 +5178,11 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 189"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 189",
+    "videos": [
+      "/assets/products/productos-ai/lk-018-camara-accion-hd/video-01.mp4",
+      "/assets/products/productos-ai/lk-018-camara-accion-hd/video-02.mp4"
+    ]
   },
   {
     "id": "samsung-original-z-flip4",
@@ -5178,7 +5214,10 @@
         "scope": "mixed_order"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 139"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 139",
+    "videos": [
+      "/assets/products/samsung-original/z-flip-series-video-01.mp4"
+    ]
   },
   {
     "id": "samsung-original-z-flip5",
@@ -5210,7 +5249,10 @@
         "scope": "mixed_order"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 140"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 140",
+    "videos": [
+      "/assets/products/samsung-original/z-flip-series-video-01.mp4"
+    ]
   },
   {
     "id": "samsung-original-z-flip6",
@@ -5242,7 +5284,10 @@
         "scope": "mixed_order"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 141"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 141",
+    "videos": [
+      "/assets/products/samsung-original/z-flip-series-video-01.mp4"
+    ]
   },
   {
     "id": "samsung-original-z-flip7",
@@ -5278,7 +5323,10 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 142"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 142",
+    "videos": [
+      "/assets/products/samsung-original/z-flip-series-video-01.mp4"
+    ]
   },
   {
     "id": "samsung-original-z-fold3",
@@ -5471,7 +5519,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 61"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 61",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
@@ -5520,7 +5572,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 62"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 62",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
@@ -5569,7 +5625,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 63"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 63",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
@@ -5618,7 +5678,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 64"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 64",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13",
@@ -5667,7 +5731,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 66"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 66",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
@@ -5716,7 +5784,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 67"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 67",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
@@ -5765,7 +5837,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 68"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 68",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14",
@@ -5814,7 +5890,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 69"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 69",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
@@ -5863,7 +5943,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 70"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 70",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
@@ -5912,7 +5996,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 71"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 71",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
@@ -5961,7 +6049,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 72"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 72",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15",
@@ -6010,7 +6102,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 73"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 73",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
@@ -6059,7 +6155,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 74"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 74",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
@@ -6108,7 +6208,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 75"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 75",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
@@ -6157,7 +6261,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 76"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 76",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16",
@@ -6206,7 +6314,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 78"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 78",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
@@ -6255,7 +6367,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 79"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 79",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
@@ -6304,7 +6420,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 80"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 80",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
@@ -6353,7 +6473,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 81"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 81",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17",
@@ -6402,7 +6526,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 82"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 82",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
@@ -6451,7 +6579,11 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 83"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 83",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
@@ -6500,6 +6632,10 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 84"
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 84",
+    "videos": [
+      "/assets/products/oled-diagnostica/video-01.mp4",
+      "/assets/products/oled-diagnostica/video-02.mp4"
+    ]
   }
 ]
