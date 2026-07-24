@@ -12,7 +12,13 @@ function walk(dir, predicate, out = []) {
   if (!fs.existsSync(dir)) return out;
   for (const entry of fs.readdirSync(dir)) {
     const full = path.join(dir, entry);
-    const stat = fs.statSync(full);
+    let stat;
+    try {
+      stat = fs.statSync(full);
+    } catch (error) {
+      if (error && error.code === 'ENOENT') continue;
+      throw error;
+    }
     if (stat.isDirectory()) walk(full, predicate, out);
     else if (predicate(full)) out.push(full);
   }
