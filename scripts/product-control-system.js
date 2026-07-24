@@ -11,8 +11,19 @@ const TODAY = process.env.HAODE_AUDIT_DATE || new Date().toISOString().slice(0, 
 const CATEGORY_LABELS = {
   "iphone-incell": "Pantallas iPhone INCELL",
   "iphone-oled": "Pantallas iPhone OLED",
+  "oled-diagnostica": "Pantallas OLED Diagnóstica",
   "samsung-incell": "Pantallas Samsung INCELL",
-  "samsung-oled": "Pantallas Samsung OLED"
+  "samsung-oled": "Pantallas Samsung OLED",
+  "samsung-tipo-original": "Pantallas Samsung Original",
+  "samsung-original": "Pantallas Samsung Original",
+  "gafas-ai": "Gafas AI",
+  "productos-ai": "Productos AI",
+  "camaras-inteligentes": "Cámaras Inteligentes",
+  "camaras-digitales": "Cámaras Inteligentes",
+  "micas": "Micas",
+  "maquinas-de-mica": "Máquinas de Mica",
+  "maquinas-de-hidrogel": "Máquinas de Mica",
+  "fundas": "Fundas"
 };
 
 const MASTER_COLUMNS = [
@@ -159,7 +170,7 @@ function readAppProducts() {
     precio_publico: parseMoney(product.precioPublico),
     precio_mayoreo: parseMoney(product.precioMayoreo),
     imagen_path: toPublicPath(product.imagen || ""),
-    video_path: "",
+    video_path: toPublicPath(product.video || product.videos?.[0] || ""),
     estado: product.activo === false ? "Inactivo" : "Activo",
     source: "app/products.json"
   }));

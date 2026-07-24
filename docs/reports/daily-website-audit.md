@@ -1,46 +1,38 @@
 # HAODE 官网每日审计报告
 
-生成日期：2026-06-05
+生成日期：2026-07-24
 
 ## 审计范围
 
-- HTML 页面：174
-- 网站产品数据：93
+- HTML 页面：245
+- 网站产品数据：140
 - 检查项：404 页面、站内死链接、空白页面、分类页、首页按钮、产品封面图、图片路径、视频路径、title、meta description、Open Graph、JSON-LD、sitemap.xml、robots.txt。
 
 ## 发现的问题
 
-- SEO: categoria/camaras-inteligentes/index.html: JSON-LD 缺失
-- SEO: categoria/gafas-inteligentes-ai/index.html: JSON-LD 缺失
-- SEO: categoria/index.html: JSON-LD 缺失
-- SEO: categoria/iphone-incell/index.html: JSON-LD 缺失
-- SEO: categoria/iphone-oled/index.html: JSON-LD 缺失
-- SEO: categoria/maquinas-de-hidrogel/index.html: JSON-LD 缺失
-- SEO: categoria/pantallas/index.html: JSON-LD 缺失
-- SEO: categoria/samsung-incell/index.html: JSON-LD 缺失
-- SEO: categoria/samsung-oled/index.html: JSON-LD 缺失
-- SEO: distribuidores/index.html: og:title 缺失
-- SEO: distribuidores/index.html: og:description 缺失
-- SEO: distribuidores/index.html: og:image 缺失
-- SEO: distribuidores/index.html: JSON-LD 缺失
-- SEO: micas/index.html: og:title 缺失
-- SEO: micas/index.html: og:description 缺失
-- SEO: micas/index.html: og:image 缺失
-- SEO: micas/index.html: JSON-LD 缺失
-- SEO: productos-ai.html: JSON-LD 缺失
-- SEO: productos-ai/index.html: JSON-LD 缺失
-- 产品视频缺失: iphone-oled-16promax | Pantalla para iPhone 16 Pro Max Soft OLED | 空
-- 产品视频缺失: samsung-incell-note-10-plus | Pantalla para Samsung Note 10 Plus | 空
+- 产品视频缺失: iphone-incell-16e | Pantalla para iPhone 16e | 空
+- 产品视频缺失: iphone-incell-16plus | Pantalla para iPhone 16 Plus | 空
+- 产品视频缺失: iphone-incell-16pro | Pantalla para iPhone 16 Pro | 空
+- 产品视频缺失: iphone-incell-17 | Pantalla para iPhone 17 | 空
+- 产品视频缺失: iphone-incell-17air | Pantalla para iPhone 17 Air | 空
+- 产品视频缺失: iphone-incell-17pro | Pantalla para iPhone 17 Pro | 空
+- 产品视频缺失: iphone-incell-17promax | Pantalla para iPhone 17 Pro Max | 空
 - 产品视频缺失: samsung-incell-note-20-ultra | Pantalla para Samsung Note 20 Ultra | 空
 - 产品视频缺失: samsung-incell-note-8 | Pantalla para Samsung Note 8 | 空
 - 产品视频缺失: samsung-incell-note-9 | Pantalla para Samsung Note 9 | 空
 - 产品视频缺失: samsung-incell-s20-ultra | Pantalla para Samsung S20 Ultra | 空
 - 产品视频缺失: samsung-incell-s21 | Pantalla para Samsung S21 | 空
+- 产品视频缺失: samsung-incell-s21-fe | Pantalla para Samsung S21 FE | 空
+- 产品视频缺失: samsung-incell-s21-plus | Pantalla para Samsung S21 Plus | 空
 - 产品视频缺失: samsung-incell-s21-ultra | Pantalla para Samsung S21 Ultra | 空
+- 产品视频缺失: samsung-incell-s22 | Pantalla para Samsung S22 | 空
+- 产品视频缺失: samsung-incell-s22-plus | Pantalla para Samsung S22 Plus | 空
+- 产品视频缺失: samsung-incell-s23 | Pantalla para Samsung S23 | 空
+- 产品视频缺失: samsung-incell-s23-plus | Pantalla para Samsung S23 Plus | 空
+- 产品视频缺失: samsung-incell-s24 | Pantalla para Samsung S24 | 空
+- 产品视频缺失: samsung-incell-s24-plus | Pantalla para Samsung S24 Plus | 空
 - 产品视频缺失: samsung-incell-s24-ultra | Pantalla para Samsung S24 Ultra | 空
 - 产品视频缺失: samsung-incell-s8 | Pantalla para Samsung S8 | 空
-- 产品视频缺失: samsung-incell-s9 | Pantalla para Samsung S9 | 空
-- 产品视频缺失: samsung-incell-s9-plus | Pantalla para Samsung S9 Plus | 空
 - 产品视频缺失: samsung-oled-note-10 | Pantalla para Samsung Note 10 | 空
 - 产品视频缺失: samsung-oled-note-10-plus | Pantalla para Samsung Note 10 Plus | 空
 - 产品视频缺失: samsung-oled-note-20 | Pantalla para Samsung Note 20 | 空
@@ -54,14 +46,18 @@
 - 产品视频缺失: samsung-oled-s23-plus | Pantalla para Samsung S23 Plus | 空
 - 产品视频缺失: samsung-oled-s24-plus | Pantalla para Samsung S24 Plus | 空
 - 产品视频缺失: samsung-oled-s9-plus | Pantalla para Samsung S9 Plus | 空
-- 产品视频缺失: iphone-incell-16e | Pantalla para iPhone 16e | 空
-- 产品视频缺失: iphone-incell-16plus | Pantalla para iPhone 16 Plus | 空
-- 产品视频缺失: iphone-incell-16pro | Pantalla para iPhone 16 Pro | 空
-- 产品视频缺失: iphone-incell-16promax | Pantalla para iPhone 16 Pro Max | 空
-- 产品视频缺失: iphone-incell-17 | Pantalla para iPhone 17 | 空
-- 产品视频缺失: iphone-incell-17air | Pantalla para iPhone 17 Air | 空
-- 产品视频缺失: iphone-incell-17pro | Pantalla para iPhone 17 Pro | 空
-- 产品视频缺失: iphone-incell-17promax | Pantalla para iPhone 17 Pro Max | 空
+- 产品视频缺失: mica-hd | MICA HD | 空
+- 产品视频缺失: mica-matte | MICA MATTE | 空
+- 产品视频缺失: mica-privacidad-hd | MICA PRIVACIDAD HD | 空
+- 产品视频缺失: mica-privacidad-matte | MICA PRIVACIDAD MATTE | 空
+- 产品视频缺失: haode-ai-g3-smart-glasses | Gafas Inteligentes AI G3 | 空
+- 产品视频缺失: haode-ai-w610-smart-glasses | Gafas Inteligentes AI W610 | 空
+- 产品视频缺失: s1-ai-classic | HAODE AI CLASSIC S1 | 空
+- 产品视频缺失: aimb-g5-ai-sports | AIMB-G5 AI SPORTS | 空
+- 产品视频缺失: lk-007-camara-digital-4k | Cámara Digital 4K LK-007 | Pantalla Abatible 2.4" | HAODE México | 空
+- 产品视频缺失: lk-030-mini-camara-retro-digital | LK-030 Mini Cámara Retro Digital | 空
+- 产品视频缺失: lk-032-camara-inteligente-con-gimbal | LK-032 Cámara Inteligente con Gimbal | 空
+- 产品视频缺失: w630-ai-pro | W630 AI PRO | 空
 
 ## 已修复内容
 
@@ -70,8 +66,8 @@
 
 ## 未修复内容
 
-- 仍有 33 个产品视频为空或缺失，因缺少已确认视频素材，本次只记录不替换。
-- 仍有 19 个 SEO 标签/JSON-LD 问题需要逐页补齐。
+- 仍有 48 个产品视频为空或缺失，因缺少已确认视频素材，本次只记录不替换。
+- SEO 基础项未发现未修复问题。
 - 价格异常、APP 漏发等产品控制项不在本次自动修复范围，避免误改价格或误删产品。
 
 ## 缺图清单

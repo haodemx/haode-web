@@ -423,6 +423,20 @@ img {
   line-height: 1.45;
 }
 
+.daily-ad-card .secondary-button {
+  justify-self: start;
+  border-color: rgba(255, 90, 10, 0.22);
+  background: linear-gradient(135deg, var(--haode-orange) 0%, #ff742d 100%);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(255, 90, 10, 0.22);
+}
+
+.daily-ad-card .secondary-button:hover {
+  border-color: rgba(255, 90, 10, 0.34);
+  background: linear-gradient(135deg, #ff5a0a 0%, #ff742d 100%);
+  box-shadow: 0 16px 32px rgba(255, 90, 10, 0.28);
+}
+
 .primary-button,
 .secondary-button,
 .text-button,
