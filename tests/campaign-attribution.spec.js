@@ -48,6 +48,13 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   await page.locator("[data-customer-name]").fill("Cliente campaña QA");
   await page.locator("[data-customer-phone]").fill("5512345678");
   await page.locator("[data-customer-city]").fill("CDMX");
+  const whatsappText = await page.locator("[data-whatsapp-link]").evaluate((link) => {
+    const url = new URL(link.href);
+    return decodeURIComponent(url.searchParams.get("text") || "");
+  });
+
+  expect(whatsappText).toContain("Origen: instagram");
+  expect(whatsappText).toContain("Referencia: instagram/verano_2026/video_a");
   await page.locator("[data-whatsapp-link]").click();
 
   await expect.poll(() => submitted?.utm_source).toBe("instagram");

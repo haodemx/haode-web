@@ -41,3 +41,17 @@ test("builds one campaign code and channel-specific app links", () => {
   assert.equal(app.searchParams.get("utm_source"), "haode_app");
   assert.equal(app.searchParams.get("utm_medium"), "owned_app");
 });
+
+test("keeps app hash routes when adding tracking parameters", () => {
+  const links = buildCampaignLinks({
+    appUrl: "https://haode.com.mx/app/#grupo/Fundas",
+    campaign: "daily_20260724_fundas",
+    productSku: "fundas"
+  });
+
+  const instagram = new URL(links.instagram);
+  assert.equal(instagram.pathname, "/app/");
+  assert.equal(instagram.hash, "#grupo/Fundas");
+  assert.equal(instagram.searchParams.get("utm_source"), "instagram");
+  assert.equal(instagram.searchParams.get("utm_campaign"), "daily_20260724_fundas");
+});

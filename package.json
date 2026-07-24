@@ -10,6 +10,7 @@
     "test:daily-ad-catalog": "node --test tests/daily-ad-catalog.test.mjs",
     "test:catalog-gap-audit": "node --test tests/catalog-gap-audit.test.mjs",
     "audit:erp-catalog": "node scripts/audit-erp-catalog-gaps.mjs",
+    "marketing:exposure-pack": "node scripts/generate-exposure-pack.mjs",
     "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js",
     "publish-products": "node scripts/publish-products.js",
