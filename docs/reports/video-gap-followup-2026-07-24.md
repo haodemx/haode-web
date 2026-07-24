@@ -4,7 +4,7 @@
 
 ## 结论
 
-官网当前还有 48 个产品缺视频。本轮已检查桌面素材库 301 个视频文件，没有找到可以安全补上的同 SKU / 同品质视频，因此没有用近似视频冒充。
+第一轮检查后官网有 48 个产品缺视频。第二轮扩大到整个 `/Users/mac/Desktop` 检索后，已补入 15 条可确认型号视频，当前还剩 33 个产品缺视频。
 
 ## 员工补素材规则
 
@@ -28,33 +28,18 @@
 | Samsung INCELL 视频补 Samsung OLED | 品质不一致 |
 | M08 / M02 / LK-018 视频补其他 AI 产品 | 产品不一致 |
 
-## 48 个待补视频产品
+## 当前 33 个待补视频产品
 
 | 类别 | SKU | 产品 | 品质 |
 | --- | --- | --- | --- |
-| iPhone INCELL | `iphone-incell-16e` | Pantalla para iPhone 16e | INCELL FHD |
-| iPhone INCELL | `iphone-incell-16plus` | Pantalla para iPhone 16 Plus | INCELL FHD |
-| iPhone INCELL | `iphone-incell-16pro` | Pantalla para iPhone 16 Pro | INCELL FHD |
 | iPhone INCELL | `iphone-incell-17` | Pantalla para iPhone 17 | INCELL FHD |
 | iPhone INCELL | `iphone-incell-17air` | Pantalla para iPhone 17 Air | INCELL FHD |
 | iPhone INCELL | `iphone-incell-17pro` | Pantalla para iPhone 17 Pro | INCELL FHD |
-| iPhone INCELL | `iphone-incell-17promax` | Pantalla para iPhone 17 Pro Max | INCELL FHD |
-| Samsung INCELL | `samsung-incell-note-20-ultra` | Pantalla para Samsung Note 20 Ultra | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-note-8` | Pantalla para Samsung Note 8 | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-note-9` | Pantalla para Samsung Note 9 | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s20-ultra` | Pantalla para Samsung S20 Ultra | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s21` | Pantalla para Samsung S21 | INCELL CON MARCO |
 | Samsung INCELL | `samsung-incell-s21-fe` | Pantalla para Samsung S21 FE | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s21-plus` | Pantalla para Samsung S21 Plus | INCELL CON MARCO |
 | Samsung INCELL | `samsung-incell-s21-ultra` | Pantalla para Samsung S21 Ultra | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s22` | Pantalla para Samsung S22 | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s22-plus` | Pantalla para Samsung S22 Plus | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s23` | Pantalla para Samsung S23 | INCELL CON MARCO |
 | Samsung INCELL | `samsung-incell-s23-plus` | Pantalla para Samsung S23 Plus | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s24` | Pantalla para Samsung S24 | INCELL CON MARCO |
 | Samsung INCELL | `samsung-incell-s24-plus` | Pantalla para Samsung S24 Plus | INCELL CON MARCO |
 | Samsung INCELL | `samsung-incell-s24-ultra` | Pantalla para Samsung S24 Ultra | INCELL CON MARCO |
-| Samsung INCELL | `samsung-incell-s8` | Pantalla para Samsung S8 | INCELL CON MARCO |
 | Samsung OLED | `samsung-oled-note-10` | Pantalla para Samsung Note 10 | OLED CON MARCO |
 | Samsung OLED | `samsung-oled-note-10-plus` | Pantalla para Samsung Note 10 Plus | OLED CON MARCO |
 | Samsung OLED | `samsung-oled-note-20` | Pantalla para Samsung Note 20 | OLED CON MARCO |
@@ -83,5 +68,4 @@
 
 ## 交给员工的话术
 
-请按上面 48 个 SKU 补产品视频。只接受同 SKU 或同品质同系列素材；不确定的先发给老板确认，不要直接替换到网站。每个 SKU 至少补 1 条清晰视频，文件名写 SKU、品质和型号。
-
+请按上面 33 个 SKU 补产品视频。只接受同 SKU 或同品质同系列素材；不确定的先发给老板确认，不要直接替换到网站。每个 SKU 至少补 1 条清晰视频，文件名写 SKU、品质和型号。
