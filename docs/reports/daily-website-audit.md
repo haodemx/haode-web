@@ -4,35 +4,20 @@
 
 ## 审计范围
 
-- HTML 页面：245
+- HTML 页面：244
 - 网站产品数据：140
 - 检查项：404 页面、站内死链接、空白页面、分类页、首页按钮、产品封面图、图片路径、视频路径、title、meta description、Open Graph、JSON-LD、sitemap.xml、robots.txt。
 
 ## 发现的问题
 
-- 产品视频缺失: iphone-incell-16e | Pantalla para iPhone 16e | 空
-- 产品视频缺失: iphone-incell-16plus | Pantalla para iPhone 16 Plus | 空
-- 产品视频缺失: iphone-incell-16pro | Pantalla para iPhone 16 Pro | 空
 - 产品视频缺失: iphone-incell-17 | Pantalla para iPhone 17 | 空
 - 产品视频缺失: iphone-incell-17air | Pantalla para iPhone 17 Air | 空
 - 产品视频缺失: iphone-incell-17pro | Pantalla para iPhone 17 Pro | 空
-- 产品视频缺失: iphone-incell-17promax | Pantalla para iPhone 17 Pro Max | 空
-- 产品视频缺失: samsung-incell-note-20-ultra | Pantalla para Samsung Note 20 Ultra | 空
-- 产品视频缺失: samsung-incell-note-8 | Pantalla para Samsung Note 8 | 空
-- 产品视频缺失: samsung-incell-note-9 | Pantalla para Samsung Note 9 | 空
-- 产品视频缺失: samsung-incell-s20-ultra | Pantalla para Samsung S20 Ultra | 空
-- 产品视频缺失: samsung-incell-s21 | Pantalla para Samsung S21 | 空
 - 产品视频缺失: samsung-incell-s21-fe | Pantalla para Samsung S21 FE | 空
-- 产品视频缺失: samsung-incell-s21-plus | Pantalla para Samsung S21 Plus | 空
 - 产品视频缺失: samsung-incell-s21-ultra | Pantalla para Samsung S21 Ultra | 空
-- 产品视频缺失: samsung-incell-s22 | Pantalla para Samsung S22 | 空
-- 产品视频缺失: samsung-incell-s22-plus | Pantalla para Samsung S22 Plus | 空
-- 产品视频缺失: samsung-incell-s23 | Pantalla para Samsung S23 | 空
 - 产品视频缺失: samsung-incell-s23-plus | Pantalla para Samsung S23 Plus | 空
-- 产品视频缺失: samsung-incell-s24 | Pantalla para Samsung S24 | 空
 - 产品视频缺失: samsung-incell-s24-plus | Pantalla para Samsung S24 Plus | 空
 - 产品视频缺失: samsung-incell-s24-ultra | Pantalla para Samsung S24 Ultra | 空
-- 产品视频缺失: samsung-incell-s8 | Pantalla para Samsung S8 | 空
 - 产品视频缺失: samsung-oled-note-10 | Pantalla para Samsung Note 10 | 空
 - 产品视频缺失: samsung-oled-note-10-plus | Pantalla para Samsung Note 10 Plus | 空
 - 产品视频缺失: samsung-oled-note-20 | Pantalla para Samsung Note 20 | 空
@@ -66,7 +51,7 @@
 
 ## 未修复内容
 
-- 仍有 48 个产品视频为空或缺失，因缺少已确认视频素材，本次只记录不替换。
+- 仍有 33 个产品视频为空或缺失，因缺少已确认视频素材，本次只记录不替换。
 - SEO 基础项未发现未修复问题。
 - 价格异常、APP 漏发等产品控制项不在本次自动修复范围，避免误改价格或误删产品。
 

@@ -805,7 +805,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/iphone-incell/16e/gallery-02.jpg",
       "assets/products/iphone-incell/16e/gallery-03.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-incell/16e/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -845,7 +847,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/iphone-incell/16plus/gallery-02.png",
       "assets/products/iphone-incell/16plus/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-incell/16plus/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -885,7 +889,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/iphone-incell/16pro/gallery-02.jpg",
       "assets/products/iphone-incell/16pro/gallery-03.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-incell/16pro/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -1087,7 +1093,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/iphone-incell/17promax/gallery-02.png",
       "assets/products/iphone-incell/17promax/gallery-03.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/iphone-incell/17promax/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2300,7 +2308,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/note-20-ultra/gallery-02.jpg",
       "assets/products/samsung-incell/note-20-ultra/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/note-20-ultra/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2340,7 +2350,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/note-8/gallery-02.jpg",
       "assets/products/samsung-incell/note-8/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/note-8/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2380,7 +2392,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/note-9/gallery-02.jpg",
       "assets/products/samsung-incell/note-9/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/note-9/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2671,7 +2685,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/s20-ultra/gallery-02.jpg",
       "assets/products/samsung-incell/s20-ultra/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s20-ultra/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2711,7 +2727,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/s21/gallery-02.jpg",
       "assets/products/samsung-incell/s21/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s21/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2786,7 +2804,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s21-plus/main.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s21-plus/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2864,7 +2884,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s22/main.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s22/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2902,7 +2924,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s22-plus/main.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s22-plus/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -2983,7 +3007,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s23/main.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s23/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -3101,7 +3127,9 @@ window.HAODE_PRODUCTS_DATA = [
     "images": [
       "assets/products/samsung-incell/s24/main.png"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s24/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",
@@ -3219,7 +3247,9 @@ window.HAODE_PRODUCTS_DATA = [
       "assets/products/samsung-incell/s8/gallery-02.jpg",
       "assets/products/samsung-incell/s8/gallery-03.jpg"
     ],
-    "videos": [],
+    "videos": [
+      "assets/products/samsung-incell/s8/video-01.mp4"
+    ],
     "prices": [
       {
         "quantity": "1 pza",

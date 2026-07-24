@@ -30,7 +30,7 @@
 | 网站实际展示覆盖数 | 161 | 161 |
 | APP 产品数 | 147 | 161 |
 | 图片存在率 | 100.0% | 99%+ |
-| 视频存在率 | 60.9% | 99%+ |
+| 视频存在率 | 70.2% | 99%+ |
 | 价格一致率 | 91.3% | 99%+ |
 | 分类一致率 | 100.0% | 99%+ |
 | 网站发布完整率 | 100.0% | 99%+ |
@@ -42,7 +42,7 @@
 | 异常类型 | 数量 | 自动处理策略 |
 | --- | ---: | --- |
 | 图片缺失/路径不存在 | 0 | 允许自动修复路径，不允许乱换图 |
-| 视频缺失/路径不存在 | 63 | 允许自动修复路径，缺素材则报告 |
+| 视频缺失/路径不存在 | 48 | 允许自动修复路径，缺素材则报告 |
 | 价格不一致 | 14 | 禁止自动修改价格 |
 | 分类不一致 | 0 | 允许自动修复分类 |
 | 网站漏发 | 0 | 允许补页面/补路径 |
@@ -78,13 +78,9 @@
 - id: aimb-g5-ai-sports | producto_nombre: AIMB-G5 AI SPORTS | video_path: 空
 - id: haode-ai-g3-smart-glasses | producto_nombre: Gafas Inteligentes AI G3 | video_path: 空
 - id: haode-ai-w610-smart-glasses | producto_nombre: Gafas Inteligentes AI W610 | video_path: 空
-- id: iphone-incell-16e | producto_nombre: Pantalla para iPhone 16e | video_path: 空
-- id: iphone-incell-16plus | producto_nombre: Pantalla para iPhone 16 Plus | video_path: 空
-- id: iphone-incell-16pro | producto_nombre: Pantalla para iPhone 16 Pro | video_path: 空
 - id: iphone-incell-17 | producto_nombre: Pantalla para iPhone 17 | video_path: 空
 - id: iphone-incell-17air | producto_nombre: Pantalla para iPhone 17 Air | video_path: 空
 - id: iphone-incell-17pro | producto_nombre: Pantalla para iPhone 17 Pro | video_path: 空
-- id: iphone-incell-17promax | producto_nombre: Pantalla para iPhone 17 Pro Max | video_path: 空
 - id: lk-007-camara-digital-4k | producto_nombre: Cámara Digital 4K LK-007 | video_path: 空
 - id: lk-030-mini-camara-retro-digital | producto_nombre: LK-030 Mini Cámara Retro Digital | video_path: 空
 - id: lk-032-camara-inteligente-con-gimbal | producto_nombre: LK-032 Cámara Inteligente con Gimbal | video_path: 空
@@ -95,23 +91,12 @@
 - id: s1-ai-classic | producto_nombre: HAODE AI CLASSIC S1 | video_path: 空
 - id: samsung-incell-note-10-lite | producto_nombre: Pantalla para Samsung Note 10 Lite | video_path: 空
 - id: samsung-incell-note-20 | producto_nombre: Pantalla para Samsung Note 20 | video_path: 空
-- id: samsung-incell-note-20-ultra | producto_nombre: Pantalla para Samsung Note 20 Ultra | video_path: 空
-- id: samsung-incell-note-8 | producto_nombre: Pantalla para Samsung Note 8 | video_path: 空
-- id: samsung-incell-note-9 | producto_nombre: Pantalla para Samsung Note 9 | video_path: 空
 - id: samsung-incell-s10-lite | producto_nombre: Pantalla para Samsung S10 Lite | video_path: 空
-- id: samsung-incell-s20-ultra | producto_nombre: Pantalla para Samsung S20 Ultra | video_path: 空
-- id: samsung-incell-s21 | producto_nombre: Pantalla para Samsung S21 | video_path: 空
 - id: samsung-incell-s21-fe | producto_nombre: Pantalla para Samsung S21 FE | video_path: 空
-- id: samsung-incell-s21-plus | producto_nombre: Pantalla para Samsung S21 Plus | video_path: 空
 - id: samsung-incell-s21-ultra | producto_nombre: Pantalla para Samsung S21 Ultra | video_path: 空
-- id: samsung-incell-s22 | producto_nombre: Pantalla para Samsung S22 | video_path: 空
-- id: samsung-incell-s22-plus | producto_nombre: Pantalla para Samsung S22 Plus | video_path: 空
-- id: samsung-incell-s23 | producto_nombre: Pantalla para Samsung S23 | video_path: 空
 - id: samsung-incell-s23-plus | producto_nombre: Pantalla para Samsung S23 Plus | video_path: 空
-- id: samsung-incell-s24 | producto_nombre: Pantalla para Samsung S24 | video_path: 空
 - id: samsung-incell-s24-plus | producto_nombre: Pantalla para Samsung S24 Plus | video_path: 空
 - id: samsung-incell-s24-ultra | producto_nombre: Pantalla para Samsung S24 Ultra | video_path: 空
-- id: samsung-incell-s8 | producto_nombre: Pantalla para Samsung S8 | video_path: 空
 - id: samsung-oled-note-10 | producto_nombre: Pantalla para Samsung Note 10 | video_path: 空
 - id: samsung-oled-note-10-plus | producto_nombre: Pantalla para Samsung Note 10 Plus | video_path: 空
 - id: samsung-oled-note-20 | producto_nombre: Pantalla para Samsung Note 20 | video_path: 空
