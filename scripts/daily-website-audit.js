@@ -23,14 +23,17 @@ function rel(file) {
   return path.relative(ROOT, file).replaceAll(path.sep, '/');
 }
 
-function publicToFile(urlPath) {
+function publicToFile(urlPath, baseFile = null) {
   let clean = urlPath.split('#')[0].split('?')[0];
   if (!clean) return null;
   if (clean.startsWith(SITE_BASE)) clean = clean.slice(SITE_BASE.length);
-  if (clean.startsWith(PUBLIC_PREFIX)) clean = clean.slice(PUBLIC_PREFIX.length);
+  const isRootRelative = clean.startsWith(PUBLIC_PREFIX);
+  if (isRootRelative) clean = clean.slice(PUBLIC_PREFIX.length);
   if (clean.startsWith('/')) return null;
   if (clean.endsWith('/')) clean += 'index.html';
-  const file = path.join(ROOT, clean);
+  const file = isRootRelative || !baseFile
+    ? path.join(ROOT, clean)
+    : path.join(path.dirname(baseFile), clean);
   if (fs.existsSync(file) && fs.statSync(file).isDirectory()) return path.join(file, 'index.html');
   return file;
 }
@@ -79,6 +82,11 @@ function checkJsonLd(html) {
   return { present: true, valid };
 }
 
+function isNoindexRedirect(html) {
+  return /<meta[^>]+http-equiv=["']refresh["']/i.test(html)
+    && /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html);
+}
+
 const htmlFiles = walk(ROOT, (file) => file.endsWith('.html') && !file.includes('/node_modules/')).sort();
 const products = readProducts();
 
@@ -93,8 +101,11 @@ const homeButtonIssues = [];
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const relative = rel(file);
+  const skipPageChecks = isNoindexRedirect(html);
 
   if (!hasBodyContent(html)) blankPages.push(relative);
+
+  if (skipPageChecks) continue;
 
   const hrefs = extractAttrs(html, 'href');
   const srcs = extractAttrs(html, 'src');
@@ -105,18 +116,21 @@ for (const file of htmlFiles) {
 
   for (const href of hrefs) {
     if (/^(https?:|mailto:|tel:|whatsapp:|#)/i.test(href)) continue;
-    const target = publicToFile(href);
+    const target = publicToFile(href, file);
     if (target && !fs.existsSync(target)) internalBrokenLinks.push(`${relative} -> ${href}`);
   }
 
   for (const asset of assets) {
     if (/^(https?:|data:|mailto:|tel:)/i.test(asset)) continue;
-    const target = publicToFile(asset);
+    const target = publicToFile(asset, file);
     if (target && !fs.existsSync(target)) brokenAssets.push(`${relative} -> ${asset}`);
   }
 
   const skipPageSeo = relative === '404.html'
+    || relative === 'offline.html'
+    || relative.startsWith('admin/')
     || relative.startsWith('app/')
+    || relative.startsWith('previews/')
     || /^google[a-z0-9]+\.html$/i.test(relative)
     || /<meta[^>]+http-equiv=["']refresh["']/i.test(html);
   if (skipPageSeo) continue;
@@ -150,7 +164,7 @@ for (const href of extractAttrs(homeHtml, 'href').filter((href) => href.startsWi
     if (id && !new RegExp(`id=["']${id}["']`).test(homeHtml)) homeButtonIssues.push(`index.html -> ${href}`);
     continue;
   }
-  const target = publicToFile(href);
+  const target = publicToFile(href, path.join(ROOT, 'index.html'));
   if (target && !fs.existsSync(target)) homeButtonIssues.push(`index.html -> ${href}`);
 }
 

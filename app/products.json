@@ -4321,104 +4321,6 @@
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 136"
   },
   {
-    "id": "samsung-original-s21-ultra",
-    "categoria": "Pantallas Samsung Original",
-    "nombre": "Pantalla para Samsung S21 Ultra",
-    "modelo": "Samsung S21 Ultra TIPO ORIGINAL CON MARCO",
-    "descripcion": "Pantalla para Samsung S21 Ultra TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp. Imagen pendiente de confirmar.",
-    "precioPublico": 2500,
-    "precioMayoreo": 2400,
-    "imagen": "/assets/products/samsung-original/s21-ultra/main.jpg",
-    "stock": "bajo pedido",
-    "activo": true,
-    "orden": 820,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 2400,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
-      },
-      {
-        "code": "MIXED_100",
-        "minQty": 100,
-        "maxQty": null,
-        "price": 2300,
-        "label": "100 pzs surtido",
-        "scope": "mixed_order"
-      },
-      {
-        "code": "MODEL_100",
-        "minQty": 100,
-        "maxQty": null,
-        "price": 2250,
-        "label": "100 pzs/modelo",
-        "scope": "same_model"
-      },
-      {
-        "code": "BOX_MODEL",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 2200,
-        "label": "Caja/modelo",
-        "scope": "box_model",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 107"
-  },
-  {
-    "id": "samsung-original-s22-plus",
-    "categoria": "Pantallas Samsung Original",
-    "nombre": "Pantalla para Samsung S22 Plus",
-    "modelo": "Samsung S22 Plus TIPO ORIGINAL CON MARCO",
-    "descripcion": "Pantalla para Samsung S22 Plus TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp. Imagen de modelo verificada.",
-    "precioPublico": 1700,
-    "precioMayoreo": 1650,
-    "imagen": "/assets/products/samsung-original/s22-plus/main.png",
-    "stock": "bajo pedido",
-    "activo": true,
-    "orden": 830,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 1650,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
-      },
-      {
-        "code": "MIXED_100",
-        "minQty": 100,
-        "maxQty": null,
-        "price": 1600,
-        "label": "100 pzs surtido",
-        "scope": "mixed_order"
-      },
-      {
-        "code": "MODEL_100",
-        "minQty": 100,
-        "maxQty": null,
-        "price": 1500,
-        "label": "100 pzs/modelo",
-        "scope": "same_model"
-      },
-      {
-        "code": "BOX_MODEL",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 1400,
-        "label": "Caja/modelo",
-        "scope": "box_model",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 110"
-  },
-  {
     "id": "mica-hd",
     "categoria": "Micas",
     "nombre": "MICA HD",
@@ -4512,6 +4414,55 @@
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 154"
   },
   {
+    "id": "samsung-original-s21-ultra",
+    "categoria": "Pantallas Samsung Original",
+    "nombre": "Pantalla para Samsung S21 Ultra",
+    "modelo": "Samsung S21 Ultra TIPO ORIGINAL CON MARCO",
+    "descripcion": "Pantalla para Samsung S21 Ultra TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp. Imagen pendiente de confirmar.",
+    "precioPublico": 2500,
+    "precioMayoreo": 2400,
+    "imagen": "/assets/products/samsung-original/s21-ultra/main.jpg",
+    "stock": "bajo pedido",
+    "activo": true,
+    "orden": 820,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 2400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2300,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 2250,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 2200,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 107"
+  },
+  {
     "id": "mica-privacidad-matte",
     "categoria": "Micas",
     "nombre": "MICA PRIVACIDAD MATTE",
@@ -4543,6 +4494,55 @@
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 155"
   },
   {
+    "id": "samsung-original-s22-plus",
+    "categoria": "Pantallas Samsung Original",
+    "nombre": "Pantalla para Samsung S22 Plus",
+    "modelo": "Samsung S22 Plus TIPO ORIGINAL CON MARCO",
+    "descripcion": "Pantalla para Samsung S22 Plus TIPO ORIGINAL CON MARCO para reparacion celular en Mexico. Precio actualizado por HAODE. Confirma disponibilidad y compatibilidad final por WhatsApp. Imagen de modelo verificada.",
+    "precioPublico": 1700,
+    "precioMayoreo": 1650,
+    "imagen": "/assets/products/samsung-original/s22-plus/main.png",
+    "stock": "bajo pedido",
+    "activo": true,
+    "orden": 830,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1650,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1600,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 1500,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 1400,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 110"
+  },
+  {
     "id": "x200t-cortadora-micas",
     "categoria": "Máquinas de Mica",
     "nombre": "HAODE X200T Cortadora Inteligente de Micas",
@@ -4572,6 +4572,30 @@
       }
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 150"
+  },
+  {
+    "id": "funda-premium-aluminio-plus",
+    "categoria": "Fundas",
+    "nombre": "Funda Premium Aluminio Plus",
+    "modelo": "13 Pro a 16 Pro Max",
+    "descripcion": "Funda Premium Aluminio Plus disponible en HAODE México para tiendas de accesorios, técnicos y distribuidores. Panel metálico con acabado premium para iPhone Pro y Pro Max, compatible con modelos 13 Pro, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro, 15 Pro Max, 16 Pro y 16 Pro Max. Disponible en Black, Blue, Silver y Orange.",
+    "precioPublico": 85,
+    "precioMayoreo": 75,
+    "imagen": "/assets/products/fundas/funda-premium-aluminio-plus/main.webp",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 836,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_10",
+        "minQty": 10,
+        "maxQty": null,
+        "price": 75,
+        "label": "Mayoreo 10 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "Confirmado por HAODE"
   },
   {
     "id": "samsung-original-s22-ultra",
@@ -4997,6 +5021,30 @@
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 137"
   },
   {
+    "id": "lk-007-camara-digital-4k",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "Cámara Digital 4K LK-007",
+    "modelo": "Pantalla abatible 2.4 pulgadas",
+    "descripcion": "Cámara digital compacta estilo retro con pantalla abatible de 2.4 pulgadas, ideal para tomar fotos, grabar videos y crear contenido diario. Diseño moderno, colores atractivos y uso fácil para jóvenes, viajes, regalos y uso personal.",
+    "precioPublico": 500,
+    "precioMayoreo": 400,
+    "imagen": "/assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 900,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 400,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 187"
+  },
+  {
     "id": "samsung-original-z-flip3",
     "categoria": "Pantallas Samsung Original",
     "nombre": "Pantalla para Samsung Z Flip3",
@@ -5027,6 +5075,78 @@
       }
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 138"
+  },
+  {
+    "id": "lk-030-mini-camara-retro-digital",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "LK-030 Mini Cámara Retro Digital",
+    "modelo": "Pantalla abatible",
+    "descripcion": "Mini cámara retro digital con pantalla abatible y formato compacto para fotos, videos, viajes, regalos y contenido diario.",
+    "precioPublico": 400,
+    "precioMayoreo": 300,
+    "imagen": "/assets/products/productos-ai/lk-030-mini-camara-retro-digital/main-red-hd.jpeg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 901,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 300,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 186"
+  },
+  {
+    "id": "lk-032-camara-inteligente-con-gimbal",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "LK-032 Cámara Inteligente con Gimbal",
+    "modelo": "Cámara inteligente con gimbal",
+    "descripcion": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV.",
+    "precioPublico": 1000,
+    "precioMayoreo": 800,
+    "imagen": "/assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 902,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 800,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 188"
+  },
+  {
+    "id": "lk-018-camara-accion-hd",
+    "categoria": "Cámaras Inteligentes",
+    "nombre": "LK-018 Cámara de Acción HD",
+    "modelo": "Pantalla abatible y diseño magnético",
+    "descripcion": "Cámara de acción HD compacta con pantalla abatible y diseño magnético. Ideal para grabar contenido diario, viajes, actividades, manos libres y tomas en primera persona.",
+    "precioPublico": 1200,
+    "precioMayoreo": 1000,
+    "imagen": "/assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 903,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 1000,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      }
+    ],
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 189"
   },
   {
     "id": "samsung-original-z-flip4",
@@ -5267,102 +5387,6 @@
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 145"
-  },
-  {
-    "id": "lk-007-camara-digital-4k",
-    "categoria": "Cámaras Inteligentes",
-    "nombre": "Cámara Digital 4K LK-007",
-    "modelo": "Pantalla abatible 2.4 pulgadas",
-    "descripcion": "Cámara digital compacta estilo retro con pantalla abatible de 2.4 pulgadas, ideal para tomar fotos, grabar videos y crear contenido diario. Diseño moderno, colores atractivos y uso fácil para jóvenes, viajes, regalos y uso personal.",
-    "precioPublico": 500,
-    "precioMayoreo": 400,
-    "imagen": "/assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 900,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 400,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 187"
-  },
-  {
-    "id": "lk-030-mini-camara-retro-digital",
-    "categoria": "Cámaras Inteligentes",
-    "nombre": "LK-030 Mini Cámara Retro Digital",
-    "modelo": "Pantalla abatible",
-    "descripcion": "Mini cámara retro digital con pantalla abatible y formato compacto para fotos, videos, viajes, regalos y contenido diario.",
-    "precioPublico": 400,
-    "precioMayoreo": 300,
-    "imagen": "/assets/products/productos-ai/lk-030-mini-camara-retro-digital/main-red-hd.jpeg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 901,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 300,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 186"
-  },
-  {
-    "id": "lk-032-camara-inteligente-con-gimbal",
-    "categoria": "Cámaras Inteligentes",
-    "nombre": "LK-032 Cámara Inteligente con Gimbal",
-    "modelo": "Cámara inteligente con gimbal",
-    "descripcion": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV.",
-    "precioPublico": 1000,
-    "precioMayoreo": 800,
-    "imagen": "/assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 902,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 800,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 188"
-  },
-  {
-    "id": "lk-018-camara-accion-hd",
-    "categoria": "Cámaras Inteligentes",
-    "nombre": "LK-018 Cámara de Acción HD",
-    "modelo": "Pantalla abatible y diseño magnético",
-    "descripcion": "Cámara de acción HD compacta con pantalla abatible y diseño magnético. Ideal para grabar contenido diario, viajes, actividades, manos libres y tomas en primera persona.",
-    "precioPublico": 1200,
-    "precioMayoreo": 1000,
-    "imagen": "/assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 903,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 1000,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 189"
   },
   {
     "id": "samsung-original-z-fold6",
