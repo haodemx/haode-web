@@ -902,17 +902,22 @@ function renderHome() {
     <div class="page-stack">
       <section class="hero-banner">
         <div class="hero-copy">
-          <span class="hero-badge">HAODE México</span>
-          <h1>iPhone Pro Max y Samsung Ultra</h1>
-          <p>Pantallas OLED, AMOLED, INCELL y TIPO ORIGINAL con precio directo de fábrica, stock CDMX bajo confirmación y pedidos confirmados por WhatsApp.</p>
+          <span class="hero-badge">Tienda de fábrica HAODE</span>
+          <h1>Stock en México y precio bajo</h1>
+          <p>Pantallas OLED, AMOLED, INCELL y TIPO ORIGINAL para técnicos, tiendas y distribuidores. Calidad garantizada y garantía local bajo confirmación.</p>
+          <div class="hero-alert" aria-label="Aviso para compras grandes">
+            <strong>¿Cantidad grande?</strong>
+            <span>Escríbenos por WhatsApp privado para atención directa de mayoreo.</span>
+          </div>
           <div class="hero-actions">
             <a class="primary-button" href="#catalogo">Ver productos</a>
             <a class="secondary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
           </div>
           <div class="hero-proof" aria-label="Beneficios HAODE">
             <span>Fábrica</span>
-            <span>Pro Max / Ultra</span>
-            <span>Mayoreo</span>
+            <span>Inventario México</span>
+            <span>Garantía local</span>
+            <span>Precio bajo</span>
           </div>
         </div>
         <div class="hero-media">
@@ -1026,7 +1031,7 @@ function appOrderSectionHtml() {
       <div class="app-order-copy">
         <span>HAODE APP</span>
         <h2 id="app-order-title">Arma tu pedido desde el celular</h2>
-        <p>Busca por modelo, agrega piezas al carrito y envía la lista completa al equipo HAODE por WhatsApp.</p>
+        <p>Para cantidades grandes, envía la lista por WhatsApp privado. HAODE confirma stock, precio final, garantía local y envío.</p>
       </div>
       <div class="app-order-steps" aria-label="Flujo de pedido">
         <article>
@@ -1041,8 +1046,8 @@ function appOrderSectionHtml() {
         </article>
         <article>
           ${iconSvg("whatsapp")}
-          <strong>Confirma por WhatsApp</strong>
-          <span>HAODE valida disponibilidad, precio final y envío.</span>
+          <strong>WhatsApp privado</strong>
+          <span>Atención directa para mayoreo, volumen y pedidos recurrentes.</span>
         </article>
       </div>
     </section>

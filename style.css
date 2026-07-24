@@ -277,6 +277,34 @@ body.home-page-reference img {
   line-height: 1.55;
 }
 
+.reference-hero-alert {
+  display: grid;
+  max-width: 540px;
+  gap: 5px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 90, 20, 0.34);
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(255, 90, 20, 0.16), rgba(255, 196, 87, 0.2)),
+    #ffffff;
+  box-shadow: 0 14px 28px rgba(255, 90, 20, 0.12);
+}
+
+.reference-hero-alert strong {
+  color: var(--ref-orange-dark);
+  font-size: 15px;
+  font-weight: 950;
+  line-height: 1.15;
+}
+
+.reference-hero-alert span {
+  color: #2d2723;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.38;
+}
+
 .reference-hero-actions {
   margin-top: 17px;
 }
@@ -297,7 +325,8 @@ body.home-page-reference img {
 .reference-quick-points {
   display: flex;
   align-items: center;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 16px;
   color: #2f2a27;
   font-size: 13px;
@@ -307,13 +336,16 @@ body.home-page-reference img {
 .reference-quick-points span {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
   min-height: 26px;
-  padding: 0 22px;
-  border-right: 1px solid var(--ref-line-orange);
+  padding: 0 12px;
+  border: 1px solid var(--ref-line-orange);
+  border-radius: 999px;
+  background: #ffffff;
 }
 
 .reference-quick-points span:first-child {
-  padding-left: 0;
+  padding-left: 12px;
 }
 
 .reference-quick-points span::before {
@@ -324,10 +356,6 @@ body.home-page-reference img {
   border: 2px solid var(--ref-orange);
   border-radius: 5px;
   background: rgba(255, 90, 20, 0.08);
-}
-
-.reference-quick-points span:last-child {
-  border-right: 0;
 }
 
 .reference-hero-visual {

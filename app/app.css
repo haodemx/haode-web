@@ -354,6 +354,34 @@ img {
   line-height: 1.48;
 }
 
+.hero-alert {
+  display: grid;
+  max-width: 500px;
+  gap: 5px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 90, 10, 0.95), rgba(255, 194, 74, 0.96)),
+    var(--haode-orange);
+  color: #1d1008;
+  box-shadow: 0 18px 34px rgba(255, 90, 10, 0.28);
+}
+
+.hero-alert strong {
+  color: #111111;
+  font-size: 0.98rem;
+  font-weight: 950;
+  line-height: 1.12;
+}
+
+.hero-alert span {
+  color: #25170f;
+  font-size: 0.86rem;
+  font-weight: 850;
+  line-height: 1.36;
+}
+
 .hero-proof {
   display: flex;
   flex-wrap: wrap;
