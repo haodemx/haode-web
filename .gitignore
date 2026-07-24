@@ -3,6 +3,10 @@ _backup/
 node_modules/
 test-results/
 playwright-report/
+/output/
+/previews/
+/artifacts/
+/reports/
 *.mov
 *.MOV
 *.avi
