@@ -907,54 +907,64 @@ function renderHome() {
 
   viewRootEl.innerHTML = `
     <div class="page-stack">
-      <section class="hero-banner">
-        <div class="hero-copy">
-          <span class="hero-badge">Tienda de fábrica HAODE</span>
-          <h1>Stock en México y precio bajo</h1>
-          <p>Pantallas OLED, AMOLED, INCELL y TIPO ORIGINAL para técnicos, tiendas y distribuidores. Calidad garantizada y garantía local bajo confirmación.</p>
-          <div class="hero-alert" aria-label="Aviso para compras grandes">
-            <strong>¿Cantidad grande?</strong>
-            <span>Escríbenos por WhatsApp privado para atención directa de mayoreo.</span>
+      <section class="app-procurement-hero">
+        <div class="app-stock-strip" aria-label="Ventajas HAODE">
+          <span><strong>Stock en México</strong> Envíos a todo el país</span>
+          <span><strong>Garantía local</strong> Calidad revisada</span>
+        </div>
+        <div class="app-hero-grid">
+          <div class="hero-copy">
+            <span class="hero-badge">Tienda de fábrica HAODE</span>
+            <h1>Refacciones listas para cotizar</h1>
+            <p>Pantallas, micas, máquinas, fundas y partes para talleres. Busca por SKU o modelo, arma tu lista y envíala por WhatsApp privado.</p>
+            <button class="app-quick-search" type="button" data-focus-search aria-label="Buscar por SKU o modelo">
+              <span>Buscar por SKU o modelo</span>
+              <strong>Buscar</strong>
+            </button>
+            <div class="hero-alert" aria-label="Aviso para compras grandes">
+              <strong>¿Cantidad grande?</strong>
+              <span>WhatsApp privado: HAODE confirma stock, precio final, garantía local y envío.</span>
+            </div>
           </div>
-          <div class="hero-actions">
-            <a class="primary-button" href="#catalogo">Ver productos</a>
-            <a class="secondary-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-          </div>
-          <div class="hero-proof" aria-label="Beneficios HAODE">
-            <span>Fábrica</span>
-            <span>Inventario México</span>
-            <span>Garantía local</span>
-            <span>Precio bajo</span>
+          <div class="app-hero-product" aria-label="Producto destacado HAODE">
+            <span>Producto destacado</span>
+            <img src="${heroProduct.image || "/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
+            <strong>${escapeAttr(heroProduct.displayName || heroProduct.name || "Producto HAODE")}</strong>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="hero-product-frame">
-            <img src="${heroProduct.image || "/assets/products/iphone-oled/main.jpg"}" alt="${escapeAttr(heroProduct.name || "Producto HAODE")}" loading="eager" decoding="async" />
-          </div>
+        <div class="app-hero-actions">
+          <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE México, tengo una lista grande para cotizar.")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+          <a class="outline-button" href="#catalogo">Ver productos</a>
+        </div>
+        <div class="hero-proof" aria-label="Beneficios HAODE">
+          <span>Fábrica directa</span>
+          <span>Inventario México</span>
+          <span>Garantía local</span>
+          <span>Precio bajo</span>
         </div>
       </section>
 
       ${dailyAdBannerHtml()}
 
-      ${promotionsSectionHtml(promoProducts)}
-
-      ${appOrderSectionHtml()}
-
       <section class="section-block" id="categorias">
         <div class="section-head">
           <div>
             <h2>Categorías</h2>
-            <p>Entradas directas para cotizar más rápido.</p>
+            <p>Entra directo a las piezas que más cotiza un taller.</p>
           </div>
         </div>
         <div class="category-rail" data-category-rail>${categoryCardsHtml()}</div>
       </section>
 
+      ${promotionsSectionHtml(promoProducts)}
+
+      ${appOrderSectionHtml()}
+
       <section class="section-block" id="catalogo">
         <div class="section-head">
           <div>
             <h2>Productos destacados</h2>
-            <p>Selección con datos reales de productos activos.</p>
+            <p>Selección activa para agregar al carrito y mandar lista por WhatsApp.</p>
           </div>
           <a class="text-button" href="#lista">Ver catálogo</a>
         </div>
@@ -1036,9 +1046,9 @@ function appOrderSectionHtml() {
   return `
     <section class="app-order-panel" aria-labelledby="app-order-title">
       <div class="app-order-copy">
-        <span>HAODE APP</span>
-        <h2 id="app-order-title">Arma tu pedido desde el celular</h2>
-        <p>Para cantidades grandes, envía la lista por WhatsApp privado. HAODE confirma stock, precio final, garantía local y envío.</p>
+        <span>Pedido de taller</span>
+        <h2 id="app-order-title">Arma tu lista y la revisamos por WhatsApp</h2>
+        <p>Para cantidades grandes, manda la lista completa. HAODE confirma stock, precio final, garantía local y envío antes de cerrar pedido.</p>
       </div>
       <div class="app-order-steps" aria-label="Flujo de pedido">
         <article>

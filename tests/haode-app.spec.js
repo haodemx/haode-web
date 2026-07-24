@@ -8,8 +8,8 @@ test.describe("HAODE Tienda app QA", () => {
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto(APP_URL, { waitUntil: "domcontentloaded" });
 
-    await expect(page.getByText("HAODE Tienda").first()).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Stock en México y precio bajo" })).toBeVisible();
+    await expect(page.locator(".brand strong")).toHaveText("HAODE");
+    await expect(page.getByRole("heading", { name: "Refacciones listas para cotizar" })).toBeVisible();
     await expect(page.locator(".hero-alert")).toContainText("WhatsApp privado");
     await expect(page.getByText("Productos destacados").first()).toBeVisible();
     await expect(page.locator(".trust-pill").filter({ hasText: "WhatsApp" })).toBeVisible();
