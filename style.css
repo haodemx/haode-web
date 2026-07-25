@@ -9919,6 +9919,10 @@ body.distributor-conversion-page .distributor-header-whatsapp {
   display: none;
 }
 
+body.distributor-conversion-page .distributor-hero-whatsapp {
+  display: none;
+}
+
 body.trust-conversion-page .contact-whatsapp-chip,
 body.trust-conversion-page .btn-primary {
   background: var(--ref-green);
@@ -9995,6 +9999,13 @@ body.trust-conversion-page .floating-cta {
     color: #ffffff;
     font-weight: 950;
     box-shadow: 0 14px 30px rgba(18, 168, 84, 0.24);
+  }
+
+  body.distributor-conversion-page .distributor-hero-whatsapp {
+    display: inline-flex;
+    width: 100%;
+    min-height: 50px;
+    margin: 0 0 16px;
   }
 
   body.trust-conversion-page .brand-logo {

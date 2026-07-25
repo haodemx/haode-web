@@ -35,6 +35,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
     await expect(page.locator('[data-reference-conversion="distributor-trust"]')).toContainText("Solicita distribución");
     await expect(page.locator('[data-reference-conversion="distributor-trust"] a[href*="wa.me"]')).toBeVisible();
     await expectFirstWhatsAppInViewport(page);
+    await expectDistributorHeroWhatsAppInViewport(page);
     await expectNoHorizontalOverflow(page);
   });
 });
@@ -79,4 +80,19 @@ async function expectFirstWhatsAppInViewport(page) {
     return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
   });
   expect(isInViewport).toBe(true);
+}
+
+async function expectDistributorHeroWhatsAppInViewport(page) {
+  const layout = await page.locator(".distributor-hero-whatsapp").evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return {
+      top: Math.round(rect.top),
+      bottom: Math.round(rect.bottom),
+      display: getComputedStyle(el).display,
+    };
+  });
+
+  expect(layout.display).not.toBe("none");
+  expect(layout.top).toBeGreaterThanOrEqual(0);
+  expect(layout.bottom).toBeLessThanOrEqual(844);
 }
