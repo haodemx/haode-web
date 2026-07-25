@@ -4876,6 +4876,12 @@ body.catalog-page .floating-cta {
   color: #241609;
 }
 
+@media (min-width: 761px) {
+  body.catalog-page.catalog-reference-page .floating-cta {
+    display: none;
+  }
+}
+
 body.product-detail-page .floating-cta {
   display: none;
 }

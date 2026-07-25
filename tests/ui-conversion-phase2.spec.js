@@ -21,6 +21,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.getByRole("link", { name: "Enviar lista por WhatsApp" }).first()).toHaveAttribute("href", /wa\.me/);
     await expect(page.locator(".shop-badge-row").first()).toContainText("WhatsApp privado");
     await expect(page.locator(".catalog-visual-strip")).toBeVisible();
+    await expect(page.locator(".floating-cta")).toBeHidden();
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
