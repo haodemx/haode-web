@@ -1690,12 +1690,20 @@ function resetRouteScroll() {
   });
 }
 
-function focusProductSearch() {
+function focusProductSearch(attempt = 0) {
   const searchInput = document.querySelector("[data-search-products]");
-  if (!searchInput) return;
+  if (!searchInput) {
+    if (attempt < 6) {
+      window.setTimeout(() => focusProductSearch(attempt + 1), 80);
+    }
+    return;
+  }
 
   searchInput.scrollIntoView({ block: "center", behavior: "auto" });
   searchInput.focus({ preventScroll: true });
+  if (document.activeElement !== searchInput && attempt < 6) {
+    window.setTimeout(() => focusProductSearch(attempt + 1), 80);
+  }
 }
 
 function renderRoute({ resetScroll = false } = {}) {
@@ -2048,7 +2056,7 @@ async function handleDocumentClick(event) {
   if (focusSearchButton) {
     if (state.route.name !== "list") {
       window.location.hash = "#lista";
-      window.setTimeout(focusProductSearch, 50);
+      focusProductSearch();
     } else {
       focusProductSearch();
     }
