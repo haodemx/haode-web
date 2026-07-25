@@ -20,6 +20,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
     await expect(page.getByRole("link", { name: "Enviar lista por WhatsApp" }).first()).toHaveAttribute("href", /wa\.me/);
     await expect(page.locator(".shop-badge-row").first()).toContainText("WhatsApp privado");
+    await expect(page.locator(".catalog-visual-strip")).toBeVisible();
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
@@ -27,6 +28,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
     await expectHeaderWhatsAppGreen(page);
     await expectHeaderAppButtonOrange(page);
+    await expectCatalogVisualStrip(page);
     await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
     const mobileCta = await page.locator(".floating-cta").evaluate((el) => {
       const rect = el.getBoundingClientRect();
@@ -80,6 +82,23 @@ async function expectNoHorizontalOverflow(page) {
 async function expectHeaderWhatsAppGreen(page) {
   const background = await page.locator(".reference-nav-actions a[href*='wa.me']").first().evaluate((el) => getComputedStyle(el).backgroundColor);
   expect(background).toBe("rgb(18, 168, 84)");
+}
+
+async function expectCatalogVisualStrip(page) {
+  const strip = page.locator(".catalog-visual-strip");
+  await expect(strip).toBeVisible();
+  const details = await strip.evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    const images = [...el.querySelectorAll("img")];
+    return {
+      top: Math.round(rect.top),
+      imageCount: images.length,
+      imagesLoaded: images.every((img) => img.complete && img.naturalWidth > 0)
+    };
+  });
+  expect(details.top).toBeLessThan(844);
+  expect(details.imageCount).toBeGreaterThanOrEqual(3);
+  expect(details.imagesLoaded).toBe(true);
 }
 
 async function expectHeaderAppButtonOrange(page) {
