@@ -4071,7 +4071,8 @@ body.warranty-page .contact-whatsapp-chip {
 
   body.category-page .topbar-inner,
   body.category-entry-reference-page .topbar-inner,
-  body.micas-reference-page .topbar-inner {
+  body.micas-reference-page .topbar-inner,
+  body.product-detail-page .topbar-inner {
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 8px 0 10px;
@@ -4079,7 +4080,8 @@ body.warranty-page .contact-whatsapp-chip {
 
   body.category-page .topnav,
   body.category-entry-reference-page .topnav,
-  body.micas-reference-page .topnav {
+  body.micas-reference-page .topnav,
+  body.product-detail-page .topnav {
     display: flex;
     width: 100%;
     gap: 8px;
@@ -4091,13 +4093,15 @@ body.warranty-page .contact-whatsapp-chip {
 
   body.category-page .topnav::-webkit-scrollbar,
   body.category-entry-reference-page .topnav::-webkit-scrollbar,
-  body.micas-reference-page .topnav::-webkit-scrollbar {
+  body.micas-reference-page .topnav::-webkit-scrollbar,
+  body.product-detail-page .topnav::-webkit-scrollbar {
     display: none;
   }
 
   body.category-page .topnav a,
   body.category-entry-reference-page .topnav a,
-  body.micas-reference-page .topnav a {
+  body.micas-reference-page .topnav a,
+  body.product-detail-page .topnav a {
     flex: 0 0 auto;
     min-height: 36px;
     padding: 8px 11px;
