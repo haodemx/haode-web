@@ -1468,10 +1468,11 @@ function renderContact() {
   state.route = { name: "contact" };
   viewRootEl.innerHTML = `
     <div class="page-stack">
-      <section class="contact-card">
+      <section class="contact-card app-contact-board">
         <h1>Contacto HAODE</h1>
-        <p>Envía tu pedido o consulta por WhatsApp. El equipo HAODE confirma disponibilidad, precio final y envío.</p>
-        <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}" target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a>
+        <p>Envía tu lista grande, modelos, cantidades y ciudad. HAODE confirma disponibilidad, precio final y envío por WhatsApp privado.</p>
+        ${detailConversionStripHtml()}
+        <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE México, tengo una lista grande para cotizar por WhatsApp.")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
       </section>
     </div>
   `;

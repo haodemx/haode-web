@@ -1430,6 +1430,28 @@ img {
   line-height: 1.15;
 }
 
+.app-contact-board {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.app-contact-board h1,
+.app-contact-board p {
+  margin: 0;
+}
+
+.app-contact-board p {
+  color: var(--haode-muted);
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.app-contact-board .whatsapp-button {
+  width: 100%;
+}
+
 .spec-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
