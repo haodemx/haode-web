@@ -24,6 +24,12 @@ test.describe("HAODE conversion UI phase 2", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
     await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
+    const mobileCta = await page.locator(".floating-cta").evaluate((el) => {
+      const rect = el.getBoundingClientRect();
+      return { position: getComputedStyle(el).position, top: rect.top };
+    });
+    expect(mobileCta.position).not.toBe("fixed");
+    expect(mobileCta.top).toBeGreaterThan(844);
     await expectNoHorizontalOverflow(page);
   });
 

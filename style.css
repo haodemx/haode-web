@@ -6609,6 +6609,18 @@ body.product-detail-page .detail-zoom-close {
     padding-top: 18px;
   }
 
+  body.catalog-page.catalog-reference-page .catalog-main {
+    padding-bottom: 36px;
+  }
+
+  body.catalog-page.catalog-reference-page .floating-cta {
+    position: static;
+    width: min(calc(100% - 24px), 420px);
+    min-height: 54px;
+    margin: 0 auto 18px;
+    display: flex;
+  }
+
   body.catalog-page.catalog-reference-page .catalog-sections .wrap {
     width: min(calc(100vw - 24px), 1180px);
     gap: 18px;
