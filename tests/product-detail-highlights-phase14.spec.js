@@ -41,8 +41,10 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
       await expect(page.locator('.topnav a').first()).toBeVisible();
-      await expect(page.locator('.detail-buttons a[href*="wa.me"]').first()).toBeVisible();
-      const firstQuoteVisible = await page.locator('.detail-buttons a[href*="wa.me"]').first().evaluate((el) => {
+      const quoteButton = page.locator('.detail-buttons a[href*="wa.me"]').first();
+      await expect(quoteButton).toBeVisible();
+      await expect(quoteButton).toContainText('Cotizar por WhatsApp');
+      const firstQuoteVisible = await quoteButton.evaluate((el) => {
         const rect = el.getBoundingClientRect();
         return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
       });
