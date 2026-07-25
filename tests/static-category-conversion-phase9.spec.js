@@ -22,6 +22,9 @@ test.describe('HAODE static category conversion UI phase 9', () => {
       await expectFactoryProofStrip(page);
       await expect(page.locator(`[data-reference-conversion="${panelId}"]`)).toContainText(/WhatsApp|Cotiza|Cotización|Envía/);
       await expect(page.locator('a[href*="wa.me"]').first()).toBeVisible();
+      await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
+      await expect(page.locator('[data-detail-header-app]')).toBeVisible();
+      await expect(page.locator('[data-site-sales-footer]')).toBeVisible();
       await expect(page.getByRole('heading', { name: new RegExp(label, 'i') }).first()).toBeVisible();
 
       await page.setViewportSize({ width: 360, height: 844 });

@@ -1,5 +1,5 @@
 (() => {
-  const headerInner = document.querySelector('body.product-detail-page .catalog-topbar .topbar-inner');
+  const headerInner = document.querySelector('.catalog-topbar .topbar-inner');
   if (!headerInner) return;
 
   const nav = headerInner.querySelector('.topnav');
@@ -26,6 +26,8 @@
   );
   const whatsappHref = sourceWhatsapp?.getAttribute('href')
     || 'https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20cotizar%20un%20producto.';
+
+  if (headerInner.querySelector('[data-detail-header-actions]')) return;
 
   const actions = document.createElement('div');
   actions.className = 'detail-header-actions';

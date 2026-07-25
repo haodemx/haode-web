@@ -8,12 +8,14 @@
   <title>HAODE sin conexión</title>
   <style>
     :root {
-      color-scheme: dark;
-      --orange: #ff6a00;
-      --bg: #000000;
-      --card: #15110e;
-      --text: #fff7ef;
-      --muted: #cdb9a8;
+      color-scheme: light;
+      --orange: #f04418;
+      --green: #12a854;
+      --ink: #151515;
+      --muted: #656565;
+      --line: #dedbd6;
+      --paper: #ffffff;
+      --soft: #f5f3ef;
     }
 
     * {
@@ -25,61 +27,161 @@
       min-height: 100vh;
       margin: 0;
       place-items: center;
-      background: var(--bg);
-      color: var(--text);
+      padding: 24px 0;
+      background: var(--soft);
+      color: var(--ink);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       letter-spacing: 0;
     }
 
     main {
-      width: min(calc(100% - 32px), 420px);
-      padding: 28px;
-      border: 1px solid rgba(255, 106, 0, 0.28);
-      border-radius: 18px;
-      background: var(--card);
-      text-align: center;
+      width: min(calc(100% - 32px), 760px);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 22px 60px rgba(24, 20, 17, 0.12);
     }
 
-    img {
-      width: 96px;
-      height: 96px;
-      border-radius: 24px;
-      object-fit: cover;
+    header {
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 26px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      color: var(--orange);
+      font-size: 28px;
+      font-weight: 950;
+      line-height: 1;
+    }
+
+    header span:last-child {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 32px;
+      padding: 42px 36px 36px;
     }
 
     h1 {
-      margin: 18px 0 10px;
-      font-size: 1.45rem;
-      line-height: 1.15;
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 5vw, 3.15rem);
+      line-height: 1.02;
     }
 
     p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    a {
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    a,
+    button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-height: 44px;
-      margin-top: 22px;
-      padding: 0 18px;
-      border-radius: 999px;
+      padding: 0 16px;
+      border: 1px solid var(--orange);
+      border-radius: 6px;
       background: var(--orange);
       color: #ffffff;
+      font: inherit;
       font-weight: 850;
       text-decoration: none;
+      cursor: pointer;
+    }
+
+    a {
+      background: #ffffff;
+      color: var(--orange);
+    }
+
+    .proof {
+      display: grid;
+      align-content: start;
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--line);
+    }
+
+    .proof span {
+      display: block;
+      padding: 14px;
+      background: #fff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1.3;
+    }
+
+    footer {
+      padding: 16px 26px;
+      background: #171717;
+      color: #ffffff;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 620px) {
+      header,
+      .content {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        padding-top: 30px;
+      }
+
+      .proof {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <main>
-    <img src="/assets/icons/haode-icon-192.png" alt="HAODE" />
-    <h1>HAODE no tiene conexión</h1>
-    <p>Revisa tu internet y vuelve a intentar. Algunas páginas visitadas antes pueden abrirse sin conexión.</p>
-    <a href="/app/">Volver a HAODE App</a>
+    <header>
+      <span class="brand">HAODE</span>
+      <span>MÉXICO · FÁBRICA DIRECTA</span>
+    </header>
+    <div class="content">
+      <div>
+        <h1>Sin conexión por ahora</h1>
+        <p>Revisa tu internet e intenta de nuevo. Las páginas visitadas antes pueden seguir disponibles, pero el inventario y el precio final siempre requieren confirmación.</p>
+        <div class="actions">
+          <button type="button" onclick="location.reload()">Reintentar</button>
+          <a href="/app/">Abrir HAODE App</a>
+        </div>
+      </div>
+      <div class="proof" aria-label="Atención HAODE">
+        <span>Stock en México bajo confirmación</span>
+        <span>Precio por cantidad</span>
+        <span>Garantía local según producto</span>
+        <span>WhatsApp privado al reconectar</span>
+      </div>
+    </div>
+    <footer>HAODE México · La disponibilidad mostrada sin conexión puede no estar actualizada.</footer>
   </main>
 </body>
 </html>

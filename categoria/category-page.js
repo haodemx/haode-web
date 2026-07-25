@@ -126,9 +126,18 @@
     return article;
   }
 
+  function prioritizeProducts(root) {
+    const sectionShell = root.closest('.section-shell');
+    const sectionHead = sectionShell?.querySelector(':scope > .section-head');
+    if (!sectionShell || !sectionHead || sectionHead.nextElementSibling === root) return;
+    sectionHead.insertAdjacentElement('afterend', root);
+  }
+
   function renderCategoryProducts() {
     const root = document.querySelector('[data-category-products]');
     if (!root || !window.HAODE_PRODUCTS_DATA) return;
+
+    prioritizeProducts(root);
 
     const category = document.body.dataset.category;
     const products = window.HAODE_PRODUCTS_DATA.filter((item) => item.category === category);

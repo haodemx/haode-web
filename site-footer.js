@@ -1,0 +1,56 @@
+(() => {
+  if (document.querySelector('[data-site-sales-footer]')) return;
+
+  document.querySelectorAll('footer').forEach((existingFooter) => existingFooter.remove());
+
+  const footer = document.createElement('footer');
+  footer.className = 'site-sales-footer';
+  footer.setAttribute('data-site-sales-footer', '');
+  footer.innerHTML = `
+    <div class="wrap site-sales-footer-grid">
+      <div class="site-sales-footer-brand">
+        <a href="/" aria-label="HAODE México">
+          <strong>HAODE</strong>
+          <span>REFACCIONES PARA CELULAR</span>
+        </a>
+        <p>Fábrica directa para técnicos, talleres y distribuidores en México.</p>
+        <div class="site-sales-footer-proof" aria-label="Ventajas HAODE">
+          <span>Stock en México bajo confirmación</span>
+          <span>Garantía local</span>
+          <span>Precio por cantidad</span>
+        </div>
+      </div>
+      <nav class="site-sales-footer-nav" aria-label="Comprar en HAODE">
+        <p>Comprar</p>
+        <a href="/productos/">Pantallas</a>
+        <a href="/categoria/micas/">Micas</a>
+        <a href="/categoria/maquinas-de-hidrogel/">Máquinas</a>
+        <a href="/categoria/fundas/">Fundas</a>
+      </nav>
+      <nav class="site-sales-footer-nav" aria-label="Atención HAODE">
+        <p>Atención</p>
+        <a href="/garantia/">Garantía local</a>
+        <a href="/contacto/">Contacto</a>
+        <a href="/distribuidores/">Distribuidores</a>
+        <a href="/app/">HAODE App</a>
+      </nav>
+      <div class="site-sales-footer-contact">
+        <p>Lista grande o pedido de mayoreo</p>
+        <strong>Atención privada por WhatsApp</strong>
+        <span>Envía modelos, cantidades y ciudad. Confirmamos disponibilidad y precio final antes del pedido.</span>
+        <a href="https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20enviar%20una%20lista%20de%20productos.%0AModelos%3A%0ACantidades%3A%0ACiudad%3A" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">W</span>
+          Enviar lista por WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="site-sales-footer-bottom">
+      <div class="wrap">
+        <span>HAODE México</span>
+        <span>Inventario y condiciones sujetos a confirmación.</span>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(footer);
+})();

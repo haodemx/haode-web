@@ -23,8 +23,25 @@ test.describe('HAODE dynamic category conversion UI phase 12', () => {
       await expect(page.locator('.reference-conversion-strip')).toContainText('WhatsApp privado');
       await expect(page.locator('.new-page-links a[href*="wa.me"]').first()).toBeVisible();
       await expect(page.locator('[data-category-whatsapp-panel], .contact-whatsapp-panel').first()).toBeVisible();
+      await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
+      await expect(page.locator('[data-detail-header-app]')).toBeVisible();
+      await expect(page.locator('[data-site-sales-footer]')).toBeVisible();
       if (await page.locator('.category-whatsapp-primary').count()) {
         await expect(page.locator('.category-whatsapp-primary').first()).toContainText('Cotizar modelo por WhatsApp');
+      }
+      if (
+        await page.locator('[data-category-products]').count()
+        && await page.locator('.seo-content').count()
+      ) {
+        const order = await page.evaluate(() => {
+          const products = document.querySelector('[data-category-products]')?.getBoundingClientRect();
+          const seo = document.querySelector('.seo-content')?.getBoundingClientRect();
+          return {
+            productsTop: Math.round(products?.top || 0),
+            seoTop: Math.round(seo?.top || 0),
+          };
+        });
+        expect(order.productsTop).toBeLessThan(order.seoTop);
       }
 
       await page.setViewportSize({ width: 390, height: 844 });
