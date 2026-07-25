@@ -6353,6 +6353,19 @@ body.product-detail-page .detail-buttons .btn {
   justify-content: center;
 }
 
+body.product-detail-page .detail-buttons a[href*="wa.me"] {
+  border-color: var(--ref-green, #10b957);
+  background: var(--ref-green, #10b957);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(18, 168, 84, 0.24);
+}
+
+body.product-detail-page .detail-buttons a[href*="wa.me"]:hover,
+body.product-detail-page .detail-buttons a[href*="wa.me"]:focus-visible {
+  border-color: var(--ref-green-dark, #0c9147);
+  background: var(--ref-green-dark, #0c9147);
+}
+
 body.product-detail-page .detail-gallery-wrap,
 body.product-detail-page .detail-video-wrap {
   padding: 18px;
@@ -6570,6 +6583,19 @@ body.product-detail-page .detail-zoom-close {
 
   body.product-detail-page .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  body.product-detail-page .detail-info {
+    order: -1;
+  }
+
+  body.product-detail-page .detail-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.product-detail-page .detail-buttons {
+    order: -1;
   }
 
   body.product-detail-page .detail-gallery {
@@ -9275,6 +9301,10 @@ body.distributor-conversion-page .reference-conversion-strip {
   margin-bottom: 22px;
 }
 
+body.distributor-conversion-page .distributor-header-whatsapp {
+  display: none;
+}
+
 body.trust-conversion-page .contact-whatsapp-chip,
 body.trust-conversion-page .btn-primary {
   background: var(--ref-green);
@@ -9311,6 +9341,46 @@ body.trust-conversion-page .floating-cta {
 
   body.trust-conversion-page .site-header .topnav {
     display: none;
+  }
+
+  body.distributor-conversion-page .site-header .topnav {
+    display: flex;
+    order: 3;
+    width: 100%;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 2px 0 4px;
+    border-top: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.distributor-conversion-page .site-header .topnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.distributor-conversion-page .site-header .topnav a {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 8px 11px;
+    border: 1px solid rgba(255, 90, 20, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  body.distributor-conversion-page .distributor-header-whatsapp {
+    display: inline-flex;
+    order: 4;
+    width: 100%;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--ref-green);
+    border-radius: 8px;
+    background: var(--ref-green);
+    color: #ffffff;
+    font-weight: 950;
+    box-shadow: 0 14px 30px rgba(18, 168, 84, 0.24);
   }
 
   body.trust-conversion-page .brand-logo {

@@ -24,9 +24,13 @@ test.describe("HAODE trust conversion UI phase 7", () => {
     await page.goto(`${BASE_URL}/distribuidores/`, { waitUntil: "domcontentloaded" });
 
     await expect(page.locator("body")).toHaveClass(/distributor-conversion-page/);
+    await expect(page.locator(".topnav a").first()).toBeVisible();
+    await expect(page.locator(".distributor-header-whatsapp")).toBeVisible();
+    await expect(page.locator(".distributor-header-whatsapp")).toHaveAttribute("href", /wa\.me/);
     await expect(page.locator(".reference-conversion-strip").first()).toContainText("Precio por cantidad");
     await expect(page.locator('[data-reference-conversion="distributor-trust"]')).toContainText("Solicita distribución");
     await expect(page.locator('[data-reference-conversion="distributor-trust"] a[href*="wa.me"]')).toBeVisible();
+    await expectFirstWhatsAppInViewport(page);
     await expectNoHorizontalOverflow(page);
   });
 });
@@ -34,4 +38,12 @@ test.describe("HAODE trust conversion UI phase 7", () => {
 async function expectNoHorizontalOverflow(page) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(1);
+}
+
+async function expectFirstWhatsAppInViewport(page) {
+  const isInViewport = await page.locator('a[href*="wa.me"]').first().evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
+  });
+  expect(isInViewport).toBe(true);
 }

@@ -8,6 +8,11 @@ const pages = [
   '/producto/iphone-14-incell/',
 ];
 
+const legacyPlegablePages = [
+  '/productos/samsung-z-flip3/',
+  '/productos/samsung-z-fold6/',
+];
+
 test.describe('HAODE product detail highlight grid phase 14', () => {
   for (const path of pages) {
     test(`${path} shows unified first-screen detail highlights`, async ({ page }) => {
@@ -25,6 +30,24 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.topnav a').first()).toBeVisible();
+      const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
+      expect(overflow).toBe(0);
+    });
+  }
+
+  for (const path of legacyPlegablePages) {
+    test(`${path} keeps mobile quote action in the first screen`, async ({ page }) => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+      await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expect(page.locator('.detail-buttons a[href*="wa.me"]').first()).toBeVisible();
+      const firstQuoteVisible = await page.locator('.detail-buttons a[href*="wa.me"]').first().evaluate((el) => {
+        const rect = el.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
+      });
+      expect(firstQuoteVisible).toBe(true);
+
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
     });
