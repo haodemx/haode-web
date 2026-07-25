@@ -5,6 +5,7 @@ test-results/
 playwright-report/
 /output/
 /previews/
+/overnight-previews/
 /artifacts/
 *.mov
 *.MOV
