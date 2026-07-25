@@ -1867,6 +1867,8 @@ function renderCart() {
     el.textContent = String(totalItems);
   });
 
+  cartDrawerEl?.classList.toggle("cart-drawer-empty", !items.length);
+
   if (!items.length) {
     cartItemsEl.innerHTML = cartEmptyWhatsappHtml();
     cartTotalEl.textContent = formatPrice(0);

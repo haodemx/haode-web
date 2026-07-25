@@ -12,7 +12,10 @@ test.describe("HAODE trust conversion UI phase 7", () => {
       await expect(page.locator(".topnav a").first()).toBeVisible();
       await expectCompactTrustBrand(page);
       await expectHeaderHeightAtMost(page, ".topbar", 170);
+      await expect(page.locator(".reference-conversion-strip").first()).toContainText("Garantía local");
+      await expect(page.locator(".reference-conversion-strip").first()).toContainText("Stock en México");
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Soporte profesional");
+      await expectDarkConversionStrip(page, ".reference-conversion-strip");
       await expect(page.locator('[data-reference-conversion="warranty-trust"]')).toContainText("Consulta garantía");
       await expect(page.locator('[data-reference-conversion="warranty-trust"] a[href*="wa.me"]')).toBeVisible();
       await expect(page.locator(".contact-whatsapp-list")).toContainText("Garantía por WhatsApp");
@@ -31,7 +34,10 @@ test.describe("HAODE trust conversion UI phase 7", () => {
     await expect(page.locator(".distributor-header-whatsapp")).toBeVisible();
     await expect(page.locator(".distributor-header-whatsapp")).toHaveAttribute("href", /wa\.me/);
     await expectHeaderHeightAtMost(page, ".site-header", 220);
+    await expect(page.locator(".reference-conversion-strip").first()).toContainText("Fábrica directa");
+    await expect(page.locator(".reference-conversion-strip").first()).toContainText("Stock en México");
     await expect(page.locator(".reference-conversion-strip").first()).toContainText("Precio por cantidad");
+    await expectDarkConversionStrip(page, ".reference-conversion-strip");
     await expect(page.locator('[data-reference-conversion="distributor-trust"]')).toContainText("Solicita distribución");
     await expect(page.locator('[data-reference-conversion="distributor-trust"] a[href*="wa.me"]')).toBeVisible();
     await expectFirstWhatsAppInViewport(page);
@@ -95,4 +101,9 @@ async function expectDistributorHeroWhatsAppInViewport(page) {
   expect(layout.display).not.toBe("none");
   expect(layout.top).toBeGreaterThanOrEqual(0);
   expect(layout.bottom).toBeLessThanOrEqual(844);
+}
+
+async function expectDarkConversionStrip(page, selector) {
+  const color = await page.locator(`${selector} strong`).first().evaluate((el) => getComputedStyle(el).color);
+  expect(color).toBe("rgb(255, 255, 255)");
 }

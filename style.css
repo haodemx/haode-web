@@ -4823,6 +4823,18 @@ body.catalog-page .contact-location-card .btn {
   justify-content: center;
 }
 
+body.contact-reference-page .contact-location-card .btn-primary {
+  border-color: var(--ref-green);
+  background: var(--ref-green);
+  color: #ffffff;
+}
+
+body.contact-reference-page .contact-location-card .btn-primary:hover,
+body.contact-reference-page .contact-location-card .btn-primary:focus-visible {
+  border-color: var(--ref-green-dark);
+  background: var(--ref-green-dark);
+}
+
 body.catalog-page .contact-mail-link {
   color: #1f1d1a;
   font-weight: 700;
@@ -9311,6 +9323,45 @@ body.contact-reference-page .reference-conversion-panel {
   margin: 18px 0 22px;
 }
 
+body.contact-reference-page .contact-reference-strip {
+  max-width: none;
+  margin: 6px 0 18px;
+}
+
+body.contact-reference-page .contact-reference-strip,
+body.trust-conversion-page .reference-conversion-strip {
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(18, 168, 84, 0.18), transparent 32%),
+    linear-gradient(135deg, #101214 0%, #171a1d 100%);
+  box-shadow: 0 18px 42px rgba(16, 18, 20, 0.16);
+}
+
+body.contact-reference-page .contact-reference-strip span,
+body.trust-conversion-page .reference-conversion-strip span {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: none;
+}
+
+body.contact-reference-page .contact-reference-strip strong,
+body.trust-conversion-page .reference-conversion-strip strong {
+  color: #ffffff;
+}
+
+body.contact-reference-page .contact-reference-strip small,
+body.trust-conversion-page .reference-conversion-strip small {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body.contact-reference-page .contact-reference-strip span:first-child,
+body.trust-conversion-page .reference-conversion-strip span:first-child {
+  border-color: rgba(240, 74, 20, 0.5);
+  background: rgba(240, 74, 20, 0.16);
+}
+
 body.special-product-reference-page .special-product-conversion {
   margin: 0 0 20px;
 }
@@ -10150,6 +10201,19 @@ body.distributor-conversion-page .section-shell {
   box-shadow: var(--ref-shadow);
 }
 
+body.trust-conversion-page .products-hero-inner {
+  overflow: hidden;
+}
+
+body.trust-conversion-page .products-hero-inner > .btn-primary,
+body.distributor-conversion-page .distributor-hero-whatsapp {
+  align-self: center;
+  min-width: 240px;
+  min-height: 58px;
+  justify-content: center;
+  box-shadow: 0 16px 32px rgba(18, 168, 84, 0.26);
+}
+
 body.trust-conversion-page .products-hero h1,
 body.distributor-conversion-page .section-head h1 {
   color: var(--ref-ink);
@@ -10181,6 +10245,10 @@ body.distributor-conversion-page .section-head > p {
   border-left: 4px solid var(--ref-orange);
   padding: 14px 0 14px 18px;
   background: linear-gradient(90deg, rgba(255, 106, 0, 0.08), rgba(255, 255, 255, 0));
+}
+
+body.distributor-conversion-page .section-shell > .reference-conversion-strip {
+  max-width: none;
 }
 
 body.trust-conversion-page .section-shell {

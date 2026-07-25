@@ -44,6 +44,9 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await expectHeaderHeightAtMost(page, ".reference-header", 190);
       await expect(page.locator(`[data-reference-conversion="${pageCase.panel}"]`)).toBeVisible();
       if (pageCase.path === "/contacto/") {
+        await expect(page.locator(".contact-reference-strip")).toContainText("Fábrica directa");
+        await expect(page.locator(".contact-reference-strip")).toContainText("Bajo precio");
+        await expectDarkConversionStrip(page, ".contact-reference-strip");
         await expectContactPanelCtaInView(page);
       }
       await expectNoHorizontalOverflow(page);
@@ -77,4 +80,9 @@ async function expectContactPanelCtaInView(page) {
 
   expect(layout.top).toBeGreaterThanOrEqual(0);
   expect(layout.bottom).toBeLessThanOrEqual(844);
+}
+
+async function expectDarkConversionStrip(page, selector) {
+  const color = await page.locator(`${selector} strong`).first().evaluate((el) => getComputedStyle(el).color);
+  expect(color).toBe("rgb(255, 255, 255)");
 }

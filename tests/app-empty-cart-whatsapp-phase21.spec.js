@@ -31,8 +31,32 @@ test.describe('HAODE App empty cart WhatsApp UI phase 21', () => {
 
     const drawer = page.locator('[data-cart-drawer]');
     await expect(drawer).toHaveClass(/open/);
+    await expect(drawer.locator('.cart-drawer-proof')).toBeVisible();
+    await expect(drawer.locator('.cart-drawer-proof')).toContainText('Stock en México');
+    await expect(drawer.locator('.cart-drawer-proof')).toContainText('Precio por cantidad');
+    await expectDarkDrawerProof(page);
+    await expect(drawer.locator('.checkout-form')).toBeHidden();
     await expect(drawer.locator('.cart-empty-whatsapp')).toBeVisible();
     await expect(drawer.locator('.cart-empty-whatsapp')).toContainText('Enviar lista grande por WhatsApp');
     await expect(page.locator('[data-whatsapp-link]')).toContainText('Agrega productos para pedido');
+    await expectDrawerCtaInViewport(page);
   });
 });
+
+async function expectDarkDrawerProof(page) {
+  const color = await page.locator('.cart-drawer-proof strong').first().evaluate((el) => getComputedStyle(el).color);
+  expect(color).toBe('rgb(255, 255, 255)');
+}
+
+async function expectDrawerCtaInViewport(page) {
+  const layout = await page.locator('[data-whatsapp-link]').evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return {
+      top: Math.round(rect.top),
+      bottom: Math.round(rect.bottom),
+    };
+  });
+
+  expect(layout.top).toBeGreaterThanOrEqual(0);
+  expect(layout.bottom).toBeLessThanOrEqual(844);
+}
