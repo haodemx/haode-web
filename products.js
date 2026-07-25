@@ -2386,6 +2386,7 @@ function renderProductDetailPage() {
   const tableBody = page.querySelector('[data-detail-price-body]');
   const whatsappLink = page.querySelector('[data-detail-whatsapp]');
   const backLink = page.querySelector('[data-detail-back]');
+  const warningEl = page.querySelector('.detail-top .catalog-warning');
 
   if (!product) {
     page.innerHTML = `
@@ -2416,13 +2417,16 @@ function renderProductDetailPage() {
   if (titleEl) titleEl.textContent = product.name;
   if (subtitleEl) subtitleEl.textContent = `${CATEGORY_META[product.category].title} · ${product.stockLabel || 'Consultar inventario'}`;
   if (brandEl) brandEl.textContent = product.brand;
+  if (warningEl) {
+    warningEl.textContent = 'No manejamos pago en línea. Confirma stock en México, precio por cantidad, garantía local y envío por WhatsApp.';
+  }
   if (highlightsEl) {
     highlightsEl.innerHTML = '';
     [
       ['Stock en México', 'Confirmación por WhatsApp'],
       ['Calidad revisada', product.quality || 'Para talleres'],
       ['Precio por cantidad', 'Mayoreo privado'],
-      ['WhatsApp privado', 'Envía tu lista'],
+      ['WhatsApp privado', 'Cotiza modelo exacto'],
     ].forEach(([title, detail]) => {
       const item = document.createElement('span');
       const strong = document.createElement('strong');
@@ -2446,15 +2450,15 @@ function renderProductDetailPage() {
       <span class="reference-whatsapp-mark" aria-hidden="true">W</span>
       <div>
         <p class="reference-panel-kicker">Cotización por modelo</p>
-        <h2>Envía este producto por WhatsApp privado</h2>
-        <p>Confirma modelo exacto, cantidad y ciudad. HAODE valida disponibilidad, precio final y entrega antes de cerrar.</p>
+        <h2>Cotiza este modelo por WhatsApp privado</h2>
+        <p>Confirma modelo exacto, SKU, cantidad y ciudad. HAODE valida stock en México, precio por cantidad, garantía local y entrega antes de cerrar.</p>
         <div class="reference-panel-proof">
           <span>Fábrica directa</span>
-          <span>Stock local bajo confirmación</span>
+          <span>Stock en México</span>
           <span>Precio por cantidad</span>
         </div>
       </div>
-      <a class="reference-btn reference-btn-whatsapp" data-detail-panel-whatsapp href="${buildWhatsAppUrl(product.whatsappText)}" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
+      <a class="reference-btn reference-btn-whatsapp" data-detail-panel-whatsapp href="${buildWhatsAppUrl(product.whatsappText)}" target="_blank" rel="noopener noreferrer">Cotizar modelo por WhatsApp</a>
     `;
     const gridAnchor = page.querySelector('.detail-grid');
     if (gridAnchor) gridAnchor.insertAdjacentElement('beforebegin', conversion);
@@ -2468,7 +2472,7 @@ function renderProductDetailPage() {
   const floatingCta = document.querySelector('.floating-cta');
   if (floatingCta) {
     floatingCta.href = buildWhatsAppUrl(product.whatsappText);
-    floatingCta.textContent = 'Enviar lista por WhatsApp';
+    floatingCta.textContent = 'Cotizar modelo por WhatsApp';
     const warning = page.querySelector('.detail-top .catalog-warning');
     if (warning && floatingCta.parentElement !== warning.parentElement) {
       warning.insertAdjacentElement('afterend', floatingCta);

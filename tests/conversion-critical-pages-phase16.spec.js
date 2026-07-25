@@ -31,7 +31,7 @@ const criticalPages = [
   {
     path: '/producto/iphone-incell-14/',
     name: 'product detail',
-    texts: ['Pantalla para iPhone 14', 'Envía este producto por WhatsApp privado', 'Precio por cantidad'],
+    texts: ['Pantalla para iPhone 14', 'Cotiza este modelo por WhatsApp privado', 'Precio por cantidad'],
   },
   {
     path: '/producto/x200t-cortadora-inteligente-de-micas/',

@@ -48,9 +48,10 @@ test.describe("HAODE conversion UI phase 2", () => {
 
     await expect(page.locator("[data-detail-conversion]")).toBeVisible();
     await expect(page.locator("[data-detail-conversion]")).toHaveAttribute("data-reference-conversion", "product-detail");
-    await expect(page.locator("[data-detail-conversion]")).toContainText("Envía este producto por WhatsApp privado");
-    await expect(page.locator("[data-detail-conversion]")).toContainText("Stock local bajo confirmación");
+    await expect(page.locator("[data-detail-conversion]")).toContainText("Cotiza este modelo por WhatsApp privado");
+    await expect(page.locator("[data-detail-conversion]")).toContainText("Stock en México");
     await expect(page.locator("[data-detail-panel-whatsapp]")).toHaveAttribute("href", /wa\.me/);
+    await expect(page.locator("[data-detail-panel-whatsapp]")).toContainText("Cotizar modelo por WhatsApp");
     await expect(page.locator("[data-detail-whatsapp]")).toBeVisible();
     await expect(page.locator("[data-detail-whatsapp]")).toHaveAttribute("href", /wa\.me/);
 

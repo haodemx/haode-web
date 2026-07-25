@@ -19,7 +19,8 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expect(page.locator('[data-detail-highlights]')).toContainText('Stock en México');
       await expect(page.locator('[data-detail-highlights]')).toContainText('Precio por cantidad');
       await expect(page.locator('[data-detail-highlights]')).toContainText('WhatsApp privado');
-      await expect(page.locator('[data-detail-conversion]')).toContainText('Envía este producto por WhatsApp privado');
+      await expect(page.locator('[data-detail-conversion]')).toContainText('Cotiza este modelo por WhatsApp privado');
+      await expect(page.locator('[data-detail-conversion]')).toContainText('Stock en México');
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
