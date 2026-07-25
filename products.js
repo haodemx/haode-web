@@ -2316,6 +2316,7 @@ function renderProductDetailPage() {
   const titleEl = page.querySelector('[data-detail-title]');
   const subtitleEl = page.querySelector('[data-detail-subtitle]');
   const brandEl = page.querySelector('[data-detail-brand]');
+  const highlightsEl = page.querySelector('[data-detail-highlights]');
   const qualityEl = page.querySelector('[data-detail-quality]');
   const descriptionEl = page.querySelector('[data-detail-description]');
   const mainImageEl = page.querySelector('[data-detail-main-image]');
@@ -2355,6 +2356,23 @@ function renderProductDetailPage() {
   if (titleEl) titleEl.textContent = product.name;
   if (subtitleEl) subtitleEl.textContent = `${CATEGORY_META[product.category].title} · ${product.stockLabel || 'Consultar inventario'}`;
   if (brandEl) brandEl.textContent = product.brand;
+  if (highlightsEl) {
+    highlightsEl.innerHTML = '';
+    [
+      ['Stock en México', 'Confirmación por WhatsApp'],
+      ['Calidad revisada', product.quality || 'Para talleres'],
+      ['Precio por cantidad', 'Mayoreo privado'],
+      ['WhatsApp privado', 'Envía tu lista'],
+    ].forEach(([title, detail]) => {
+      const item = document.createElement('span');
+      const strong = document.createElement('strong');
+      strong.textContent = title;
+      const small = document.createElement('small');
+      small.textContent = detail;
+      item.append(strong, small);
+      highlightsEl.appendChild(item);
+    });
+  }
   if (qualityEl) qualityEl.textContent = product.quality;
   if (descriptionEl) descriptionEl.textContent = product.description;
 
