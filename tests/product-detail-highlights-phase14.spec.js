@@ -30,6 +30,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expectCompactMobileTopbar(page, 100);
       await expectMobileDetailPreview(page);
       await expectFirstWhatsAppInViewport(page);
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
@@ -59,6 +60,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
       await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expectCompactMobileTopbar(page, 100);
       const quoteButton = page.locator('.detail-buttons a[href*="wa.me"]').first();
       await expect(quoteButton).toBeVisible();
       await expect(quoteButton).toContainText('Cotizar por WhatsApp');
@@ -73,6 +75,31 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
     });
   }
 });
+
+async function expectCompactMobileTopbar(page, maxHeight) {
+  const layout = await page.evaluate(() => {
+    const topbar = document.querySelector('.topbar')?.getBoundingClientRect();
+    const brand = document.querySelector('.brand')?.getBoundingClientRect();
+    const logo = document.querySelector('.brand-logo');
+    const brandText = document.querySelector('.brand-copy strong');
+
+    return {
+      topbarHeight: Math.round(topbar?.height || 0),
+      brandLeft: Math.round(brand?.left || 0),
+      brandWidth: Math.round(brand?.width || 0),
+      logoDisplay: logo ? getComputedStyle(logo).display : null,
+      brandText: brandText?.textContent?.trim() || '',
+      brandColor: brandText ? getComputedStyle(brandText).color : null,
+    };
+  });
+
+  expect(layout.topbarHeight).toBeLessThanOrEqual(maxHeight);
+  expect(layout.brandLeft).toBeLessThanOrEqual(18);
+  expect(layout.brandWidth).toBeGreaterThanOrEqual(100);
+  expect(layout.logoDisplay).toBe('none');
+  expect(layout.brandText).toBe('HAODE');
+  expect(layout.brandColor).toBe('rgb(240, 68, 24)');
+}
 
 async function expectFirstWhatsAppInViewport(page) {
   const isInViewport = await page.locator('a[href*="wa.me"]').first().evaluate((el) => {

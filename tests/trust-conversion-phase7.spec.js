@@ -25,9 +25,10 @@ test.describe("HAODE trust conversion UI phase 7", () => {
 
     await expect(page.locator("body")).toHaveClass(/distributor-conversion-page/);
     await expect(page.locator(".topnav a").first()).toBeVisible();
+    await expectCompactDistributorHeader(page);
     await expect(page.locator(".distributor-header-whatsapp")).toBeVisible();
     await expect(page.locator(".distributor-header-whatsapp")).toHaveAttribute("href", /wa\.me/);
-    await expectHeaderHeightAtMost(page, ".site-header", 240);
+    await expectHeaderHeightAtMost(page, ".site-header", 220);
     await expect(page.locator(".reference-conversion-strip").first()).toContainText("Precio por cantidad");
     await expect(page.locator('[data-reference-conversion="distributor-trust"]')).toContainText("Solicita distribución");
     await expect(page.locator('[data-reference-conversion="distributor-trust"] a[href*="wa.me"]')).toBeVisible();
@@ -35,6 +36,30 @@ test.describe("HAODE trust conversion UI phase 7", () => {
     await expectNoHorizontalOverflow(page);
   });
 });
+
+async function expectCompactDistributorHeader(page) {
+  const layout = await page.evaluate(() => {
+    const brand = document.querySelector(".brand")?.getBoundingClientRect();
+    const logo = document.querySelector(".brand-logo");
+    const brandCopy = document.querySelector(".brand-copy strong");
+    const brandText = document.querySelector(".brand-text");
+    const brandTextBefore = brandText ? getComputedStyle(brandText, "::before") : null;
+
+    return {
+      brandLeft: Math.round(brand?.left || 0),
+      brandWidth: Math.round(brand?.width || 0),
+      logoDisplay: logo ? getComputedStyle(logo).display : null,
+      brandText: brandCopy?.textContent?.trim() || brandTextBefore?.content?.replace(/"/g, "") || "",
+      brandColor: brandCopy ? getComputedStyle(brandCopy).color : brandTextBefore?.color || null,
+    };
+  });
+
+  expect(layout.brandLeft).toBeLessThanOrEqual(18);
+  expect(layout.brandWidth).toBeGreaterThanOrEqual(100);
+  expect(layout.logoDisplay).toBe("none");
+  expect(layout.brandText).toBe("HAODE");
+  expect(layout.brandColor).toBe("rgb(240, 68, 24)");
+}
 
 async function expectNoHorizontalOverflow(page) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);

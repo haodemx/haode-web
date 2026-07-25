@@ -4073,19 +4073,119 @@ body.warranty-page .contact-whatsapp-chip {
   body.category-entry-reference-page .topbar-inner,
   body.micas-reference-page .topbar-inner,
   body.warranty-page .topbar-inner,
+  body.trust-conversion-page .topbar-inner,
   body.ai-legacy-reference-page .topbar-inner,
   body.legacy-ai-alias-page .topbar-inner,
   body.ai-detail-reference-page .topbar-inner,
   body.product-detail-page .topbar-inner {
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 8px 0 10px;
+    gap: 8px;
+    min-height: 0;
+    padding: 7px 0 8px;
+  }
+
+  body.category-page .brand,
+  body.category-entry-reference-page .brand,
+  body.micas-reference-page .brand,
+  body.warranty-page .brand,
+  body.trust-conversion-page .brand,
+  body.ai-legacy-reference-page .brand,
+  body.legacy-ai-alias-page .brand,
+  body.ai-detail-reference-page .brand,
+  body.product-detail-page .brand {
+    min-width: 104px;
+    height: 36px;
+    gap: 0;
+    align-items: center;
+  }
+
+  body.category-page .brand-logo,
+  body.category-entry-reference-page .brand-logo,
+  body.micas-reference-page .brand-logo,
+  body.warranty-page .brand-logo,
+  body.trust-conversion-page .brand-logo,
+  body.ai-legacy-reference-page .brand-logo,
+  body.legacy-ai-alias-page .brand-logo,
+  body.ai-detail-reference-page .brand-logo,
+  body.product-detail-page .brand-logo {
+    display: none;
+  }
+
+  body.category-page .brand-copy,
+  body.category-entry-reference-page .brand-copy,
+  body.micas-reference-page .brand-copy,
+  body.warranty-page .brand-copy,
+  body.trust-conversion-page .brand-copy,
+  body.ai-legacy-reference-page .brand-copy,
+  body.legacy-ai-alias-page .brand-copy,
+  body.ai-detail-reference-page .brand-copy,
+  body.product-detail-page .brand-copy {
+    color: #f04418;
+    line-height: 0.85;
+  }
+
+  body.category-page .brand-copy strong,
+  body.category-entry-reference-page .brand-copy strong,
+  body.micas-reference-page .brand-copy strong,
+  body.warranty-page .brand-copy strong,
+  body.trust-conversion-page .brand-copy strong,
+  body.ai-legacy-reference-page .brand-copy strong,
+  body.legacy-ai-alias-page .brand-copy strong,
+  body.ai-detail-reference-page .brand-copy strong,
+  body.product-detail-page .brand-copy strong {
+    font-size: 28px;
+    font-weight: 950;
+    letter-spacing: 0;
+  }
+
+  body.category-page .brand-copy small,
+  body.category-entry-reference-page .brand-copy small,
+  body.micas-reference-page .brand-copy small,
+  body.warranty-page .brand-copy small,
+  body.trust-conversion-page .brand-copy small,
+  body.ai-legacy-reference-page .brand-copy small,
+  body.legacy-ai-alias-page .brand-copy small,
+  body.ai-detail-reference-page .brand-copy small,
+  body.product-detail-page .brand-copy small {
+    margin-top: 4px;
+    color: #16120f;
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 1.7px;
+  }
+
+  body.trust-conversion-page .brand-text {
+    display: flex;
+    flex-direction: column;
+    color: #f04418;
+    font-size: 0;
+    font-weight: 950;
+    line-height: 0.85;
+  }
+
+  body.trust-conversion-page .brand-text::before {
+    content: "HAODE";
+    display: block;
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+
+  body.trust-conversion-page .brand-text::after {
+    content: "MÉXICO";
+    display: block;
+    margin-top: 4px;
+    color: #16120f;
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 1.7px;
   }
 
   body.category-page .topnav,
   body.category-entry-reference-page .topnav,
   body.micas-reference-page .topnav,
   body.warranty-page .topnav,
+  body.trust-conversion-page .topnav,
   body.ai-legacy-reference-page .topnav,
   body.legacy-ai-alias-page .topnav,
   body.ai-detail-reference-page .topnav,
@@ -4103,6 +4203,7 @@ body.warranty-page .contact-whatsapp-chip {
   body.category-entry-reference-page .topnav::-webkit-scrollbar,
   body.micas-reference-page .topnav::-webkit-scrollbar,
   body.warranty-page .topnav::-webkit-scrollbar,
+  body.trust-conversion-page .topnav::-webkit-scrollbar,
   body.ai-legacy-reference-page .topnav::-webkit-scrollbar,
   body.legacy-ai-alias-page .topnav::-webkit-scrollbar,
   body.ai-detail-reference-page .topnav::-webkit-scrollbar,
@@ -4114,13 +4215,14 @@ body.warranty-page .contact-whatsapp-chip {
   body.category-entry-reference-page .topnav a,
   body.micas-reference-page .topnav a,
   body.warranty-page .topnav a,
+  body.trust-conversion-page .topnav a,
   body.ai-legacy-reference-page .topnav a,
   body.legacy-ai-alias-page .topnav a,
   body.ai-detail-reference-page .topnav a,
   body.product-detail-page .topnav a {
     flex: 0 0 auto;
-    min-height: 36px;
-    padding: 8px 11px;
+    min-height: 32px;
+    padding: 7px 10px;
     border: 1px solid rgba(255, 90, 20, 0.18);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.88);
@@ -9802,8 +9904,8 @@ body.trust-conversion-page .floating-cta {
 
   body.distributor-conversion-page .site-header .topnav a {
     flex: 0 0 auto;
-    min-height: 36px;
-    padding: 8px 11px;
+    min-height: 32px;
+    padding: 7px 10px;
     border: 1px solid rgba(255, 90, 20, 0.18);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.88);
