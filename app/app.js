@@ -946,12 +946,15 @@ function renderHome() {
     <div class="page-stack">
       <section class="app-procurement-hero app-home-board">
         <div class="app-stock-strip" aria-label="Ventajas HAODE">
-          <span><strong>Stock en México</strong> Envíos a todo el país</span>
-          <span><strong>Garantía local</strong> Calidad revisada</span>
+          <span><strong>Stock en México</strong><small>Envíos a todo el país</small></span>
+          <span><strong>Precio por cantidad</strong><small>Mayoreo privado</small></span>
+          <span><strong>Calidad revisada</strong><small>Para talleres</small></span>
+          <span><strong>WhatsApp privado</strong><small>Lista grande</small></span>
         </div>
         <div class="app-home-intro">
           <span class="hero-badge">Tienda de fábrica HAODE</span>
-          <h1>Refacciones listas para cotizar</h1>
+          <h1>Fábrica directa para talleres</h1>
+          <p>Refacciones listas para cotizar por modelo, cantidad y ciudad.</p>
           <button class="app-quick-search" type="button" data-focus-search aria-label="Buscar por SKU o modelo">
             <span>Buscar por SKU o modelo</span>
             <strong>Buscar</strong>
@@ -977,13 +980,13 @@ function renderHome() {
 
         <div class="hero-alert" aria-label="Aviso para compras grandes">
           <strong>¿Cantidad grande?</strong>
-          <span>WhatsApp privado: HAODE confirma stock, precio final, garantía local y envío.</span>
+          <span>WhatsApp privado: HAODE confirma stock, precio final y envío.</span>
         </div>
         <div class="hero-proof" aria-label="Beneficios HAODE">
           <span>Fábrica directa</span>
           <span>Inventario México</span>
-          <span>Garantía local</span>
-          <span>Precio bajo</span>
+          <span>Calidad revisada</span>
+          <span>Precio por cantidad</span>
         </div>
       </section>
 
