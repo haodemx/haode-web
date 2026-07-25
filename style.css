@@ -8379,6 +8379,28 @@ body.contact-reference-page .reference-conversion-panel {
   margin: 18px 0 22px;
 }
 
+body.special-product-reference-page .special-product-conversion {
+  margin: 0 0 20px;
+}
+
+body.special-product-reference-page .new-page-links .btn[href*="wa.me"],
+body.special-product-reference-page .detail-buttons .btn[href*="wa.me"],
+body.special-product-reference-page .contact-row .btn[href*="wa.me"] {
+  border-color: var(--ref-green);
+  background: var(--ref-green);
+  color: #ffffff;
+}
+
+body.special-product-reference-page .new-page-links .btn[href*="wa.me"]:hover,
+body.special-product-reference-page .new-page-links .btn[href*="wa.me"]:focus-visible,
+body.special-product-reference-page .detail-buttons .btn[href*="wa.me"]:hover,
+body.special-product-reference-page .detail-buttons .btn[href*="wa.me"]:focus-visible,
+body.special-product-reference-page .contact-row .btn[href*="wa.me"]:hover,
+body.special-product-reference-page .contact-row .btn[href*="wa.me"]:focus-visible {
+  border-color: var(--ref-green-dark);
+  background: var(--ref-green-dark);
+}
+
 body.category-hub-reference-page .section-shell {
   border: 1px solid rgba(240, 74, 20, 0.18);
   background: #ffffff;
