@@ -1673,7 +1673,13 @@ function parseRoute() {
   return { name: "home" };
 }
 
-function renderRoute() {
+function resetRouteScroll() {
+  window.requestAnimationFrame(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  });
+}
+
+function renderRoute({ resetScroll = false } = {}) {
   const route = parseRoute();
   state.selectedGalleryIndex = 0;
   state.viewerIndex = 0;
@@ -1689,6 +1695,9 @@ function renderRoute() {
     renderContact();
   } else {
     renderHome();
+  }
+  if (resetScroll) {
+    resetRouteScroll();
   }
 }
 
@@ -2109,12 +2118,12 @@ async function init() {
   document.addEventListener("click", handleDocumentClick);
   document.addEventListener("input", handleDocumentInput);
   document.addEventListener("change", handleDocumentChange);
-  window.addEventListener("hashchange", renderRoute);
+  window.addEventListener("hashchange", () => renderRoute({ resetScroll: true }));
 
   try {
     await loadProducts();
     await loadDailyAd();
-    renderRoute();
+    renderRoute({ resetScroll: true });
     renderCart();
   } catch (error) {
     console.error("No se pudo iniciar HAODE app:", error);

@@ -33,4 +33,26 @@ test.describe('HAODE App product detail conversion UI phase 17', () => {
       expect(overflow).toBeLessThanOrEqual(1);
     });
   }
+
+  test('catalog navigation opens product detail from the top', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${APP_URL}#lista`, { waitUntil: 'domcontentloaded' });
+
+    const productCards = page.locator('.product-card');
+    await expect(productCards.nth(4)).toBeVisible({ timeout: 15000 });
+    await page.evaluate(() => window.scrollTo(0, 1100));
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(600);
+
+    await productCards.nth(4).locator('a[href^="#producto/"]').first().click();
+    await expect(page.locator('.detail-panel h1')).toBeVisible({ timeout: 15000 });
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThanOrEqual(4);
+
+    const topBox = await page.locator('.page-stack').evaluate((el) => {
+      const rect = el.getBoundingClientRect();
+      return { top: Math.round(rect.top), bottom: Math.round(rect.bottom) };
+    });
+    expect(topBox.top).toBeGreaterThanOrEqual(0);
+    expect(topBox.top).toBeLessThan(160);
+    await expect(page.locator('.back-link')).toBeVisible();
+  });
 });
