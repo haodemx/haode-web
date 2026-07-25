@@ -33,6 +33,50 @@
     return `<div class="new-arrival-price-grid" aria-label="Precios">${rows}</div>`;
   }
 
+  function categoryLabel(category) {
+    const labels = {
+      'iphone-incell': 'iPhone INCELL',
+      'iphone-oled': 'iPhone OLED',
+      'samsung-incell': 'Samsung INCELL',
+      'samsung-oled': 'Samsung OLED',
+      'samsung-tipo-original': 'Samsung TIPO ORIGINAL',
+      fundas: 'Fundas',
+      micas: 'Micas',
+      'maquinas-de-hidrogel': 'Máquinas de hidrogel',
+      'productos-ai': 'Productos AI',
+      'gafas-ai': 'Gafas AI',
+      'camaras-inteligentes': 'Cámaras inteligentes',
+    };
+    if (labels[category]) return labels[category];
+    return String(category || 'producto')
+      .split('-')
+      .filter(Boolean)
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join(' ');
+  }
+
+  function renderCategoryConversionPanel(root, category, count) {
+    const existing = document.querySelector('[data-category-whatsapp-panel]');
+    if (existing) existing.remove();
+
+    const label = categoryLabel(category);
+    const panel = document.createElement('aside');
+    panel.className = 'category-whatsapp-panel';
+    panel.setAttribute('data-category-whatsapp-panel', '');
+    panel.innerHTML = `
+      <div class="category-whatsapp-grid">
+        <span class="category-whatsapp-mark" aria-hidden="true">W</span>
+        <div>
+          <p>Compra por cantidad</p>
+          <h2>Envía tu lista de ${label} por WhatsApp</h2>
+          <span>${count} modelos visibles. Confirmamos disponibilidad, precio final y envío antes de preparar el pedido.</span>
+        </div>
+      </div>
+      <a class="btn btn-primary category-whatsapp-cta" href="${buildWhatsappUrl({ name: `lista de ${label}` })}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+    `;
+    root.insertAdjacentElement('afterend', panel);
+  }
+
   function buildProductCard(item) {
     const article = document.createElement('article');
     article.className = 'new-product-card';
@@ -49,12 +93,17 @@
       </div>
       <div class="new-product-content">
         <h3>${item.name || item.model || 'Producto HAODE'}</h3>
+        <div class="new-product-badges" aria-label="Ventajas HAODE">
+          <span>Stock en México</span>
+          <span>Precio por cantidad</span>
+          <span>WhatsApp privado</span>
+        </div>
         <p>${item.description || 'Producto HAODE México con atención por WhatsApp para técnicos, talleres y distribuidores. Confirma disponibilidad actual, modelo y cantidad antes de comprar.'}</p>
         <p class="new-arrival-note">${item.quality || ''}</p>
         ${priceRows}
         <div class="new-product-actions">
           <a class="btn btn-secondary" href="${detailHref}">Ver detalles</a>
-          <a class="btn btn-primary" href="${buildWhatsappUrl(item)}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+          <a class="btn btn-primary category-whatsapp-primary" href="${buildWhatsappUrl(item)}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
         </div>
       </div>
     `;
@@ -82,6 +131,8 @@
     for (const item of products) {
       root.appendChild(buildProductCard(item));
     }
+
+    renderCategoryConversionPanel(root, category, products.length);
   }
 
   document.addEventListener('DOMContentLoaded', renderCategoryProducts);

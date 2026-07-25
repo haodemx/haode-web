@@ -1584,6 +1584,14 @@ function createProductCard(product) {
   const title = document.createElement('h3');
   title.textContent = product.name;
 
+  const badgeRow = document.createElement('div');
+  badgeRow.className = 'shop-badge-row';
+  ['Stock México', 'Precio por cantidad', 'WhatsApp privado'].forEach((label) => {
+    const badge = document.createElement('span');
+    badge.textContent = label;
+    badgeRow.appendChild(badge);
+  });
+
   const quality = document.createElement('p');
   quality.className = 'shop-quality';
   quality.textContent = product.quality;
@@ -1647,7 +1655,7 @@ function createProductCard(product) {
   details.textContent = 'Ver producto';
 
   actions.append(details, whatsapp);
-  content.append(title, quality, stock, priceWrap, actions);
+  content.append(title, badgeRow, quality, stock, priceWrap, actions);
 
   article.append(overlay, media, content);
   return article;
@@ -2349,6 +2357,31 @@ function renderProductDetailPage() {
   if (brandEl) brandEl.textContent = product.brand;
   if (qualityEl) qualityEl.textContent = product.quality;
   if (descriptionEl) descriptionEl.textContent = product.description;
+
+  const firstDetailCard = page.querySelector('.detail-info .detail-card');
+  if (firstDetailCard && !firstDetailCard.querySelector('[data-detail-conversion]')) {
+    const conversion = document.createElement('div');
+    conversion.className = 'detail-factory-callout';
+    conversion.setAttribute('data-detail-conversion', '');
+    conversion.innerHTML = `
+      <span>Fábrica directa</span>
+      <span>Stock local bajo confirmación</span>
+      <span>Atención por WhatsApp privado</span>
+    `;
+    const anchor = firstDetailCard.querySelector('[data-detail-description]');
+    if (anchor) anchor.insertAdjacentElement('afterend', conversion);
+    else firstDetailCard.prepend(conversion);
+  }
+
+  const floatingCta = document.querySelector('.floating-cta');
+  if (floatingCta) {
+    floatingCta.href = buildWhatsAppUrl(product.whatsappText);
+    floatingCta.textContent = 'Enviar lista por WhatsApp';
+    const warning = page.querySelector('.detail-top .catalog-warning');
+    if (warning && floatingCta.parentElement !== warning.parentElement) {
+      warning.insertAdjacentElement('afterend', floatingCta);
+    }
+  }
   if (mainImageEl) {
     mainImageEl.src = buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
     mainImageEl.alt = product.name;
