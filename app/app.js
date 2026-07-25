@@ -1260,6 +1260,7 @@ function renderProductDetail(productId) {
   viewRootEl.innerHTML = `
     <div class="page-stack">
       <a class="back-link" href="#lista">Volver al catálogo</a>
+      ${detailConversionStripHtml()}
       <section class="detail-layout${flagshipClass}">
         <div class="gallery-shell" data-product-gallery>
           ${has360 ? product360Html(product, uniqueFrames) : productGalleryHtml(product, gallery)}
@@ -1302,6 +1303,17 @@ function renderProductDetail(productId) {
     </div>
   `;
   updateNavigation();
+}
+
+function detailConversionStripHtml() {
+  return `
+    <div class="detail-conversion-strip" aria-label="Ventajas para cotizar este producto">
+      <span><strong>Stock en México</strong><small>Bajo confirmación</small></span>
+      <span><strong>Precio por cantidad</strong><small>Mayoreo privado</small></span>
+      <span><strong>Calidad revisada</strong><small>Para talleres</small></span>
+      <span><strong>WhatsApp privado</strong><small>Envía lista grande</small></span>
+    </div>
+  `;
 }
 
 function productGalleryHtml(product, images) {
