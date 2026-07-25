@@ -15,6 +15,8 @@ const DAILY_AD_URL = sitePath("/data/marketing/daily-ad-latest.json");
 const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
+const EXTERNAL_CATALOG_TIMEOUT_MS = 3000;
+const EXTERNAL_DIAGNOSTICS_TIMEOUT_MS = 3000;
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
   "AI-GAFAS-G3": "haode-ai-g3-smart-glasses",
   "MICA-X200T": "x200t-cortadora-micas"
@@ -466,11 +468,50 @@ function stockClassName(value) {
     .replace(/^-+|-+$/g, "") || "consultar-inventario";
 }
 
+function timeoutError(label, timeoutMs) {
+  return new Error(`${label} tardó más de ${Math.round(timeoutMs / 1000)}s`);
+}
+
+function withTimeout(promise, timeoutMs, label) {
+  let timeoutId;
+  const timeout = new Promise((_, reject) => {
+    timeoutId = window.setTimeout(() => reject(timeoutError(label, timeoutMs)), timeoutMs);
+  });
+  return Promise.race([promise, timeout]).finally(() => window.clearTimeout(timeoutId));
+}
+
+async function fetchJsonWithTimeout(url, options = {}, timeoutMs = EXTERNAL_CATALOG_TIMEOUT_MS, label = "Solicitud") {
+  const controller = typeof AbortController === "function" ? new AbortController() : null;
+  const requestOptions = { ...options };
+  let timeoutId;
+
+  if (controller) {
+    requestOptions.signal = controller.signal;
+    timeoutId = window.setTimeout(() => controller.abort(), timeoutMs);
+  }
+
+  try {
+    const response = await fetch(url, requestOptions);
+    if (!response.ok) throw new Error(`${label} ${response.status}`);
+    return response.json();
+  } catch (error) {
+    if (error.name === "AbortError") {
+      throw timeoutError(label, timeoutMs);
+    }
+    throw error;
+  } finally {
+    if (timeoutId) window.clearTimeout(timeoutId);
+  }
+}
+
 async function loadErpPublicStock() {
   try {
-    const response = await fetch(`${ERP_PUBLIC_STOCK_URL}?v=${Date.now()}`, { cache: "no-store", mode: "cors" });
-    if (!response.ok) throw new Error(`ERP stock ${response.status}`);
-    const rows = await response.json();
+    const rows = await fetchJsonWithTimeout(
+      `${ERP_PUBLIC_STOCK_URL}?v=${Date.now()}`,
+      { cache: "no-store", mode: "cors" },
+      EXTERNAL_CATALOG_TIMEOUT_MS,
+      "ERP stock"
+    );
     return Array.isArray(rows) ? rows : [];
   } catch (error) {
     console.info("HAODE app sin inventario ERP:", error.message);
@@ -521,9 +562,12 @@ function erpCatalogProduct(row, order = 9999) {
 
 async function loadErpPublicCatalog() {
   try {
-    const response = await fetch(`${ERP_PUBLIC_CATALOG_URL}?v=${Date.now()}`, { cache: "no-store", mode: "cors" });
-    if (!response.ok) throw new Error(`ERP catalog ${response.status}`);
-    const payload = await response.json();
+    const payload = await fetchJsonWithTimeout(
+      `${ERP_PUBLIC_CATALOG_URL}?v=${Date.now()}`,
+      { cache: "no-store", mode: "cors" },
+      EXTERNAL_CATALOG_TIMEOUT_MS,
+      "ERP catalog"
+    );
     return Array.isArray(payload) ? payload : Array.isArray(payload.products) ? payload.products : [];
   } catch (error) {
     console.info("HAODE app usando catálogo local:", error.message);
@@ -658,20 +702,35 @@ async function loadLocalProducts() {
   return response.json();
 }
 
-async function loadProducts() {
-  const localProducts = await loadLocalProducts();
-  const normalizedProducts = activeProducts(localProducts);
+function updateProductDiagnostics(source = "products.json") {
+  window.HAODE_DIAGNOSTICS = {
+    firestoreTotal: state.diagnostics.firestoreTotal,
+    firestoreActivo: state.diagnostics.firestoreActive,
+    productosActivos: state.diagnostics.normalizedTotal,
+    productosVisibles: Math.max(products.length, 0),
+    fuente: source,
+    erpStockItems: state.diagnostics.erpStockItems
+  };
+}
+
+async function refreshProductsFromExternal(normalizedProducts) {
   const erpCatalogRows = await loadErpPublicCatalog();
   const erpStockRows = erpCatalogRows.length ? [] : await loadErpPublicStock();
-  products = erpCatalogRows.length
-    ? mergeErpCatalog(normalizedProducts, erpCatalogRows)
-    : applyErpStock(normalizedProducts, erpStockRows);
+  if (erpCatalogRows.length || erpStockRows.length) {
+    products = erpCatalogRows.length
+      ? mergeErpCatalog(normalizedProducts, erpCatalogRows)
+      : applyErpStock(normalizedProducts, erpStockRows);
+  }
+
+  state.diagnostics.normalizedTotal = products.length;
+  state.diagnostics.erpStockItems = erpCatalogRows.length || erpStockRows.length;
+  state.diagnostics.erpStockLoaded = state.diagnostics.erpStockItems > 0;
 
   try {
-    const [allProducts, activeFirestoreProducts] = await Promise.all([
+    const [allProducts, activeFirestoreProducts] = await withTimeout(Promise.all([
       loadFirestoreProducts(false),
       loadFirestoreProducts(true)
-    ]);
+    ]), EXTERNAL_DIAGNOSTICS_TIMEOUT_MS, "Firestore");
     state.diagnostics.firestoreTotal = allProducts.length;
     state.diagnostics.firestoreActive = activeFirestoreProducts.length;
   } catch (error) {
@@ -680,17 +739,28 @@ async function loadProducts() {
     state.diagnostics.firestoreActive = null;
   }
 
+  updateProductDiagnostics(
+    erpCatalogRows.length
+      ? "erp public catalog 2.0 + products.json"
+      : state.diagnostics.erpStockLoaded
+        ? "products.json + erp public-stock.json"
+        : "products.json"
+  );
+  renderRoute();
+  renderCart();
+}
+
+async function loadProducts() {
+  const localProducts = await loadLocalProducts();
+  const normalizedProducts = activeProducts(localProducts);
+  products = normalizedProducts;
   state.diagnostics.normalizedTotal = products.length;
-  state.diagnostics.erpStockItems = erpCatalogRows.length || erpStockRows.length;
-  state.diagnostics.erpStockLoaded = state.diagnostics.erpStockItems > 0;
-  window.HAODE_DIAGNOSTICS = {
-    firestoreTotal: state.diagnostics.firestoreTotal,
-    firestoreActivo: state.diagnostics.firestoreActive,
-    productosActivos: state.diagnostics.normalizedTotal,
-    productosVisibles: Math.max(products.length, 0),
-    fuente: erpCatalogRows.length ? "erp public catalog 2.0 + products.json" : state.diagnostics.erpStockLoaded ? "products.json + erp public-stock.json" : "products.json",
-    erpStockItems: state.diagnostics.erpStockItems
-  };
+  state.diagnostics.erpStockItems = 0;
+  state.diagnostics.erpStockLoaded = false;
+  updateProductDiagnostics("products.json");
+  refreshProductsFromExternal(normalizedProducts).catch((error) => {
+    console.info("HAODE app no pudo actualizar catálogo externo:", error.message);
+  });
 }
 
 async function loadDailyAd() {
