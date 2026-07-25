@@ -25,6 +25,7 @@ test.describe('HAODE special product conversion UI phase 11', () => {
       await expect(page.locator(`[data-reference-conversion="${panelId}"]`)).toContainText(/WhatsApp privado|Cotiza/);
       await expect(page.locator(`[data-reference-conversion="${panelId}"] a[href*="wa.me"]`)).toBeVisible();
       await expect(page.locator(`text=${priceText}`).first()).toBeVisible();
+      await expectUnifiedDetailHeader(page);
 
       const panelBeforeGrid = await page.locator(`[data-reference-conversion="${panelId}"]`).evaluate((panel) => {
         const grid = panel.parentElement?.querySelector('.detail-grid');
@@ -35,8 +36,20 @@ test.describe('HAODE special product conversion UI phase 11', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator(`[data-reference-conversion="${panelId}"]`)).toBeVisible();
+      await expectUnifiedDetailHeader(page);
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
     });
   }
 });
+
+async function expectUnifiedDetailHeader(page) {
+  const whatsapp = page.locator('[data-detail-header-whatsapp]');
+  const app = page.locator('[data-detail-header-app]');
+  await expect(whatsapp).toBeVisible();
+  await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
+  await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
+  await expect(app).toBeVisible();
+  await expect(app).toHaveAttribute('href', /\/app\/$/);
+  await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 10)');
+}

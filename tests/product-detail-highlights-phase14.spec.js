@@ -30,11 +30,13 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expect(page.locator('[data-detail-factory-callout]')).toContainText('Garantía local');
       await expect(page.locator('[data-detail-highlights] strong').first()).toHaveCSS('color', 'rgb(255, 255, 255)');
       await expectDesktopStandardDetailSalesLayout(page);
+      await expectUnifiedDetailHeader(page);
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.topnav a').first()).toBeVisible();
       await expectCompactMobileTopbar(page, 100);
+      await expectUnifiedDetailHeader(page);
       await expectMobileDetailPreview(page);
       await expectFirstWhatsAppInViewport(page);
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
@@ -69,12 +71,14 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expect(quickQuote).toHaveAttribute('href', /wa\.me/);
       await expectDesktopQuoteInViewport(page);
       await expectDesktopFoldableSalesLayout(page);
+      await expectUnifiedDetailHeader(page);
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
       await expect(page.locator('.topnav a').first()).toBeVisible();
       await expectCompactMobileTopbar(page, 100);
+      await expectUnifiedDetailHeader(page);
       const quoteButton = page.locator('.detail-buttons a[href*="wa.me"]').first();
       await expect(quoteButton).toBeVisible();
       await expect(quoteButton).toContainText('Cotizar por WhatsApp');
@@ -101,6 +105,17 @@ async function expectDesktopQuoteInViewport(page) {
 
   expect(layout.top).toBeGreaterThanOrEqual(0);
   expect(layout.bottom).toBeLessThanOrEqual(900);
+}
+
+async function expectUnifiedDetailHeader(page) {
+  const whatsapp = page.locator('[data-detail-header-whatsapp]');
+  const app = page.locator('[data-detail-header-app]');
+  await expect(whatsapp).toBeVisible();
+  await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
+  await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
+  await expect(app).toBeVisible();
+  await expect(app).toHaveAttribute('href', /\/app\/$/);
+  await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 10)');
 }
 
 async function expectDesktopStandardDetailSalesLayout(page) {

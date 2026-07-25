@@ -11084,3 +11084,198 @@ body.product-detail-page .detail-price-table td {
     min-height: 44px;
   }
 }
+
+/* Phase 28: unified product-detail sales header */
+body.product-detail-page .detail-header-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+body.product-detail-page .detail-header-action {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 10px 22px rgba(17, 19, 20, 0.12);
+}
+
+body.product-detail-page .detail-header-whatsapp {
+  background: #12a854;
+  box-shadow: 0 12px 24px rgba(18, 168, 84, 0.22);
+}
+
+body.product-detail-page .detail-header-whatsapp:hover,
+body.product-detail-page .detail-header-whatsapp:focus-visible {
+  background: #0d8f48;
+}
+
+body.product-detail-page .detail-header-app {
+  background: #ff5a0a;
+  box-shadow: 0 12px 24px rgba(255, 90, 10, 0.2);
+}
+
+body.product-detail-page .detail-header-app:hover,
+body.product-detail-page .detail-header-app:focus-visible {
+  background: #e74708;
+}
+
+body.product-detail-page .detail-header-mark {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 950;
+}
+
+@media (min-width: 761px) {
+  body.product-detail-page .catalog-topbar .topbar-inner {
+    width: min(calc(100% - 32px), 1240px);
+    min-height: 72px;
+    gap: 14px;
+  }
+
+  body.product-detail-page .catalog-topbar .brand {
+    min-width: 136px;
+    gap: 10px;
+  }
+
+  body.product-detail-page .catalog-topbar .brand-logo {
+    width: 46px;
+    height: 46px;
+    padding: 3px;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: none;
+  }
+
+  body.product-detail-page .catalog-topbar .brand-copy strong {
+    color: #f04418;
+    font-size: 20px;
+    font-weight: 950;
+    letter-spacing: 0;
+  }
+
+  body.product-detail-page .catalog-topbar .brand-copy small {
+    margin-top: 3px;
+    color: #171717;
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: 1.4px;
+  }
+
+  body.product-detail-page .catalog-topbar .topnav {
+    min-width: 0;
+    margin-left: auto;
+    gap: 4px;
+    color: #171717;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  body.product-detail-page .catalog-topbar .topnav a {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    padding: 0 7px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1040px) {
+  body.product-detail-page .catalog-topbar .brand {
+    min-width: 112px;
+  }
+
+  body.product-detail-page .catalog-topbar .brand-logo {
+    display: none;
+  }
+
+  body.product-detail-page .catalog-topbar .topnav a {
+    padding: 0 5px;
+  }
+
+  body.product-detail-page .detail-header-action {
+    padding: 0 9px;
+  }
+
+  body.product-detail-page .detail-header-action > span:last-child {
+    font-size: 0;
+  }
+
+  body.product-detail-page .detail-header-whatsapp > span:last-child::after {
+    content: "WhatsApp";
+    font-size: 12px;
+  }
+
+  body.product-detail-page .detail-header-app > span:last-child::after {
+    content: "APP";
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  body.product-detail-page .catalog-topbar .topbar-inner {
+    display: grid;
+    grid-template-columns: minmax(104px, 1fr) auto;
+    align-items: center;
+  }
+
+  body.product-detail-page .catalog-topbar .topnav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  body.product-detail-page .detail-header-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body.product-detail-page .detail-header-action {
+    min-height: 34px;
+    gap: 5px;
+    padding: 0 8px;
+    font-size: 0;
+  }
+
+  body.product-detail-page .detail-header-whatsapp::after {
+    content: "WhatsApp";
+    font-size: 11px;
+  }
+
+  body.product-detail-page .detail-header-app::after {
+    content: "APP";
+    font-size: 11px;
+  }
+
+  body.product-detail-page .detail-header-mark {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  body.product-detail-page .detail-header-action {
+    padding: 0 6px;
+  }
+
+  body.product-detail-page .detail-header-mark {
+    display: none;
+  }
+}
