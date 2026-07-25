@@ -9013,17 +9013,41 @@ body.conversion-reference-page .floating-cta {
 
   body.conversion-reference-page .reference-logo img,
   body.catalog-page.catalog-reference-page .reference-logo img {
-    width: 118px;
-    height: 48px;
-    object-fit: contain;
+    display: none;
   }
 
   body.conversion-reference-page .reference-logo,
   body.catalog-page.catalog-reference-page .reference-logo {
     display: inline-flex;
     width: max-content;
-    height: 48px;
+    min-width: 104px;
+    height: 36px;
     align-items: center;
+    justify-self: start;
+    flex-direction: column;
+    justify-content: center;
+    color: #f04418;
+    font-weight: 950;
+    line-height: 0.85;
+  }
+
+  body.conversion-reference-page .reference-logo::before,
+  body.catalog-page.catalog-reference-page .reference-logo::before {
+    content: "HAODE";
+    display: block;
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+
+  body.conversion-reference-page .reference-logo::after,
+  body.catalog-page.catalog-reference-page .reference-logo::after {
+    content: "MÉXICO";
+    display: block;
+    margin-top: 4px;
+    color: #16120f;
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 1.7px;
   }
 
   body.catalog-page.catalog-reference-page .reference-header {
@@ -9035,9 +9059,10 @@ body.conversion-reference-page .floating-cta {
   body.catalog-page.catalog-reference-page .reference-nav-shell {
     height: auto;
     grid-template-columns: 1fr;
+    justify-items: start;
     min-height: 0;
-    gap: 10px;
-    padding: 10px 0;
+    gap: 6px;
+    padding: 7px 0 8px;
   }
 
   body.conversion-reference-page .reference-menu-button,
@@ -9048,6 +9073,7 @@ body.conversion-reference-page .floating-cta {
   body.conversion-reference-page .reference-nav,
   body.catalog-page.catalog-reference-page .reference-nav {
     display: flex;
+    grid-column: 1 / -1;
     width: 100%;
     height: auto;
     justify-content: flex-start;
@@ -9070,8 +9096,8 @@ body.conversion-reference-page .floating-cta {
   body.conversion-reference-page .reference-nav a,
   body.catalog-page.catalog-reference-page .reference-nav a {
     flex: 0 0 auto;
-    min-height: 36px;
-    padding: 8px 11px;
+    min-height: 32px;
+    padding: 7px 10px;
     border: 1px solid rgba(255, 90, 20, 0.18);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.88);
@@ -9085,6 +9111,7 @@ body.conversion-reference-page .floating-cta {
   body.conversion-reference-page .reference-nav-actions,
   body.catalog-page.catalog-reference-page .reference-nav-actions {
     display: flex;
+    grid-column: 1 / -1;
     width: 100%;
     justify-content: flex-start;
     gap: 8px;
@@ -9102,8 +9129,8 @@ body.conversion-reference-page .floating-cta {
   body.conversion-reference-page .reference-nav-actions .reference-btn,
   body.catalog-page.catalog-reference-page .reference-nav-actions .reference-btn {
     flex: 0 0 auto;
-    min-height: 36px;
-    padding: 0 12px;
+    min-height: 32px;
+    padding: 0 11px;
     font-size: 12px;
   }
 

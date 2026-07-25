@@ -83,6 +83,9 @@ async function checkCriticalPage(page, pageCase, viewport) {
   if (pageCase.name === 'home' && viewport.width <= 430) {
     await expectMobileHomeVisual(page);
   }
+  if ((pageCase.name === 'catalog' || pageCase.name === 'contact') && viewport.width <= 430) {
+    await expectReferenceMobileSalesHeader(page);
+  }
   if (pageCase.name === 'home') {
     await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
     await expect(page.locator('.reference-proof-band')).toContainText('Control de calidad');
@@ -100,6 +103,41 @@ async function expectMobileHomeVisual(page) {
   });
   expect(box.top).toBeLessThan(620);
   expect(box.height).toBeGreaterThanOrEqual(110);
+}
+
+async function expectReferenceMobileSalesHeader(page) {
+  const header = page.locator('.reference-header');
+  const logo = page.locator('.reference-logo').first();
+  const nav = page.locator('.reference-nav').first();
+  const actions = page.locator('.reference-nav-actions').first();
+
+  await expect(header).toBeVisible();
+  await expect(logo).toBeVisible();
+  await expect(nav).toBeVisible();
+  await expect(actions).toBeVisible();
+
+  const layout = await page.evaluate(() => {
+    const headerRect = document.querySelector('.reference-header')?.getBoundingClientRect();
+    const logoRect = document.querySelector('.reference-logo')?.getBoundingClientRect();
+    const navRect = document.querySelector('.reference-nav')?.getBoundingClientRect();
+    const actionsRect = document.querySelector('.reference-nav-actions')?.getBoundingClientRect();
+
+    return {
+      headerHeight: Math.round(headerRect?.height || 0),
+      logoLeft: Math.round(logoRect?.left || 0),
+      logoTop: Math.round(logoRect?.top || 0),
+      logoWidth: Math.round(logoRect?.width || 0),
+      navTop: Math.round(navRect?.top || 0),
+      actionsTop: Math.round(actionsRect?.top || 0),
+    };
+  });
+
+  expect(layout.headerHeight).toBeLessThanOrEqual(140);
+  expect(layout.logoLeft).toBeLessThanOrEqual(18);
+  expect(layout.logoTop).toBeLessThanOrEqual(12);
+  expect(layout.logoWidth).toBeGreaterThanOrEqual(100);
+  expect(layout.navTop).toBeLessThanOrEqual(58);
+  expect(layout.actionsTop).toBeLessThanOrEqual(104);
 }
 
 async function expectNoHorizontalOverflow(page) {
