@@ -40,6 +40,7 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await expect(page.locator('.app-hero-actions a[href*="wa.me"]').first()).toBeVisible();
     await expect(page.locator('.app-home-product-card').first()).toBeVisible({ timeout: 15000 });
     await expectHomeProductMediaVisible(page);
+    await expectBottomSearchNav(page);
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(1);
@@ -79,4 +80,11 @@ async function expectHomeProductMediaVisible(page) {
   expect(details.background).not.toBe('rgba(0, 0, 0, 0)');
   expect(details.complete).toBe(true);
   expect(details.naturalWidth).toBeGreaterThan(0);
+}
+
+async function expectBottomSearchNav(page) {
+  const searchNav = page.locator('.bottom-nav [data-focus-search]').filter({ hasText: 'Buscar' });
+  await expect(searchNav).toBeVisible();
+  await searchNav.click();
+  await expect(page.locator('[data-search-products]')).toBeFocused();
 }
