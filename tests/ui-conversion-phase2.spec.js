@@ -25,6 +25,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
     await expect(page.locator(".reference-nav a").first()).toBeVisible();
     await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
+    await expectHeaderWhatsAppGreen(page);
     await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
     const mobileCta = await page.locator(".floating-cta").evaluate((el) => {
       const rect = el.getBoundingClientRect();
@@ -73,4 +74,9 @@ test.describe("HAODE conversion UI phase 2", () => {
 async function expectNoHorizontalOverflow(page) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(1);
+}
+
+async function expectHeaderWhatsAppGreen(page) {
+  const background = await page.locator(".reference-nav-actions a[href*='wa.me']").first().evaluate((el) => getComputedStyle(el).backgroundColor);
+  expect(background).toBe("rgb(18, 168, 84)");
 }

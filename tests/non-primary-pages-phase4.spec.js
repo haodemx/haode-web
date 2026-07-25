@@ -40,6 +40,7 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
       await expect(page.locator(".reference-nav a").first()).toBeVisible();
       await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
+      await expectHeaderWhatsAppGreen(page);
       await expectHeaderHeightAtMost(page, ".reference-header", 190);
       await expect(page.locator(`[data-reference-conversion="${pageCase.panel}"]`)).toBeVisible();
       await expectNoHorizontalOverflow(page);
@@ -55,4 +56,9 @@ async function expectNoHorizontalOverflow(page) {
 async function expectHeaderHeightAtMost(page, selector, maxHeight) {
   const height = await page.locator(selector).first().evaluate((el) => Math.round(el.getBoundingClientRect().height));
   expect(height).toBeLessThanOrEqual(maxHeight);
+}
+
+async function expectHeaderWhatsAppGreen(page) {
+  const background = await page.locator(".reference-nav-actions a[href*='wa.me']").first().evaluate((el) => getComputedStyle(el).backgroundColor);
+  expect(background).toBe("rgb(18, 168, 84)");
 }

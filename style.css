@@ -9458,3 +9458,33 @@ body.trust-conversion-page .floating-cta {
     grid-template-columns: 1fr;
   }
 }
+
+body.conversion-reference-page .reference-nav-actions a[href*="wa.me"],
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href*="wa.me"],
+body.ai-reference-page .reference-nav-actions a[href*="wa.me"],
+body.contact-reference-page .reference-nav-actions a[href*="wa.me"] {
+  border-color: var(--ref-green, #12a854);
+  background: var(--ref-green, #12a854);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(18, 168, 84, 0.22);
+}
+
+body.conversion-reference-page .reference-nav-actions a[href*="wa.me"]:hover,
+body.conversion-reference-page .reference-nav-actions a[href*="wa.me"]:focus-visible,
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href*="wa.me"]:hover,
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href*="wa.me"]:focus-visible,
+body.ai-reference-page .reference-nav-actions a[href*="wa.me"]:hover,
+body.ai-reference-page .reference-nav-actions a[href*="wa.me"]:focus-visible,
+body.contact-reference-page .reference-nav-actions a[href*="wa.me"]:hover,
+body.contact-reference-page .reference-nav-actions a[href*="wa.me"]:focus-visible {
+  border-color: var(--ref-green-dark, #087a3e);
+  background: var(--ref-green-dark, #087a3e);
+}
+
+body.conversion-reference-page .reference-nav-actions a[href*="wa.me"] .reference-btn-icon,
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href*="wa.me"] .reference-btn-icon,
+body.ai-reference-page .reference-nav-actions a[href*="wa.me"] .reference-btn-icon,
+body.contact-reference-page .reference-nav-actions a[href*="wa.me"] .reference-btn-icon {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.74);
+}
