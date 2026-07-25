@@ -23,6 +23,9 @@ test.describe('HAODE dynamic category conversion UI phase 12', () => {
       await expect(page.locator('.reference-conversion-strip')).toContainText('WhatsApp privado');
       await expect(page.locator('.new-page-links a[href*="wa.me"]').first()).toBeVisible();
       await expect(page.locator('[data-category-whatsapp-panel], .contact-whatsapp-panel').first()).toBeVisible();
+      if (await page.locator('.category-whatsapp-primary').count()) {
+        await expect(page.locator('.category-whatsapp-primary').first()).toContainText('Cotizar modelo por WhatsApp');
+      }
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });

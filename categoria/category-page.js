@@ -114,7 +114,7 @@
         ${priceRows}
         <div class="new-product-actions">
           <a class="btn btn-secondary" href="${detailHref}">Ver detalles</a>
-          <a class="btn btn-primary category-whatsapp-primary" href="${buildWhatsappUrl(item)}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+          <a class="btn btn-primary category-whatsapp-primary" href="${buildWhatsappUrl(item)}" target="_blank" rel="noopener noreferrer">Cotizar modelo por WhatsApp</a>
         </div>
       </div>
     `;
