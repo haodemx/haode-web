@@ -179,6 +179,13 @@ async function expectReferenceMobileSalesHeader(page) {
 async function expectReferenceDesktopWordmark(page) {
   const logo = page.locator('.reference-logo').first();
   await expect(logo).toBeVisible();
+  await page.waitForFunction(() => {
+    const logoElement = document.querySelector('.reference-logo');
+    const image = logoElement?.querySelector('img');
+    if (!logoElement || !image) return false;
+    return getComputedStyle(image).display === 'none'
+      && getComputedStyle(logoElement, '::before').content.includes('HAODE');
+  });
   const details = await logo.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     const image = el.querySelector('img');
