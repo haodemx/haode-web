@@ -136,6 +136,18 @@ async function expectReferenceMobileSalesHeader(page) {
   await expect(logo).toBeVisible();
   await expect(nav).toBeVisible();
   await expect(actions).toBeVisible();
+  await page.waitForFunction(() => {
+    const logoRect = document.querySelector('.reference-logo')?.getBoundingClientRect();
+    const navRect = document.querySelector('.reference-nav')?.getBoundingClientRect();
+    const actionsRect = document.querySelector('.reference-nav-actions')?.getBoundingClientRect();
+    const logoImage = document.querySelector('.reference-logo img');
+
+    return Boolean(logoRect && navRect && actionsRect && logoImage)
+      && getComputedStyle(logoImage).display === 'none'
+      && logoRect.top <= 12
+      && navRect.top <= 58
+      && actionsRect.top <= 104;
+  });
 
   const layout = await page.evaluate(() => {
     const headerRect = document.querySelector('.reference-header')?.getBoundingClientRect();
