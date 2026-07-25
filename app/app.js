@@ -1655,7 +1655,7 @@ function buildWhatsappUrl() {
     `Origen: ${state.attribution.source || appChannel()}`,
     `Referencia: ${attributionReference()}`,
     "",
-    "Por favor confirma disponibilidad, precio final y envio. Entiendo que no hay pago en linea y se confirma por WhatsApp."
+    "Por favor confirma stock en México, precio por cantidad, garantía local y envío. Entiendo que no hay pago en línea y se confirma por WhatsApp."
   ];
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
@@ -1733,7 +1733,7 @@ function singleProductWhatsappUrl(product) {
     "",
     `Origen: ${state.attribution.source || appChannel()}`,
     `Referencia: ${attributionReference()}`,
-    "Por favor confirma disponibilidad, compatibilidad y precio final."
+    "Por favor confirma stock en México, compatibilidad, precio por cantidad, garantía local y envío."
   ];
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
 }

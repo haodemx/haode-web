@@ -1121,8 +1121,15 @@ function trackWebsiteEvent(eventName, params = {}) {
 }
 
 function buildProductCotizacionText(name, sku = '') {
-  const skuLine = sku ? ` SKU: ${sku}.` : '';
-  return `Hola, quiero cotizar: ${name}.${skuLine} Origen: ${trafficReference()}. ¿Me pueden confirmar precio y disponibilidad?`;
+  return [
+    'Hola HAODE México, quiero cotizar este producto:',
+    `Producto: ${name || 'Producto HAODE'}`,
+    `SKU: ${sku || 'N/A'}`,
+    'Cantidad:',
+    'Ciudad:',
+    `Origen: ${trafficReference()}.`,
+    '¿Me pueden confirmar stock en México, precio por cantidad, garantía local y envío?'
+  ].join('\n');
 }
 
 function buildMissingModelCotizacionText() {
