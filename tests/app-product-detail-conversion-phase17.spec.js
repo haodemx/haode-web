@@ -26,6 +26,7 @@ test.describe('HAODE App product detail conversion UI phase 17', () => {
       await expect(page.locator('.detail-conversion-strip')).toContainText('Calidad revisada');
       await expect(page.locator('.detail-conversion-strip')).toContainText('WhatsApp privado');
       await expect(page.locator('.sticky-actions a[href*="wa.me"]').first()).toBeVisible();
+      await expectProductSummaryFirstScreen(page);
 
       const overflow = await page.evaluate(() => (
         Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)
@@ -56,3 +57,24 @@ test.describe('HAODE App product detail conversion UI phase 17', () => {
     await expect(page.locator('.back-link')).toBeVisible();
   });
 });
+
+async function expectProductSummaryFirstScreen(page) {
+  const layout = await page.evaluate(() => {
+    const title = document.querySelector('.detail-panel h1')?.getBoundingClientRect();
+    const gallery = document.querySelector('.gallery-shell')?.getBoundingClientRect();
+    const stickyActions = document.querySelector('.sticky-actions')?.getBoundingClientRect();
+
+    return {
+      titleTop: Math.round(title?.top || 0),
+      galleryTop: Math.round(gallery?.top || 0),
+      actionsTop: Math.round(stickyActions?.top || 0),
+      actionsHeight: Math.round(stickyActions?.height || 0),
+    };
+  });
+
+  expect(layout.titleTop).toBeGreaterThanOrEqual(0);
+  expect(layout.titleTop).toBeLessThan(390);
+  expect(layout.galleryTop).toBeGreaterThan(layout.titleTop);
+  expect(layout.actionsHeight).toBeGreaterThan(48);
+  expect(layout.actionsTop).toBeLessThan(844);
+}

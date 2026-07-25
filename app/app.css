@@ -1937,6 +1937,37 @@ body[data-route="product"] .bottom-nav {
 }
 
 @media (max-width: 767px) {
+  body[data-route="product"] .detail-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body[data-route="product"] .detail-panel {
+    order: -1;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  body[data-route="product"] .gallery-shell {
+    order: 1;
+  }
+
+  body[data-route="product"] .detail-copy h1 {
+    font-size: clamp(1.85rem, 9vw, 2.7rem);
+    line-height: 0.98;
+  }
+
+  body[data-route="product"] .detail-copy p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  body[data-route="product"] .price-stack {
+    padding: 12px;
+  }
+
   .hero-banner {
     margin-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom) - 16px);
     min-height: auto;

@@ -1408,6 +1408,10 @@ function renderProductDetail(productId) {
             <p>${product.description || "Producto HAODE para técnicos, tiendas y mayoreo. Confirma detalles por WhatsApp."}</p>
           </div>
           ${priceStackHtml(product)}
+          <div class="sticky-actions">
+            <button class="add-button" type="button" data-add-product="${product.id}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Precio pendiente"}</button>
+            <a class="whatsapp-outline" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
           ${specGridHtml(product, has360, gallery.length)}
           <div class="detail-whatsapp-note">
             <strong>Compra como taller</strong>
@@ -1416,10 +1420,6 @@ function renderProductDetail(productId) {
           <div class="detail-actions">
             ${officialUrl ? `<a class="outline-button" href="${officialUrl}">Página oficial</a>` : ""}
             <button class="text-button" type="button" data-share-product="${product.id}">Compartir</button>
-          </div>
-          <div class="sticky-actions">
-            <button class="add-button" type="button" data-add-product="${product.id}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Precio pendiente"}</button>
-            <a class="whatsapp-outline" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </article>
       </section>
