@@ -8609,7 +8609,17 @@ body.conversion-reference-page .floating-cta {
 
   body.conversion-reference-page .reference-logo img,
   body.catalog-page.catalog-reference-page .reference-logo img {
-    width: 148px;
+    width: 118px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  body.conversion-reference-page .reference-logo,
+  body.catalog-page.catalog-reference-page .reference-logo {
+    display: inline-flex;
+    width: max-content;
+    height: 48px;
+    align-items: center;
   }
 
   body.catalog-page.catalog-reference-page .reference-header {
@@ -9384,8 +9394,8 @@ body.trust-conversion-page .floating-cta {
   }
 
   body.trust-conversion-page .brand-logo {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 14px;
   }
 
@@ -9406,6 +9416,23 @@ body.trust-conversion-page .floating-cta {
   body.trust-conversion-page .trust-topline strong,
   body.trust-conversion-page .trust-topline small {
     white-space: normal;
+  }
+
+  body.distributor-conversion-page .site-header .trust-topline {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.distributor-conversion-page .site-header .trust-topline::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.distributor-conversion-page .site-header .trust-topline span {
+    flex: 0 0 168px;
   }
 
   body.trust-conversion-page .products-hero {
