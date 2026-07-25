@@ -13,12 +13,14 @@ test.describe('HAODE App empty search WhatsApp UI phase 19', () => {
   test('empty search result sends the searched model to WhatsApp', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${APP_URL}#lista`, { waitUntil: 'domcontentloaded' });
+    await page.locator('[data-focus-search]').first().click();
     await page.locator('[data-search-products]').fill('modelo inexistente 999');
 
     const searchEmptyState = page.locator('.empty-state-whatsapp').filter({ hasText: 'Sin resultados' });
     await expect(searchEmptyState).toContainText('Sin resultados');
     await expect(searchEmptyState).toContainText('lista grande por WhatsApp');
     await expect(page.getByRole('link', { name: 'Enviar búsqueda por WhatsApp' })).toHaveAttribute('href', /modelo%20inexistente%20999/);
+    await expectSearchEmptyWhatsappInView(page);
 
     const overflow = await page.evaluate(() => (
       Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)
@@ -26,3 +28,25 @@ test.describe('HAODE App empty search WhatsApp UI phase 19', () => {
     expect(overflow).toBeLessThanOrEqual(1);
   });
 });
+
+async function expectSearchEmptyWhatsappInView(page) {
+  await page.waitForFunction(() => {
+    const cta = document.querySelector('.search-empty-whatsapp .whatsapp-button')?.getBoundingClientRect();
+    return cta && cta.bottom <= window.innerHeight;
+  }, null, { timeout: 2500 });
+
+  const layout = await page.evaluate(() => {
+    const emptyState = document.querySelector('.search-empty-whatsapp')?.getBoundingClientRect();
+    const cta = document.querySelector('.search-empty-whatsapp .whatsapp-button')?.getBoundingClientRect();
+
+    return {
+      emptyTop: Math.round(emptyState?.top || 0),
+      ctaTop: Math.round(cta?.top || 0),
+      ctaBottom: Math.round(cta?.bottom || 0),
+    };
+  });
+
+  expect(layout.emptyTop).toBeGreaterThanOrEqual(0);
+  expect(layout.ctaTop).toBeLessThan(844);
+  expect(layout.ctaBottom).toBeLessThanOrEqual(844);
+}

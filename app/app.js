@@ -1262,6 +1262,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
     window.HAODE_DIAGNOSTICS.productosVisibles = productsToShow.length;
   }
   const noResultsHtml = productsToShow.length ? "" : listEmptyStateHtml(title);
+  const isSearchEmpty = !productsToShow.length && Boolean(state.searchQuery.trim());
 
   viewRootEl.innerHTML = `
     <div class="page-stack">
@@ -1272,8 +1273,6 @@ function renderList({ group = "", category = "Todos" } = {}) {
           <p>${productsToShow.length} productos activos. Menudeo, mayoreo y precios por cantidad cuando aplica.</p>
         </div>
       </section>
-      ${noResultsHtml}
-
       <section class="app-path-strip" aria-label="Compra profesional HAODE">
         <span><strong>Stock en México</strong> salida rápida</span>
         <span><strong>Garantía local</strong> calidad revisada</span>
@@ -1295,6 +1294,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
           <span>Buscar</span>
           <input type="search" data-search-products placeholder="iPhone 13, S23 Ultra, X200T..." value="${escapeAttr(state.searchQuery)}" autocomplete="off" />
         </label>
+        ${isSearchEmpty ? noResultsHtml : ""}
         <div class="filter-row">
           <select class="select-box" data-category-select aria-label="Filtrar por categoría">
             <option value="Todos"${state.activeCategory === "Todos" ? " selected" : ""}>Todas las categorías</option>
@@ -1308,6 +1308,8 @@ function renderList({ group = "", category = "Todos" } = {}) {
           </select>
         </div>
       </section>
+
+      ${!isSearchEmpty ? noResultsHtml : ""}
 
       <section class="section-block">
         <div class="product-grid" data-product-grid>
@@ -1341,9 +1343,9 @@ function listEmptyStateHtml(title) {
       "¿Me confirman stock en México, precio por cantidad, garantía local y envío?"
     ].join("\n");
   return `
-    <div class="empty-state empty-state-whatsapp">
+    <div class="empty-state empty-state-whatsapp${query ? " search-empty-whatsapp" : ""}">
       <strong>Sin resultados</strong>
-      <span>No encontramos productos activos con estos filtros. Envía el modelo exacto o una lista grande por WhatsApp y un asesor lo revisa.</span>
+      <span>No encontramos productos activos con estos filtros. Envía el modelo exacto o una lista grande por WhatsApp y un asesor confirma stock, precio por cantidad, garantía local y envío.</span>
       <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}" target="_blank" rel="noopener noreferrer">Enviar búsqueda por WhatsApp</a>
     </div>
   `;
@@ -1677,6 +1679,14 @@ function resetRouteScroll() {
   window.requestAnimationFrame(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   });
+}
+
+function focusProductSearch() {
+  const searchInput = document.querySelector("[data-search-products]");
+  if (!searchInput) return;
+
+  searchInput.scrollIntoView({ block: "center", behavior: "auto" });
+  searchInput.focus({ preventScroll: true });
 }
 
 function renderRoute({ resetScroll = false } = {}) {
@@ -2027,9 +2037,9 @@ async function handleDocumentClick(event) {
   if (focusSearchButton) {
     if (state.route.name !== "list") {
       window.location.hash = "#lista";
-      window.setTimeout(() => document.querySelector("[data-search-products]")?.focus(), 50);
+      window.setTimeout(focusProductSearch, 50);
     } else {
-      document.querySelector("[data-search-products]")?.focus();
+      focusProductSearch();
     }
   }
   if (shareProductButton) {
