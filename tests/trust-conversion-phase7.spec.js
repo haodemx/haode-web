@@ -47,6 +47,11 @@ test.describe("HAODE trust conversion UI phase 7", () => {
 });
 
 async function expectCompactTrustBrand(page) {
+  await page.waitForFunction(() => {
+    const logo = document.querySelector(".brand-logo");
+    return Boolean(logo) && getComputedStyle(logo).display === "none";
+  });
+
   const layout = await page.evaluate(() => {
     const brand = document.querySelector(".brand")?.getBoundingClientRect();
     const logo = document.querySelector(".brand-logo");
