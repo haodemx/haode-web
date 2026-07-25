@@ -2487,12 +2487,20 @@ function renderProductDetailPage() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-  const catalogRows = await loadErpPublicCatalog();
-  if (catalogRows.length) applyErpPublicCatalog(catalogRows);
-  else applyErpPublicStock(await loadErpPublicStock());
+document.addEventListener('DOMContentLoaded', () => {
   renderCatalogPage();
   renderProductDetailPage();
+
+  (async () => {
+    const catalogRows = await loadErpPublicCatalog();
+    if (catalogRows.length) {
+      applyErpPublicCatalog(catalogRows);
+    } else {
+      applyErpPublicStock(await loadErpPublicStock());
+    }
+    renderCatalogPage();
+    renderProductDetailPage();
+  })();
 });
 
 document.addEventListener('click', (event) => {
