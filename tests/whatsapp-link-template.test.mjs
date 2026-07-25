@@ -69,8 +69,10 @@ test('static HAODE WhatsApp links ask for quote details before opening chat', ()
 
 test('static and dynamic WhatsApp buttons use direct quote labels', () => {
   const weakAnchors = [];
+  const joinedIconLabels = [];
   const weakAnchorText = new Set([...WEAK_WHATSAPP_LABELS, 'WhatsApp']);
   const whatsappAnchorPattern = /<a\b(?=[^>]*href=["'][^"']*(?:wa\.me|whatsapp)[^"']*["'])[^>]*>([\s\S]*?)<\/a>/gi;
+  const joinedReferenceIconPattern = /<span\b[^>]*class=["'][^"']*\breference-btn-icon\b[^"']*["'][^>]*>[\s\S]*?<\/span>[^\s<]/;
 
   for (const file of collectFiles().filter((file) => file.endsWith('.html'))) {
     const relativePath = path.relative(ROOT, file);
@@ -80,6 +82,9 @@ test('static and dynamic WhatsApp buttons use direct quote labels', () => {
       if (weakAnchorText.has(text)) {
         weakAnchors.push(`${relativePath}: ${text}`);
       }
+    }
+    if (joinedReferenceIconPattern.test(content)) {
+      joinedIconLabels.push(relativePath);
     }
   }
 
@@ -91,5 +96,5 @@ test('static and dynamic WhatsApp buttons use direct quote labels', () => {
     }
   }
 
-  assert.equal([...weakAnchors, ...weakSourceStrings].length, 0, [...weakAnchors, ...weakSourceStrings].join('\n'));
+  assert.equal([...weakAnchors, ...weakSourceStrings, ...joinedIconLabels].length, 0, [...weakAnchors, ...weakSourceStrings, ...joinedIconLabels].join('\n'));
 });
