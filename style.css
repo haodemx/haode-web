@@ -8665,6 +8665,38 @@ body.ai-legacy-reference-page .reference-conversion-panel {
   margin-bottom: 24px;
 }
 
+body.micas-reference-page .new-page-hero-inner {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.46) 100%),
+    url("/assets/products/micas/hd/main.png") center right 9% / min(34vw, 360px) auto no-repeat,
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+}
+
+body.micas-reference-page .new-product-actions .btn-primary,
+body.micas-reference-page .new-page-links .btn-primary,
+body.legacy-ai-alias-page .new-product-actions .btn-primary,
+body.legacy-ai-alias-page .new-page-links .btn-primary {
+  background: var(--ref-green);
+  color: #ffffff;
+}
+
+body.micas-reference-page .new-product-actions .btn-primary:hover,
+body.micas-reference-page .new-page-links .btn-primary:hover,
+body.legacy-ai-alias-page .new-product-actions .btn-primary:hover,
+body.legacy-ai-alias-page .new-page-links .btn-primary:hover {
+  background: var(--ref-green-dark);
+}
+
+body.micas-reference-page .detail-price-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+body.micas-reference-page .micas-category-pricing {
+  color: var(--ref-orange-dark);
+  font-weight: 850;
+}
+
 @media (max-width: 760px) {
   body.ai-legacy-reference-page .topbar-inner,
   body.ai-detail-reference-page .topbar-inner,
