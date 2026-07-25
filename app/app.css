@@ -2542,7 +2542,7 @@ body {
   color: var(--haode-orange-dark);
   font-size: 0.56rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
 }
 
 .product-media img {
@@ -2801,7 +2801,7 @@ body {
   color: rgba(240, 74, 20, 0.62);
   font-size: 0.44rem;
   font-weight: 900;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
 }
 
 .app-home-product-media img {

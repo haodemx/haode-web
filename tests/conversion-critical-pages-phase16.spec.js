@@ -80,7 +80,22 @@ async function checkCriticalPage(page, pageCase, viewport) {
 
   await expect(page.locator('body')).not.toContainText('Producto HAODE México');
   await expect(page.locator('a:visible[href*="wa.me"], a:visible[href*="whatsapp"]').first()).toBeVisible();
+  if (pageCase.name === 'home' && viewport.width <= 430) {
+    await expectMobileHomeVisual(page);
+  }
   await expectNoHorizontalOverflow(page);
+}
+
+async function expectMobileHomeVisual(page) {
+  const visual = page.locator('.reference-mobile-hero-visual');
+  await expect(visual).toBeVisible();
+  await expect(visual).toContainText('Stock MX');
+  const box = await visual.evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return { top: Math.round(rect.top), height: Math.round(rect.height) };
+  });
+  expect(box.top).toBeLessThan(620);
+  expect(box.height).toBeGreaterThanOrEqual(110);
 }
 
 async function expectNoHorizontalOverflow(page) {
