@@ -8710,3 +8710,256 @@ body.ai-legacy-reference-page .reference-conversion-panel {
     line-height: 1.12;
   }
 }
+
+/* Phase 7 trust and warranty conversion system */
+body.trust-conversion-page .catalog-topbar,
+body.trust-conversion-page .site-header {
+  border-bottom: 1px solid rgba(20, 18, 15, 0.12);
+  background: rgba(255, 252, 248, 0.96);
+  box-shadow: 0 12px 30px rgba(36, 28, 20, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+body.trust-conversion-page .topbar,
+body.trust-conversion-page .topbar-inner,
+body.trust-conversion-page .products-hero-inner,
+body.trust-conversion-page .section-shell {
+  width: min(calc(100% - 48px), 1216px);
+}
+
+body.trust-conversion-page .topbar,
+body.trust-conversion-page .topbar-inner {
+  min-height: 86px;
+}
+
+body.trust-conversion-page .topbar-inner {
+  padding: 10px 0;
+}
+
+body.trust-conversion-page .site-header .topbar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  padding: 10px 0 8px;
+}
+
+body.trust-conversion-page .site-header .trust-topline {
+  justify-content: end;
+}
+
+body.trust-conversion-page .site-header .topnav {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  gap: 26px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(20, 18, 15, 0.08);
+}
+
+body.trust-conversion-page .trust-topline {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 360px;
+}
+
+body.trust-conversion-page .trust-topline span {
+  min-width: 118px;
+  border: 1px solid rgba(240, 74, 20, 0.22);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: linear-gradient(180deg, #fff7ef, #ffffff);
+  box-shadow: 0 12px 26px rgba(240, 74, 20, 0.08);
+}
+
+body.trust-conversion-page .trust-topline strong,
+body.trust-conversion-page .trust-topline small {
+  display: block;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+body.trust-conversion-page .trust-topline strong {
+  color: var(--ref-orange);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+body.trust-conversion-page .trust-topline small {
+  margin-top: 5px;
+  color: #5a5048;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+body.trust-conversion-page .trust-topline .trust-topline-whatsapp {
+  border-color: rgba(16, 185, 101, 0.26);
+  background: linear-gradient(180deg, #12b762, #0b9b52);
+  box-shadow: 0 16px 32px rgba(16, 185, 101, 0.18);
+}
+
+body.trust-conversion-page .trust-topline .trust-topline-whatsapp strong,
+body.trust-conversion-page .trust-topline .trust-topline-whatsapp small {
+  color: #ffffff;
+}
+
+body.trust-conversion-page .products-hero {
+  padding: 34px 0 18px;
+}
+
+body.trust-conversion-page .products-hero-inner,
+body.distributor-conversion-page .section-shell {
+  border: 1px solid rgba(240, 74, 20, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 56%, rgba(255, 250, 245, 0.52) 100%),
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+  box-shadow: var(--ref-shadow);
+}
+
+body.trust-conversion-page .products-hero h1,
+body.distributor-conversion-page .section-head h1 {
+  color: var(--ref-ink);
+  font-size: clamp(44px, 5vw, 76px);
+  font-weight: 950;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+body.trust-conversion-page .hero-text,
+body.trust-conversion-page .section-head p {
+  color: #3f3934;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+body.distributor-conversion-page .section-head {
+  align-items: end;
+  gap: 28px;
+}
+
+body.distributor-conversion-page .section-head > div {
+  max-width: 620px;
+}
+
+body.distributor-conversion-page .section-head > p {
+  max-width: 520px;
+  border-left: 4px solid var(--ref-orange);
+  padding: 14px 0 14px 18px;
+  background: linear-gradient(90deg, rgba(255, 106, 0, 0.08), rgba(255, 255, 255, 0));
+}
+
+body.trust-conversion-page .section-shell {
+  border-color: rgba(240, 74, 20, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--ref-shadow);
+}
+
+body.trust-conversion-page .trust-card,
+body.trust-conversion-page .contact-card,
+body.trust-conversion-page .home-category-card,
+body.trust-conversion-page .faq-grid article {
+  border-color: rgba(240, 74, 20, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(106, 68, 38, 0.06);
+}
+
+body.trust-conversion-page .reference-conversion-panel {
+  margin: 0 0 24px;
+}
+
+body.distributor-conversion-page .reference-conversion-strip {
+  margin-bottom: 22px;
+}
+
+body.trust-conversion-page .contact-whatsapp-chip,
+body.trust-conversion-page .btn-primary {
+  background: var(--ref-green);
+  border-color: var(--ref-green);
+  color: #ffffff;
+}
+
+body.trust-conversion-page .floating-cta {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body.trust-conversion-page .topbar,
+  body.trust-conversion-page .topbar-inner,
+  body.trust-conversion-page .products-hero-inner,
+  body.trust-conversion-page .section-shell {
+    width: min(calc(100% - 24px), 1216px);
+  }
+
+  body.trust-conversion-page .topbar-inner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 0;
+  }
+
+  body.trust-conversion-page .site-header .topbar {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 0;
+  }
+
+  body.trust-conversion-page .site-header .topnav {
+    display: none;
+  }
+
+  body.trust-conversion-page .brand-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  body.trust-conversion-page .trust-topline {
+    order: 2;
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  body.trust-conversion-page .trust-topline span {
+    min-width: 0;
+    padding: 8px;
+  }
+
+  body.trust-conversion-page .trust-topline strong,
+  body.trust-conversion-page .trust-topline small {
+    white-space: normal;
+  }
+
+  body.trust-conversion-page .products-hero {
+    padding: 18px 0 12px;
+  }
+
+  body.trust-conversion-page .products-hero-inner,
+  body.distributor-conversion-page .section-shell {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+    background:
+      linear-gradient(180deg, rgba(255, 250, 245, 0.98), rgba(255, 250, 245, 0.94)),
+      url("/assets/images/store-gallery/store-cdmx-03.jpg") center / cover no-repeat;
+  }
+
+  body.trust-conversion-page .products-hero h1,
+  body.distributor-conversion-page .section-head h1 {
+    font-size: 42px;
+  }
+
+  body.trust-conversion-page .contact-whatsapp-list {
+    grid-template-columns: 1fr;
+  }
+}
