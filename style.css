@@ -4072,6 +4072,10 @@ body.warranty-page .contact-whatsapp-chip {
   body.category-page .topbar-inner,
   body.category-entry-reference-page .topbar-inner,
   body.micas-reference-page .topbar-inner,
+  body.warranty-page .topbar-inner,
+  body.ai-legacy-reference-page .topbar-inner,
+  body.legacy-ai-alias-page .topbar-inner,
+  body.ai-detail-reference-page .topbar-inner,
   body.product-detail-page .topbar-inner {
     flex-wrap: wrap;
     align-items: flex-start;
@@ -4081,6 +4085,10 @@ body.warranty-page .contact-whatsapp-chip {
   body.category-page .topnav,
   body.category-entry-reference-page .topnav,
   body.micas-reference-page .topnav,
+  body.warranty-page .topnav,
+  body.ai-legacy-reference-page .topnav,
+  body.legacy-ai-alias-page .topnav,
+  body.ai-detail-reference-page .topnav,
   body.product-detail-page .topnav {
     display: flex;
     width: 100%;
@@ -4094,6 +4102,10 @@ body.warranty-page .contact-whatsapp-chip {
   body.category-page .topnav::-webkit-scrollbar,
   body.category-entry-reference-page .topnav::-webkit-scrollbar,
   body.micas-reference-page .topnav::-webkit-scrollbar,
+  body.warranty-page .topnav::-webkit-scrollbar,
+  body.ai-legacy-reference-page .topnav::-webkit-scrollbar,
+  body.legacy-ai-alias-page .topnav::-webkit-scrollbar,
+  body.ai-detail-reference-page .topnav::-webkit-scrollbar,
   body.product-detail-page .topnav::-webkit-scrollbar {
     display: none;
   }
@@ -4101,6 +4113,10 @@ body.warranty-page .contact-whatsapp-chip {
   body.category-page .topnav a,
   body.category-entry-reference-page .topnav a,
   body.micas-reference-page .topnav a,
+  body.warranty-page .topnav a,
+  body.ai-legacy-reference-page .topnav a,
+  body.legacy-ai-alias-page .topnav a,
+  body.ai-detail-reference-page .topnav a,
   body.product-detail-page .topnav a {
     flex: 0 0 auto;
     min-height: 36px;
@@ -8565,8 +8581,90 @@ body.conversion-reference-page .floating-cta {
     width: min(calc(100% - 24px), 1216px);
   }
 
-  body.conversion-reference-page .reference-logo img {
+  body.conversion-reference-page .reference-logo img,
+  body.catalog-page.catalog-reference-page .reference-logo img {
     width: 148px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-header {
+    height: auto;
+    min-height: 56px;
+  }
+
+  body.conversion-reference-page .reference-nav-shell,
+  body.catalog-page.catalog-reference-page .reference-nav-shell {
+    height: auto;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  body.conversion-reference-page .reference-menu-button,
+  body.catalog-page.catalog-reference-page .reference-menu-button {
+    display: none;
+  }
+
+  body.conversion-reference-page .reference-nav,
+  body.catalog-page.catalog-reference-page .reference-nav {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 2px 0 4px;
+    border-top: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.conversion-reference-page .reference-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.conversion-reference-page .reference-nav a,
+  body.catalog-page.catalog-reference-page .reference-nav a {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 8px 11px;
+    border: 1px solid rgba(255, 90, 20, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  body.conversion-reference-page .reference-nav a.is-active::after,
+  body.catalog-page.catalog-reference-page .reference-nav a.is-active::after {
+    display: none;
+  }
+
+  body.conversion-reference-page .reference-nav-actions,
+  body.catalog-page.catalog-reference-page .reference-nav-actions {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 0 2px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.conversion-reference-page .reference-nav-actions::-webkit-scrollbar,
+  body.catalog-page.catalog-reference-page .reference-nav-actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.conversion-reference-page .reference-nav-actions .reference-btn,
+  body.catalog-page.catalog-reference-page .reference-nav-actions .reference-btn {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: 12px;
   }
 
   body.conversion-reference-page .new-page-hero {

@@ -9,6 +9,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
       await page.goto(`${BASE_URL}${path}`, { waitUntil: "domcontentloaded" });
 
       await expect(page.locator("body")).toHaveClass(/trust-conversion-page/);
+      await expect(page.locator(".topnav a").first()).toBeVisible();
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Soporte profesional");
       await expect(page.locator('[data-reference-conversion="warranty-trust"]')).toContainText("Consulta garantía");
       await expect(page.locator('[data-reference-conversion="warranty-trust"] a[href*="wa.me"]')).toBeVisible();
