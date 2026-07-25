@@ -8401,6 +8401,35 @@ body.special-product-reference-page .contact-row .btn[href*="wa.me"]:focus-visib
   background: var(--ref-green-dark);
 }
 
+body.category-list-reference-page .reference-conversion-strip {
+  max-width: 760px;
+}
+
+body.category-list-reference-page .new-page-links .btn[href*="wa.me"] {
+  border-color: var(--ref-green);
+  background: var(--ref-green);
+  color: #ffffff;
+  box-shadow: 0 12px 26px rgba(18, 168, 84, 0.22);
+}
+
+body.category-list-reference-page .new-page-links .btn[href*="wa.me"]:hover,
+body.category-list-reference-page .new-page-links .btn[href*="wa.me"]:focus-visible,
+body.category-list-reference-page .category-whatsapp-primary:hover,
+body.category-list-reference-page .category-whatsapp-primary:focus-visible,
+body.category-list-reference-page .category-whatsapp-cta:hover,
+body.category-list-reference-page .category-whatsapp-cta:focus-visible {
+  border-color: var(--ref-green-dark);
+  background: var(--ref-green-dark);
+}
+
+body.category-list-reference-page .category-whatsapp-panel {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    radial-gradient(circle at 95% 0%, rgba(18, 168, 84, 0.18), transparent 35%),
+    linear-gradient(135deg, #101214 0%, #171a1d 100%);
+  box-shadow: 0 20px 46px rgba(16, 18, 20, 0.18);
+}
+
 body.category-hub-reference-page .section-shell {
   border: 1px solid rgba(240, 74, 20, 0.18);
   background: #ffffff;
