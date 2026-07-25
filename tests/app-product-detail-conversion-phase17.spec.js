@@ -25,8 +25,11 @@ test.describe('HAODE App product detail conversion UI phase 17', () => {
       await expect(page.locator('.detail-conversion-strip')).toContainText('Precio por cantidad');
       await expect(page.locator('.detail-conversion-strip')).toContainText('Calidad revisada');
       await expect(page.locator('.detail-conversion-strip')).toContainText('WhatsApp privado');
+      await expect(page.locator('.sticky-actions a[href*="wa.me"]').first()).toContainText('Cotizar por WhatsApp');
       await expect(page.locator('.sticky-actions a[href*="wa.me"]').first()).toBeVisible();
       await expectProductSummaryFirstScreen(page);
+      await expectProductWhatsappPrimary(page);
+      await expectDetailProofStripReadable(page);
 
       const overflow = await page.evaluate(() => (
         Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)
@@ -77,4 +80,40 @@ async function expectProductSummaryFirstScreen(page) {
   expect(layout.galleryTop).toBeGreaterThan(layout.titleTop);
   expect(layout.actionsHeight).toBeGreaterThan(48);
   expect(layout.actionsTop).toBeLessThan(844);
+}
+
+async function expectProductWhatsappPrimary(page) {
+  const details = await page.evaluate(() => {
+    const whatsapp = document.querySelector('.sticky-actions a[href*="wa.me"]');
+    const rect = whatsapp?.getBoundingClientRect();
+    const styles = whatsapp ? getComputedStyle(whatsapp) : null;
+    return {
+      width: Math.round(rect?.width || 0),
+      background: styles?.backgroundColor || '',
+      whiteSpace: styles?.whiteSpace || '',
+      color: styles?.color || '',
+    };
+  });
+
+  expect(details.width).toBeGreaterThan(150);
+  expect(details.background).toContain('18');
+  expect(details.whiteSpace).toBe('nowrap');
+  expect(details.color).toBe('rgb(255, 255, 255)');
+}
+
+async function expectDetailProofStripReadable(page) {
+  const details = await page.evaluate(() => {
+    const strip = document.querySelector('.detail-conversion-strip');
+    const cell = document.querySelector('.detail-conversion-strip span');
+    const strong = document.querySelector('.detail-conversion-strip strong');
+    return {
+      stripBackground: strip ? getComputedStyle(strip).backgroundImage : '',
+      cellBackground: cell ? getComputedStyle(cell).backgroundColor : '',
+      strongColor: strong ? getComputedStyle(strong).color : '',
+    };
+  });
+
+  expect(details.stripBackground).toContain('linear-gradient');
+  expect(details.cellBackground).toBe('rgba(0, 0, 0, 0)');
+  expect(details.strongColor).toBe('rgb(255, 255, 255)');
 }

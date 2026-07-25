@@ -1277,21 +1277,6 @@ function renderList({ group = "", category = "Todos" } = {}) {
           <p>${productsToShow.length} productos activos. Menudeo, mayoreo y precios por cantidad cuando aplica.</p>
         </div>
       </section>
-      <section class="app-path-strip" aria-label="Compra profesional HAODE">
-        <span><strong>Stock en México</strong> salida rápida</span>
-        <span><strong>Garantía local</strong> calidad revisada</span>
-        <span><strong>WhatsApp privado</strong> listas grandes</span>
-      </section>
-
-      ${appBulkPanelHtml({
-        title: "Compra muchas piezas sin esperar carrito perfecto",
-        copy: "Busca modelos, agrega cantidades y manda una lista completa. Un asesor confirma disponibilidad, precio final y envío por WhatsApp.",
-        message: `Hola HAODE México, quiero cotizar una lista grande de ${title}.`
-      })}
-
-      <section class="section-block">
-        <div class="category-rail" data-category-rail>${categoryCardsHtml()}</div>
-      </section>
 
       <section class="toolbar" aria-label="Filtros de productos">
         <label class="search-box">
@@ -1311,6 +1296,22 @@ function renderList({ group = "", category = "Todos" } = {}) {
             <option value="price-desc"${state.sortMode === "price-desc" ? " selected" : ""}>Precio mayor</option>
           </select>
         </div>
+      </section>
+
+      ${appBulkPanelHtml({
+        title: "Compra muchas piezas sin esperar carrito perfecto",
+        copy: "Busca modelos, agrega cantidades y manda una lista completa. Un asesor confirma disponibilidad, precio final y envío por WhatsApp.",
+        message: `Hola HAODE México, quiero cotizar una lista grande de ${title}.`
+      })}
+
+      <section class="app-path-strip" aria-label="Compra profesional HAODE">
+        <span><strong>Stock en México</strong> salida rápida</span>
+        <span><strong>Garantía local</strong> calidad revisada</span>
+        <span><strong>WhatsApp privado</strong> listas grandes</span>
+      </section>
+
+      <section class="section-block">
+        <div class="category-rail app-list-categories" data-category-rail>${categoryCardsHtml()}</div>
       </section>
 
       ${!isSearchEmpty ? noResultsHtml : ""}
@@ -1416,7 +1417,7 @@ function renderProductDetail(productId) {
           ${priceStackHtml(product)}
           <div class="sticky-actions">
             <button class="add-button" type="button" data-add-product="${product.id}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Precio pendiente"}</button>
-            <a class="whatsapp-outline" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="whatsapp-outline" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" data-detail-whatsapp target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
           </div>
           ${specGridHtml(product, has360, gallery.length)}
           <div class="detail-whatsapp-note">

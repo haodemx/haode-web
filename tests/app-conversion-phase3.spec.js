@@ -20,6 +20,7 @@ test.describe("HAODE App conversion UI phase 3", () => {
 
     await expect(page.locator(".app-bulk-panel").first()).toBeVisible();
     await expect(page.locator(".app-bulk-panel").first()).toContainText("Compra muchas piezas");
+    await expectListSearchBeforeBulkPanel(page);
     await expect(page.locator(".app-card-badges").first()).toContainText("WhatsApp privado");
     await expectNoHorizontalOverflow(page);
 
@@ -58,4 +59,23 @@ async function expectCartReviewCtaInView(page) {
 
   expect(layout.top).toBeGreaterThanOrEqual(0);
   expect(layout.bottom).toBeLessThanOrEqual(844);
+}
+
+async function expectListSearchBeforeBulkPanel(page) {
+  const layout = await page.evaluate(() => {
+    const search = document.querySelector('[data-search-products]')?.getBoundingClientRect();
+    const bulk = document.querySelector('.app-bulk-panel')?.getBoundingClientRect();
+    const input = document.querySelector('[data-search-products]');
+    return {
+      searchTop: Math.round(search?.top || 0),
+      searchBottom: Math.round(search?.bottom || 0),
+      bulkTop: Math.round(bulk?.top || 0),
+      inputBorder: input ? getComputedStyle(input).borderColor : '',
+    };
+  });
+
+  expect(layout.searchTop).toBeGreaterThanOrEqual(0);
+  expect(layout.searchBottom).toBeLessThan(layout.bulkTop);
+  expect(layout.searchBottom).toBeLessThan(360);
+  expect(layout.inputBorder).toContain('240');
 }
