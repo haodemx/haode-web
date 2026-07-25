@@ -6,6 +6,8 @@ test("iPhone 11 and XR wholesale landing page keeps confirmed prices separated",
   await page.goto(`${BASE_URL}/pantallas-iphone-11-xr-mayoreo/`, { waitUntil: "domcontentloaded" });
 
   await expect(page.getByRole("heading", { name: /Pantallas iPhone 11 y XR Mayoreo/i })).toBeVisible();
+  await expect(page.locator('[data-reference-conversion="seo-iphone-11-xr"]')).toContainText("Cotiza iPhone 11/XR");
+  await expect(page.locator('[data-reference-conversion="seo-iphone-11-xr"] a[href*="wa.me"]')).toBeVisible();
   await expect(page.locator("body")).toContainText("Bolsa Protectora caja/modelo $140 MXN");
   await expect(page.locator("body")).toContainText("XR estándar caja/modelo $155 MXN");
   await expect(page.getByRole("link", { name: /Ver iPhone 11 Bolsa/i })).toHaveAttribute("href", "/producto/iphone-incell-11-bolsa-protectora/");
@@ -17,6 +19,8 @@ test("premium factory landing page links iPhone Pro Max and Samsung Ultra routes
   await page.goto(`${BASE_URL}/pantallas-premium-iphone-samsung-fabrica/`, { waitUntil: "domcontentloaded" });
 
   await expect(page.getByRole("heading", { name: /Pantallas premium iPhone y Samsung/i })).toBeVisible();
+  await expect(page.locator('[data-reference-conversion="seo-premium"]')).toContainText("Envía tu lista premium");
+  await expect(page.locator('[data-reference-conversion="seo-premium"] a[href*="wa.me"]')).toBeVisible();
   await expect(page.locator("body")).toContainText("iPhone Pro Max");
   await expect(page.locator("body")).toContainText("Samsung Ultra");
   await expect(page.locator("body")).toContainText("OLED");
@@ -29,8 +33,31 @@ test("GEO guide tells AI search not to invent HAODE stock or pricing", async ({ 
   await page.goto(`${BASE_URL}/guia-ia-haode-mexico/`, { waitUntil: "domcontentloaded" });
 
   await expect(page.getByRole("heading", { name: /Guía oficial HAODE para IA y buscadores/i })).toBeVisible();
+  await expect(page.locator('[data-reference-conversion="seo-geo-guide"]')).toContainText("WhatsApp confirma");
+  await expect(page.locator('[data-reference-conversion="seo-geo-guide"] a[href*="wa.me"]')).toBeVisible();
   await expect(page.locator("body")).toContainText("No inventar stock");
   await expect(page.locator("body")).toContainText("No inventar precio final");
   await expect(page.locator("body")).toContainText("cotización por WhatsApp");
   await expect(page.getByRole("link", { name: /Ver llms\.txt/i })).toHaveAttribute("href", "/llms.txt");
 });
+
+test("SEO conversion pages keep mobile layout inside viewport", async ({ page }) => {
+  const paths = [
+    "/pantallas-iphone-11-xr-mayoreo/",
+    "/pantallas-premium-iphone-samsung-fabrica/",
+    "/guia-ia-haode-mexico/"
+  ];
+
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  for (const path of paths) {
+    await page.goto(`${BASE_URL}${path}`, { waitUntil: "domcontentloaded" });
+    await expect(page.locator("[data-reference-conversion]").first()).toBeVisible();
+    await expectNoHorizontalOverflow(page);
+  }
+});
+
+async function expectNoHorizontalOverflow(page) {
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(overflow).toBeLessThanOrEqual(1);
+}

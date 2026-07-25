@@ -8454,3 +8454,118 @@ body.conversion-reference-page .floating-cta {
     text-align: center;
   }
 }
+
+/* Phase 5 high-intent SEO page conversion system */
+body.seo-conversion-page .breadcrumb-nav {
+  width: min(calc(100% - 48px), 1216px);
+}
+
+body.seo-conversion-page .seo-landing-hero {
+  padding: 30px 0 18px;
+}
+
+body.seo-conversion-page .seo-landing-hero-grid,
+body.seo-conversion-page .section-shell {
+  width: min(calc(100% - 48px), 1216px);
+}
+
+body.seo-conversion-page .seo-landing-copy,
+body.seo-conversion-page .seo-landing-media {
+  border-color: rgba(240, 74, 20, 0.18);
+  border-radius: 8px;
+  box-shadow: var(--ref-shadow);
+}
+
+body.seo-conversion-page .seo-landing-copy {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.94) 100%),
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+}
+
+body.seo-conversion-page .seo-landing-copy h1 {
+  color: var(--ref-ink);
+  font-weight: 950;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+body.seo-conversion-page .seo-landing-copy .hero-text {
+  color: #3f3934;
+  font-weight: 650;
+}
+
+body.seo-conversion-page .seo-landing-media {
+  background:
+    radial-gradient(circle at 78% 16%, rgba(18, 168, 84, 0.12), transparent 34%),
+    linear-gradient(180deg, #fff8ef, #ffffff);
+}
+
+body.seo-conversion-page .landing-badges span {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #2b2520;
+}
+
+body.seo-conversion-page .landing-price-card,
+body.seo-conversion-page .premium-route-card,
+body.seo-conversion-page .high-end-seo-card,
+body.seo-conversion-page .trust-card,
+body.seo-conversion-page .seo-link-grid a {
+  border-color: rgba(240, 74, 20, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(106, 68, 38, 0.06);
+}
+
+body.seo-conversion-page .landing-price-card a,
+body.seo-conversion-page .premium-route-card,
+body.seo-conversion-page .high-end-seo-card a,
+body.seo-conversion-page .seo-link-grid a {
+  pointer-events: auto;
+}
+
+body.seo-conversion-page .landing-price-card img,
+body.seo-conversion-page .premium-route-card img {
+  background: #fff8ef;
+}
+
+body.seo-conversion-page .section-shell {
+  border: 1px solid rgba(240, 74, 20, 0.18);
+  background: #ffffff;
+  box-shadow: var(--ref-shadow);
+}
+
+body.seo-conversion-page .reference-conversion-panel {
+  margin-bottom: 24px;
+}
+
+body.geo-guide-page.seo-conversion-page .seo-landing-media img {
+  max-width: 280px;
+}
+
+@media (max-width: 760px) {
+  body.seo-conversion-page .breadcrumb-nav,
+  body.seo-conversion-page .seo-landing-hero-grid,
+  body.seo-conversion-page .section-shell {
+    width: min(calc(100% - 24px), 1216px);
+  }
+
+  body.seo-conversion-page .seo-landing-hero {
+    padding: 18px 0 12px;
+  }
+
+  body.seo-conversion-page .seo-landing-copy {
+    padding: 20px;
+    background:
+      linear-gradient(180deg, rgba(255, 250, 245, 0.98), rgba(255, 250, 245, 0.94)),
+      url("/assets/images/store-gallery/store-cdmx-03.jpg") center / cover no-repeat;
+  }
+
+  body.seo-conversion-page .seo-landing-copy h1 {
+    font-size: clamp(2.35rem, 12vw, 3.2rem);
+  }
+
+  body.seo-conversion-page .landing-badges span {
+    justify-content: flex-start;
+    gap: 6px;
+  }
+}
