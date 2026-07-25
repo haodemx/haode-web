@@ -26,6 +26,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator(".reference-nav a").first()).toBeVisible();
     await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
     await expectHeaderWhatsAppGreen(page);
+    await expectHeaderAppButtonOrange(page);
     await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
     const mobileCta = await page.locator(".floating-cta").evaluate((el) => {
       const rect = el.getBoundingClientRect();
@@ -79,4 +80,20 @@ async function expectNoHorizontalOverflow(page) {
 async function expectHeaderWhatsAppGreen(page) {
   const background = await page.locator(".reference-nav-actions a[href*='wa.me']").first().evaluate((el) => getComputedStyle(el).backgroundColor);
   expect(background).toBe("rgb(18, 168, 84)");
+}
+
+async function expectHeaderAppButtonOrange(page) {
+  const button = page.locator(".reference-nav-actions a[href$='/app/']").first();
+  await expect(button).toBeVisible();
+  const styles = await button.evaluate((el) => {
+    const computed = getComputedStyle(el);
+    return {
+      background: computed.backgroundColor,
+      color: computed.color,
+      text: el.textContent.trim()
+    };
+  });
+  expect(styles.text).toContain("Comprar en APP");
+  expect(styles.background).toBe("rgb(255, 90, 10)");
+  expect(styles.color).toBe("rgb(255, 255, 255)");
 }

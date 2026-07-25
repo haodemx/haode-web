@@ -2514,11 +2514,41 @@ body {
 
 .product-card {
   border-color: rgba(25, 21, 18, 0.1);
-  box-shadow: var(--shadow-card);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 250, 245, 0.98));
+  box-shadow: 0 12px 28px rgba(25, 21, 18, 0.07);
 }
 
 .product-media {
-  background: linear-gradient(180deg, #fffaf5 0%, #f2eee8 100%);
+  border-bottom: 1px solid rgba(240, 74, 20, 0.12);
+  background:
+    radial-gradient(circle at 78% 14%, rgba(255, 90, 10, 0.16), transparent 34%),
+    linear-gradient(145deg, rgba(18, 20, 22, 0.08), #fffaf5 48%, #f2eee8 100%);
+}
+
+.product-media::before {
+  content: "STOCK MX";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 20px;
+  align-items: center;
+  padding: 0 7px;
+  border: 1px solid rgba(240, 74, 20, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--haode-orange-dark);
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.product-media img {
+  position: relative;
+  z-index: 0;
+  filter: drop-shadow(0 10px 14px rgba(15, 18, 20, 0.12));
 }
 
 .bottom-nav {
@@ -2736,29 +2766,51 @@ body {
 }
 
 .app-home-product-card {
+  position: relative;
   display: grid;
   grid-template-columns: 70px minmax(0, 1fr) 40px;
   align-items: center;
   gap: 10px;
   min-height: 78px;
   padding: 8px;
-  border-color: rgba(25, 21, 18, 0.1);
-  box-shadow: none;
+  border-color: rgba(240, 74, 20, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 250, 245, 0.98));
+  box-shadow: 0 10px 24px rgba(25, 21, 18, 0.06);
 }
 
 .app-home-product-media {
+  position: relative;
   display: grid;
   width: 70px;
   height: 62px;
   place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(240, 74, 20, 0.15);
   border-radius: 8px;
-  background: #fffaf5;
+  background:
+    linear-gradient(145deg, rgba(18, 20, 22, 0.08), rgba(255, 250, 245, 0.98) 46%),
+    #fffaf5;
+}
+
+.app-home-product-media::before {
+  content: "HAODE";
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  color: rgba(240, 74, 20, 0.62);
+  font-size: 0.44rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
 }
 
 .app-home-product-media img {
-  width: 92%;
-  height: 92%;
+  position: relative;
+  z-index: 1;
+  width: 96%;
+  height: 96%;
   object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgba(15, 18, 20, 0.12));
 }
 
 .app-home-product-copy {

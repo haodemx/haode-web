@@ -9488,3 +9488,21 @@ body.contact-reference-page .reference-nav-actions a[href*="wa.me"] .reference-b
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.74);
 }
+
+body.conversion-reference-page .reference-nav-actions a[href$="/app/"],
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href$="/app/"],
+body.ai-reference-page .reference-nav-actions a[href$="/app/"],
+body.contact-reference-page .reference-nav-actions a[href$="/app/"] {
+  border-color: var(--ref-orange, #ff5a0a);
+  background: var(--ref-orange, #ff5a0a);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(255, 90, 10, 0.18);
+}
+
+body.conversion-reference-page .reference-nav-actions a[href$="/app/"] .reference-btn-icon,
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href$="/app/"] .reference-btn-icon,
+body.ai-reference-page .reference-nav-actions a[href$="/app/"] .reference-btn-icon,
+body.contact-reference-page .reference-nav-actions a[href$="/app/"] .reference-btn-icon {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.72);
+}

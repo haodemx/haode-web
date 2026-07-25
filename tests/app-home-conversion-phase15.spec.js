@@ -39,6 +39,7 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await expect(page.locator('.app-stock-strip')).toContainText('WhatsApp privado');
     await expect(page.locator('.app-hero-actions a[href*="wa.me"]').first()).toBeVisible();
     await expect(page.locator('.app-home-product-card').first()).toBeVisible({ timeout: 15000 });
+    await expectHomeProductMediaVisible(page);
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(1);
@@ -57,3 +58,25 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     expect(diagnostics.productosVisibles).toBeGreaterThan(0);
   });
 });
+
+async function expectHomeProductMediaVisible(page) {
+  const media = page.locator('.app-home-product-media').first();
+  await expect(media).toBeVisible();
+  const details = await media.evaluate((el) => {
+    const img = el.querySelector('img');
+    const rect = el.getBoundingClientRect();
+    const computed = getComputedStyle(el);
+    return {
+      width: Math.round(rect.width),
+      height: Math.round(rect.height),
+      background: computed.backgroundColor,
+      naturalWidth: img?.naturalWidth || 0,
+      complete: img?.complete || false
+    };
+  });
+  expect(details.width).toBeGreaterThanOrEqual(60);
+  expect(details.height).toBeGreaterThanOrEqual(56);
+  expect(details.background).not.toBe('rgba(0, 0, 0, 0)');
+  expect(details.complete).toBe(true);
+  expect(details.naturalWidth).toBeGreaterThan(0);
+}
