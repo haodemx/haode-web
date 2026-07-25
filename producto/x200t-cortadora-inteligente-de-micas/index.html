@@ -221,9 +221,9 @@
         <div class="section-head section-head-compact">
           <div>
             <p class="section-kicker">Galería</p>
-            <h2>Imágenes reales del producto</h2>
+            <h2>Imagen real del producto</h2>
           </div>
-          <p>Haz clic en cualquier imagen para ampliarla. Usa las flechas para moverte entre vistas.</p>
+          <p>Haz clic en la imagen para ampliarla. Las vistas adicionales se publican solo cuando el material está confirmado.</p>
         </div>
 
         <div class="detail-gallery-wrap">
@@ -356,7 +356,6 @@
 
   <script>
     (() => {
-      const base = '/assets/products/cut-machine/x200t/';
       const mainImage = document.getElementById('x200t-main-image');
       const gallery = document.getElementById('x200t-gallery');
       const prevButton = document.getElementById('x200t-prev');
@@ -367,29 +366,12 @@
 
       if (!mainImage || !gallery || !prevButton || !nextButton || !zoomModal || !zoomImage || !zoomClose) return;
 
-      const images = [
-        'main.jpg',
-        'gallery-01.jpg',
-        'gallery-02.jpg',
-        'gallery-03.jpg',
-        'gallery-04.jpg',
-        'gallery-05.png',
-        'gallery-06.png',
-        'gallery-07.png'
-      ].map((file) => `${base}${file}`);
+      const images = ['/assets/products/cut-machine/x200t/main.jpg'];
+      const labels = ['HAODE X200T Cortadora Inteligente de Micas'];
 
-      const labels = [
-        'HAODE X200T Cortadora Inteligente de Micas',
-        'X200T vista 1',
-        'X200T vista 2',
-        'X200T vista 3',
-        'X200T vista 4',
-        'X200T imagen publicitaria 1',
-        'X200T imagen publicitaria 2',
-        'X200T empaque y configuración'
-      ];
-
-      gallery.innerHTML = images.slice(1).map((src, index) => `<img src="${src}" alt="${labels[index + 1]}" loading="lazy" data-index="${index + 1}" />`).join('');
+      prevButton.hidden = images.length <= 1;
+      nextButton.hidden = images.length <= 1;
+      gallery.innerHTML = images.map((src, index) => `<img src="${src}" alt="${labels[index]}" loading="lazy" data-index="${index}" />`).join('');
 
       let currentIndex = 0;
 
