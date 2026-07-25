@@ -1041,12 +1041,6 @@ function renderHome() {
   viewRootEl.innerHTML = `
     <div class="page-stack">
       <section class="app-procurement-hero app-home-board">
-        <div class="app-stock-strip" aria-label="Ventajas HAODE">
-          <span><strong>Stock en México</strong><small>Envíos a todo el país</small></span>
-          <span><strong>Precio por cantidad</strong><small>Mayoreo privado</small></span>
-          <span><strong>Calidad revisada</strong><small>Para talleres</small></span>
-          <span><strong>WhatsApp privado</strong><small>Lista grande</small></span>
-        </div>
         <div class="app-home-intro">
           <span class="hero-badge">Tienda de fábrica HAODE</span>
           <h1>Fábrica directa para talleres</h1>
@@ -1061,7 +1055,14 @@ function renderHome() {
 
         <div class="app-hero-actions">
           <a class="whatsapp-button" href="${largeListWhatsappUrl("App inicio")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
-          <a class="outline-button" href="#lista">Buscar más productos</a>
+          <a class="outline-button" href="#lista">Ver catálogo</a>
+        </div>
+
+        <div class="app-stock-strip" aria-label="Ventajas HAODE">
+          <span><strong>Stock en México</strong><small>Envíos a todo el país</small></span>
+          <span><strong>Precio por cantidad</strong><small>Mayoreo privado</small></span>
+          <span><strong>Calidad revisada</strong><small>Para talleres</small></span>
+          <span><strong>WhatsApp privado</strong><small>Lista grande</small></span>
         </div>
 
         <section class="app-home-featured" aria-labelledby="app-featured-title">

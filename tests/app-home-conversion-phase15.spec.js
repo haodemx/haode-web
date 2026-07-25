@@ -38,6 +38,7 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await expect(page.locator('.app-stock-strip')).toContainText('Calidad revisada');
     await expect(page.locator('.app-stock-strip')).toContainText('WhatsApp privado');
     await expect(page.locator('.app-hero-actions a[href*="wa.me"]').first()).toBeVisible();
+    await expectAppFastQuoteWorkbench(page);
     await expect(page.locator('.app-home-product-card').first()).toBeVisible({ timeout: 15000 });
     await expectHomeProductMediaVisible(page);
     await expectBottomSearchNav(page);
@@ -87,4 +88,29 @@ async function expectBottomSearchNav(page) {
   await expect(searchNav).toBeVisible();
   await searchNav.click();
   await expect(page.locator('[data-search-products]')).toBeFocused();
+}
+
+async function expectAppFastQuoteWorkbench(page) {
+  const details = await page.evaluate(() => {
+    const search = document.querySelector('.app-quick-search')?.getBoundingClientRect();
+    const proof = document.querySelector('.app-stock-strip')?.getBoundingClientRect();
+    const whatsapp = document.querySelector('.app-hero-actions a[href*="wa.me"]')?.getBoundingClientRect();
+    const firstProofText = document.querySelector('.app-stock-strip strong');
+    return {
+      searchTop: Math.round(search?.top || 0),
+      searchBottom: Math.round(search?.bottom || 0),
+      proofTop: Math.round(proof?.top || 0),
+      proofBackground: proof ? getComputedStyle(document.querySelector('.app-stock-strip')).backgroundImage : '',
+      proofTextColor: firstProofText ? getComputedStyle(firstProofText).color : '',
+      whatsappTop: Math.round(whatsapp?.top || 0),
+      whatsappBottom: Math.round(whatsapp?.bottom || 0),
+    };
+  });
+
+  expect(details.searchTop).toBeLessThan(details.proofTop);
+  expect(details.searchBottom).toBeLessThan(470);
+  expect(details.whatsappTop).toBeGreaterThanOrEqual(0);
+  expect(details.whatsappBottom).toBeLessThanOrEqual(620);
+  expect(details.proofBackground).toContain('linear-gradient');
+  expect(details.proofTextColor).toBe('rgb(255, 255, 255)');
 }
