@@ -125,6 +125,16 @@ function main() {
   const appById = new Map(appProducts.map((product) => [product.id, product]));
   const categoryPages = new Set(collectCategoryPageSlugs());
   const staticSlugs = collectProductPageSlugs();
+  const websiteCanonicalTargets = new Map();
+
+  websiteProducts.forEach((product) => {
+    const filePath = path.join(PRODUCT_DIR, product.id, 'index.html');
+    if (!fs.existsSync(filePath)) return;
+    const pageSlugs = extractProductPageSlugs(fs.readFileSync(filePath, 'utf8'));
+    if (pageSlugs.canonicalSlug && pageSlugs.canonicalSlug !== product.id) {
+      websiteCanonicalTargets.set(pageSlugs.canonicalSlug, product.id);
+    }
+  });
 
   findDuplicates(websiteProducts, (product) => product.id).forEach((dup) => {
     issue(issues, 'error', 'DUPLICATE_WEBSITE_SKU', dup.key, `${dup.count} entries in data/products.generated.js`);
@@ -205,14 +215,46 @@ function main() {
     const text = fs.readFileSync(filePath, 'utf8');
     const isRedirect = /http-equiv=["']refresh|window\.location|location\.href/i.test(text);
     const pageSlugs = extractProductPageSlugs(text);
+    const canonicalWebsiteAlias = Boolean(
+      pageSlugs.canonicalSlug
+      && pageSlugs.canonicalSlug !== slug
+      && websiteById.has(pageSlugs.canonicalSlug)
+    );
+    const websiteAliasRoute = Boolean(
+      websiteById.has(slug)
+      && pageSlugs.canonicalSlug
+      && websiteCanonicalTargets.get(pageSlugs.canonicalSlug) === slug
+    );
+    const canonicalTargetForWebsiteAlias = websiteCanonicalTargets.get(slug);
     if (pageSlugs.canonicalSlug && pageSlugs.canonicalSlug !== slug) {
-      issue(issues, 'warn', 'ROUTE_CANONICAL_SLUG_MISMATCH', slug, `canonical slug is ${pageSlugs.canonicalSlug}`);
+      issue(
+        issues,
+        canonicalWebsiteAlias || websiteAliasRoute ? 'report' : 'warn',
+        canonicalWebsiteAlias || websiteAliasRoute ? 'HISTORICAL_ROUTE_ALIAS' : 'ROUTE_CANONICAL_SLUG_MISMATCH',
+        slug,
+        `canonical slug is ${pageSlugs.canonicalSlug}`
+      );
     }
     if (pageSlugs.ogSlug && pageSlugs.ogSlug !== slug) {
-      issue(issues, 'warn', 'ROUTE_OG_SLUG_MISMATCH', slug, `OG URL slug is ${pageSlugs.ogSlug}`);
+      issue(
+        issues,
+        canonicalWebsiteAlias || websiteAliasRoute ? 'report' : 'warn',
+        canonicalWebsiteAlias || websiteAliasRoute ? 'HISTORICAL_ROUTE_OG_ALIAS' : 'ROUTE_OG_SLUG_MISMATCH',
+        slug,
+        `OG URL slug is ${pageSlugs.ogSlug}`
+      );
     }
-    if (!websiteById.has(slug) && !isRedirect) {
+    if (!websiteById.has(slug) && !isRedirect && !canonicalWebsiteAlias && !canonicalTargetForWebsiteAlias) {
       issue(issues, 'warn', 'STATIC_PAGE_WITHOUT_WEBSITE_PRODUCT', slug, `producto/${slug}/index.html does not match website product data`);
+    }
+    if (canonicalTargetForWebsiteAlias) {
+      issue(
+        issues,
+        'report',
+        'CANONICAL_PAGE_FOR_WEBSITE_ALIAS',
+        slug,
+        `website SKU ${canonicalTargetForWebsiteAlias} redirects to this canonical page`
+      );
     }
   });
 

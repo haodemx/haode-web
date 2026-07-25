@@ -1,0 +1,1465 @@
+{
+  "generatedAt": "2026-07-25T21:34:27.347Z",
+  "auditDate": "2026-07-25",
+  "guardrails": {
+    "productDataChanged": false,
+    "pricesChanged": false,
+    "imagesReplaced": false,
+    "productsPublished": false,
+    "firestoreChanged": false
+  },
+  "summary": {
+    "websiteProducts": 140,
+    "appProducts": 147,
+    "commonProducts": 126,
+    "websiteOnly": 14,
+    "appOnly": 21,
+    "staticProductRoutes": 189,
+    "historicalAliases": 37,
+    "canonicalTargets": 2,
+    "standaloneStatic": 3,
+    "websiteImageMissing": 0,
+    "appImageMissing": 0,
+    "appPlaceholderImages": 1,
+    "websitePriceConfirmation": 15,
+    "websiteVideoMissing": 33,
+    "oldConfirmationRows": 87,
+    "oldConfirmedRows": 0
+  },
+  "websiteOnly": [
+    {
+      "id": "iphone-oled-12mini",
+      "name": "Pantalla para iPhone 12 mini",
+      "category": "iphone-oled",
+      "image": "assets/products/iphone-oled/12mini/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-13mini",
+      "name": "Pantalla para iPhone 13 mini",
+      "category": "iphone-oled",
+      "image": "assets/products/iphone-oled/13mini/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-15plus",
+      "name": "Pantalla para iPhone 15 Plus",
+      "category": "iphone-oled",
+      "image": "assets/products/iphone-oled/15plus/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-16",
+      "name": "Pantalla para iPhone 16",
+      "category": "iphone-oled",
+      "image": "assets/products/iphone-oled/16/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-16plus",
+      "name": "Pantalla para iPhone 16 Plus",
+      "category": "iphone-oled",
+      "image": "assets/products/iphone-oled/16plus/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-note-9",
+      "name": "Pantalla para Samsung Note 9",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/note-9/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s20",
+      "name": "Pantalla para Samsung S20",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s20/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s20-ultra",
+      "name": "Pantalla para Samsung S20 Ultra",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s20-ultra/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s21",
+      "name": "Pantalla para Samsung S21",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s21/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s21-plus",
+      "name": "Pantalla para Samsung S21 Plus",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s21-plus/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s22-plus",
+      "name": "Pantalla para Samsung S22 Plus",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s22-plus/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s23-plus",
+      "name": "Pantalla para Samsung S23 Plus",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s23-plus/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s24-plus",
+      "name": "Pantalla para Samsung S24 Plus",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s24-plus/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s9-plus",
+      "name": "Pantalla para Samsung S9 Plus",
+      "category": "samsung-oled",
+      "image": "assets/products/samsung-oled/s9-plus/main.jpg",
+      "priceStatus": "全部价格待确认",
+      "ownerDecision": ""
+    }
+  ],
+  "appOnly": [
+    {
+      "id": "samsung-incell-s10-lite",
+      "name": "Pantalla para Samsung S10 Lite",
+      "category": "Pantallas Samsung INCELL",
+      "image": "/assets/products/samsung-incell/main.jpg",
+      "publicPrice": 450,
+      "wholesalePrice": 420,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-incell-note-10-lite",
+      "name": "Pantalla para Samsung Note 10 Lite",
+      "category": "Pantallas Samsung INCELL",
+      "image": "/assets/products/samsung-incell/main.jpg",
+      "publicPrice": 650,
+      "wholesalePrice": 640,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-incell-note-20",
+      "name": "Pantalla para Samsung Note 20",
+      "category": "Pantallas Samsung INCELL",
+      "image": "/assets/products/samsung-incell/main.jpg",
+      "publicPrice": 650,
+      "wholesalePrice": 620,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-s21-ultra",
+      "name": "Pantalla para Samsung S21 Ultra",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/s21-ultra/main.jpg",
+      "publicPrice": 2500,
+      "wholesalePrice": 2400,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-s22-plus",
+      "name": "Pantalla para Samsung S22 Plus",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/s22-plus/main.png",
+      "publicPrice": 1700,
+      "wholesalePrice": 1650,
+      "ownerDecision": ""
+    },
+    {
+      "id": "x200t-cortadora-micas",
+      "name": "HAODE X200T Cortadora Inteligente de Micas",
+      "category": "Máquinas de Mica",
+      "image": "/assets/products/cut-machine/x200t/main.jpg",
+      "publicPrice": 6800,
+      "wholesalePrice": 6500,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-s22-ultra",
+      "name": "Pantalla para Samsung S22 Ultra",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/s22-ultra/main.jpg",
+      "publicPrice": 3000,
+      "wholesalePrice": 2900,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-s23-plus",
+      "name": "Pantalla para Samsung S23 Plus",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/s23-plus/main.png",
+      "publicPrice": 1800,
+      "wholesalePrice": 1700,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-s23-ultra",
+      "name": "Pantalla para Samsung S23 Ultra",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/s23-ultra/main.jpg",
+      "publicPrice": 3300,
+      "wholesalePrice": 3200,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-s24-ultra",
+      "name": "Pantalla para Samsung S24 Ultra",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/s24-ultra/main.png",
+      "publicPrice": 3500,
+      "wholesalePrice": 3400,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-s25-ultra",
+      "name": "Pantalla para Samsung S25 Ultra",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/s25-ultra/main.png",
+      "publicPrice": 3700,
+      "wholesalePrice": 3600,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-note-20-ultra",
+      "name": "Pantalla para Samsung Note 20 Ultra",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/placeholder.svg",
+      "publicPrice": 3500,
+      "wholesalePrice": 3400,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-flip3",
+      "name": "Pantalla para Samsung Z Flip3",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-flip3/main.png",
+      "publicPrice": 3300,
+      "wholesalePrice": 3200,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-flip4",
+      "name": "Pantalla para Samsung Z Flip4",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-flip4/main.png",
+      "publicPrice": 3600,
+      "wholesalePrice": 3500,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-flip5",
+      "name": "Pantalla para Samsung Z Flip5",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-flip5/main.png",
+      "publicPrice": 4000,
+      "wholesalePrice": 3900,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-flip6",
+      "name": "Pantalla para Samsung Z Flip6",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-flip6/main.png",
+      "publicPrice": 4500,
+      "wholesalePrice": 4400,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-flip7",
+      "name": "Pantalla Samsung Z Flip7",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-flip7/main.png",
+      "publicPrice": 5800,
+      "wholesalePrice": 5600,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-fold3",
+      "name": "Pantalla Samsung Z Fold3",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-fold3/main.png",
+      "publicPrice": 4500,
+      "wholesalePrice": 4400,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-fold4",
+      "name": "Pantalla Samsung Z Fold4",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-fold4/main.png",
+      "publicPrice": 6000,
+      "wholesalePrice": 5900,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-fold5",
+      "name": "Pantalla Samsung Z Fold5",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-fold5/main.png",
+      "publicPrice": 7500,
+      "wholesalePrice": 7400,
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-original-z-fold6",
+      "name": "Pantalla Samsung Z Fold6",
+      "category": "Pantallas Samsung Original",
+      "image": "/assets/products/samsung-original/z-fold6/main.png",
+      "publicPrice": 9800,
+      "wholesalePrice": 9700,
+      "ownerDecision": ""
+    }
+  ],
+  "appPlaceholderImages": [
+    {
+      "id": "samsung-original-note-20-ultra",
+      "name": "Pantalla para Samsung Note 20 Ultra",
+      "category": "Pantallas Samsung Original",
+      "currentImage": "/assets/products/placeholder.svg",
+      "ownerDecision": ""
+    }
+  ],
+  "websitePriceConfirmation": [
+    {
+      "id": "iphone-oled-12mini",
+      "name": "Pantalla para iPhone 12 mini",
+      "category": "iphone-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-13mini",
+      "name": "Pantalla para iPhone 13 mini",
+      "category": "iphone-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-15plus",
+      "name": "Pantalla para iPhone 15 Plus",
+      "category": "iphone-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-16",
+      "name": "Pantalla para iPhone 16",
+      "category": "iphone-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "iphone-oled-16plus",
+      "name": "Pantalla para iPhone 16 Plus",
+      "category": "iphone-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-note-10-plus",
+      "name": "Pantalla para Samsung Note 10 Plus",
+      "category": "samsung-oled",
+      "status": "部分价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-note-9",
+      "name": "Pantalla para Samsung Note 9",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s20",
+      "name": "Pantalla para Samsung S20",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s20-ultra",
+      "name": "Pantalla para Samsung S20 Ultra",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s21",
+      "name": "Pantalla para Samsung S21",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s21-plus",
+      "name": "Pantalla para Samsung S21 Plus",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s22-plus",
+      "name": "Pantalla para Samsung S22 Plus",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s23-plus",
+      "name": "Pantalla para Samsung S23 Plus",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s24-plus",
+      "name": "Pantalla para Samsung S24 Plus",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    },
+    {
+      "id": "samsung-oled-s9-plus",
+      "name": "Pantalla para Samsung S9 Plus",
+      "category": "samsung-oled",
+      "status": "全部价格待确认",
+      "ownerDecision": ""
+    }
+  ],
+  "staticRoutes": {
+    "historicalAliases": [
+      {
+        "slug": "iphone-11-pro-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-11pro/",
+        "canonicalSlug": "iphone-incell-11pro",
+        "ogUrl": "https://haode.com.mx/producto/iphone-11-pro-incell/",
+        "ogSlug": "iphone-11-pro-incell"
+      },
+      {
+        "slug": "iphone-11-pro-max-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-11promax/",
+        "canonicalSlug": "iphone-incell-11promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-11-pro-max-incell/",
+        "ogSlug": "iphone-11-pro-max-incell"
+      },
+      {
+        "slug": "iphone-11-pro-max-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-11promax/",
+        "canonicalSlug": "iphone-oled-11promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-11-pro-max-oled/",
+        "ogSlug": "iphone-11-pro-max-oled"
+      },
+      {
+        "slug": "iphone-12-mini-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-12mini/",
+        "canonicalSlug": "iphone-incell-12mini",
+        "ogUrl": "https://haode.com.mx/producto/iphone-12-mini-incell/",
+        "ogSlug": "iphone-12-mini-incell"
+      },
+      {
+        "slug": "iphone-12-pro-max-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-12promax/",
+        "canonicalSlug": "iphone-incell-12promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-12-pro-max-incell/",
+        "ogSlug": "iphone-12-pro-max-incell"
+      },
+      {
+        "slug": "iphone-12-pro-max-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-12promax/",
+        "canonicalSlug": "iphone-oled-12promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-12-pro-max-oled/",
+        "ogSlug": "iphone-12-pro-max-oled"
+      },
+      {
+        "slug": "iphone-13-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-13/",
+        "canonicalSlug": "iphone-incell-13",
+        "ogUrl": "https://haode.com.mx/producto/iphone-13-incell/",
+        "ogSlug": "iphone-13-incell"
+      },
+      {
+        "slug": "iphone-13-mini-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-13mini/",
+        "canonicalSlug": "iphone-incell-13mini",
+        "ogUrl": "https://haode.com.mx/producto/iphone-13-mini-incell/",
+        "ogSlug": "iphone-13-mini-incell"
+      },
+      {
+        "slug": "iphone-13-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-13/",
+        "canonicalSlug": "iphone-oled-13",
+        "ogUrl": "https://haode.com.mx/producto/iphone-13-oled/",
+        "ogSlug": "iphone-13-oled"
+      },
+      {
+        "slug": "iphone-13-pro-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-13pro/",
+        "canonicalSlug": "iphone-incell-13pro",
+        "ogUrl": "https://haode.com.mx/producto/iphone-13-pro-incell/",
+        "ogSlug": "iphone-13-pro-incell"
+      },
+      {
+        "slug": "iphone-13-pro-max-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-13promax/",
+        "canonicalSlug": "iphone-incell-13promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-13-pro-max-incell/",
+        "ogSlug": "iphone-13-pro-max-incell"
+      },
+      {
+        "slug": "iphone-13-pro-max-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-13promax/",
+        "canonicalSlug": "iphone-oled-13promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-13-pro-max-oled/",
+        "ogSlug": "iphone-13-pro-max-oled"
+      },
+      {
+        "slug": "iphone-13-pro-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-13pro/",
+        "canonicalSlug": "iphone-oled-13pro",
+        "ogUrl": "https://haode.com.mx/producto/iphone-13-pro-oled/",
+        "ogSlug": "iphone-13-pro-oled"
+      },
+      {
+        "slug": "iphone-14-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-14/",
+        "canonicalSlug": "iphone-incell-14",
+        "ogUrl": "https://haode.com.mx/producto/iphone-14-incell/",
+        "ogSlug": "iphone-14-incell"
+      },
+      {
+        "slug": "iphone-14-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-14/",
+        "canonicalSlug": "iphone-oled-14",
+        "ogUrl": "https://haode.com.mx/producto/iphone-14-oled/",
+        "ogSlug": "iphone-14-oled"
+      },
+      {
+        "slug": "iphone-14-plus-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-14plus/",
+        "canonicalSlug": "iphone-incell-14plus",
+        "ogUrl": "https://haode.com.mx/producto/iphone-14-plus-incell/",
+        "ogSlug": "iphone-14-plus-incell"
+      },
+      {
+        "slug": "iphone-14-plus-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-14plus/",
+        "canonicalSlug": "iphone-oled-14plus",
+        "ogUrl": "https://haode.com.mx/producto/iphone-14-plus-oled/",
+        "ogSlug": "iphone-14-plus-oled"
+      },
+      {
+        "slug": "iphone-14-pro-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-14pro/",
+        "canonicalSlug": "iphone-incell-14pro",
+        "ogUrl": "https://haode.com.mx/producto/iphone-14-pro-incell/",
+        "ogSlug": "iphone-14-pro-incell"
+      },
+      {
+        "slug": "iphone-14-pro-max-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-14promax/",
+        "canonicalSlug": "iphone-incell-14promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-14-pro-max-incell/",
+        "ogSlug": "iphone-14-pro-max-incell"
+      },
+      {
+        "slug": "iphone-14-pro-max-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-14promax/",
+        "canonicalSlug": "iphone-oled-14promax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-14-pro-max-oled/",
+        "ogSlug": "iphone-14-pro-max-oled"
+      },
+      {
+        "slug": "iphone-15-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-15/",
+        "canonicalSlug": "iphone-incell-15",
+        "ogUrl": "https://haode.com.mx/producto/iphone-15-incell/",
+        "ogSlug": "iphone-15-incell"
+      },
+      {
+        "slug": "iphone-x-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-x/",
+        "canonicalSlug": "iphone-incell-x",
+        "ogUrl": "https://haode.com.mx/producto/iphone-x-incell/",
+        "ogSlug": "iphone-x-incell"
+      },
+      {
+        "slug": "iphone-xr-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-xr/",
+        "canonicalSlug": "iphone-incell-xr",
+        "ogUrl": "https://haode.com.mx/producto/iphone-xr-incell/",
+        "ogSlug": "iphone-xr-incell"
+      },
+      {
+        "slug": "iphone-xs-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-incell-xs/",
+        "canonicalSlug": "iphone-incell-xs",
+        "ogUrl": "https://haode.com.mx/producto/iphone-xs-incell/",
+        "ogSlug": "iphone-xs-incell"
+      },
+      {
+        "slug": "iphone-xs-max-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-xsmax/",
+        "canonicalSlug": "iphone-oled-xsmax",
+        "ogUrl": "https://haode.com.mx/producto/iphone-xs-max-oled/",
+        "ogSlug": "iphone-xs-max-oled"
+      },
+      {
+        "slug": "samsung-note-20-ultra-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-incell-note-20-ultra/",
+        "canonicalSlug": "samsung-incell-note-20-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-note-20-ultra-incell/",
+        "ogSlug": "samsung-note-20-ultra-incell"
+      },
+      {
+        "slug": "samsung-s20-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-incell-s20/",
+        "canonicalSlug": "samsung-incell-s20",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s20-incell/",
+        "ogSlug": "samsung-s20-incell"
+      },
+      {
+        "slug": "samsung-s20-plus-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-oled-s20-plus/",
+        "canonicalSlug": "samsung-oled-s20-plus",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s20-plus-oled/",
+        "ogSlug": "samsung-s20-plus-oled"
+      },
+      {
+        "slug": "samsung-s21-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-incell-s21/",
+        "canonicalSlug": "samsung-incell-s21",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s21-incell/",
+        "ogSlug": "samsung-s21-incell"
+      },
+      {
+        "slug": "samsung-s21-ultra-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-oled-s21-ultra/",
+        "canonicalSlug": "samsung-oled-s21-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s21-ultra-oled/",
+        "ogSlug": "samsung-s21-ultra-oled"
+      },
+      {
+        "slug": "samsung-s22-ultra-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-incell-s22-ultra/",
+        "canonicalSlug": "samsung-incell-s22-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s22-ultra-incell/",
+        "ogSlug": "samsung-s22-ultra-incell"
+      },
+      {
+        "slug": "samsung-s22-ultra-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-oled-s22-ultra/",
+        "canonicalSlug": "samsung-oled-s22-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s22-ultra-oled/",
+        "ogSlug": "samsung-s22-ultra-oled"
+      },
+      {
+        "slug": "samsung-s23-ultra-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-incell-s23-ultra/",
+        "canonicalSlug": "samsung-incell-s23-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s23-ultra-incell/",
+        "ogSlug": "samsung-s23-ultra-incell"
+      },
+      {
+        "slug": "samsung-s23-ultra-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-oled-s23-ultra/",
+        "canonicalSlug": "samsung-oled-s23-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s23-ultra-oled/",
+        "ogSlug": "samsung-s23-ultra-oled"
+      },
+      {
+        "slug": "samsung-s24-ultra-incell",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-incell-s24-ultra/",
+        "canonicalSlug": "samsung-incell-s24-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s24-ultra-incell/",
+        "ogSlug": "samsung-s24-ultra-incell"
+      },
+      {
+        "slug": "samsung-s24-ultra-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-oled-s24-ultra/",
+        "canonicalSlug": "samsung-oled-s24-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s24-ultra-oled/",
+        "ogSlug": "samsung-s24-ultra-oled"
+      },
+      {
+        "slug": "samsung-s25-ultra-oled",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/samsung-oled-s25-ultra/",
+        "canonicalSlug": "samsung-oled-s25-ultra",
+        "ogUrl": "https://haode.com.mx/producto/samsung-s25-ultra-oled/",
+        "ogSlug": "samsung-s25-ultra-oled"
+      }
+    ],
+    "canonicalTargets": [
+      {
+        "slug": "funda-magnetica-estilo-iphone-17-pro-max",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/funda-magnetica-estilo-iphone-17-pro-max/",
+        "canonicalSlug": "funda-magnetica-estilo-iphone-17-pro-max",
+        "ogUrl": "https://haode.com.mx/producto/funda-magnetica-estilo-iphone-17-pro-max/",
+        "ogSlug": "funda-magnetica-estilo-iphone-17-pro-max"
+      },
+      {
+        "slug": "funda-premium-aluminio-estilo-iphone-17-pro-max",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/",
+        "canonicalSlug": "funda-premium-aluminio-estilo-iphone-17-pro-max",
+        "ogUrl": "https://haode.com.mx/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/",
+        "ogSlug": "funda-premium-aluminio-estilo-iphone-17-pro-max"
+      }
+    ],
+    "standalone": [
+      {
+        "slug": "iphone-oled-11",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-11/",
+        "canonicalSlug": "iphone-oled-11",
+        "ogUrl": "https://haode.com.mx/producto/iphone-oled-11/",
+        "ogSlug": "iphone-oled-11"
+      },
+      {
+        "slug": "iphone-oled-x",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/iphone-oled-x/",
+        "canonicalSlug": "iphone-oled-x",
+        "ogUrl": "https://haode.com.mx/producto/iphone-oled-x/",
+        "ogSlug": "iphone-oled-x"
+      },
+      {
+        "slug": "x200t-cortadora-inteligente-de-micas",
+        "redirect": false,
+        "canonicalUrl": "https://haode.com.mx/producto/x200t-cortadora-inteligente-de-micas/",
+        "canonicalSlug": "x200t-cortadora-inteligente-de-micas",
+        "ogUrl": "https://haode.com.mx/producto/x200t-cortadora-inteligente-de-micas/",
+        "ogSlug": "x200t-cortadora-inteligente-de-micas"
+      }
+    ]
+  },
+  "media": {
+    "websiteImageMissing": [],
+    "appImageMissing": [],
+    "websiteVideoMissing": [
+      "iphone-incell-17",
+      "iphone-incell-17air",
+      "iphone-incell-17pro",
+      "samsung-incell-s21-fe",
+      "samsung-incell-s21-ultra",
+      "samsung-incell-s23-plus",
+      "samsung-incell-s24-plus",
+      "samsung-incell-s24-ultra",
+      "samsung-oled-note-10",
+      "samsung-oled-note-10-plus",
+      "samsung-oled-note-20",
+      "samsung-oled-note-20-ultra",
+      "samsung-oled-note-9",
+      "samsung-oled-s20",
+      "samsung-oled-s20-ultra",
+      "samsung-oled-s21",
+      "samsung-oled-s21-plus",
+      "samsung-oled-s22-plus",
+      "samsung-oled-s23-plus",
+      "samsung-oled-s24-plus",
+      "samsung-oled-s9-plus",
+      "mica-hd",
+      "mica-matte",
+      "mica-privacidad-hd",
+      "mica-privacidad-matte",
+      "haode-ai-g3-smart-glasses",
+      "haode-ai-w610-smart-glasses",
+      "s1-ai-classic",
+      "aimb-g5-ai-sports",
+      "lk-007-camara-digital-4k",
+      "lk-030-mini-camara-retro-digital",
+      "lk-032-camara-inteligente-con-gimbal",
+      "w630-ai-pro"
+    ]
+  },
+  "overlap": [
+    {
+      "id": "iphone-incell-11-bolsa-protectora",
+      "websiteName": "Pantalla para iPhone 11 Bolsa Protectora",
+      "appName": "Pantalla para iPhone 11 Bolsa Protectora"
+    },
+    {
+      "id": "iphone-incell-11pro",
+      "websiteName": "Pantalla para iPhone 11 Pro",
+      "appName": "Pantalla para iPhone 11 Pro"
+    },
+    {
+      "id": "iphone-incell-11promax",
+      "websiteName": "Pantalla para iPhone 11 Pro Max",
+      "appName": "Pantalla para iPhone 11 Pro Max"
+    },
+    {
+      "id": "iphone-incell-12-12pro",
+      "websiteName": "Pantalla para iPhone 12 / 12 Pro",
+      "appName": "Pantalla para iPhone 12 / 12 Pro"
+    },
+    {
+      "id": "iphone-incell-12mini",
+      "websiteName": "Pantalla para iPhone 12 mini",
+      "appName": "Pantalla para iPhone 12 mini"
+    },
+    {
+      "id": "iphone-incell-12promax",
+      "websiteName": "Pantalla para iPhone 12 Pro Max",
+      "appName": "Pantalla para iPhone 12 Pro Max"
+    },
+    {
+      "id": "iphone-incell-13",
+      "websiteName": "Pantalla para iPhone 13",
+      "appName": "Pantalla para iPhone 13"
+    },
+    {
+      "id": "iphone-incell-13mini",
+      "websiteName": "Pantalla para iPhone 13 mini",
+      "appName": "Pantalla para iPhone 13 mini"
+    },
+    {
+      "id": "iphone-incell-13pro",
+      "websiteName": "Pantalla para iPhone 13 Pro",
+      "appName": "Pantalla para iPhone 13 Pro"
+    },
+    {
+      "id": "iphone-incell-13promax",
+      "websiteName": "Pantalla para iPhone 13 Pro Max",
+      "appName": "Pantalla para iPhone 13 Pro Max"
+    },
+    {
+      "id": "iphone-incell-14",
+      "websiteName": "Pantalla para iPhone 14",
+      "appName": "Pantalla para iPhone 14"
+    },
+    {
+      "id": "iphone-incell-14plus",
+      "websiteName": "Pantalla para iPhone 14 Plus",
+      "appName": "Pantalla para iPhone 14 Plus"
+    },
+    {
+      "id": "iphone-incell-14pro",
+      "websiteName": "Pantalla para iPhone 14 Pro",
+      "appName": "Pantalla para iPhone 14 Pro"
+    },
+    {
+      "id": "iphone-incell-14promax",
+      "websiteName": "Pantalla para iPhone 14 Pro Max",
+      "appName": "Pantalla para iPhone 14 Pro Max"
+    },
+    {
+      "id": "iphone-incell-15",
+      "websiteName": "Pantalla para iPhone 15",
+      "appName": "Pantalla para iPhone 15"
+    },
+    {
+      "id": "iphone-incell-15plus",
+      "websiteName": "Pantalla para iPhone 15 Plus",
+      "appName": "Pantalla para iPhone 15 Plus"
+    },
+    {
+      "id": "iphone-incell-15pro",
+      "websiteName": "Pantalla para iPhone 15 Pro",
+      "appName": "Pantalla para iPhone 15 Pro"
+    },
+    {
+      "id": "iphone-incell-15promax",
+      "websiteName": "Pantalla para iPhone 15 Pro Max",
+      "appName": "Pantalla para iPhone 15 Pro Max"
+    },
+    {
+      "id": "iphone-incell-16",
+      "websiteName": "Pantalla para iPhone 16",
+      "appName": "Pantalla para iPhone 16"
+    },
+    {
+      "id": "iphone-incell-16e",
+      "websiteName": "Pantalla para iPhone 16e",
+      "appName": "Pantalla para iPhone 16e"
+    },
+    {
+      "id": "iphone-incell-16plus",
+      "websiteName": "Pantalla para iPhone 16 Plus",
+      "appName": "Pantalla para iPhone 16 Plus"
+    },
+    {
+      "id": "iphone-incell-16pro",
+      "websiteName": "Pantalla para iPhone 16 Pro",
+      "appName": "Pantalla para iPhone 16 Pro"
+    },
+    {
+      "id": "iphone-incell-16promax",
+      "websiteName": "Pantalla para iPhone 16 Pro Max",
+      "appName": "Pantalla para iPhone 16 Pro Max"
+    },
+    {
+      "id": "iphone-incell-17",
+      "websiteName": "Pantalla para iPhone 17",
+      "appName": "Pantalla para iPhone 17"
+    },
+    {
+      "id": "iphone-incell-17air",
+      "websiteName": "Pantalla para iPhone 17 Air",
+      "appName": "Pantalla para iPhone 17 Air"
+    },
+    {
+      "id": "iphone-incell-17pro",
+      "websiteName": "Pantalla para iPhone 17 Pro",
+      "appName": "Pantalla para iPhone 17 Pro"
+    },
+    {
+      "id": "iphone-incell-17promax",
+      "websiteName": "Pantalla para iPhone 17 Pro Max",
+      "appName": "Pantalla para iPhone 17 Pro Max"
+    },
+    {
+      "id": "iphone-incell-x",
+      "websiteName": "Pantalla para iPhone X",
+      "appName": "Pantalla para iPhone X"
+    },
+    {
+      "id": "iphone-incell-xr",
+      "websiteName": "Pantalla para iPhone XR",
+      "appName": "Pantalla para iPhone XR"
+    },
+    {
+      "id": "iphone-incell-xr-bolsa-protectora",
+      "websiteName": "Pantalla para iPhone XR Bolsa Protectora",
+      "appName": "Pantalla para iPhone XR Bolsa Protectora"
+    },
+    {
+      "id": "iphone-incell-xs",
+      "websiteName": "Pantalla para iPhone XS",
+      "appName": "Pantalla para iPhone XS"
+    },
+    {
+      "id": "iphone-incell-xsmax",
+      "websiteName": "Pantalla para iPhone XS Max",
+      "appName": "Pantalla para iPhone XS Max"
+    },
+    {
+      "id": "iphone-oled-11promax",
+      "websiteName": "Pantalla para iPhone 11 Pro Max",
+      "appName": "Pantalla para iPhone 11 Pro Max"
+    },
+    {
+      "id": "iphone-oled-12-12pro",
+      "websiteName": "Pantalla para iPhone 12 / 12 Pro",
+      "appName": "Pantalla para iPhone 12 / 12 Pro"
+    },
+    {
+      "id": "iphone-oled-12pro",
+      "websiteName": "Pantalla para iPhone 12 Pro",
+      "appName": "Pantalla para iPhone 12 Pro"
+    },
+    {
+      "id": "iphone-oled-12promax",
+      "websiteName": "Pantalla para iPhone 12 Pro Max",
+      "appName": "Pantalla para iPhone 12 Pro Max"
+    },
+    {
+      "id": "iphone-oled-13",
+      "websiteName": "Pantalla para iPhone 13",
+      "appName": "Pantalla para iPhone 13"
+    },
+    {
+      "id": "iphone-oled-13pro",
+      "websiteName": "Pantalla para iPhone 13 Pro",
+      "appName": "Pantalla para iPhone 13 Pro"
+    },
+    {
+      "id": "iphone-oled-13promax",
+      "websiteName": "Pantalla para iPhone 13 Pro Max",
+      "appName": "Pantalla para iPhone 13 Pro Max"
+    },
+    {
+      "id": "iphone-oled-14",
+      "websiteName": "Pantalla para iPhone 14",
+      "appName": "Pantalla para iPhone 14"
+    },
+    {
+      "id": "iphone-oled-14plus",
+      "websiteName": "Pantalla para iPhone 14 Plus",
+      "appName": "Pantalla para iPhone 14 Plus"
+    },
+    {
+      "id": "iphone-oled-14pro",
+      "websiteName": "Pantalla para iPhone 14 Pro",
+      "appName": "Pantalla para iPhone 14 Pro"
+    },
+    {
+      "id": "iphone-oled-14promax",
+      "websiteName": "Pantalla para iPhone 14 Pro Max",
+      "appName": "Pantalla para iPhone 14 Pro Max"
+    },
+    {
+      "id": "iphone-oled-15",
+      "websiteName": "Pantalla para iPhone 15",
+      "appName": "Pantalla para iPhone 15"
+    },
+    {
+      "id": "iphone-oled-15promax",
+      "websiteName": "Pantalla para iPhone 15 Pro Max",
+      "appName": "Pantalla para iPhone 15 Pro Max"
+    },
+    {
+      "id": "iphone-oled-16pro",
+      "websiteName": "Pantalla para iPhone 16 Pro",
+      "appName": "Pantalla para iPhone 16 Pro"
+    },
+    {
+      "id": "iphone-oled-16promax",
+      "websiteName": "Pantalla para iPhone 16 Pro Max Soft OLED",
+      "appName": "Pantalla para iPhone 16 Pro Max Soft OLED"
+    },
+    {
+      "id": "iphone-oled-16promax-hard",
+      "websiteName": "Pantalla para iPhone 16 Pro Max Hard OLED",
+      "appName": "Pantalla para iPhone 16 Pro Max Hard OLED"
+    },
+    {
+      "id": "iphone-oled-xsmax",
+      "websiteName": "Pantalla para iPhone XS Max",
+      "appName": "Pantalla para iPhone XS Max"
+    },
+    {
+      "id": "samsung-incell-note-10",
+      "websiteName": "Pantalla para Samsung Note 10",
+      "appName": "Pantalla para Samsung Note 10"
+    },
+    {
+      "id": "samsung-incell-note-10-plus",
+      "websiteName": "Pantalla para Samsung Note 10 Plus",
+      "appName": "Pantalla para Samsung Note 10 Plus"
+    },
+    {
+      "id": "samsung-incell-note-20-ultra",
+      "websiteName": "Pantalla para Samsung Note 20 Ultra",
+      "appName": "Pantalla para Samsung Note 20 Ultra"
+    },
+    {
+      "id": "samsung-incell-note-8",
+      "websiteName": "Pantalla para Samsung Note 8",
+      "appName": "Pantalla para Samsung Note 8"
+    },
+    {
+      "id": "samsung-incell-note-9",
+      "websiteName": "Pantalla para Samsung Note 9",
+      "appName": "Pantalla para Samsung Note 9"
+    },
+    {
+      "id": "samsung-incell-s10",
+      "websiteName": "Pantalla para Samsung S10",
+      "appName": "Pantalla para Samsung S10"
+    },
+    {
+      "id": "samsung-incell-s10-plus",
+      "websiteName": "Pantalla para Samsung S10 Plus",
+      "appName": "Pantalla para Samsung S10 Plus"
+    },
+    {
+      "id": "samsung-incell-s10e",
+      "websiteName": "Pantalla para Samsung S10E",
+      "appName": "Pantalla para Samsung S10E"
+    },
+    {
+      "id": "samsung-incell-s20",
+      "websiteName": "Pantalla para Samsung S20",
+      "appName": "Pantalla para Samsung S20"
+    },
+    {
+      "id": "samsung-incell-s20-fe",
+      "websiteName": "Pantalla para Samsung S20 FE",
+      "appName": "Pantalla para Samsung S20 FE"
+    },
+    {
+      "id": "samsung-incell-s20-plus",
+      "websiteName": "Pantalla para Samsung S20 Plus",
+      "appName": "Pantalla para Samsung S20 Plus"
+    },
+    {
+      "id": "samsung-incell-s20-ultra",
+      "websiteName": "Pantalla para Samsung S20 Ultra",
+      "appName": "Pantalla para Samsung S20 Ultra"
+    },
+    {
+      "id": "samsung-incell-s21",
+      "websiteName": "Pantalla para Samsung S21",
+      "appName": "Pantalla para Samsung S21"
+    },
+    {
+      "id": "samsung-incell-s21-fe",
+      "websiteName": "Pantalla para Samsung S21 FE",
+      "appName": "Pantalla para Samsung S21 FE"
+    },
+    {
+      "id": "samsung-incell-s21-plus",
+      "websiteName": "Pantalla para Samsung S21 Plus",
+      "appName": "Pantalla para Samsung S21 Plus"
+    },
+    {
+      "id": "samsung-incell-s21-ultra",
+      "websiteName": "Pantalla para Samsung S21 Ultra",
+      "appName": "Pantalla para Samsung S21 Ultra"
+    },
+    {
+      "id": "samsung-incell-s22",
+      "websiteName": "Pantalla para Samsung S22",
+      "appName": "Pantalla para Samsung S22"
+    },
+    {
+      "id": "samsung-incell-s22-plus",
+      "websiteName": "Pantalla para Samsung S22 Plus",
+      "appName": "Pantalla para Samsung S22 Plus"
+    },
+    {
+      "id": "samsung-incell-s22-ultra",
+      "websiteName": "Pantalla para Samsung S22 Ultra",
+      "appName": "Pantalla para Samsung S22 Ultra"
+    },
+    {
+      "id": "samsung-incell-s23",
+      "websiteName": "Pantalla para Samsung S23",
+      "appName": "Pantalla para Samsung S23"
+    },
+    {
+      "id": "samsung-incell-s23-plus",
+      "websiteName": "Pantalla para Samsung S23 Plus",
+      "appName": "Pantalla para Samsung S23 Plus"
+    },
+    {
+      "id": "samsung-incell-s23-ultra",
+      "websiteName": "Pantalla para Samsung S23 Ultra",
+      "appName": "Pantalla para Samsung S23 Ultra"
+    },
+    {
+      "id": "samsung-incell-s24",
+      "websiteName": "Pantalla para Samsung S24",
+      "appName": "Pantalla para Samsung S24"
+    },
+    {
+      "id": "samsung-incell-s24-plus",
+      "websiteName": "Pantalla para Samsung S24 Plus",
+      "appName": "Pantalla para Samsung S24 Plus"
+    },
+    {
+      "id": "samsung-incell-s24-ultra",
+      "websiteName": "Pantalla para Samsung S24 Ultra",
+      "appName": "Pantalla para Samsung S24 Ultra"
+    },
+    {
+      "id": "samsung-incell-s8",
+      "websiteName": "Pantalla para Samsung S8",
+      "appName": "Pantalla para Samsung S8"
+    },
+    {
+      "id": "samsung-incell-s8-plus",
+      "websiteName": "Pantalla para Samsung S8 Plus",
+      "appName": "Pantalla para Samsung S8 Plus"
+    },
+    {
+      "id": "samsung-incell-s9",
+      "websiteName": "Pantalla para Samsung S9",
+      "appName": "Pantalla para Samsung S9"
+    },
+    {
+      "id": "samsung-incell-s9-plus",
+      "websiteName": "Pantalla para Samsung S9 Plus",
+      "appName": "Pantalla para Samsung S9 Plus"
+    },
+    {
+      "id": "samsung-oled-note-10",
+      "websiteName": "Pantalla para Samsung Note 10",
+      "appName": "Pantalla para Samsung Note 10"
+    },
+    {
+      "id": "samsung-oled-note-10-plus",
+      "websiteName": "Pantalla para Samsung Note 10 Plus",
+      "appName": "Pantalla para Samsung Note 10 Plus"
+    },
+    {
+      "id": "samsung-oled-note-20",
+      "websiteName": "Pantalla para Samsung Note 20",
+      "appName": "Pantalla para Samsung Note 20"
+    },
+    {
+      "id": "samsung-oled-note-20-ultra",
+      "websiteName": "Pantalla para Samsung Note 20 Ultra",
+      "appName": "Pantalla para Samsung Note 20 Ultra"
+    },
+    {
+      "id": "samsung-oled-s20-plus",
+      "websiteName": "Pantalla para Samsung S20 Plus",
+      "appName": "Pantalla para Samsung S20 Plus"
+    },
+    {
+      "id": "samsung-oled-s21-ultra",
+      "websiteName": "Pantalla para Samsung S21 Ultra",
+      "appName": "Pantalla para Samsung S21 Ultra"
+    },
+    {
+      "id": "samsung-oled-s22-ultra",
+      "websiteName": "Pantalla para Samsung S22 Ultra",
+      "appName": "Pantalla para Samsung S22 Ultra"
+    },
+    {
+      "id": "samsung-oled-s23-ultra",
+      "websiteName": "Pantalla para Samsung S23 Ultra",
+      "appName": "Pantalla para Samsung S23 Ultra"
+    },
+    {
+      "id": "samsung-oled-s24-ultra",
+      "websiteName": "Pantalla para Samsung S24 Ultra",
+      "appName": "Pantalla para Samsung S24 Ultra"
+    },
+    {
+      "id": "samsung-oled-s25-ultra",
+      "websiteName": "Pantalla para Samsung S25 Ultra",
+      "appName": "Pantalla para Samsung S25 Ultra"
+    },
+    {
+      "id": "mica-hd",
+      "websiteName": "MICA HD",
+      "appName": "MICA HD"
+    },
+    {
+      "id": "mica-matte",
+      "websiteName": "MICA MATTE",
+      "appName": "MICA MATTE"
+    },
+    {
+      "id": "mica-privacidad-hd",
+      "websiteName": "MICA PRIVACIDAD HD",
+      "appName": "MICA PRIVACIDAD HD"
+    },
+    {
+      "id": "mica-privacidad-matte",
+      "websiteName": "MICA PRIVACIDAD MATTE",
+      "appName": "MICA PRIVACIDAD MATTE"
+    },
+    {
+      "id": "funda-premium-17-pro-max",
+      "websiteName": "Funda Premium Aluminio",
+      "appName": "Funda Premium Aluminio"
+    },
+    {
+      "id": "funda-premium-aluminio-plus",
+      "websiteName": "Funda Premium Aluminio Plus",
+      "appName": "Funda Premium Aluminio Plus"
+    },
+    {
+      "id": "funda-magnetica-17-pro-max",
+      "websiteName": "Funda Magnetica",
+      "appName": "Funda Magnetica"
+    },
+    {
+      "id": "haode-ai-g3-smart-glasses",
+      "websiteName": "Gafas Inteligentes AI G3",
+      "appName": "Gafas Inteligentes AI G3"
+    },
+    {
+      "id": "haode-ai-w610-smart-glasses",
+      "websiteName": "Gafas Inteligentes AI W610",
+      "appName": "Gafas Inteligentes AI W610"
+    },
+    {
+      "id": "s1-ai-classic",
+      "websiteName": "HAODE AI CLASSIC S1",
+      "appName": "HAODE AI CLASSIC S1"
+    },
+    {
+      "id": "aimb-g5-ai-sports",
+      "websiteName": "AIMB-G5 AI SPORTS",
+      "appName": "AIMB-G5 AI SPORTS"
+    },
+    {
+      "id": "lk-007-camara-digital-4k",
+      "websiteName": "Cámara Digital 4K LK-007 | Pantalla Abatible 2.4\" | HAODE México",
+      "appName": "Cámara Digital 4K LK-007"
+    },
+    {
+      "id": "lk-030-mini-camara-retro-digital",
+      "websiteName": "LK-030 Mini Cámara Retro Digital",
+      "appName": "LK-030 Mini Cámara Retro Digital"
+    },
+    {
+      "id": "lk-032-camara-inteligente-con-gimbal",
+      "websiteName": "LK-032 Cámara Inteligente con Gimbal",
+      "appName": "LK-032 Cámara Inteligente con Gimbal"
+    },
+    {
+      "id": "lk-018-camara-accion-hd",
+      "websiteName": "LK-018 Cámara de Acción HD | Pantalla Abatible | HAODE México",
+      "appName": "LK-018 Cámara de Acción HD"
+    },
+    {
+      "id": "w630-ai-pro",
+      "websiteName": "W630 AI PRO",
+      "appName": "W630 AI PRO"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 13",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 13"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 14",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 14"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 15",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 15"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 16",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 16"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 17",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 17"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro"
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
+      "websiteName": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
+      "appName": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max"
+    }
+  ]
+}

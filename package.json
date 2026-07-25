@@ -10,7 +10,9 @@
     "test:daily-ad-catalog": "node --test tests/daily-ad-catalog.test.mjs",
     "test:catalog-gap-audit": "node --test tests/catalog-gap-audit.test.mjs",
     "test:whatsapp-links": "node --test tests/whatsapp-link-template.test.mjs",
+    "test:product-sync-aliases": "node --test tests/product-sync-alias-classification.test.mjs",
     "audit:erp-catalog": "node scripts/audit-erp-catalog-gaps.mjs",
+    "audit:catalog-governance": "node scripts/audit-catalog-governance.js --write",
     "marketing:exposure-pack": "node scripts/generate-exposure-pack.mjs",
     "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js",
@@ -28,7 +30,7 @@
     "daily-website-audit": "node scripts/daily-website-audit.js",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:customer-prices && npm run test:geo-seo && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:customer-prices && npm run test:geo-seo && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"
