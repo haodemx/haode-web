@@ -43,6 +43,9 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await expectHeaderWhatsAppGreen(page);
       await expectHeaderHeightAtMost(page, ".reference-header", 190);
       await expect(page.locator(`[data-reference-conversion="${pageCase.panel}"]`)).toBeVisible();
+      if (pageCase.path === "/contacto/") {
+        await expectContactPanelCtaInView(page);
+      }
       await expectNoHorizontalOverflow(page);
     });
   }
@@ -61,4 +64,17 @@ async function expectHeaderHeightAtMost(page, selector, maxHeight) {
 async function expectHeaderWhatsAppGreen(page) {
   const background = await page.locator(".reference-nav-actions a[href*='wa.me']").first().evaluate((el) => getComputedStyle(el).backgroundColor);
   expect(background).toBe("rgb(18, 168, 84)");
+}
+
+async function expectContactPanelCtaInView(page) {
+  const layout = await page.evaluate(() => {
+    const cta = document.querySelector('[data-reference-conversion="contacto"] .reference-btn-whatsapp')?.getBoundingClientRect();
+    return {
+      top: Math.round(cta?.top || 0),
+      bottom: Math.round(cta?.bottom || 0),
+    };
+  });
+
+  expect(layout.top).toBeGreaterThanOrEqual(0);
+  expect(layout.bottom).toBeLessThanOrEqual(844);
 }
