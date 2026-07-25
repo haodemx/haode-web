@@ -8697,6 +8697,68 @@ body.micas-reference-page .micas-category-pricing {
   font-weight: 850;
 }
 
+body.category-entry-reference-page .reference-conversion-panel {
+  margin-bottom: 24px;
+}
+
+body.category-entry-reference-page .new-page-links .btn-primary[href*="wa.me"],
+body.category-entry-reference-page .new-product-actions .btn[href*="wa.me"],
+body.category-entry-reference-page .contact-row .btn[href*="wa.me"] {
+  background: var(--ref-green);
+  border-color: var(--ref-green);
+  color: #ffffff;
+}
+
+body.category-entry-reference-page .new-page-links .btn-primary[href*="wa.me"]:hover,
+body.category-entry-reference-page .new-product-actions .btn[href*="wa.me"]:hover,
+body.category-entry-reference-page .contact-row .btn[href*="wa.me"]:hover {
+  background: var(--ref-green-dark);
+  border-color: var(--ref-green-dark);
+}
+
+body.category-entry-reference-page .new-product-card .new-product-media,
+body.category-entry-reference-page .new-product-card .new-product-visual {
+  background:
+    radial-gradient(circle at 30% 18%, rgba(240, 74, 20, 0.14), transparent 36%),
+    linear-gradient(180deg, #fff8ef, #ffffff);
+}
+
+body.pantallas-entry-page .new-page-hero-inner {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.5) 100%),
+    url("/assets/products/iphone-oled/main.jpg") right 8% center / 360px auto no-repeat,
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+}
+
+body.fundas-entry-page .new-page-hero-inner {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.48) 100%),
+    url("/assets/products/fundas/funda-premium-aluminio-plus/main.webp") right 8% center / 340px auto no-repeat,
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+}
+
+body.maquinas-entry-page .new-page-hero-inner {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.48) 100%),
+    url("/assets/products/cut-machine/x200t/main.jpg") right 8% center / 360px auto no-repeat,
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+}
+
+body.camaras-entry-page .new-page-hero-inner {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.48) 100%),
+    url("/assets/products/productos-ai/lk-007-camara-digital-4k/main.png") right 8% center / 340px auto no-repeat,
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+}
+
+body.gafas-entry-page .new-page-hero-inner,
+body.productos-ai-entry-page .new-page-hero-inner {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.5) 100%),
+    url("/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg") right 8% center / 340px auto no-repeat,
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+}
+
 @media (max-width: 760px) {
   body.ai-legacy-reference-page .topbar-inner,
   body.ai-detail-reference-page .topbar-inner,
@@ -8740,6 +8802,12 @@ body.micas-reference-page .micas-category-pricing {
     min-width: 0;
     white-space: normal;
     line-height: 1.12;
+  }
+
+  body.category-entry-reference-page .new-page-hero-inner {
+    background:
+      linear-gradient(180deg, rgba(255, 250, 245, 0.98), rgba(255, 250, 245, 0.92)),
+      url("/assets/images/store-gallery/store-cdmx-03.jpg") center / cover no-repeat;
   }
 }
 
