@@ -30,6 +30,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expectFirstWhatsAppInViewport(page);
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
     });
@@ -55,3 +56,11 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
     });
   }
 });
+
+async function expectFirstWhatsAppInViewport(page) {
+  const isInViewport = await page.locator('a[href*="wa.me"]').first().evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
+  });
+  expect(isInViewport).toBe(true);
+}

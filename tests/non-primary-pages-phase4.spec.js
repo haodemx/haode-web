@@ -40,6 +40,7 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
       await expect(page.locator(".reference-nav a").first()).toBeVisible();
       await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
+      await expectHeaderHeightAtMost(page, ".reference-header", 190);
       await expect(page.locator(`[data-reference-conversion="${pageCase.panel}"]`)).toBeVisible();
       await expectNoHorizontalOverflow(page);
     });
@@ -49,4 +50,9 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
 async function expectNoHorizontalOverflow(page) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(1);
+}
+
+async function expectHeaderHeightAtMost(page, selector, maxHeight) {
+  const height = await page.locator(selector).first().evaluate((el) => Math.round(el.getBoundingClientRect().height));
+  expect(height).toBeLessThanOrEqual(maxHeight);
 }

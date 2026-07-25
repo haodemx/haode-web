@@ -27,6 +27,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
     await expect(page.locator(".topnav a").first()).toBeVisible();
     await expect(page.locator(".distributor-header-whatsapp")).toBeVisible();
     await expect(page.locator(".distributor-header-whatsapp")).toHaveAttribute("href", /wa\.me/);
+    await expectHeaderHeightAtMost(page, ".site-header", 240);
     await expect(page.locator(".reference-conversion-strip").first()).toContainText("Precio por cantidad");
     await expect(page.locator('[data-reference-conversion="distributor-trust"]')).toContainText("Solicita distribución");
     await expect(page.locator('[data-reference-conversion="distributor-trust"] a[href*="wa.me"]')).toBeVisible();
@@ -38,6 +39,11 @@ test.describe("HAODE trust conversion UI phase 7", () => {
 async function expectNoHorizontalOverflow(page) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(1);
+}
+
+async function expectHeaderHeightAtMost(page, selector, maxHeight) {
+  const height = await page.locator(selector).first().evaluate((el) => Math.round(el.getBoundingClientRect().height));
+  expect(height).toBeLessThanOrEqual(maxHeight);
 }
 
 async function expectFirstWhatsAppInViewport(page) {
