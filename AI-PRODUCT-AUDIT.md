@@ -64,7 +64,7 @@
 
 | 产品 | 图片路径 | 状态 |
 | --- | --- | --- |
-| S1 | `/assets/products/productos-ai/s1-ai-classic/main.png` | 已存在 |
+| S1 | `/assets/products/productos-ai/s1-ai-classic/main.jpg` | 已存在 |
 | G3 | `/assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg` | 已存在，未误用 G5/W630 |
 | G5 | `/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg` | 已存在 |
 | W630 | `/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg` | 已存在 |

@@ -4278,7 +4278,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Funda Premium Aluminio Plus",
     "quality": "Premium Aluminio",
     "images": [
-      "assets/products/fundas/funda-premium-aluminio-plus/main.webp",
+      "assets/products/fundas/funda-premium-aluminio-plus/main.jpg",
       "assets/products/fundas/funda-premium-aluminio-plus/01-A53B7C3E-9975-48E9-A0E4-CB8CDAEBDC63.webp",
       "assets/products/fundas/funda-premium-aluminio-plus/02-E8E267BE-CBFD-49B2-BF1C-7CABB1C1FEDA.webp",
       "assets/products/fundas/funda-premium-aluminio-plus/03-10E278C7-2FB0-4FE9-912F-656C930C4221.webp",
@@ -4390,7 +4390,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "HAODE AI CLASSIC S1",
     "quality": "Gafas AI classic",
     "images": [
-      "assets/products/productos-ai/s1-ai-classic/main.png"
+      "assets/products/productos-ai/s1-ai-classic/main.jpg"
     ],
     "videos": [],
     "prices": [
