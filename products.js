@@ -2358,19 +2358,33 @@ function renderProductDetailPage() {
   if (qualityEl) qualityEl.textContent = product.quality;
   if (descriptionEl) descriptionEl.textContent = product.description;
 
-  const firstDetailCard = page.querySelector('.detail-info .detail-card');
-  if (firstDetailCard && !firstDetailCard.querySelector('[data-detail-conversion]')) {
-    const conversion = document.createElement('div');
-    conversion.className = 'detail-factory-callout';
+  if (!page.querySelector('[data-detail-conversion]')) {
+    const conversion = document.createElement('aside');
+    conversion.className = 'reference-conversion-panel detail-conversion-panel';
     conversion.setAttribute('data-detail-conversion', '');
+    conversion.setAttribute('data-reference-conversion', 'product-detail');
+    conversion.setAttribute('aria-label', 'Cotización del producto por WhatsApp');
     conversion.innerHTML = `
-      <span>Fábrica directa</span>
-      <span>Stock local bajo confirmación</span>
-      <span>Atención por WhatsApp privado</span>
+      <span class="reference-whatsapp-mark" aria-hidden="true">W</span>
+      <div>
+        <p class="reference-panel-kicker">Cotización por modelo</p>
+        <h2>Envía este producto por WhatsApp privado</h2>
+        <p>Confirma modelo exacto, cantidad y ciudad. HAODE valida disponibilidad, precio final y entrega antes de cerrar.</p>
+        <div class="reference-panel-proof">
+          <span>Fábrica directa</span>
+          <span>Stock local bajo confirmación</span>
+          <span>Precio por cantidad</span>
+        </div>
+      </div>
+      <a class="reference-btn reference-btn-whatsapp" data-detail-panel-whatsapp href="${buildWhatsAppUrl(product.whatsappText)}" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
     `;
-    const anchor = firstDetailCard.querySelector('[data-detail-description]');
-    if (anchor) anchor.insertAdjacentElement('afterend', conversion);
-    else firstDetailCard.prepend(conversion);
+    const gridAnchor = page.querySelector('.detail-grid');
+    if (gridAnchor) gridAnchor.insertAdjacentElement('beforebegin', conversion);
+    else page.prepend(conversion);
+  }
+  const detailPanelWhatsapp = page.querySelector('[data-detail-panel-whatsapp]');
+  if (detailPanelWhatsapp) {
+    detailPanelWhatsapp.href = buildWhatsAppUrl(product.whatsappText);
   }
 
   const floatingCta = document.querySelector('.floating-cta');

@@ -5394,6 +5394,63 @@ body.product-detail-page .detail-factory-callout span {
   background: #ffffff;
 }
 
+body.product-detail-page .detail-conversion-panel {
+  grid-template-columns: 60px minmax(0, 1fr) minmax(210px, 280px);
+  gap: 18px;
+  margin: 0 0 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+body.product-detail-page .detail-conversion-panel h2 {
+  font-size: clamp(20px, 2.1vw, 26px);
+}
+
+body.product-detail-page .detail-conversion-panel .reference-btn-whatsapp {
+  width: 100%;
+  min-height: 50px;
+}
+
+body.product-detail-page .detail-conversion-panel .reference-panel-proof {
+  gap: 6px;
+}
+
+body.product-detail-page .detail-conversion-panel .reference-panel-proof span {
+  min-height: 26px;
+  font-size: 11px;
+}
+
+body.product-detail-page .detail-buttons [data-detail-whatsapp] {
+  background: #12a854;
+  border-color: #12a854;
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(18, 168, 84, 0.24);
+}
+
+body.product-detail-page .detail-buttons [data-detail-whatsapp]:hover,
+body.product-detail-page .detail-buttons [data-detail-whatsapp]:focus-visible {
+  background: #0d8f48;
+  border-color: #0d8f48;
+}
+
+@media (max-width: 1120px) {
+  body.product-detail-page .detail-conversion-panel {
+    grid-template-columns: 54px minmax(0, 1fr);
+  }
+
+  body.product-detail-page .detail-conversion-panel .reference-btn-whatsapp {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  body.product-detail-page .detail-conversion-panel {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+}
+
 body.product-detail-page .floating-cta {
   position: static;
   display: inline-flex;
