@@ -37,6 +37,22 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
     });
   }
 
+  test('mobile detail preview keeps the loaded local image when ERP sends a hosted image', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${baseURL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
+    await expectMobileDetailPreview(page);
+
+    await page.evaluate(() => {
+      window.syncDetailMobilePreview(document.querySelector('[data-product-detail]'), {
+        imageSrc: 'https://erp.haode.com.mx/uploads/products/slow-iphone-14.webp',
+        title: 'Pantalla para iPhone 14',
+      });
+    });
+
+    const previewSrc = await page.locator('[data-detail-mobile-preview] img').getAttribute('src');
+    expect(previewSrc).toBe('/assets/products/iphone-incell/14/main.jpg');
+  });
+
   for (const path of legacyPlegablePages) {
     test(`${path} keeps mobile quote action in the first screen`, async ({ page }) => {
       await page.setViewportSize({ width: 390, height: 844 });

@@ -2391,8 +2391,12 @@ function syncDetailMobilePreview(page, { imageSrc, title }) {
 
   const image = preview.querySelector('img');
   if (image && imageSrc) {
-    image.src = imageSrc;
     image.alt = title ? `Imagen de ${title}` : 'Imagen del producto HAODE';
+    const currentSrc = image.currentSrc || image.getAttribute('src') || '';
+    const hasLoadedLocalImage = currentSrc && !isErpHostedAsset(currentSrc) && image.complete && image.naturalWidth > 0;
+    if (!(hasLoadedLocalImage && isErpHostedAsset(imageSrc))) {
+      image.src = imageSrc;
+    }
     image.onerror = () => {
       const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
       if (image.src !== fallback) image.src = fallback;
@@ -2401,6 +2405,14 @@ function syncDetailMobilePreview(page, { imageSrc, title }) {
 
   const strong = preview.querySelector('strong');
   if (strong) strong.textContent = 'Foto del producto';
+}
+
+function isErpHostedAsset(src) {
+  try {
+    return new URL(src, window.location.origin).hostname === 'erp.haode.com.mx';
+  } catch {
+    return false;
+  }
 }
 
 function renderProductDetailPage() {
