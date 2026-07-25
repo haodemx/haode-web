@@ -22,4 +22,39 @@ test.describe('HAODE product detail immediate render phase 13', () => {
     const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
     expect(overflow).toBe(0);
   });
+
+  test('static product detail stays visible when ERP catalog omits that SKU', async ({ page }) => {
+    await page.route('**/api/public/catalog*', (route) => {
+      route.fulfill({
+        contentType: 'application/json',
+        body: JSON.stringify([
+          {
+            sku: 'HD-INC-14',
+            public_name_es: 'Pantalla para iPhone 14',
+            model: 'iPhone 14',
+            quality: 'INCELL',
+            category: 'Pantallas',
+            public_price_mxn: 185,
+            public_price_tiers: [],
+            stock_status: 'available',
+            sales_available: true,
+          },
+        ]),
+      });
+    });
+    await page.route('**/public-stock.json*', (route) => {
+      route.fulfill({ contentType: 'application/json', body: '[]' });
+    });
+
+    await page.goto(`${baseURL}/producto/iphone-oled-15/`, { waitUntil: 'domcontentloaded' });
+    await page.waitForTimeout(600);
+
+    await expect(page.locator('[data-detail-title]')).toHaveText('Pantalla para iPhone 15');
+    await expect(page.locator('[data-product-detail]')).not.toContainText('Producto no encontrado');
+    await expect(page.locator('[data-detail-whatsapp]')).toHaveAttribute('href', /wa\.me/);
+    await expect(page.locator('[data-detail-whatsapp]')).toBeVisible();
+
+    const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
+    expect(overflow).toBe(0);
+  });
 });

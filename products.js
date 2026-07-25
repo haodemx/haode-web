@@ -2389,6 +2389,14 @@ function renderProductDetailPage() {
   const warningEl = page.querySelector('.detail-top .catalog-warning');
 
   if (!product) {
+    const existingTitle = titleEl?.textContent?.trim();
+    const existingWhatsapp = whatsappLink?.getAttribute('href') || '';
+    if (existingTitle && existingTitle !== 'Producto HAODE México' && /wa\.me/.test(existingWhatsapp)) {
+      if (warningEl) {
+        warningEl.textContent = 'No manejamos pago en línea. Confirma stock en México, precio por cantidad, garantía local y envío por WhatsApp.';
+      }
+      return;
+    }
     page.innerHTML = `
       <div class="detail-empty">
         <p class="section-kicker">Producto no encontrado</p>
