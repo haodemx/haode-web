@@ -10,6 +10,8 @@ test.describe("HAODE trust conversion UI phase 7", () => {
 
       await expect(page.locator("body")).toHaveClass(/trust-conversion-page/);
       await expect(page.locator(".topnav a").first()).toBeVisible();
+      await expectCompactTrustBrand(page);
+      await expectHeaderHeightAtMost(page, ".topbar", 170);
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Soporte profesional");
       await expect(page.locator('[data-reference-conversion="warranty-trust"]')).toContainText("Consulta garantía");
       await expect(page.locator('[data-reference-conversion="warranty-trust"] a[href*="wa.me"]')).toBeVisible();
@@ -25,7 +27,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
 
     await expect(page.locator("body")).toHaveClass(/distributor-conversion-page/);
     await expect(page.locator(".topnav a").first()).toBeVisible();
-    await expectCompactDistributorHeader(page);
+    await expectCompactTrustBrand(page);
     await expect(page.locator(".distributor-header-whatsapp")).toBeVisible();
     await expect(page.locator(".distributor-header-whatsapp")).toHaveAttribute("href", /wa\.me/);
     await expectHeaderHeightAtMost(page, ".site-header", 220);
@@ -37,7 +39,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
   });
 });
 
-async function expectCompactDistributorHeader(page) {
+async function expectCompactTrustBrand(page) {
   const layout = await page.evaluate(() => {
     const brand = document.querySelector(".brand")?.getBoundingClientRect();
     const logo = document.querySelector(".brand-logo");

@@ -9968,6 +9968,23 @@ body.trust-conversion-page .floating-cta {
     flex: 0 0 168px;
   }
 
+  body.warranty-page.trust-conversion-page .trust-topline {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.warranty-page.trust-conversion-page .trust-topline::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.warranty-page.trust-conversion-page .trust-topline span {
+    flex: 0 0 168px;
+  }
+
   body.trust-conversion-page .products-hero {
     padding: 18px 0 12px;
   }
