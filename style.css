@@ -6676,6 +6676,54 @@ body.product-detail-page .detail-quick-whatsapp {
   }
 }
 
+@media (min-width: 1180px) {
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.82fr) minmax(640px, 1.18fr);
+    gap: 20px 26px;
+    align-items: start;
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-top {
+    grid-column: 1;
+    margin-bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-title {
+    font-size: clamp(2.35rem, 3.45vw, 3.2rem);
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-back {
+    display: none;
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-grid {
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-columns: minmax(260px, 0.95fr) minmax(300px, 1.05fr);
+    gap: 18px;
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-main-image {
+    aspect-ratio: 0.82;
+    max-height: 570px;
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-card {
+    min-height: 100%;
+  }
+
+  body.product-detail-page .detail-shell:has(.detail-quick-whatsapp) .detail-seo-card {
+    grid-column: 1 / -1;
+  }
+}
+
 body.product-detail-page .detail-related-section {
   margin-top: 22px;
 }

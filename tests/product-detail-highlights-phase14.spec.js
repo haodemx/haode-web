@@ -64,6 +64,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expect(quickQuote).toContainText('Cotizar por WhatsApp');
       await expect(quickQuote).toHaveAttribute('href', /wa\.me/);
       await expectDesktopQuoteInViewport(page);
+      await expectDesktopFoldableSalesLayout(page);
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
@@ -96,6 +97,29 @@ async function expectDesktopQuoteInViewport(page) {
 
   expect(layout.top).toBeGreaterThanOrEqual(0);
   expect(layout.bottom).toBeLessThanOrEqual(900);
+}
+
+async function expectDesktopFoldableSalesLayout(page) {
+  const layout = await page.evaluate(() => {
+    const imageRect = document.querySelector('.detail-main-image')?.getBoundingClientRect();
+    const infoRect = document.querySelector('.detail-info')?.getBoundingClientRect();
+    const titleRect = document.querySelector('.detail-title')?.getBoundingClientRect();
+
+    return {
+      imageTop: Math.round(imageRect?.top || 0),
+      imageBottom: Math.round(imageRect?.bottom || 0),
+      infoTop: Math.round(infoRect?.top || 0),
+      infoBottom: Math.round(infoRect?.bottom || 0),
+      titleRight: Math.round(titleRect?.right || 0),
+      imageLeft: Math.round(imageRect?.left || 0),
+    };
+  });
+
+  expect(layout.imageTop).toBeLessThan(260);
+  expect(layout.imageBottom).toBeLessThanOrEqual(720);
+  expect(layout.infoTop).toBeLessThan(260);
+  expect(layout.infoBottom).toBeLessThanOrEqual(900);
+  expect(layout.imageLeft).toBeGreaterThan(layout.titleRight + 40);
 }
 
 async function expectCompactMobileTopbar(page, maxHeight) {
