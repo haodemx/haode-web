@@ -8569,3 +8569,144 @@ body.geo-guide-page.seo-conversion-page .seo-landing-media img {
     gap: 6px;
   }
 }
+
+/* Phase 6 legacy AI page conversion system */
+body.ai-legacy-reference-page .catalog-topbar,
+body.ai-detail-reference-page .catalog-topbar {
+  border-bottom: 1px solid rgba(20, 18, 15, 0.12);
+  background: rgba(255, 252, 248, 0.96);
+  box-shadow: 0 12px 30px rgba(36, 28, 20, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+body.ai-legacy-reference-page .topbar-inner,
+body.ai-detail-reference-page .topbar-inner {
+  width: min(calc(100% - 48px), 1216px);
+}
+
+body.ai-legacy-reference-page .new-page-hero,
+body.ai-detail-reference-page .new-page-hero {
+  padding: 34px 0 18px;
+}
+
+body.ai-legacy-reference-page .new-page-hero-inner,
+body.ai-detail-reference-page .new-page-hero-inner {
+  width: min(calc(100% - 48px), 1216px);
+  min-height: 276px;
+  padding: clamp(26px, 4vw, 46px);
+  border: 1px solid rgba(240, 74, 20, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 56%, rgba(255, 250, 245, 0.52) 100%),
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+  box-shadow: var(--ref-shadow);
+}
+
+body.ai-legacy-reference-page .new-page-hero-inner h1,
+body.ai-detail-reference-page .new-page-hero-inner h1 {
+  color: var(--ref-ink);
+  font-size: clamp(44px, 5vw, 76px);
+  font-weight: 950;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+body.ai-legacy-reference-page .hero-text,
+body.ai-detail-reference-page .hero-text {
+  max-width: 720px;
+  color: #3f3934;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+body.ai-legacy-reference-page .section-shell,
+body.ai-detail-reference-page .section-shell {
+  width: min(calc(100% - 48px), 1216px);
+  border-color: rgba(240, 74, 20, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--ref-shadow);
+}
+
+body.ai-legacy-reference-page .new-product-card,
+body.ai-detail-reference-page .ai-product-card,
+body.ai-detail-reference-page .ai-spec-card,
+body.ai-detail-reference-page .contact-card {
+  border-color: rgba(240, 74, 20, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(106, 68, 38, 0.06);
+}
+
+body.ai-legacy-reference-page .new-product-visual,
+body.ai-detail-reference-page .ai-product-card {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(18, 168, 84, 0.1), transparent 34%),
+    linear-gradient(180deg, #fff8ef, #ffffff);
+}
+
+body.ai-legacy-reference-page .floating-cta,
+body.ai-detail-reference-page .floating-cta {
+  display: none;
+}
+
+body.ai-detail-reference-page .ai-detail-actions .btn-primary,
+body.ai-legacy-reference-page .new-product-actions .btn-primary {
+  background: var(--ref-green);
+  color: #ffffff;
+}
+
+body.ai-detail-reference-page .ai-detail-actions .btn-primary:hover,
+body.ai-legacy-reference-page .new-product-actions .btn-primary:hover {
+  background: var(--ref-green-dark);
+}
+
+body.ai-legacy-reference-page .reference-conversion-panel {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 760px) {
+  body.ai-legacy-reference-page .topbar-inner,
+  body.ai-detail-reference-page .topbar-inner,
+  body.ai-legacy-reference-page .new-page-hero-inner,
+  body.ai-detail-reference-page .new-page-hero-inner,
+  body.ai-legacy-reference-page .section-shell,
+  body.ai-detail-reference-page .section-shell {
+    width: min(calc(100% - 24px), 1216px);
+  }
+
+  body.ai-legacy-reference-page .new-page-hero,
+  body.ai-detail-reference-page .new-page-hero {
+    padding: 18px 0 12px;
+  }
+
+  body.ai-legacy-reference-page .new-page-hero-inner,
+  body.ai-detail-reference-page .new-page-hero-inner {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+    background:
+      linear-gradient(180deg, rgba(255, 250, 245, 0.98), rgba(255, 250, 245, 0.94)),
+      url("/assets/images/store-gallery/store-cdmx-03.jpg") center / cover no-repeat;
+  }
+
+  body.ai-legacy-reference-page .new-page-hero-inner h1,
+  body.ai-detail-reference-page .new-page-hero-inner h1 {
+    font-size: 42px;
+  }
+
+  body.ai-legacy-reference-page .new-product-actions,
+  body.ai-detail-reference-page .ai-detail-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.ai-legacy-reference-page .new-product-actions .btn,
+  body.ai-detail-reference-page .ai-detail-actions .btn {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+    line-height: 1.12;
+  }
+}
