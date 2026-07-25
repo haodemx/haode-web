@@ -7672,6 +7672,69 @@ body.home-page-reference .reference-hero-image-card img {
   object-fit: contain;
 }
 
+body.home-page-reference .reference-proof-band {
+  padding: 16px 0;
+  background: #101214;
+  color: #ffffff;
+}
+
+body.home-page-reference .reference-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+}
+
+body.home-page-reference .reference-proof-grid article {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  padding: 0 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+body.home-page-reference .reference-proof-grid article:last-child {
+  border-right: 0;
+}
+
+body.home-page-reference .reference-proof-grid article > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid rgba(240, 74, 20, 0.48);
+  border-radius: 8px;
+}
+
+body.home-page-reference .reference-proof-grid article > span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--ref-orange);
+  border-radius: 4px;
+}
+
+body.home-page-reference .reference-proof-grid strong,
+body.home-page-reference .reference-proof-grid small {
+  display: block;
+  line-height: 1.2;
+}
+
+body.home-page-reference .reference-proof-grid strong {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+body.home-page-reference .reference-proof-grid small {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 720;
+}
+
 body.home-page-reference .reference-product-composition {
   min-height: 420px;
   display: grid;
@@ -8448,6 +8511,33 @@ body.home-page-reference .reference-footer {
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 12px;
+  }
+
+  body.home-page-reference .reference-proof-band {
+    padding: 12px 0;
+  }
+
+  body.home-page-reference .reference-proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.home-page-reference .reference-proof-grid article {
+    min-height: 64px;
+    padding: 10px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  body.home-page-reference .reference-proof-grid article:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
+
+  body.home-page-reference .reference-proof-grid strong {
+    font-size: 11px;
+  }
+
+  body.home-page-reference .reference-proof-grid small {
+    font-size: 10px;
   }
 
   body.home-page-reference .reference-quick-points {

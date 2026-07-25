@@ -83,6 +83,10 @@ async function checkCriticalPage(page, pageCase, viewport) {
   if (pageCase.name === 'home' && viewport.width <= 430) {
     await expectMobileHomeVisual(page);
   }
+  if (pageCase.name === 'home') {
+    await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
+    await expect(page.locator('.reference-proof-band')).toContainText('Control de calidad');
+  }
   await expectNoHorizontalOverflow(page);
 }
 
