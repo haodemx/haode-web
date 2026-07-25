@@ -32,6 +32,12 @@ test.describe("HAODE App conversion UI phase 3", () => {
     await page.locator("[data-close-cart]").click();
     await page.evaluate(() => { window.location.hash = "#carrito"; });
     await expect(page.locator(".app-bulk-panel").first()).toContainText("Envía este carrito");
+    const cartReviewCta = page.locator(".app-bulk-panel [data-open-cart]").first();
+    await expect(cartReviewCta).toContainText("Revisar carrito por WhatsApp");
+    await expectCartReviewCtaInView(page);
+    await cartReviewCta.click();
+    await expect(page.locator("[data-cart-drawer]")).toHaveClass(/open/);
+    await expect(page.locator("[data-cart-items] .cart-item").first()).toBeVisible();
     await expectNoHorizontalOverflow(page);
   });
 });
@@ -39,4 +45,17 @@ test.describe("HAODE App conversion UI phase 3", () => {
 async function expectNoHorizontalOverflow(page) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(1);
+}
+
+async function expectCartReviewCtaInView(page) {
+  const layout = await page.evaluate(() => {
+    const cta = document.querySelector(".app-bulk-panel [data-open-cart]")?.getBoundingClientRect();
+    return {
+      top: Math.round(cta?.top || 0),
+      bottom: Math.round(cta?.bottom || 0),
+    };
+  });
+
+  expect(layout.top).toBeGreaterThanOrEqual(0);
+  expect(layout.bottom).toBeLessThanOrEqual(844);
 }

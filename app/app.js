@@ -1005,8 +1005,11 @@ function largeListWhatsappMessage(source = "App") {
   ].join("\n");
 }
 
-function appBulkPanelHtml({ label = "Pedido por cantidad", title, copy, ctaText = "Enviar lista por WhatsApp", message }) {
+function appBulkPanelHtml({ label = "Pedido por cantidad", title, copy, ctaText = "Enviar lista por WhatsApp", message, openCart = false }) {
   const whatsappMessage = message || largeListWhatsappMessage("App panel");
+  const ctaHtml = openCart
+    ? `<button class="whatsapp-button app-bulk-cta" type="button" data-open-cart>${ctaText}</button>`
+    : `<a class="whatsapp-button app-bulk-cta" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}" target="_blank" rel="noopener noreferrer">${ctaText}</a>`;
   return `
     <section class="app-bulk-panel" aria-label="Compra por WhatsApp">
       <div class="app-bulk-copy">
@@ -1014,7 +1017,7 @@ function appBulkPanelHtml({ label = "Pedido por cantidad", title, copy, ctaText 
         <h2>${title}</h2>
         <p>${copy}</p>
       </div>
-      <a class="whatsapp-button app-bulk-cta" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}" target="_blank" rel="noopener noreferrer">${ctaText}</a>
+      ${ctaHtml}
     </section>
   `;
 }
@@ -1579,9 +1582,9 @@ function renderCartPage() {
       ${items.length ? appBulkPanelHtml({
         label: "Lista lista para revisar",
         title: "Envía este carrito por WhatsApp privado",
-        copy: "HAODE revisa cantidades, disponibilidad, precio final y envío antes de cerrar el pedido. No hay pago en línea.",
-        ctaText: "Abrir WhatsApp",
-        message: "Hola HAODE México, tengo una lista en el carrito y quiero revisarla por WhatsApp."
+        copy: "Abre el resumen con tus productos, deja nombre, WhatsApp y ciudad, y envía la lista completa a un asesor. No hay pago en línea.",
+        ctaText: "Revisar carrito por WhatsApp",
+        openCart: true
       }) : appBulkPanelHtml({
         label: "Sin carrito perfecto",
         title: "Envía tu lista grande por WhatsApp",
