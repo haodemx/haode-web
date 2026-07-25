@@ -893,6 +893,10 @@ function productCardHtml(product, compact = false) {
           <span>Precio por cantidad</span>
           <span>WhatsApp privado</span>
         </div>
+        <div class="app-card-b2b-strip">
+          <strong>Lista grande por WhatsApp</strong>
+          <span>Confirma stock, garantía local y precio final antes de preparar el pedido.</span>
+        </div>
         <p class="model">Modelo: ${product.model}</p>
         ${cardPriceHtml(product)}
         <div class="product-actions">
@@ -1318,7 +1322,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
 
       <section class="section-block">
         <div class="product-grid" data-product-grid>
-          ${productsToShow.length ? productsToShow.map(productCardHtml).join("") : ""}
+          ${productsToShow.length ? productsToShow.map((product, index) => productCardHtml(product, index < 6)).join("") : ""}
         </div>
       </section>
     </div>
@@ -1421,7 +1425,7 @@ function renderProductDetail(productId) {
           </div>
           ${specGridHtml(product, has360, gallery.length)}
           <div class="detail-whatsapp-note">
-            <strong>Compra como taller</strong>
+            <strong>Lista grande por WhatsApp</strong>
             <span>Envía lista grande por WhatsApp. HAODE confirma stock, precio final, garantía local y envío antes de cerrar el pedido.</span>
           </div>
           <div class="detail-actions">
@@ -1439,7 +1443,7 @@ function renderProductDetail(productId) {
           </div>
         </div>
         <div class="related-grid">
-          ${related.length ? related.map(productCardHtml).join("") : emptyStateHtml("Sin relacionados", "No hay más productos activos en esta categoría.")}
+          ${related.length ? related.map((product) => productCardHtml(product, true)).join("") : emptyStateHtml("Sin relacionados", "No hay más productos activos en esta categoría.")}
         </div>
       </section>
     </div>

@@ -27,6 +27,8 @@ test.describe('HAODE App product detail conversion UI phase 17', () => {
       await expect(page.locator('.detail-conversion-strip')).toContainText('WhatsApp privado');
       await expect(page.locator('.sticky-actions a[href*="wa.me"]').first()).toContainText('Cotizar por WhatsApp');
       await expect(page.locator('.sticky-actions a[href*="wa.me"]').first()).toBeVisible();
+      await expect(page.locator('.detail-whatsapp-note')).toContainText('Lista grande por WhatsApp');
+      await expect(page.locator('.detail-whatsapp-note')).toContainText('garantía local');
       await expectProductSummaryFirstScreen(page);
       await expectProductWhatsappPrimary(page);
       await expectDetailProofStripReadable(page);

@@ -22,6 +22,8 @@ test.describe("HAODE App conversion UI phase 3", () => {
     await expect(page.locator(".app-bulk-panel").first()).toContainText("Compra muchas piezas");
     await expectListSearchBeforeBulkPanel(page);
     await expect(page.locator(".app-card-badges").first()).toContainText("WhatsApp privado");
+    await expect(page.locator(".app-card-b2b-strip").first()).toContainText("Lista grande por WhatsApp");
+    await expect(page.locator(".app-card-b2b-strip").first()).toContainText("garantía local");
     await expectNoHorizontalOverflow(page);
 
     const productCards = page.locator(".product-card");
