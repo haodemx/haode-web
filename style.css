@@ -6651,6 +6651,31 @@ body.product-detail-page .detail-back {
   display: inline-flex;
 }
 
+body.product-detail-page .detail-quick-whatsapp {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  body.product-detail-page .detail-quick-whatsapp {
+    display: inline-flex;
+    width: fit-content;
+    min-height: 48px;
+    justify-content: center;
+    margin-top: 14px;
+    padding: 0 22px;
+    border-color: var(--ref-green, #10b957);
+    background: var(--ref-green, #10b957);
+    color: #ffffff;
+    box-shadow: 0 14px 30px rgba(18, 168, 84, 0.24);
+  }
+
+  body.product-detail-page .detail-quick-whatsapp:hover,
+  body.product-detail-page .detail-quick-whatsapp:focus-visible {
+    border-color: var(--ref-green-dark, #0c9147);
+    background: var(--ref-green-dark, #0c9147);
+  }
+}
+
 body.product-detail-page .detail-related-section {
   margin-top: 22px;
 }

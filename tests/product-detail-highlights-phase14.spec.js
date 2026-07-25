@@ -55,7 +55,16 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
   });
 
   for (const path of legacyPlegablePages) {
-    test(`${path} keeps mobile quote action in the first screen`, async ({ page }) => {
+    test(`${path} keeps quote action in the first screen`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+      const quickQuote = page.locator('.detail-quick-whatsapp').first();
+      await expect(quickQuote).toBeVisible();
+      await expect(quickQuote).toContainText('Cotizar por WhatsApp');
+      await expect(quickQuote).toHaveAttribute('href', /wa\.me/);
+      await expectDesktopQuoteInViewport(page);
+
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
@@ -75,6 +84,19 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
     });
   }
 });
+
+async function expectDesktopQuoteInViewport(page) {
+  const layout = await page.locator('.detail-quick-whatsapp').first().evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return {
+      top: Math.round(rect.top),
+      bottom: Math.round(rect.bottom),
+    };
+  });
+
+  expect(layout.top).toBeGreaterThanOrEqual(0);
+  expect(layout.bottom).toBeLessThanOrEqual(900);
+}
 
 async function expectCompactMobileTopbar(page, maxHeight) {
   const layout = await page.evaluate(() => {
