@@ -8091,3 +8091,366 @@ body.home-page-reference .reference-footer {
     grid-column: auto;
   }
 }
+
+/* Phase 4 secondary-page conversion system */
+body.conversion-reference-page {
+  --ref-orange: #f04a14;
+  --ref-orange-dark: #c7350b;
+  --ref-green: #12a854;
+  --ref-green-dark: #087a3e;
+  --ref-black: #101214;
+  --ref-ink: #151515;
+  --ref-muted: #5f5a55;
+  --ref-bg: #f7f2ec;
+  --ref-soft: #fff3e8;
+  --ref-line: rgba(22, 20, 18, 0.12);
+  --ref-line-orange: rgba(240, 74, 20, 0.24);
+  --ref-radius: 8px;
+  --ref-shadow: 0 18px 42px rgba(64, 42, 24, 0.1);
+  background:
+    radial-gradient(circle at 82% 4%, rgba(240, 74, 20, 0.1), transparent 30%),
+    linear-gradient(180deg, #f4ede5 0%, #fffaf5 45%, #f7f2ec 100%);
+  color: var(--ref-ink);
+  overflow-x: hidden;
+}
+
+body.conversion-reference-page .reference-header {
+  height: auto;
+  min-height: 56px;
+  border-bottom-color: rgba(20, 18, 15, 0.12);
+  background: rgba(255, 252, 248, 0.96);
+  box-shadow: 0 12px 30px rgba(36, 28, 20, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+body.conversion-reference-page .reference-nav-shell {
+  min-height: 58px;
+}
+
+body.conversion-reference-page .reference-logo img {
+  width: 180px;
+}
+
+body.conversion-reference-page .reference-btn-solid {
+  border-color: var(--ref-orange);
+  background: var(--ref-orange);
+  color: #ffffff;
+}
+
+body.conversion-reference-page .reference-btn-outline {
+  background: #ffffff;
+  color: var(--ref-orange-dark);
+}
+
+body.conversion-reference-page .new-page-hero,
+body.category-hub-reference-page .new-page-hero {
+  padding: 34px 0 18px;
+}
+
+body.conversion-reference-page .new-page-hero-inner {
+  width: min(calc(100% - 48px), 1216px);
+  min-height: 276px;
+  padding: clamp(26px, 4vw, 46px);
+  border: 1px solid rgba(240, 74, 20, 0.2);
+  border-radius: var(--ref-radius);
+  background:
+    linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 54%, rgba(255, 250, 245, 0.5) 100%),
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
+  box-shadow: var(--ref-shadow);
+}
+
+body.conversion-reference-page .new-page-hero-inner h1,
+body.conversion-reference-page .section-head h1 {
+  margin: 8px 0 12px;
+  color: var(--ref-ink);
+  font-size: clamp(44px, 5vw, 76px);
+  font-weight: 950;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+body.conversion-reference-page .hero-text,
+body.conversion-reference-page .section-head p {
+  max-width: 720px;
+  color: #3f3934;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+body.conversion-reference-page .section-shell {
+  width: min(calc(100% - 48px), 1216px);
+  border-radius: var(--ref-radius);
+}
+
+body.conversion-reference-page .contact-card,
+body.conversion-reference-page .new-product-card,
+body.conversion-reference-page .home-category-card {
+  border-color: rgba(240, 74, 20, 0.18);
+  border-radius: var(--ref-radius);
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(106, 68, 38, 0.06);
+}
+
+body.conversion-reference-page .home-category-media,
+body.conversion-reference-page .new-product-visual {
+  background:
+    radial-gradient(circle at 30% 18%, rgba(240, 74, 20, 0.14), transparent 36%),
+    linear-gradient(180deg, #fff8ef, #ffffff);
+}
+
+.reference-conversion-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 720px;
+  margin-top: 20px;
+}
+
+.reference-conversion-strip span {
+  display: grid;
+  min-height: 58px;
+  align-content: center;
+  gap: 3px;
+  padding: 10px 12px;
+  border: 1px solid rgba(20, 18, 15, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 18px rgba(47, 32, 22, 0.05);
+}
+
+.reference-conversion-strip strong {
+  color: var(--ref-ink);
+  font-size: 12px;
+  font-weight: 950;
+  line-height: 1.15;
+}
+
+.reference-conversion-strip small {
+  color: var(--ref-muted);
+  font-size: 11px;
+  font-weight: 720;
+  line-height: 1.2;
+}
+
+.reference-conversion-panel {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) minmax(210px, 280px);
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 22px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--ref-radius);
+  background:
+    radial-gradient(circle at 95% 0%, rgba(18, 168, 84, 0.18), transparent 35%),
+    linear-gradient(135deg, #101214 0%, #171a1d 100%);
+  color: #ffffff;
+  box-shadow: 0 20px 46px rgba(16, 18, 20, 0.18);
+}
+
+.reference-conversion-panel .reference-whatsapp-mark {
+  width: 54px;
+  height: 54px;
+  font-size: 22px;
+}
+
+.reference-panel-kicker {
+  margin: 0 0 5px;
+  color: var(--ref-orange);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.reference-conversion-panel h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 950;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.reference-conversion-panel p:not(.reference-panel-kicker) {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.reference-panel-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.reference-panel-proof span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 780;
+}
+
+.reference-btn-whatsapp {
+  min-height: 54px;
+  border-color: var(--ref-green);
+  background: var(--ref-green);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 950;
+  box-shadow: 0 14px 30px rgba(18, 168, 84, 0.28);
+}
+
+.reference-btn-whatsapp:hover,
+.reference-btn-whatsapp:focus-visible {
+  border-color: var(--ref-green-dark);
+  background: var(--ref-green-dark);
+}
+
+body.contact-reference-page .reference-conversion-panel {
+  margin: 18px 0 22px;
+}
+
+body.category-hub-reference-page .section-shell {
+  border: 1px solid rgba(240, 74, 20, 0.18);
+  background: #ffffff;
+  box-shadow: var(--ref-shadow);
+}
+
+body.category-hub-reference-page .home-category-grid {
+  gap: 16px;
+}
+
+body.conversion-reference-page .floating-cta {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  body.conversion-reference-page .reference-nav-shell {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  body.conversion-reference-page .reference-menu-toggle:checked ~ .reference-nav,
+  body.conversion-reference-page .reference-menu-toggle:checked ~ .reference-nav-actions {
+    display: flex;
+  }
+
+  .reference-conversion-panel {
+    grid-template-columns: 54px minmax(0, 1fr);
+  }
+
+  .reference-conversion-panel .reference-btn-whatsapp {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  body.conversion-reference-page .reference-wrap,
+  body.conversion-reference-page .section-shell,
+  body.conversion-reference-page .new-page-hero-inner {
+    width: min(calc(100% - 24px), 1216px);
+  }
+
+  body.conversion-reference-page .reference-logo img {
+    width: 148px;
+  }
+
+  body.conversion-reference-page .new-page-hero {
+    padding: 18px 0 12px;
+  }
+
+  body.conversion-reference-page .new-page-hero-inner {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+    background:
+      linear-gradient(180deg, rgba(255, 250, 245, 0.98), rgba(255, 250, 245, 0.92)),
+      url("/assets/images/store-gallery/store-cdmx-03.jpg") center / cover no-repeat;
+  }
+
+  body.conversion-reference-page .new-page-hero-inner h1,
+  body.conversion-reference-page .section-head h1 {
+    font-size: 42px;
+  }
+
+  body.conversion-reference-page .hero-text,
+  body.conversion-reference-page .section-head p {
+    font-size: 16px;
+  }
+
+  .reference-conversion-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reference-conversion-panel {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .reference-conversion-panel .reference-whatsapp-mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .reference-panel-proof {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.conversion-reference-page .new-product-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.conversion-reference-page .new-product-actions .btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    white-space: normal;
+    line-height: 1.12;
+  }
+
+  body.contact-reference-page .contact-map-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.contact-reference-page .contact-map-card iframe {
+    display: none;
+  }
+
+  body.contact-reference-page .contact-map-card {
+    min-height: 220px;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+    background:
+      radial-gradient(circle at 78% 22%, rgba(18, 168, 84, 0.16), transparent 36%),
+      linear-gradient(135deg, #fff8ef 0%, #ffffff 100%);
+  }
+
+  body.contact-reference-page .contact-map-card::before {
+    content: "HAODE CDMX\A Eje Central, Piso 2, Local 225\A Abre Google Maps desde el botón de arriba";
+    white-space: pre-line;
+    color: var(--ref-ink);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.35;
+    text-align: center;
+  }
+}
