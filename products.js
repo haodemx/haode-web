@@ -2393,11 +2393,77 @@ function renderProductDetailPage() {
     const documentProductTitle = document.title.replace(/\s*\|\s*HAODE México.*$/i, '').trim();
     const existingWhatsapp = whatsappLink?.getAttribute('href') || '';
     if ((existingTitle || documentProductTitle) && /wa\.me/.test(existingWhatsapp)) {
+      const fallbackTitle = existingTitle && existingTitle !== 'Producto HAODE México' ? existingTitle : documentProductTitle;
+      document.body.classList.add('detail-static-fallback');
       if (titleEl && (!existingTitle || existingTitle === 'Producto HAODE México') && documentProductTitle) {
         titleEl.textContent = documentProductTitle;
       }
       if (warningEl) {
         warningEl.textContent = 'No manejamos pago en línea. Confirma stock en México, precio por cantidad, garantía local y envío por WhatsApp.';
+      }
+      if (highlightsEl && !highlightsEl.querySelector('strong')) {
+        highlightsEl.innerHTML = '';
+        [
+          ['Stock en México', 'Confirmación por WhatsApp'],
+          ['Calidad revisada', 'Para talleres'],
+          ['Precio por cantidad', 'Mayoreo privado'],
+          ['WhatsApp privado', 'Cotiza modelo exacto'],
+        ].forEach(([title, detail]) => {
+          const item = document.createElement('span');
+          const strong = document.createElement('strong');
+          strong.textContent = title;
+          const small = document.createElement('small');
+          small.textContent = detail;
+          item.append(strong, small);
+          highlightsEl.appendChild(item);
+        });
+      }
+      if (!page.querySelector('[data-detail-conversion]')) {
+        const conversion = document.createElement('aside');
+        conversion.className = 'reference-conversion-panel detail-conversion-panel detail-static-conversion';
+        conversion.setAttribute('data-detail-conversion', '');
+        conversion.setAttribute('data-reference-conversion', 'product-detail');
+        conversion.setAttribute('aria-label', 'Cotización del producto por WhatsApp');
+
+        const visual = document.createElement('div');
+        visual.className = 'detail-static-visual';
+        const image = document.createElement('img');
+        image.src = mainImageEl?.getAttribute('src') || buildAssetUrl(PLACEHOLDER_IMAGE);
+        image.alt = fallbackTitle || 'Producto HAODE México';
+        image.loading = 'eager';
+        image.decoding = 'async';
+        const visualBadge = document.createElement('span');
+        visualBadge.textContent = 'Stock MX';
+        visual.append(image, visualBadge);
+
+        const copy = document.createElement('div');
+        const kicker = document.createElement('p');
+        kicker.className = 'reference-panel-kicker';
+        kicker.textContent = 'Cotización directa';
+        const heading = document.createElement('h2');
+        heading.textContent = 'Cotiza este modelo por WhatsApp privado';
+        const text = document.createElement('p');
+        text.textContent = 'Envía modelo exacto, cantidad y ciudad. HAODE confirma stock en México, precio por cantidad, garantía local y envío antes de preparar el pedido.';
+        const proof = document.createElement('div');
+        proof.className = 'reference-panel-proof';
+        ['Fábrica directa', 'Stock en México', 'Precio por cantidad'].forEach((label) => {
+          const span = document.createElement('span');
+          span.textContent = label;
+          proof.appendChild(span);
+        });
+        copy.append(kicker, heading, text, proof);
+
+        const action = document.createElement('a');
+        action.className = 'reference-btn reference-btn-whatsapp';
+        action.setAttribute('data-detail-panel-whatsapp', '');
+        action.href = existingWhatsapp;
+        action.target = '_blank';
+        action.rel = 'noopener noreferrer';
+        action.textContent = 'Cotizar modelo por WhatsApp';
+
+        conversion.append(visual, copy, action);
+        const gridAnchor = page.querySelector('.detail-grid');
+        if (gridAnchor) gridAnchor.insertAdjacentElement('beforebegin', conversion);
       }
       return;
     }

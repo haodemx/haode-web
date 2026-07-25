@@ -73,6 +73,11 @@ test.describe('HAODE product detail immediate render phase 13', () => {
     await expect(page.locator('[data-product-detail]')).not.toContainText('Producto no encontrado');
     await expect(page.locator('[data-detail-whatsapp]')).toHaveAttribute('href', /wa\.me/);
     await expect(page.locator('[data-detail-whatsapp]')).toBeVisible();
+    await expect(page.locator('[data-detail-conversion]')).toBeVisible();
+    await expect(page.locator('[data-detail-conversion]')).toContainText('Cotiza este modelo por WhatsApp privado');
+    await expect(page.locator('[data-detail-panel-whatsapp]')).toHaveAttribute('href', /wa\.me/);
+    const fallbackImageLoaded = await page.locator('.detail-static-visual img').evaluate((img) => img.complete && img.naturalWidth > 0);
+    expect(fallbackImageLoaded).toBe(true);
 
     const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
     expect(overflow).toBe(0);

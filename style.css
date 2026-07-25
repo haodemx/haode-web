@@ -5489,6 +5489,49 @@ body.product-detail-page .detail-conversion-panel .reference-panel-proof span {
   font-size: 11px;
 }
 
+body.product-detail-page .detail-static-conversion {
+  grid-template-columns: 136px minmax(0, 1fr) minmax(210px, 280px);
+}
+
+body.product-detail-page .detail-static-visual {
+  position: relative;
+  display: grid;
+  min-height: 118px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(240, 74, 20, 0.18);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 80% 16%, rgba(255, 90, 10, 0.16), transparent 32%),
+    linear-gradient(145deg, rgba(17, 19, 20, 0.92), rgba(255, 250, 245, 0.96));
+}
+
+body.product-detail-page .detail-static-visual img {
+  position: relative;
+  z-index: 1;
+  width: 92%;
+  height: 92%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.2));
+}
+
+body.product-detail-page .detail-static-visual span {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 2;
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid rgba(18, 168, 84, 0.26);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--ref-green-dark, #0d8f48);
+  font-size: 10px;
+  font-weight: 900;
+}
+
 body.product-detail-page .detail-buttons [data-detail-whatsapp] {
   background: #12a854;
   border-color: #12a854;
@@ -5507,6 +5550,10 @@ body.product-detail-page .detail-buttons [data-detail-whatsapp]:focus-visible {
     grid-template-columns: 54px minmax(0, 1fr);
   }
 
+  body.product-detail-page .detail-static-conversion {
+    grid-template-columns: 130px minmax(0, 1fr);
+  }
+
   body.product-detail-page .detail-conversion-panel .reference-btn-whatsapp {
     grid-column: 1 / -1;
   }
@@ -5517,6 +5564,15 @@ body.product-detail-page .detail-buttons [data-detail-whatsapp]:focus-visible {
     grid-template-columns: 1fr;
     gap: 14px;
     padding: 18px;
+  }
+
+  body.product-detail-page .detail-static-visual {
+    min-height: 150px;
+  }
+
+  body.product-detail-page .detail-static-visual img {
+    width: 88%;
+    height: 88%;
   }
 
   body.product-detail-page .detail-highlights {
