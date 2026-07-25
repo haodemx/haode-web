@@ -1129,6 +1129,15 @@ function buildMissingModelCotizacionText() {
   return 'Hola, no encontré el modelo en la web. ¿Me pueden ayudar a confirmar disponibilidad?';
 }
 
+function buildMissingSearchCotizacionText(query, label) {
+  const cleanQuery = String(query || '').trim();
+  const cleanLabel = String(label || 'catálogo').trim();
+  if (cleanQuery) {
+    return `Hola HAODE México, busqué "${cleanQuery}" en el catálogo web y quiero cotizar por WhatsApp. Origen: ${trafficReference()}.`;
+  }
+  return `Hola HAODE México, quiero cotizar una lista de ${cleanLabel} por WhatsApp. Origen: ${trafficReference()}.`;
+}
+
 const SITE_ORIGIN = 'https://haode.com.mx';
 const SITE_BASE_PATH = '';
 const ERP_PUBLIC_CATALOG_URL = 'https://erp.haode.com.mx/api/public/catalog';
@@ -1937,13 +1946,16 @@ function renderCatalogPage() {
     article.className = 'catalog-empty-card';
 
     const title = document.createElement('h3');
+    title.dataset.catalogEmptyTitle = '';
     title.textContent = empty.title;
 
     const text = document.createElement('p');
+    text.dataset.catalogEmptyText = '';
     text.textContent = empty.text;
 
     const link = document.createElement('a');
     link.className = 'btn btn-primary';
+    link.dataset.catalogEmptyWhatsapp = '';
     link.href = empty.href;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
@@ -1951,6 +1963,24 @@ function renderCatalogPage() {
 
     article.append(title, text, link);
     return article;
+  }
+
+  function updateCatalogEmptyCard(article, query, label) {
+    if (!article) return;
+    const cleanQuery = String(query || '').trim();
+    const title = article.querySelector('[data-catalog-empty-title]');
+    const text = article.querySelector('[data-catalog-empty-text]');
+    const link = article.querySelector('[data-catalog-empty-whatsapp]');
+    if (title) {
+      title.textContent = cleanQuery ? `No encontramos "${cleanQuery}".` : 'No encontramos resultados visibles.';
+    }
+    if (text) {
+      text.textContent = 'Envía el modelo exacto o una lista grande por WhatsApp. Un asesor confirma stock en México, calidad y precio por cantidad.';
+    }
+    if (link) {
+      link.href = buildWhatsAppUrl(buildMissingSearchCotizacionText(cleanQuery, label));
+      link.textContent = cleanQuery ? 'Enviar búsqueda por WhatsApp' : 'Enviar lista por WhatsApp';
+    }
   }
 
   function createPantallasEmptyCard() {
@@ -2180,6 +2210,7 @@ function renderCatalogPage() {
       });
 
       setVisible(section.querySelector('[data-catalog-feature-grid]'), visibleFeatures > 0);
+      updateCatalogEmptyCard(emptyState, searchInput?.value || '', group.title);
       setVisible(emptyState, visibleResults === 0);
       if (resultCount) {
         const filterLabel = group.controls.filters.find((filter) => filter.id === state.activeType)?.label || group.title;
@@ -2265,6 +2296,7 @@ function renderCatalogPage() {
       });
 
       setVisible(section.querySelector('[data-pantallas-feature-grid]'), visibleFeatures > 0);
+      updateCatalogEmptyCard(emptyState, searchInput?.value || '', 'Pantallas');
       setVisible(emptyState, visibleResults === 0);
       if (resultCount) {
         const filterLabel = PANTALLAS_FILTERS.find((filter) => filter.id === pantallasState.activeType)?.label || 'Pantallas';

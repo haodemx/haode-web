@@ -4963,11 +4963,13 @@ body.catalog-page.catalog-reference-page .catalog-feature-card {
 
 body.catalog-page.catalog-reference-page .catalog-empty-card {
   display: grid;
-  gap: 10px;
-  padding: 22px;
-  border: 1px dashed rgba(255, 90, 20, 0.32);
+  gap: 12px;
+  max-width: 680px;
+  padding: 20px;
+  border: 1px solid rgba(18, 168, 84, 0.26);
   border-radius: 8px;
-  background: #fff7f0;
+  background: linear-gradient(135deg, #fffaf6 0%, #eefbf3 100%);
+  box-shadow: 0 18px 40px rgba(18, 168, 84, 0.12);
 }
 
 body.catalog-page.catalog-reference-page .catalog-empty-card h3,
@@ -4976,7 +4978,17 @@ body.catalog-page.catalog-reference-page .catalog-empty-card p {
 }
 
 body.catalog-page.catalog-reference-page .catalog-empty-card p {
-  color: #5d5651;
+  color: #4d5a50;
+  line-height: 1.45;
+}
+
+body.catalog-page.catalog-reference-page .catalog-empty-card .btn {
+  justify-self: start;
+  min-width: min(100%, 270px);
+  border-color: #12a854;
+  background: #12a854;
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(18, 168, 84, 0.2);
 }
 
 body.catalog-page.catalog-reference-page .contact-shell-light {
