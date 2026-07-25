@@ -808,6 +808,11 @@ function productCardHtml(product, compact = false) {
         <span class="product-kicker">${label}</span>
         <h3>${product.displayName}</h3>
         <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
+        <div class="app-card-badges" aria-label="Ventajas de compra">
+          <span>Stock México</span>
+          <span>Precio por cantidad</span>
+          <span>WhatsApp privado</span>
+        </div>
         <p class="model">Modelo: ${product.model}</p>
         ${priceLines(product)}
         <div class="product-actions">
@@ -905,6 +910,20 @@ function categoryOptionsHtml() {
     .filter((category) => category.id !== "Todos")
     .map((category) => `<option value="${category.id}"${state.activeCategory === category.id ? " selected" : ""}>${category.label}</option>`)
     .join("");
+}
+
+function appBulkPanelHtml({ label = "Pedido por cantidad", title, copy, ctaText = "Enviar lista por WhatsApp", message }) {
+  const whatsappMessage = message || "Hola HAODE México, tengo una lista grande para cotizar.";
+  return `
+    <section class="app-bulk-panel" aria-label="Compra por WhatsApp">
+      <div class="app-bulk-copy">
+        <span>${label}</span>
+        <h2>${title}</h2>
+        <p>${copy}</p>
+      </div>
+      <a class="whatsapp-button app-bulk-cta" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}" target="_blank" rel="noopener noreferrer">${ctaText}</a>
+    </section>
+  `;
 }
 
 function renderHome() {
@@ -1163,6 +1182,12 @@ function renderList({ group = "", category = "Todos" } = {}) {
         <span><strong>WhatsApp privado</strong> listas grandes</span>
       </section>
 
+      ${appBulkPanelHtml({
+        title: "Compra muchas piezas sin esperar carrito perfecto",
+        copy: "Busca modelos, agrega cantidades y manda una lista completa. Un asesor confirma disponibilidad, precio final y envío por WhatsApp.",
+        message: `Hola HAODE México, quiero cotizar una lista grande de ${title}.`
+      })}
+
       <section class="section-block">
         <div class="category-rail" data-category-rail>${categoryCardsHtml()}</div>
       </section>
@@ -1365,7 +1390,7 @@ function renderCartPage() {
     const subtotal = priceRule.unitPrice * item.quantity;
     return `
       <article class="cart-item">
-        <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
         <div>
           <h3>${item.product.displayName}</h3>
           <p>${item.product.model}</p>
@@ -1399,6 +1424,13 @@ function renderCartPage() {
         <span><strong>Precio final</strong> confirmado por asesor</span>
         <span><strong>Envío</strong> a todo México</span>
       </section>
+      ${items.length ? appBulkPanelHtml({
+        label: "Lista lista para revisar",
+        title: "Envía este carrito por WhatsApp privado",
+        copy: "HAODE revisa cantidades, disponibilidad, precio final y envío antes de cerrar el pedido. No hay pago en línea.",
+        ctaText: "Abrir WhatsApp",
+        message: "Hola HAODE México, tengo una lista en el carrito y quiero revisarla por WhatsApp."
+      }) : ""}
       <section class="cart-page-card">
         ${items.length ? `
           <div class="cart-items-page">${itemsMarkup}</div>
@@ -1667,7 +1699,7 @@ function renderCart() {
     const subtotal = priceRule.unitPrice * item.quantity;
     return `
       <article class="cart-item">
-        <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
         <div>
           <h3>${item.product.displayName}</h3>
           <p>${item.product.model}</p>

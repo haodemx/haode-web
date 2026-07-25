@@ -2928,3 +2928,120 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Phase 3: stronger WhatsApp list conversion across App inner flows */
+.app-bulk-panel {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(18, 168, 84, 0.26);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(18, 168, 84, 0.16), transparent 44%),
+    #101214;
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(16, 18, 20, 0.14);
+}
+
+.app-bulk-copy {
+  display: grid;
+  gap: 7px;
+}
+
+.app-bulk-copy span {
+  width: fit-content;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(18, 168, 84, 0.32);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #69e79f;
+  padding: 0 10px;
+  font-size: 0.72rem;
+  font-weight: 920;
+  text-transform: uppercase;
+}
+
+.app-bulk-copy h2,
+.app-bulk-copy p {
+  margin: 0;
+}
+
+.app-bulk-copy h2 {
+  max-width: 680px;
+  color: #ffffff;
+  font-size: clamp(1.28rem, 5.4vw, 2rem);
+  line-height: 1.08;
+}
+
+.app-bulk-copy p {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.app-bulk-cta {
+  justify-self: stretch;
+  background: var(--haode-green);
+  color: #ffffff;
+}
+
+.app-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.app-card-badges span {
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 7px;
+  border: 1px solid rgba(240, 74, 20, 0.18);
+  border-radius: 6px;
+  background: #fff7ef;
+  color: #7b3512;
+  font-size: 0.66rem;
+  font-weight: 860;
+  line-height: 1;
+}
+
+.cart-bulk-note {
+  display: grid;
+  gap: 3px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(18, 168, 84, 0.2);
+  border-radius: 8px;
+  background: #eefaf3;
+}
+
+.cart-bulk-note strong {
+  color: var(--haode-green-dark);
+  font-size: 0.84rem;
+  line-height: 1.2;
+}
+
+.cart-bulk-note span {
+  color: #4f5b52;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (max-width: 380px) {
+  .product-grid .app-card-badges span {
+    font-size: 0.62rem;
+    padding: 0 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-bulk-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 340px);
+    align-items: center;
+  }
+}
