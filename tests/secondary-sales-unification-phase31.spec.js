@@ -81,6 +81,37 @@ test.describe('HAODE secondary sales unification phase 31', () => {
     await expectNoHorizontalOverflow(page);
   });
 
+  for (const path of ['/contacto/', '/categoria/', '/pantallas-premium-iphone-samsung-fabrica/']) {
+    test(`${path} keeps its desktop header inside the shared content grid`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+      const alignment = await page.locator('.reference-nav-shell').evaluate((shell) => {
+        const box = shell.getBoundingClientRect();
+        return {
+          left: Math.round(box.left),
+          right: Math.round(box.right),
+          width: Math.round(box.width),
+        };
+      });
+
+      expect(alignment.left).toBeGreaterThanOrEqual(24);
+      expect(alignment.right).toBeLessThanOrEqual(1416);
+      expect(alignment.width).toBeLessThanOrEqual(1216);
+      await expectNoHorizontalOverflow(page);
+    });
+  }
+
+  for (const path of ['/categoria/', '/pantallas-premium-iphone-samsung-fabrica/']) {
+    test(`${path} uses WhatsApp green for its primary chat action`, async ({ page }) => {
+      await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+      const whatsapp = page.locator('main a.btn[href*="wa.me"]').first();
+      await expect(whatsapp).toBeVisible();
+      await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
+    });
+  }
+
   for (const width of [360, 390, 768, 1440, 1920]) {
     test(`secondary page shell stays inside ${width}px viewport`, async ({ page }) => {
       await page.setViewportSize({ width, height: width < 700 ? 844 : 1000 });

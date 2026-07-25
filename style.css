@@ -12641,3 +12641,23 @@ body.product-detail-page.conversion-reference-page .detail-price {
     display: inline-flex;
   }
 }
+
+/* Phase 33: keep secondary sales pages aligned and make WhatsApp unmistakable. */
+body.conversion-reference-page {
+  --ref-width: 1216px;
+}
+
+body.conversion-reference-page .new-page-links .btn[href*="wa.me"],
+body.seo-conversion-page .seo-landing-copy .btn[href*="wa.me"] {
+  border-color: var(--ref-green);
+  background: var(--ref-green);
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(18, 168, 84, 0.18);
+}
+
+body.conversion-reference-page .new-page-links .btn[href*="wa.me"]:hover,
+body.seo-conversion-page .seo-landing-copy .btn[href*="wa.me"]:hover {
+  border-color: var(--ref-green-dark);
+  background: var(--ref-green-dark);
+  color: #ffffff;
+}
