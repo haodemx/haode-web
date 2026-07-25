@@ -43,4 +43,21 @@ test.describe('HAODE WhatsApp message templates phase 23', () => {
     expect(message).toContain('garantía local');
     expect(message).toContain('envío');
   });
+
+  test('generic homepage, catalog and contact WhatsApp links ask for useful quote details', async ({ page }) => {
+    for (const path of ['/', '/productos/', '/contacto/']) {
+      await page.goto(`${BASE_URL}${path}`, { waitUntil: 'domcontentloaded' });
+      const href = await page.locator('a[href*="wa.me"]').first().getAttribute('href');
+      const message = decodedWhatsappText(href);
+
+      expect(message).toContain('HAODE México');
+      expect(message).toMatch(/Modelo\/SKU|Modelos/);
+      expect(message).toMatch(/Cantidad|Cantidades/);
+      expect(message).toContain('Ciudad');
+      expect(message).toContain('stock en México');
+      expect(message).toContain('precio por cantidad');
+      expect(message).toContain('garantía local');
+      expect(message).toContain('envío');
+    }
+  });
 });
