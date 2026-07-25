@@ -45,11 +45,12 @@ async function loadDailyAdBanner() {
 
 function buildWhatsAppMessage(data) {
   const lines = [
-    'Hola HAODE, quiero cotizar:',
+    'Hola HAODE México, quiero cotizar por WhatsApp:',
     `Nombre: ${data.nombre || 'N/A'}`,
-    `Producto: ${data.producto || 'N/A'}`,
+    `Modelo/SKU: ${data.producto || 'N/A'}`,
     `Cantidad: ${data.cantidad || 'N/A'}`,
     `Ciudad: ${data.ciudad || 'N/A'}`,
+    '¿Me pueden confirmar stock en México, precio por cantidad, garantía local y envío?',
   ];
 
   return lines.join('\n');

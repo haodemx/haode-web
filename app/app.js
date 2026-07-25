@@ -924,8 +924,19 @@ function categoryOptionsHtml() {
     .join("");
 }
 
+function largeListWhatsappMessage(source = "App") {
+  return [
+    "Hola HAODE México, quiero cotizar una lista grande por WhatsApp.",
+    "Modelos:",
+    "Cantidades:",
+    "Ciudad:",
+    `Origen: ${source}.`,
+    "¿Me confirman stock en México, precio por cantidad, garantía local y envío?"
+  ].join("\n");
+}
+
 function appBulkPanelHtml({ label = "Pedido por cantidad", title, copy, ctaText = "Enviar lista por WhatsApp", message }) {
-  const whatsappMessage = message || "Hola HAODE México, tengo una lista grande para cotizar.";
+  const whatsappMessage = message || largeListWhatsappMessage("App panel");
   return `
     <section class="app-bulk-panel" aria-label="Compra por WhatsApp">
       <div class="app-bulk-copy">
@@ -976,7 +987,7 @@ function renderHome() {
         <div class="category-rail app-home-categories" data-category-rail>${categoryCardsHtml()}</div>
 
         <div class="app-hero-actions">
-          <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE México, tengo una lista grande para cotizar.")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+          <a class="whatsapp-button" href="${largeListWhatsappUrl("App inicio")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
           <a class="outline-button" href="#lista">Buscar más productos</a>
         </div>
 
@@ -1064,7 +1075,7 @@ function dailyAdBannerHtml() {
   }
   const title = ad.app_banner_title || ad.website_banner_title || "Hoy en HAODE";
   const subtitle = ad.app_banner_subtitle || ad.website_banner_subtitle || "Consulta disponibilidad por WhatsApp.";
-  const cta = ad.cta_app || ad.cta_whatsapp || `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE, quiero información de productos.")}`;
+  const cta = ad.cta_app || ad.cta_whatsapp || largeListWhatsappUrl("App publicidad diaria");
 
   return `
     <section class="daily-ad-card" aria-label="Promoción diaria HAODE">
@@ -1245,8 +1256,20 @@ function emptyStateHtml(title, copy) {
 function listEmptyStateHtml(title) {
   const query = state.searchQuery.trim();
   const message = query
-    ? `Hola HAODE México, busqué "${query}" en la App y quiero cotizar por WhatsApp.`
-    : `Hola HAODE México, quiero cotizar una lista de ${title} por WhatsApp.`;
+    ? [
+      `Hola HAODE México, busqué "${query}" en la App y quiero cotizar por WhatsApp.`,
+      `Modelo/SKU: ${query}`,
+      "Cantidad:",
+      "Ciudad:",
+      "¿Me confirman stock en México, precio por cantidad, garantía local y envío?"
+    ].join("\n")
+    : [
+      `Hola HAODE México, quiero cotizar una lista de ${title} por WhatsApp.`,
+      "Modelos:",
+      "Cantidades:",
+      "Ciudad:",
+      "¿Me confirman stock en México, precio por cantidad, garantía local y envío?"
+    ].join("\n");
   return `
     <div class="empty-state empty-state-whatsapp">
       <strong>Sin resultados</strong>
@@ -1257,8 +1280,7 @@ function listEmptyStateHtml(title) {
 }
 
 function largeListWhatsappUrl(source = "App") {
-  const message = `Hola HAODE México, tengo una lista grande para cotizar por WhatsApp. Origen: ${source}.`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(largeListWhatsappMessage(source))}`;
 }
 
 function cartEmptyWhatsappHtml() {
@@ -1493,7 +1515,7 @@ function renderCartPage() {
         title: "Envía tu lista grande por WhatsApp",
         copy: "Para pedidos de muchas piezas, manda modelos, cantidades y ciudad. HAODE confirma stock, garantía local, precio final y envío.",
         ctaText: "Enviar lista por WhatsApp",
-        message: "Hola HAODE México, tengo una lista grande para cotizar por WhatsApp."
+        message: largeListWhatsappMessage("App carrito")
       })}
       ${items.length ? `
         <section class="cart-page-card">
@@ -1521,7 +1543,7 @@ function renderContact() {
         <h1>Contacto HAODE</h1>
         <p>Envía tu lista grande, modelos, cantidades y ciudad. HAODE confirma disponibilidad, precio final y envío por WhatsApp privado.</p>
         ${detailConversionStripHtml()}
-        <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola HAODE México, tengo una lista grande para cotizar por WhatsApp.")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+        <a class="whatsapp-button" href="${largeListWhatsappUrl("App contacto")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
       </section>
     </div>
   `;
@@ -1636,7 +1658,7 @@ function buildWhatsappUrl() {
   const clientCity = (customerCityEl?.value || "").trim();
   const clientComment = (customerCommentEl?.value || "").trim();
   const lines = [
-    "Hola HAODE, quiero hacer este pedido:",
+    "Hola HAODE México, quiero hacer este pedido:",
     "",
     `Cliente: ${clientName || "Sin nombre"}`,
     `Telefono: ${clientPhone || "Sin telefono"}`,
@@ -1723,7 +1745,7 @@ async function submitWebOrder() {
 
 function singleProductWhatsappUrl(product) {
   const lines = [
-    "Hola HAODE, quiero información de este producto:",
+    "Hola HAODE México, quiero cotizar este producto:",
     "",
     `${product.name}`,
     `SKU: ${product.sku}`,

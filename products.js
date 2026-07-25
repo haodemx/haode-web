@@ -295,7 +295,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Indica modelo y cantidad para confirmar disponibilidad.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: buildWhatsAppUrl(buildProductCotizacionText('Baterías')),
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -304,7 +304,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Consulta opciones por modelo antes de confirmar pedido.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: buildWhatsAppUrl(buildProductCotizacionText('Baterías')),
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -313,7 +313,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Confirma compatibilidad y disponibilidad por WhatsApp.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: buildWhatsAppUrl(buildProductCotizacionText('Baterías')),
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -322,7 +322,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Comparte modelo exacto para revisar opciones disponibles.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: buildWhatsAppUrl(buildProductCotizacionText('Baterías')),
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -331,7 +331,7 @@ const CATALOG_GROUPS = [
         eyebrow: 'Baterías por cotización',
         text: 'Envíanos modelo y cantidad para preparar la cotización.',
         image: PLACEHOLDER_IMAGE,
-        href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+        href: buildWhatsAppUrl(buildProductCotizacionText('Baterías')),
         cta: 'Cotizar por WhatsApp',
         external: true,
       },
@@ -340,7 +340,7 @@ const CATALOG_GROUPS = [
       title: 'Baterías disponibles por cotización',
       text: 'Consulta modelos, capacidad y disponibilidad por WhatsApp.',
       cta: 'Cotizar baterías por WhatsApp',
-      href: 'https://wa.me/525645866014?text=Hola%2C%20quiero%20cotizar%20bater%C3%ADas.%20%C2%BFMe%20pueden%20confirmar%20modelos%20y%20disponibilidad%3F',
+      href: buildWhatsAppUrl(buildProductCotizacionText('Baterías')),
     },
   },
   {
@@ -1133,16 +1133,37 @@ function buildProductCotizacionText(name, sku = '') {
 }
 
 function buildMissingModelCotizacionText() {
-  return 'Hola, no encontré el modelo en la web. ¿Me pueden ayudar a confirmar disponibilidad?';
+  return [
+    'Hola HAODE México, no encontré el modelo en la web y quiero cotizar por WhatsApp.',
+    'Modelo/SKU:',
+    'Cantidad:',
+    'Ciudad:',
+    `Origen: ${trafficReference()}.`,
+    '¿Me pueden confirmar stock en México, precio por cantidad, garantía local y envío?',
+  ].join('\n');
 }
 
 function buildMissingSearchCotizacionText(query, label) {
   const cleanQuery = String(query || '').trim();
   const cleanLabel = String(label || 'catálogo').trim();
   if (cleanQuery) {
-    return `Hola HAODE México, busqué "${cleanQuery}" en el catálogo web y quiero cotizar por WhatsApp. Origen: ${trafficReference()}.`;
+    return [
+      `Hola HAODE México, busqué "${cleanQuery}" en el catálogo web y quiero cotizar por WhatsApp.`,
+      `Modelo/SKU: ${cleanQuery}`,
+      'Cantidad:',
+      'Ciudad:',
+      `Origen: ${trafficReference()}.`,
+      '¿Me pueden confirmar stock en México, precio por cantidad, garantía local y envío?',
+    ].join('\n');
   }
-  return `Hola HAODE México, quiero cotizar una lista de ${cleanLabel} por WhatsApp. Origen: ${trafficReference()}.`;
+  return [
+    `Hola HAODE México, quiero cotizar una lista de ${cleanLabel} por WhatsApp.`,
+    'Modelos:',
+    'Cantidades:',
+    'Ciudad:',
+    `Origen: ${trafficReference()}.`,
+    '¿Me pueden confirmar stock en México, precio por cantidad, garantía local y envío?',
+  ].join('\n');
 }
 
 const SITE_ORIGIN = 'https://haode.com.mx';

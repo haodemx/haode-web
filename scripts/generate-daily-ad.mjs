@@ -92,7 +92,15 @@ export function buildAd(product, date = new Date()) {
   const dateKey = formatDate(date);
   const campaignCode = buildCampaignCode({ dateKey, sku });
   const trackingLinks = buildCampaignLinks({ appUrl: APP_URL, campaign: campaignCode, productSku: sku });
-  const cta = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola HAODE, quiero información de ${name}`)}`;
+  const ctaText = [
+    "Hola HAODE México, quiero cotizar este producto:",
+    `Producto: ${name}`,
+    `SKU: ${sku || "N/A"}`,
+    "Cantidad:",
+    "Ciudad:",
+    "¿Me confirman stock en México, precio por cantidad, garantía local y envío?",
+  ].join("\n");
+  const cta = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(ctaText)}`;
 
   return {
     date: dateKey,

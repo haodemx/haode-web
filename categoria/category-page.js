@@ -13,7 +13,18 @@
   }
 
   function buildWhatsappUrl(item) {
-    const text = item.whatsappText || `Hola HAODE, quiero cotizar: ${item.name || item.model || 'producto'}`;
+    const existingText = item.whatsappText || '';
+    const productName = item.name || item.model || 'producto';
+    const text = /stock en M[eé]xico/i.test(existingText) && /precio por cantidad/i.test(existingText) && /garant[ií]a local/i.test(existingText)
+      ? existingText
+      : [
+        'Hola HAODE México, quiero cotizar este producto:',
+        `Producto: ${productName}`,
+        `SKU: ${item.sku || item.id || 'N/A'}`,
+        'Cantidad:',
+        'Ciudad:',
+        '¿Me confirman stock en México, precio por cantidad, garantía local y envío?',
+      ].join('\n');
     return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`;
   }
 
