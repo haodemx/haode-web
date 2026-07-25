@@ -15,7 +15,7 @@ test.describe("HAODE App conversion UI phase 3", () => {
   });
 
   test("list and cart flows keep bulk WhatsApp prompts visible", async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
+    await page.setViewportSize({ width: 360, height: 844 });
     await page.goto(`${APP_URL}#lista`, { waitUntil: "domcontentloaded" });
 
     await expect(page.locator(".app-bulk-panel").first()).toBeVisible();
@@ -24,6 +24,8 @@ test.describe("HAODE App conversion UI phase 3", () => {
     await expect(page.locator(".app-card-badges").first()).toContainText("WhatsApp privado");
     await expect(page.locator(".app-card-b2b-strip").first()).toContainText("Lista grande por WhatsApp");
     await expect(page.locator(".app-card-b2b-strip").first()).toContainText("garantía local");
+    await expectFirstProductStartsInView(page);
+    await expectBottomNavigationLabelsFit(page);
     await expectNoHorizontalOverflow(page);
 
     const productCards = page.locator(".product-card");
@@ -80,4 +82,31 @@ async function expectListSearchBeforeBulkPanel(page) {
   expect(layout.searchBottom).toBeLessThan(layout.bulkTop);
   expect(layout.searchBottom).toBeLessThan(360);
   expect(layout.inputBorder).toContain('240');
+}
+
+async function expectFirstProductStartsInView(page) {
+  const layout = await page.locator(".product-card").first().evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return {
+      top: Math.round(rect.top),
+      width: Math.round(rect.width),
+    };
+  });
+
+  expect(layout.top).toBeGreaterThanOrEqual(0);
+  expect(layout.top).toBeLessThan(844);
+  expect(layout.width).toBeGreaterThan(300);
+}
+
+async function expectBottomNavigationLabelsFit(page) {
+  const labels = await page.locator(".bottom-nav span").evaluateAll((items) => items.map((item) => ({
+    text: item.textContent?.trim() || "",
+    overflow: item.scrollWidth - item.clientWidth,
+  })));
+
+  expect(labels).toHaveLength(5);
+  labels.forEach((label) => {
+    expect(label.text.length).toBeGreaterThan(0);
+    expect(label.overflow).toBeLessThanOrEqual(1);
+  });
 }

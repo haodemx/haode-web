@@ -1303,8 +1303,9 @@ function renderList({ group = "", category = "Todos" } = {}) {
       </section>
 
       ${appBulkPanelHtml({
-        title: "Compra muchas piezas sin esperar carrito perfecto",
+        title: "Compra muchas piezas por WhatsApp",
         copy: "Busca modelos, agrega cantidades y manda una lista completa. Un asesor confirma disponibilidad, precio final y envío por WhatsApp.",
+        ctaText: "Enviar lista",
         message: `Hola HAODE México, quiero cotizar una lista grande de ${title}.`
       })}
 

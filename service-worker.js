@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-21-high-end-seo";
+const CACHE_VERSION = "haode-pwa-v2026-07-25-ui-phase27";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -8,12 +8,12 @@ const APP_SHELL_URLS = [
   "/app/",
   "/app/index.html",
   "/offline.html",
-  "/style.css?v=20260628-stable-revert-01",
+  "/style.css?v=20260725-ui-phase27",
   "/script.js",
   "/campaign-attribution.js",
   "/products.js",
-  "/app/app.css?v=20260718-erp-catalog",
-  "/app/app.js?v=20260721-high-end-seo",
+  "/app/app.css?v=20260725-ui-phase27",
+  "/app/app.js?v=20260725-ui-phase27",
   "/app/products.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",

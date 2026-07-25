@@ -24,8 +24,9 @@ test.describe('HAODE static category conversion UI phase 9', () => {
       await expect(page.locator('a[href*="wa.me"]').first()).toBeVisible();
       await expect(page.getByRole('heading', { name: new RegExp(label, 'i') }).first()).toBeVisible();
 
-      await page.setViewportSize({ width: 390, height: 844 });
+      await page.setViewportSize({ width: 360, height: 844 });
       await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expectCategoryContentStartsInView(page);
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
     });
@@ -49,4 +50,10 @@ async function expectFactoryProofStrip(page) {
   });
   expect(details.backgroundImage).toContain('linear-gradient');
   expect(details.strongColor).toBe('rgb(255, 255, 255)');
+}
+
+async function expectCategoryContentStartsInView(page) {
+  const top = await page.locator('.section-shell > .section-head').first().evaluate((el) => Math.round(el.getBoundingClientRect().top));
+  expect(top).toBeGreaterThanOrEqual(0);
+  expect(top).toBeLessThan(844);
 }

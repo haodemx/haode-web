@@ -11,7 +11,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
       await expect(page.locator("body")).toHaveClass(/trust-conversion-page/);
       await expect(page.locator(".topnav a").first()).toBeVisible();
       await expectCompactTrustBrand(page);
-      await expectHeaderHeightAtMost(page, ".topbar", 170);
+      await expectHeaderHeightAtMost(page, ".topbar", 130);
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Garantía local");
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Stock en México");
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Soporte profesional");
@@ -33,7 +33,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
     await expectCompactTrustBrand(page);
     await expect(page.locator(".distributor-header-whatsapp")).toBeVisible();
     await expect(page.locator(".distributor-header-whatsapp")).toHaveAttribute("href", /wa\.me/);
-    await expectHeaderHeightAtMost(page, ".site-header", 220);
+    await expectHeaderHeightAtMost(page, ".site-header", 175);
     await expect(page.locator(".reference-conversion-strip").first()).toContainText("Fábrica directa");
     await expect(page.locator(".reference-conversion-strip").first()).toContainText("Stock en México");
     await expect(page.locator(".reference-conversion-strip").first()).toContainText("Precio por cantidad");

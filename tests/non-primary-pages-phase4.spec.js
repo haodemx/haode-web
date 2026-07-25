@@ -36,13 +36,16 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await expect(panel.getByRole("link", { name: pageCase.cta })).toHaveAttribute("href", /wa\.me/);
       await expectNoHorizontalOverflow(page);
 
-      await page.setViewportSize({ width: 390, height: 844 });
+      await page.setViewportSize({ width: 360, height: 844 });
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
       await expect(page.locator(".reference-nav a").first()).toBeVisible();
       await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
       await expectHeaderWhatsAppGreen(page);
       await expectHeaderHeightAtMost(page, ".reference-header", 190);
       await expect(page.locator(`[data-reference-conversion="${pageCase.panel}"]`)).toBeVisible();
+      if (pageCase.path === "/categoria/") {
+        await expectFirstCategoryCardStartsInView(page);
+      }
       if (pageCase.path === "/contacto/") {
         await expect(page.locator(".contact-reference-strip")).toContainText("Fábrica directa");
         await expect(page.locator(".contact-reference-strip")).toContainText("Bajo precio");
@@ -85,4 +88,10 @@ async function expectContactPanelCtaInView(page) {
 async function expectDarkConversionStrip(page, selector) {
   const color = await page.locator(`${selector} strong`).first().evaluate((el) => getComputedStyle(el).color);
   expect(color).toBe("rgb(255, 255, 255)");
+}
+
+async function expectFirstCategoryCardStartsInView(page) {
+  const top = await page.locator(".home-category-card").first().evaluate((el) => Math.round(el.getBoundingClientRect().top));
+  expect(top).toBeGreaterThanOrEqual(0);
+  expect(top).toBeLessThan(844);
 }

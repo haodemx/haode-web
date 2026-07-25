@@ -10881,3 +10881,206 @@ body.product-detail-page .detail-price-table td {
     border-top: 0;
   }
 }
+
+/* Phase 6: compact mobile secondary-page purchase paths */
+@media (max-width: 760px) {
+  body.conversion-reference-page .new-page-hero,
+  body.trust-conversion-page .products-hero {
+    padding: 12px 0 8px;
+  }
+
+  body.conversion-reference-page .new-page-hero-inner,
+  body.trust-conversion-page .products-hero-inner {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  body.conversion-reference-page .new-page-hero-inner h1,
+  body.conversion-reference-page .section-head h1,
+  body.trust-conversion-page .products-hero h1,
+  body.distributor-conversion-page .section-head h1 {
+    margin: 4px 0 8px;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  body.conversion-reference-page .hero-text,
+  body.conversion-reference-page .section-head p,
+  body.trust-conversion-page .hero-text,
+  body.trust-conversion-page .section-head p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  body.conversion-reference-page .new-page-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  body.conversion-reference-page .new-page-links .btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 1.12;
+    text-align: center;
+    white-space: normal;
+  }
+
+  body.conversion-reference-page .new-page-hero .reference-conversion-strip,
+  body.trust-conversion-page .products-hero .reference-conversion-strip {
+    gap: 0;
+    margin-top: 12px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 92% 0%, rgba(18, 168, 84, 0.2), transparent 34%),
+      linear-gradient(90deg, #101214 0%, #171614 58%, #11251b 100%);
+    box-shadow: 0 14px 28px rgba(16, 18, 20, 0.14);
+  }
+
+  body.conversion-reference-page .new-page-hero .reference-conversion-strip span,
+  body.trust-conversion-page .products-hero .reference-conversion-strip span {
+    min-height: 42px;
+    padding: 7px 8px;
+    border: 0;
+    border-radius: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  body.conversion-reference-page .new-page-hero .reference-conversion-strip span:nth-child(-n + 2),
+  body.trust-conversion-page .products-hero .reference-conversion-strip span:nth-child(-n + 2) {
+    border-top: 0;
+  }
+
+  body.conversion-reference-page .new-page-hero .reference-conversion-strip span:nth-child(even),
+  body.trust-conversion-page .products-hero .reference-conversion-strip span:nth-child(even) {
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  body.conversion-reference-page .new-page-hero .reference-conversion-strip strong,
+  body.trust-conversion-page .products-hero .reference-conversion-strip strong {
+    color: #ffffff;
+  }
+
+  body.conversion-reference-page .new-page-hero .reference-conversion-strip small,
+  body.trust-conversion-page .products-hero .reference-conversion-strip small {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  body.category-hub-reference-page main > .section,
+  body.category-entry-reference-page main > .section,
+  body.trust-conversion-page main > .section {
+    padding-top: 10px;
+  }
+
+  body.category-hub-reference-page .section-shell,
+  body.category-entry-reference-page .section-shell,
+  body.trust-conversion-page .section-shell {
+    padding: 14px;
+  }
+
+  body.conversion-reference-page .reference-conversion-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(118px, 138px);
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 12px;
+  }
+
+  body.conversion-reference-page .reference-conversion-panel .reference-whatsapp-mark,
+  body.conversion-reference-page .reference-conversion-panel p:not(.reference-panel-kicker),
+  body.conversion-reference-page .reference-conversion-panel .reference-panel-proof {
+    display: none;
+  }
+
+  body.conversion-reference-page .reference-panel-kicker {
+    margin-bottom: 3px;
+    font-size: 10px;
+  }
+
+  body.conversion-reference-page .reference-conversion-panel h2 {
+    font-size: 19px;
+    line-height: 1.04;
+  }
+
+  body.conversion-reference-page .reference-conversion-panel .reference-btn-whatsapp {
+    grid-column: auto;
+    width: 100%;
+    min-height: 46px;
+    padding: 0 9px;
+    font-size: 12px;
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+  }
+
+  body.category-hub-reference-page .section-head,
+  body.category-entry-reference-page .section-head,
+  body.trust-conversion-page .section-head {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  body.category-hub-reference-page .section-head h2,
+  body.category-entry-reference-page .section-head h2,
+  body.trust-conversion-page .section-head h2 {
+    font-size: 28px;
+    line-height: 1.02;
+  }
+
+  body.trust-conversion-page .topbar .trust-topline,
+  body.distributor-conversion-page .site-header .trust-topline {
+    display: none;
+  }
+
+  body.trust-conversion-page .topbar-inner,
+  body.trust-conversion-page .site-header .topbar {
+    gap: 6px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  body.trust-conversion-page .products-hero-inner > .btn-primary,
+  body.distributor-conversion-page .distributor-hero-whatsapp {
+    min-width: 0;
+    min-height: 46px;
+    margin: 0;
+  }
+
+  body.distributor-conversion-page main > .section {
+    padding: 12px 0 18px;
+  }
+
+  body.distributor-conversion-page .section-head {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  body.distributor-conversion-page .section-head > p {
+    padding: 10px 0 10px 14px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  body.distributor-conversion-page .reference-conversion-strip {
+    margin: 10px 0 14px;
+  }
+}
+
+@media (max-width: 340px) {
+  body.conversion-reference-page .new-page-links,
+  body.conversion-reference-page .reference-conversion-panel {
+    grid-template-columns: 1fr;
+  }
+
+  body.conversion-reference-page .reference-conversion-panel .reference-btn-whatsapp {
+    min-height: 44px;
+  }
+}

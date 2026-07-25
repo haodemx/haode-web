@@ -183,7 +183,7 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
 
 test("shows ERP-only products in the desktop catalog", async ({ page }) => {
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
-  await page.goto("http://127.0.0.1:4173/productos/?utm_source=facebook", { waitUntil: "domcontentloaded" });
+  await page.goto(`${SERVER_URL}/productos/?utm_source=facebook`, { waitUntil: "domcontentloaded" });
 
   await expect.poll(() => page.evaluate(() => window.HAODE_PRODUCTS?.length)).toBe(EXPECTED_MERGED_PRODUCT_COUNT);
 

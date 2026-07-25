@@ -3776,6 +3776,13 @@ body[data-route="product"] .detail-whatsapp-note span {
   }
 }
 
+@media (max-width: 380px) {
+  .bottom-nav a,
+  .bottom-nav button {
+    font-size: 0.66rem;
+  }
+}
+
 body[data-route="list"] .product-grid .product-card,
 body[data-route="group"] .product-grid .product-card,
 body[data-route="product"] .related-grid .product-card {
@@ -3834,5 +3841,107 @@ body[data-route="product"] .related-grid .product-media img {
   body[data-route="group"] .product-grid .product-body,
   body[data-route="product"] .related-grid .product-body {
     padding: 12px;
+  }
+}
+
+/* Phase 6: show real App products sooner on mobile list routes */
+@media (max-width: 430px) {
+  body[data-route="list"] .page-stack,
+  body[data-route="group"] .page-stack {
+    gap: 10px;
+  }
+
+  body[data-route="list"] .list-title,
+  body[data-route="group"] .list-title {
+    gap: 5px;
+    padding: 11px 12px;
+  }
+
+  body[data-route="list"] .back-link,
+  body[data-route="group"] .back-link {
+    min-height: 30px;
+    font-size: 0.82rem;
+  }
+
+  body[data-route="list"] .list-title h1,
+  body[data-route="group"] .list-title h1 {
+    font-size: 1.85rem;
+    line-height: 1;
+  }
+
+  body[data-route="list"] .list-title p,
+  body[data-route="group"] .list-title p {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    line-height: 1.34;
+  }
+
+  body[data-route="list"] .toolbar,
+  body[data-route="group"] .toolbar {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  body[data-route="list"] .search-box,
+  body[data-route="group"] .search-box {
+    gap: 4px;
+  }
+
+  body[data-route="list"] .search-box input,
+  body[data-route="group"] .search-box input {
+    min-height: 48px;
+    font-size: 0.9rem;
+  }
+
+  body[data-route="list"] .filter-row,
+  body[data-route="group"] .filter-row {
+    gap: 7px;
+  }
+
+  body[data-route="list"] .select-box,
+  body[data-route="group"] .select-box {
+    min-height: 44px;
+  }
+
+  body[data-route="list"] .app-bulk-panel,
+  body[data-route="group"] .app-bulk-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(124px, 138px);
+    align-items: center;
+    gap: 8px;
+    padding: 10px 11px;
+  }
+
+  body[data-route="list"] .app-bulk-copy,
+  body[data-route="group"] .app-bulk-copy {
+    gap: 0;
+  }
+
+  body[data-route="list"] .app-bulk-copy > span,
+  body[data-route="group"] .app-bulk-copy > span,
+  body[data-route="list"] .app-bulk-copy p,
+  body[data-route="group"] .app-bulk-copy p {
+    display: none;
+  }
+
+  body[data-route="list"] .app-bulk-copy h2,
+  body[data-route="group"] .app-bulk-copy h2 {
+    font-size: 1.05rem;
+    line-height: 1.08;
+  }
+
+  body[data-route="list"] .app-bulk-panel .app-bulk-cta,
+  body[data-route="group"] .app-bulk-panel .app-bulk-cta {
+    min-height: 46px;
+    padding: 0 8px;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  body[data-route="list"] .app-path-strip,
+  body[data-route="group"] .app-path-strip,
+  body[data-route="list"] .app-list-categories,
+  body[data-route="group"] .app-list-categories {
+    display: none;
   }
 }
