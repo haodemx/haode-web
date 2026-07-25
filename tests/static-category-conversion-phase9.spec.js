@@ -19,6 +19,7 @@ test.describe('HAODE static category conversion UI phase 9', () => {
       await expect(page.locator('body')).toHaveClass(/conversion-reference-page/);
       await expect(page.locator('body')).toHaveClass(/category-entry-reference-page/);
       await expect(page.locator('.reference-conversion-strip')).toContainText('Stock en México');
+      await expectFactoryProofStrip(page);
       await expect(page.locator(`[data-reference-conversion="${panelId}"]`)).toContainText(/WhatsApp|Cotiza|Cotización|Envía/);
       await expect(page.locator('a[href*="wa.me"]').first()).toBeVisible();
       await expect(page.getByRole('heading', { name: new RegExp(label, 'i') }).first()).toBeVisible();
@@ -37,3 +38,15 @@ test.describe('HAODE static category conversion UI phase 9', () => {
     expect(jsonLd).toContain('https://haode.com.mx/categoria/productos-ai/#gafas-inteligentes-ai');
   });
 });
+
+async function expectFactoryProofStrip(page) {
+  const details = await page.locator('.reference-conversion-strip').first().evaluate((el) => {
+    const firstStrong = el.querySelector('strong');
+    return {
+      backgroundImage: getComputedStyle(el).backgroundImage,
+      strongColor: firstStrong ? getComputedStyle(firstStrong).color : '',
+    };
+  });
+  expect(details.backgroundImage).toContain('linear-gradient');
+  expect(details.strongColor).toBe('rgb(255, 255, 255)');
+}

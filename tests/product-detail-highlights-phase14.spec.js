@@ -26,6 +26,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expect(page.locator('[data-detail-highlights]')).toContainText('WhatsApp privado');
       await expect(page.locator('[data-detail-conversion]')).toContainText('Cotiza este modelo por WhatsApp privado');
       await expect(page.locator('[data-detail-conversion]')).toContainText('Stock en México');
+      await expectDesktopStandardDetailSalesLayout(page);
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
@@ -97,6 +98,32 @@ async function expectDesktopQuoteInViewport(page) {
 
   expect(layout.top).toBeGreaterThanOrEqual(0);
   expect(layout.bottom).toBeLessThanOrEqual(900);
+}
+
+async function expectDesktopStandardDetailSalesLayout(page) {
+  const layout = await page.evaluate(() => {
+    const titleRect = document.querySelector('.detail-title')?.getBoundingClientRect();
+    const imageRect = document.querySelector('.detail-main-image')?.getBoundingClientRect();
+    const gridRect = document.querySelector('.detail-grid')?.getBoundingClientRect();
+    const quoteRect = document.querySelector('[data-detail-whatsapp]')?.getBoundingClientRect();
+    const topFloat = document.querySelector('.detail-top .floating-cta');
+    return {
+      titleRight: Math.round(titleRect?.right || 0),
+      imageTop: Math.round(imageRect?.top || 0),
+      imageLeft: Math.round(imageRect?.left || 0),
+      gridLeft: Math.round(gridRect?.left || 0),
+      quoteTop: Math.round(quoteRect?.top || 0),
+      quoteBottom: Math.round(quoteRect?.bottom || 0),
+      topFloatDisplay: topFloat ? getComputedStyle(topFloat).display : 'missing',
+    };
+  });
+
+  expect(layout.imageTop).toBeLessThan(260);
+  expect(layout.gridLeft).toBeGreaterThan(layout.titleRight + 24);
+  expect(layout.imageLeft).toBeGreaterThan(layout.titleRight + 24);
+  expect(layout.quoteTop).toBeGreaterThanOrEqual(0);
+  expect(layout.quoteBottom).toBeLessThanOrEqual(900);
+  expect(layout.topFloatDisplay).toBe('none');
 }
 
 async function expectDesktopFoldableSalesLayout(page) {
