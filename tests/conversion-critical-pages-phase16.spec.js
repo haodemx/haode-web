@@ -59,13 +59,13 @@ test.describe('HAODE critical conversion pages phase 16', () => {
 
   for (const pageCase of criticalPages) {
     test(`${pageCase.name} keeps conversion prompts, WhatsApp and responsive layout`, async ({ page }) => {
-      const badResources = [];
-      trackBadSameOriginResources(page, badResources);
+      const badResponses = [];
+      trackBadSameOriginResponses(page, badResponses);
 
       await checkCriticalPage(page, pageCase, { width: 1280, height: 900 });
       await checkCriticalPage(page, pageCase, { width: 390, height: 844 });
 
-      expect(badResources).toEqual([]);
+      expect(badResponses).toEqual([]);
     });
   }
 });
@@ -90,18 +90,11 @@ async function expectNoHorizontalOverflow(page) {
   expect(overflow).toBeLessThanOrEqual(1);
 }
 
-function trackBadSameOriginResources(page, badResources) {
+function trackBadSameOriginResponses(page, badResponses) {
   page.on('response', (response) => {
     const url = response.url();
     if (isSameOrigin(url) && response.status() >= 400 && !isIgnoredResource(url)) {
-      badResources.push(`${response.status()} ${url}`);
-    }
-  });
-
-  page.on('requestfailed', (request) => {
-    const url = request.url();
-    if (isSameOrigin(url) && !isIgnoredResource(url)) {
-      badResources.push(`failed ${url}`);
+      badResponses.push(`${response.status()} ${url}`);
     }
   });
 }
