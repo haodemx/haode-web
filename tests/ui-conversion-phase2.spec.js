@@ -20,6 +20,9 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
     await expect(page.getByRole("link", { name: "Enviar lista por WhatsApp" }).first()).toHaveAttribute("href", /wa\.me/);
     await expect(page.locator(".shop-badge-row").first()).toContainText("WhatsApp privado");
+    await expect(page.locator(".shop-b2b-strip").first()).toContainText("Lista grande por WhatsApp");
+    await expect(page.locator(".shop-b2b-strip").first()).toContainText("garantía local");
+    await expect(page.locator(".shop-cta").first()).toHaveCSS("background-color", "rgb(18, 168, 84)");
     await expect(page.locator(".catalog-visual-strip")).toBeVisible();
     await expect(page.locator(".floating-cta")).toBeHidden();
 
@@ -46,6 +49,9 @@ test.describe("HAODE conversion UI phase 2", () => {
 
     await expect(page.locator(".new-product-card").first()).toBeVisible();
     await expect(page.locator(".new-product-badges").first()).toContainText("Precio por cantidad");
+    await expect(page.locator(".new-product-b2b-strip").first()).toContainText("Lista grande por WhatsApp");
+    await expect(page.locator(".new-product-b2b-strip").first()).toContainText("garantía local");
+    await expect(page.locator(".category-whatsapp-primary").first()).toHaveCSS("background-color", "rgb(18, 168, 84)");
     await expect(page.locator("[data-category-whatsapp-panel]")).toBeVisible();
     await expect(page.locator(".category-whatsapp-cta")).toHaveAttribute("href", /wa\.me/);
 
@@ -67,6 +73,9 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator("[data-detail-panel-whatsapp]")).toContainText("Cotizar modelo por WhatsApp");
     await expect(page.locator("[data-detail-whatsapp]")).toBeVisible();
     await expect(page.locator("[data-detail-whatsapp]")).toHaveAttribute("href", /wa\.me/);
+    await expect(page.locator("[data-detail-factory-callout]")).toContainText("Fábrica directa");
+    await expect(page.locator("[data-detail-factory-callout]")).toContainText("Garantía local");
+    await expect(page.locator("[data-detail-highlights] strong").first()).toHaveCSS("color", "rgb(255, 255, 255)");
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/producto/samsung-incell-s8/`, { waitUntil: "domcontentloaded" });

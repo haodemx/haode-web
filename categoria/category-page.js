@@ -109,6 +109,10 @@
           <span>Precio por cantidad</span>
           <span>WhatsApp privado</span>
         </div>
+        <div class="new-product-b2b-strip">
+          <strong>Lista grande por WhatsApp</strong>
+          <span>Confirma stock, garantía local y precio final antes del pedido.</span>
+        </div>
         <p>${item.description || 'Producto HAODE México con atención por WhatsApp para técnicos, talleres y distribuidores. Confirma disponibilidad actual, modelo y cantidad antes de comprar.'}</p>
         <p class="new-arrival-note">${item.quality || ''}</p>
         ${priceRows}

@@ -1637,6 +1637,14 @@ function createProductCard(product) {
   stock.className = `stock-badge stock-${stockClassName(product.stockStatus)}`;
   stock.textContent = product.stockLabel || 'Consultar inventario';
 
+  const bulkPrompt = document.createElement('div');
+  bulkPrompt.className = 'shop-b2b-strip';
+  const bulkTitle = document.createElement('strong');
+  bulkTitle.textContent = 'Lista grande por WhatsApp';
+  const bulkText = document.createElement('span');
+  bulkText.textContent = 'Confirma stock, garantía local y mejor precio antes de preparar el pedido.';
+  bulkPrompt.append(bulkTitle, bulkText);
+
   const priceWrap = document.createElement('div');
   priceWrap.className = 'shop-price-wrap';
 
@@ -1692,7 +1700,7 @@ function createProductCard(product) {
   details.textContent = 'Ver producto';
 
   actions.append(details, whatsapp);
-  content.append(title, badgeRow, quality, stock, priceWrap, actions);
+  content.append(title, badgeRow, quality, stock, bulkPrompt, priceWrap, actions);
 
   article.append(overlay, media, content);
   return article;
@@ -1867,6 +1875,22 @@ function renderCatalogPage() {
     text.className = 'shop-quality';
     text.textContent = card.text;
 
+    const badgeRow = document.createElement('div');
+    badgeRow.className = 'shop-badge-row';
+    ['Fábrica directa', 'WhatsApp privado', 'Mayoreo'].forEach((label) => {
+      const badge = document.createElement('span');
+      badge.textContent = label;
+      badgeRow.appendChild(badge);
+    });
+
+    const bulkPrompt = document.createElement('div');
+    bulkPrompt.className = 'shop-b2b-strip';
+    const bulkTitle = document.createElement('strong');
+    bulkTitle.textContent = 'Cotización directa';
+    const bulkText = document.createElement('span');
+    bulkText.textContent = 'Envía modelo exacto y cantidad para confirmar precio final.';
+    bulkPrompt.append(bulkTitle, bulkText);
+
     const actions = document.createElement('div');
     actions.className = 'shop-actions';
 
@@ -1880,7 +1904,7 @@ function renderCatalogPage() {
     }
 
     actions.appendChild(cta);
-    content.append(title, text, actions);
+    content.append(title, badgeRow, text, bulkPrompt, actions);
     article.append(link, media, content);
     return article;
   }
@@ -2583,6 +2607,32 @@ function renderProductDetailPage() {
   }
   if (qualityEl) qualityEl.textContent = product.quality;
   if (descriptionEl) descriptionEl.textContent = product.description;
+  if (descriptionEl) {
+    const detailCard = descriptionEl.closest('.detail-card');
+    let factoryCallout = page.querySelector('[data-detail-factory-callout]');
+    if (detailCard && !factoryCallout) {
+      factoryCallout = document.createElement('div');
+      factoryCallout.className = 'detail-factory-callout';
+      factoryCallout.setAttribute('data-detail-factory-callout', '');
+      descriptionEl.insertAdjacentElement('afterend', factoryCallout);
+    }
+    if (factoryCallout) {
+      factoryCallout.innerHTML = '';
+      [
+        ['Fábrica directa', 'Sin intermediarios'],
+        ['Lista grande', 'Cotización privada'],
+        ['Garantía local', 'Soporte en México'],
+      ].forEach(([title, detail]) => {
+        const item = document.createElement('span');
+        const strong = document.createElement('strong');
+        strong.textContent = title;
+        const small = document.createElement('small');
+        small.textContent = detail;
+        item.append(strong, small);
+        factoryCallout.appendChild(item);
+      });
+    }
+  }
 
   if (!page.querySelector('[data-detail-conversion]')) {
     const conversion = document.createElement('aside');

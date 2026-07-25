@@ -26,6 +26,9 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expect(page.locator('[data-detail-highlights]')).toContainText('WhatsApp privado');
       await expect(page.locator('[data-detail-conversion]')).toContainText('Cotiza este modelo por WhatsApp privado');
       await expect(page.locator('[data-detail-conversion]')).toContainText('Stock en México');
+      await expect(page.locator('[data-detail-factory-callout]')).toContainText('Lista grande');
+      await expect(page.locator('[data-detail-factory-callout]')).toContainText('Garantía local');
+      await expect(page.locator('[data-detail-highlights] strong').first()).toHaveCSS('color', 'rgb(255, 255, 255)');
       await expectDesktopStandardDetailSalesLayout(page);
 
       await page.setViewportSize({ width: 390, height: 844 });
