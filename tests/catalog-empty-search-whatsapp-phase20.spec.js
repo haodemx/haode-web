@@ -12,6 +12,7 @@ test.describe('HAODE catalog empty search WhatsApp UI phase 20', () => {
   test('pantallas empty search sends the searched model to WhatsApp', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: 'domcontentloaded' });
+    await page.waitForLoadState('networkidle');
     await page.locator('[data-pantallas-search-input]').fill('modelo inexistente 999');
 
     const emptyState = page.locator('[data-pantallas-empty]');
@@ -29,6 +30,7 @@ test.describe('HAODE catalog empty search WhatsApp UI phase 20', () => {
   test('fundas micas empty search keeps the same WhatsApp intake', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/#fundas-micas`, { waitUntil: 'domcontentloaded' });
+    await page.waitForLoadState('networkidle');
     await page.locator('[data-catalog-search-input="fundas-micas"]').fill('case mayorista imposible');
 
     const emptyState = page.locator('[data-catalog-empty="fundas-micas"]');

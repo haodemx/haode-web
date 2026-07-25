@@ -32,16 +32,21 @@
         <a href="/garantia/">Garantía local</a>
         <a href="/contacto/">Contacto</a>
         <a href="/distribuidores/">Distribuidores</a>
-        <a href="/app/">HAODE App</a>
       </nav>
       <div class="site-sales-footer-contact">
         <p>Lista grande o pedido de mayoreo</p>
         <strong>Atención privada por WhatsApp</strong>
         <span>Envía modelos, cantidades y ciudad. Confirmamos disponibilidad y precio final antes del pedido.</span>
-        <a href="https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20enviar%20una%20lista%20de%20productos.%0AModelos%3A%0ACantidades%3A%0ACiudad%3A" target="_blank" rel="noopener noreferrer">
-          <span aria-hidden="true">W</span>
-          Enviar lista por WhatsApp
-        </a>
+        <div class="site-sales-footer-actions">
+          <a class="site-sales-footer-whatsapp" href="https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20enviar%20una%20lista%20de%20productos.%0AModelos%3A%0ACantidades%3A%0ACiudad%3A" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">W</span>
+            Enviar lista
+          </a>
+          <a class="site-sales-footer-app" href="/app/">
+            <span aria-hidden="true">A</span>
+            Comprar en APP
+          </a>
+        </div>
       </div>
     </div>
     <div class="site-sales-footer-bottom">
@@ -53,4 +58,15 @@
   `;
 
   document.body.appendChild(footer);
+
+  const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+  document.querySelectorAll('.topnav a, .reference-nav a').forEach((link) => {
+    const linkPath = new URL(link.href, window.location.origin).pathname;
+    const isHome = linkPath === '/' && currentPath === '/';
+    const isSection = linkPath !== '/' && currentPath.startsWith(linkPath);
+    if (isHome || isSection) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
 })();

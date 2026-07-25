@@ -259,6 +259,74 @@ img {
   margin-top: 4px;
 }
 
+.app-load-error {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+  padding: 20px;
+  border: 1px solid rgba(240, 68, 24, 0.28);
+  border-left: 5px solid var(--haode-orange);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.app-load-error > span {
+  color: var(--haode-orange-dark);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.app-load-error h1,
+.app-load-error p {
+  margin: 0;
+}
+
+.app-load-error h1 {
+  font-size: clamp(1.6rem, 7vw, 2.2rem);
+  line-height: 1.04;
+}
+
+.app-load-error p {
+  max-width: 58ch;
+  color: var(--haode-muted);
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.app-load-error > div {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.app-load-error button,
+.app-load-error a {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.app-load-error button {
+  border: 1px solid rgba(25, 21, 18, 0.16);
+  background: #ffffff;
+  color: var(--haode-black);
+}
+
+.app-load-error a {
+  background: var(--haode-green);
+  color: #ffffff;
+}
+
 .search-empty-whatsapp {
   gap: 7px;
   margin: 4px 0 0;
@@ -3408,6 +3476,10 @@ body {
   .product-grid .app-card-badges span {
     font-size: 0.62rem;
     padding: 0 6px;
+  }
+
+  .app-load-error > div {
+    grid-template-columns: 1fr;
   }
 }
 

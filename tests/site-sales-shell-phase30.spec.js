@@ -17,7 +17,7 @@ const catalogHeaderPages = [
   '/garantia/',
   '/categoria/pantallas/',
   '/categoria/iphone-incell/',
-  '/producto/iphone-incell-12/',
+  '/producto/iphone-incell-12-12pro/',
 ];
 
 test.describe('HAODE public sales shell phase 30', () => {

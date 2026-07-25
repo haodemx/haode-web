@@ -1,4 +1,8 @@
 (() => {
+  if (document.body.classList.contains('product-detail-page')) {
+    document.body.classList.add('conversion-reference-page');
+  }
+
   const headerInner = document.querySelector('.catalog-topbar .topbar-inner');
   if (!headerInner) return;
 
@@ -19,6 +23,17 @@
       return link;
     }));
     nav.setAttribute('data-detail-nav', '');
+
+    const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+    nav.querySelectorAll('a').forEach((link) => {
+      const linkPath = new URL(link.href, window.location.origin).pathname;
+      const isHome = linkPath === '/' && currentPath === '/';
+      const isSection = linkPath !== '/' && currentPath.startsWith(linkPath);
+      if (isHome || isSection) {
+        link.classList.add('is-active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
   }
 
   const sourceWhatsapp = document.querySelector(
@@ -51,4 +66,11 @@
 
   actions.append(whatsapp, app);
   headerInner.appendChild(actions);
+
+  if (!document.querySelector('[data-site-sales-footer], script[src*="/site-footer.js"]')) {
+    const footerScript = document.createElement('script');
+    footerScript.src = '/site-footer.js?v=20260725-ui-phase32';
+    footerScript.defer = true;
+    document.body.appendChild(footerScript);
+  }
 })();

@@ -1335,6 +1335,20 @@ function emptyStateHtml(title, copy) {
   return `<div class="empty-state"><strong>${title}</strong><span>${copy}</span></div>`;
 }
 
+function appLoadErrorHtml() {
+  return `
+    <section class="app-load-error" role="alert">
+      <span>No se pudo abrir el catálogo</span>
+      <h1>Revisa tu conexión e intenta de nuevo</h1>
+      <p>También puedes enviar el modelo o SKU por WhatsApp. Un asesor confirma disponibilidad y precio final.</p>
+      <div>
+        <button type="button" data-retry-app>Reintentar</button>
+        <a href="${largeListWhatsappUrl('App error de carga')}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+      </div>
+    </section>
+  `;
+}
+
 function listEmptyStateHtml(title) {
   const query = state.searchQuery.trim();
   const message = query
@@ -2001,7 +2015,12 @@ async function handleDocumentClick(event) {
   const focusSearchButton = event.target.closest("[data-focus-search]");
   const shareProductButton = event.target.closest("[data-share-product]");
   const productWhatsappLink = event.target.closest("[data-product-whatsapp]");
+  const retryAppButton = event.target.closest("[data-retry-app]");
 
+  if (retryAppButton) {
+    window.location.reload();
+    return;
+  }
   if (groupLink) {
     event.preventDefault();
     window.location.hash = groupRouteUrl(groupLink.dataset.groupLink);
@@ -2158,7 +2177,7 @@ async function init() {
   } catch (error) {
     console.error("No se pudo iniciar HAODE app:", error);
     networkStateEl.hidden = false;
-    viewRootEl.innerHTML = emptyStateHtml("No se pudieron cargar los productos", "Intenta de nuevo o consulta por WhatsApp.");
+    viewRootEl.innerHTML = appLoadErrorHtml();
   }
 
   const x200t = products.find((product) => product.id === "x200t-cortadora-micas");
