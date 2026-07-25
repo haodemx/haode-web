@@ -11279,3 +11279,44 @@ body.product-detail-page .detail-header-mark {
     display: none;
   }
 }
+
+/* Phase 29: legible brand wordmark on catalog and secondary headers */
+@media (min-width: 761px) {
+  body.conversion-reference-page .reference-logo,
+  body.catalog-page.catalog-reference-page .reference-logo {
+    display: inline-flex;
+    width: max-content;
+    min-width: 112px;
+    height: 44px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #f04418;
+    font-weight: 950;
+    line-height: 0.84;
+  }
+
+  body.conversion-reference-page .reference-logo img,
+  body.catalog-page.catalog-reference-page .reference-logo img {
+    display: none;
+  }
+
+  body.conversion-reference-page .reference-logo::before,
+  body.catalog-page.catalog-reference-page .reference-logo::before {
+    content: "HAODE";
+    display: block;
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+
+  body.conversion-reference-page .reference-logo::after,
+  body.catalog-page.catalog-reference-page .reference-logo::after {
+    content: "MÉXICO";
+    display: block;
+    margin-top: 4px;
+    color: #16120f;
+    font-size: 8px;
+    font-weight: 850;
+    letter-spacing: 1.7px;
+  }
+}

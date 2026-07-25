@@ -86,6 +86,9 @@ async function checkCriticalPage(page, pageCase, viewport) {
   if ((pageCase.name === 'catalog' || pageCase.name === 'contact') && viewport.width <= 430) {
     await expectReferenceMobileSalesHeader(page);
   }
+  if ((pageCase.name === 'catalog' || pageCase.name === 'contact') && viewport.width > 430) {
+    await expectReferenceDesktopWordmark(page);
+  }
   if (pageCase.name === 'home') {
     await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
     await expect(page.locator('.reference-proof-band')).toContainText('Control de calidad');
@@ -171,6 +174,26 @@ async function expectReferenceMobileSalesHeader(page) {
   expect(layout.logoWidth).toBeGreaterThanOrEqual(100);
   expect(layout.navTop).toBeLessThanOrEqual(58);
   expect(layout.actionsTop).toBeLessThanOrEqual(104);
+}
+
+async function expectReferenceDesktopWordmark(page) {
+  const logo = page.locator('.reference-logo').first();
+  await expect(logo).toBeVisible();
+  const details = await logo.evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    const image = el.querySelector('img');
+    return {
+      width: Math.round(rect.width),
+      imageDisplay: image ? getComputedStyle(image).display : null,
+      brand: getComputedStyle(el, '::before').content,
+      country: getComputedStyle(el, '::after').content,
+    };
+  });
+
+  expect(details.width).toBeGreaterThanOrEqual(100);
+  expect(details.imageDisplay).toBe('none');
+  expect(details.brand).toContain('HAODE');
+  expect(details.country).toContain('MÉXICO');
 }
 
 async function expectNoHorizontalOverflow(page) {
