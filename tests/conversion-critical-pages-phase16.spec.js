@@ -89,8 +89,29 @@ async function checkCriticalPage(page, pageCase, viewport) {
   if (pageCase.name === 'home') {
     await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
     await expect(page.locator('.reference-proof-band')).toContainText('Control de calidad');
+    await expectHomepageStickyWhatsapp(page, viewport.height);
   }
   await expectNoHorizontalOverflow(page);
+}
+
+async function expectHomepageStickyWhatsapp(page, viewportHeight) {
+  const stickyWhatsapp = page.locator('.reference-sticky-whatsapp');
+  await expect(stickyWhatsapp).toBeVisible();
+  await expect(stickyWhatsapp).toContainText('Enviar lista grande por WhatsApp');
+  await expect(stickyWhatsapp).toHaveAttribute('href', /wa\.me/);
+
+  const box = await stickyWhatsapp.evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return {
+      top: Math.round(rect.top),
+      bottom: Math.round(rect.bottom),
+      width: Math.round(rect.width),
+    };
+  });
+
+  expect(box.top).toBeGreaterThanOrEqual(0);
+  expect(box.bottom).toBeLessThanOrEqual(viewportHeight);
+  expect(box.width).toBeGreaterThan(300);
 }
 
 async function expectMobileHomeVisual(page) {
