@@ -259,6 +259,14 @@ img {
   margin-top: 4px;
 }
 
+.cart-empty-whatsapp {
+  align-content: start;
+}
+
+.cart-empty-whatsapp .whatsapp-button {
+  min-height: 50px;
+}
+
 .install-button {
   min-height: 44px;
   border: 0;

@@ -1244,6 +1244,21 @@ function listEmptyStateHtml(title) {
   `;
 }
 
+function largeListWhatsappUrl(source = "App") {
+  const message = `Hola HAODE México, tengo una lista grande para cotizar por WhatsApp. Origen: ${source}.`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+function cartEmptyWhatsappHtml() {
+  return `
+    <div class="empty-state empty-state-whatsapp cart-empty-whatsapp">
+      <strong>¿Tienes una lista grande?</strong>
+      <span>No necesitas agregar pieza por pieza. Envía modelos, cantidades y ciudad por WhatsApp privado.</span>
+      <a class="whatsapp-button" href="${largeListWhatsappUrl("App carrito vacío")}" target="_blank" rel="noopener noreferrer">Enviar lista grande por WhatsApp</a>
+    </div>
+  `;
+}
+
 function galleryImagesFor(product) {
   const images = [product.image];
   if (product.id === "x200t-cortadora-micas") {
@@ -1461,9 +1476,15 @@ function renderCartPage() {
         copy: "HAODE revisa cantidades, disponibilidad, precio final y envío antes de cerrar el pedido. No hay pago en línea.",
         ctaText: "Abrir WhatsApp",
         message: "Hola HAODE México, tengo una lista en el carrito y quiero revisarla por WhatsApp."
-      }) : ""}
-      <section class="cart-page-card">
-        ${items.length ? `
+      }) : appBulkPanelHtml({
+        label: "Sin carrito perfecto",
+        title: "Envía tu lista grande por WhatsApp",
+        copy: "Para pedidos de muchas piezas, manda modelos, cantidades y ciudad. HAODE confirma stock, garantía local, precio final y envío.",
+        ctaText: "Enviar lista por WhatsApp",
+        message: "Hola HAODE México, tengo una lista grande para cotizar por WhatsApp."
+      })}
+      ${items.length ? `
+        <section class="cart-page-card">
           <div class="cart-items-page">${itemsMarkup}</div>
           <div class="cart-total">
             <span>Total estimado</span>
@@ -1473,8 +1494,8 @@ function renderCartPage() {
             <a class="text-button" href="#lista">Continuar comprando</a>
             <button class="primary-button" type="button" data-open-cart>Enviar por WhatsApp</button>
           </div>
-        ` : emptyStateHtml("Carrito vacío", "Agrega productos para preparar tu pedido HAODE.")}
-      </section>
+        </section>
+      ` : ""}
     </div>
   `;
   updateNavigation();
@@ -1719,9 +1740,10 @@ function renderCart() {
   });
 
   if (!items.length) {
-    cartItemsEl.innerHTML = emptyStateHtml("Tu carrito está vacío", "Agrega productos para enviar el pedido por WhatsApp.");
+    cartItemsEl.innerHTML = cartEmptyWhatsappHtml();
     cartTotalEl.textContent = formatPrice(0);
     whatsappLinkEl.href = "#";
+    whatsappLinkEl.textContent = "Agrega productos para pedido";
     whatsappLinkEl.classList.add("disabled");
     return;
   }
@@ -1755,6 +1777,7 @@ function renderCart() {
   cartTotalEl.textContent = formatPrice(cartTotal());
   whatsappLinkEl.classList.toggle("disabled", !customerReady);
   whatsappLinkEl.href = customerReady ? buildWhatsappUrl() : "#";
+  whatsappLinkEl.textContent = customerReady ? "Enviar lista por WhatsApp" : "Completa datos para WhatsApp";
 }
 
 function addProduct(productId) {

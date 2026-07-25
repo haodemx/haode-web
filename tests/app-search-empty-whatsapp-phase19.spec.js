@@ -15,8 +15,9 @@ test.describe('HAODE App empty search WhatsApp UI phase 19', () => {
     await page.goto(`${APP_URL}#lista`, { waitUntil: 'domcontentloaded' });
     await page.locator('[data-search-products]').fill('modelo inexistente 999');
 
-    await expect(page.locator('.empty-state-whatsapp')).toContainText('Sin resultados');
-    await expect(page.locator('.empty-state-whatsapp')).toContainText('lista grande por WhatsApp');
+    const searchEmptyState = page.locator('.empty-state-whatsapp').filter({ hasText: 'Sin resultados' });
+    await expect(searchEmptyState).toContainText('Sin resultados');
+    await expect(searchEmptyState).toContainText('lista grande por WhatsApp');
     await expect(page.getByRole('link', { name: 'Enviar búsqueda por WhatsApp' })).toHaveAttribute('href', /modelo%20inexistente%20999/);
 
     const overflow = await page.evaluate(() => (
