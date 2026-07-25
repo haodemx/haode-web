@@ -2401,6 +2401,16 @@ function renderProductDetailPage() {
       if (warningEl) {
         warningEl.textContent = 'No manejamos pago en línea. Confirma stock en México, precio por cantidad, garantía local y envío por WhatsApp.';
       }
+      if (warningEl && !page.querySelector('[data-static-top-whatsapp]')) {
+        const topAction = document.createElement('a');
+        topAction.className = 'reference-btn reference-btn-whatsapp detail-static-top-whatsapp';
+        topAction.setAttribute('data-static-top-whatsapp', '');
+        topAction.href = existingWhatsapp;
+        topAction.target = '_blank';
+        topAction.rel = 'noopener noreferrer';
+        topAction.textContent = 'Cotizar modelo por WhatsApp';
+        warningEl.insertAdjacentElement('afterend', topAction);
+      }
       if (highlightsEl && !highlightsEl.querySelector('strong')) {
         highlightsEl.innerHTML = '';
         [

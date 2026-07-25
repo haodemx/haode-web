@@ -5493,6 +5493,17 @@ body.product-detail-page .detail-static-conversion {
   grid-template-columns: 136px minmax(0, 1fr) minmax(210px, 280px);
 }
 
+body.product-detail-page .detail-static-top-whatsapp {
+  width: min(100%, 360px);
+  min-height: 48px;
+  justify-content: center;
+  margin-top: 14px;
+  background: var(--ref-green, #12a854);
+  border-color: var(--ref-green, #12a854);
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(18, 168, 84, 0.22);
+}
+
 body.product-detail-page .detail-static-visual {
   position: relative;
   display: grid;

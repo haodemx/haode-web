@@ -76,6 +76,9 @@ test.describe('HAODE product detail immediate render phase 13', () => {
     await expect(page.locator('[data-detail-conversion]')).toBeVisible();
     await expect(page.locator('[data-detail-conversion]')).toContainText('Cotiza este modelo por WhatsApp privado');
     await expect(page.locator('[data-detail-panel-whatsapp]')).toHaveAttribute('href', /wa\.me/);
+    await expect(page.locator('[data-static-top-whatsapp]')).toBeVisible();
+    const firstWhatsappTop = await page.locator('a:visible[href*="wa.me"]').first().evaluate((link) => Math.round(link.getBoundingClientRect().top));
+    expect(firstWhatsappTop).toBeLessThan(844);
     const fallbackImageLoaded = await page.locator('.detail-static-visual img').evaluate((img) => img.complete && img.naturalWidth > 0);
     expect(fallbackImageLoaded).toBe(true);
 
