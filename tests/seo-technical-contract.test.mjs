@@ -76,6 +76,22 @@ test('redirect aliases are noindex and point to canonical pages', () => {
   assert.match(micaAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/micas\.html">/);
 });
 
+test('legacy product redirects do not use root-relative producto.html paths', () => {
+  const productDir = path.join(ROOT, 'producto');
+  const badRedirects = [];
+
+  for (const slug of fs.readdirSync(productDir)) {
+    const file = path.join(productDir, slug, 'index.html');
+    if (!fs.existsSync(file)) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    if (/window\.location\.replace\('\/producto\.html\?id=/.test(html) || /href="\/producto\.html\?id=/.test(html)) {
+      badRedirects.push(`producto/${slug}/index.html`);
+    }
+  }
+
+  assert.equal(badRedirects.length, 0, badRedirects.join('\n'));
+});
+
 test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () => {
   const blocks = jsonLdBlocks(read('index.html'));
   const graph = blocks.flatMap((block) => block['@graph'] || [block]);

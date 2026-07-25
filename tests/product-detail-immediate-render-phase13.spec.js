@@ -57,4 +57,24 @@ test.describe('HAODE product detail immediate render phase 13', () => {
     const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
     expect(overflow).toBe(0);
   });
+
+  test('static product detail without generated data keeps title and WhatsApp fallback', async ({ page }) => {
+    await page.route('**/api/public/catalog*', (route) => {
+      route.fulfill({ contentType: 'application/json', body: '[]' });
+    });
+    await page.route('**/public-stock.json*', (route) => {
+      route.fulfill({ contentType: 'application/json', body: '[]' });
+    });
+
+    await page.goto(`${baseURL}/producto/iphone-oled-11/`, { waitUntil: 'domcontentloaded' });
+    await page.waitForTimeout(400);
+
+    await expect(page.locator('[data-detail-title]')).toHaveText('Pantalla para iPhone 11');
+    await expect(page.locator('[data-product-detail]')).not.toContainText('Producto no encontrado');
+    await expect(page.locator('[data-detail-whatsapp]')).toHaveAttribute('href', /wa\.me/);
+    await expect(page.locator('[data-detail-whatsapp]')).toBeVisible();
+
+    const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
+    expect(overflow).toBe(0);
+  });
 });

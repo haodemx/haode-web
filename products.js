@@ -2390,8 +2390,12 @@ function renderProductDetailPage() {
 
   if (!product) {
     const existingTitle = titleEl?.textContent?.trim();
+    const documentProductTitle = document.title.replace(/\s*\|\s*HAODE México.*$/i, '').trim();
     const existingWhatsapp = whatsappLink?.getAttribute('href') || '';
-    if (existingTitle && existingTitle !== 'Producto HAODE México' && /wa\.me/.test(existingWhatsapp)) {
+    if ((existingTitle || documentProductTitle) && /wa\.me/.test(existingWhatsapp)) {
+      if (titleEl && (!existingTitle || existingTitle === 'Producto HAODE México') && documentProductTitle) {
+        titleEl.textContent = documentProductTitle;
+      }
       if (warningEl) {
         warningEl.textContent = 'No manejamos pago en línea. Confirma stock en México, precio por cantidad, garantía local y envío por WhatsApp.';
       }
