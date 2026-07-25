@@ -4069,6 +4069,43 @@ body.warranty-page .contact-whatsapp-chip {
     display: none;
   }
 
+  body.category-page .topbar-inner,
+  body.category-entry-reference-page .topbar-inner,
+  body.micas-reference-page .topbar-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 8px 0 10px;
+  }
+
+  body.category-page .topnav,
+  body.category-entry-reference-page .topnav,
+  body.micas-reference-page .topnav {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 2px 0 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.category-page .topnav::-webkit-scrollbar,
+  body.category-entry-reference-page .topnav::-webkit-scrollbar,
+  body.micas-reference-page .topnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.category-page .topnav a,
+  body.category-entry-reference-page .topnav a,
+  body.micas-reference-page .topnav a {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 8px 11px;
+    border: 1px solid rgba(255, 90, 20, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
   .hero {
     padding-top: 18px;
   }

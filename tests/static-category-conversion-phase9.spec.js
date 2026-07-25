@@ -24,6 +24,7 @@ test.describe('HAODE static category conversion UI phase 9', () => {
       await expect(page.getByRole('heading', { name: new RegExp(label, 'i') }).first()).toBeVisible();
 
       await page.setViewportSize({ width: 390, height: 844 });
+      await expect(page.locator('.topnav a').first()).toBeVisible();
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
     });

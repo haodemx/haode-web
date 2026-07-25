@@ -30,6 +30,7 @@ test.describe('HAODE dynamic category conversion UI phase 12', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.reference-conversion-strip')).toBeVisible();
+      await expect(page.locator('.topnav a').first()).toBeVisible();
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
     });
