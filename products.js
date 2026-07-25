@@ -2363,6 +2363,46 @@ function renderCatalogPage() {
   });
 }
 
+function syncDetailMobilePreview(page, { imageSrc, title }) {
+  const topCopy = page.querySelector('.detail-top > div');
+  if (!topCopy) return;
+
+  let preview = page.querySelector('[data-detail-mobile-preview]');
+  if (!preview) {
+    preview = document.createElement('div');
+    preview.className = 'detail-mobile-product-preview';
+    preview.setAttribute('data-detail-mobile-preview', '');
+
+    const image = document.createElement('img');
+    image.loading = 'eager';
+    image.decoding = 'async';
+
+    const copy = document.createElement('div');
+    const strong = document.createElement('strong');
+    const small = document.createElement('small');
+    small.textContent = 'Confirma stock en México y precio por cantidad por WhatsApp.';
+    copy.append(strong, small);
+    preview.append(image, copy);
+
+    const subtitle = topCopy.querySelector('[data-detail-subtitle]');
+    if (subtitle) subtitle.insertAdjacentElement('afterend', preview);
+    else topCopy.prepend(preview);
+  }
+
+  const image = preview.querySelector('img');
+  if (image && imageSrc) {
+    image.src = imageSrc;
+    image.alt = title ? `Imagen de ${title}` : 'Imagen del producto HAODE';
+    image.onerror = () => {
+      const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
+      if (image.src !== fallback) image.src = fallback;
+    };
+  }
+
+  const strong = preview.querySelector('strong');
+  if (strong) strong.textContent = 'Foto del producto';
+}
+
 function renderProductDetailPage() {
   const page = document.querySelector('[data-product-detail]');
   if (!page) return;
@@ -2428,6 +2468,10 @@ function renderProductDetailPage() {
           highlightsEl.appendChild(item);
         });
       }
+      syncDetailMobilePreview(page, {
+        imageSrc: mainImageEl?.getAttribute('src') || buildAssetUrl(PLACEHOLDER_IMAGE),
+        title: fallbackTitle || 'Producto HAODE México',
+      });
       if (!page.querySelector('[data-detail-conversion]')) {
         const conversion = document.createElement('aside');
         conversion.className = 'reference-conversion-panel detail-conversion-panel detail-static-conversion';
@@ -2576,6 +2620,10 @@ function renderProductDetailPage() {
     };
     attachZoom(mainImageEl, new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href, product.name);
   }
+  syncDetailMobilePreview(page, {
+    imageSrc: buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE),
+    title: product.name,
+  });
 
   if (priceEl) priceEl.textContent = product.lowestPriceText || 'Consultar';
 

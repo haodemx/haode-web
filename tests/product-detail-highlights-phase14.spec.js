@@ -30,6 +30,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expectMobileDetailPreview(page);
       await expectFirstWhatsAppInViewport(page);
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
@@ -63,4 +64,21 @@ async function expectFirstWhatsAppInViewport(page) {
     return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
   });
   expect(isInViewport).toBe(true);
+}
+
+async function expectMobileDetailPreview(page) {
+  const preview = page.locator('[data-detail-mobile-preview]');
+  await expect(preview).toBeVisible();
+  const details = await preview.evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    const image = el.querySelector('img');
+    return {
+      top: Math.round(rect.top),
+      width: Math.round(rect.width),
+      imageLoaded: Boolean(image && image.complete && image.naturalWidth > 0),
+    };
+  });
+  expect(details.top).toBeLessThan(560);
+  expect(details.width).toBeGreaterThan(320);
+  expect(details.imageLoaded).toBe(true);
 }
