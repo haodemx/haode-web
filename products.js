@@ -356,7 +356,7 @@ const CATALOG_GROUPS = [
       empty: {
         title: 'No encontramos ese producto en Fundas / Micas.',
         text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
-        cta: 'Consultar por WhatsApp',
+        cta: 'Cotizar por WhatsApp',
         href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
       },
     },
@@ -386,7 +386,7 @@ const CATALOG_GROUPS = [
       empty: {
         title: 'No encontramos ese producto AI.',
         text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
-        cta: 'Consultar por WhatsApp',
+        cta: 'Cotizar por WhatsApp',
         href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
       },
     },
@@ -1684,7 +1684,7 @@ function createProductCard(product) {
   whatsapp.href = buildWhatsAppUrl(product.whatsappText);
   whatsapp.target = '_blank';
   whatsapp.rel = 'noopener noreferrer';
-  whatsapp.textContent = product.salesAvailable === false ? 'Consultar por WhatsApp' : 'Cotizar por WhatsApp';
+  whatsapp.textContent = 'Cotizar por WhatsApp';
 
   const details = document.createElement('a');
   details.className = 'btn btn-secondary shop-details';
@@ -2015,7 +2015,7 @@ function renderCatalogPage() {
     const article = createCatalogEmptyCard({
       title: 'No encontramos ese modelo en Pantallas.',
       text: 'Escríbenos por WhatsApp y te confirmamos disponibilidad.',
-      cta: 'Consultar por WhatsApp',
+      cta: 'Cotizar por WhatsApp',
       href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
     });
     article.classList.add('pantallas-empty-state');

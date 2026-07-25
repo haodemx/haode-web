@@ -5,7 +5,19 @@ import test from 'node:test';
 
 const ROOT = path.resolve(new URL('..', import.meta.url).pathname);
 const WHATSAPP_PHONE = '525645866014';
-const SKIP_DIRS = new Set(['.git', 'node_modules', 'playwright-report', 'test-results']);
+const SKIP_DIRS = new Set(['.git', 'node_modules', 'overnight-previews', 'playwright-report', 'test-results']);
+const WEAK_WHATSAPP_LABELS = [
+  'Consultar por WhatsApp',
+  'Contactar por WhatsApp',
+  'Hablar por WhatsApp',
+  'Enviar solicitud',
+  'Solicitar distribución',
+  'Soporte para pedidos',
+  'Precio distribuidor',
+  'Confirmar stock',
+  'WhatsApp: 5645866014',
+  'WhatsApp 5645866014',
+];
 
 function collectFiles(dir = ROOT, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -53,4 +65,31 @@ test('static HAODE WhatsApp links ask for quote details before opening chat', ()
 
   assert.equal(missing.length, 0, missing.join('\n'));
   assert.ok(total > 500, `Expected broad WhatsApp coverage, found ${total}`);
+});
+
+test('static and dynamic WhatsApp buttons use direct quote labels', () => {
+  const weakAnchors = [];
+  const weakAnchorText = new Set([...WEAK_WHATSAPP_LABELS, 'WhatsApp']);
+  const whatsappAnchorPattern = /<a\b(?=[^>]*href=["'][^"']*(?:wa\.me|whatsapp)[^"']*["'])[^>]*>([\s\S]*?)<\/a>/gi;
+
+  for (const file of collectFiles().filter((file) => file.endsWith('.html'))) {
+    const relativePath = path.relative(ROOT, file);
+    const content = fs.readFileSync(file, 'utf8');
+    for (const match of content.matchAll(whatsappAnchorPattern)) {
+      const text = match[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      if (weakAnchorText.has(text)) {
+        weakAnchors.push(`${relativePath}: ${text}`);
+      }
+    }
+  }
+
+  const weakSourceStrings = [];
+  for (const relativePath of ['products.js', path.join('app', 'app.js')]) {
+    const content = fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
+    for (const label of WEAK_WHATSAPP_LABELS) {
+      if (content.includes(label)) weakSourceStrings.push(`${relativePath}: ${label}`);
+    }
+  }
+
+  assert.equal([...weakAnchors, ...weakSourceStrings].length, 0, [...weakAnchors, ...weakSourceStrings].join('\n'));
 });

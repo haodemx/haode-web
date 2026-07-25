@@ -806,7 +806,7 @@ function priceFor(product, quantity = 1) {
 
 function formatPrice(value) {
   const number = Number(value) || 0;
-  return number > 0 ? `${money.format(number)} MXN` : "Consultar por WhatsApp";
+  return number > 0 ? `${money.format(number)} MXN` : "Cotizar por WhatsApp";
 }
 
 function priceLines(product) {
@@ -831,7 +831,7 @@ function cardPriceHtml(product) {
   return `
     <div class="price-lines pending-price-note">
       <span>Precio pendiente de confirmación</span>
-      <strong>Consultar por WhatsApp</strong>
+      <strong>Cotizar por WhatsApp</strong>
     </div>
   `;
 }
@@ -1154,7 +1154,7 @@ function dailyAdBannerHtml() {
         <h2>${escapeAttr(title)}</h2>
         <p>${escapeAttr(subtitle)}</p>
       </div>
-      <a class="secondary-button" href="${escapeAttr(cta)}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+      <a class="secondary-button" href="${escapeAttr(cta)}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
     </section>
   `;
 }

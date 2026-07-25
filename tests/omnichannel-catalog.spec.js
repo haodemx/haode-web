@@ -195,7 +195,7 @@ test("shows ERP-only products in the desktop catalog", async ({ page }) => {
   await expect(pendingCard).toBeVisible();
   await expect(pendingCard).toHaveAttribute("data-sales-available", "false");
   await expect(pendingCard).toContainText("Precio pendiente de confirmación");
-  await expect(pendingCard.getByRole("link", { name: "Consultar por WhatsApp" })).toHaveAttribute("href", /ERP-PENDING-PRICE/);
+  await expect(pendingCard.getByRole("link", { name: "Cotizar por WhatsApp" })).toHaveAttribute("href", /ERP-PENDING-PRICE/);
 
   const g3Card = page.locator(".shop-card", { hasText: "Gafas AI G3" });
   await expect(g3Card).toHaveCount(1);
