@@ -1203,6 +1203,23 @@ img {
   color: var(--haode-orange-dark);
 }
 
+.pending-price-note {
+  gap: 2px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 90, 10, 0.18);
+  border-radius: 8px;
+  background: #fff7f0;
+}
+
+.pending-price-note span,
+.pending-price-note strong {
+  display: block;
+}
+
+.pending-price-note strong {
+  color: var(--haode-orange-dark);
+}
+
 .product-actions {
   margin-top: 2px;
 }

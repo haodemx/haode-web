@@ -756,6 +756,16 @@ function priceLines(product) {
   `;
 }
 
+function cardPriceHtml(product) {
+  if (product.salesAvailable) return priceLines(product);
+  return `
+    <div class="price-lines pending-price-note">
+      <span>Precio pendiente de confirmación</span>
+      <strong>Consultar por WhatsApp</strong>
+    </div>
+  `;
+}
+
 function productDetailUrl(product) {
   const detailUrls = {
     "aimb-g5-ai-sports": "/ai-smart-glasses-aimb-g5.html",
@@ -814,10 +824,12 @@ function productCardHtml(product, compact = false) {
           <span>WhatsApp privado</span>
         </div>
         <p class="model">Modelo: ${product.model}</p>
-        ${priceLines(product)}
+        ${cardPriceHtml(product)}
         <div class="product-actions">
           <a class="text-button" href="${appProductUrl(product)}">Detalles</a>
-          <button class="add-button" type="button" data-add-product="${product.id}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Consultar"}</button>
+          ${product.salesAvailable
+            ? `<button class="add-button" type="button" data-add-product="${product.id}">Agregar</button>`
+            : `<a class="add-button product-consult-button" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" target="_blank" rel="noopener noreferrer">Consultar</a>`}
         </div>
       </div>
     </article>
