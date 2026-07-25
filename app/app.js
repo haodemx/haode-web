@@ -1168,6 +1168,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
   if (window.HAODE_DIAGNOSTICS) {
     window.HAODE_DIAGNOSTICS.productosVisibles = productsToShow.length;
   }
+  const noResultsHtml = productsToShow.length ? "" : listEmptyStateHtml(title);
 
   viewRootEl.innerHTML = `
     <div class="page-stack">
@@ -1178,6 +1179,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
           <p>${productsToShow.length} productos activos. Menudeo, mayoreo y precios por cantidad cuando aplica.</p>
         </div>
       </section>
+      ${noResultsHtml}
 
       <section class="app-path-strip" aria-label="Compra profesional HAODE">
         <span><strong>Stock en México</strong> salida rápida</span>
@@ -1216,7 +1218,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
 
       <section class="section-block">
         <div class="product-grid" data-product-grid>
-          ${productsToShow.length ? productsToShow.map(productCardHtml).join("") : emptyStateHtml("Sin resultados", "No encontramos productos activos con estos filtros.")}
+          ${productsToShow.length ? productsToShow.map(productCardHtml).join("") : ""}
         </div>
       </section>
     </div>
@@ -1226,6 +1228,20 @@ function renderList({ group = "", category = "Todos" } = {}) {
 
 function emptyStateHtml(title, copy) {
   return `<div class="empty-state"><strong>${title}</strong><span>${copy}</span></div>`;
+}
+
+function listEmptyStateHtml(title) {
+  const query = state.searchQuery.trim();
+  const message = query
+    ? `Hola HAODE México, busqué "${query}" en la App y quiero cotizar por WhatsApp.`
+    : `Hola HAODE México, quiero cotizar una lista de ${title} por WhatsApp.`;
+  return `
+    <div class="empty-state empty-state-whatsapp">
+      <strong>Sin resultados</strong>
+      <span>No encontramos productos activos con estos filtros. Envía el modelo exacto o una lista grande por WhatsApp y un asesor lo revisa.</span>
+      <a class="whatsapp-button" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}" target="_blank" rel="noopener noreferrer">Enviar búsqueda por WhatsApp</a>
+    </div>
+  `;
 }
 
 function galleryImagesFor(product) {

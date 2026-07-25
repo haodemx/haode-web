@@ -254,6 +254,11 @@ img {
   color: var(--haode-black);
 }
 
+.empty-state-whatsapp .whatsapp-button {
+  width: 100%;
+  margin-top: 4px;
+}
+
 .install-button {
   min-height: 44px;
   border: 0;
