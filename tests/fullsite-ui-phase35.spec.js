@@ -92,6 +92,32 @@ test.describe('factory-store shared page contracts', () => {
     expect(media.height).toBeGreaterThanOrEqual(220);
   });
 
+  test('LK-030 gallery only renders available confirmed media', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    const missingMedia = [];
+    page.on('response', (response) => {
+      const url = new URL(response.url());
+      if (
+        url.pathname.includes('/assets/products/productos-ai/lk-030-mini-camara-retro-digital/')
+        && response.status() >= 400
+      ) {
+        missingMedia.push(url.pathname);
+      }
+    });
+
+    await page.goto(`${baseURL}/producto/lk-030-mini-camara-retro-digital/`, {
+      waitUntil: 'domcontentloaded',
+    });
+    const gallery = page.locator('#lk030-gallery img');
+    await expect(gallery).toHaveCount(3);
+    await gallery.last().scrollIntoViewIfNeeded();
+    await expect.poll(
+      () => gallery.evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0)),
+      { message: 'every LK-030 gallery image should load' },
+    ).toBe(true);
+    expect(missingMedia).toEqual([]);
+  });
+
   test('trust-page mobile navigation fits inside the viewport', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
 
