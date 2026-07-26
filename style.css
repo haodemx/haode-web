@@ -10610,7 +10610,7 @@ body.pantallas-entry-page .new-page-hero-inner {
 body.fundas-entry-page .new-page-hero-inner {
   background:
     linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.48) 100%),
-    url("/assets/products/fundas/funda-premium-aluminio-plus/main.jpg") right 8% center / 340px auto no-repeat,
+    url("/assets/images/home-categories/fundas-accesorios.jpg") right 8% center / 340px auto no-repeat,
     url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
 }
 

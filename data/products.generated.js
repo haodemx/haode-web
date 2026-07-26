@@ -34,7 +34,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$140 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 10",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Bolsa Protectora",
     "description": "Pantalla para iPhone 11 Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de caja/modelo confirmado en $140 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "localOnly": true
@@ -78,7 +78,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$175 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 10",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro",
     "description": "Pantalla para iPhone 11 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -120,7 +120,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$190 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 13",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
     "description": "Pantalla para iPhone 11 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -162,7 +162,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$190 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 16",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
     "description": "Pantalla para iPhone 12 / 12 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -204,7 +204,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$195 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 15",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
     "description": "Pantalla para iPhone 12 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -246,7 +246,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$220 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 18",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
     "description": "Pantalla para iPhone 12 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -288,7 +288,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$230 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 21",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 23",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
     "description": "Pantalla para iPhone 13 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -330,7 +330,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$235 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 20",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 22",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
     "description": "Pantalla para iPhone 13 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -372,7 +372,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$275 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 23",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
     "description": "Pantalla para iPhone 13 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -414,7 +414,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$325 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 25",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 27",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
     "description": "Pantalla para iPhone 13 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -456,7 +456,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$230 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 27",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
     "description": "Pantalla para iPhone 14 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -498,7 +498,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$265 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 30",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
     "description": "Pantalla para iPhone 14 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -540,7 +540,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$310 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 33",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
     "description": "Pantalla para iPhone 14 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -582,7 +582,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$310 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 35",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
     "description": "Pantalla para iPhone 14 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -623,7 +623,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$275 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 37",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 39",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
     "description": "Pantalla para iPhone 15 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -664,7 +664,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$275 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 39",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 41",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Plus",
     "description": "Pantalla para iPhone 15 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -704,7 +704,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$320 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 40",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 42",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro",
     "description": "Pantalla para iPhone 15 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -746,7 +746,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$330 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 42",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 44",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
     "description": "Pantalla para iPhone 15 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -788,7 +788,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$320 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 44",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 46",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
     "description": "Pantalla para iPhone 16 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -811,26 +811,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$300 MXN"
+        "price": "$400 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$280 MXN"
+        "price": "$380 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$275 MXN"
+        "price": "$350 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "$270 MXN"
+        "price": "$330 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "$260 MXN"
+        "price": "$320 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 45",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 47",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
     "description": "Pantalla para iPhone 16e disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -872,7 +872,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$330 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 47",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 49",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
     "description": "Pantalla para iPhone 16 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -914,7 +914,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$620 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 48",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 50",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
     "description": "Pantalla para iPhone 16 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -956,7 +956,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$650 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 52",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 54",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
     "description": "Pantalla para iPhone 16 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -996,7 +996,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$850 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 53",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 55",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
     "description": "Pantalla para iPhone 17 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1036,7 +1036,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$2,100 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 55",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 57",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
     "description": "Pantalla para iPhone 17 Air disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1076,7 +1076,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 54",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 56",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
     "description": "Pantalla para iPhone 17 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1118,7 +1118,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$750 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 57",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 59",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
     "description": "Pantalla para iPhone 17 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1202,7 +1202,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$155 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 8",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR",
     "description": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora: caja/modelo $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar."
   },
@@ -1241,7 +1241,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$140 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_20260721.pdf · Pantallas iPhone · Bolsa Protectora",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR Bolsa Protectora",
     "description": "Pantalla para iPhone XR Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de caja/modelo confirmado en $140 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "localOnly": true
@@ -1326,7 +1326,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$175 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 11",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
     "description": "Pantalla para iPhone XS Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1367,7 +1367,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$535 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 14",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
     "description": "Pantalla para iPhone 11 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1406,87 +1406,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$600 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 17",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
     "description": "Pantalla para iPhone 12 / 12 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "iphone-oled-12mini",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 12 mini",
-    "name": "Pantalla para iPhone 12 mini",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/12mini/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/12mini/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
-    "description": "Pantalla para iPhone 12 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "iphone-oled-12pro",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 12 Pro",
-    "name": "Pantalla para iPhone 12 Pro",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/12pro/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/12pro/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$650 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$640 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$630 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$615 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$600 MXN"
-      }
-    ],
-    "priceSource": "12/12PRO OLED PREMIUM MOVE IC Tamaño original 17",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro",
-    "description": "Pantalla para iPhone 12 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-12promax",
@@ -1506,26 +1428,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$850 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$830 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$800 MXN"
+        "price": "$650 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "$750 MXN"
+        "price": "$630 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "$730 MXN"
+        "price": "$600 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 19",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 21",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
     "description": "Pantalla para iPhone 12 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1551,63 +1473,24 @@ window.HAODE_PRODUCTS_DATA = [
       },
       {
         "quantity": "5+ pzs",
-        "price": "$720 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$710 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "$630 MXN"
+        "price": "$650 MXN"
       },
       {
         "quantity": "Caja/modelo",
         "price": "$600 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 22",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
     "description": "Pantalla para iPhone 13 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "iphone-oled-13mini",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 13 mini",
-    "name": "Pantalla para iPhone 13 mini",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/13mini/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/13mini/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
-    "description": "Pantalla para iPhone 13 mini disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-13pro",
@@ -1627,11 +1510,11 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$800 MXN"
+        "price": "$780 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$780 MXN"
+        "price": "$760 MXN"
       },
       {
         "quantity": "100 pzs surtido",
@@ -1646,7 +1529,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 24",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
     "description": "Pantalla para iPhone 13 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1668,26 +1551,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$900 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$850 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
         "price": "$800 MXN"
       },
       {
+        "quantity": "5+ pzs",
+        "price": "$780 MXN"
+      },
+      {
+        "quantity": "100 pzs surtido",
+        "price": "$760 MXN"
+      },
+      {
         "quantity": "100 pzs/modelo",
-        "price": "$770 MXN"
+        "price": "$750 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "$750 MXN"
+        "price": "$700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 26",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 28",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
     "description": "Pantalla para iPhone 13 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1728,7 +1611,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$600 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 28",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 30",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
     "description": "Pantalla para iPhone 14 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1769,7 +1652,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 31",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 33",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
     "description": "Pantalla para iPhone 14 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1808,7 +1691,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,000 MXN"
       }
     ],
-    "priceSource": "14PRO SOFT OLED PREMIUM MOVE IC Tamaño original 36",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
     "description": "Pantalla para iPhone 14 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1849,7 +1732,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 36",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
     "description": "Pantalla para iPhone 14 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -1888,48 +1771,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,000 MXN"
       }
     ],
-    "priceSource": "SOFT OLED PREMIUM MOVE IC Tamaño original 42 15",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 40",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
     "description": "Pantalla para iPhone 15 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "iphone-oled-15plus",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 15 Plus",
-    "name": "Pantalla para iPhone 15 Plus",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/15plus/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/15plus/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Plus",
-    "description": "Pantalla para iPhone 15 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-15promax",
@@ -1966,87 +1810,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$850 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 43",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 45",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
     "description": "Pantalla para iPhone 15 Pro Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "iphone-oled-16",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 16",
-    "name": "Pantalla para iPhone 16",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/16/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/16/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
-    "description": "Pantalla para iPhone 16 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "iphone-oled-16plus",
-    "category": "iphone-oled",
-    "brand": "iPhone",
-    "model": "iPhone 16 Plus",
-    "name": "Pantalla para iPhone 16 Plus",
-    "quality": "OLED PREMIUM",
-    "images": [
-      "assets/products/iphone-oled/16plus/main.jpg"
-    ],
-    "videos": [
-      "assets/products/iphone-oled/16plus/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
-    "description": "Pantalla para iPhone 16 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "iphone-oled-16pro",
@@ -2064,26 +1830,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,500 MXN"
+        "price": "$1,300 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,450 MXN"
+        "price": "$1,250 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,400 MXN"
+        "price": "$1,200 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "$1,350 MXN"
+        "price": "$1,150 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "$1,300 MXN"
+        "price": "$1,100 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 49",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 51",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
     "description": "Pantalla para iPhone 16 Pro disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2127,7 +1893,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,800 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 51",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 53",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Soft OLED",
     "description": "Pantalla para iPhone 16 Pro Max Soft OLED disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2147,26 +1913,26 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$1,600 MXN"
+        "price": "$1,400 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$1,550 MXN"
+        "price": "$1,350 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$1,500 MXN"
+        "price": "$1,300 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "$1,450 MXN"
+        "price": "$1,250 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "$1,400 MXN"
+        "price": "$1,200 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 50",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 52",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Hard OLED",
     "description": "Pantalla para iPhone 16 Pro Max Hard OLED disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2207,7 +1973,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$540 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 12",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
     "description": "Pantalla para iPhone XS Max disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla iPhone OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2249,7 +2015,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 129",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 131",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
     "description": "Pantalla para Samsung Note 10 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2291,7 +2057,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 131",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 133",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
     "description": "Pantalla para Samsung Note 10 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2333,7 +2099,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$640 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 135",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 137",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
     "description": "Pantalla para Samsung Note 20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2375,7 +2141,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$450 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 127",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 129",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 8",
     "description": "Pantalla para Samsung Note 8 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2417,7 +2183,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$450 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 128",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 130",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
     "description": "Pantalla para Samsung Note 9 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2460,7 +2226,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$340 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 92",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 94",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10",
     "description": "Pantalla para Samsung S10 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2502,7 +2268,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$400 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 93",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 95",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10 Plus",
     "description": "Pantalla para Samsung S10 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2522,71 +2288,29 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "1 pza",
-        "price": "$400 MXN"
+        "price": "$600 MXN"
       },
       {
         "quantity": "5+ pzs",
-        "price": "$380 MXN"
+        "price": "$580 MXN"
       },
       {
         "quantity": "100 pzs surtido",
-        "price": "$370 MXN"
+        "price": "$570 MXN"
       },
       {
         "quantity": "100 pzs/modelo",
-        "price": "$360 MXN"
+        "price": "$560 MXN"
       },
       {
         "quantity": "Caja/modelo",
-        "price": "$550 MXN"
+        "price": "$520 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 94",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 96",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10E",
     "description": "Pantalla para Samsung S10E disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
-  },
-  {
-    "id": "samsung-incell-s20",
-    "category": "samsung-incell",
-    "brand": "Samsung",
-    "model": "Samsung S20",
-    "name": "Pantalla para Samsung S20",
-    "quality": "INCELL CON MARCO",
-    "images": [
-      "assets/products/samsung-incell/s20/main.jpg",
-      "assets/products/samsung-incell/s20/gallery-01.jpg",
-      "assets/products/samsung-incell/s20/gallery-02.jpg",
-      "assets/products/samsung-incell/s20/gallery-03.jpg"
-    ],
-    "videos": [
-      "assets/products/samsung-incell/s20/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$500 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$480 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$460 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$450 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "$440 MXN"
-      }
-    ],
-    "priceSource": "S20  C/M INCELL-HD+\nMARCO ORIGINA Pantalla completa =DISPIMG(\"ID_76B3047E56C343B5A7666ABF4F0423BF\",1) 9",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20",
-    "description": "Pantalla para Samsung S20 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-incell-s20-fe",
@@ -2626,7 +2350,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$290 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 100",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 102",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 FE",
     "description": "Pantalla para Samsung S20 FE disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2668,7 +2392,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 98",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 100",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
     "description": "Pantalla para Samsung S20 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2710,7 +2434,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$560 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 101",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 103",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
     "description": "Pantalla para Samsung S20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2752,7 +2476,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$550 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 102",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 104",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
     "description": "Pantalla para Samsung S21 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2789,7 +2513,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$350 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 103",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 105",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 FE",
     "description": "Pantalla para Samsung S21 FE disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -2829,7 +2553,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$385 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 104",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 106",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
     "description": "Pantalla para Samsung S21 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -2870,7 +2594,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$480 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 105",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 107",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
     "description": "Pantalla para Samsung S21 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -2909,7 +2633,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$450 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 108",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 110",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22",
     "description": "Pantalla para Samsung S22 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -2949,7 +2673,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$450 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 109",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 111",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
     "description": "Pantalla para Samsung S22 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -2993,7 +2717,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$550 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 111",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 113",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
     "description": "Pantalla para Samsung S22 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3032,7 +2756,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$550 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 114",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 116",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23",
     "description": "Pantalla para Samsung S23 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -3070,7 +2794,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$550 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 115",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 117",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
     "description": "Pantalla para Samsung S23 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -3113,7 +2837,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$600 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 117",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 119",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
     "description": "Pantalla para Samsung S23 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3152,7 +2876,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$650 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 120",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 122",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24",
     "description": "Pantalla para Samsung S24 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -3190,7 +2914,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$650 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 121",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 123",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
     "description": "Pantalla para Samsung S24 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México"
@@ -3230,7 +2954,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 122",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 124",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
     "description": "Pantalla para Samsung S24 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3272,7 +2996,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$310 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 88",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 90",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8",
     "description": "Pantalla para Samsung S8 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3314,7 +3038,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$310 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 89",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 91",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8 Plus",
     "description": "Pantalla para Samsung S8 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3354,7 +3078,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$320 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 90",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 92",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9",
     "description": "Pantalla para Samsung S9 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3394,7 +3118,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$330 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 91",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 93",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
     "description": "Pantalla para Samsung S9 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung INCELL se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3431,46 +3155,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,100 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 130",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 132",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
     "description": "Pantalla para Samsung Note 10 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-note-10-plus",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung Note 10 Plus",
-    "name": "Pantalla para Samsung Note 10 Plus",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/note-10-plus/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$1,000 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$950 MXN"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "$900 MXN"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "$880 MXN"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "NOTE 10+ OLED PREMIUM C/M ACTUALIZACION AUTOMATICA 44",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
-    "description": "Pantalla para Samsung Note 10 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-note-20",
@@ -3505,7 +3192,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$850 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 134",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 136",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20",
     "description": "Pantalla para Samsung Note 20 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -3542,83 +3229,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,350 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 136",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 138",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
     "description": "Pantalla para Samsung Note 20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-note-9",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung Note 9",
-    "name": "Pantalla para Samsung Note 9",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/note-9/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
-    "description": "Pantalla para Samsung Note 9 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s20",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S20",
-    "name": "Pantalla para Samsung S20",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s20/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20",
-    "description": "Pantalla para Samsung S20 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s20-plus",
@@ -3657,120 +3270,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$900 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 99",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 101",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
     "description": "Pantalla para Samsung S20 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s20-ultra",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S20 Ultra",
-    "name": "Pantalla para Samsung S20 Ultra",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s20-ultra/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
-    "description": "Pantalla para Samsung S20 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s21",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S21",
-    "name": "Pantalla para Samsung S21",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s21/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
-    "description": "Pantalla para Samsung S21 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s21-plus",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S21 Plus",
-    "name": "Pantalla para Samsung S21 Plus",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s21-plus/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
-    "description": "Pantalla para Samsung S21 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s21-ultra",
@@ -3809,46 +3311,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,400 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 106",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 108",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
     "description": "Pantalla para Samsung S21 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s22-plus",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S22 Plus",
-    "name": "Pantalla para Samsung S22 Plus",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s22-plus/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
-    "description": "Pantalla para Samsung S22 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s22-ultra",
@@ -3887,46 +3352,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,500 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 112",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 114",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
     "description": "Pantalla para Samsung S22 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s23-plus",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S23 Plus",
-    "name": "Pantalla para Samsung S23 Plus",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s23-plus/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
-    "description": "Pantalla para Samsung S23 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s23-ultra",
@@ -3965,46 +3393,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,400 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 118",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 120",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
     "description": "Pantalla para Samsung S23 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s24-plus",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S24 Plus",
-    "name": "Pantalla para Samsung S24 Plus",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s24-plus/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
-    "description": "Pantalla para Samsung S24 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "samsung-oled-s24-ultra",
@@ -4043,7 +3434,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,600 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 123",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 125",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
     "description": "Pantalla para Samsung S24 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -4084,46 +3475,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 125",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 127",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S25 Ultra",
     "description": "Pantalla para Samsung S25 Ultra disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "samsung-oled-s9-plus",
-    "category": "samsung-oled",
-    "brand": "Samsung",
-    "model": "Samsung S9 Plus",
-    "name": "Pantalla para Samsung S9 Plus",
-    "quality": "OLED CON MARCO",
-    "images": [
-      "assets/products/samsung-oled/s9-plus/main.jpg"
-    ],
-    "videos": [],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs surtido",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "100 pzs/modelo",
-        "price": "Consultar"
-      },
-      {
-        "quantity": "Caja/modelo",
-        "price": "Consultar"
-      }
-    ],
-    "priceSource": "Consultar",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
-    "description": "Pantalla para Samsung S9 Plus disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta pantalla Samsung OLED se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "mica-hd",
@@ -4151,7 +3505,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$350 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 152",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 158",
     "whatsappText": "Hola HAODE, quiero cotizar MICA HD por paquete de 50 pzs",
     "description": "Mica transparente para corte profesional. Ideal para uso diario y alta claridad.\n\nBeneficios:\n- Alta transparencia\n- Protección diaria\n- Compatible con corte profesional\n- Paquete de 50 pzs"
   },
@@ -4180,7 +3534,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$350 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 153",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 159",
     "whatsappText": "Hola HAODE, quiero cotizar MICA MATTE por paquete de 50 pzs",
     "description": "Mica matte con acabado suave y antirreflejo para uso diario.\n\nBeneficios:\n- Acabado mate\n- Menos reflejo\n- Tacto suave\n- Protección diaria\n- Paquete de 50 pzs"
   },
@@ -4209,7 +3563,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$750 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 154",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 160",
     "whatsappText": "Hola HAODE, quiero cotizar MICA PRIVACIDAD HD por paquete de 50 pzs",
     "description": "Mica de privacidad HD para proteger la información en lugares públicos.\n\nBeneficios:\n- Privacidad lateral\n- Protección visual\n- Uso diario\n- Acabado limpio\n- Paquete de 50 pzs"
   },
@@ -4239,98 +3593,9 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$750 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 155",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 161",
     "whatsappText": "Hola HAODE, quiero cotizar MICA PRIVACIDAD MATTE por paquete de 50 pzs",
     "description": "Mica de privacidad matte con acabado antirreflejo y protección visual.\n\nBeneficios:\n- Privacidad lateral\n- Acabado matte\n- Menos reflejo\n- Protección diaria\n- Paquete de 50 pzs"
-  },
-  {
-    "id": "funda-premium-17-pro-max",
-    "category": "fundas",
-    "brand": "HAODE",
-    "model": "Estilo iPhone 17 Pro Max",
-    "name": "Funda Premium Aluminio",
-    "quality": "Premium Aluminio",
-    "images": [
-      "assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/main.jpg"
-    ],
-    "videos": [
-      "assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$85 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$75 MXN"
-      }
-    ],
-    "priceSource": "App products.json",
-    "whatsappText": "Hola HAODE, quiero cotizar: Funda Premium Aluminio",
-    "description": "Funda Premium Aluminio disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta funda para iPhone se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
-  },
-  {
-    "id": "funda-premium-aluminio-plus",
-    "category": "fundas",
-    "brand": "HAODE",
-    "model": "13 Pro a 16 Pro Max",
-    "name": "Funda Premium Aluminio Plus",
-    "quality": "Premium Aluminio",
-    "images": [
-      "assets/products/fundas/funda-premium-aluminio-plus/main.jpg",
-      "assets/products/fundas/funda-premium-aluminio-plus/01-A53B7C3E-9975-48E9-A0E4-CB8CDAEBDC63.webp",
-      "assets/products/fundas/funda-premium-aluminio-plus/02-E8E267BE-CBFD-49B2-BF1C-7CABB1C1FEDA.webp",
-      "assets/products/fundas/funda-premium-aluminio-plus/03-10E278C7-2FB0-4FE9-912F-656C930C4221.webp",
-      "assets/products/fundas/funda-premium-aluminio-plus/04-4A11A8FA-F085-4913-A1B3-013B61E76F25.webp",
-      "assets/products/fundas/funda-premium-aluminio-plus/05-71D8EF61-9678-42FF-A981-10E998C8F140.webp",
-      "assets/products/fundas/funda-premium-aluminio-plus/06-E2266069-EC37-4660-A16C-0EC7E7288E31.webp",
-      "assets/products/fundas/funda-premium-aluminio-plus/07-43A86429-0D49-4871-BA70-307CCEA7F7EA.webp",
-      "assets/products/fundas/funda-premium-aluminio-plus/08-0CD0905B-4CF5-4430-A0C3-480BDCA15197.webp"
-    ],
-    "videos": [
-      "assets/products/fundas/funda-premium-aluminio-plus/video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$85 MXN"
-      },
-      {
-        "quantity": "10+ pzs",
-        "price": "$75 MXN"
-      }
-    ],
-    "priceSource": "Confirmado por HAODE",
-    "whatsappText": "Hola HAODE, quiero cotizar: Funda Premium Aluminio Plus",
-    "description": "Funda Premium Aluminio Plus disponible en HAODE México para tiendas de accesorios, técnicos y distribuidores. Panel metálico con acabado premium para iPhone Pro y Pro Max, compatible con modelos 13 Pro, 13 Pro Max, 14 Pro, 14 Pro Max, 15 Pro, 15 Pro Max, 16 Pro y 16 Pro Max. Disponible en Black, Blue, Silver y Orange."
-  },
-  {
-    "id": "funda-magnetica-17-pro-max",
-    "category": "fundas",
-    "brand": "HAODE",
-    "model": "Estilo iPhone 17 Pro Max",
-    "name": "Funda Magnetica",
-    "quality": "Magnetica",
-    "images": [
-      "assets/products/fundas/funda-magnetica-estilo-iphone-17-pro-max/azul-silicon.jpg"
-    ],
-    "videos": [
-      "assets/products/fundas/funda-magnetica-estilo-iphone-17-pro-max/silicon-instalacion-video-01.mp4"
-    ],
-    "prices": [
-      {
-        "quantity": "1 pza",
-        "price": "$100 MXN"
-      },
-      {
-        "quantity": "5+ pzs",
-        "price": "$90 MXN"
-      }
-    ],
-    "priceSource": "App products.json",
-    "whatsappText": "Hola HAODE, quiero cotizar: Funda Magnetica",
-    "description": "Funda Magnetica disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta funda para iPhone se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
   {
     "id": "haode-ai-g3-smart-glasses",
@@ -4353,7 +3618,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,500 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 177",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 183",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI G3",
     "description": "Gafas Inteligentes AI G3 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -4378,7 +3643,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,200 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 176",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 182",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI W610",
     "description": "Gafas Inteligentes AI W610 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -4403,7 +3668,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,300 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 178",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 184",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE AI CLASSIC S1",
     "description": "HAODE AI CLASSIC S1 disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -4428,7 +3693,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,600 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 174",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 180",
     "whatsappText": "Hola HAODE, quiero cotizar: AIMB-G5 AI SPORTS",
     "description": "AIMB-G5 AI SPORTS disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -4457,7 +3722,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$400 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 187",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 193",
     "whatsappText": "Hola HAODE, quiero cotizar: Cámara Digital 4K LK-007",
     "description": "Cámara digital compacta estilo retro con pantalla abatible de 2.4 pulgadas, ideal para tomar fotos, grabar videos y crear contenido diario. Diseño moderno, colores atractivos y uso fácil para jóvenes, viajes, regalos y uso personal."
   },
@@ -4482,7 +3747,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$300 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 186",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 192",
     "whatsappText": "Hola HAODE, quiero cotizar: LK-030 Mini Cámara Retro Digital",
     "description": "Mini cámara retro digital con pantalla abatible y formato compacto para fotos, videos, viajes, regalos y contenido diario."
   },
@@ -4507,7 +3772,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 188",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 194",
     "whatsappText": "Hola HAODE, quiero cotizar: LK-032 Cámara Inteligente con Gimbal",
     "description": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV."
   },
@@ -4540,7 +3805,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,000 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 189",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 195",
     "whatsappText": "Hola HAODE, quiero cotizar: LK-018 Cámara de Acción HD",
     "description": "Cámara de acción HD compacta con pantalla abatible y diseño magnético. Ideal para grabar contenido diario, viajes, actividades, manos libres y tomas en primera persona."
   },
@@ -4565,7 +3830,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 175",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 181",
     "whatsappText": "Hola HAODE, quiero cotizar: W630 AI PRO",
     "description": "W630 AI PRO disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta producto AI se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas."
   },
@@ -4605,7 +3870,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 61",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 63",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo XS Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4645,7 +3910,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 62",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 64",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4685,7 +3950,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 63",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 65",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4725,7 +3990,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,000 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 64",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 66",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4765,7 +4030,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,000 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 66",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 68",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 13",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4805,7 +4070,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,050 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 67",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 69",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4845,7 +4110,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,200 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 68",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 70",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4885,7 +4150,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,050 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 69",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 71",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4925,7 +4190,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,250 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 70",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 72",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -4965,7 +4230,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,400 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 71",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 73",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5005,7 +4270,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,250 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 72",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 74",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5045,7 +4310,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,300 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 73",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 75",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5085,7 +4350,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,500 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 74",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 76",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5125,7 +4390,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 75",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 77",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5165,7 +4430,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 76",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 78",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5205,7 +4470,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$1,700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 78",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 80",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5245,7 +4510,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$2,000 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 79",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 81",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5285,7 +4550,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$2,300 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 80",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 82",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5325,7 +4590,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$2,200 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 81",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 83",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5365,7 +4630,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$2,300 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 82",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 84",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 17",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5405,7 +4670,7 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$2,500 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 83",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 85",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   },
@@ -5445,11 +4710,11 @@ window.HAODE_PRODUCTS_DATA = [
         "price": "$2,700 MXN"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 84",
+    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 86",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
     "description": "Pantalla OLED HAODE Diagnóstica para reparación profesional de teléfonos móviles. Presentación en caja metálica, con color claro, alta resolución y toque sensible. Diseñada para técnicos y tiendas de reparación."
   }
-];
+];;
 window.HAODE_PRODUCTS_BUILD = {
   "generatedAt": "2026-06-21T01:43:20.500Z",
   "source": "docs/master-data/products-master.csv"

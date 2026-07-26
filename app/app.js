@@ -839,8 +839,6 @@ function cardPriceHtml(product) {
 function productDetailUrl(product) {
   const detailUrls = {
     "aimb-g5-ai-sports": "/ai-smart-glasses-aimb-g5.html",
-    "funda-magnetica-17-pro-max": "/producto/funda-magnetica-estilo-iphone-17-pro-max/",
-    "funda-premium-17-pro-max": "/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/",
     "haode-ai-g3-smart-glasses": "/ai-smart-glasses-aimb-g3.html",
     "haode-ai-w610-smart-glasses": "/ai-smart-glasses-w610.html",
     "s1-ai-classic": "/ai-smart-glasses-s1.html",

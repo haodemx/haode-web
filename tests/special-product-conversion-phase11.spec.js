@@ -3,9 +3,6 @@ const { test, expect } = require('@playwright/test');
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 
 const specialPages = [
-  ['/producto/funda-premium-aluminio-plus/', 'special-funda-plus', '$85 MXN'],
-  ['/producto/funda-premium-aluminio-estilo-iphone-17-pro-max/', 'special-funda-aluminio', '$85 MXN'],
-  ['/producto/funda-magnetica-estilo-iphone-17-pro-max/', 'special-funda-magnetica', '$100 MXN'],
   ['/producto/lk-007-camara-digital-4k/', 'special-camera-lk007', '$500 MXN'],
   ['/producto/lk-018-camara-accion-hd/', 'special-camera-lk018', '$1,200 MXN'],
   ['/producto/lk-030-mini-camara-retro-digital/', 'special-camera-lk030', '$400 MXN'],
