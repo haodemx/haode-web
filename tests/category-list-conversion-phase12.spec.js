@@ -67,15 +67,17 @@ async function expectCompactMobileTopbar(page, maxHeight) {
       brandLeft: Math.round(brand?.left || 0),
       brandWidth: Math.round(brand?.width || 0),
       logoDisplay: logo ? getComputedStyle(logo).display : null,
-      brandText: brandText?.textContent?.trim() || '',
-      brandColor: brandText ? getComputedStyle(brandText).color : null,
+      logoWidth: Math.round(logo?.getBoundingClientRect().width || 0),
+      logoSource: logo?.getAttribute('src') || '',
+      brandCopyDisplay: brandText ? getComputedStyle(brandText.parentElement).display : null,
     };
   });
 
   expect(layout.topbarHeight).toBeLessThanOrEqual(maxHeight);
   expect(layout.brandLeft).toBeLessThanOrEqual(18);
   expect(layout.brandWidth).toBeGreaterThanOrEqual(100);
-  expect(layout.logoDisplay).toBe('none');
-  expect(layout.brandText).toBe('HAODE');
-  expect(layout.brandColor).toBe('rgb(240, 68, 24)');
+  expect(layout.logoDisplay).toBe('block');
+  expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
+  expect(layout.logoSource).toContain('factory-store-wordmark.png');
+  expect(layout.brandCopyDisplay).toBe('none');
 }

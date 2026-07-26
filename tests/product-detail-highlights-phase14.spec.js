@@ -126,21 +126,26 @@ async function expectDesktopStandardDetailSalesLayout(page) {
     const quoteRect = document.querySelector('[data-detail-whatsapp]')?.getBoundingClientRect();
     const topFloat = document.querySelector('.detail-top .floating-cta');
     return {
-      titleRight: Math.round(titleRect?.right || 0),
+      titleBottom: Math.round(titleRect?.bottom || 0),
       imageTop: Math.round(imageRect?.top || 0),
       imageLeft: Math.round(imageRect?.left || 0),
+      imageRight: Math.round(imageRect?.right || 0),
       gridLeft: Math.round(gridRect?.left || 0),
+      infoTop: Math.round(document.querySelector('.detail-info')?.getBoundingClientRect().top || 0),
+      infoLeft: Math.round(document.querySelector('.detail-info')?.getBoundingClientRect().left || 0),
       quoteTop: Math.round(quoteRect?.top || 0),
       quoteBottom: Math.round(quoteRect?.bottom || 0),
       topFloatDisplay: topFloat ? getComputedStyle(topFloat).display : 'missing',
     };
   });
 
-  expect(layout.imageTop).toBeLessThan(260);
-  expect(layout.gridLeft).toBeGreaterThan(layout.titleRight + 24);
-  expect(layout.imageLeft).toBeGreaterThan(layout.titleRight + 24);
+  expect(layout.imageTop).toBeLessThan(520);
+  expect(layout.titleBottom).toBeLessThan(layout.imageTop);
+  expect(layout.imageLeft).toBe(layout.gridLeft);
+  expect(layout.infoTop).toBe(layout.imageTop);
+  expect(layout.infoLeft).toBeGreaterThan(layout.imageRight + 20);
   expect(layout.quoteTop).toBeGreaterThanOrEqual(0);
-  expect(layout.quoteBottom).toBeLessThanOrEqual(900);
+  expect(layout.quoteBottom).toBeLessThanOrEqual(1000);
   expect(layout.topFloatDisplay).toBe('none');
 }
 
@@ -155,16 +160,19 @@ async function expectDesktopFoldableSalesLayout(page) {
       imageBottom: Math.round(imageRect?.bottom || 0),
       infoTop: Math.round(infoRect?.top || 0),
       infoBottom: Math.round(infoRect?.bottom || 0),
-      titleRight: Math.round(titleRect?.right || 0),
+      titleBottom: Math.round(titleRect?.bottom || 0),
       imageLeft: Math.round(imageRect?.left || 0),
+      imageRight: Math.round(imageRect?.right || 0),
+      infoLeft: Math.round(infoRect?.left || 0),
     };
   });
 
-  expect(layout.imageTop).toBeLessThan(260);
-  expect(layout.imageBottom).toBeLessThanOrEqual(720);
-  expect(layout.infoTop).toBeLessThan(260);
-  expect(layout.infoBottom).toBeLessThanOrEqual(900);
-  expect(layout.imageLeft).toBeGreaterThan(layout.titleRight + 40);
+  expect(layout.imageTop).toBeLessThan(600);
+  expect(layout.imageBottom).toBeLessThanOrEqual(1050);
+  expect(layout.infoTop).toBe(layout.imageTop);
+  expect(layout.infoBottom).toBeLessThanOrEqual(1100);
+  expect(layout.titleBottom).toBeLessThan(layout.imageTop);
+  expect(layout.infoLeft).toBeGreaterThan(layout.imageRight + 20);
 }
 
 async function expectCompactMobileTopbar(page, maxHeight) {
@@ -179,17 +187,19 @@ async function expectCompactMobileTopbar(page, maxHeight) {
       brandLeft: Math.round(brand?.left || 0),
       brandWidth: Math.round(brand?.width || 0),
       logoDisplay: logo ? getComputedStyle(logo).display : null,
-      brandText: brandText?.textContent?.trim() || '',
-      brandColor: brandText ? getComputedStyle(brandText).color : null,
+      logoWidth: Math.round(logo?.getBoundingClientRect().width || 0),
+      logoSource: logo?.getAttribute('src') || '',
+      brandCopyDisplay: brandText ? getComputedStyle(brandText.parentElement).display : null,
     };
   });
 
   expect(layout.topbarHeight).toBeLessThanOrEqual(maxHeight);
   expect(layout.brandLeft).toBeLessThanOrEqual(18);
   expect(layout.brandWidth).toBeGreaterThanOrEqual(100);
-  expect(layout.logoDisplay).toBe('none');
-  expect(layout.brandText).toBe('HAODE');
-  expect(layout.brandColor).toBe('rgb(240, 68, 24)');
+  expect(layout.logoDisplay).toBe('block');
+  expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
+  expect(layout.logoSource).toContain('factory-store-wordmark.png');
+  expect(layout.brandCopyDisplay).toBe('none');
 }
 
 async function expectFirstWhatsAppInViewport(page) {

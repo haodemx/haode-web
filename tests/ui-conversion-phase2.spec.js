@@ -28,6 +28,8 @@ test.describe("HAODE conversion UI phase 2", () => {
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
+    await expect(page.locator(".reference-menu-button")).toBeVisible();
+    await page.locator(".reference-menu-button").click();
     await expect(page.locator(".reference-nav a").first()).toBeVisible();
     await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
     await expectHeaderWhatsAppGreen(page);

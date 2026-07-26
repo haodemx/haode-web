@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-25-price-allowlist";
+const CACHE_VERSION = "haode-pwa-v2026-07-25-ui-phase35";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -20,6 +20,7 @@ const APP_SHELL_URLS = [
   "/app/firebase-config.js",
   "/manifest.webmanifest",
   "/assets/logo/logo.png",
+  "/assets/images/factory-store-wordmark.png",
   "/assets/logo/favicon.png",
   "/assets/icons/haode-icon-192.png",
   "/assets/icons/haode-icon-512.png",

@@ -38,10 +38,13 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
 
       await page.setViewportSize({ width: 360, height: 844 });
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
+      await expect(page.locator(".reference-menu-button")).toBeVisible();
+      await page.locator(".reference-menu-button").click();
       await expect(page.locator(".reference-nav a").first()).toBeVisible();
       await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
       await expectHeaderWhatsAppGreen(page);
-      await expectHeaderHeightAtMost(page, ".reference-header", 190);
+      await expectHeaderHeightAtMost(page, ".reference-header", 200);
+      await page.locator(".reference-menu-button").click();
       await expect(page.locator(`[data-reference-conversion="${pageCase.panel}"]`)).toBeVisible();
       if (pageCase.path === "/categoria/") {
         await expectFirstCategoryCardStartsInView(page);

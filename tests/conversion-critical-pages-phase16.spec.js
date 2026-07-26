@@ -146,24 +146,18 @@ async function expectReferenceMobileSalesHeader(page) {
 
   await expect(header).toBeVisible();
   await expect(logo).toBeVisible();
+  await expect(nav).toBeHidden();
+  await expect(actions).toBeHidden();
+  const menu = page.locator('.reference-menu-button');
+  await expect(menu).toBeVisible();
+  await menu.click();
   await expect(nav).toBeVisible();
   await expect(actions).toBeVisible();
-  await page.waitForFunction(() => {
-    const logoRect = document.querySelector('.reference-logo')?.getBoundingClientRect();
-    const navRect = document.querySelector('.reference-nav')?.getBoundingClientRect();
-    const actionsRect = document.querySelector('.reference-nav-actions')?.getBoundingClientRect();
-    const logoImage = document.querySelector('.reference-logo img');
-
-    return Boolean(logoRect && navRect && actionsRect && logoImage)
-      && getComputedStyle(logoImage).display === 'none'
-      && logoRect.top <= 12
-      && navRect.top <= 58
-      && actionsRect.top <= 104;
-  });
 
   const layout = await page.evaluate(() => {
     const headerRect = document.querySelector('.reference-header')?.getBoundingClientRect();
     const logoRect = document.querySelector('.reference-logo')?.getBoundingClientRect();
+    const logoImage = document.querySelector('.reference-logo img');
     const navRect = document.querySelector('.reference-nav')?.getBoundingClientRect();
     const actionsRect = document.querySelector('.reference-nav-actions')?.getBoundingClientRect();
 
@@ -172,44 +166,39 @@ async function expectReferenceMobileSalesHeader(page) {
       logoLeft: Math.round(logoRect?.left || 0),
       logoTop: Math.round(logoRect?.top || 0),
       logoWidth: Math.round(logoRect?.width || 0),
+      imageDisplay: logoImage ? getComputedStyle(logoImage).display : null,
       navTop: Math.round(navRect?.top || 0),
       actionsTop: Math.round(actionsRect?.top || 0),
     };
   });
 
-  expect(layout.headerHeight).toBeLessThanOrEqual(140);
+  expect(layout.headerHeight).toBeLessThanOrEqual(260);
   expect(layout.logoLeft).toBeLessThanOrEqual(18);
   expect(layout.logoTop).toBeLessThanOrEqual(12);
-  expect(layout.logoWidth).toBeGreaterThanOrEqual(100);
-  expect(layout.navTop).toBeLessThanOrEqual(58);
-  expect(layout.actionsTop).toBeLessThanOrEqual(104);
+  expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
+  expect(layout.imageDisplay).toBe('block');
+  expect(layout.navTop).toBeGreaterThan(layout.logoTop);
+  expect(layout.actionsTop).toBeGreaterThan(layout.navTop);
 }
 
 async function expectReferenceDesktopWordmark(page) {
   const logo = page.locator('.reference-logo').first();
   await expect(logo).toBeVisible();
-  await page.waitForFunction(() => {
-    const logoElement = document.querySelector('.reference-logo');
-    const image = logoElement?.querySelector('img');
-    if (!logoElement || !image) return false;
-    return getComputedStyle(image).display === 'none'
-      && getComputedStyle(logoElement, '::before').content.includes('HAODE');
-  });
   const details = await logo.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     const image = el.querySelector('img');
     return {
       width: Math.round(rect.width),
       imageDisplay: image ? getComputedStyle(image).display : null,
-      brand: getComputedStyle(el, '::before').content,
-      country: getComputedStyle(el, '::after').content,
+      imageWidth: Math.round(image?.getBoundingClientRect().width || 0),
+      imageContent: image ? getComputedStyle(image).content : '',
     };
   });
 
-  expect(details.width).toBeGreaterThanOrEqual(100);
-  expect(details.imageDisplay).toBe('none');
-  expect(details.brand).toContain('HAODE');
-  expect(details.country).toContain('MÉXICO');
+  expect(details.width).toBeGreaterThanOrEqual(180);
+  expect(details.imageDisplay).toBe('block');
+  expect(details.imageWidth).toBeGreaterThanOrEqual(180);
+  expect(details.imageContent).toContain('factory-store-wordmark.png');
 }
 
 async function expectNoHorizontalOverflow(page) {

@@ -6,6 +6,14 @@
   const headerInner = document.querySelector('.catalog-topbar .topbar-inner');
   if (!headerInner) return;
 
+  const brandLogo = headerInner.querySelector('.brand-logo');
+  if (brandLogo) {
+    brandLogo.src = '/assets/images/factory-store-wordmark.png';
+    brandLogo.alt = 'HAODE Refacciones para Celular';
+    brandLogo.width = 200;
+    brandLogo.height = 58;
+  }
+
   const nav = headerInner.querySelector('.topnav');
   if (nav) {
     const links = [

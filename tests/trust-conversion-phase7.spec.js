@@ -49,30 +49,34 @@ test.describe("HAODE trust conversion UI phase 7", () => {
 async function expectCompactTrustBrand(page) {
   await page.waitForFunction(() => {
     const logo = document.querySelector(".brand-logo");
-    return Boolean(logo) && getComputedStyle(logo).display === "none";
+    return Boolean(logo)
+      && getComputedStyle(logo).display === "block"
+      && logo.getBoundingClientRect().width >= 118;
   });
 
   const layout = await page.evaluate(() => {
     const brand = document.querySelector(".brand")?.getBoundingClientRect();
     const logo = document.querySelector(".brand-logo");
-    const brandCopy = document.querySelector(".brand-copy strong");
+    const brandCopy = document.querySelector(".brand-copy");
     const brandText = document.querySelector(".brand-text");
-    const brandTextBefore = brandText ? getComputedStyle(brandText, "::before") : null;
 
     return {
       brandLeft: Math.round(brand?.left || 0),
       brandWidth: Math.round(brand?.width || 0),
       logoDisplay: logo ? getComputedStyle(logo).display : null,
-      brandText: brandCopy?.textContent?.trim() || brandTextBefore?.content?.replace(/"/g, "") || "",
-      brandColor: brandCopy ? getComputedStyle(brandCopy).color : brandTextBefore?.color || null,
+      logoWidth: Math.round(logo?.getBoundingClientRect().width || 0),
+      logoSource: logo?.getAttribute("src") || "",
+      brandCopyDisplay: brandCopy ? getComputedStyle(brandCopy).display : null,
+      brandTextDisplay: brandText ? getComputedStyle(brandText).display : null,
     };
   });
 
   expect(layout.brandLeft).toBeLessThanOrEqual(18);
   expect(layout.brandWidth).toBeGreaterThanOrEqual(100);
-  expect(layout.logoDisplay).toBe("none");
-  expect(layout.brandText).toBe("HAODE");
-  expect(layout.brandColor).toBe("rgb(240, 68, 24)");
+  expect(layout.logoDisplay).toBe("block");
+  expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
+  expect(layout.logoSource).toContain("factory-store-wordmark.png");
+  expect([layout.brandCopyDisplay, layout.brandTextDisplay]).toContain("none");
 }
 
 async function expectNoHorizontalOverflow(page) {
