@@ -30,8 +30,9 @@ test.describe('HAODE catalog empty search WhatsApp UI phase 20', () => {
   test('fundas micas empty search keeps the same WhatsApp intake', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/#fundas-micas`, { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
-    await page.locator('[data-catalog-search-input="fundas-micas"]').fill('case mayorista imposible');
+    const searchInput = page.locator('[data-catalog-search-input="fundas-micas"]');
+    await expect(searchInput).toBeVisible();
+    await searchInput.fill('case mayorista imposible');
 
     const emptyState = page.locator('[data-catalog-empty="fundas-micas"]');
     await expect(emptyState).toBeVisible();

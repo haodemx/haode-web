@@ -1355,55 +1355,32 @@ function applyErpPublicCatalog(rows) {
       ?? byName.get(stockLookupKey(row.public_name_es))
       ?? identityIndex;
     const existingIndex = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;
+    // The approved local price list is the public allowlist; ERP may only enrich exact matches.
+    if (existingIndex === undefined) return;
     const prices = erpTierPrices(row);
-    if (existingIndex !== undefined) {
-      usedLocalIndexes.add(existingIndex);
-      const product = localProducts[existingIndex];
-      product.sku = row.sku || product.sku;
-      product.name = row.public_name_es || product.name;
-      product.model = row.model || product.model;
-      product.quality = row.quality || product.quality;
-      product.description = row.description_es || product.description;
-      if (!hasAuthoritativeCustomerPrices(product)) {
-        product.priceTable = buildPriceTable(prices);
-      }
-      product.lowestPriceText = buildLowestPriceText(product.priceTable);
-      product.stockStatus = row.stock_status || 'ask_stock';
-      product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
-      product.salesAvailable = row.sales_available !== false;
-      product.priceStatus = row.price_status || product.priceStatus;
-      product.erpStockUpdatedAt = row.updated_at || '';
-      product.whatsappText = buildProductCotizacionText(product.name, product.sku);
-      if (row.image_url) product.mainImage = row.image_url;
-      catalogProducts.push(product);
-      return;
+    usedLocalIndexes.add(existingIndex);
+    const product = localProducts[existingIndex];
+    product.sku = row.sku || product.sku;
+    product.name = row.public_name_es || product.name;
+    product.model = row.model || product.model;
+    product.quality = row.quality || product.quality;
+    product.description = row.description_es || product.description;
+    if (!hasAuthoritativeCustomerPrices(product)) {
+      product.priceTable = buildPriceTable(prices);
     }
-
-    const category = erpCatalogCategory(row);
-    if (!category || !CATEGORY_META[category]) return;
-    const product = createProduct({
-      id: row.slug || String(row.sku || '').toLowerCase(),
-      sku: row.sku,
-      category,
-      brand: row.brand || 'HAODE',
-      name: row.public_name_es,
-      model: row.model,
-      quality: row.quality || CATEGORY_META[category].title,
-      description: row.description_es,
-      prices,
-      mainImage: row.image_url || PLACEHOLDER_IMAGE,
-      salesAvailable: row.sales_available !== false,
-      priceStatus: row.price_status || 'CONFIRMED',
-    });
-    product.erpDynamic = true;
+    product.lowestPriceText = buildLowestPriceText(product.priceTable);
     product.stockStatus = row.stock_status || 'ask_stock';
     product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
+    product.salesAvailable = row.sales_available !== false;
+    product.priceStatus = row.price_status || product.priceStatus;
     product.erpStockUpdatedAt = row.updated_at || '';
+    product.whatsappText = buildProductCotizacionText(product.name, product.sku);
+    if (row.image_url) product.mainImage = row.image_url;
     catalogProducts.push(product);
   });
 
   localProducts.forEach((product, index) => {
-    if (!usedLocalIndexes.has(index) && product.localOnly) {
+    if (!usedLocalIndexes.has(index)) {
       catalogProducts.push(product);
     }
   });

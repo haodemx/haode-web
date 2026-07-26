@@ -1,6 +1,7 @@
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
+const vm = require("vm");
 
 const SERVER_URL = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/app\/?$/, "").replace(/\/$/, "");
 const APP_URL = `${SERVER_URL}/app/`;
@@ -48,6 +49,23 @@ const catalog = {
       sales_available: false,
       stock_status: "ask_stock",
       stock_label: "Consultar inventario",
+      updated_at: "2026-07-14T12:00:00.000Z"
+    },
+    {
+      sku: "SS-NOTE-10PLUS-OLED-PREM",
+      slug: "samsung-oled-note-10-plus",
+      public_name_es: "Pantalla Samsung NOTE 10+ OLED PREMIUM",
+      brand: "HAODE",
+      category: "Samsung OLED",
+      quality: "OLED PREMIUM",
+      model: "Samsung Note 10 Plus",
+      image_url: "",
+      public_price_mxn: 1000,
+      public_price_tiers: [],
+      price_status: "CONFIRMED",
+      sales_available: true,
+      stock_status: "available",
+      stock_label: "Disponible",
       updated_at: "2026-07-14T12:00:00.000Z"
     },
     {
@@ -121,10 +139,17 @@ const catalog = {
   ]
 };
 
-const LOCAL_ONLY_PRODUCTS_FROM_CONFIRMED_PRICE_LIST = 2;
-const EXPECTED_MERGED_PRODUCT_COUNT = catalog.products.length + LOCAL_ONLY_PRODUCTS_FROM_CONFIRMED_PRICE_LIST;
+const APP_LOCAL_ACTIVE_PRODUCT_COUNT = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "../app/products.json"), "utf8")
+).filter((product) => product.id && product.activo !== false).length;
+const websiteProductSandbox = { window: {} };
+vm.runInNewContext(
+  fs.readFileSync(path.join(__dirname, "../data/products.generated.js"), "utf8"),
+  websiteProductSandbox
+);
+const WEBSITE_LOCAL_PRODUCT_COUNT = websiteProductSandbox.window.HAODE_PRODUCTS_DATA.length;
 
-test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ page }) => {
+test("keeps the approved App catalog authoritative and submits an attributed idempotent lead", async ({ page }) => {
   let submitted;
   await page.addInitScript(() => { window.open = () => null; });
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
@@ -138,31 +163,27 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
 
   await page.goto(`${APP_URL}?utm_source=google_business&utm_campaign=omnichannel_2#lista`, { waitUntil: "domcontentloaded" });
 
-  await expect.poll(() => page.evaluate(() => window.HAODE_DIAGNOSTICS?.productosActivos)).toBe(EXPECTED_MERGED_PRODUCT_COUNT);
+  await expect.poll(() => page.evaluate(() => window.HAODE_DIAGNOSTICS?.productosActivos)).toBe(APP_LOCAL_ACTIVE_PRODUCT_COUNT);
 
-  const availableCard = page.locator(".product-card", { hasText: "Producto ERP exclusivo X200" });
-  await expect(availableCard).toBeVisible();
-  await expect(availableCard).toContainText("$999");
-  await availableCard.getByRole("button", { name: "Agregar" }).click();
+  await expect(page.locator(".product-card", { hasText: "Producto ERP exclusivo X200" })).toHaveCount(0);
+  await expect(page.locator(".product-card", { hasText: "Producto con precio pendiente" })).toHaveCount(0);
+  await expect(page.locator(".product-card", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
+
+  const approvedCard = page.locator(".product-card", { hasText: "HAODE X200T Cortadora Inteligente de Micas" });
+  await expect(approvedCard).toContainText("$6,800");
+  await expect(approvedCard).toContainText("$6,500");
+  await expect(approvedCard).not.toContainText("$6,700");
+  await approvedCard.getByRole("button", { name: "Agregar" }).click();
 
   await page.locator("[data-customer-name]").fill("Cliente QA");
   await page.locator("[data-customer-phone]").fill("5512345678");
   await page.locator("[data-customer-city]").fill("CDMX");
   await page.locator("[data-whatsapp-link]").click();
 
-  await expect.poll(() => submitted?.body?.product_sku).toBe("ERP-ONLY-X200");
+  await expect.poll(() => submitted?.body?.product_sku).toBe("x200t-cortadora-micas");
   expect(submitted.body.utm_source).toBe("google_business");
   expect(submitted.body.utm_campaign).toBe("omnichannel_2");
   expect(submitted.idempotencyKey).toBe(submitted.body.client_request_id);
-
-  const pendingCard = page.locator(".product-card", { hasText: "Producto con precio pendiente" });
-  await expect(pendingCard).toBeVisible();
-  await expect(pendingCard.getByRole("link", { name: "Consultar" })).toHaveAttribute("href", /ERP-PENDING-PRICE/);
-
-  const syncedCard = page.locator(".product-card", { hasText: "HAODE X200T Cortadora Inteligente de Micas" });
-  await expect(syncedCard).toContainText("$6,800");
-  await expect(syncedCard).toContainText("$6,500");
-  await expect(syncedCard).not.toContainText("$6,700");
 
   const mergedIphoneCards = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
   await expect(mergedIphoneCards).toHaveCount(1);
@@ -181,21 +202,15 @@ test("merges ERP-only SKUs and submits an attributed idempotent lead", async ({ 
   await saveEvidence(page, "app-erp-catalog.png");
 });
 
-test("shows ERP-only products in the desktop catalog", async ({ page }) => {
+test("keeps the approved desktop catalog authoritative", async ({ page }) => {
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
   await page.goto(`${SERVER_URL}/productos/?utm_source=facebook`, { waitUntil: "domcontentloaded" });
 
-  await expect.poll(() => page.evaluate(() => window.HAODE_PRODUCTS?.length)).toBe(EXPECTED_MERGED_PRODUCT_COUNT);
+  await expect.poll(() => page.evaluate(() => window.HAODE_PRODUCTS?.length)).toBe(WEBSITE_LOCAL_PRODUCT_COUNT);
 
-  const productCard = page.locator(".shop-card", { hasText: "Producto ERP exclusivo X200" });
-  await expect(productCard).toBeVisible();
-  await expect(productCard.getByRole("link", { name: "Cotizar por WhatsApp" })).toHaveAttribute("href", /ERP-ONLY-X200/);
-
-  const pendingCard = page.locator(".shop-card", { hasText: "Producto con precio pendiente" });
-  await expect(pendingCard).toBeVisible();
-  await expect(pendingCard).toHaveAttribute("data-sales-available", "false");
-  await expect(pendingCard).toContainText("Precio pendiente de confirmación");
-  await expect(pendingCard.getByRole("link", { name: "Cotizar por WhatsApp" })).toHaveAttribute("href", /ERP-PENDING-PRICE/);
+  await expect(page.locator(".shop-card", { hasText: "Producto ERP exclusivo X200" })).toHaveCount(0);
+  await expect(page.locator(".shop-card", { hasText: "Producto con precio pendiente" })).toHaveCount(0);
+  await expect(page.locator(".shop-card", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
 
   const g3Card = page.locator(".shop-card", { hasText: "Gafas AI G3" });
   await expect(g3Card).toHaveCount(1);

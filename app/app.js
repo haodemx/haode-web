@@ -591,7 +591,7 @@ function mergeErpCatalog(localProducts, catalogRows) {
     matches.push(index);
     identityCandidates.set(key, matches);
   });
-  catalogRows.forEach((row, catalogIndex) => {
+  catalogRows.forEach((row) => {
     const identityMatches = identityCandidates.get(catalogIdentityKey(row)) || [];
     const identityIndex = identityMatches.length === 1 ? identityMatches[0] : undefined;
     const candidateIndex = bySku.get(stockKey(row.sku))
@@ -599,18 +599,15 @@ function mergeErpCatalog(localProducts, catalogRows) {
       ?? byName.get(stockKey(row.public_name_es))
       ?? identityIndex;
     const index = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;
-    const incoming = erpCatalogProduct(row, index === undefined ? 5000 + catalogIndex : localCatalog[index].order);
-    if (index === undefined) {
-      result.push(incoming);
-      return;
-    }
+    // The approved local price list is the public allowlist; ERP may only enrich exact matches.
+    if (index === undefined) return;
+    const incoming = erpCatalogProduct(row, localCatalog[index].order);
     usedLocalIndexes.add(index);
     const current = localCatalog[index];
     const hasAuthoritativeLocalPrices = current.priceSource.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx")
       || current.priceSource.includes("Lista_de_Precios_HAODE_20260721.pdf");
-    const incomingTiersByCode = new Map(incoming.priceTiers.filter((tier) => tier.code).map((tier) => [tier.code, tier]));
     const mergedTiers = hasAuthoritativeLocalPrices
-      ? current.priceTiers.map((tier) => incomingTiersByCode.get(tier.code) ? { ...tier, ...incomingTiersByCode.get(tier.code) } : tier)
+      ? current.priceTiers
       : incoming.priceTiers;
     result.push({
       ...current,
@@ -635,7 +632,7 @@ function mergeErpCatalog(localProducts, catalogRows) {
   });
 
   localCatalog.forEach((product, index) => {
-    if (!usedLocalIndexes.has(index) && product.localOnly) {
+    if (!usedLocalIndexes.has(index)) {
       result.push(product);
     }
   });
@@ -1714,8 +1711,18 @@ function focusProductSearch(attempt = 0) {
 
   searchInput.scrollIntoView({ block: "center", behavior: "auto" });
   searchInput.focus({ preventScroll: true });
-  if (document.activeElement !== searchInput && attempt < 6) {
-    window.setTimeout(() => focusProductSearch(attempt + 1), 80);
+  const focused = document.activeElement === searchInput;
+  if (attempt < 6) {
+    window.setTimeout(() => {
+      const currentSearchInput = document.querySelector("[data-search-products]");
+      if (
+        currentSearchInput
+        && document.activeElement !== currentSearchInput
+        && (currentSearchInput !== searchInput || !focused)
+      ) {
+        focusProductSearch(attempt + 1);
+      }
+    }, 80);
   }
 }
 
