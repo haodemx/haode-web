@@ -92,7 +92,16 @@ async function checkCriticalPage(page, pageCase, viewport) {
   if (pageCase.name === 'home') {
     await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
     await expect(page.locator('.reference-proof-band')).toContainText('Control de calidad');
-    await expectHomepageStickyWhatsapp(page, viewport.height);
+    const factoryImage = page.locator('img[src="/assets/images/factory-store-hero-products.png"]:visible').first();
+    await expect(factoryImage).toBeVisible();
+    expect(await factoryImage.evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
+    await expect(page.locator('.reference-product-composition')).toHaveCount(0);
+    if (viewport.width <= 430) {
+      await expectHomepageStickyWhatsapp(page, viewport.height);
+    } else {
+      await expect(page.locator('.reference-bottom-whatsapp')).toBeVisible();
+      await expect(page.locator('.reference-bottom-whatsapp a[href*="wa.me"]')).toBeVisible();
+    }
   }
   await expectNoHorizontalOverflow(page);
 }

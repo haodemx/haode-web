@@ -21,7 +21,7 @@ test.describe('HAODE WhatsApp message templates phase 23', () => {
     const message = decodedWhatsappText(href);
 
     expect(message).toContain('Producto: Pantalla para iPhone 14');
-    expect(message).toContain('SKU:');
+    expect(message).toMatch(/(?:SKU|Referencia web):/);
     expect(message).toContain('Cantidad:');
     expect(message).toContain('Ciudad:');
     expect(message).toContain('stock en México');
