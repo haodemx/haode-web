@@ -6,6 +6,7 @@ import {
   buildCampaignLinks,
   normalizeTrackingToken
 } from "../scripts/campaign-links.mjs";
+import { buildExposurePack } from "../scripts/generate-exposure-pack.mjs";
 
 test("normalizes campaign codes without leaking arbitrary text", () => {
   assert.equal(normalizeTrackingToken(" Pantalla iPhone 14 Pro "), "pantalla_iphone_14_pro");
@@ -54,4 +55,14 @@ test("keeps app hash routes when adding tracking parameters", () => {
   assert.equal(instagram.hash, "#grupo/Fundas");
   assert.equal(instagram.searchParams.get("utm_source"), "instagram");
   assert.equal(instagram.searchParams.get("utm_campaign"), "daily_20260724_fundas");
+});
+
+test("builds a 14-day organic launch pack with tracked App and SEO landing links", () => {
+  const pack = buildExposurePack("20260725");
+  assert.equal(pack.items.length, 14);
+  const wholesale = pack.items.find((item) => item.focus === "Mayoreo México");
+  const phones = pack.items.find((item) => item.focus === "Celulares Samsung");
+  assert.equal(new URL(wholesale.tracking_links.google_business).pathname, "/refacciones-celulares-mayoreo-mexico/");
+  assert.equal(new URL(wholesale.tracking_links.google_business).searchParams.get("utm_source"), "google_business");
+  assert.equal(new URL(phones.tracking_links.facebook).hash, "#categoria/Celulares%20Samsung");
 });

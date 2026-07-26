@@ -41,10 +41,33 @@ test("GEO guide tells AI search not to invent HAODE stock or pricing", async ({ 
   await expect(page.getByRole("link", { name: /Ver llms\.txt/i })).toHaveAttribute("href", "/llms.txt");
 });
 
+test("Mexico wholesale landing page keeps stock and final conditions under confirmation", async ({ page }) => {
+  await page.goto(`${BASE_URL}/refacciones-celulares-mayoreo-mexico/`, { waitUntil: "domcontentloaded" });
+
+  await expect(page.getByRole("heading", { name: /Refacciones para celular de mayoreo/i })).toBeVisible();
+  await expect(page.locator('[data-reference-conversion="seo-mayoreo"]')).toContainText("Cotiza modelos y cantidades");
+  await expect(page.locator("body")).toContainText("Stock en México");
+  await expect(page.locator("body")).toContainText("bajo confirmación");
+  await expect(page.getByRole("link", { name: /Armar lista en la App/i })).toHaveAttribute("href", "/app/#lista");
+});
+
+test("Samsung wholesale landing page separates approved quality lines", async ({ page }) => {
+  await page.goto(`${BASE_URL}/pantallas-samsung-mayoreo-mexico/`, { waitUntil: "domcontentloaded" });
+
+  await expect(page.getByRole("heading", { name: /Pantallas Samsung de mayoreo/i })).toBeVisible();
+  await expect(page.locator('[data-reference-conversion="seo-samsung"]')).toContainText("Separa modelo y calidad");
+  await expect(page.locator("body")).toContainText("Samsung INCELL");
+  await expect(page.locator("body")).toContainText("Samsung OLED");
+  await expect(page.locator("body")).toContainText("TIPO ORIGINAL");
+  await expect(page.getByRole("link", { name: "Ver celulares Samsung" })).toHaveAttribute("href", "/categoria/celulares-samsung/");
+});
+
 test("SEO conversion pages keep mobile layout inside viewport", async ({ page }) => {
   const paths = [
     "/pantallas-iphone-11-xr-mayoreo/",
     "/pantallas-premium-iphone-samsung-fabrica/",
+    "/pantallas-samsung-mayoreo-mexico/",
+    "/refacciones-celulares-mayoreo-mexico/",
     "/guia-ia-haode-mexico/"
   ];
 

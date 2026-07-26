@@ -34,6 +34,9 @@ test('sitemap keeps canonical static SEO pages and excludes redirect aliases', (
     '/categoria/camaras-inteligentes/',
     '/categoria/gafas-inteligentes-ai/',
     '/guia-ia-haode-mexico/',
+    '/categoria/celulares-samsung/',
+    '/pantallas-samsung-mayoreo-mexico/',
+    '/refacciones-celulares-mayoreo-mexico/',
   ].map((urlPath) => `${SITE_URL}${urlPath}`);
 
   for (const url of required) {
@@ -42,6 +45,15 @@ test('sitemap keeps canonical static SEO pages and excludes redirect aliases', (
 
   assert.ok(!locs.includes(`${SITE_URL}/categoria/camaras-digitales/`));
   assert.ok(!locs.includes(`${SITE_URL}/micas/`));
+  [
+    'aimb-g5-ai-sports',
+    'haode-ai-g3-smart-glasses',
+    'haode-ai-w610-smart-glasses',
+    's1-ai-classic',
+    'w630-ai-pro',
+  ].forEach((id) => {
+    assert.ok(!locs.includes(`${SITE_URL}/producto/${id}/`), `redirect URL found in sitemap: ${id}`);
+  });
 });
 
 test('sitemap generator preserves the same static SEO routes', () => {
@@ -57,6 +69,9 @@ test('sitemap generator preserves the same static SEO routes', () => {
     '/productos/samsung-z-flip7/',
     '/productos/samsung-z-fold6/',
     '/guia-ia-haode-mexico/',
+    '/categoria/celulares-samsung/',
+    '/pantallas-samsung-mayoreo-mexico/',
+    '/refacciones-celulares-mayoreo-mexico/',
   ];
 
   for (const urlPath of requiredStaticPaths) {
@@ -103,5 +118,5 @@ test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () =>
   assert.ok(types.has('WebSite'));
   assert.ok(types.has('WebPage'));
   assert.equal(itemList?.['@type'], 'ItemList');
-  assert.equal(itemList.itemListElement.length, 7);
+  assert.equal(itemList.itemListElement.length, 8);
 });

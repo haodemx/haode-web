@@ -26,12 +26,14 @@
         <a href="/categoria/micas/">Micas</a>
         <a href="/categoria/maquinas-de-hidrogel/">Máquinas</a>
         <a href="/categoria/fundas/">Fundas</a>
+        <a href="/categoria/celulares-samsung/">Celulares Samsung</a>
       </nav>
       <nav class="site-sales-footer-nav" aria-label="Atención HAODE">
         <p>Atención</p>
         <a href="/garantia/">Garantía local</a>
         <a href="/contacto/">Contacto</a>
         <a href="/distribuidores/">Distribuidores</a>
+        <a href="/refacciones-celulares-mayoreo-mexico/">Mayoreo México</a>
       </nav>
       <div class="site-sales-footer-contact">
         <p>Lista grande o pedido de mayoreo</p>

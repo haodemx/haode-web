@@ -42,6 +42,8 @@ function categorySlugFromApp(category) {
     'Pantallas OLED Diagnóstica': 'oled-diagnostica',
     'Pantallas Samsung INCELL': 'samsung-incell',
     'Pantallas Samsung OLED': 'samsung-oled',
+    'Pantallas Samsung Original': 'samsung-tipo-original',
+    'Celulares Samsung': 'celulares-samsung',
     'Gafas AI': 'gafas-ai',
     'Productos AI': 'camaras-inteligentes',
     'Cámaras Inteligentes': 'camaras-inteligentes',

@@ -33,6 +33,7 @@ const categories = [
   { id: "Pantallas Samsung OLED", label: "Samsung AMOLED", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/samsung-oled/", icon: "screen" },
   { id: "Pantallas Samsung INCELL", label: "Samsung INCELL", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/samsung-incell/", icon: "screen" },
   { id: "Pantallas Samsung Original", label: "Samsung TIPO ORIGINAL", shortLabel: "Pantallas", group: "Pantallas", url: "/categoria/samsung-tipo-original/", icon: "screen" },
+  { id: "Celulares Samsung", label: "Celulares Samsung", shortLabel: "Celulares", group: "Celulares", url: "/categoria/celulares-samsung/", icon: "phone" },
   { id: "Micas", label: "Micas", shortLabel: "Micas", group: "Micas", url: "/categoria/micas/", icon: "layers" },
   { id: "Máquinas de Mica", label: "Máquinas de Mica", shortLabel: "Micas", group: "Micas", url: "/categoria/maquinas-de-hidrogel/", icon: "machine" },
   { id: "Gafas AI", label: "Gafas AI", shortLabel: "AI", group: "AI", url: "/categoria/gafas-inteligentes-ai/", icon: "spark" },
@@ -68,6 +69,14 @@ const categoryGroups = [
     categoryIds: ["Micas", "Máquinas de Mica"],
     url: "/categoria/micas/",
     icon: "layers"
+  },
+  {
+    id: "Celulares",
+    title: "Celulares",
+    description: "Samsung de oferta con estado bajo confirmación",
+    categoryIds: ["Celulares Samsung"],
+    url: "/categoria/celulares-samsung/",
+    icon: "phone"
   },
   {
     id: "AI",
@@ -146,6 +155,7 @@ function iconSvg(name) {
     spark: '<path d="M12 3 9.8 9.8 3 12l6.8 2.2L12 21l2.2-6.8L21 12l-6.8-2.2L12 3Z"/>',
     camera: '<path d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"/><path d="M12 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>',
     case: '<path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M11 18h2"/>',
+    phone: '<path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M10 6h4M11 18h2"/>',
     truck: '<path d="M3 6h11v9H3V6Zm11 3h4l3 3v3h-7V9Z"/><path d="M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>',
     whatsapp: '<path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"/><path d="M9 8.8c.2 3 2.2 5 5.2 5.5l1-1.1"/>',
     shield: '<path d="M12 3 5 6v5c0 4.6 3 8 7 10 4-2 7-5.4 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/>'
@@ -355,10 +365,16 @@ function normalizeProduct(product) {
   const qualityText = product.calidad || product.quality || "";
   const quality = samsungQualityFor(category, `${model} ${qualityText}`) || (qualityText ? { label: qualityText, spec: qualityText } : null);
   const publicPrice = Number(product.precioPublico ?? product.publicPrice ?? product.public_price_mxn ?? 0);
+  const officialSkuPending = product.officialSkuPending === true;
+  const reference = product.sku || product.SKU || productId || productDocId;
+  const image = product.imagen || product.image || product.image_url || PLACEHOLDER_IMAGE;
 
   return {
     id: productId || productDocId,
-    sku: product.sku || product.SKU || productId || productDocId,
+    sku: officialSkuPending ? "" : reference,
+    reference,
+    officialSkuPending,
+    internalId: product.internalId === true,
     category,
     name,
     displayName: productDisplayName(name, category),
@@ -368,7 +384,8 @@ function normalizeProduct(product) {
     publicPrice,
     wholesalePrice: Number(product.precioMayoreo ?? product.wholesalePrice ?? 0),
     priceTiers: normalizePriceTiers(product.priceTiers || product.public_price_tiers || product.quantityPricing || product.preciosPorCantidad),
-    image: product.imagen || product.image || product.image_url || PLACEHOLDER_IMAGE,
+    image,
+    usesPlaceholder: String(image).includes("placeholder.svg"),
     stock: normalizeStock(product.stock || product.stock_status || product.stock_label),
     salesAvailable: product.sales_available !== false && publicPrice > 0,
     erpStockStatus: product.erpStockStatus || product.stock_status || "",
@@ -878,6 +895,7 @@ function productCardHtml(product, compact = false) {
     <article class="product-card">
       <a class="product-media" href="${appProductUrl(product)}" aria-label="Ver ${escapeAttr(product.displayName)}">
         <img src="${product.image}" alt="${escapeAttr(product.name)}" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="product-body">
         <span class="product-kicker">${label}</span>
@@ -911,11 +929,12 @@ function homeProductRowHtml(product) {
     <article class="product-card app-home-product-card">
       <a class="app-home-product-media" href="${appProductUrl(product)}" aria-label="Ver ${escapeAttr(product.displayName)}">
         <img src="${product.image}" alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="app-home-product-copy">
         <span class="product-kicker">${label}</span>
         <h3>${product.displayName}</h3>
-        <p>SKU: ${escapeAttr(product.sku || product.model || product.id)}</p>
+        <p>${product.officialSkuPending ? "Referencia" : "SKU"}: ${escapeAttr(product.sku || product.reference || product.model || product.id)}</p>
         <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
       </div>
       <button class="app-row-add" type="button" data-add-product="${product.id}" aria-label="Agregar" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "+" : "?"}</button>
@@ -1478,6 +1497,7 @@ function productGalleryHtml(product, images) {
     <div class="gallery-stage">
       ${isX200T(product) ? '<span class="gallery-badge">Galería de producto</span>' : ""}
       <img src="${selected}" alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.src='${product.image || PLACEHOLDER_IMAGE}'" />
+      ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
     </div>
     ${thumbStripHtml(images, state.selectedGalleryIndex)}
   `;
@@ -1794,7 +1814,8 @@ function buildWhatsappUrl() {
     ...items.map((item) => {
       const priceRule = priceRuleFor(item.product, item.quantity);
       const subtotal = priceRule.unitPrice * item.quantity;
-      return `- ${item.product.name} | SKU: ${item.product.sku} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
+      const referenceLabel = item.product.officialSkuPending ? "Referencia web" : "SKU";
+      return `- ${item.product.name} | ${referenceLabel}: ${item.product.sku || item.product.reference || item.product.id} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
     }),
     "",
     `Total estimado: ${formatPrice(cartTotal())}`,
@@ -1818,7 +1839,7 @@ function webOrderPayload() {
     customer_name: clientName,
     whatsapp: clientPhone,
     phone: clientPhone,
-    product_sku: items[0]?.product?.sku || items[0]?.product?.id || "",
+    product_sku: items[0]?.product?.sku || items[0]?.product?.reference || items[0]?.product?.id || "",
     product_name: items[0]?.product?.name || "",
     quantity: items[0]?.quantity || 1,
     message: [clientCity ? `Ciudad: ${clientCity}` : "", clientComment].filter(Boolean).join(" | "),
@@ -1834,7 +1855,7 @@ function webOrderPayload() {
     items: items.map((item) => {
       const priceRule = priceRuleFor(item.product, item.quantity);
       return {
-        product_sku: item.product.sku || item.product.id,
+        product_sku: item.product.sku || item.product.reference || item.product.id,
         product_name: item.product.name,
         quantity: item.quantity,
         unit_price: priceRule.unitPrice
@@ -1870,11 +1891,12 @@ async function submitWebOrder() {
 }
 
 function singleProductWhatsappUrl(product) {
+  const referenceLabel = product.officialSkuPending ? "Referencia web" : "SKU";
   const lines = [
     "Hola HAODE México, quiero cotizar este producto:",
     "",
     `${product.name}`,
-    `SKU: ${product.sku}`,
+    `${referenceLabel}: ${product.sku || product.reference || product.id}`,
     `Modelo: ${product.model}`,
     `Precio menudeo: ${formatPrice(product.publicPrice)}`,
     `Precio mayoreo: ${formatPrice(product.wholesalePrice)}`,

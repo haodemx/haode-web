@@ -67,5 +67,51 @@
     return [attribution?.source, attribution?.campaign, attribution?.content].filter(Boolean).join("/");
   }
 
-  global.HaodeCampaign = Object.freeze({ capture, normalizeToken, reference });
+  function decorateWhatsAppLink(link, attribution = capture()) {
+    if (!link?.href) return link;
+    try {
+      const url = new URL(link.href, global.location.origin);
+      if (url.hostname !== "wa.me" && !url.hostname.endsWith(".whatsapp.com")) return link;
+      const text = url.searchParams.get("text") || "";
+      const campaignReference = reference(attribution);
+      if (campaignReference && !/(^|\n)Origen:/i.test(text)) {
+        url.searchParams.set("text", `${text}${text ? "\n" : ""}Origen: ${campaignReference}`);
+        link.href = url.toString();
+      }
+    } catch {
+      // Tracking decoration must never block the WhatsApp action.
+    }
+    return link;
+  }
+
+  function decorateCurrentPage() {
+    const attribution = capture();
+    global.document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach((link) => {
+      decorateWhatsAppLink(link, attribution);
+    });
+  }
+
+  global.HaodeCampaign = Object.freeze({ capture, normalizeToken, reference, decorateWhatsAppLink });
+
+  if (global.document.readyState === "loading") {
+    global.document.addEventListener("DOMContentLoaded", decorateCurrentPage);
+  } else {
+    decorateCurrentPage();
+  }
+
+  global.document.addEventListener("click", (event) => {
+    const link = event.target.closest?.('a[href*="wa.me"], a[href*="whatsapp.com"]');
+    if (!link) return;
+    const attribution = capture();
+    decorateWhatsAppLink(link, attribution);
+    if (typeof global.gtag === "function") {
+      global.gtag("event", "whatsapp_click", {
+        source: attribution.source,
+        medium: attribution.medium,
+        campaign: attribution.campaign,
+        content: attribution.content,
+        landing_page: attribution.landingPage
+      });
+    }
+  }, true);
 })(window);

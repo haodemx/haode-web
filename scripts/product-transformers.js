@@ -25,6 +25,7 @@ const CATEGORY_TO_WEBSITE = {
   'Máquinas de Mica': 'maquinas-de-mica',
   'Maquinas de Mica': 'maquinas-de-mica',
   'Fundas': 'fundas',
+  'Celulares Samsung': 'celulares-samsung',
 };
 
 function parseCsv(text) {

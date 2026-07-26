@@ -51,6 +51,20 @@ const CATEGORY_META = {
       'assets/products/samsung-oled/gallery-03.jpg',
     ],
   },
+  'samsung-tipo-original': {
+    brand: 'Samsung',
+    title: 'Samsung TIPO ORIGINAL',
+    subtitle: 'Pantallas Samsung TIPO ORIGINAL CON MARCO para reparación profesional y mayoreo.',
+    mainImage: 'assets/products/samsung-original/z-fold6/main.png',
+    galleryImages: [],
+  },
+  'celulares-samsung': {
+    brand: 'Samsung',
+    title: 'Celulares Samsung',
+    subtitle: 'Modelos Samsung de oferta publicados desde la lista HAODE, con disponibilidad y estado bajo confirmación.',
+    mainImage: 'assets/products/placeholder.svg',
+    galleryImages: [],
+  },
   'motorola-lcd': {
     brand: 'Motorola',
     title: 'Motorola LCD',
@@ -114,6 +128,9 @@ const CATEGORY_ALIASES = {
   'iPhone OLED': 'iphone-oled',
   'Samsung INCELL': 'samsung-incell',
   'Samsung OLED': 'samsung-oled',
+  'Samsung TIPO ORIGINAL': 'samsung-tipo-original',
+  'Pantallas Samsung Original': 'samsung-tipo-original',
+  'Celulares Samsung': 'celulares-samsung',
   'Pantallas Motorola': 'motorola-lcd',
   'Pantallas OLED Diagnóstica': 'oled-diagnostica',
   'OLED Diagnóstica': 'oled-diagnostica',
@@ -129,6 +146,8 @@ const CATEGORY_ALIASES = {
   'iphone-oled': 'iphone-oled',
   'samsung-incell': 'samsung-incell',
   'samsung-oled': 'samsung-oled',
+  'samsung-tipo-original': 'samsung-tipo-original',
+  'celulares-samsung': 'celulares-samsung',
   'motorola-lcd': 'motorola-lcd',
   'oled-diagnostica': 'oled-diagnostica',
   'gafas-ai': 'gafas-ai',
@@ -268,7 +287,7 @@ const CATALOG_GROUPS = [
     kicker: 'Pantallas',
     title: 'Pantallas',
     subtitle: 'Entrada rápida a iPhone Pro Max, Samsung Ultra, OLED, AMOLED, INCELL y Samsung TIPO ORIGINAL.',
-    categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'motorola-lcd', 'oled-diagnostica'],
+    categories: ['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'samsung-tipo-original', 'motorola-lcd', 'oled-diagnostica'],
     featureCards: [
       ...SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS,
       {
@@ -283,6 +302,24 @@ const CATALOG_GROUPS = [
         searchText: 'Samsung AMOLED pantalla amoled oled galaxy premium cotizacion',
       },
     ],
+  },
+  {
+    id: 'celulares-samsung',
+    kicker: 'Celulares Samsung',
+    title: 'Celulares Samsung de oferta',
+    subtitle: 'Consulta modelo, memoria, precio publicado y disponibilidad antes de confirmar el pedido.',
+    categories: ['celulares-samsung'],
+    controls: {
+      label: 'Buscar celular Samsung',
+      placeholder: 'Buscar S9, S20, Note 20, Z Flip...',
+      filters: [{ id: 'all', label: 'Todos los celulares' }],
+      empty: {
+        title: 'No encontramos ese celular.',
+        text: 'Envía el modelo por WhatsApp para confirmar disponibilidad y estado.',
+        cta: 'Cotizar por WhatsApp',
+        href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
+      },
+    },
   },
   {
     id: 'baterias',
@@ -1121,11 +1158,11 @@ function trackWebsiteEvent(eventName, params = {}) {
   if (typeof window.gtag === 'function') window.gtag('event', eventName, params);
 }
 
-function buildProductCotizacionText(name, sku = '') {
+function buildProductCotizacionText(name, reference = '') {
   return [
     'Hola HAODE México, quiero cotizar este producto:',
     `Producto: ${name || 'Producto HAODE'}`,
-    `SKU: ${sku || 'N/A'}`,
+    `Referencia web: ${reference || 'N/A'}`,
     'Cantidad:',
     'Ciudad:',
     `Origen: ${trafficReference()}.`,
@@ -1522,9 +1559,15 @@ function createProduct(definition) {
   const mainImage = definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
   const galleryImages = definition.galleryImages || (mediaImages ? mediaImages.slice(1) : null) || categoryMedia?.galleryImages || categoryMeta.galleryImages || [];
   const name = definition.name || `Pantalla para ${definition.model || definition.title || definition.id}`;
+  const officialSkuPending = definition.officialSkuPending === true;
+  const reference = definition.sku || definition.SKU || definition.id;
+  const usesPlaceholder = mainImage === PLACEHOLDER_IMAGE || String(mainImage).includes('/placeholder.svg');
   return {
     id: definition.id,
-    sku: definition.sku || definition.SKU || definition.id,
+    sku: officialSkuPending ? '' : reference,
+    reference,
+    officialSkuPending,
+    internalId: definition.internalId === true,
     brand: definition.brand || categoryMeta.brand,
     category,
     model: definition.model || name,
@@ -1536,13 +1579,14 @@ function createProduct(definition) {
     priceTable,
     priceSource: definition.priceSource || '',
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
-    whatsappText: buildProductCotizacionText(name, definition.sku || definition.SKU || definition.id),
+    whatsappText: buildProductCotizacionText(name, reference),
     lowestPriceText: buildLowestPriceText(priceTable),
     stockStatus: 'ask_stock',
     stockLabel: 'Consultar inventario',
     salesAvailable: definition.salesAvailable !== false,
     priceStatus: definition.priceStatus || 'CONFIRMED',
     localOnly: definition.localOnly === true,
+    usesPlaceholder,
   };
 }
 
@@ -1592,6 +1636,12 @@ function createProductCard(product) {
   brand.textContent = product.brand;
 
   media.append(image, brand);
+  if (product.usesPlaceholder) {
+    const imageStatus = document.createElement('span');
+    imageStatus.className = 'product-image-status';
+    imageStatus.textContent = 'Imagen en actualización';
+    media.appendChild(imageStatus);
+  }
 
   const content = document.createElement('div');
   content.className = 'shop-content';
@@ -2623,7 +2673,7 @@ function renderProductDetailPage() {
       <div>
         <p class="reference-panel-kicker">Cotización por modelo</p>
         <h2>Cotiza este modelo por WhatsApp privado</h2>
-        <p>Confirma modelo exacto, SKU, cantidad y ciudad. HAODE valida stock en México, precio por cantidad, garantía local y entrega antes de cerrar.</p>
+        <p>Confirma modelo exacto, referencia, cantidad y ciudad. HAODE valida stock en México, precio por cantidad, garantía local y entrega antes de cerrar.</p>
         <div class="reference-panel-proof">
           <span>Fábrica directa</span>
           <span>Stock en México</span>
@@ -2659,6 +2709,18 @@ function renderProductDetailPage() {
       if (mainImageEl.src !== fallback) mainImageEl.src = fallback;
     };
     attachZoom(mainImageEl, new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href, product.name);
+    const visual = mainImageEl.closest('.detail-visual');
+    let imageStatus = visual?.querySelector('[data-product-image-status]');
+    if (product.usesPlaceholder && visual && !imageStatus) {
+      imageStatus = document.createElement('p');
+      imageStatus.className = 'product-image-status';
+      imageStatus.setAttribute('data-product-image-status', '');
+      mainImageEl.insertAdjacentElement('afterend', imageStatus);
+    }
+    if (imageStatus) {
+      imageStatus.textContent = 'Imagen en actualización';
+      imageStatus.hidden = !product.usesPlaceholder;
+    }
   }
   syncDetailMobilePreview(page, {
     imageSrc: buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE),

@@ -70,3 +70,14 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   ));
   expect(unexpectedConsoleErrors).toEqual([]);
 });
+
+test("decorates static landing WhatsApp links with the campaign reference", async ({ page }) => {
+  await page.goto(
+    `${SERVER_URL}/refacciones-celulares-mayoreo-mexico/?utm_source=Google%20Business&utm_medium=Organic&utm_campaign=Mayoreo%20MX&utm_content=Perfil`,
+    { waitUntil: "domcontentloaded" }
+  );
+  const whatsapp = page.getByRole("link", { name: /Enviar lista por WhatsApp/i }).first();
+  await expect(whatsapp).toBeVisible();
+  const text = await whatsapp.evaluate((link) => new URL(link.href).searchParams.get("text") || "");
+  expect(text).toContain("Origen: google_business/mayoreo_mx/perfil");
+});

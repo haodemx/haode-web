@@ -13,6 +13,7 @@ const source = JSON.parse(sourceText);
 const website = websiteProducts();
 const masterText = fs.readFileSync(new URL('../docs/master-data/products-master.csv', import.meta.url), 'utf8');
 const sitemapText = fs.readFileSync(new URL('../sitemap.xml', import.meta.url), 'utf8');
+const syncReport = JSON.parse(fs.readFileSync(new URL('../docs/reports/customer-price-sync-2026-07.json', import.meta.url), 'utf8'));
 const deletedIds = [
   'funda-magnetica-17-pro-max',
   'funda-premium-17-pro-max',
@@ -101,4 +102,38 @@ test('approved diagnostic price tiers are complete', () => {
     '$1,150 MXN',
     '$1,050 MXN',
   ]);
+});
+
+test('every unique approved price-list product is aligned across website and App', () => {
+  assert.equal(website.length, 186);
+  assert.equal(appProducts.length, 186);
+  assert.deepEqual(
+    website.map((product) => product.id).sort(),
+    appProducts.map((product) => product.id).sort()
+  );
+  assert.equal(syncReport.summary.sourceRows, 189);
+  assert.equal(syncReport.summary.uniqueSourceProducts, 186);
+  assert.equal(syncReport.summary.unpublishedSourceRows, 0);
+  assert.equal(syncReport.summary.duplicateSourceRows, 3);
+});
+
+test('new products use approved prices and authorized media placeholders without fake official SKUs', () => {
+  const softOled = byId(website, 'iphone-oled-soft-14');
+  const phone = byId(website, 'celular-samsung-s9-6-plus-64');
+  const appPhone = byId(appProducts, phone.id);
+  assert.equal(price(softOled, '1 pza'), '$1,000 MXN');
+  assert.equal(softOled.images[0], 'assets/products/placeholder.svg');
+  assert.equal(softOled.officialSkuPending, true);
+  assert.equal(phone.category, 'celulares-samsung');
+  assert.equal(appPhone.categoria, 'Celulares Samsung');
+  assert.equal(appPhone.imagen, '/assets/products/placeholder.svg');
+  assert.equal(appPhone.officialSkuPending, true);
+  assert.ok(sitemapText.includes(`/producto/${phone.id}/`));
+  assert.ok(fs.existsSync(new URL(`../producto/${phone.id}/index.html`, import.meta.url)));
+});
+
+test('identical workbook rows are consolidated into one customer-visible product', () => {
+  const matching = website.filter((product) => product.name.includes('KIT ALUMINIO DE 17PROMAX SIN LOGO'));
+  assert.equal(matching.length, 1);
+  assert.deepEqual(matching[0].sourceRows, [173, 174, 175, 176]);
 });

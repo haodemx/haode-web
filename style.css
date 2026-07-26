@@ -12661,3 +12661,50 @@ body.seo-conversion-page .seo-landing-copy .btn[href*="wa.me"]:hover {
   background: var(--ref-green-dark);
   color: #ffffff;
 }
+/* Approved catalog placeholders remain visible until real product media is supplied. */
+.shop-media,
+.detail-visual {
+  position: relative;
+}
+
+.product-image-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  padding: 6px 10px;
+  border: 1px solid #d8d1c8;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #5f5a55;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.shop-media > .product-image-status {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+}
+
+.detail-visual > .product-image-status {
+  margin: 10px auto 0;
+}
+
+body.seo-conversion-page .reference-conversion-panel > img {
+  width: 180px;
+  height: 150px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+@media (max-width: 720px) {
+  body.seo-conversion-page .reference-conversion-panel > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}

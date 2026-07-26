@@ -11,6 +11,13 @@ const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const ROBOTS_FILE = path.join(ROOT, 'robots.txt');
 const SERIES_CHECK_FILE = path.join(ROOT, 'assets', 'products', 'series-update-check.md');
 const SITE_URL = 'https://haode.com.mx';
+const REDIRECT_PRODUCT_IDS = new Set([
+  'aimb-g5-ai-sports',
+  'haode-ai-g3-smart-glasses',
+  'haode-ai-w610-smart-glasses',
+  's1-ai-classic',
+  'w630-ai-pro',
+]);
 const STATIC_SEO_URLS = [
   '/',
   '/app/',
@@ -28,6 +35,7 @@ const STATIC_SEO_URLS = [
   '/categoria/samsung-incell/',
   '/categoria/samsung-oled/',
   '/categoria/samsung-tipo-original/',
+  '/categoria/celulares-samsung/',
   '/categoria/samsung-plegables/',
   '/categoria/micas/',
   '/categoria/fundas/',
@@ -53,6 +61,8 @@ const STATIC_SEO_URLS = [
   '/ai-smart-glasses-w610.html',
   '/pantallas-iphone-11-xr-mayoreo/',
   '/pantallas-premium-iphone-samsung-fabrica/',
+  '/pantallas-samsung-mayoreo-mexico/',
+  '/refacciones-celulares-mayoreo-mexico/',
   '/guia-ia-haode-mexico/',
 ];
 
@@ -789,7 +799,7 @@ function writeSeriesCheckReport(reports, workbookPath) {
 function writeSeoFiles(products) {
   const urls = STATIC_SEO_URLS.map((urlPath) => `${SITE_URL}${urlPath}`);
 
-  products.forEach((product) => {
+  products.filter((product) => !REDIRECT_PRODUCT_IDS.has(product.id)).forEach((product) => {
     urls.push(`${SITE_URL}/producto/${encodeURIComponent(product.id)}/`);
   });
 

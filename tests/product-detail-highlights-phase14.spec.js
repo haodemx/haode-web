@@ -203,16 +203,19 @@ async function expectFirstWhatsAppInViewport(page) {
 async function expectMobileDetailPreview(page) {
   const preview = page.locator('[data-detail-mobile-preview]');
   await expect(preview).toBeVisible();
+  const previewImage = preview.locator('img');
+  await expect(previewImage).toBeVisible();
+  await expect.poll(
+    () => previewImage.evaluate((image) => image.complete && image.naturalWidth > 0),
+    { message: 'mobile detail preview image should finish loading' }
+  ).toBe(true);
   const details = await preview.evaluate((el) => {
     const rect = el.getBoundingClientRect();
-    const image = el.querySelector('img');
     return {
       top: Math.round(rect.top),
       width: Math.round(rect.width),
-      imageLoaded: Boolean(image && image.complete && image.naturalWidth > 0),
     };
   });
   expect(details.top).toBeLessThan(560);
   expect(details.width).toBeGreaterThan(320);
-  expect(details.imageLoaded).toBe(true);
 }

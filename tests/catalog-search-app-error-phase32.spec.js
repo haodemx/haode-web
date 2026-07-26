@@ -9,14 +9,16 @@ test.describe('HAODE catalog search and App error state phase 32', () => {
 
     const search = page.locator('[data-category-search]');
     await expect(search).toBeVisible();
-    await expect(page.locator('[data-category-search-count]')).toContainText('32');
+    const totalModels = await page.locator('.new-product-card').count();
+    expect(totalModels).toBeGreaterThan(0);
+    await expect(page.locator('[data-category-search-count]')).toContainText(`${totalModels} de ${totalModels}`);
 
     await search.fill('modelo inexistente 999');
     const empty = page.locator('[data-category-search-empty]');
     await expect(empty).toBeVisible();
     await expect(empty).toContainText('Sin resultados');
     await expect(empty.locator('a[href*="wa.me"]')).toBeVisible();
-    await expect(page.locator('[data-category-search-count]')).toContainText('0 de 32');
+    await expect(page.locator('[data-category-search-count]')).toContainText(`0 de ${totalModels}`);
 
     await empty.locator('[data-clear-category-search]').click();
     await expect(search).toHaveValue('');

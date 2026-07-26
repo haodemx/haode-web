@@ -101,13 +101,83 @@ const campaignItems = [
     headline: "HAODE para técnicos, talleres y distribuidores",
     caption: "HAODE México atiende técnicos, talleres, tiendas y distribuidores. Revisa el catálogo y cotiza por WhatsApp con modelo, cantidad y ciudad.",
     whatsapp: "Cierre semanal: enfoca en captar distribuidores. Pide nombre, ciudad, giro del negocio y productos que más compra."
+  },
+  {
+    day: 8,
+    focus: "Mayoreo México",
+    sku: "refacciones_mayoreo_mexico",
+    url: "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/",
+    channels: ["google_business", "facebook", "whatsapp"],
+    headline: "Refacciones para celular de mayoreo en México",
+    caption: "HAODE México atiende técnicos, talleres, tiendas y distribuidores. Envía modelos, cantidades y ciudad para confirmar disponibilidad, precio final y envío.",
+    whatsapp: "Usa una foto confirmada de la tienda o almacén. El objetivo es captar listas completas, no preguntas de un solo modelo."
+  },
+  {
+    day: 9,
+    focus: "Samsung OLED",
+    sku: "samsung_oled_mayoreo",
+    route: "#categoria/Pantallas%20Samsung%20OLED",
+    channels: ["instagram", "facebook", "whatsapp"],
+    headline: "Samsung OLED para técnicos y talleres",
+    caption: "Pantallas Samsung OLED HAODE para reparación profesional. Consulta modelo exacto, cantidad y ciudad para confirmar disponibilidad y precio final.",
+    whatsapp: "Publica solo una imagen real confirmada de Samsung OLED. No mezcles precios ni calidad INCELL en la misma pieza."
+  },
+  {
+    day: 10,
+    focus: "Samsung TIPO ORIGINAL",
+    sku: "samsung_tipo_original",
+    route: "#categoria/Pantallas%20Samsung%20Original",
+    channels: ["facebook", "google_business", "whatsapp"],
+    headline: "Samsung TIPO ORIGINAL con marco",
+    caption: "Modelos Samsung TIPO ORIGINAL para técnicos y tiendas. Consulta Galaxy Ultra, Note, Z Flip y Z Fold con disponibilidad bajo confirmación.",
+    whatsapp: "Pide modelo exacto y cantidad. No afirmes compatibilidad ni stock antes de revisar la respuesta del asesor."
+  },
+  {
+    day: 11,
+    focus: "Celulares Samsung",
+    sku: "celulares_samsung_oferta",
+    route: "#categoria/Celulares%20Samsung",
+    channels: ["facebook", "instagram", "whatsapp"],
+    headline: "Celulares Samsung de oferta HAODE",
+    caption: "Consulta celulares Samsung publicados en la lista HAODE. Precio visible; disponibilidad, estado del equipo y condiciones se confirman antes de comprar.",
+    whatsapp: "No uses imagen de un equipo sin confirmar. Publica la categoría o una foto real aprobada y pide modelo, memoria y ciudad."
+  },
+  {
+    day: 12,
+    focus: "iPhone 11 y XR",
+    sku: "iphone_11_xr_mayoreo",
+    url: "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/",
+    channels: ["facebook", "instagram", "whatsapp"],
+    headline: "Pantallas iPhone 11 y XR para mayoreo",
+    caption: "Compara iPhone 11 y XR por versión y cantidad en HAODE México. Confirma modelo, versión, disponibilidad y envío por WhatsApp.",
+    whatsapp: "Usa la página dedicada para no confundir versión estándar y Bolsa Protectora."
+  },
+  {
+    day: 13,
+    focus: "Pantallas Samsung mayoreo",
+    sku: "pantallas_samsung_mayoreo_mexico",
+    url: "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/",
+    channels: ["google_business", "facebook", "whatsapp"],
+    headline: "Pantallas Samsung de mayoreo en México",
+    caption: "INCELL, OLED y TIPO ORIGINAL para Galaxy S, Note, Ultra, Z Flip y Z Fold. Cotiza modelo, calidad, cantidad y ciudad.",
+    whatsapp: "Esta publicación dirige a una página que separa las calidades. Pide al cliente que indique cuál necesita."
+  },
+  {
+    day: 14,
+    focus: "Lista grande por WhatsApp",
+    sku: "lista_grande_whatsapp",
+    route: "#lista",
+    channels: ["whatsapp", "facebook", "instagram"],
+    headline: "Envía tu lista completa a HAODE",
+    caption: "¿Necesitas varios modelos? Abre la App HAODE, arma tu lista y envíala por WhatsApp. Confirmamos disponibilidad, precio final y envío antes del pedido.",
+    whatsapp: "Cierra el ciclo con el enlace del carrito. Revisa qué campaña produjo más consultas calificadas antes de repetir."
   }
 ];
 
 function itemWithLinks(item, dateKey) {
   const campaign = buildCampaignCode({ dateKey, sku: item.sku });
   const trackingLinks = buildCampaignLinks({
-    appUrl: `${APP_URL}${item.route}`,
+    appUrl: item.url || `${APP_URL}${item.route}`,
     campaign,
     productSku: item.sku
   });
@@ -132,7 +202,7 @@ function renderMarkdown(pack) {
     "- WhatsApp Estado 只发状态，不群发、不私信、不广播。",
     "- 每天发布后把平台、链接、客户询问数量回填给老板。",
     "",
-    "## 7 天发布安排",
+    "## 14 天发布安排",
     ""
   ];
 

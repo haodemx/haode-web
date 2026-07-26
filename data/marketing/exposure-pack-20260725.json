@@ -169,6 +169,174 @@
         "google_business": "https://haode.com.mx/app/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_distribuidores_haode&utm_content=distribuidores_haode#contacto",
         "whatsapp": "https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_distribuidores_haode&utm_content=distribuidores_haode#contacto"
       }
+    },
+    {
+      "day": 8,
+      "focus": "Mayoreo México",
+      "sku": "refacciones_mayoreo_mexico",
+      "url": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/",
+      "channels": [
+        "google_business",
+        "facebook",
+        "whatsapp"
+      ],
+      "headline": "Refacciones para celular de mayoreo en México",
+      "caption": "HAODE México atiende técnicos, talleres, tiendas y distribuidores. Envía modelos, cantidades y ciudad para confirmar disponibilidad, precio final y envío.",
+      "whatsapp": "Usa una foto confirmada de la tienda o almacén. El objetivo es captar listas completas, no preguntas de un solo modelo.",
+      "campaign": "daily_20260725_refacciones_mayoreo_mexico",
+      "tracking_links": {
+        "website": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=website_banner",
+        "app": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=app_banner",
+        "facebook": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico",
+        "instagram": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico",
+        "tiktok": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico",
+        "google_business": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico",
+        "whatsapp": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico"
+      }
+    },
+    {
+      "day": 9,
+      "focus": "Samsung OLED",
+      "sku": "samsung_oled_mayoreo",
+      "route": "#categoria/Pantallas%20Samsung%20OLED",
+      "channels": [
+        "instagram",
+        "facebook",
+        "whatsapp"
+      ],
+      "headline": "Samsung OLED para técnicos y talleres",
+      "caption": "Pantallas Samsung OLED HAODE para reparación profesional. Consulta modelo exacto, cantidad y ciudad para confirmar disponibilidad y precio final.",
+      "whatsapp": "Publica solo una imagen real confirmada de Samsung OLED. No mezcles precios ni calidad INCELL en la misma pieza.",
+      "campaign": "daily_20260725_samsung_oled_mayoreo",
+      "tracking_links": {
+        "website": "https://haode.com.mx/app/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=website_banner#categoria/Pantallas%20Samsung%20OLED",
+        "app": "https://haode.com.mx/app/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=app_banner#categoria/Pantallas%20Samsung%20OLED",
+        "facebook": "https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED",
+        "instagram": "https://haode.com.mx/app/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED",
+        "tiktok": "https://haode.com.mx/app/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED",
+        "google_business": "https://haode.com.mx/app/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED",
+        "whatsapp": "https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED"
+      }
+    },
+    {
+      "day": 10,
+      "focus": "Samsung TIPO ORIGINAL",
+      "sku": "samsung_tipo_original",
+      "route": "#categoria/Pantallas%20Samsung%20Original",
+      "channels": [
+        "facebook",
+        "google_business",
+        "whatsapp"
+      ],
+      "headline": "Samsung TIPO ORIGINAL con marco",
+      "caption": "Modelos Samsung TIPO ORIGINAL para técnicos y tiendas. Consulta Galaxy Ultra, Note, Z Flip y Z Fold con disponibilidad bajo confirmación.",
+      "whatsapp": "Pide modelo exacto y cantidad. No afirmes compatibilidad ni stock antes de revisar la respuesta del asesor.",
+      "campaign": "daily_20260725_samsung_tipo_original",
+      "tracking_links": {
+        "website": "https://haode.com.mx/app/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=website_banner#categoria/Pantallas%20Samsung%20Original",
+        "app": "https://haode.com.mx/app/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=app_banner#categoria/Pantallas%20Samsung%20Original",
+        "facebook": "https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original",
+        "instagram": "https://haode.com.mx/app/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original",
+        "tiktok": "https://haode.com.mx/app/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original",
+        "google_business": "https://haode.com.mx/app/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original",
+        "whatsapp": "https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original"
+      }
+    },
+    {
+      "day": 11,
+      "focus": "Celulares Samsung",
+      "sku": "celulares_samsung_oferta",
+      "route": "#categoria/Celulares%20Samsung",
+      "channels": [
+        "facebook",
+        "instagram",
+        "whatsapp"
+      ],
+      "headline": "Celulares Samsung de oferta HAODE",
+      "caption": "Consulta celulares Samsung publicados en la lista HAODE. Precio visible; disponibilidad, estado del equipo y condiciones se confirman antes de comprar.",
+      "whatsapp": "No uses imagen de un equipo sin confirmar. Publica la categoría o una foto real aprobada y pide modelo, memoria y ciudad.",
+      "campaign": "daily_20260725_celulares_samsung_oferta",
+      "tracking_links": {
+        "website": "https://haode.com.mx/app/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=website_banner#categoria/Celulares%20Samsung",
+        "app": "https://haode.com.mx/app/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=app_banner#categoria/Celulares%20Samsung",
+        "facebook": "https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung",
+        "instagram": "https://haode.com.mx/app/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung",
+        "tiktok": "https://haode.com.mx/app/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung",
+        "google_business": "https://haode.com.mx/app/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung",
+        "whatsapp": "https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung"
+      }
+    },
+    {
+      "day": 12,
+      "focus": "iPhone 11 y XR",
+      "sku": "iphone_11_xr_mayoreo",
+      "url": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/",
+      "channels": [
+        "facebook",
+        "instagram",
+        "whatsapp"
+      ],
+      "headline": "Pantallas iPhone 11 y XR para mayoreo",
+      "caption": "Compara iPhone 11 y XR por versión y cantidad en HAODE México. Confirma modelo, versión, disponibilidad y envío por WhatsApp.",
+      "whatsapp": "Usa la página dedicada para no confundir versión estándar y Bolsa Protectora.",
+      "campaign": "daily_20260725_iphone_11_xr_mayoreo",
+      "tracking_links": {
+        "website": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=website_banner",
+        "app": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=app_banner",
+        "facebook": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo",
+        "instagram": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo",
+        "tiktok": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo",
+        "google_business": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo",
+        "whatsapp": "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo"
+      }
+    },
+    {
+      "day": 13,
+      "focus": "Pantallas Samsung mayoreo",
+      "sku": "pantallas_samsung_mayoreo_mexico",
+      "url": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/",
+      "channels": [
+        "google_business",
+        "facebook",
+        "whatsapp"
+      ],
+      "headline": "Pantallas Samsung de mayoreo en México",
+      "caption": "INCELL, OLED y TIPO ORIGINAL para Galaxy S, Note, Ultra, Z Flip y Z Fold. Cotiza modelo, calidad, cantidad y ciudad.",
+      "whatsapp": "Esta publicación dirige a una página que separa las calidades. Pide al cliente que indique cuál necesita.",
+      "campaign": "daily_20260725_pantallas_samsung_mayoreo_mexico",
+      "tracking_links": {
+        "website": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=website_banner",
+        "app": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=app_banner",
+        "facebook": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico",
+        "instagram": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico",
+        "tiktok": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico",
+        "google_business": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico",
+        "whatsapp": "https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico"
+      }
+    },
+    {
+      "day": 14,
+      "focus": "Lista grande por WhatsApp",
+      "sku": "lista_grande_whatsapp",
+      "route": "#lista",
+      "channels": [
+        "whatsapp",
+        "facebook",
+        "instagram"
+      ],
+      "headline": "Envía tu lista completa a HAODE",
+      "caption": "¿Necesitas varios modelos? Abre la App HAODE, arma tu lista y envíala por WhatsApp. Confirmamos disponibilidad, precio final y envío antes del pedido.",
+      "whatsapp": "Cierra el ciclo con el enlace del carrito. Revisa qué campaña produjo más consultas calificadas antes de repetir.",
+      "campaign": "daily_20260725_lista_grande_whatsapp",
+      "tracking_links": {
+        "website": "https://haode.com.mx/app/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=website_banner#lista",
+        "app": "https://haode.com.mx/app/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=app_banner#lista",
+        "facebook": "https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista",
+        "instagram": "https://haode.com.mx/app/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista",
+        "tiktok": "https://haode.com.mx/app/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista",
+        "google_business": "https://haode.com.mx/app/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista",
+        "whatsapp": "https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista"
+      }
     }
   ]
 }

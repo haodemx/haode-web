@@ -5,7 +5,7 @@
 
 ## 任务结论
 
-短期目标是把有效 WhatsApp 询盘提升到基准期的 2 倍，并以订单数、销售额和毛利验证是否接近销售翻倍。销售翻倍是目标，不是无数据保证。当前网站、App、UTM 链接和 7 天发布文案已准备好；真人发布、广告预算和客户跟进仍需要员工执行。
+短期目标是把有效 WhatsApp 询盘提升到基准期的 2 倍，并以订单数、销售额和毛利验证是否接近销售翻倍。销售翻倍是目标，不是无数据保证。官网与 App 已统一为 186 个批准商品，UTM、询盘来源、SEO 落地页和 14 天发布文案已准备好；真人发布、广告预算和客户跟进仍需要员工执行。
 
 ## 目标口径
 
@@ -96,17 +96,20 @@
 
 ## 已准备文件
 
-- `data/marketing/exposure-pack-20260725.json`：7 天渠道链接和推广编号。
+- `data/marketing/exposure-pack-20260725.json`：14 天渠道链接和推广编号。
 - `docs/reports/exposure-launch-pack-2026-07-25.md`：员工可执行的西语发布文案。
 - `data/marketing/sales-growth-scorecard-20260725.csv`：14 天每日回填表。
-- `docs/reports/boss-confirmation-simple-2026-07-25.xlsx`：商品价格、图片和跨端同步确认表。
+- `refacciones-celulares-mayoreo-mexico/`：墨西哥批发与工厂店搜索入口。
+- `pantallas-samsung-mayoreo-mexico/`：Samsung INCELL、OLED 与 TIPO ORIGINAL 搜索入口。
+- `categoria/celulares-samsung/`：价格表内 Samsung 手机独立分类。
 
-## 仍需老板确认
+## 仍需人工执行
 
-- 手机壳清仓的准确 SKU、价格、可售库存和素材。
+- 每天按发布包登录 Facebook、Instagram、TikTok、Google Business 和 WhatsApp Estado 发布。
+- 46 个占位图后续用已确认商品图片替换；当前不阻塞网站和 App 使用。
+- Celulares Samsung 的实时库存、设备状态和销售条件在成交前人工确认。
 - 付费广告渠道、每日预算、地区和付款账户。
-- 38 个商品同步警告的上架或保留决定。
-- 15 个待确认价格和 1 个占位图。
+- 从 ERP 和 WhatsApp 填入基准期询盘、订单、实收与毛利。
 
 ## 安全边界
 

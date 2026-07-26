@@ -14,7 +14,7 @@
 - WhatsApp Estado 只发状态，不群发、不私信、不广播。
 - 每天发布后把平台、链接、客户询问数量回填给老板。
 
-## 7 天发布安排
+## 14 天发布安排
 
 ### Day 1 - Fundas
 
@@ -134,6 +134,125 @@ HAODE México atiende técnicos, talleres, tiendas y distribuidores. Revisa el c
 | google_business | https://haode.com.mx/app/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_distribuidores_haode&utm_content=distribuidores_haode#contacto |
 | facebook | https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_distribuidores_haode&utm_content=distribuidores_haode#contacto |
 | whatsapp | https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_distribuidores_haode&utm_content=distribuidores_haode#contacto |
+
+### Day 8 - Mayoreo México
+
+- 推广编号：`daily_20260725_refacciones_mayoreo_mexico`
+- 主标题：Refacciones para celular de mayoreo en México
+- 员工提示：Usa una foto confirmada de la tienda o almacén. El objetivo es captar listas completas, no preguntas de un solo modelo.
+- 西语文案：
+
+```text
+HAODE México atiende técnicos, talleres, tiendas y distribuidores. Envía modelos, cantidades y ciudad para confirmar disponibilidad, precio final y envío.
+```
+
+| 平台 | 链接 |
+| --- | --- |
+| google_business | https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico |
+| facebook | https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico |
+| whatsapp | https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_refacciones_mayoreo_mexico&utm_content=refacciones_mayoreo_mexico |
+
+### Day 9 - Samsung OLED
+
+- 推广编号：`daily_20260725_samsung_oled_mayoreo`
+- 主标题：Samsung OLED para técnicos y talleres
+- 员工提示：Publica solo una imagen real confirmada de Samsung OLED. No mezcles precios ni calidad INCELL en la misma pieza.
+- 西语文案：
+
+```text
+Pantallas Samsung OLED HAODE para reparación profesional. Consulta modelo exacto, cantidad y ciudad para confirmar disponibilidad y precio final.
+```
+
+| 平台 | 链接 |
+| --- | --- |
+| instagram | https://haode.com.mx/app/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED |
+| facebook | https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED |
+| whatsapp | https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_samsung_oled_mayoreo&utm_content=samsung_oled_mayoreo#categoria/Pantallas%20Samsung%20OLED |
+
+### Day 10 - Samsung TIPO ORIGINAL
+
+- 推广编号：`daily_20260725_samsung_tipo_original`
+- 主标题：Samsung TIPO ORIGINAL con marco
+- 员工提示：Pide modelo exacto y cantidad. No afirmes compatibilidad ni stock antes de revisar la respuesta del asesor.
+- 西语文案：
+
+```text
+Modelos Samsung TIPO ORIGINAL para técnicos y tiendas. Consulta Galaxy Ultra, Note, Z Flip y Z Fold con disponibilidad bajo confirmación.
+```
+
+| 平台 | 链接 |
+| --- | --- |
+| facebook | https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original |
+| google_business | https://haode.com.mx/app/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original |
+| whatsapp | https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_samsung_tipo_original&utm_content=samsung_tipo_original#categoria/Pantallas%20Samsung%20Original |
+
+### Day 11 - Celulares Samsung
+
+- 推广编号：`daily_20260725_celulares_samsung_oferta`
+- 主标题：Celulares Samsung de oferta HAODE
+- 员工提示：No uses imagen de un equipo sin confirmar. Publica la categoría o una foto real aprobada y pide modelo, memoria y ciudad.
+- 西语文案：
+
+```text
+Consulta celulares Samsung publicados en la lista HAODE. Precio visible; disponibilidad, estado del equipo y condiciones se confirman antes de comprar.
+```
+
+| 平台 | 链接 |
+| --- | --- |
+| facebook | https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung |
+| instagram | https://haode.com.mx/app/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung |
+| whatsapp | https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_celulares_samsung_oferta&utm_content=celulares_samsung_oferta#categoria/Celulares%20Samsung |
+
+### Day 12 - iPhone 11 y XR
+
+- 推广编号：`daily_20260725_iphone_11_xr_mayoreo`
+- 主标题：Pantallas iPhone 11 y XR para mayoreo
+- 员工提示：Usa la página dedicada para no confundir versión estándar y Bolsa Protectora.
+- 西语文案：
+
+```text
+Compara iPhone 11 y XR por versión y cantidad en HAODE México. Confirma modelo, versión, disponibilidad y envío por WhatsApp.
+```
+
+| 平台 | 链接 |
+| --- | --- |
+| facebook | https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo |
+| instagram | https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo |
+| whatsapp | https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_iphone_11_xr_mayoreo&utm_content=iphone_11_xr_mayoreo |
+
+### Day 13 - Pantallas Samsung mayoreo
+
+- 推广编号：`daily_20260725_pantallas_samsung_mayoreo_mexico`
+- 主标题：Pantallas Samsung de mayoreo en México
+- 员工提示：Esta publicación dirige a una página que separa las calidades. Pide al cliente que indique cuál necesita.
+- 西语文案：
+
+```text
+INCELL, OLED y TIPO ORIGINAL para Galaxy S, Note, Ultra, Z Flip y Z Fold. Cotiza modelo, calidad, cantidad y ciudad.
+```
+
+| 平台 | 链接 |
+| --- | --- |
+| google_business | https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=google_business&utm_medium=organic&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico |
+| facebook | https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico |
+| whatsapp | https://haode.com.mx/pantallas-samsung-mayoreo-mexico/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_pantallas_samsung_mayoreo_mexico&utm_content=pantallas_samsung_mayoreo_mexico |
+
+### Day 14 - Lista grande por WhatsApp
+
+- 推广编号：`daily_20260725_lista_grande_whatsapp`
+- 主标题：Envía tu lista completa a HAODE
+- 员工提示：Cierra el ciclo con el enlace del carrito. Revisa qué campaña produjo más consultas calificadas antes de repetir.
+- 西语文案：
+
+```text
+¿Necesitas varios modelos? Abre la App HAODE, arma tu lista y envíala por WhatsApp. Confirmamos disponibilidad, precio final y envío antes del pedido.
+```
+
+| 平台 | 链接 |
+| --- | --- |
+| whatsapp | https://haode.com.mx/app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista |
+| facebook | https://haode.com.mx/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista |
+| instagram | https://haode.com.mx/app/?utm_source=instagram&utm_medium=organic_social&utm_campaign=daily_20260725_lista_grande_whatsapp&utm_content=lista_grande_whatsapp#lista |
 
 ## 老板每天看什么
 

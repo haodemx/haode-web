@@ -4017,3 +4017,33 @@ body[data-route="product"] .related-grid .product-media img {
     display: none;
   }
 }
+.product-media,
+.app-home-product-media,
+.gallery-stage {
+  position: relative;
+}
+
+.product-image-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: calc(100% - 20px);
+  padding: 5px 8px;
+  border: 1px solid #ddd6ce;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #625c56;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.product-media > .product-image-status,
+.app-home-product-media > .product-image-status,
+.gallery-stage > .product-image-status {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
