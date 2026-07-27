@@ -35,7 +35,13 @@ test('sitemap keeps canonical static SEO pages and excludes redirect aliases', (
     '/categoria/gafas-inteligentes-ai/',
     '/guia-ia-haode-mexico/',
     '/categoria/celulares-samsung/',
+    '/fundas-celular-mayoreo-mexico/',
     '/pantallas-samsung-mayoreo-mexico/',
+    '/micas-hidrogel-mayoreo-mexico/',
+    '/pantallas-iphone-incell-mayoreo-mexico/',
+    '/pantallas-iphone-oled-mayoreo-mexico/',
+    '/pantallas-samsung-incell-mayoreo-mexico/',
+    '/pantallas-samsung-zflip-zfold-original-mexico/',
     '/refacciones-celulares-mayoreo-mexico/',
   ].map((urlPath) => `${SITE_URL}${urlPath}`);
 
@@ -70,7 +76,13 @@ test('sitemap generator preserves the same static SEO routes', () => {
     '/productos/samsung-z-fold6/',
     '/guia-ia-haode-mexico/',
     '/categoria/celulares-samsung/',
+    '/fundas-celular-mayoreo-mexico/',
+    '/micas-hidrogel-mayoreo-mexico/',
+    '/pantallas-iphone-incell-mayoreo-mexico/',
+    '/pantallas-iphone-oled-mayoreo-mexico/',
+    '/pantallas-samsung-incell-mayoreo-mexico/',
     '/pantallas-samsung-mayoreo-mexico/',
+    '/pantallas-samsung-zflip-zfold-original-mexico/',
     '/refacciones-celulares-mayoreo-mexico/',
   ];
 

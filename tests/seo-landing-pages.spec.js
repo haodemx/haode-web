@@ -65,8 +65,14 @@ test("Samsung wholesale landing page separates approved quality lines", async ({
 test("SEO conversion pages keep mobile layout inside viewport", async ({ page }) => {
   const paths = [
     "/pantallas-iphone-11-xr-mayoreo/",
+    "/pantallas-iphone-incell-mayoreo-mexico/",
+    "/pantallas-iphone-oled-mayoreo-mexico/",
     "/pantallas-premium-iphone-samsung-fabrica/",
+    "/pantallas-samsung-incell-mayoreo-mexico/",
     "/pantallas-samsung-mayoreo-mexico/",
+    "/pantallas-samsung-zflip-zfold-original-mexico/",
+    "/fundas-celular-mayoreo-mexico/",
+    "/micas-hidrogel-mayoreo-mexico/",
     "/refacciones-celulares-mayoreo-mexico/",
     "/guia-ia-haode-mexico/"
   ];

@@ -81,3 +81,16 @@ test("decorates static landing WhatsApp links with the campaign reference", asyn
   const text = await whatsapp.evaluate((link) => new URL(link.href).searchParams.get("text") || "");
   expect(text).toContain("Origen: google_business/mayoreo_mx/perfil");
 });
+
+test("decorates new SEO exposure page WhatsApp links with the campaign reference", async ({ page }) => {
+  await page.goto(
+    `${SERVER_URL}/pantallas-iphone-incell-mayoreo-mexico/?utm_source=Facebook&utm_medium=Organic%20Social&utm_campaign=iPhone%20INCELL&utm_content=Post%201`,
+    { waitUntil: "domcontentloaded" }
+  );
+  const whatsapp = page.getByRole("link", { name: /Cotizar por WhatsApp/i }).first();
+  await expect(whatsapp).toBeVisible();
+  const text = await whatsapp.evaluate((link) => new URL(link.href).searchParams.get("text") || "");
+  expect(text).toContain("Origen: facebook/iphone_incell/post_1");
+  expect(text).toContain("stock en México");
+  expect(text).toContain("precio por cantidad");
+});

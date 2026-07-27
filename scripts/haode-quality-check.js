@@ -4,7 +4,24 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://haode.com.mx';
 const PUBLIC_EXTENSIONS = new Set(['.html', '.js', '.css', '.xml', '.txt', '.webmanifest', '.json']);
-const PUBLIC_DIRS = new Set(['app', 'categoria', 'contacto', 'distribuidores', 'garantia', 'guia-ia-haode-mexico', 'micas', 'producto', 'productos', 'productos-ai']);
+const PUBLIC_DIRS = new Set([
+  'app',
+  'categoria',
+  'contacto',
+  'distribuidores',
+  'fundas-celular-mayoreo-mexico',
+  'garantia',
+  'guia-ia-haode-mexico',
+  'micas',
+  'micas-hidrogel-mayoreo-mexico',
+  'pantallas-iphone-incell-mayoreo-mexico',
+  'pantallas-iphone-oled-mayoreo-mexico',
+  'pantallas-samsung-incell-mayoreo-mexico',
+  'pantallas-samsung-zflip-zfold-original-mexico',
+  'producto',
+  'productos',
+  'productos-ai',
+]);
 const FORBIDDEN = ['file://', 'localhost', '127.0.0.1', '/Users/mac', 'squarespace', 'under construction'];
 const REQUIRED_SITEMAP_URLS = [
   `${SITE_URL}/`,
@@ -15,7 +32,13 @@ const REQUIRED_SITEMAP_URLS = [
   `${SITE_URL}/garantia/`,
   `${SITE_URL}/contacto/`,
   `${SITE_URL}/distribuidores/`,
+  `${SITE_URL}/fundas-celular-mayoreo-mexico/`,
   `${SITE_URL}/guia-ia-haode-mexico/`,
+  `${SITE_URL}/micas-hidrogel-mayoreo-mexico/`,
+  `${SITE_URL}/pantallas-iphone-incell-mayoreo-mexico/`,
+  `${SITE_URL}/pantallas-iphone-oled-mayoreo-mexico/`,
+  `${SITE_URL}/pantallas-samsung-incell-mayoreo-mexico/`,
+  `${SITE_URL}/pantallas-samsung-zflip-zfold-original-mexico/`,
 ];
 const REQUIRED_GEO_FAQ_PAGES = [
   'index.html',
