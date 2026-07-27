@@ -113,6 +113,12 @@ async function inspectTarget(page, target, viewport) {
       timeout: 20_000,
     });
     await page.waitForTimeout(target.source === 'app-state' ? 450 : 140);
+    if (target.commercial) {
+      await page.waitForFunction(
+        () => typeof window.gtag === 'function' && Boolean(window.HaodeCampaign),
+        { timeout: 1_200 },
+      ).catch(() => {});
+    }
   } catch (error) {
     navigationError = cleanConsoleMessage(error.message);
   }
@@ -128,6 +134,8 @@ async function inspectTarget(page, target, viewport) {
     badVisibleImages: [],
     whatsappLinks: 0,
     visibleWhatsappLinks: 0,
+    hasAnalytics: false,
+    hasCampaignAttribution: false,
   };
 
   if (!navigationError) {
@@ -169,6 +177,8 @@ async function inspectTarget(page, target, viewport) {
           .map((image) => image.currentSrc || image.src),
         whatsappLinks: whatsapp.length,
         visibleWhatsappLinks: whatsapp.filter(isInViewport).length,
+        hasAnalytics: typeof window.gtag === 'function',
+        hasCampaignAttribution: Boolean(window.HaodeCampaign),
       };
     });
   }
@@ -225,6 +235,9 @@ function classifyCheck(check) {
   if (check.commercial && check.whatsappLinks === 0) {
     add('P1', 'missing_whatsapp_path', 'No WhatsApp link in the rendered page');
   }
+  if (check.commercial && !check.hasCampaignAttribution) {
+    add('P1', 'missing_campaign_attribution', 'Campaign attribution is not active');
+  }
   if (!check.title) add('P2', 'missing_title', 'No document title');
   if (!check.description && check.source === 'sitemap') {
     add('P2', 'missing_meta_description', 'No meta description');
@@ -236,6 +249,9 @@ function classifyCheck(check) {
   }
   if (check.commercial && check.visibleWhatsappLinks === 0) {
     add('P2', 'whatsapp_not_first_screen', 'WhatsApp exists but is not visible in the first screen');
+  }
+  if (check.commercial && !check.hasAnalytics) {
+    add('P2', 'missing_analytics', 'GA4 event queue is not active');
   }
 
   return issues;
@@ -408,6 +424,8 @@ async function main() {
       hasH1: Boolean(check.h1),
       whatsappLinks: check.whatsappLinks,
       visibleWhatsappLinks: check.visibleWhatsappLinks,
+      hasAnalytics: check.hasAnalytics,
+      hasCampaignAttribution: check.hasCampaignAttribution,
       canonicalMatches: check.canonicalMatches,
     })),
     issues: report.issues,

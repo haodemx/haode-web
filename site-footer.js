@@ -1,4 +1,15 @@
 (() => {
+  const ensureScript = (src, match) => {
+    if (document.querySelector(`script[src*="${match}"]`)) return;
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
+  };
+
+  ensureScript('/analytics.js?v=20260726-growth-phase37', '/analytics.js');
+  ensureScript('/campaign-attribution.js?v=20260726-growth-phase37', '/campaign-attribution.js');
+
   if (document.querySelector('[data-site-sales-footer]')) return;
 
   document.querySelectorAll('footer').forEach((existingFooter) => existingFooter.remove());

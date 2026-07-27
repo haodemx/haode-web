@@ -1,5 +1,6 @@
 (function attachHaodeCampaign(global) {
   const STORAGE_KEY = "haode-campaign-attribution-v1";
+  const MAX_ATTRIBUTION_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 
   function normalizeToken(value, fallback = "") {
     const normalized = String(value || "")
@@ -13,10 +14,29 @@
   }
 
   function readStored() {
-    try {
-      return JSON.parse(global.sessionStorage.getItem(STORAGE_KEY) || "{}");
-    } catch {
-      return {};
+    for (const storage of [global.sessionStorage, global.localStorage]) {
+      try {
+        const stored = JSON.parse(storage.getItem(STORAGE_KEY) || "{}");
+        const capturedAt = Number(stored.capturedAt || 0);
+        const hasAttribution = ["source", "medium", "campaign", "content"]
+          .some((key) => Boolean(stored[key]));
+        if (hasAttribution && (!capturedAt || Date.now() - capturedAt <= MAX_ATTRIBUTION_AGE_MS)) {
+          return stored;
+        }
+      } catch {
+        // Storage may be unavailable in private browsing or restricted contexts.
+      }
+    }
+    return {};
+  }
+
+  function storeAttribution(attribution) {
+    for (const storage of [global.sessionStorage, global.localStorage]) {
+      try {
+        storage.setItem(STORAGE_KEY, JSON.stringify(attribution));
+      } catch {
+        // Attribution must never block browsing or checkout.
+      }
     }
   }
 
@@ -38,6 +58,12 @@
     const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content"]
       .some((key) => params.has(key));
     const defaultMedium = channel === "haode_app" ? "owned_app" : "owned_web";
+    const storedOrReferrerSource = normalizeToken(stored.source || referrerSource(), channel);
+    const inferredMedium = storedOrReferrerSource === "google"
+      ? "organic_search"
+      : ["facebook", "instagram", "tiktok"].includes(storedOrReferrerSource)
+        ? "referral"
+        : defaultMedium;
 
     const attribution = hasIncomingCampaign
       ? {
@@ -45,21 +71,19 @@
           medium: normalizeToken(params.get("utm_medium"), defaultMedium),
           campaign: normalizeToken(params.get("utm_campaign")),
           content: normalizeToken(params.get("utm_content")),
-          landingPage: global.location.pathname || "/"
+          landingPage: global.location.pathname || "/",
+          capturedAt: Date.now()
         }
       : {
-          source: normalizeToken(stored.source || referrerSource(), channel),
-          medium: normalizeToken(stored.medium, defaultMedium),
+          source: storedOrReferrerSource,
+          medium: normalizeToken(stored.medium, inferredMedium),
           campaign: normalizeToken(stored.campaign),
           content: normalizeToken(stored.content),
-          landingPage: String(stored.landingPage || global.location.pathname || "/").slice(0, 240)
+          landingPage: String(stored.landingPage || global.location.pathname || "/").slice(0, 240),
+          capturedAt: Number(stored.capturedAt || Date.now())
         };
 
-    try {
-      global.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(attribution));
-    } catch {
-      // Attribution must never block browsing or checkout.
-    }
+    storeAttribution(attribution);
     return attribution;
   }
 
@@ -74,8 +98,12 @@
       if (url.hostname !== "wa.me" && !url.hostname.endsWith(".whatsapp.com")) return link;
       const text = url.searchParams.get("text") || "";
       const campaignReference = reference(attribution);
-      if (campaignReference && !/(^|\n)Origen:/i.test(text)) {
-        url.searchParams.set("text", `${text}${text ? "\n" : ""}Origen: ${campaignReference}`);
+      if (campaignReference) {
+        const originLine = `Origen: ${campaignReference}`;
+        const decoratedText = /(^|\n)Origen:[^\n]*/i.test(text)
+          ? text.replace(/(^|\n)Origen:[^\n]*/i, `$1${originLine}`)
+          : `${text}${text ? "\n" : ""}${originLine}`;
+        url.searchParams.set("text", decoratedText);
         link.href = url.toString();
       }
     } catch {
@@ -110,8 +138,23 @@
         medium: attribution.medium,
         campaign: attribution.campaign,
         content: attribution.content,
-        landing_page: attribution.landingPage
+        landing_page: attribution.landingPage,
+        campaign_reference: reference(attribution)
       });
     }
+  }, true);
+
+  global.document.addEventListener("click", (event) => {
+    const link = event.target.closest?.('a[href^="/app/"], a[href*="haode.com.mx/app/"]');
+    if (!link || typeof global.gtag !== "function") return;
+    const attribution = capture();
+    global.gtag("event", "app_open", {
+      source: attribution.source,
+      medium: attribution.medium,
+      campaign: attribution.campaign,
+      content: attribution.content,
+      landing_page: attribution.landingPage,
+      campaign_reference: reference(attribution)
+    });
   }, true);
 })(window);

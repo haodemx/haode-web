@@ -1,6 +1,6 @@
 # HAODE 网站与 App UI 正式验收报告
 
-生成时间：2026-07-26 20:31:37 America/Mexico_City
+生成时间：2026-07-26 21:04:13 America/Mexico_City
 检查环境：`http://127.0.0.1:4175`
 
 ## 验收范围

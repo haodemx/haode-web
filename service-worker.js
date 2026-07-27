@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-26-ui-phase36";
+const CACHE_VERSION = "haode-pwa-v2026-07-26-growth-phase37";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -9,6 +9,7 @@ const APP_SHELL_URLS = [
   "/app/index.html",
   "/offline.html",
   "/style.css?v=20260725-ui-phase33",
+  "/analytics.js?v=20260726-growth-phase37",
   "/script.js",
   "/campaign-attribution.js",
   "/products.js?v=20260725-price-allowlist",
@@ -57,6 +58,7 @@ function isFreshDataRequest(url) {
     || url.pathname.endsWith("/products.generated.js")
     || url.pathname.includes("/data/marketing/daily-ad-")
     || url.pathname === "/style.css"
+    || url.pathname === "/analytics.js"
     || url.pathname === "/app/app.css"
     || url.pathname === "/detail-header.js"
     || url.pathname === "/app/app.js";
