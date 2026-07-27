@@ -1187,10 +1187,10 @@ window.HAODE_PRODUCTS_DATA = [
     "category": "iphone-incell",
     "brand": "iPhone",
     "model": "iPhone 11",
-    "name": "Pantalla para iPhone 11",
+    "name": "Pantalla iPhone 11 INCELL FHD",
     "quality": "INCELL FHD",
     "images": [
-      "assets/products/placeholder.svg"
+      "assets/products/iphone-incell/11/fhd-main.jpg"
     ],
     "videos": [],
     "prices": [
@@ -1216,7 +1216,7 @@ window.HAODE_PRODUCTS_DATA = [
       }
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 11",
-    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11",
+    "whatsappText": "Hola HAODE, quiero cotizar: Pantalla iPhone 11 INCELL FHD",
     "description": "Pantalla para iPhone 11 · INCELL FHD · Tamaño original para técnicos, tiendas y mayoreo HAODE en México. Consulta disponibilidad, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "stockStatus": "ask_stock",
     "internalId": true,

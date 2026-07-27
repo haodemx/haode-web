@@ -53,3 +53,33 @@ test("App uses retail price for one Samsung S8 instead of box price", async ({ p
   expect(consoleErrors).toEqual([]);
   await saveEvidence(page, "app-samsung-s8-retail-price.png");
 });
+
+test("iPhone 11 standard FHD uses the confirmed image on website and App", async ({ page }) => {
+  const consoleErrors = captureConsoleErrors(page);
+  await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: { products: [] } }));
+  await page.route("**/public-stock.json**", (route) => route.fulfill({ json: { products: [] } }));
+
+  await page.goto(`${BASE_URL}/producto/iphone-incell-11/`, { waitUntil: "networkidle" });
+  await expect(page.locator("[data-detail-title]")).toHaveText("Pantalla iPhone 11 INCELL FHD");
+  await expect(page.locator("[data-detail-quality]")).toHaveText("INCELL FHD");
+  await expect(page.locator("[data-detail-main-image]")).toHaveAttribute(
+    "src",
+    "/assets/products/iphone-incell/11/fhd-main.jpg"
+  );
+  await expect(page.locator("[data-product-image-status]")).toHaveCount(0);
+  expect(await page.locator("[data-detail-main-image]").evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await saveEvidence(page, "website-iphone-11-fhd-confirmed-image.png");
+
+  await page.goto(`${BASE_URL}/app/#producto/iphone-incell-11`, { waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("heading", { name: "Pantalla iPhone 11 INCELL FHD" })).toBeVisible();
+  await expect(page.locator(".spec-grid")).toContainText("iPhone 11 INCELL FHD");
+  await expect(page.locator("[data-product-gallery] img").first()).toHaveAttribute(
+    "src",
+    "/assets/products/iphone-incell/11/fhd-main.jpg"
+  );
+  await expect(page.locator("[data-product-gallery] .product-image-status")).toHaveCount(0);
+  expect(await page.locator("[data-product-gallery] img").first().evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
+
+  expect(consoleErrors).toEqual([]);
+  await saveEvidence(page, "app-iphone-11-fhd-confirmed-image.png");
+});

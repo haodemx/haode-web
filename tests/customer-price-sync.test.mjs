@@ -93,6 +93,29 @@ test('updated prices use the new main sheet and preserve approved siblings', () 
   assert.equal(byId(appProducts, 'samsung-original-note-20-ultra').precioPublico, 3000);
 });
 
+test('iPhone 11 standard FHD uses its confirmed media without changing Bolsa Protectora', () => {
+  const standardWebsite = byId(website, 'iphone-incell-11');
+  const standardApp = byId(appProducts, 'iphone-incell-11');
+  const bagWebsite = byId(website, 'iphone-incell-11-bolsa-protectora');
+  const bagApp = byId(appProducts, 'iphone-incell-11-bolsa-protectora');
+
+  assert.equal(standardWebsite.quality, 'INCELL FHD');
+  assert.equal(standardWebsite.name, 'Pantalla iPhone 11 INCELL FHD');
+  assert.equal(standardWebsite.images[0], 'assets/products/iphone-incell/11/fhd-main.jpg');
+  assert.equal(standardApp.modelo, 'iPhone 11 INCELL FHD');
+  assert.equal(standardApp.nombre, 'Pantalla iPhone 11 INCELL FHD');
+  assert.equal(standardApp.imagen, '/assets/products/iphone-incell/11/fhd-main.jpg');
+  assert.deepEqual(standardWebsite.prices.map((entry) => entry.price), [
+    '$180 MXN',
+    '$175 MXN',
+    '$170 MXN',
+    '$165 MXN',
+    '$155 MXN',
+  ]);
+  assert.equal(bagWebsite.images[0], 'assets/products/iphone-incell/11-bolsa-protectora/main.jpg');
+  assert.equal(bagApp.imagen, '/assets/products/iphone-incell/11-bolsa-protectora/main.jpg');
+});
+
 test('approved diagnostic price tiers are complete', () => {
   const product = byId(website, 'haode-pantalla-oled-diagnostica-modelo-13-pro');
   assert.deepEqual(product.prices.map((entry) => entry.price), [
