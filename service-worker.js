@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-25-ui-phase35";
+const CACHE_VERSION = "haode-pwa-v2026-07-26-ui-phase36";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -55,7 +55,11 @@ function isHtmlRequest(request) {
 function isFreshDataRequest(url) {
   return url.pathname.endsWith("/products.json")
     || url.pathname.endsWith("/products.generated.js")
-    || url.pathname.includes("/data/marketing/daily-ad-");
+    || url.pathname.includes("/data/marketing/daily-ad-")
+    || url.pathname === "/style.css"
+    || url.pathname === "/app/app.css"
+    || url.pathname === "/detail-header.js"
+    || url.pathname === "/app/app.js";
 }
 
 async function networkFirst(request) {

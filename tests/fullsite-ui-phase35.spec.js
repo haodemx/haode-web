@@ -46,6 +46,22 @@ test.describe('factory-store shared page contracts', () => {
     await expect(nav.getByRole('link', { name: 'Contacto' })).toBeVisible();
   });
 
+  test('mobile sales headers expose WhatsApp and APP before opening the menu', async ({ page }) => {
+    for (const width of [320, 390]) {
+      await page.setViewportSize({ width, height: 844 });
+      for (const route of ['/productos/', '/categoria/', '/contacto/', '/pantallas-premium-iphone-samsung-fabrica/']) {
+        await page.goto(`${baseURL}${route}`, { waitUntil: 'domcontentloaded' });
+        const header = page.locator('.reference-header');
+        await expect(header.locator('.reference-nav')).toBeHidden();
+        await expect(header.locator('.reference-nav-actions a[href*="wa.me"]')).toBeVisible();
+        await expect(header.locator('.reference-nav-actions a[href="/app/"]')).toBeVisible();
+
+        const overflow = await header.evaluate((element) => element.scrollWidth - element.clientWidth);
+        expect(overflow).toBeLessThanOrEqual(1);
+      }
+    }
+  });
+
   test('product detail uses the approved wordmark and balanced desktop columns', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(`${baseURL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });

@@ -20,6 +20,12 @@ test.describe('HAODE App contact conversion UI phase 18', () => {
     await expect(page.locator('.detail-conversion-strip')).toContainText('Precio por cantidad');
     await expect(page.locator('.detail-conversion-strip')).toContainText('WhatsApp privado');
     await expect(page.getByRole('link', { name: 'Enviar lista por WhatsApp' })).toHaveAttribute('href', /wa\.me/);
+    await expect(page.getByRole('heading', { name: 'Prepara tu cotización' })).toBeVisible();
+    await expect(page.locator('.app-contact-detail-grid')).toContainText('Modelo o SKU');
+    await expect(page.locator('.app-contact-detail-grid')).toContainText('Cantidad');
+    await expect(page.locator('.app-contact-detail-grid')).toContainText('Ciudad');
+    await expect(page.locator('.app-contact-address')).toContainText('Eje Central Lázaro Cárdenas 87');
+    await expect(page.getByRole('link', { name: 'Ver catálogo' })).toHaveAttribute('href', '#lista');
 
     const overflow = await page.evaluate(() => (
       Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)

@@ -147,7 +147,9 @@ async function expectReferenceMobileSalesHeader(page) {
   await expect(header).toBeVisible();
   await expect(logo).toBeVisible();
   await expect(nav).toBeHidden();
-  await expect(actions).toBeHidden();
+  await expect(actions).toBeVisible();
+  await expect(actions.locator('a[href*="wa.me"]')).toBeVisible();
+  await expect(actions.locator('a[href="/app/"]')).toBeVisible();
   const menu = page.locator('.reference-menu-button');
   await expect(menu).toBeVisible();
   await menu.click();
@@ -163,6 +165,7 @@ async function expectReferenceMobileSalesHeader(page) {
 
     return {
       headerHeight: Math.round(headerRect?.height || 0),
+      headerTop: Math.round(headerRect?.top || 0),
       logoLeft: Math.round(logoRect?.left || 0),
       logoTop: Math.round(logoRect?.top || 0),
       logoWidth: Math.round(logoRect?.width || 0),
@@ -174,11 +177,11 @@ async function expectReferenceMobileSalesHeader(page) {
 
   expect(layout.headerHeight).toBeLessThanOrEqual(260);
   expect(layout.logoLeft).toBeLessThanOrEqual(18);
-  expect(layout.logoTop).toBeLessThanOrEqual(12);
+  expect(layout.logoTop - layout.headerTop).toBeLessThanOrEqual(12);
   expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
   expect(layout.imageDisplay).toBe('block');
   expect(layout.navTop).toBeGreaterThan(layout.logoTop);
-  expect(layout.actionsTop).toBeGreaterThan(layout.navTop);
+  expect(layout.actionsTop).toBeLessThan(layout.navTop);
 }
 
 async function expectReferenceDesktopWordmark(page) {

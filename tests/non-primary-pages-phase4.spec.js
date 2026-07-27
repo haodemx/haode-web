@@ -39,6 +39,7 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await page.setViewportSize({ width: 360, height: 844 });
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
       await expect(page.locator(".reference-menu-button")).toBeVisible();
+      await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
       await page.locator(".reference-menu-button").click();
       await expect(page.locator(".reference-nav a").first()).toBeVisible();
       await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();

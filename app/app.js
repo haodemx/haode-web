@@ -1656,6 +1656,38 @@ function renderContact() {
         ${detailConversionStripHtml()}
         <a class="whatsapp-button" href="${largeListWhatsappUrl("App contacto")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
       </section>
+      <section class="app-contact-details" aria-labelledby="app-contact-details-title">
+        <div>
+          <span class="app-contact-kicker">Atención de fábrica</span>
+          <h2 id="app-contact-details-title">Prepara tu cotización</h2>
+          <p>Incluye estos datos para recibir una respuesta más clara por WhatsApp.</p>
+        </div>
+        <div class="app-contact-detail-grid">
+          <article>
+            <span>1</span>
+            <strong>Modelo o SKU</strong>
+            <small>Escribe la referencia exacta.</small>
+          </article>
+          <article>
+            <span>2</span>
+            <strong>Cantidad</strong>
+            <small>Indica piezas por modelo.</small>
+          </article>
+          <article>
+            <span>3</span>
+            <strong>Ciudad</strong>
+            <small>Para revisar la entrega.</small>
+          </article>
+        </div>
+        <address class="app-contact-address">
+          <strong>HAODE México · CDMX</strong>
+          <span>Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro, Cuauhtémoc, 06070 Ciudad de México.</span>
+        </address>
+        <div class="app-contact-actions">
+          <a class="outline-button" href="#lista">Ver catálogo</a>
+          <a class="text-button" href="/">Abrir sitio web</a>
+        </div>
+      </section>
     </div>
   `;
   updateNavigation();

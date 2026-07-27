@@ -13722,6 +13722,161 @@ body.distributor-conversion-page .site-header .brand-text {
   }
 }
 
+/* Phase 36: keep the two main sales paths visible before opening mobile menus. */
+@media (max-width: 760px) {
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle),
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) {
+    grid-template-columns: minmax(104px, 1fr) auto auto;
+    gap: 4px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-logo,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav-actions,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav-actions {
+    display: flex !important;
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    max-width: none;
+    justify-self: end;
+    gap: 4px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-menu-button,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-menu-button {
+    grid-column: 3;
+    grid-row: 1;
+    min-width: 52px;
+    min-height: 36px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav-actions .reference-btn,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav-actions .reference-btn,
+  body.home-page-reference .reference-nav-actions .reference-btn {
+    width: auto;
+    min-width: 42px;
+    min-height: 36px;
+    gap: 4px;
+    padding: 0 7px;
+    font-size: 0;
+    white-space: nowrap;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-actions .reference-btn-icon,
+  body.conversion-reference-page .reference-nav-actions .reference-btn-icon,
+  body.home-page-reference .reference-nav-actions .reference-btn-icon {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
+    font-size: 9px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-actions a[href*="wa.me"]::after,
+  body.conversion-reference-page .reference-nav-actions a[href*="wa.me"]::after,
+  body.home-page-reference .reference-nav-actions a[href*="wa.me"]::after {
+    content: "WhatsApp";
+    font-size: 10px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-actions a[href="/app/"]::after,
+  body.conversion-reference-page .reference-nav-actions a[href="/app/"]::after,
+  body.home-page-reference .reference-nav-actions a[href="/app/"]::after {
+    content: "APP";
+    font-size: 10px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell .reference-menu-toggle:checked ~ .reference-nav-actions,
+  body.conversion-reference-page .reference-nav-shell .reference-menu-toggle:checked ~ .reference-nav-actions {
+    display: flex !important;
+    flex-direction: row;
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    gap: 4px;
+  }
+
+  body.home-page-reference .reference-nav-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 6px;
+  }
+
+  body.home-page-reference .reference-nav-actions {
+    display: flex !important;
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    justify-self: start;
+    gap: 4px;
+  }
+
+  body.home-page-reference .reference-nav-actions a[href*="wa.me"] {
+    border-color: var(--ref-green);
+    background: var(--ref-green);
+    color: #ffffff;
+  }
+
+  body.home-page-reference .reference-menu-button {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body.home-page-reference .reference-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  body.home-page-reference .reference-menu-toggle:checked ~ .reference-nav-actions {
+    display: flex !important;
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+  }
+}
+
+@media (max-width: 340px) {
+  body.catalog-page.catalog-reference-page .reference-nav-actions a[href*="wa.me"]::after,
+  body.conversion-reference-page .reference-nav-actions a[href*="wa.me"]::after {
+    content: "WA";
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-logo,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-logo {
+    width: 96px;
+    min-width: 96px;
+    height: 32px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-logo img,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-logo img {
+    width: 96px;
+    height: 32px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav-actions .reference-btn,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-nav-actions .reference-btn {
+    min-width: 40px;
+    padding: 0 5px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-menu-button,
+  body.conversion-reference-page .reference-nav-shell:has(.reference-menu-toggle) .reference-menu-button {
+    min-width: 48px;
+  }
+}
+
 @media (min-width: 1041px) {
   body.product-detail-page.conversion-reference-page .detail-shell {
     display: grid !important;
