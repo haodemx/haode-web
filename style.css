@@ -13904,3 +13904,24 @@ body.distributor-conversion-page .site-header .brand-text {
     grid-column: 1;
   }
 }
+
+/* Phase 37: keep long model and bundle names inside product-detail layouts. */
+body.product-detail-page .detail-shell,
+body.product-detail-page .detail-top,
+body.product-detail-page .detail-top > div,
+body.product-detail-page .detail-title {
+  min-width: 0;
+  max-width: 100%;
+}
+
+body.product-detail-page .detail-title {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 760px) {
+  body.product-detail-page .detail-title {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.04;
+  }
+}

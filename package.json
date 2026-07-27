@@ -15,6 +15,7 @@
     "audit:erp-catalog": "node scripts/audit-erp-catalog-gaps.mjs",
     "audit:catalog-governance": "node scripts/audit-catalog-governance.js --write",
     "audit:media-quality": "node scripts/audit-product-media-quality.js --write",
+    "audit:ui-acceptance": "node scripts/audit-ui-acceptance.mjs",
     "marketing:exposure-pack": "node scripts/generate-exposure-pack.mjs",
     "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js",

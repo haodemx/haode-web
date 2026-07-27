@@ -87,6 +87,22 @@ test.describe('factory-store shared page contracts', () => {
     expect(layout.titleAboveColumns).toBe(true);
   });
 
+  test('long bundle names wrap inside narrow product-detail viewports', async ({ page }) => {
+    for (const width of [320, 360]) {
+      await page.setViewportSize({ width, height: 844 });
+      await page.goto(
+        `${baseURL}/producto.html?id=fundas-kit-aluminio-de-17pro-con-logo-13pro-14pro-15pro-16pro`,
+        { waitUntil: 'domcontentloaded' },
+      );
+      await expect(page.locator('[data-detail-title]')).toContainText('KIT ALUMINIO');
+
+      const overflow = await page.evaluate(
+        () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      );
+      expect(overflow).toBeLessThanOrEqual(1);
+    }
+  });
+
   test('special-product hero exposes confirmed product media in the first screen', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${baseURL}/producto/lk-030-mini-camara-retro-digital/`, {
