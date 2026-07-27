@@ -15,7 +15,7 @@ const representativeRoutes = [
   '/producto/iphone-incell-11/',
   '/productos/samsung-z-flip3/',
   '/producto/lk-030-mini-camara-retro-digital/',
-  '/producto/x200t-cortadora-inteligente-de-micas/',
+  '/producto/x200t-cortadora-micas/',
   '/ai-mouse.html',
   '/productos-ai/',
   '/contacto/',

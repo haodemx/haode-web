@@ -58,7 +58,7 @@ test.describe('HAODE product detail immediate render phase 13', () => {
     expect(overflow).toBe(0);
   });
 
-  test('static product detail without generated data keeps title and WhatsApp fallback', async ({ page }) => {
+  test('legacy product detail without generated data redirects to active category', async ({ page }) => {
     await page.route('**/api/public/catalog*', (route) => {
       route.fulfill({ contentType: 'application/json', body: '[]' });
     });
@@ -67,20 +67,9 @@ test.describe('HAODE product detail immediate render phase 13', () => {
     });
 
     await page.goto(`${baseURL}/producto/iphone-oled-11/`, { waitUntil: 'domcontentloaded' });
-    await page.waitForTimeout(400);
-
-    await expect(page.locator('[data-detail-title]')).toHaveText('Pantalla para iPhone 11');
-    await expect(page.locator('[data-product-detail]')).not.toContainText('Producto no encontrado');
-    await expect(page.locator('[data-detail-whatsapp]')).toHaveAttribute('href', /wa\.me/);
-    await expect(page.locator('[data-detail-whatsapp]')).toBeVisible();
-    await expect(page.locator('[data-detail-conversion]')).toBeVisible();
-    await expect(page.locator('[data-detail-conversion]')).toContainText('Cotiza este modelo por WhatsApp privado');
-    await expect(page.locator('[data-detail-panel-whatsapp]')).toHaveAttribute('href', /wa\.me/);
-    await expect(page.locator('[data-static-top-whatsapp]')).toBeVisible();
-    const firstWhatsappTop = await page.locator('a:visible[href*="wa.me"]').first().evaluate((link) => Math.round(link.getBoundingClientRect().top));
-    expect(firstWhatsappTop).toBeLessThan(844);
-    const fallbackImageLoaded = await page.locator('.detail-static-visual img').evaluate((img) => img.complete && img.naturalWidth > 0);
-    expect(fallbackImageLoaded).toBe(true);
+    await page.waitForURL(/\/categoria\/iphone-oled\/?$/, { timeout: 3000 });
+    await expect(page.locator('body')).not.toContainText('Producto no encontrado');
+    await expect(page.locator('h1, h2').filter({ hasText: /iPhone OLED/i }).first()).toBeVisible();
 
     const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
     expect(overflow).toBe(0);

@@ -10545,7 +10545,7 @@ body.ai-legacy-reference-page .reference-conversion-panel {
 body.micas-reference-page .new-page-hero-inner {
   background:
     linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.46) 100%),
-    url("/assets/products/micas/hd/main.png") center right 9% / min(34vw, 360px) auto no-repeat,
+    url("/assets/products/micas/hd/main-hero.webp") center right 9% / min(34vw, 360px) auto no-repeat,
     url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
 }
 
@@ -10603,7 +10603,7 @@ body.category-entry-reference-page .new-product-card .new-product-visual {
 body.pantallas-entry-page .new-page-hero-inner {
   background:
     linear-gradient(90deg, rgba(255, 250, 245, 0.98) 0%, rgba(255, 250, 245, 0.9) 55%, rgba(255, 250, 245, 0.5) 100%),
-    url("/assets/products/iphone-oled/main.jpg") right 8% center / 360px auto no-repeat,
+    url("/assets/products/iphone-oled/main-card.webp") right 8% center / 360px auto no-repeat,
     url("/assets/images/store-gallery/store-cdmx-03.jpg") center right / cover no-repeat;
 }
 

@@ -15,6 +15,30 @@ const DAILY_AD_URL = sitePath("/data/marketing/daily-ad-latest.json");
 const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
+const OPTIMIZED_CARD_IMAGE_BY_PATH = {
+  "/assets/logo/logo.png": sitePath("/assets/logo/logo-display.webp"),
+  "/assets/products/iphone-oled/main.jpg": sitePath("/assets/products/iphone-oled/main-card.webp"),
+  "/assets/img/home-hero-iphone-collage.png": sitePath("/assets/img/home-hero-iphone-collage-card.webp"),
+  "/assets/promotions/iphone-11-pro-fhd/factory-promo.png": sitePath("/assets/promotions/iphone-11-pro-fhd/factory-promo-card.webp"),
+  "/assets/promotions/iphone-14-fhd/factory-promo.png": sitePath("/assets/promotions/iphone-14-fhd/factory-promo-card.webp"),
+  "/assets/products/iphone-incell/main.jpg": sitePath("/assets/products/iphone-incell/main-card.webp"),
+  "/assets/products/samsung-incell/main.jpg": sitePath("/assets/products/samsung-incell/main-card.webp"),
+  "/assets/products/iphone-incell/xr/main.jpg": sitePath("/assets/products/iphone-incell/xr/main-card.webp"),
+  "/assets/products/iphone-oled/11promax/main.jpg": sitePath("/assets/products/iphone-oled/11promax/main-card.webp"),
+  "/assets/products/iphone-oled/12-12pro/main.jpg": sitePath("/assets/products/iphone-oled/12-12pro/main-card.webp"),
+  "/assets/products/iphone-oled/12promax/main.jpg": sitePath("/assets/products/iphone-oled/12promax/main-card.webp"),
+  "/assets/products/iphone-oled/13/main.jpg": sitePath("/assets/products/iphone-oled/13/main-card.webp"),
+  "/assets/products/iphone-oled/13pro/main.jpg": sitePath("/assets/products/iphone-oled/13pro/main-card.webp"),
+  "/assets/products/iphone-incell/11-bolsa-protectora/main.jpg": sitePath("/assets/products/iphone-incell/11-bolsa-protectora/main-card.webp"),
+  "/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg": sitePath("/assets/products/iphone-incell/xr-bolsa-protectora/main-card.webp"),
+  "/assets/products/samsung-original/z-flip5/main.png": sitePath("/assets/products/samsung-original/z-flip5/main-card.webp"),
+  "/assets/products/samsung-incell/s24/main.png": sitePath("/assets/products/samsung-incell/s24/main-thumb.webp"),
+  "/assets/products/micas/hd/main.png": sitePath("/assets/products/micas/hd/main-thumb.webp")
+};
+const OPTIMIZED_DETAIL_IMAGE_BY_PATH = {
+  ...OPTIMIZED_CARD_IMAGE_BY_PATH,
+  "/assets/products/micas/hd/main.png": sitePath("/assets/products/micas/hd/main-hero.webp")
+};
 const EXTERNAL_CATALOG_TIMEOUT_MS = 3000;
 const EXTERNAL_DIAGNOSTICS_TIMEOUT_MS = 3000;
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
@@ -862,7 +886,7 @@ function productDetailUrl(product) {
     "samsung-original-z-fold5": "/productos/samsung-z-fold5/",
     "samsung-original-z-fold6": "/productos/samsung-z-fold6/",
     "w630-ai-pro": "/ai-smart-glasses-w630.html",
-    "x200t-cortadora-micas": "/producto/x200t-cortadora-inteligente-de-micas/"
+    "x200t-cortadora-micas": "/producto/x200t-cortadora-micas/"
   };
   return detailUrls[product.id] || "";
 }
@@ -889,12 +913,36 @@ function escapeAttr(value) {
   }[char]));
 }
 
+function normalizedLocalAssetPath(value) {
+  const image = String(value || "").trim();
+  if (!image) return "";
+  if (/^https?:\/\//i.test(image)) {
+    try {
+      const url = new URL(image);
+      return url.origin === window.location.origin ? url.pathname : "";
+    } catch {
+      return "";
+    }
+  }
+  if (APP_BASE_PATH && image.startsWith(`${APP_BASE_PATH}/assets/`)) {
+    return image.slice(APP_BASE_PATH.length);
+  }
+  return image.startsWith("/assets/") ? image : "";
+}
+
+function optimizedImageSrcset(value, variant = "card") {
+  const imagePath = normalizedLocalAssetPath(value);
+  const imageMap = variant === "detail" ? OPTIMIZED_DETAIL_IMAGE_BY_PATH : OPTIMIZED_CARD_IMAGE_BY_PATH;
+  const optimized = imageMap[imagePath];
+  return optimized ? ` srcset="${escapeAttr(optimized)}"` : "";
+}
+
 function productCardHtml(product, compact = false) {
   const label = product.quality?.label || product.category;
   return `
     <article class="product-card">
       <a class="product-media" href="${appProductUrl(product)}" aria-label="Ver ${escapeAttr(product.displayName)}">
-        <img src="${product.image}" alt="${escapeAttr(product.name)}" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${product.image}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="product-body">
@@ -928,7 +976,7 @@ function homeProductRowHtml(product) {
   return `
     <article class="product-card app-home-product-card">
       <a class="app-home-product-media" href="${appProductUrl(product)}" aria-label="Ver ${escapeAttr(product.displayName)}">
-        <img src="${product.image}" alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${product.image}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="app-home-product-copy">
@@ -1183,10 +1231,11 @@ function dailyAdBannerHtml() {
 
 function promoCardHtml(product) {
   const displayPrice = product.offerDisplayPrice || formatPrice(product.publicPrice);
+  const media = product.offerImage || product.image;
   return `
     <a class="promo-card" href="${appProductUrl(product)}" aria-label="Ver promoción ${escapeAttr(product.displayName)}">
       <span class="promo-label">Promoción</span>
-      <img src="${product.offerImage || product.image}" alt="${escapeAttr(product.name)}" loading="lazy" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+      <img src="${media}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
       <strong>${product.displayName}</strong>
       <span class="promo-price">${displayPrice}</span>
     </a>
@@ -1262,7 +1311,7 @@ function premiumSelectionHtml() {
           <a class="premium-tile" href="${appProductUrl(item.product)}" aria-label="Ver ${escapeAttr(item.product.displayName)}">
             <span>${item.label}</span>
             <strong>${item.product.displayName}</strong>
-            <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+            <img src="${item.product.image}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
           </a>
         `).join("")}
       </div>
@@ -1496,7 +1545,7 @@ function productGalleryHtml(product, images) {
   return `
     <div class="gallery-stage">
       ${isX200T(product) ? '<span class="gallery-badge">Galería de producto</span>' : ""}
-      <img src="${selected}" alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.src='${product.image || PLACEHOLDER_IMAGE}'" />
+      <img src="${selected}"${optimizedImageSrcset(selected, "detail")} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${product.image || PLACEHOLDER_IMAGE}'" />
       ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
     </div>
     ${thumbStripHtml(images, state.selectedGalleryIndex)}
@@ -1508,7 +1557,7 @@ function product360Html(product, frames) {
   return `
     <div class="viewer-stage" data-viewer-stage tabindex="0" role="group" aria-label="Vista 360 de ${escapeAttr(product.name)}">
       <span class="viewer-badge">360°</span>
-      <img src="${frame}" alt="${escapeAttr(product.name)} vista 360" data-viewer-image loading="eager" decoding="async" onerror="this.src='${product.image}'" />
+      <img src="${frame}"${optimizedImageSrcset(frame, "detail")} alt="${escapeAttr(product.name)} vista 360" data-viewer-image loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${product.image}'" />
       <span class="viewer-help">Desliza para ver 360°</span>
       <div class="viewer-controls">
         <button type="button" data-viewer-prev aria-label="Vista anterior">‹</button>
@@ -1524,7 +1573,7 @@ function thumbStripHtml(images, selectedIndex, viewer = false) {
     <div class="thumb-strip" aria-label="Miniaturas del producto">
       ${images.map((image, index) => `
         <button class="${index === selectedIndex ? "is-active" : ""}" type="button" ${viewer ? `data-viewer-frame="${index}"` : `data-gallery-image="${index}"`} aria-label="Ver imagen ${index + 1}">
-          <img src="${image}" alt="" loading="lazy" decoding="async" />
+          <img src="${image}"${optimizedImageSrcset(image)} alt="" loading="lazy" decoding="async" />
         </button>
       `).join("")}
     </div>
@@ -1581,7 +1630,7 @@ function renderCartPage() {
     const subtotal = priceRule.unitPrice * item.quantity;
     return `
       <article class="cart-item">
-        <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${item.product.image}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
         <div>
           <h3>${item.product.displayName}</h3>
           <p>${item.product.model}</p>
@@ -1969,7 +2018,7 @@ function renderCart() {
     const subtotal = priceRule.unitPrice * item.quantity;
     return `
       <article class="cart-item">
-        <img src="${item.product.image}" alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${item.product.image}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
         <div>
           <h3>${item.product.displayName}</h3>
           <p>${item.product.model}</p>

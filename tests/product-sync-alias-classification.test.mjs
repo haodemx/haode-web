@@ -16,5 +16,7 @@ test('product sync distinguishes historical route aliases from missing products'
   assert.doesNotMatch(output, /WARN STATIC_PAGE_WITHOUT_WEBSITE_PRODUCT iphone-14-incell/);
   assert.doesNotMatch(output, /funda-magnetica-17-pro-max/);
   assert.doesNotMatch(output, /funda-magnetica-estilo-iphone-17-pro-max/);
-  assert.match(output, /WARN STATIC_PAGE_WITHOUT_WEBSITE_PRODUCT iphone-oled-11/);
+  assert.doesNotMatch(output, /WARN STATIC_PAGE_WITHOUT_WEBSITE_PRODUCT iphone-oled-11/);
+  assert.doesNotMatch(output, /WARN STATIC_PAGE_WITHOUT_WEBSITE_PRODUCT iphone-oled-x/);
+  assert.doesNotMatch(output, /WARN STATIC_PAGE_WITHOUT_WEBSITE_PRODUCT x200t-cortadora-inteligente-de-micas/);
 });

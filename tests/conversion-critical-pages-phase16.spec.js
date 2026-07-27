@@ -34,7 +34,7 @@ const criticalPages = [
     texts: ['Pantalla para iPhone 14', 'Cotiza este modelo por WhatsApp privado', 'Precio por cantidad'],
   },
   {
-    path: '/producto/x200t-cortadora-inteligente-de-micas/',
+    path: '/producto/x200t-cortadora-micas/',
     name: 'special product detail',
     texts: ['HAODE X200T Cortadora Inteligente de Micas', 'WhatsApp privado', 'Precio por cantidad'],
   },
