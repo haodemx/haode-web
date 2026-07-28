@@ -13,6 +13,8 @@
     "test:whatsapp-links": "node --test tests/whatsapp-link-template.test.mjs",
     "test:product-sync-aliases": "node --test tests/product-sync-alias-classification.test.mjs",
     "test:media-quality": "node --test tests/product-media-quality-audit.test.mjs",
+    "test:erp-maintenance-sync": "node --test tests/erp-maintenance-sync-package.test.mjs",
+    "maintenance:erp-sync": "node scripts/apply-erp-maintenance-package.mjs",
     "audit:erp-catalog": "node scripts/audit-erp-catalog-gaps.mjs",
     "audit:catalog-governance": "node scripts/audit-catalog-governance.js --write",
     "audit:media-quality": "node scripts/audit-product-media-quality.js --write",
@@ -34,7 +36,7 @@
     "daily-website-audit": "node scripts/daily-website-audit.js",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"
