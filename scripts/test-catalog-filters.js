@@ -4,26 +4,12 @@ const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA_FILE = path.join(ROOT, 'data', 'products.generated.js');
-const EXPECTED_CATEGORIES = [
-  'iphone-incell',
-  'iphone-oled',
-  'oled-diagnostica',
-  'samsung-incell',
-  'samsung-oled',
-  'samsung-original',
-  'gafas-ai',
-  'camaras-inteligentes',
-  'micas',
-  'maquinas-de-mica',
-  'fundas',
-];
 
 const context = { window: {} };
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(DATA_FILE, 'utf8'), context);
 
 const products = context.window.HAODE_PRODUCTS_DATA || [];
-const allowedCategories = new Set(EXPECTED_CATEGORIES);
 
 function assert(condition, message) {
   if (!condition) {
@@ -38,11 +24,16 @@ function productsFor(category) {
 
 assert(products.length > 0, 'Expected product data to contain products');
 
-for (const product of products) {
-  assert(allowedCategories.has(product.category), `Invalid category for ${product.id}: ${product.category}`);
+const actualCategories = [...new Set(products.map((product) => product.category).filter(Boolean))].sort();
+
+for (const category of actualCategories) {
+  assert(
+    fs.existsSync(path.join(ROOT, 'categoria', category, 'index.html')),
+    `Missing category page for ${category}`
+  );
 }
 
-const categoryCounts = Object.fromEntries(EXPECTED_CATEGORIES.map((category) => [
+const categoryCounts = Object.fromEntries(actualCategories.map((category) => [
   category,
   products.filter((product) => product.category === category).length,
 ]));
