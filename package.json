@@ -7,6 +7,7 @@
     "test:campaign-links": "node --test tests/campaign-links.test.mjs",
     "test:geo-seo": "node --test tests/geo-seo-contract.test.mjs",
     "test:seo-exposure-pages": "node --test tests/seo-exposure-pages.test.mjs",
+    "test:seo-exposure-readiness": "node --test tests/seo-exposure-readiness.test.mjs",
     "test:seo-technical": "node --test tests/seo-technical-contract.test.mjs",
     "test:daily-ad-catalog": "node --test tests/daily-ad-catalog.test.mjs",
     "test:catalog-gap-audit": "node --test tests/catalog-gap-audit.test.mjs",
@@ -19,6 +20,7 @@
     "audit:catalog-governance": "node scripts/audit-catalog-governance.js --write",
     "audit:media-quality": "node scripts/audit-product-media-quality.js --write",
     "audit:ui-acceptance": "node scripts/audit-ui-acceptance.mjs",
+    "audit:seo-exposure": "node scripts/audit-seo-exposure-readiness.mjs",
     "marketing:exposure-pack": "node scripts/generate-exposure-pack.mjs",
     "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js",
@@ -36,7 +38,7 @@
     "daily-website-audit": "node scripts/daily-website-audit.js",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"

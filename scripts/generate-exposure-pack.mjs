@@ -65,7 +65,7 @@ const campaignItems = [
     day: 1,
     focus: "Fundas",
     sku: "fundas_rotacion_rapida",
-    route: "#grupo/Fundas",
+    url: "https://haode.com.mx/fundas-celular-mayoreo-mexico/",
     channels: ["whatsapp", "instagram", "facebook"],
     media: "assets/images/home-categories/fundas-accesorios.jpg",
     headline: "Fundas para rotación rápida en tienda",
@@ -74,20 +74,20 @@ const campaignItems = [
   },
   {
     day: 2,
-    focus: "Pantallas iPhone",
-    sku: "pantallas_iphone_mayoreo",
-    route: "#grupo/Pantallas",
+    focus: "iPhone INCELL",
+    sku: "iphone_incell_mayoreo",
+    url: "https://haode.com.mx/pantallas-iphone-incell-mayoreo-mexico/",
     channels: ["instagram", "facebook", "tiktok", "whatsapp"],
     media: "assets/products/iphone-incell/main.jpg",
-    headline: "Pantallas iPhone para técnicos y mayoreo",
-    caption: "Pantallas iPhone HAODE para talleres, técnicos y distribuidores. Revisa el catálogo, elige modelo y cotiza por WhatsApp para confirmar disponibilidad y precio final.",
-    whatsapp: "Publica pantallas iPhone con prueba o empaque real. No pongas precio si no está confirmado en la imagen. Manda a la APP para cotizar."
+    headline: "Pantallas iPhone INCELL para técnicos y mayoreo",
+    caption: "Pantallas iPhone INCELL HAODE para talleres, técnicos y distribuidores. Revisa la página, elige modelo y cotiza por WhatsApp para confirmar disponibilidad y precio final.",
+    whatsapp: "Publica pantallas iPhone INCELL con prueba o empaque real. No pongas precio si no está confirmado en la imagen. Manda a la página dedicada para cotizar."
   },
   {
     day: 3,
     focus: "Samsung INCELL",
     sku: "samsung_incell_con_marco",
-    route: "#categoria/Pantallas%20Samsung%20INCELL",
+    url: "https://haode.com.mx/pantallas-samsung-incell-mayoreo-mexico/",
     channels: ["facebook", "whatsapp"],
     media: "assets/products/samsung-incell/main.jpg",
     headline: "Samsung INCELL con marco para reparación",
@@ -98,18 +98,18 @@ const campaignItems = [
     day: 4,
     focus: "Máquinas de Mica",
     sku: "x200t_cortadora_micas",
-    route: "#producto/x200t-cortadora-micas",
+    url: "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/",
     channels: ["google_business", "facebook", "whatsapp"],
     media: "assets/products/cut-machine/x200t/main.jpg",
-    headline: "Cortadora de micas para tiendas",
-    caption: "HAODE X200T para tiendas que venden micas y accesorios. Consulta disponibilidad, detalles del producto y condiciones por WhatsApp.",
-    whatsapp: "Este post es para clientes de ticket alto. Pide que pregunten por X200T y ciudad para seguimiento."
+    headline: "Micas, hidrogel y cortadora para tiendas",
+    caption: "HAODE atiende tiendas que venden micas, hidrogel y accesorios. Consulta disponibilidad, detalles del producto y condiciones por WhatsApp.",
+    whatsapp: "Este post es para tiendas con venta de mica e hidrogel. Pide producto, cantidad y ciudad para seguimiento."
   },
   {
     day: 5,
     focus: "Productos AI",
     sku: "productos_ai_haode",
-    route: "#grupo/AI",
+    url: "https://haode.com.mx/productos-ai/",
     channels: ["instagram", "tiktok", "whatsapp"],
     media: "assets/images/home-categories/productos-ai.jpg",
     headline: "Productos AI para vender en tienda",
@@ -131,7 +131,7 @@ const campaignItems = [
     day: 7,
     focus: "Distribuidores",
     sku: "distribuidores_haode",
-    route: "#contacto",
+    url: "https://haode.com.mx/distribuidores/",
     channels: ["google_business", "facebook", "whatsapp"],
     media: "assets/images/factory-store-storefront.png",
     headline: "HAODE para técnicos, talleres y distribuidores",
@@ -164,23 +164,23 @@ const campaignItems = [
     day: 10,
     focus: "Samsung TIPO ORIGINAL",
     sku: "samsung_tipo_original",
-    route: "#categoria/Pantallas%20Samsung%20Original",
+    url: "https://haode.com.mx/pantallas-samsung-zflip-zfold-original-mexico/",
     channels: ["facebook", "google_business", "whatsapp"],
     media: "assets/images/factory-store-hero-products.png",
-    headline: "Samsung TIPO ORIGINAL con marco",
-    caption: "Modelos Samsung TIPO ORIGINAL para técnicos y tiendas. Consulta Galaxy Ultra, Note, Z Flip y Z Fold con disponibilidad bajo confirmación.",
-    whatsapp: "Pide modelo exacto y cantidad. No afirmes compatibilidad ni stock antes de revisar la respuesta del asesor."
+    headline: "Samsung Z Flip y Z Fold TIPO ORIGINAL",
+    caption: "Modelos Samsung TIPO ORIGINAL para técnicos y tiendas. Consulta Z Flip y Z Fold con disponibilidad bajo confirmación.",
+    whatsapp: "Pide modelo exacto, versión y cantidad. No afirmes compatibilidad ni stock antes de revisar la respuesta del asesor."
   },
   {
     day: 11,
-    focus: "Celulares Samsung",
-    sku: "celulares_samsung_oferta",
-    route: "#categoria/Celulares%20Samsung",
+    focus: "iPhone OLED",
+    sku: "iphone_oled_mayoreo",
+    url: "https://haode.com.mx/pantallas-iphone-oled-mayoreo-mexico/",
     channels: ["facebook", "instagram", "whatsapp"],
-    media: "assets/images/factory-store-storefront.png",
-    headline: "Celulares Samsung publicados por HAODE",
-    caption: "Consulta celulares Samsung publicados en la lista HAODE. Precio visible; disponibilidad, estado del equipo y condiciones se confirman antes de comprar.",
-    whatsapp: "No uses imagen de un equipo sin confirmar. Publica la categoría o una foto real aprobada y pide modelo, memoria y ciudad."
+    media: "assets/products/iphone-oled/main.jpg",
+    headline: "Pantallas iPhone OLED para compra profesional",
+    caption: "Pantallas iPhone OLED HAODE para técnicos, talleres y distribuidores. Confirma modelo, calidad, cantidad y ciudad por WhatsApp antes de comprar.",
+    whatsapp: "Publica solo imagen confirmada de iPhone OLED. Pide modelo exacto, calidad, cantidad y ciudad."
   },
   {
     day: 12,
@@ -206,14 +206,14 @@ const campaignItems = [
   },
   {
     day: 14,
-    focus: "Lista grande por WhatsApp",
-    sku: "lista_grande_whatsapp",
-    route: "#lista",
+    focus: "Pantallas premium",
+    sku: "pantallas_premium_iphone_samsung",
+    url: "https://haode.com.mx/pantallas-premium-iphone-samsung-fabrica/",
     channels: ["whatsapp", "facebook", "instagram"],
-    media: "assets/images/factory-store-hero-products.png",
-    headline: "Envía tu lista completa a HAODE",
-    caption: "¿Necesitas varios modelos? Abre la App HAODE, arma tu lista y envíala por WhatsApp. Confirmamos disponibilidad, precio final y envío antes del pedido.",
-    whatsapp: "Cierra el ciclo con el enlace del carrito. Revisa qué campaña produjo más consultas calificadas antes de repetir."
+    media: "assets/img/home-hero-iphone-collage.png",
+    headline: "Pantallas premium iPhone y Samsung para talleres",
+    caption: "Pantallas premium HAODE para técnicos, talleres y compradores de volumen. Envía modelo, calidad, cantidad y ciudad para confirmar disponibilidad y precio final.",
+    whatsapp: "Cierra el ciclo con la página premium. Revisa qué campaña produjo más consultas calificadas antes de repetir."
   }
 ];
 

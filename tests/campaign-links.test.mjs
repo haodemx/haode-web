@@ -80,8 +80,14 @@ test("builds a 14-day organic launch pack with tracked App and SEO landing links
   }
 
   const wholesale = pack.items.find((item) => item.focus === "Mayoreo México");
-  const phones = pack.items.find((item) => item.focus === "Celulares Samsung");
+  const fundas = pack.items.find((item) => item.focus === "Fundas");
+  const iphoneIncell = pack.items.find((item) => item.focus === "iPhone INCELL");
+  const samsungIncell = pack.items.find((item) => item.focus === "Samsung INCELL");
+  const iphoneOled = pack.items.find((item) => item.focus === "iPhone OLED");
   assert.equal(new URL(wholesale.tracking_links.google_business).pathname, "/refacciones-celulares-mayoreo-mexico/");
   assert.equal(new URL(wholesale.tracking_links.google_business).searchParams.get("utm_source"), "google_business");
-  assert.equal(new URL(phones.tracking_links.facebook).hash, "#categoria/Celulares%20Samsung");
+  assert.equal(new URL(fundas.tracking_links.facebook).pathname, "/fundas-celular-mayoreo-mexico/");
+  assert.equal(new URL(iphoneIncell.tracking_links.instagram).pathname, "/pantallas-iphone-incell-mayoreo-mexico/");
+  assert.equal(new URL(samsungIncell.tracking_links.facebook).pathname, "/pantallas-samsung-incell-mayoreo-mexico/");
+  assert.equal(new URL(iphoneOled.tracking_links.instagram).pathname, "/pantallas-iphone-oled-mayoreo-mexico/");
 });
