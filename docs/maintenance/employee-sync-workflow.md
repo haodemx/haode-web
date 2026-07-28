@@ -19,6 +19,24 @@ npm run maintenance:erp-sync -- --file=/path/to/sync-package.json --apply
 6. 检查生成的报告：`docs/reports/erp-maintenance-sync-report.md`。
 7. 验证通过后提交、推送，让 GitHub Pages 发布。
 
+## 自动发布方式
+
+如果员工有 GitHub 权限，也可以把 ERP 下载的同步包放到：
+
+```text
+data/maintenance/inbox/
+```
+
+推送后 GitHub 会自动执行 `ERP Maintenance Sync`：
+
+1. 校验同步包安全边界。
+2. 写入维护队列和引流记录。
+3. 运行 HAODE 检查。
+4. 自动提交生成结果。
+5. 触发 GitHub Pages 发布。
+
+如果没有 GitHub 权限，仍然使用上面的本地命令方式。
+
 ## 自动化能做什么
 
 - 接收 ERP 同步包。
