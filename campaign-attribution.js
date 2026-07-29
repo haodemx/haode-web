@@ -1,6 +1,7 @@
 (function attachHaodeCampaign(global) {
   const STORAGE_KEY = "haode-campaign-attribution-v1";
   const MAX_ATTRIBUTION_AGE_MS = 30 * 24 * 60 * 60 * 1000;
+  const contactTrackedEvents = new WeakSet();
 
   function normalizeToken(value, fallback = "") {
     const normalized = String(value || "")
@@ -119,7 +120,27 @@
     });
   }
 
-  global.HaodeCampaign = Object.freeze({ capture, normalizeToken, reference, decorateWhatsAppLink });
+  function contactArea(link) {
+    if (link.dataset.contactArea) return link.dataset.contactArea;
+    if (link.hasAttribute("data-daily-ad-cta")) return "daily_ad_banner";
+    if (link.hasAttribute("data-whatsapp-link")) return "cart";
+    if (link.hasAttribute("data-product-whatsapp") || link.hasAttribute("data-detail-whatsapp")) return "product";
+    if (link.hasAttribute("data-detail-header-whatsapp")) return "header";
+    if (link.classList.contains("floating-cta")) return "floating_cta";
+    return "site_link";
+  }
+
+  function wasContactTracked(event) {
+    return Boolean(event && contactTrackedEvents.has(event));
+  }
+
+  global.HaodeCampaign = Object.freeze({
+    capture,
+    normalizeToken,
+    reference,
+    decorateWhatsAppLink,
+    wasContactTracked
+  });
 
   if (global.document.readyState === "loading") {
     global.document.addEventListener("DOMContentLoaded", decorateCurrentPage);
@@ -133,14 +154,24 @@
     const attribution = capture();
     decorateWhatsAppLink(link, attribution);
     if (typeof global.gtag === "function") {
-      global.gtag("event", "whatsapp_click", {
+      const sharedParameters = {
         source: attribution.source,
         medium: attribution.medium,
         campaign: attribution.campaign,
         content: attribution.content,
         landing_page: attribution.landingPage,
-        campaign_reference: reference(attribution)
+        page_path: global.location.pathname || "/",
+        campaign_reference: reference(attribution),
+        contact_area: contactArea(link)
+      };
+      global.gtag("event", "whatsapp_click", {
+        ...sharedParameters
       });
+      global.gtag("event", "contact", {
+        method: "whatsapp",
+        ...sharedParameters
+      });
+      contactTrackedEvents.add(event);
     }
   }, true);
 

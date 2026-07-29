@@ -119,6 +119,7 @@ function attachWhatsAppTracking() {
     if (!(event.target instanceof Element)) return;
     const whatsappLink = event.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
     if (!whatsappLink) return;
+    if (window.HaodeCampaign?.wasContactTracked?.(event)) return;
 
     trackWhatsAppContact({
       contact_area: whatsappLink.hasAttribute('data-daily-ad-cta') ? 'daily_ad_banner' : 'site_link',

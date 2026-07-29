@@ -1,4 +1,15 @@
 (() => {
+  const ensureScript = (src, match) => {
+    if (document.querySelector(`script[src*="${match}"]`)) return;
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
+  };
+
+  ensureScript('/analytics.js?v=20260729-whatsapp-conversion', '/analytics.js');
+  ensureScript('/campaign-attribution.js?v=20260729-whatsapp-conversion', '/campaign-attribution.js');
+
   if (document.body.classList.contains('product-detail-page')) {
     document.body.classList.add('conversion-reference-page');
   }

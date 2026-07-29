@@ -2162,7 +2162,9 @@ async function handleDocumentClick(event) {
   }
   if (productWhatsappLink) {
     const product = products.find((item) => item.id === productWhatsappLink.dataset.productWhatsapp);
-    if (product) trackGrowthEvent("contact", { method: "whatsapp", item_id: product.sku, source: state.attribution.source });
+    if (product && !window.HaodeCampaign?.wasContactTracked?.(event)) {
+      trackGrowthEvent("contact", { method: "whatsapp", item_id: product.sku, source: state.attribution.source });
+    }
   }
   if (closeCartButton || event.target === cartDrawerEl) {
     closeCart();

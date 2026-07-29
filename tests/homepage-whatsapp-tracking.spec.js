@@ -58,3 +58,31 @@ test("product catalog keeps product WhatsApp tracking as the single contact sour
     source: "facebook",
   }));
 });
+
+test("shared detail header tracks a warranty WhatsApp click without manual page code", async ({ page }) => {
+  await page.goto(`${BASE_URL}/garantia/?utm_source=instagram&utm_campaign=garantia`, { waitUntil: "domcontentloaded" });
+  await page.waitForFunction(() => Boolean(window.HaodeCampaign));
+
+  await page.evaluate(() => {
+    window.__haodeTrackedEvents = [];
+    window.gtag = (...args) => window.__haodeTrackedEvents.push(args);
+    document.addEventListener("click", (event) => {
+      if (event.target.closest('a[href*="wa.me"]')) event.preventDefault();
+    }, true);
+  });
+
+  await page.locator('a[href*="wa.me"]').first().click();
+
+  await expect.poll(() => page.evaluate(() => (
+    window.__haodeTrackedEvents.filter((event) => event[0] === "event" && event[1] === "contact").length
+  ))).toBe(1);
+  const event = await page.evaluate(() => (
+    window.__haodeTrackedEvents.find((entry) => entry[0] === "event" && entry[1] === "contact")
+  ));
+  expect(event[2]).toEqual(expect.objectContaining({
+    method: "whatsapp",
+    source: "instagram",
+    campaign: "garantia",
+    page_path: "/garantia/",
+  }));
+});

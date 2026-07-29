@@ -98,3 +98,24 @@ test('static and dynamic WhatsApp buttons use direct quote labels', () => {
 
   assert.equal([...weakAnchors, ...weakSourceStrings, ...joinedIconLabels].length, 0, [...weakAnchors, ...weakSourceStrings, ...joinedIconLabels].join('\n'));
 });
+
+test('every static WhatsApp page loads the shared conversion tracker', () => {
+  const missingTracker = [];
+  const whatsappPages = collectFiles()
+    .filter((file) => file.endsWith('.html'))
+    .filter((file) => /(?:wa\.me|whatsapp\.com)/i.test(fs.readFileSync(file, 'utf8')));
+  const trackerPattern = /(?:campaign-attribution\.js|site-footer\.js|detail-header\.js)/;
+
+  for (const file of whatsappPages) {
+    const content = fs.readFileSync(file, 'utf8');
+    if (!trackerPattern.test(content)) missingTracker.push(path.relative(ROOT, file));
+  }
+
+  const detailHeader = fs.readFileSync(path.join(ROOT, 'detail-header.js'), 'utf8');
+  const campaignTracker = fs.readFileSync(path.join(ROOT, 'campaign-attribution.js'), 'utf8');
+  assert.equal(missingTracker.length, 0, missingTracker.join('\n'));
+  assert.match(detailHeader, /analytics\.js/);
+  assert.match(detailHeader, /campaign-attribution\.js/);
+  assert.match(campaignTracker, /gtag\("event", "contact"/);
+  assert.ok(whatsappPages.length > 250, `Expected broad WhatsApp page coverage, found ${whatsappPages.length}`);
+});

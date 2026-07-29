@@ -2826,6 +2826,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', (event) => {
   const whatsappLink = event.target.closest('a[href*="wa.me"]');
   if (!whatsappLink) return;
+  if (window.HaodeCampaign?.wasContactTracked?.(event)) return;
   trackWebsiteEvent('contact', { method: 'whatsapp', source: trafficSource() });
 });
 
