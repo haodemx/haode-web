@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-const SERVER_URL = (process.env.BASE_URL || "https://haode.com.mx").replace(/\/app\/?$/, "").replace(/\/$/, "");
+const SERVER_URL = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/app\/?$/, "").replace(/\/$/, "");
 const APP_URL = `${SERVER_URL}/app/`;
 
 test.describe("HAODE Tienda app QA", () => {

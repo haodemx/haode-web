@@ -58,7 +58,41 @@ function buildWhatsAppMessage(data) {
 
 function openWhatsApp(message) {
   const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+  trackWhatsAppContact({ contact_area: 'quote_form' });
   window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+function trafficSource() {
+  if (window.HaodeCampaign) return window.HaodeCampaign.capture({ channel: 'haode_web' }).source;
+
+  const params = new URLSearchParams(window.location.search);
+  let storedSource = '';
+  try {
+    storedSource = sessionStorage.getItem('haode_traffic_source') || '';
+  } catch {
+    storedSource = '';
+  }
+
+  const source = params.get('utm_source') || storedSource || 'website';
+  try {
+    sessionStorage.setItem('haode_traffic_source', source);
+  } catch {
+    // Analytics attribution must never block the contact flow.
+  }
+  return source;
+}
+
+function trackWebsiteEvent(eventName, params = {}) {
+  if (typeof window.gtag === 'function') window.gtag('event', eventName, params);
+}
+
+function trackWhatsAppContact(params = {}) {
+  trackWebsiteEvent('contact', {
+    method: 'whatsapp',
+    source: trafficSource(),
+    page_path: window.location.pathname || '/',
+    ...params,
+  });
 }
 
 function attachQuoteForm(form) {
@@ -77,6 +111,21 @@ function attachQuoteForm(form) {
 }
 
 document.querySelectorAll('[data-quote-form]').forEach(attachQuoteForm);
+
+function attachWhatsAppTracking() {
+  if (document.querySelector('script[src*="products.js"]')) return;
+
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element)) return;
+    const whatsappLink = event.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+    if (!whatsappLink) return;
+
+    trackWhatsAppContact({
+      contact_area: whatsappLink.hasAttribute('data-daily-ad-cta') ? 'daily_ad_banner' : 'site_link',
+      link_text: displayText(whatsappLink.textContent).slice(0, 80),
+    });
+  });
+}
 
 function attachHoverVideos() {
   document.querySelectorAll('[data-hover-video-card]').forEach((card) => {
@@ -103,6 +152,7 @@ function attachHoverVideos() {
   });
 }
 
+document.addEventListener('DOMContentLoaded', attachWhatsAppTracking);
 document.addEventListener('DOMContentLoaded', attachHoverVideos);
 document.addEventListener('DOMContentLoaded', loadDailyAdBanner);
 })();
