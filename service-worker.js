@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-26-growth-phase37";
+const CACHE_VERSION = "haode-pwa-v2026-07-30-logo-refresh";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -15,12 +15,13 @@ const APP_SHELL_URLS = [
   "/products.js?v=20260725-price-allowlist",
   "/detail-header.js?v=20260725-ui-phase33",
   "/site-footer.js?v=20260725-ui-phase33",
-  "/app/app.css?v=20260725-ui-phase33",
-  "/app/app.js?v=20260725-price-allowlist",
+  "/app/app.css?v=20260730-logo-refresh",
+  "/app/app.js?v=20260730-logo-refresh",
   "/app/products.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",
   "/assets/logo/logo.png",
+  "/assets/logo/logo-display.webp",
   "/assets/images/factory-store-wordmark.png",
   "/assets/logo/favicon.png",
   "/assets/icons/haode-icon-192.png",

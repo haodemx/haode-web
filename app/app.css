@@ -2362,11 +2362,18 @@ body {
 }
 
 .brand img {
-  display: none;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  object-fit: cover;
 }
 
 .is-webview .brand img {
-  display: none;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
 }
 
 .brand span {
@@ -2785,7 +2792,7 @@ body {
   }
 
   .brand img {
-    width: 154px;
+    width: 48px;
     height: 48px;
   }
 

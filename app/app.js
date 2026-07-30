@@ -16,7 +16,7 @@ const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
 const OPTIMIZED_CARD_IMAGE_BY_PATH = {
-  "/assets/logo/logo.png": sitePath("/assets/logo/logo-display.webp"),
+  "/assets/logo/logo.png": sitePath("/assets/icons/haode-icon-512.png"),
   "/assets/products/iphone-oled/main.jpg": sitePath("/assets/products/iphone-oled/main-card.webp"),
   "/assets/img/home-hero-iphone-collage.png": sitePath("/assets/img/home-hero-iphone-collage-card.webp"),
   "/assets/promotions/iphone-11-pro-fhd/factory-promo.png": sitePath("/assets/promotions/iphone-11-pro-fhd/factory-promo-card.webp"),
