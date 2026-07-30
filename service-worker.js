@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-30-logo-refresh";
+const CACHE_VERSION = "haode-pwa-v2026-07-30-logo-light";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -24,6 +24,7 @@ const APP_SHELL_URLS = [
   "/assets/logo/logo-display.webp",
   "/assets/images/factory-store-wordmark.png",
   "/assets/logo/favicon.png",
+  "/assets/icons/favicon.png?v=20260730-logo-light",
   "/assets/icons/haode-icon-192.png",
   "/assets/icons/haode-icon-512.png",
   "/assets/icons/apple-touch-icon.png",
