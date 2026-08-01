@@ -29,6 +29,7 @@ const STATIC_SEO_URLS = [
   '/contacto/',
   '/privacidad/',
   '/eliminacion-de-datos/',
+  '/terminos/',
   '/distribuidores/',
   '/categoria/',
   '/categoria/pantallas/',

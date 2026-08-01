@@ -32,6 +32,7 @@ test('sitemap keeps canonical static SEO pages and excludes redirect aliases', (
     '/contacto/',
     '/privacidad/',
     '/eliminacion-de-datos/',
+    '/terminos/',
     '/distribuidores/',
     '/categoria/camaras-inteligentes/',
     '/categoria/gafas-inteligentes-ai/',
@@ -73,6 +74,7 @@ test('sitemap generator preserves the same static SEO routes', () => {
     '/contacto/',
     '/privacidad/',
     '/eliminacion-de-datos/',
+    '/terminos/',
     '/distribuidores/',
     '/categoria/camaras-inteligentes/',
     '/categoria/gafas-inteligentes-ai/',
@@ -100,6 +102,7 @@ test('sitemap generator preserves the same static SEO routes', () => {
 test('privacy and data deletion pages expose canonical public instructions', () => {
   const privacy = read('privacidad/index.html');
   const deletion = read('eliminacion-de-datos/index.html');
+  const terms = read('terminos/index.html');
 
   assert.match(privacy, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/privacidad\/" \/>/);
   assert.match(privacy, /ventas@haode\.com\.mx/);
@@ -107,6 +110,9 @@ test('privacy and data deletion pages expose canonical public instructions', () 
   assert.match(deletion, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/eliminacion-de-datos\/" \/>/);
   assert.match(deletion, /No envíes contraseñas, códigos de verificación, tokens ni información bancaria\./);
   assert.match(deletion, /Integración en modo de verificación/);
+  assert.match(terms, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/terminos\/" \/>/);
+  assert.match(terms, /No se permiten envíos masivos no solicitados/);
+  assert.match(terms, /ventas@haode\.com\.mx/);
 });
 
 test('redirect aliases are noindex and point to canonical pages', () => {

@@ -13,6 +13,11 @@ const pages = [
     heading: "Eliminación de datos",
     canonical: "https://haode.com.mx/eliminacion-de-datos/",
   },
+  {
+    path: "/terminos/",
+    heading: "Términos de uso",
+    canonical: "https://haode.com.mx/terminos/",
+  },
 ];
 
 for (const compliancePage of pages) {
