@@ -27,6 +27,8 @@ const STATIC_SEO_URLS = [
   '/micas.html',
   '/garantia/',
   '/contacto/',
+  '/privacidad/',
+  '/eliminacion-de-datos/',
   '/distribuidores/',
   '/categoria/',
   '/categoria/pantallas/',
