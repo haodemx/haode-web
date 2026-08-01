@@ -1,15 +1,30 @@
 (function () {
   const WHATSAPP_PHONE = '525645866014';
 
+  function escapeHtml(value) {
+    return String(value || '').replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;',
+    }[char]));
+  }
+
   function toAssetPath(imagePath) {
-    if (!imagePath) return '/assets/products/placeholder.svg';
-    if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('//')) {
-      return imagePath;
+    const image = String(imagePath || '').trim();
+    if (!image || /[\u0000-\u001f\u007f"'<>`\\]/.test(image)) return '/assets/products/placeholder.svg';
+    if (image.startsWith('/') && !image.startsWith('//')) return image;
+    if (!/^[a-z][a-z0-9+.-]*:/i.test(image)) return `/${image.replace(/^\/+/, '')}`;
+    try {
+      const url = new URL(image);
+      if (url.protocol === 'https:' && (url.origin === window.location.origin || url.origin === 'https://erp.haode.com.mx')) {
+        return url.href;
+      }
+    } catch {
+      // Invalid or untrusted product media uses the approved placeholder.
     }
-    if (imagePath.startsWith('/')) {
-      return imagePath;
-    }
-    return `/${imagePath.replace(/^\/+/, '')}`;
+    return '/assets/products/placeholder.svg';
   }
 
   function buildWhatsappUrl(item) {
@@ -34,12 +49,12 @@
 
   function priceRowsFor(item) {
     if (item.priceText) {
-      return `<p class="new-arrival-note">${item.priceText}</p>`;
+      return `<p class="new-arrival-note">${escapeHtml(item.priceText)}</p>`;
     }
     if (!Array.isArray(item.prices) || !item.prices.length) return '';
     const rows = item.prices.map((price) => {
       const quantity = price.quantity || 'Precio';
-      return `<span><b>${quantity}</b><strong>${formatPrice(price.price)}</strong></span>`;
+      return `<span><b>${escapeHtml(quantity)}</b><strong>${escapeHtml(formatPrice(price.price))}</strong></span>`;
     }).join('');
     return `<div class="new-arrival-price-grid" aria-label="Precios">${rows}</div>`;
   }
@@ -79,11 +94,11 @@
         <span class="category-whatsapp-mark" aria-hidden="true">W</span>
         <div>
           <p>Compra por cantidad</p>
-          <h2>Envía tu lista de ${label} por WhatsApp</h2>
+          <h2>Envía tu lista de ${escapeHtml(label)} por WhatsApp</h2>
           <span>${count} modelos visibles. Confirmamos disponibilidad, precio final y envío antes de preparar el pedido.</span>
         </div>
       </div>
-      <a class="btn btn-primary category-whatsapp-cta" href="${buildWhatsappUrl({ name: `lista de ${label}` })}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+      <a class="btn btn-primary category-whatsapp-cta" href="${escapeHtml(buildWhatsappUrl({ name: `lista de ${label}` }))}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
     `;
     root.insertAdjacentElement('afterend', panel);
   }
@@ -95,15 +110,15 @@
     const image = item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
     const priceRows = priceRowsFor(item);
 
-    const detailHref = `/producto/${item.id}/`;
+    const detailHref = `/producto/${encodeURIComponent(String(item.id || ''))}/`;
 
     article.innerHTML = `
       <div class="new-product-visual">
-        <img src="${toAssetPath(image)}" alt="${item.name || item.model || 'Producto'}" loading="lazy" decoding="async" />
-        <span class="new-arrival-tag">SKU ${item.sku || item.id || 'HAODE'}</span>
+        <img src="${escapeHtml(toAssetPath(image))}" alt="${escapeHtml(item.name || item.model || 'Producto')}" loading="lazy" decoding="async" />
+        <span class="new-arrival-tag">SKU ${escapeHtml(item.sku || item.id || 'HAODE')}</span>
       </div>
       <div class="new-product-content">
-        <h3>${item.name || item.model || 'Producto HAODE'}</h3>
+        <h3>${escapeHtml(item.name || item.model || 'Producto HAODE')}</h3>
         <div class="new-product-badges" aria-label="Ventajas HAODE">
           <span>Stock en México</span>
           <span>Precio por cantidad</span>
@@ -113,12 +128,12 @@
           <strong>Lista grande por WhatsApp</strong>
           <span>Confirma stock, garantía local y precio final antes del pedido.</span>
         </div>
-        <p>${item.description || 'Producto HAODE México con atención por WhatsApp para técnicos, talleres y distribuidores. Confirma disponibilidad actual, modelo y cantidad antes de comprar.'}</p>
-        <p class="new-arrival-note">${item.quality || ''}</p>
+        <p>${escapeHtml(item.description || 'Producto HAODE México con atención por WhatsApp para técnicos, talleres y distribuidores. Confirma disponibilidad actual, modelo y cantidad antes de comprar.')}</p>
+        <p class="new-arrival-note">${escapeHtml(item.quality || '')}</p>
         ${priceRows}
         <div class="new-product-actions">
-          <a class="btn btn-secondary" href="${detailHref}">Ver detalles</a>
-          <a class="btn btn-primary category-whatsapp-primary" href="${buildWhatsappUrl(item)}" target="_blank" rel="noopener noreferrer">Cotizar modelo por WhatsApp</a>
+          <a class="btn btn-secondary" href="${escapeHtml(detailHref)}">Ver detalles</a>
+          <a class="btn btn-primary category-whatsapp-primary" href="${escapeHtml(buildWhatsappUrl(item))}" target="_blank" rel="noopener noreferrer">Cotizar modelo por WhatsApp</a>
         </div>
       </div>
     `;
@@ -185,7 +200,7 @@
       </label>
       <div>
         <strong data-category-search-count>${products.length} modelos</strong>
-        <span>${categoryLabel(category)}</span>
+        <span>${escapeHtml(categoryLabel(category))}</span>
       </div>
     `;
 

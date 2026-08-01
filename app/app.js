@@ -589,7 +589,7 @@ function erpCatalogProduct(row, order = 9999) {
     precioPublico: row.public_price_mxn ?? retailTier?.unit_price_mxn ?? 0,
     precioMayoreo: wholesaleTier?.unit_price_mxn ?? 0,
     priceTiers: row.public_price_tiers,
-    imagen: row.image_url || PLACEHOLDER_IMAGE,
+    imagen: safeImageSrc(row.image_url, PLACEHOLDER_IMAGE),
     stock: row.stock_status,
     sales_available: row.sales_available,
     activo: true,
@@ -662,7 +662,7 @@ function mergeErpCatalog(localProducts, catalogRows) {
       wholesalePrice: hasAuthoritativeLocalPrices ? current.wholesalePrice : incoming.wholesalePrice,
       priceTiers: mergedTiers,
       priceSource: current.priceSource,
-      image: row.image_url || current.image,
+      image: safeImageSrc(row.image_url, current.image),
       stock: incoming.stock,
       salesAvailable: incoming.salesAvailable,
       erpStockStatus: row.stock_status || "",
@@ -913,6 +913,26 @@ function escapeAttr(value) {
   }[char]));
 }
 
+function escapeHtml(value) {
+  return escapeAttr(value);
+}
+
+function safeImageSrc(value, fallback = PLACEHOLDER_IMAGE) {
+  const image = String(value || "").trim();
+  if (!image || /[\u0000-\u001f\u007f"'<>`\\]/.test(image)) return fallback;
+  if (image.startsWith("/") && !image.startsWith("//")) return image;
+  try {
+    const url = new URL(image);
+    const erpOrigin = new URL(ERP_PUBLIC_CATALOG_URL).origin;
+    if (url.protocol === "https:" && (url.origin === window.location.origin || url.origin === erpOrigin)) {
+      return url.href;
+    }
+  } catch {
+    // Invalid or untrusted catalog image URLs fall back to an approved local asset.
+  }
+  return fallback;
+}
+
 function normalizedLocalAssetPath(value) {
   const image = String(value || "").trim();
   if (!image) return "";
@@ -939,16 +959,18 @@ function optimizedImageSrcset(value, variant = "card") {
 
 function productCardHtml(product, compact = false) {
   const label = product.quality?.label || product.category;
+  const productUrl = escapeAttr(appProductUrl(product));
+  const productId = escapeAttr(product.id);
   return `
     <article class="product-card">
-      <a class="product-media" href="${appProductUrl(product)}" aria-label="Ver ${escapeAttr(product.displayName)}">
-        <img src="${product.image}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
+      <a class="product-media" href="${productUrl}" aria-label="Ver ${escapeAttr(product.displayName)}">
+        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="product-body">
-        <span class="product-kicker">${label}</span>
-        <h3>${product.displayName}</h3>
-        <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
+        <span class="product-kicker">${escapeHtml(label)}</span>
+        <h3>${escapeHtml(product.displayName)}</h3>
+        <span class="stock-badge stock-${stockClassName(product.stock)}">${escapeHtml(product.erpStockLabel || product.stock)}</span>
         <div class="app-card-badges" aria-label="Ventajas de compra">
           <span>Stock México</span>
           <span>Precio por cantidad</span>
@@ -958,13 +980,13 @@ function productCardHtml(product, compact = false) {
           <strong>Lista grande por WhatsApp</strong>
           <span>Confirma stock, garantía local y precio final antes de preparar el pedido.</span>
         </div>
-        <p class="model">Modelo: ${product.model}</p>
+        <p class="model">Modelo: ${escapeHtml(product.model)}</p>
         ${cardPriceHtml(product)}
         <div class="product-actions">
-          <a class="text-button" href="${appProductUrl(product)}">Detalles</a>
+          <a class="text-button" href="${productUrl}">Detalles</a>
           ${product.salesAvailable
-            ? `<button class="add-button" type="button" data-add-product="${product.id}">Agregar</button>`
-            : `<a class="add-button product-consult-button" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" target="_blank" rel="noopener noreferrer">Consultar</a>`}
+            ? `<button class="add-button" type="button" data-add-product="${productId}">Agregar</button>`
+            : `<a class="add-button product-consult-button" href="${escapeAttr(singleProductWhatsappUrl(product))}" data-product-whatsapp="${productId}" target="_blank" rel="noopener noreferrer">Consultar</a>`}
         </div>
       </div>
     </article>
@@ -973,19 +995,20 @@ function productCardHtml(product, compact = false) {
 
 function homeProductRowHtml(product) {
   const label = product.quality?.label || product.category;
+  const productId = escapeAttr(product.id);
   return `
     <article class="product-card app-home-product-card">
-      <a class="app-home-product-media" href="${appProductUrl(product)}" aria-label="Ver ${escapeAttr(product.displayName)}">
-        <img src="${product.image}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
+      <a class="app-home-product-media" href="${escapeAttr(appProductUrl(product))}" aria-label="Ver ${escapeAttr(product.displayName)}">
+        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="app-home-product-copy">
-        <span class="product-kicker">${label}</span>
-        <h3>${product.displayName}</h3>
+        <span class="product-kicker">${escapeHtml(label)}</span>
+        <h3>${escapeHtml(product.displayName)}</h3>
         <p>${product.officialSkuPending ? "Referencia" : "SKU"}: ${escapeAttr(product.sku || product.reference || product.model || product.id)}</p>
-        <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
+        <span class="stock-badge stock-${stockClassName(product.stock)}">${escapeHtml(product.erpStockLabel || product.stock)}</span>
       </div>
-      <button class="app-row-add" type="button" data-add-product="${product.id}" aria-label="Agregar" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "+" : "?"}</button>
+      <button class="app-row-add" type="button" data-add-product="${productId}" aria-label="Agregar" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "+" : "?"}</button>
     </article>
   `;
 }
@@ -1074,14 +1097,14 @@ function largeListWhatsappMessage(source = "App") {
 function appBulkPanelHtml({ label = "Pedido por cantidad", title, copy, ctaText = "Enviar lista por WhatsApp", message, openCart = false }) {
   const whatsappMessage = message || largeListWhatsappMessage("App panel");
   const ctaHtml = openCart
-    ? `<button class="whatsapp-button app-bulk-cta" type="button" data-open-cart>${ctaText}</button>`
-    : `<a class="whatsapp-button app-bulk-cta" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}" target="_blank" rel="noopener noreferrer">${ctaText}</a>`;
+    ? `<button class="whatsapp-button app-bulk-cta" type="button" data-open-cart>${escapeHtml(ctaText)}</button>`
+    : `<a class="whatsapp-button app-bulk-cta" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}" target="_blank" rel="noopener noreferrer">${escapeHtml(ctaText)}</a>`;
   return `
     <section class="app-bulk-panel" aria-label="Compra por WhatsApp">
       <div class="app-bulk-copy">
-        <span>${label}</span>
-        <h2>${title}</h2>
-        <p>${copy}</p>
+        <span>${escapeHtml(label)}</span>
+        <h2>${escapeHtml(title)}</h2>
+        <p>${escapeHtml(copy)}</p>
       </div>
       ${ctaHtml}
     </section>
@@ -1233,11 +1256,11 @@ function promoCardHtml(product) {
   const displayPrice = product.offerDisplayPrice || formatPrice(product.publicPrice);
   const media = product.offerImage || product.image;
   return `
-    <a class="promo-card" href="${appProductUrl(product)}" aria-label="Ver promoción ${escapeAttr(product.displayName)}">
+    <a class="promo-card" href="${escapeAttr(appProductUrl(product))}" aria-label="Ver promoción ${escapeAttr(product.displayName)}">
       <span class="promo-label">Promoción</span>
-      <img src="${media}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
-      <strong>${product.displayName}</strong>
-      <span class="promo-price">${displayPrice}</span>
+      <img src="${escapeAttr(safeImageSrc(media))}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+      <strong>${escapeHtml(product.displayName)}</strong>
+      <span class="promo-price">${escapeHtml(displayPrice)}</span>
     </a>
   `;
 }
@@ -1308,10 +1331,10 @@ function premiumSelectionHtml() {
       </div>
       <div class="premium-showcase-grid">
         ${premiumItems.slice(0, 3).map((item) => `
-          <a class="premium-tile" href="${appProductUrl(item.product)}" aria-label="Ver ${escapeAttr(item.product.displayName)}">
-            <span>${item.label}</span>
-            <strong>${item.product.displayName}</strong>
-            <img src="${item.product.image}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
+          <a class="premium-tile" href="${escapeAttr(appProductUrl(item.product))}" aria-label="Ver ${escapeAttr(item.product.displayName)}">
+            <span>${escapeHtml(item.label)}</span>
+            <strong>${escapeHtml(item.product.displayName)}</strong>
+            <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
           </a>
         `).join("")}
       </div>
@@ -1340,7 +1363,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
       <section class="list-title">
         <a class="back-link" href="#inicio">Volver al inicio</a>
         <div>
-          <h1>${title}</h1>
+          <h1>${escapeHtml(title)}</h1>
           <p>${productsToShow.length} productos activos. Menudeo, mayoreo y precios por cantidad cuando aplica.</p>
         </div>
       </section>
@@ -1395,7 +1418,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
 }
 
 function emptyStateHtml(title, copy) {
-  return `<div class="empty-state"><strong>${title}</strong><span>${copy}</span></div>`;
+  return `<div class="empty-state"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(copy)}</span></div>`;
 }
 
 function appLoadErrorHtml() {
@@ -1480,6 +1503,7 @@ function renderProductDetail(productId) {
     .slice(0, 4);
   const officialUrl = productDetailUrl(product);
   const flagshipClass = isX200T(product) ? " is-flagship" : "";
+  const productIdAttr = escapeAttr(product.id);
 
   viewRootEl.innerHTML = `
     <div class="page-stack">
@@ -1492,14 +1516,14 @@ function renderProductDetail(productId) {
 
         <article class="detail-panel">
           <div class="detail-copy">
-            <span class="stock-badge stock-${stockClassName(product.stock)}">${product.erpStockLabel || product.stock}</span>
-            <h1>${product.displayName}</h1>
-            <p>${product.description || "Producto HAODE para técnicos, tiendas y mayoreo. Confirma detalles por WhatsApp."}</p>
+            <span class="stock-badge stock-${stockClassName(product.stock)}">${escapeHtml(product.erpStockLabel || product.stock)}</span>
+            <h1>${escapeHtml(product.displayName)}</h1>
+            <p>${escapeHtml(product.description || "Producto HAODE para técnicos, tiendas y mayoreo. Confirma detalles por WhatsApp.")}</p>
           </div>
           ${priceStackHtml(product)}
           <div class="sticky-actions">
-            <button class="add-button" type="button" data-add-product="${product.id}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Precio pendiente"}</button>
-            <a class="whatsapp-outline" href="${singleProductWhatsappUrl(product)}" data-product-whatsapp="${product.id}" data-detail-whatsapp target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+            <button class="add-button" type="button" data-add-product="${productIdAttr}" ${product.salesAvailable ? "" : "disabled"}>${product.salesAvailable ? "Agregar" : "Precio pendiente"}</button>
+            <a class="whatsapp-outline" href="${escapeAttr(singleProductWhatsappUrl(product))}" data-product-whatsapp="${productIdAttr}" data-detail-whatsapp target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
           </div>
           ${specGridHtml(product, has360, gallery.length)}
           <div class="detail-whatsapp-note">
@@ -1507,8 +1531,8 @@ function renderProductDetail(productId) {
             <span>Envía lista grande por WhatsApp. HAODE confirma stock, precio final, garantía local y envío antes de cerrar el pedido.</span>
           </div>
           <div class="detail-actions">
-            ${officialUrl ? `<a class="outline-button" href="${officialUrl}">Página oficial</a>` : ""}
-            <button class="text-button" type="button" data-share-product="${product.id}">Compartir</button>
+            ${officialUrl ? `<a class="outline-button" href="${escapeAttr(officialUrl)}">Página oficial</a>` : ""}
+            <button class="text-button" type="button" data-share-product="${productIdAttr}">Compartir</button>
           </div>
         </article>
       </section>
@@ -1545,7 +1569,7 @@ function productGalleryHtml(product, images) {
   return `
     <div class="gallery-stage">
       ${isX200T(product) ? '<span class="gallery-badge">Galería de producto</span>' : ""}
-      <img src="${selected}"${optimizedImageSrcset(selected, "detail")} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${product.image || PLACEHOLDER_IMAGE}'" />
+      <img src="${escapeAttr(safeImageSrc(selected))}"${optimizedImageSrcset(selected, "detail")} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
       ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
     </div>
     ${thumbStripHtml(images, state.selectedGalleryIndex)}
@@ -1557,7 +1581,7 @@ function product360Html(product, frames) {
   return `
     <div class="viewer-stage" data-viewer-stage tabindex="0" role="group" aria-label="Vista 360 de ${escapeAttr(product.name)}">
       <span class="viewer-badge">360°</span>
-      <img src="${frame}"${optimizedImageSrcset(frame, "detail")} alt="${escapeAttr(product.name)} vista 360" data-viewer-image loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${product.image}'" />
+      <img src="${escapeAttr(safeImageSrc(frame))}"${optimizedImageSrcset(frame, "detail")} alt="${escapeAttr(product.name)} vista 360" data-viewer-image loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
       <span class="viewer-help">Desliza para ver 360°</span>
       <div class="viewer-controls">
         <button type="button" data-viewer-prev aria-label="Vista anterior">‹</button>
@@ -1573,7 +1597,7 @@ function thumbStripHtml(images, selectedIndex, viewer = false) {
     <div class="thumb-strip" aria-label="Miniaturas del producto">
       ${images.map((image, index) => `
         <button class="${index === selectedIndex ? "is-active" : ""}" type="button" ${viewer ? `data-viewer-frame="${index}"` : `data-gallery-image="${index}"`} aria-label="Ver imagen ${index + 1}">
-          <img src="${image}"${optimizedImageSrcset(image)} alt="" loading="lazy" decoding="async" />
+          <img src="${escapeAttr(safeImageSrc(image))}"${optimizedImageSrcset(image)} alt="" loading="lazy" decoding="async" />
         </button>
       `).join("")}
     </div>
@@ -1585,7 +1609,7 @@ function priceStackHtml(product) {
     return `
       <div class="price-stack">
         <span>Precio menudeo <strong>${formatPrice(product.publicPrice)}</strong></span>
-        ${product.priceTiers.map((tier) => `<span>${tier.label}${tier.autoApply ? "" : " · confirmar por WhatsApp"} <strong>${formatPrice(tier.price)}</strong></span>`).join("")}
+        ${product.priceTiers.map((tier) => `<span>${escapeHtml(tier.label)}${tier.autoApply ? "" : " · confirmar por WhatsApp"} <strong>${formatPrice(tier.price)}</strong></span>`).join("")}
       </div>
     `;
   }
@@ -1614,8 +1638,8 @@ function specGridHtml(product, has360, imageCount) {
     <div class="spec-grid">
       ${specs.map(([label, value]) => `
         <article>
-          <span>${label}</span>
-          <strong>${value}</strong>
+          <span>${escapeHtml(label)}</span>
+          <strong>${escapeHtml(value)}</strong>
         </article>
       `).join("")}
     </div>
@@ -1628,23 +1652,24 @@ function renderCartPage() {
   const itemsMarkup = items.map((item) => {
     const priceRule = priceRuleFor(item.product, item.quantity);
     const subtotal = priceRule.unitPrice * item.quantity;
+    const productIdAttr = escapeAttr(item.product.id);
     return `
       <article class="cart-item">
-        <img src="${item.product.image}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         <div>
-          <h3>${item.product.displayName}</h3>
-          <p>${item.product.model}</p>
+          <h3>${escapeHtml(item.product.displayName)}</h3>
+          <p>${escapeHtml(item.product.model)}</p>
           <div class="cart-row">
             <div class="qty-control" aria-label="Cantidad de ${escapeAttr(item.product.name)}">
-              <button type="button" data-decrease="${item.product.id}" aria-label="Reducir cantidad">-</button>
+              <button type="button" data-decrease="${productIdAttr}" aria-label="Reducir cantidad">-</button>
               <span>${item.quantity}</span>
-              <button type="button" data-increase="${item.product.id}" aria-label="Aumentar cantidad">+</button>
+              <button type="button" data-increase="${productIdAttr}" aria-label="Aumentar cantidad">+</button>
             </div>
             <strong>${formatPrice(subtotal)}</strong>
           </div>
-          <p>Precio aplicado: ${priceRule.label} · ${formatPrice(priceRule.unitPrice)} c/u</p>
+          <p>Precio aplicado: ${escapeHtml(priceRule.label)} · ${formatPrice(priceRule.unitPrice)} c/u</p>
           <div class="cart-row">
-            <button class="remove-button" type="button" data-remove="${item.product.id}">Eliminar</button>
+            <button class="remove-button" type="button" data-remove="${productIdAttr}">Eliminar</button>
           </div>
         </div>
       </article>
@@ -2016,23 +2041,24 @@ function renderCart() {
   cartItemsEl.innerHTML = items.map((item) => {
     const priceRule = priceRuleFor(item.product, item.quantity);
     const subtotal = priceRule.unitPrice * item.quantity;
+    const productIdAttr = escapeAttr(item.product.id);
     return `
       <article class="cart-item">
-        <img src="${item.product.image}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${PLACEHOLDER_IMAGE}'" />
+        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         <div>
-          <h3>${item.product.displayName}</h3>
-          <p>${item.product.model}</p>
+          <h3>${escapeHtml(item.product.displayName)}</h3>
+          <p>${escapeHtml(item.product.model)}</p>
           <div class="cart-row">
             <div class="qty-control" aria-label="Cantidad de ${escapeAttr(item.product.name)}">
-              <button type="button" data-decrease="${item.product.id}" aria-label="Reducir cantidad">-</button>
+              <button type="button" data-decrease="${productIdAttr}" aria-label="Reducir cantidad">-</button>
               <span>${item.quantity}</span>
-              <button type="button" data-increase="${item.product.id}" aria-label="Aumentar cantidad">+</button>
+              <button type="button" data-increase="${productIdAttr}" aria-label="Aumentar cantidad">+</button>
             </div>
             <strong>${formatPrice(subtotal)}</strong>
           </div>
-          <p>Precio aplicado: ${priceRule.label} · ${formatPrice(priceRule.unitPrice)} c/u</p>
+          <p>Precio aplicado: ${escapeHtml(priceRule.label)} · ${formatPrice(priceRule.unitPrice)} c/u</p>
           <div class="cart-row">
-            <button class="remove-button" type="button" data-remove="${item.product.id}">Eliminar</button>
+            <button class="remove-button" type="button" data-remove="${productIdAttr}">Eliminar</button>
           </div>
         </div>
       </article>

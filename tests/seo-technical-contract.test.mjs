@@ -132,3 +132,13 @@ test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () =>
   assert.equal(itemList?.['@type'], 'ItemList');
   assert.equal(itemList.itemListElement.length, 8);
 });
+
+test('homepage does not publish unsupported performance claims or testimonials', () => {
+  const homepage = read('index.html');
+  for (const unsupportedClaim of ['+8,000', '+25,000', '98%', 'Carlos M.']) {
+    assert.ok(!homepage.includes(unsupportedClaim), `unsupported homepage claim found: ${unsupportedClaim}`);
+  }
+  for (const confirmedServiceFact of ['Atención local', 'Precio por cantidad', 'Cotización directa', 'Envío bajo confirmación']) {
+    assert.ok(homepage.includes(confirmedServiceFact), `missing confirmed homepage fact: ${confirmedServiceFact}`);
+  }
+});
