@@ -29,7 +29,18 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   page.on("console", (message) => {
     if (message.type() === "error") consoleErrors.push(message.text());
   });
-  await page.addInitScript(() => { window.open = () => null; });
+  await page.addInitScript(() => {
+    localStorage.setItem("haode-privacy-consent-v1", JSON.stringify({
+      version: 1,
+      analytics: true,
+      advertising: false
+    }));
+    window.__HAODE_OPENED_URL__ = "";
+    window.open = (url) => {
+      window.__HAODE_OPENED_URL__ = String(url || "");
+      return null;
+    };
+  });
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
   await page.route("**/api/public/web-orders", async (route) => {
     submitted = route.request().postDataJSON();
@@ -51,14 +62,31 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   await page.locator("[data-customer-name]").fill("Cliente campaña QA");
   await page.locator("[data-customer-phone]").fill("5512345678");
   await page.locator("[data-customer-city]").fill("CDMX");
-  const whatsappText = await page.locator("[data-whatsapp-link]").evaluate((link) => {
-    const url = new URL(link.href);
-    return decodeURIComponent(url.searchParams.get("text") || "");
+  const checkoutState = await page.locator("[data-whatsapp-link]").evaluate((link) => {
+    const attribution = window.HaodeCampaign.capture();
+    return {
+      href: link.href,
+      attribution,
+      reference: window.HaodeCampaign.reference(attribution)
+    };
   });
 
-  expect(whatsappText).toContain("Origen: instagram");
-  expect(whatsappText).toContain("Referencia: instagram/verano_2026/video_a");
+  expect(checkoutState.href).toBe("https://wa.me/525645866014");
+  expect(checkoutState.attribution).toMatchObject({
+    source: "instagram",
+    medium: "organic_social",
+    campaign: "verano_2026",
+    content: "video_a"
+  });
+  expect(checkoutState.reference).toBe("instagram/verano_2026/video_a");
   await page.locator("[data-whatsapp-link]").click();
+
+  const openedWhatsappText = await page.evaluate(() => {
+    const url = new URL(window.__HAODE_OPENED_URL__);
+    return decodeURIComponent(url.searchParams.get("text") || "");
+  });
+  expect(openedWhatsappText).toContain("Origen: instagram");
+  expect(openedWhatsappText).toContain("Referencia: instagram/verano_2026/video_a");
 
   await expect.poll(() => submitted?.utm_source).toBe("instagram");
   expect(submitted.utm_medium).toBe("organic_social");

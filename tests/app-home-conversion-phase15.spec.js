@@ -4,6 +4,16 @@ const serverURL = (process.env.BASE_URL || 'https://haode.com.mx').replace(/\/ap
 const appURL = `${serverURL}/app/`;
 
 test.describe('HAODE App home conversion UI phase 15', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('haode-privacy-consent-v1', JSON.stringify({
+        version: 1,
+        analytics: false,
+        advertising: false,
+      }));
+    });
+  });
+
   async function routeErpEmpty(page) {
     await page.route('https://erp.haode.com.mx/**', (route) => {
       route.fulfill({ status: 200, contentType: 'application/json', body: '[]' });

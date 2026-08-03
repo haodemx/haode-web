@@ -514,8 +514,7 @@ function genericProductPage(product) {
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/style.css?v=20260725-catalog-complete" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-22TCLJDXYS"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-22TCLJDXYS');</script>
+  <script src="/analytics.js?v=20260803-consent-privacy"></script>
 </head>
 <body class="product-detail-page">
   <header class="topbar catalog-topbar">

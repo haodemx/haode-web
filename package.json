@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npm run haode:check",
     "test:campaign-links": "node --test tests/campaign-links.test.mjs",
+    "test:analytics-privacy": "node --test tests/analytics-privacy.test.mjs",
     "test:geo-seo": "node --test tests/geo-seo-contract.test.mjs",
     "test:seo-exposure-pages": "node --test tests/seo-exposure-pages.test.mjs",
     "test:seo-exposure-readiness": "node --test tests/seo-exposure-readiness.test.mjs",
@@ -38,7 +39,7 @@
     "daily-website-audit": "node scripts/daily-website-audit.js",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"

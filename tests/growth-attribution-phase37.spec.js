@@ -47,6 +47,13 @@ test.describe('HAODE growth attribution phase 37', () => {
   });
 
   test('campaign attribution survives a new session for up to 30 days', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('haode-privacy-consent-v1', JSON.stringify({
+        version: 1,
+        analytics: true,
+        advertising: false,
+      }));
+    });
     await page.goto(
       `${baseURL}/productos/?utm_source=instagram&utm_medium=organic_social&utm_campaign=pantallas&utm_content=reel_2`,
       { waitUntil: 'domcontentloaded' },

@@ -196,14 +196,35 @@ function appChannel() {
   return /HAODEAndroidApp/i.test(window.navigator.userAgent || "") || document.body.classList.contains("is-webview") ? "haode_app" : "haode_web";
 }
 
+function normalizeAttributionToken(value, fallback = "") {
+  const raw = String(value || "").trim();
+  const compactPhone = raw.replace(/[()+.\s-]/g, "");
+  if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(raw) || /^\d{10,15}$/.test(compactPhone)) {
+    return fallback;
+  }
+  const normalized = raw
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .slice(0, 80);
+  return normalized || fallback;
+}
+
 function trafficAttribution() {
   if (window.HaodeCampaign) {
     return window.HaodeCampaign.capture({ channel: appChannel() });
   }
   const params = new URLSearchParams(window.location.search);
+  const canPersist = window.HaodePrivacy?.getConsent?.().analytics === true;
   let stored = {};
   try {
-    stored = JSON.parse(window.sessionStorage.getItem("haode-attribution") || "{}");
+    if (canPersist) {
+      stored = JSON.parse(window.sessionStorage.getItem("haode-attribution") || "{}");
+    } else {
+      window.sessionStorage.removeItem("haode-attribution");
+    }
   } catch {
     stored = {};
   }
@@ -222,13 +243,19 @@ function trafficAttribution() {
         ? "google"
         : "";
   const attribution = {
-    source: params.get("utm_source") || params.get("source") || stored.source || detectedSource || appChannel(),
-    medium: params.get("utm_medium") || stored.medium || (appChannel() === "haode_app" ? "app" : "website"),
-    campaign: params.get("utm_campaign") || stored.campaign || "",
-    content: params.get("utm_content") || stored.content || "",
+    source: normalizeAttributionToken(params.get("utm_source") || params.get("source") || stored.source || detectedSource, appChannel()),
+    medium: normalizeAttributionToken(params.get("utm_medium") || stored.medium, appChannel() === "haode_app" ? "app" : "website"),
+    campaign: normalizeAttributionToken(params.get("utm_campaign") || stored.campaign),
+    content: normalizeAttributionToken(params.get("utm_content") || stored.content),
     landingPage: stored.landingPage || window.location.pathname || "/"
   };
-  window.sessionStorage.setItem("haode-attribution", JSON.stringify(attribution));
+  if (canPersist) {
+    try {
+      window.sessionStorage.setItem("haode-attribution", JSON.stringify(attribution));
+    } catch {
+      // Attribution must never block the App in restricted storage contexts.
+    }
+  }
   return attribution;
 }
 
@@ -1903,6 +1930,10 @@ function cartCount() {
   return getCartItems().reduce((total, item) => total + item.quantity, 0);
 }
 
+function whatsappBaseUrl() {
+  return `https://wa.me/${WHATSAPP_NUMBER}`;
+}
+
 function buildWhatsappUrl() {
   const items = getCartItems();
   const clientName = (customerNameEl?.value || "").trim();
@@ -1987,7 +2018,7 @@ async function submitWebOrder() {
       currency: "MXN",
       value: payload.total,
       source: state.attribution.source,
-      order_number: result.order_number
+      lead_registered: Boolean(result.order_number)
     });
     return result;
   } catch (error) {
@@ -2067,7 +2098,8 @@ function renderCart() {
 
   cartTotalEl.textContent = formatPrice(cartTotal());
   whatsappLinkEl.classList.toggle("disabled", !customerReady);
-  whatsappLinkEl.href = customerReady ? buildWhatsappUrl() : "#";
+  // Keep customer details out of the DOM URL so analytics cannot collect them.
+  whatsappLinkEl.href = customerReady ? whatsappBaseUrl() : "#";
   whatsappLinkEl.textContent = customerReady ? "Enviar lista por WhatsApp" : "Completa datos para WhatsApp";
 }
 

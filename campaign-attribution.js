@@ -1,10 +1,16 @@
 (function attachHaodeCampaign(global) {
   const STORAGE_KEY = "haode-campaign-attribution-v1";
+  const LEGACY_APP_STORAGE_KEY = "haode-attribution";
   const MAX_ATTRIBUTION_AGE_MS = 30 * 24 * 60 * 60 * 1000;
   const contactTrackedEvents = new WeakSet();
 
   function normalizeToken(value, fallback = "") {
-    const normalized = String(value || "")
+    const raw = String(value || "").trim();
+    const compactPhone = raw.replace(/[()+.\s-]/g, "");
+    if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(raw) || /^\d{10,15}$/.test(compactPhone)) {
+      return fallback;
+    }
+    const normalized = raw
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
@@ -14,7 +20,23 @@
     return normalized || fallback;
   }
 
+  function hasAnalyticsConsent() {
+    return global.HaodePrivacy?.getConsent?.().analytics === true;
+  }
+
+  function clearStoredAttribution() {
+    for (const storage of [global.sessionStorage, global.localStorage]) {
+      try {
+        storage.removeItem(STORAGE_KEY);
+        storage.removeItem(LEGACY_APP_STORAGE_KEY);
+      } catch {
+        // Privacy cleanup must remain safe in restricted browser contexts.
+      }
+    }
+  }
+
   function readStored() {
+    if (!hasAnalyticsConsent()) return {};
     for (const storage of [global.sessionStorage, global.localStorage]) {
       try {
         const stored = JSON.parse(storage.getItem(STORAGE_KEY) || "{}");
@@ -32,6 +54,7 @@
   }
 
   function storeAttribution(attribution) {
+    if (!hasAnalyticsConsent()) return;
     for (const storage of [global.sessionStorage, global.localStorage]) {
       try {
         storage.setItem(STORAGE_KEY, JSON.stringify(attribution));
@@ -140,6 +163,15 @@
     reference,
     decorateWhatsAppLink,
     wasContactTracked
+  });
+
+  if (!hasAnalyticsConsent()) clearStoredAttribution();
+  global.addEventListener("haode:privacy-consent", (event) => {
+    if (event.detail?.analytics) {
+      capture();
+    } else {
+      clearStoredAttribution();
+    }
   });
 
   if (global.document.readyState === "loading") {

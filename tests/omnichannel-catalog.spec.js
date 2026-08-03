@@ -151,7 +151,14 @@ const WEBSITE_LOCAL_PRODUCT_COUNT = websiteProductSandbox.window.HAODE_PRODUCTS_
 
 test("keeps the approved App catalog authoritative and submits an attributed idempotent lead", async ({ page }) => {
   let submitted;
-  await page.addInitScript(() => { window.open = () => null; });
+  await page.addInitScript(() => {
+    localStorage.setItem("haode-privacy-consent-v1", JSON.stringify({
+      version: 1,
+      analytics: false,
+      advertising: false
+    }));
+    window.open = () => null;
+  });
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
   await page.route("**/api/public/web-orders", async (route) => {
     submitted = {

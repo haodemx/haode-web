@@ -1,0 +1,293 @@
+[data-haode-privacy-root] {
+  --haode-privacy-accent: #ff5a00;
+  --haode-privacy-ink: #17191d;
+  --haode-privacy-muted: #5f6670;
+  --haode-privacy-line: #d8dce2;
+  --haode-privacy-surface: #ffffff;
+  color: var(--haode-privacy-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+[data-haode-privacy-root] [hidden] {
+  display: none !important;
+}
+
+.haode-privacy-banner {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  left: 16px;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 920px;
+  min-height: 88px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid var(--haode-privacy-line);
+  border-left: 4px solid var(--haode-privacy-accent);
+  border-radius: 6px;
+  background: var(--haode-privacy-surface);
+  box-shadow: 0 16px 48px rgb(0 0 0 / 18%);
+}
+
+.haode-privacy-banner-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.haode-privacy-banner-copy strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 17px;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.haode-privacy-banner-copy p,
+.haode-privacy-dialog > p {
+  margin: 0;
+  color: var(--haode-privacy-muted);
+  font-size: 14px;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.haode-privacy-actions,
+.haode-privacy-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.haode-privacy-button,
+.haode-privacy-close,
+.haode-privacy-manage {
+  min-height: 44px;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.haode-privacy-button {
+  padding: 0 15px;
+  border: 1px solid transparent;
+}
+
+.haode-privacy-button-primary {
+  border-color: var(--haode-privacy-accent);
+  background: var(--haode-privacy-accent);
+  color: #ffffff;
+}
+
+.haode-privacy-button-primary:hover {
+  border-color: #d94c00;
+  background: #d94c00;
+}
+
+.haode-privacy-button-secondary {
+  border-color: var(--haode-privacy-line);
+  background: #ffffff;
+  color: var(--haode-privacy-ink);
+}
+
+.haode-privacy-button-secondary:hover {
+  border-color: #9aa1ab;
+  background: #f5f6f8;
+}
+
+.haode-privacy-button:active,
+.haode-privacy-close:active,
+.haode-privacy-manage:active {
+  transform: translateY(1px);
+}
+
+.haode-privacy-button:focus-visible,
+.haode-privacy-close:focus-visible,
+.haode-privacy-manage:focus-visible,
+.haode-privacy-option input:focus-visible {
+  outline: 3px solid rgb(255 90 0 / 35%);
+  outline-offset: 2px;
+}
+
+.haode-privacy-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483001;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  background: rgb(0 0 0 / 56%);
+  overscroll-behavior: contain;
+}
+
+.haode-privacy-dialog {
+  width: min(100%, 560px);
+  max-height: min(720px, calc(100dvh - 40px - env(safe-area-inset-bottom)));
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid var(--haode-privacy-line);
+  border-radius: 6px;
+  background: var(--haode-privacy-surface);
+  box-shadow: 0 20px 64px rgb(0 0 0 / 28%);
+}
+
+.haode-privacy-dialog-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.haode-privacy-dialog-head span {
+  color: var(--haode-privacy-accent);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.haode-privacy-dialog-head h2 {
+  margin: 3px 0 0;
+  font-size: 22px;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.haode-privacy-close {
+  display: inline-grid;
+  width: 44px;
+  min-width: 44px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--haode-privacy-line);
+  background: #ffffff;
+  color: var(--haode-privacy-ink);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.haode-privacy-close:hover {
+  border-color: #9aa1ab;
+  background: #f5f6f8;
+}
+
+.haode-privacy-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid var(--haode-privacy-line);
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.haode-privacy-option-required {
+  background: #f6f7f8;
+  cursor: default;
+}
+
+.haode-privacy-option input {
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  accent-color: var(--haode-privacy-accent);
+}
+
+.haode-privacy-option span {
+  min-width: 0;
+}
+
+.haode-privacy-option strong,
+.haode-privacy-option small {
+  display: block;
+}
+
+.haode-privacy-option strong {
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+
+.haode-privacy-option small {
+  color: var(--haode-privacy-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.haode-privacy-dialog-actions {
+  margin-top: 18px;
+}
+
+.haode-privacy-manage {
+  position: fixed;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  left: 12px;
+  z-index: 2147482999;
+  padding: 0 13px;
+  border: 1px solid #c9cdd3;
+  background: #ffffff;
+  color: #353a42;
+  box-shadow: 0 5px 18px rgb(0 0 0 / 13%);
+}
+
+.haode-privacy-manage:hover {
+  border-color: var(--haode-privacy-accent);
+  color: #b54000;
+}
+
+.haode-privacy-has-bottom-nav .haode-privacy-manage {
+  bottom: calc(78px + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 720px) {
+  .haode-privacy-banner {
+    display: block;
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    left: 10px;
+    padding: 14px;
+  }
+
+  .haode-privacy-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 12px;
+  }
+
+  .haode-privacy-actions .haode-privacy-button-primary {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .haode-privacy-dialog-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .haode-privacy-dialog-actions .haode-privacy-button-primary {
+    grid-row: 1;
+  }
+
+  .haode-privacy-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haode-privacy-button,
+  .haode-privacy-close,
+  .haode-privacy-manage {
+    transition: none;
+  }
+}

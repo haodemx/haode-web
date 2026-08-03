@@ -11,6 +11,11 @@ const OUTPUT_STEM = process.env.UI_AUDIT_OUTPUT
   : path.join(ROOT, 'docs', 'reports', 'ui-acceptance-audit-latest');
 const CONCURRENCY = Math.max(1, Math.min(8, Number(process.env.UI_AUDIT_CONCURRENCY || 5)));
 const DEFAULT_WIDTHS = [360, 390, 768, 1440, 1920];
+const NON_COMMERCIAL_SITEMAP_ROUTES = new Set([
+  '/eliminacion-de-datos/',
+  '/privacidad/',
+  '/terminos/',
+]);
 const HEIGHT_BY_WIDTH = new Map([
   [360, 844],
   [390, 844],
@@ -43,13 +48,16 @@ function readSitemapTargets() {
   const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
   const canonicalRoutes = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
     .map((match) => match[1].replaceAll('&amp;', '&'))
-    .map((url) => ({
-      route: normalizePathname(url),
-      expectedStatus: 200,
-      canonical: true,
-      commercial: true,
-      source: 'sitemap',
-    }));
+    .map((url) => {
+      const route = normalizePathname(url);
+      return {
+        route,
+        expectedStatus: 200,
+        canonical: true,
+        commercial: !NON_COMMERCIAL_SITEMAP_ROUTES.has(route),
+        source: 'sitemap',
+      };
+    });
 
   const extraTargets = [
     {
