@@ -19,6 +19,13 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("App search keeps typed character order, caret position, and announces results", async ({ page }) => {
+  let completedExternalRequests = 0;
+  await page.unroute("https://erp.haode.com.mx/**");
+  await page.route("https://erp.haode.com.mx/**", async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    await route.fulfill({ status: 200, contentType: "application/json", body: "[]" });
+    completedExternalRequests += 1;
+  });
   await page.goto(`${APP_URL}#lista`, { waitUntil: "domcontentloaded" });
 
   const search = page.locator("[data-search-products]");
@@ -26,7 +33,11 @@ test("App search keeps typed character order, caret position, and announces resu
   await search.click();
   await page.keyboard.type("iphone");
 
+  await expect.poll(() => completedExternalRequests).toBeGreaterThanOrEqual(2);
+  await page.waitForTimeout(3500);
+
   await expect(search).toHaveValue("iphone");
+  await expect(search).toBeFocused();
   await expect.poll(() => search.evaluate((input) => input.selectionStart)).toBe(6);
 
   await search.focus();
