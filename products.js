@@ -2157,7 +2157,7 @@ function renderCatalogPage() {
 
     const block = document.createElement('section');
     block.className = 'catalog-category-block';
-    block.id = category;
+    block.id = category === groupId ? `${category}-productos` : category;
     block.dataset.category = category;
 
     const titleWrap = document.createElement('div');

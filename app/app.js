@@ -159,7 +159,9 @@ const money = new Intl.NumberFormat("es-MX", {
 
 const viewRootEl = document.querySelector("[data-view-root]");
 const networkStateEl = document.querySelector("[data-network-state]");
+const appStatusEl = document.querySelector("[data-app-status]");
 const cartDrawerEl = document.querySelector("[data-cart-drawer]");
+const cartPanelEl = cartDrawerEl?.querySelector(".cart-panel");
 const cartItemsEl = document.querySelector("[data-cart-items]");
 const cartTotalEl = document.querySelector("[data-cart-total]");
 const whatsappLinkEl = document.querySelector("[data-whatsapp-link]");
@@ -169,6 +171,33 @@ const customerCityEl = document.querySelector("[data-customer-city]");
 const customerCommentEl = document.querySelector("[data-customer-comment]");
 const checkoutInputs = [customerNameEl, customerPhoneEl, customerCityEl, customerCommentEl].filter(Boolean);
 const cartCountEls = document.querySelectorAll("[data-cart-count], [data-cart-count-bottom]");
+let cartTriggerEl = null;
+
+const CART_FOCUSABLE_SELECTOR = [
+  "a[href]",
+  "button:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  '[tabindex]:not([tabindex="-1"])'
+].join(",");
+
+function announceAppStatus(message) {
+  if (appStatusEl) {
+    appStatusEl.textContent = message;
+  }
+}
+
+function updateSearchStatus(query, count) {
+  const cleanQuery = String(query || "").trim();
+  if (!cleanQuery) {
+    announceAppStatus("");
+    return;
+  }
+  announceAppStatus(count === 1
+    ? `1 producto encontrado para "${cleanQuery}".`
+    : `${count} productos encontrados para "${cleanQuery}".`);
+}
 
 function iconSvg(name) {
   const icons = {
@@ -1442,6 +1471,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
     </div>
   `;
   updateNavigation();
+  updateSearchStatus(state.searchQuery, productsToShow.length);
 }
 
 function emptyStateHtml(title, copy) {
@@ -2136,15 +2166,61 @@ function removeProduct(productId) {
 }
 
 function openCart() {
+  if (!cartDrawerEl.classList.contains("open")) {
+    cartTriggerEl = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  }
   cartDrawerEl.classList.add("open");
   cartDrawerEl.setAttribute("aria-hidden", "false");
+  document.body.classList.add("cart-open");
   updateNavigation();
+  window.requestAnimationFrame(() => {
+    cartDrawerEl.querySelector("[data-close-cart]")?.focus({ preventScroll: true });
+  });
 }
 
 function closeCart() {
+  const trigger = cartTriggerEl;
+  const wasOpen = cartDrawerEl.classList.contains("open");
   cartDrawerEl.classList.remove("open");
   cartDrawerEl.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("cart-open");
+  cartTriggerEl = null;
   updateNavigation();
+  if (wasOpen && trigger?.isConnected) {
+    window.requestAnimationFrame(() => trigger.focus({ preventScroll: true }));
+  }
+}
+
+function cartFocusableElements() {
+  if (!cartPanelEl) return [];
+  return Array.from(cartPanelEl.querySelectorAll(CART_FOCUSABLE_SELECTOR))
+    .filter((element) => element.getClientRects().length > 0);
+}
+
+function handleCartKeydown(event) {
+  if (!cartDrawerEl.classList.contains("open")) return;
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeCart();
+    return;
+  }
+  if (event.key !== "Tab") return;
+
+  const focusable = cartFocusableElements();
+  if (!focusable.length) {
+    event.preventDefault();
+    return;
+  }
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  const active = document.activeElement;
+  if (event.shiftKey && (active === first || !cartPanelEl.contains(active))) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && (active === last || !cartPanelEl.contains(active))) {
+    event.preventDefault();
+    first.focus();
+  }
 }
 
 function moveViewer(delta) {
@@ -2251,12 +2327,30 @@ async function handleDocumentClick(event) {
   }
   if (shareProductButton) {
     const product = products.find((item) => item.id === shareProductButton.dataset.shareProduct);
-    if (product && navigator.share) {
-      navigator.share({
-        title: product.name,
-        text: product.description || product.name,
-        url: `${window.location.origin}${window.location.pathname}${appProductUrl(product)}`
-      }).catch(() => {});
+    if (product) {
+      const shareUrl = `${window.location.origin}${window.location.pathname}${appProductUrl(product)}`;
+      if (typeof navigator.share === "function") {
+        try {
+          await navigator.share({
+            title: product.name,
+            text: product.description || product.name,
+            url: shareUrl
+          });
+        } catch (error) {
+          if (error?.name !== "AbortError") {
+            announceAppStatus("No se pudo compartir el producto.");
+          }
+        }
+      } else {
+        try {
+          if (typeof navigator.clipboard?.writeText !== "function") throw new Error("Clipboard unavailable");
+          await navigator.clipboard.writeText(shareUrl);
+          announceAppStatus("Enlace del producto copiado.");
+        } catch (error) {
+          announceAppStatus("Copia el enlace del producto mostrado.");
+          window.prompt("Copia este enlace del producto:", shareUrl);
+        }
+      }
     }
   }
 }
@@ -2264,9 +2358,17 @@ async function handleDocumentClick(event) {
 function handleDocumentInput(event) {
   const searchInput = event.target.closest("[data-search-products]");
   if (searchInput) {
+    const selectionStart = searchInput.selectionStart ?? searchInput.value.length;
+    const selectionEnd = searchInput.selectionEnd ?? selectionStart;
+    const selectionDirection = searchInput.selectionDirection || "none";
+    const shouldRestoreFocus = document.activeElement === searchInput;
     state.searchQuery = searchInput.value;
     renderList({ group: state.activeGroup, category: state.activeCategory });
-    document.querySelector("[data-search-products]")?.focus();
+    const nextSearchInput = document.querySelector("[data-search-products]");
+    if (shouldRestoreFocus && nextSearchInput) {
+      nextSearchInput.focus({ preventScroll: true });
+      nextSearchInput.setSelectionRange(selectionStart, selectionEnd, selectionDirection);
+    }
   }
 }
 
@@ -2332,6 +2434,7 @@ async function init() {
   registerServiceWorker();
   setupFormListeners();
   setupViewerGestures();
+  document.addEventListener("keydown", handleCartKeydown);
   document.addEventListener("click", handleDocumentClick);
   document.addEventListener("input", handleDocumentInput);
   document.addEventListener("change", handleDocumentChange);
