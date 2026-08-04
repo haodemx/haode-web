@@ -1399,6 +1399,16 @@ function premiumSelectionHtml() {
 }
 
 function renderList({ group = "", category = "Todos" } = {}) {
+  const activeSearchInput = document.activeElement?.matches?.("[data-search-products]")
+    ? document.activeElement
+    : null;
+  const searchFocusState = activeSearchInput
+    ? {
+      start: activeSearchInput.selectionStart ?? activeSearchInput.value.length,
+      end: activeSearchInput.selectionEnd ?? activeSearchInput.value.length,
+      direction: activeSearchInput.selectionDirection || "none"
+    }
+    : null;
   state.route = { name: group ? "group" : "list", group, category };
   state.activeGroup = group;
   state.activeCategory = category || "Todos";
@@ -1472,6 +1482,15 @@ function renderList({ group = "", category = "Todos" } = {}) {
   `;
   updateNavigation();
   updateSearchStatus(state.searchQuery, productsToShow.length);
+  if (searchFocusState) {
+    const nextSearchInput = document.querySelector("[data-search-products]");
+    nextSearchInput?.focus({ preventScroll: true });
+    nextSearchInput?.setSelectionRange(
+      searchFocusState.start,
+      searchFocusState.end,
+      searchFocusState.direction
+    );
+  }
 }
 
 function emptyStateHtml(title, copy) {
@@ -2358,17 +2377,8 @@ async function handleDocumentClick(event) {
 function handleDocumentInput(event) {
   const searchInput = event.target.closest("[data-search-products]");
   if (searchInput) {
-    const selectionStart = searchInput.selectionStart ?? searchInput.value.length;
-    const selectionEnd = searchInput.selectionEnd ?? selectionStart;
-    const selectionDirection = searchInput.selectionDirection || "none";
-    const shouldRestoreFocus = document.activeElement === searchInput;
     state.searchQuery = searchInput.value;
     renderList({ group: state.activeGroup, category: state.activeCategory });
-    const nextSearchInput = document.querySelector("[data-search-products]");
-    if (shouldRestoreFocus && nextSearchInput) {
-      nextSearchInput.focus({ preventScroll: true });
-      nextSearchInput.setSelectionRange(selectionStart, selectionEnd, selectionDirection);
-    }
   }
 }
 
