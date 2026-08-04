@@ -216,7 +216,8 @@ img {
   margin: 0 auto;
 }
 
-.app-seo-title {
+.app-seo-title,
+.app-live-region {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -226,6 +227,10 @@ img {
   border: 0;
   white-space: nowrap;
   clip-path: inset(50%);
+}
+
+body.cart-open {
+  overflow: hidden;
 }
 
 .install-banner,
