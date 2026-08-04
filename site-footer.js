@@ -34,7 +34,7 @@
       <nav class="site-sales-footer-nav" aria-label="Comprar en HAODE">
         <p>Comprar</p>
         <a href="/productos/">Pantallas</a>
-        <a href="/categoria/micas/">Micas</a>
+        <a href="/micas.html">Micas</a>
         <a href="/categoria/maquinas-de-hidrogel/">Máquinas</a>
         <a href="/categoria/fundas/">Fundas</a>
         <a href="/categoria/celulares-samsung/">Celulares Samsung</a>

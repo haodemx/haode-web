@@ -78,8 +78,6 @@ test('sitemap generator preserves the same static SEO routes', () => {
     '/distribuidores/',
     '/categoria/camaras-inteligentes/',
     '/categoria/gafas-inteligentes-ai/',
-    '/productos/samsung-z-flip7/',
-    '/productos/samsung-z-fold6/',
     '/guia-ia-haode-mexico/',
     '/categoria/celulares-samsung/',
     '/fundas-celular-mayoreo-mexico/',
@@ -123,6 +121,36 @@ test('redirect aliases are noindex and point to canonical pages', () => {
   assert.match(cameraAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/categoria\/camaras-inteligentes\/" \/>/);
   assert.match(micaAlias, /<meta name="robots" content="noindex,follow">/);
   assert.match(micaAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/micas\.html">/);
+
+  const productAiAlias = read('categoria/productos-ai/index.html');
+  const micaCategoryAlias = read('categoria/micas/index.html');
+  const foldableAlias = read('productos/samsung-z-flip3/index.html');
+  assert.match(productAiAlias, /<meta name="robots" content="noindex,follow" \/>/);
+  assert.match(productAiAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/productos-ai\/" \/>/);
+  assert.match(micaCategoryAlias, /<meta name="robots" content="noindex,follow" \/>/);
+  assert.match(micaCategoryAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/micas\.html" \/>/);
+  assert.match(foldableAlias, /<meta name="robots" content="noindex,follow" \/>/);
+  assert.match(foldableAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/producto\/samsung-original-z-flip3\/" \/>/);
+});
+
+test('product SEO titles distinguish screen quality and static H1 text is crawlable', () => {
+  const locs = sitemapLocs().filter((url) => url.startsWith(`${SITE_URL}/producto/`));
+  const titles = new Map();
+
+  for (const url of locs) {
+    const slug = new URL(url).pathname.split('/').filter(Boolean).at(-1);
+    const html = read(`producto/${slug}/index.html`);
+    const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
+    const h1 = html.match(/<h1\b[^>]*data-detail-title[^>]*>([^<]+)<\/h1>/i)?.[1]?.trim();
+    assert.ok(title, `missing product title: ${slug}`);
+    assert.notEqual(h1, 'Producto HAODE México', `generic product H1: ${slug}`);
+    const duplicates = titles.get(title) || [];
+    duplicates.push(slug);
+    titles.set(title, duplicates);
+  }
+
+  const duplicateTitles = [...titles].filter(([, slugs]) => slugs.length > 1);
+  assert.deepEqual(duplicateTitles, []);
 });
 
 test('legacy product redirects do not use root-relative producto.html paths', () => {

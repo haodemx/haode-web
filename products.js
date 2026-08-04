@@ -165,7 +165,7 @@ const SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS = [
   },
   {
     title: 'Pantalla para Samsung S22 Plus TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/s22-plus/main.png',
+    image: 'assets/products/samsung-original/s22-plus/main-card.webp',
     searchText: 'Samsung S22 Plus S22+ TIPO ORIGINAL CON MARCO pantalla original app',
   },
   {
@@ -175,7 +175,7 @@ const SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS = [
   },
   {
     title: 'Pantalla para Samsung S23 Plus TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/s23-plus/main.png',
+    image: 'assets/products/samsung-original/s23-plus/main-card.webp',
     searchText: 'Samsung S23 Plus S23+ TIPO ORIGINAL CON MARCO pantalla original app',
   },
   {
@@ -185,12 +185,12 @@ const SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS = [
   },
   {
     title: 'Pantalla para Samsung S24 Ultra TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/s24-ultra/main.png',
+    image: 'assets/products/samsung-original/s24-ultra/main-card.webp',
     searchText: 'Samsung S24 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
   },
   {
     title: 'Pantalla para Samsung S25 Ultra TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/s25-ultra/main.png',
+    image: 'assets/products/samsung-original/s25-ultra/main-card.webp',
     searchText: 'Samsung S25 Ultra TIPO ORIGINAL CON MARCO pantalla original app',
   },
   {
@@ -200,56 +200,56 @@ const SAMSUNG_TIPO_ORIGINAL_MODEL_CARDS = [
   },
   {
     title: 'Pantalla para Samsung Z Flip3 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-flip3/main.png',
+    image: 'assets/products/samsung-original/z-flip3/main-card.webp',
     searchText: 'Samsung Z Flip3 Z Flip 3 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
   },
   {
     title: 'Pantalla para Samsung Z Flip4 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-flip4/main.png',
+    image: 'assets/products/samsung-original/z-flip4/main-card.webp',
     searchText: 'Samsung Z Flip4 Z Flip 4 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
   },
   {
     title: 'Pantalla para Samsung Z Flip5 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-flip5/main.png',
+    image: 'assets/products/samsung-original/z-flip5/main-card.webp',
     searchText: 'Samsung Z Flip5 Z Flip 5 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
   },
   {
     title: 'Pantalla para Samsung Z Flip6 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-flip6/main.png',
+    image: 'assets/products/samsung-original/z-flip6/main-card.webp',
     searchText: 'Samsung Z Flip6 Z Flip 6 TIPO ORIGINAL CON MARCO pantalla plegable flip original app',
   },
   {
     title: 'Pantalla Samsung Z Flip7 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-flip7/main.png',
-    href: '/productos/samsung-z-flip7/',
+    image: 'assets/products/samsung-original/z-flip7/main-card.webp',
+    href: '/producto/samsung-original-z-flip7/',
     cta: 'Ver producto',
     searchText: 'Samsung Z Flip7 Z Flip 7 TIPO ORIGINAL CON MARCO pantalla plegable flip original categoria producto',
   },
   {
     title: 'Pantalla Samsung Z Fold3 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-fold3/main.png',
-    href: '/productos/samsung-z-fold3/',
+    image: 'assets/products/samsung-original/z-fold3/main-card.webp',
+    href: '/producto/samsung-original-z-fold3/',
     cta: 'Ver producto',
     searchText: 'Samsung Z Fold3 Z Fold 3 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
   },
   {
     title: 'Pantalla Samsung Z Fold4 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-fold4/main.png',
-    href: '/productos/samsung-z-fold4/',
+    image: 'assets/products/samsung-original/z-fold4/main-card.webp',
+    href: '/producto/samsung-original-z-fold4/',
     cta: 'Ver producto',
     searchText: 'Samsung Z Fold4 Z Fold 4 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
   },
   {
     title: 'Pantalla Samsung Z Fold5 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-fold5/main.png',
-    href: '/productos/samsung-z-fold5/',
+    image: 'assets/products/samsung-original/z-fold5/main-card.webp',
+    href: '/producto/samsung-original-z-fold5/',
     cta: 'Ver producto',
     searchText: 'Samsung Z Fold5 Z Fold 5 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
   },
   {
     title: 'Pantalla Samsung Z Fold6 TIPO ORIGINAL CON MARCO',
-    image: 'assets/products/samsung-original/z-fold6/main.png',
-    href: '/productos/samsung-z-fold6/',
+    image: 'assets/products/samsung-original/z-fold6/main-card.webp',
+    href: '/producto/samsung-original-z-fold6/',
     cta: 'Ver producto',
     searchText: 'Samsung Z Fold6 Z Fold 6 TIPO ORIGINAL CON MARCO pantalla plegable fold original categoria producto',
   },
@@ -1226,6 +1226,26 @@ function buildAssetUrl(pathname = '') {
   return `${SITE_BASE_PATH}/${rawPath.replace(/^\/+/, '')}`;
 }
 
+function productSeoName(product) {
+  const quality = String(product?.quality || '').toUpperCase();
+  const label = quality.includes('SOFT OLED')
+    ? 'Soft OLED'
+    : quality.includes('HARD OLED')
+      ? 'Hard OLED'
+      : quality.includes('TIPO ORIGINAL') || quality.includes('ORIGINAL')
+        ? 'Tipo Original'
+        : quality.includes('INCELL')
+          ? 'INCELL'
+          : quality.includes('AMOLED')
+            ? 'AMOLED'
+            : quality.includes('OLED')
+              ? 'OLED'
+              : '';
+  const name = String(product?.name || '').trim().replace(/\s*\|\s*HAODE México.*$/i, '');
+  if (!label || !/^pantalla\b/i.test(name) || name.toLowerCase().includes(label.toLowerCase())) return name;
+  return `${name} ${label}`;
+}
+
 function stockClassName(value) {
   return String(value || 'ask_stock').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'ask-stock';
 }
@@ -1550,6 +1570,22 @@ function normalizeCategory(category) {
   return CATEGORY_ALIASES[category] || CATEGORY_ALIASES[String(category || '').trim()] || 'all';
 }
 
+const PRODUCT_CARD_IMAGE_BY_ID = {
+  'samsung-original-s22-plus': 'assets/products/samsung-original/s22-plus/main-card.webp',
+  'samsung-original-s23-plus': 'assets/products/samsung-original/s23-plus/main-card.webp',
+  'samsung-original-s24-ultra': 'assets/products/samsung-original/s24-ultra/main-card.webp',
+  'samsung-original-s25-ultra': 'assets/products/samsung-original/s25-ultra/main-card.webp',
+  'samsung-original-z-flip3': 'assets/products/samsung-original/z-flip3/main-card.webp',
+  'samsung-original-z-flip4': 'assets/products/samsung-original/z-flip4/main-card.webp',
+  'samsung-original-z-flip5': 'assets/products/samsung-original/z-flip5/main-card.webp',
+  'samsung-original-z-flip6': 'assets/products/samsung-original/z-flip6/main-card.webp',
+  'samsung-original-z-flip7': 'assets/products/samsung-original/z-flip7/main-card.webp',
+  'samsung-original-z-fold3': 'assets/products/samsung-original/z-fold3/main-card.webp',
+  'samsung-original-z-fold4': 'assets/products/samsung-original/z-fold4/main-card.webp',
+  'samsung-original-z-fold5': 'assets/products/samsung-original/z-fold5/main-card.webp',
+  'samsung-original-z-fold6': 'assets/products/samsung-original/z-fold6/main-card.webp',
+};
+
 function createProduct(definition) {
   const category = normalizeCategory(definition.category);
   const categoryMeta = CATEGORY_META[category];
@@ -1574,6 +1610,7 @@ function createProduct(definition) {
     name,
     quality: definition.quality,
     mainImage,
+    cardImage: definition.cardImage || PRODUCT_CARD_IMAGE_BY_ID[definition.id] || mainImage,
     galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== mainImage))),
     videos: definition.videos || categoryMedia?.videos || [],
     priceTable,
@@ -1622,7 +1659,7 @@ function createProductCard(product) {
   media.className = 'shop-media';
 
   const image = document.createElement('img');
-  image.src = buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
+  image.src = buildAssetUrl(product.cardImage || product.mainImage || PLACEHOLDER_IMAGE);
   image.alt = product.name;
   image.loading = 'lazy';
   image.decoding = 'async';
@@ -2596,7 +2633,8 @@ function renderProductDetailPage() {
     return;
   }
 
-  document.title = `${product.name} | HAODE México`;
+  const seoName = productSeoName(product);
+  document.title = `${seoName} | HAODE México`;
   const detailUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(product.id))}/`);
   const metaDescription = `${product.name} en HAODE México. ${product.description}`;
   const metaKeywords = productMetaKeywords(product);
@@ -2604,7 +2642,7 @@ function renderProductDetailPage() {
   setCanonicalUrl(detailUrl);
   setMetaContent('meta[name="description"]', metaDescription);
   setMetaContent('meta[name="keywords"]', metaKeywords);
-  setMetaContent('meta[property="og:title"]', `${product.name} | HAODE México`);
+  setMetaContent('meta[property="og:title"]', `${seoName} | HAODE México`);
   setMetaContent('meta[property="og:description"]', metaDescription);
   setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
   setMetaContent('meta[property="og:url"]', detailUrl);

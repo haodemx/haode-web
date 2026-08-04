@@ -88,8 +88,8 @@ const pages = [
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas Samsung Z Flip o Z Fold.\nModelo:\nVersion:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, calidad, precio y envio?",
     proof: ["Z Flip", "Z Fold", "TIPO ORIGINAL"],
     cards: [
-      ["Z Flip", "Consulta modelos Z Flip publicados y confirma generacion exacta.", "/productos/samsung-z-flip5/"],
-      ["Z Fold", "Revisa plegables Z Fold por generacion antes de cotizar.", "/productos/samsung-z-fold5/"],
+      ["Z Flip", "Consulta modelos Z Flip publicados y confirma generacion exacta.", "/producto/samsung-original-z-flip5/"],
+      ["Z Fold", "Revisa plegables Z Fold por generacion antes de cotizar.", "/producto/samsung-original-z-fold5/"],
       ["Samsung TIPO ORIGINAL", "Ver toda la familia Samsung TIPO ORIGINAL con marco.", "/categoria/samsung-tipo-original/"]
     ],
     faq: [

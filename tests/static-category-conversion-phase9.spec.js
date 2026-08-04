@@ -35,11 +35,11 @@ test.describe('HAODE static category conversion UI phase 9', () => {
     });
   }
 
-  test('/categoria/productos-ai/ keeps structured data route canonical', async ({ page }) => {
+  test('/categoria/productos-ai/ points structured data to the primary AI route', async ({ page }) => {
     await page.goto(`${baseURL}/categoria/productos-ai/`);
     const jsonLd = await page.locator('script[type="application/ld+json"]').first().textContent();
     expect(jsonLd).not.toContain('categoria/categoria');
-    expect(jsonLd).toContain('https://haode.com.mx/categoria/productos-ai/#gafas-inteligentes-ai');
+    expect(jsonLd).toContain('https://haode.com.mx/productos-ai/#gafas-inteligentes-ai');
   });
 });
 

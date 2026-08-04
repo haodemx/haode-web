@@ -10,6 +10,7 @@
     "test:seo-exposure-pages": "node --test tests/seo-exposure-pages.test.mjs",
     "test:seo-exposure-readiness": "node --test tests/seo-exposure-readiness.test.mjs",
     "test:seo-technical": "node --test tests/seo-technical-contract.test.mjs",
+    "seo:refresh-pages": "node scripts/refresh-seo-pages.mjs --apply",
     "test:daily-ad-catalog": "node --test tests/daily-ad-catalog.test.mjs",
     "test:catalog-gap-audit": "node --test tests/catalog-gap-audit.test.mjs",
     "test:whatsapp-links": "node --test tests/whatsapp-link-template.test.mjs",

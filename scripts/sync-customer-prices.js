@@ -466,11 +466,32 @@ function escapeHtml(value) {
     .replace(/'/g, '&#39;');
 }
 
+function productSeoName(product) {
+  const quality = String(product.quality || '').toUpperCase();
+  const label = quality.includes('SOFT OLED')
+    ? 'Soft OLED'
+    : quality.includes('HARD OLED')
+      ? 'Hard OLED'
+      : quality.includes('TIPO ORIGINAL') || quality.includes('ORIGINAL')
+        ? 'Tipo Original'
+        : quality.includes('INCELL')
+          ? 'INCELL'
+          : quality.includes('AMOLED')
+            ? 'AMOLED'
+            : quality.includes('OLED')
+              ? 'OLED'
+              : '';
+  const name = String(product.name || '').trim().replace(/\s*\|\s*HAODE México.*$/i, '');
+  if (!label || !/^pantalla\b/i.test(name) || name.toLowerCase().includes(label.toLowerCase())) return name;
+  return `${name} ${label}`;
+}
+
 function genericProductPage(product) {
   const image = `/${String(product.images?.[0] || PLACEHOLDER_IMAGE).replace(/^\/+/, '')}`;
   const canonical = `https://haode.com.mx/producto/${product.id}/`;
   const retail = priceNumber(product.prices?.[0]?.price);
   const placeholder = image.includes('placeholder.svg');
+  const seoName = productSeoName(product);
   const whatsapp = `https://wa.me/525645866014?text=${encodeURIComponent([
     'Hola HAODE México, quiero cotizar este producto:',
     `Producto: ${product.name}`,
@@ -505,12 +526,12 @@ function genericProductPage(product) {
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="HAODE MÉXICO" />
-  <meta property="og:title" content="${escapeHtml(product.name)} | HAODE México" />
+  <meta property="og:title" content="${escapeHtml(seoName)} | HAODE México" />
   <meta property="og:description" content="${escapeHtml(product.description)}" />
   <meta property="og:image" content="https://haode.com.mx${image}" />
   <meta property="og:url" content="${canonical}" />
   <link rel="canonical" href="${canonical}" />
-  <title>${escapeHtml(product.name)} | HAODE México</title>
+  <title>${escapeHtml(seoName)} | HAODE México</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/style.css?v=20260725-catalog-complete" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>

@@ -30,7 +30,7 @@
     const links = [
       ['Inicio', '/'],
       ['Pantallas', '/productos/'],
-      ['Micas', '/categoria/micas/'],
+      ['Micas', '/micas.html'],
       ['Máquinas', '/categoria/maquinas-de-hidrogel/'],
       ['Fundas', '/categoria/fundas/'],
       ['Garantía', '/garantia/'],
