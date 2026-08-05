@@ -8547,21 +8547,42 @@ body.home-page-reference .reference-hero-text {
   box-shadow: 0 18px 36px rgba(47, 32, 22, 0.1);
 }
 
-.reference-hero-search span {
+.reference-hero-search input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: inherit;
   padding: 0 18px;
+  border: 0;
+  outline: 0;
+  background: transparent;
   color: #7a7068;
+  font-family: inherit;
   font-size: 15px;
   font-weight: 650;
 }
 
-.reference-hero-search strong {
+.reference-hero-search input::placeholder {
+  color: #7a7068;
+  opacity: 1;
+}
+
+.reference-hero-search button {
   height: 100%;
+  min-height: inherit;
   display: grid;
   place-items: center;
-  background: var(--ref-orange);
+  border: 0;
+  background: var(--ref-orange, var(--catalog-orange, #f04a14));
   color: #ffffff;
   font-size: 14px;
   font-weight: 920;
+  cursor: pointer;
+}
+
+.reference-hero-search:focus-within {
+  border-color: var(--ref-orange, var(--catalog-orange, #f04a14));
+  box-shadow: 0 0 0 3px rgba(240, 74, 20, 0.16), 0 18px 36px rgba(47, 32, 22, 0.1);
 }
 
 body.home-page-reference .reference-hero-alert {
@@ -9524,8 +9545,8 @@ body.home-page-reference .reference-footer {
     margin-top: 12px;
   }
 
-  .reference-hero-search span,
-  .reference-hero-search strong {
+  .reference-hero-search input,
+  .reference-hero-search button {
     font-size: 13px;
   }
 
@@ -12772,13 +12793,33 @@ body.home-page-reference .reference-hero-search {
   box-shadow: 0 10px 24px rgba(47, 32, 22, 0.08);
 }
 
-body.home-page-reference .reference-hero-search span {
+body.home-page-reference .reference-hero-search input {
   padding: 0 18px;
   font-size: 13px;
 }
 
-body.home-page-reference .reference-hero-search strong {
+body.home-page-reference .reference-hero-search button {
   background: var(--ref-orange);
+}
+
+.catalog-site-search {
+  width: min(100%, 620px);
+  margin-top: 18px;
+}
+
+.catalog-site-search-status {
+  margin: 8px 0 0;
+  color: #5f554d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.catalog-site-search-empty {
+  margin-top: 20px;
+}
+
+.catalog-site-search-empty[hidden] {
+  display: none !important;
 }
 
 .reference-search-icon {
@@ -13931,7 +13972,7 @@ body.product-detail-page .detail-title {
 /* Accessible action colors keep HAODE brand accents unchanged. */
 body.home-page-reference :is(
   .reference-head-cart em,
-  .reference-hero-search strong,
+  .reference-hero-search button,
   .reference-product-card > span
 ) {
   background: var(--ref-action-orange);

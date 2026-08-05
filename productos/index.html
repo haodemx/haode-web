@@ -26,7 +26,7 @@
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" href="/assets/icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
-  <link rel="stylesheet" href="/style.css?v=20260725-ui-phase33" />
+  <link rel="stylesheet" href="/style.css?v=20260805-site-search" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -182,6 +182,11 @@
             </div>
           </div>
           <p class="catalog-warning">No manejamos pago en línea. Consulta precios y disponibilidad por WhatsApp.</p>
+          <form class="reference-hero-search catalog-site-search" action="/productos/" method="get" role="search" data-site-catalog-search-form>
+            <input id="site-catalog-search" type="search" name="q" placeholder="Busca por modelo, SKU o descripción" aria-label="Buscar productos en el catálogo HAODE" autocomplete="off" enterkeyhint="search" maxlength="120" data-site-catalog-search-input />
+            <button type="submit" aria-label="Buscar en el catálogo HAODE"><i class="reference-search-icon" aria-hidden="true"></i></button>
+          </form>
+          <p class="catalog-site-search-status" data-site-catalog-status aria-live="polite">Busca en el catálogo oficial sin salir del sitio web.</p>
         </div>
 
         <div class="catalog-visual-strip" aria-label="Refacciones HAODE para cotizar">
@@ -253,6 +258,13 @@
         <span id="samsung-incell"></span>
         <span id="samsung-oled"></span>
       </div>
+      <div class="wrap">
+        <article class="catalog-empty-card catalog-site-search-empty" data-site-catalog-empty hidden>
+          <h2 data-site-catalog-empty-title>No encontramos ese producto.</h2>
+          <p>Envíanos el modelo o SKU por WhatsApp para confirmar disponibilidad.</p>
+          <a class="btn btn-primary" data-site-catalog-empty-whatsapp href="https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20busqu%C3%A9%20un%20producto%20en%20el%20cat%C3%A1logo%20web.%20Modelo%2FSKU%3A%20%20Cantidad%3A%20%20Ciudad%3A%20%20%C2%BFMe%20confirman%20stock%20en%20M%C3%A9xico%2C%20precio%20por%20cantidad%2C%20garant%C3%ADa%20local%20y%20env%C3%ADo%3F" target="_blank" rel="noopener noreferrer">Enviar búsqueda por WhatsApp</a>
+        </article>
+      </div>
     </section>
 
     <section class="section" id="contacto-productos">
@@ -305,7 +317,7 @@
 
   <script src="/data/products.generated.js?v=20260528-real-filters"></script>
   <script src="/campaign-attribution.js?v=20260715-omnichannel-3"></script>
-  <script src="/products.js?v=20260725-price-allowlist"></script>
+  <script src="/products.js?v=20260805-site-search"></script>
   <script src="/script.js"></script>
 </body>
 </html>

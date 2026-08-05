@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
   <link rel="preload" as="image" href="/assets/images/factory-store-hero-products-hero.webp" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="/privacy-consent.css?v=20260803" data-haode-privacy-styles />
-  <link rel="stylesheet" href="/style.css?v=20260725-ui-phase33" />
+  <link rel="stylesheet" href="/style.css?v=20260805-site-search" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -277,10 +277,10 @@
             <small>Stock MX · Calidad probada</small>
           </div>
 
-          <a class="reference-hero-search" href="/app/#lista">
-            <span>Busca por modelo, SKU o descripción</span>
-            <strong aria-hidden="true"><i class="reference-search-icon"></i></strong>
-          </a>
+          <form class="reference-hero-search" action="/productos/" method="get" role="search" data-home-catalog-search-form>
+            <input id="home-catalog-search" type="search" name="q" placeholder="Busca por modelo, SKU o descripción" aria-label="Buscar productos en el catálogo HAODE" autocomplete="off" enterkeyhint="search" maxlength="120" data-home-catalog-search-input />
+            <button type="submit" aria-label="Buscar en el catálogo HAODE"><i class="reference-search-icon" aria-hidden="true"></i></button>
+          </form>
 
           <div class="reference-quick-points" aria-label="Beneficios principales">
             <article>

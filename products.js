@@ -327,6 +327,17 @@ const CATALOG_GROUPS = [
     title: 'Baterías',
     subtitle: 'Consulta modelos, capacidad y disponibilidad por WhatsApp.',
     categories: [],
+    controls: {
+      label: 'Buscar batería',
+      placeholder: 'Buscar batería por modelo o descripción...',
+      filters: [{ id: 'all', label: 'Todas las baterías' }],
+      empty: {
+        title: 'No encontramos esa batería.',
+        text: 'Envía el modelo por WhatsApp para confirmar disponibilidad.',
+        cta: 'Cotizar por WhatsApp',
+        href: buildWhatsAppUrl(buildMissingModelCotizacionText()),
+      },
+    },
     featureCards: [
       {
         title: 'Original',
@@ -1860,6 +1871,8 @@ function buildCatalogSearchIndex(parts) {
 
 function buildCatalogSearchText(product, meta) {
   return buildCatalogSearchIndex([
+    product.id,
+    product.sku,
     product.name,
     product.model,
     product.brand,
@@ -1876,34 +1889,37 @@ function renderCatalogPage() {
   const priceNote = document.querySelector('[data-price-note]');
   if (!sectionsRoot) return;
 
+  const siteQuery = String(new URLSearchParams(window.location.search).get('q') || '').trim().slice(0, 120);
+  const siteSearchInput = document.querySelector('[data-site-catalog-search-input]');
+  const siteSearchStatus = document.querySelector('[data-site-catalog-status]');
+  const siteSearchEmpty = document.querySelector('[data-site-catalog-empty]');
+  if (siteSearchInput) siteSearchInput.value = siteQuery;
+
   if (priceNote) {
     priceNote.textContent = 'Precios por cantidad en MXN. Consulta disponibilidad por WhatsApp para confirmar tu pedido.';
   }
 
-  function createCatalogFeatureCard(card) {
+  function createCatalogFeatureCard(card, group) {
     const article = document.createElement('article');
     article.className = 'shop-card catalog-feature-card';
-    if (card.filterId) {
+    const searchIndex = buildCatalogSearchIndex([
+      card.title,
+      card.eyebrow,
+      card.text,
+      card.cta,
+      card.searchText,
+    ].filter(Boolean).join(' '));
+    article.dataset.siteSearchItem = 'true';
+    article.dataset.siteSearch = searchIndex;
+    if (card.filterId || group.controls) {
       article.dataset.catalogFeature = 'true';
-      article.dataset.catalogFilter = card.filterId;
-      article.dataset.catalogSearch = buildCatalogSearchIndex([
-        card.title,
-        card.eyebrow,
-        card.text,
-        card.cta,
-        card.searchText,
-      ].filter(Boolean).join(' '));
+      article.dataset.catalogFilter = card.filterId || '';
+      article.dataset.catalogSearch = searchIndex;
     }
     if (card.filterId) {
       article.dataset.pantallasFeature = 'true';
       article.dataset.pantallasFilter = card.filterId;
-      article.dataset.pantallasSearch = buildCatalogSearchIndex([
-        card.title,
-        card.eyebrow,
-        card.text,
-        card.cta,
-        card.searchText,
-      ].filter(Boolean).join(' '));
+      article.dataset.pantallasSearch = searchIndex;
     }
 
     const link = document.createElement('a');
@@ -2182,13 +2198,16 @@ function renderCatalogPage() {
     products.forEach((product) => {
       const productCard = createProductCard(product);
       const filterTags = getCatalogFilterTags(product, groupId);
-      productCard.dataset.catalogCard = 'true';
-      productCard.dataset.catalogFilter = category;
-      productCard.dataset.catalogTags = filterTags;
-      productCard.dataset.catalogSearch = buildCatalogSearchIndex([
+      const searchIndex = buildCatalogSearchIndex([
         buildCatalogSearchText(product, meta),
         filterTags,
       ]);
+      productCard.dataset.siteSearchItem = 'true';
+      productCard.dataset.siteSearch = searchIndex;
+      productCard.dataset.catalogCard = 'true';
+      productCard.dataset.catalogFilter = category;
+      productCard.dataset.catalogTags = filterTags;
+      productCard.dataset.catalogSearch = searchIndex;
       productCard.dataset.pantallasCard = 'true';
       productCard.dataset.pantallasFilter = category;
       productCard.dataset.pantallasSearch = buildCatalogSearchText(product, meta);
@@ -2247,7 +2266,7 @@ function renderCatalogPage() {
       if (group.controls) {
         featureGrid.dataset.catalogFeatureGrid = group.id;
       }
-      group.featureCards.forEach((card) => featureGrid.appendChild(createCatalogFeatureCard(card)));
+      group.featureCards.forEach((card) => featureGrid.appendChild(createCatalogFeatureCard(card, group)));
       section.appendChild(featureGrid);
     }
 
@@ -2337,6 +2356,7 @@ function renderCatalogPage() {
       if (sectionCount) {
         sectionCount.textContent = visibleResults ? `${visibleResults} resultados` : 'Cotización directa';
       }
+      section.dataset.catalogVisibleResults = String(visibleResults);
     };
 
     buttons.forEach((button) => {
@@ -2352,6 +2372,7 @@ function renderCatalogPage() {
     });
 
     searchInput?.addEventListener('input', applyFilter);
+    if (searchInput && siteQuery) searchInput.value = siteQuery;
     applyFilter();
   }
 
@@ -2423,6 +2444,7 @@ function renderCatalogPage() {
       if (sectionCount) {
         sectionCount.textContent = visibleProducts ? `${visibleProducts} modelos` : 'Cotización directa';
       }
+      section.dataset.catalogVisibleResults = String(visibleResults);
     };
 
     buttons.forEach((button) => {
@@ -2438,11 +2460,35 @@ function renderCatalogPage() {
     });
 
     searchInput?.addEventListener('input', applyFilter);
+    if (searchInput && siteQuery) searchInput.value = siteQuery;
     applyFilter();
   }
 
   sectionsRoot.innerHTML = '';
   CATALOG_GROUPS.forEach(renderCatalogGroup);
+
+  let siteResultCount = 0;
+  sectionsRoot.querySelectorAll('[data-catalog-group]').forEach((section) => {
+    const visibleResults = Number(section.dataset.catalogVisibleResults || 0);
+    siteResultCount += visibleResults;
+    section.hidden = Boolean(siteQuery) && visibleResults === 0;
+    section.style.display = section.hidden ? 'none' : '';
+    section.setAttribute('aria-hidden', String(section.hidden));
+  });
+
+  if (siteSearchStatus) {
+    siteSearchStatus.textContent = siteQuery
+      ? `${siteResultCount} resultados para "${siteQuery}" en el catálogo oficial.`
+      : 'Busca en el catálogo oficial sin salir del sitio web.';
+  }
+  if (siteSearchEmpty) {
+    siteSearchEmpty.hidden = !siteQuery || siteResultCount > 0;
+    siteSearchEmpty.style.display = siteSearchEmpty.hidden ? 'none' : '';
+    const title = siteSearchEmpty.querySelector('[data-site-catalog-empty-title]');
+    const whatsapp = siteSearchEmpty.querySelector('[data-site-catalog-empty-whatsapp]');
+    if (title && siteQuery) title.textContent = `No encontramos "${siteQuery}".`;
+    if (whatsapp && siteQuery) whatsapp.href = buildWhatsAppUrl(buildMissingSearchCotizacionText(siteQuery, 'Catálogo web'));
+  }
 
   document.querySelectorAll('[data-catalog-group-count]').forEach((el) => {
     const group = CATALOG_GROUPS.find((item) => item.id === el.dataset.catalogGroupCount);
