@@ -3,6 +3,7 @@ name: HAODE Check
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   haode-check:
@@ -28,3 +29,82 @@ jobs:
 
       - name: Run HAODE checks
         run: npm run haode:check
+
+  homepage-search-gate:
+    needs: haode-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify homepage search stays on the website
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/haode-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error http://127.0.0.1:4173/ > /dev/null; then
+              break
+            fi
+
+            if [ "$attempt" -eq 30 ]; then
+              sed -n '1,160p' /tmp/haode-http.log
+              exit 1
+            fi
+
+            sleep 1
+          done
+
+          npx playwright test tests/homepage-site-search.spec.js
+
+  package-pages:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs:
+      - haode-check
+      - homepage-search-gate
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare site artifact
+        run: |
+          mkdir _site
+          git archive --format=tar HEAD | tar -x -C _site
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy-pages:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: package-pages
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
