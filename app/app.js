@@ -820,6 +820,17 @@ async function refreshProductsFromExternal(normalizedProducts) {
   state.diagnostics.erpStockItems = erpCatalogRows.length || erpStockRows.length;
   state.diagnostics.erpStockLoaded = state.diagnostics.erpStockItems > 0;
 
+  updateProductDiagnostics(
+    erpCatalogRows.length
+      ? "erp public catalog 2.0 + products.json"
+      : state.diagnostics.erpStockLoaded
+        ? "products.json + erp public-stock.json"
+        : "products.json"
+  );
+  return Boolean(erpCatalogRows.length || erpStockRows.length);
+}
+
+async function refreshFirestoreDiagnostics() {
   try {
     const [allProducts, activeFirestoreProducts] = await withTimeout(Promise.all([
       loadFirestoreProducts(false),
@@ -832,16 +843,7 @@ async function refreshProductsFromExternal(normalizedProducts) {
     state.diagnostics.firestoreTotal = null;
     state.diagnostics.firestoreActive = null;
   }
-
-  updateProductDiagnostics(
-    erpCatalogRows.length
-      ? "erp public catalog 2.0 + products.json"
-      : state.diagnostics.erpStockLoaded
-        ? "products.json + erp public-stock.json"
-        : "products.json"
-  );
-  renderRoute();
-  renderCart();
+  updateProductDiagnostics(window.HAODE_DIAGNOSTICS?.fuente || "products.json");
 }
 
 async function loadProducts() {
@@ -852,9 +854,41 @@ async function loadProducts() {
   state.diagnostics.erpStockItems = 0;
   state.diagnostics.erpStockLoaded = false;
   updateProductDiagnostics("products.json");
-  refreshProductsFromExternal(normalizedProducts).catch((error) => {
-    console.info("HAODE app no pudo actualizar catálogo externo:", error.message);
+  return normalizedProducts;
+}
+
+function afterFirstPaint(callback, delayMs = 0) {
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => window.setTimeout(callback, delayMs));
   });
+}
+
+function scheduleBackgroundRefresh(normalizedProducts) {
+  afterFirstPaint(() => {
+    Promise.all([
+      loadDailyAd(),
+      refreshProductsFromExternal(normalizedProducts)
+    ]).then(([dailyAdChanged, externalCatalogChanged]) => {
+      if (!dailyAdChanged && !externalCatalogChanged) return;
+      if (state.route.name !== "home" || dailyAdChanged) {
+        renderRoute();
+      }
+      renderCart();
+    }).catch((error) => {
+      console.info("HAODE app no pudo actualizar datos secundarios:", error.message);
+    });
+  }, 1500);
+
+  window.setTimeout(() => {
+    const runDiagnostics = () => refreshFirestoreDiagnostics().catch((error) => {
+      console.info("HAODE app no pudo completar diagnóstico Firestore:", error.message);
+    });
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(runDiagnostics, { timeout: 4000 });
+    } else {
+      runDiagnostics();
+    }
+  }, 10000);
 }
 
 async function loadDailyAd() {
@@ -862,15 +896,17 @@ async function loadDailyAd() {
   try {
     const response = await fetch(DAILY_AD_URL, { cache: "no-store" });
     if (!response.ok) {
-      return;
+      return false;
     }
     const data = await response.json();
     if (data && data.status === "draft") {
       state.dailyAd = data;
+      return true;
     }
   } catch (error) {
     console.info("HAODE app sin banner diario:", error.message);
   }
+  return false;
 }
 
 function priceRuleFor(product, quantity = 1) {
@@ -1019,7 +1055,7 @@ function productCardHtml(product, compact = false) {
   const productId = escapeAttr(product.id);
   return `
     <article class="product-card">
-      <a class="product-media" href="${productUrl}" aria-label="Ver ${escapeAttr(product.displayName)}">
+      <a class="product-media" href="${productUrl}">
         <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
@@ -1054,7 +1090,7 @@ function homeProductRowHtml(product) {
   const productId = escapeAttr(product.id);
   return `
     <article class="product-card app-home-product-card">
-      <a class="app-home-product-media" href="${escapeAttr(appProductUrl(product))}" aria-label="Ver ${escapeAttr(product.displayName)}">
+      <a class="app-home-product-media" href="${escapeAttr(appProductUrl(product))}">
         <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
@@ -1121,7 +1157,7 @@ function categoryCardsHtml() {
   return categoryGroups.map((group) => {
     const active = state.activeGroup === group.id ? " is-active" : "";
     return `
-      <a class="category-card${active}" href="${group.url}" data-group-link="${group.id}" aria-label="Ver ${group.title}">
+      <a class="category-card${active}" href="${group.url}" data-group-link="${group.id}">
         ${iconSvg(group.icon)}
         <span>
           <strong>${group.title}</strong>
@@ -1190,7 +1226,7 @@ function renderHome() {
           <span class="hero-badge">Tienda de fábrica HAODE</span>
           <h1>Fábrica directa para talleres</h1>
           <p>Refacciones listas para cotizar por modelo, cantidad y ciudad.</p>
-          <button class="app-quick-search" type="button" data-focus-search aria-label="Buscar por SKU o modelo">
+          <button class="app-quick-search" type="button" data-focus-search>
             <span>Buscar por SKU o modelo</span>
             <strong>Buscar</strong>
           </button>
@@ -1312,7 +1348,7 @@ function promoCardHtml(product) {
   const displayPrice = product.offerDisplayPrice || formatPrice(product.publicPrice);
   const media = product.offerImage || product.image;
   return `
-    <a class="promo-card" href="${escapeAttr(appProductUrl(product))}" aria-label="Ver promoción ${escapeAttr(product.displayName)}">
+    <a class="promo-card" href="${escapeAttr(appProductUrl(product))}">
       <span class="promo-label">Promoción</span>
       <img src="${escapeAttr(safeImageSrc(media))}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
       <strong>${escapeHtml(product.displayName)}</strong>
@@ -1387,7 +1423,7 @@ function premiumSelectionHtml() {
       </div>
       <div class="premium-showcase-grid">
         ${premiumItems.slice(0, 3).map((item) => `
-          <a class="premium-tile" href="${escapeAttr(appProductUrl(item.product))}" aria-label="Ver ${escapeAttr(item.product.displayName)}">
+          <a class="premium-tile" href="${escapeAttr(appProductUrl(item.product))}">
             <span>${escapeHtml(item.label)}</span>
             <strong>${escapeHtml(item.product.displayName)}</strong>
             <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
@@ -2105,6 +2141,10 @@ function renderCart() {
 
   cartCountEls.forEach((el) => {
     el.textContent = String(totalItems);
+    const cartTrigger = el.closest("[data-open-cart]");
+    if (cartTrigger?.classList.contains("cart-action")) {
+      cartTrigger.setAttribute("aria-label", `Abrir carrito, ${totalItems} ${totalItems === 1 ? "producto" : "productos"}`);
+    }
   });
 
   cartDrawerEl?.classList.toggle("cart-drawer-empty", !items.length);
@@ -2451,10 +2491,10 @@ async function init() {
   window.addEventListener("hashchange", () => renderRoute({ resetScroll: true }));
 
   try {
-    await loadProducts();
-    await loadDailyAd();
+    const normalizedProducts = await loadProducts();
     renderRoute({ resetScroll: true });
     renderCart();
+    scheduleBackgroundRefresh(normalizedProducts);
   } catch (error) {
     console.error("No se pudo iniciar HAODE app:", error);
     networkStateEl.hidden = false;

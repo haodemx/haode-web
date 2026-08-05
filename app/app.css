@@ -216,6 +216,10 @@ img {
   margin: 0 auto;
 }
 
+[data-view-root] {
+  min-height: calc(100dvh - 152px);
+}
+
 .app-seo-title,
 .app-live-region {
   position: absolute;
@@ -245,6 +249,12 @@ body.cart-open {
   border-radius: var(--radius-lg);
   background: var(--haode-surface);
   color: var(--haode-muted);
+}
+
+.loading-state {
+  min-height: calc(100dvh - 184px);
+  align-content: center;
+  justify-items: center;
 }
 
 .install-banner[hidden],
@@ -2336,13 +2346,15 @@ body[data-route="product"] .bottom-nav {
   --haode-orange-dark: #c7350b;
   --haode-green: #12a854;
   --haode-green-dark: #087a3e;
+  --haode-action-orange: #c7350b;
+  --haode-action-green: #087a3e;
   --haode-black: #101214;
   --haode-text: #191714;
   --haode-muted: #635d57;
   --haode-bg: #f5f0ea;
   --haode-surface: #ffffff;
   --haode-border: rgba(25, 21, 18, 0.12);
-  --haode-success: #12a854;
+  --haode-success: #087a3e;
   --radius-xl: 8px;
   --radius-lg: 8px;
   --radius-md: 8px;
@@ -2434,9 +2446,7 @@ body {
   padding: 14px;
   border: 1px solid rgba(25, 21, 18, 0.1);
   border-radius: 8px;
-  background:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 239, 0.9)),
-    url("/assets/images/store-gallery/store-cdmx-03.jpg") center / cover no-repeat;
+  background: linear-gradient(120deg, #ffffff, #fff7ef);
   box-shadow: var(--shadow-soft);
 }
 
@@ -2901,6 +2911,12 @@ body {
 .app-home-intro {
   display: grid;
   gap: 8px;
+  padding: 12px;
+  border: 1px solid rgba(240, 74, 20, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.97), rgba(255, 247, 239, 0.88)),
+    url("/assets/images/store-gallery/store-cdmx-03.jpg") center 42% / cover no-repeat;
 }
 
 .app-home-intro h1 {
@@ -4177,4 +4193,27 @@ body[data-route="product"] .related-grid .product-media img {
   .app-contact-detail-grid article small {
     grid-column: 2;
   }
+}
+
+/* Accessible action colors keep HAODE brand accents unchanged. */
+:is(
+  .primary-button,
+  .add-button,
+  .app-quick-search strong,
+  .promo-label,
+  .premium-chip.is-featured span,
+  .cart-action > span,
+  .bottom-nav strong,
+  .app-hero-product > span,
+  .app-contact-detail-grid article > span
+) {
+  background: var(--haode-action-orange);
+}
+
+:is(.whatsapp-button, .whatsapp-header-action) {
+  background: var(--haode-action-green);
+}
+
+body .app-home-board .app-hero-actions .whatsapp-button {
+  background: var(--haode-action-green);
 }

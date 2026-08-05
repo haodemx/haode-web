@@ -8293,6 +8293,8 @@ body.home-page-reference {
   --ref-orange-dark: #c7350b;
   --ref-green: #12a854;
   --ref-green-dark: #087a3e;
+  --ref-action-orange: #c7350b;
+  --ref-action-green: #087a3e;
   --ref-black: #101214;
   --ref-ink: #151515;
   --ref-muted: #5f5a55;
@@ -13924,4 +13926,23 @@ body.product-detail-page .detail-title {
     font-size: clamp(1.75rem, 8vw, 2.25rem);
     line-height: 1.04;
   }
+}
+
+/* Accessible action colors keep HAODE brand accents unchanged. */
+body.home-page-reference :is(
+  .reference-head-cart em,
+  .reference-hero-search strong,
+  .reference-product-card > span
+) {
+  background: var(--ref-action-orange);
+}
+
+body.home-page-reference .reference-btn-solid {
+  border-color: var(--ref-action-orange);
+  background: var(--ref-action-orange);
+}
+
+body.home-page-reference .reference-btn-whatsapp {
+  border-color: var(--ref-action-green);
+  background: var(--ref-action-green);
 }

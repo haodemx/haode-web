@@ -76,7 +76,9 @@
   global.gtag("consent", "default", consentParameters(currentConsent, true));
   global.gtag("set", "ads_data_redaction", true);
 
-  if (!global.document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}"]`)) {
+  function ensureGoogleTagLoaded() {
+    if (!currentConsent.analytics && !currentConsent.advertising) return;
+    if (global.document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}"]`)) return;
     const loader = global.document.createElement("script");
     loader.async = true;
     loader.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
@@ -90,6 +92,7 @@
     allow_ad_personalization_signals: currentConsent.advertising,
     page_location: analyticsPageLocation()
   });
+  ensureGoogleTagLoaded();
 
   function saveConsent(choice) {
     try {
@@ -116,6 +119,7 @@
       allow_ad_personalization_signals: currentConsent.advertising,
       send_page_view: false
     });
+    ensureGoogleTagLoaded();
     global.dispatchEvent(new CustomEvent("haode:privacy-consent", {
       detail: { ...currentConsent }
     }));
@@ -184,6 +188,9 @@
     global.document.body.appendChild(root);
     if (global.document.querySelector(".bottom-nav")) {
       root.classList.add("haode-privacy-has-bottom-nav");
+    }
+    if (global.document.querySelector(".reference-sticky-whatsapp")) {
+      root.classList.add("haode-privacy-has-sticky-whatsapp");
     }
 
     const banner = root.querySelector("[data-haode-privacy-banner]");

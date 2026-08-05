@@ -42,12 +42,14 @@ test('every product route loads the consent-aware analytics entrypoint', () => {
   assert.deepEqual(missing, []);
 });
 
-test('analytics defaults storage to denied before loading Google tag', () => {
+test('analytics defaults storage to denied and gates the Google tag on consent', () => {
   const analytics = fs.readFileSync(path.join(ROOT, 'analytics.js'), 'utf8');
   const consentDefault = analytics.indexOf('global.gtag("consent", "default"');
   const loader = analytics.indexOf('loader.src = `https://www.googletagmanager.com/gtag/js');
   assert.ok(consentDefault >= 0, 'Missing Consent Mode default command');
   assert.ok(loader > consentDefault, 'Google tag loads before consent defaults');
+  assert.match(analytics, /if \(!currentConsent\.analytics && !currentConsent\.advertising\) return;/);
+  assert.match(analytics, /ensureGoogleTagLoaded\(\);/);
   assert.match(analytics, /analytics_storage: choice\.analytics \? "granted" : "denied"/);
   assert.match(analytics, /ad_user_data: choice\.advertising \? "granted" : "denied"/);
   assert.match(analytics, /allow_google_signals: false/);

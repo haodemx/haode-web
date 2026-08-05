@@ -33,6 +33,7 @@ test('Consent Mode starts denied and saves an explicit analytics choice', async 
   });
   expect(consentIndex).toBeGreaterThanOrEqual(0);
   expect(configIndex).toBeGreaterThan(consentIndex);
+  expect(await page.locator('[data-haode-analytics-loader]').count()).toBe(0);
 
   await page.getByRole('button', { name: 'Configurar' }).click();
   const dialog = page.getByRole('dialog', { name: 'Configura tu privacidad' });
@@ -55,6 +56,7 @@ test('Consent Mode starts denied and saves an explicit analytics choice', async 
     ad_storage: 'denied',
     ad_user_data: 'denied',
   });
+  await expect(page.locator('[data-haode-analytics-loader]')).toHaveCount(1);
 
   await page.reload({ waitUntil: 'domcontentloaded' });
   await expect(banner).toBeHidden();

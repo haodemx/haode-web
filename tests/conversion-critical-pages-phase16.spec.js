@@ -92,7 +92,7 @@ async function checkCriticalPage(page, pageCase, viewport) {
   if (pageCase.name === 'home') {
     await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
     await expect(page.locator('.reference-proof-band')).toContainText('Control de calidad');
-    const factoryImage = page.locator('img[src="/assets/images/factory-store-hero-products.png"]:visible').first();
+    const factoryImage = page.locator('img[src="/assets/images/factory-store-hero-products-hero.webp"]:visible').first();
     await expect(factoryImage).toBeVisible();
     expect(await factoryImage.evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
     await expect(page.locator('.reference-product-composition')).toHaveCount(0);
