@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies if needed
         run: |
@@ -30,17 +30,17 @@ jobs:
       - name: Run HAODE checks
         run: npm run haode:check
 
-  homepage-search-gate:
+  critical-business-gate:
     needs: haode-check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm ci
@@ -48,7 +48,7 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Verify homepage search stays on the website
+      - name: Verify Website and App purchase paths
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/haode-http.log 2>&1 &
           server_pid=$!
@@ -67,19 +67,27 @@ jobs:
             sleep 1
           done
 
-          npx playwright test tests/homepage-site-search.spec.js
+          npx playwright test \
+            tests/homepage-site-search.spec.js \
+            tests/app-interaction-regressions.spec.js \
+            tests/haode-app.spec.js \
+            tests/homepage-whatsapp-tracking.spec.js \
+            --workers=1
+          npx playwright test tests/site-sales-shell-phase30.spec.js \
+            --grep "404 gives catalog, category and WhatsApp recovery routes" \
+            --workers=1
 
   package-pages:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs:
       - haode-check
-      - homepage-search-gate
+      - critical-business-gate
     permissions:
       contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -108,3 +116,40 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  live-verify:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: deploy-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify the deployed custom domain
+        env:
+          BASE_URL: https://haode.com.mx
+        run: |
+          for attempt in {1..6}; do
+            if npm run verify:live \
+              && npx playwright test tests/homepage-site-search.spec.js --workers=1; then
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 6 ]; then
+              exit 1
+            fi
+
+            echo "Live deployment is still propagating; retrying in 15 seconds."
+            sleep 15
+          done
