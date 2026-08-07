@@ -91,7 +91,7 @@ async function checkCriticalPage(page, pageCase, viewport) {
   }
   if (pageCase.name === 'home') {
     await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
-    await expect(page.locator('.reference-proof-band')).toContainText('Control de calidad');
+    await expect(page.locator('.reference-proof-band')).toContainText('Verificación de pedido');
     const factoryImage = page.locator('img[src="/assets/images/factory-store-hero-products-hero.webp"]:visible').first();
     await expect(factoryImage).toBeVisible();
     expect(await factoryImage.evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
@@ -129,7 +129,7 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 async function expectMobileHomeVisual(page) {
   const visual = page.locator('.reference-mobile-hero-visual');
   await expect(visual).toBeVisible();
-  await expect(visual).toContainText('Stock MX');
+  await expect(visual).toContainText('Modelo · versión · cantidad');
   const box = await visual.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     return { top: Math.round(rect.top), height: Math.round(rect.height) };
