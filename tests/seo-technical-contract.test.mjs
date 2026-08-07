@@ -174,6 +174,8 @@ test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () =>
   const graph = blocks.flatMap((block) => block['@graph'] || [block]);
   const types = new Set(graph.map((node) => node['@type']));
   const itemList = graph.find((node) => node['@id'] === `${SITE_URL}/#main-categories`);
+  const organization = graph.find((node) => node['@id'] === `${SITE_URL}/#organization`);
+  const localBusiness = graph.find((node) => node['@id'] === `${SITE_URL}/#localbusiness`);
 
   assert.ok(types.has('Organization'));
   assert.ok(types.has('LocalBusiness'));
@@ -181,14 +183,37 @@ test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () =>
   assert.ok(types.has('WebPage'));
   assert.equal(itemList?.['@type'], 'ItemList');
   assert.equal(itemList.itemListElement.length, 8);
+  assert.equal(organization?.contactPoint?.telephone, '+52 56 4586 6014');
+  assert.equal(organization?.contactPoint?.contactType, 'ventas');
+  assert.ok(!Object.hasOwn(localBusiness || {}, 'priceRange'));
 });
 
 test('homepage does not publish unsupported performance claims or testimonials', () => {
   const homepage = read('index.html');
-  for (const unsupportedClaim of ['+8,000', '+25,000', '98%', 'Carlos M.']) {
+  for (const unsupportedClaim of [
+    '+8,000',
+    '+25,000',
+    '98%',
+    'Carlos M.',
+    'Pruebas 100%',
+    'Mejor precio al mayoreo',
+    'te respondemos en minutos',
+    'Cada pieza revisada',
+    'atención inmediata',
+  ]) {
     assert.ok(!homepage.includes(unsupportedClaim), `unsupported homepage claim found: ${unsupportedClaim}`);
   }
-  for (const confirmedServiceFact of ['Atención local', 'Precio por cantidad', 'Cotización directa', 'Envío bajo confirmación']) {
+  for (const confirmedServiceFact of [
+    'Atención local',
+    'Precio por cantidad',
+    'Cotización directa',
+    'Envío bajo confirmación',
+    'Stock en México',
+    'Sujeto a confirmación',
+    'Garantía según producto',
+    'Modelo o SKU',
+    'Ciudad de entrega',
+  ]) {
     assert.ok(homepage.includes(confirmedServiceFact), `missing confirmed homepage fact: ${confirmedServiceFact}`);
   }
 });
