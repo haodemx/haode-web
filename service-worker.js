@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-07-26-growth-phase37";
+const CACHE_VERSION = "haode-pwa-v2026-08-09-pantallas-logo";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -22,6 +22,7 @@ const APP_SHELL_URLS = [
   "/manifest.webmanifest",
   "/assets/logo/logo.png",
   "/assets/images/factory-store-wordmark.png",
+  "/assets/images/haode-wordmark-transparent.png",
   "/assets/logo/favicon.png",
   "/assets/icons/haode-icon-192.png",
   "/assets/icons/haode-icon-512.png",

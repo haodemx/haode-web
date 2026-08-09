@@ -6,12 +6,12 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Fábrica directa para talleres', 'Stock en México', 'WhatsApp'],
+    texts: ['Fábrica directa para pantallas', 'Stock en México', 'WhatsApp'],
   },
   {
     path: '/app/',
     name: 'app home',
-    texts: ['Fábrica directa para talleres', 'Precio por cantidad', 'WhatsApp privado'],
+    texts: ['Fábrica directa para pantallas', 'Precio por cantidad', 'WhatsApp privado'],
   },
   {
     path: '/productos/',
