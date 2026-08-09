@@ -2379,16 +2379,26 @@ body {
 }
 
 .brand img {
-  display: none;
+  display: block;
+  width: 150px;
+  height: auto;
+  max-height: 40px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
 }
 
 .is-webview .brand img {
-  display: none;
+  display: block;
+  width: 136px;
+  height: auto;
+  border-radius: 0;
 }
 
 .brand span {
-  display: grid;
-  gap: 2px;
+  display: none;
 }
 
 .brand strong {
@@ -2801,7 +2811,7 @@ body {
 
   .brand img {
     width: 154px;
-    height: 48px;
+    height: auto;
   }
 
   .page-stack {

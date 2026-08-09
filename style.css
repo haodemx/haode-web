@@ -15485,7 +15485,7 @@ body.home-page-reference .reference-sticky-whatsapp {
 
   body.home-page-reference .reference-hero h1 {
     max-width: 9ch;
-    font-size: clamp(46px, 15vw, 64px);
+    font-size: clamp(44px, 12.3vw, 54px);
     letter-spacing: -0.065em;
   }
 

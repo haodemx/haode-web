@@ -3,6 +3,10 @@ import fs from 'node:fs';
 import test from 'node:test';
 
 const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const appHtml = fs.readFileSync(new URL('../app/index.html', import.meta.url), 'utf8');
+const appJs = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8');
+const serviceWorker = fs.readFileSync(new URL('../service-worker.js', import.meta.url), 'utf8');
+const transparentWordmark = fs.readFileSync(new URL('../assets/images/haode-wordmark-transparent.png', import.meta.url));
 
 function openingTagWith(attribute) {
   const pattern = new RegExp(`<[^>]+\\b${attribute}\\b[^>]*>`, 'i');
@@ -57,4 +61,22 @@ test('dynamic promotion is announced and below-fold content media is deferred', 
 test('mobile surface opts into safe-area layout and current theme color', () => {
   assert.match(html, /<meta\b[^>]*name=["']viewport["'][^>]*content=["'][^"']*viewport-fit=cover[^"']*["']/i);
   assert.match(html, /<meta\b[^>]*name=["']theme-color["'][^>]*content=["']#151515["']/i);
+});
+
+test('homepage and App use the same transparent HAODE wordmark', () => {
+  const wordmarkPath = '/assets/images/haode-wordmark-transparent.png';
+  assert.match(html, new RegExp(`src=["']${wordmarkPath.replaceAll('/', '\\/')}["']`, 'i'));
+  assert.match(appHtml, new RegExp(`src=["']${wordmarkPath.replaceAll('/', '\\/')}["']`, 'i'));
+  assert.ok(serviceWorker.includes(`"${wordmarkPath}"`), 'installed App must cache the transparent wordmark');
+
+  assert.equal(transparentWordmark.subarray(1, 4).toString('ascii'), 'PNG');
+  const pngColorType = transparentWordmark[25];
+  assert.ok([4, 6].includes(pngColorType), `wordmark PNG must carry alpha; color type was ${pngColorType}`);
+});
+
+test('homepage and App lead with pantallas instead of talleres', () => {
+  assert.match(html, /<h1>Fábrica directa\s*<span>para pantallas<\/span><\/h1>/i);
+  assert.doesNotMatch(html, /<h1>Fábrica directa\s*<span>para talleres<\/span><\/h1>/i);
+  assert.match(appJs, /<h1>Fábrica directa para pantallas<\/h1>/i);
+  assert.doesNotMatch(appJs, /<h1>Fábrica directa para talleres<\/h1>/i);
 });
