@@ -153,7 +153,47 @@ function attachHoverVideos() {
   });
 }
 
+function setupReferenceMenu() {
+  const button = document.querySelector('[data-reference-menu-button]');
+  const panel = document.querySelector('[data-reference-menu-panel]');
+  if (!button || !panel) return;
+
+  const mobile = window.matchMedia('(max-width: 760px)');
+
+  const setOpen = (open, { restoreFocus = false } = {}) => {
+    const shouldOpen = Boolean(open) && mobile.matches;
+    button.setAttribute('aria-expanded', String(shouldOpen));
+    panel.hidden = mobile.matches ? !shouldOpen : false;
+    if (restoreFocus) button.focus();
+  };
+
+  const syncViewport = () => setOpen(false);
+
+  button.addEventListener('click', () => {
+    setOpen(button.getAttribute('aria-expanded') !== 'true');
+  });
+
+  panel.addEventListener('click', (event) => {
+    if (event.target instanceof Element && event.target.closest('a')) setOpen(false);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+      setOpen(false, { restoreFocus: true });
+    }
+  });
+
+  if (typeof mobile.addEventListener === 'function') {
+    mobile.addEventListener('change', syncViewport);
+  } else {
+    mobile.addListener(syncViewport);
+  }
+
+  syncViewport();
+}
+
 document.addEventListener('DOMContentLoaded', attachWhatsAppTracking);
 document.addEventListener('DOMContentLoaded', attachHoverVideos);
 document.addEventListener('DOMContentLoaded', loadDailyAdBanner);
+document.addEventListener('DOMContentLoaded', setupReferenceMenu);
 })();
