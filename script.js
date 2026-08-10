@@ -153,6 +153,122 @@ function attachHoverVideos() {
   });
 }
 
+const HOME_HERO_SLIDES = [
+  {
+    src: '/assets/images/home-hero-carousel/iphone-incell.webp',
+    label: 'iPhone INCELL',
+    alt: 'Familia de pantallas iPhone INCELL HL con modelos disponibles',
+  },
+  {
+    src: '/assets/images/home-hero-carousel/iphone-oled.webp',
+    label: 'iPhone OLED',
+    alt: 'Familia de pantallas iPhone OLED HL con modelos disponibles',
+  },
+  {
+    src: '/assets/images/home-hero-carousel/samsung-incell.webp',
+    label: 'Samsung INCELL',
+    alt: 'Familia de pantallas Samsung INCELL HL con modelos disponibles',
+  },
+  {
+    src: '/assets/images/home-hero-carousel/samsung-oled.webp',
+    label: 'Samsung OLED',
+    alt: 'Familia de pantallas Samsung OLED HAODE con modelos disponibles',
+  },
+  {
+    src: '/assets/images/home-hero-carousel/samsung-original.webp',
+    label: 'Samsung tipo original',
+    alt: 'Familia de pantallas Samsung tipo original con modelos disponibles',
+  },
+  {
+    src: '/assets/images/home-hero-carousel/iphone-oled-diagnostica.webp',
+    label: 'iPhone OLED diagnóstica',
+    alt: 'Familia de pantallas iPhone OLED diagnóstica con modelos disponibles',
+  },
+  {
+    src: '/assets/images/home-hero-carousel/samsung-plegables-incell.webp',
+    label: 'Samsung plegables INCELL',
+    alt: 'Pantallas Samsung plegables INCELL Z Flip y Z Fold con modelos disponibles',
+  },
+];
+
+function setupHomeHeroCarousels() {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  document.querySelectorAll('[data-home-hero-carousel]').forEach((carousel) => {
+    const image = carousel.querySelector('[data-home-hero-carousel-image]');
+    const previous = carousel.querySelector('[data-home-hero-carousel-prev]');
+    const next = carousel.querySelector('[data-home-hero-carousel-next]');
+    const dots = carousel.querySelector('[data-home-hero-carousel-dots]');
+    const status = carousel.querySelector('[data-home-hero-carousel-status]');
+    if (!image || !previous || !next || !dots || !status) return;
+
+    let activeIndex = 0;
+    let timer = null;
+
+    const dotButtons = HOME_HERO_SLIDES.map((slide, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Ver ${slide.label}`);
+      dot.setAttribute('data-home-hero-carousel-dot', '');
+      dot.addEventListener('click', () => showSlide(index, true));
+      dots.append(dot);
+      return dot;
+    });
+
+    const preloadFollowingSlide = () => {
+      const following = new Image();
+      following.src = HOME_HERO_SLIDES[(activeIndex + 1) % HOME_HERO_SLIDES.length].src;
+    };
+
+    const renderSlide = () => {
+      const slide = HOME_HERO_SLIDES[activeIndex];
+      carousel.style.setProperty('--home-carousel-image', `url("${slide.src}")`);
+      image.src = slide.src;
+      image.alt = slide.alt;
+      status.textContent = `${slide.label} · ${activeIndex + 1} de ${HOME_HERO_SLIDES.length}`;
+      dotButtons.forEach((dot, index) => {
+        dot.setAttribute('aria-current', index === activeIndex ? 'true' : 'false');
+      });
+      preloadFollowingSlide();
+    };
+
+    const stopAutoplay = () => {
+      window.clearInterval(timer);
+      timer = null;
+    };
+
+    const startAutoplay = () => {
+      stopAutoplay();
+      if (reducedMotion.matches || document.hidden) return;
+      timer = window.setInterval(() => showSlide(activeIndex + 1, false), 7000);
+    };
+
+    function showSlide(index, restartAutoplay) {
+      activeIndex = (index + HOME_HERO_SLIDES.length) % HOME_HERO_SLIDES.length;
+      renderSlide();
+      if (restartAutoplay) startAutoplay();
+    }
+
+    previous.addEventListener('click', () => showSlide(activeIndex - 1, true));
+    next.addEventListener('click', () => showSlide(activeIndex + 1, true));
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
+
+    if (typeof reducedMotion.addEventListener === 'function') {
+      reducedMotion.addEventListener('change', startAutoplay);
+    }
+
+    renderSlide();
+    startAutoplay();
+  });
+}
+
 function setupReferenceMenu() {
   const button = document.querySelector('[data-reference-menu-button]');
   const panel = document.querySelector('[data-reference-menu-panel]');
@@ -195,5 +311,6 @@ function setupReferenceMenu() {
 document.addEventListener('DOMContentLoaded', attachWhatsAppTracking);
 document.addEventListener('DOMContentLoaded', attachHoverVideos);
 document.addEventListener('DOMContentLoaded', loadDailyAdBanner);
+document.addEventListener('DOMContentLoaded', setupHomeHeroCarousels);
 document.addEventListener('DOMContentLoaded', setupReferenceMenu);
 })();

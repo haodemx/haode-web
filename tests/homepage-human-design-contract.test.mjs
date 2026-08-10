@@ -7,6 +7,7 @@ const appHtml = fs.readFileSync(new URL('../app/index.html', import.meta.url), '
 const appJs = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8');
 const serviceWorker = fs.readFileSync(new URL('../service-worker.js', import.meta.url), 'utf8');
 const script = fs.readFileSync(new URL('../script.js', import.meta.url), 'utf8');
+const styles = fs.readFileSync(new URL('../style.css', import.meta.url), 'utf8');
 const transparentWordmark = fs.readFileSync(new URL('../assets/images/haode-wordmark-transparent.png', import.meta.url));
 
 function openingTagWith(attribute) {
@@ -52,6 +53,25 @@ test('homepage presents four primary supply paths without fake carousel controls
   assert.doesNotMatch(html, /class=["'][^"']*reference-round-arrow/i);
 });
 
+test('homepage hero exposes the approved seven-family carousel on desktop and mobile', () => {
+  const carousels = html.match(/<(?:div|figure)\b[^>]*\sdata-home-hero-carousel(?:\s|>)[^>]*>/gi) || [];
+  assert.equal(carousels.length, 2, 'desktop and mobile must share the same carousel contract');
+
+  for (const hook of [
+    'data-home-hero-carousel-image',
+    'data-home-hero-carousel-prev',
+    'data-home-hero-carousel-next',
+    'data-home-hero-carousel-dots',
+    'data-home-hero-carousel-status',
+  ]) {
+    const instances = html.match(new RegExp(`\\b${hook}\\b`, 'gi')) || [];
+    assert.equal(instances.length, 2, `${hook} must exist once in each carousel`);
+  }
+
+  const firstSlides = html.match(/src=["']\/assets\/images\/home-hero-carousel\/iphone-incell\.webp["']/gi) || [];
+  assert.equal(firstSlides.length, 2, 'both carousels must render the first approved family image');
+});
+
 test('dynamic promotion is announced and below-fold content media is deferred', () => {
   const dailyAd = openingTagWith('data-daily-ad');
   assert.match(dailyAd, /aria-live=["']polite["']/i);
@@ -87,6 +107,21 @@ test('homepage and App lead with pantallas instead of talleres', () => {
   assert.doesNotMatch(html, /<h1>Fábrica directa\s*<span>para talleres<\/span><\/h1>/i);
   assert.match(appJs, /<h1>Fábrica directa para pantallas<\/h1>/i);
   assert.doesNotMatch(appJs, /<h1>Fábrica directa para talleres<\/h1>/i);
+});
+
+test('homepage header uses one restrained dark action system', () => {
+  const header = html.match(/<header\b[^>]*class=["'][^"']*reference-header[^"']*["'][^>]*>([\s\S]*?)<\/header>/i);
+  assert.ok(header, 'homepage must include the reference header');
+  assert.match(header[1], /<strong>Atención por WhatsApp<\/strong>\s*<small>56 4586 6014<\/small>/i);
+  assert.match(header[1], /<strong>Abrir APP<\/strong>\s*<small>Catálogo y pedido<\/small>/i);
+  assert.match(header[1], /<strong>Pedido\s*<em>0<\/em><\/strong>\s*<small>Ver carrito<\/small>/i);
+  assert.match(header[1], />\s*Lista por WhatsApp\s*<\/a>/i);
+
+  assert.match(styles, /body\.home-page-reference \.reference-header\s*{[^}]*height:\s*auto;/i);
+  assert.match(styles, /body\.home-page-reference \.reference-head-info::before,\s*body\.home-page-reference \.reference-head-action::before\s*{[^}]*content:\s*none;/i);
+  assert.match(styles, /body\.home-page-reference \.reference-head-account strong\s*{[^}]*color:\s*#ff7a3a;/i);
+  assert.match(styles, /body\.home-page-reference \.reference-nav-actions a\[href\*="wa\.me"\]\s*{[^}]*background:\s*transparent;/i);
+  assert.match(styles, /body\.home-page-reference \.reference-nav-actions a\[href="\/app\/"\]\s*{[^}]*background:\s*transparent;/i);
 });
 
 test('App keeps one primary heading, reserves product image space, and avoids unconfirmed delivery claims', () => {
