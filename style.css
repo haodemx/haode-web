@@ -15295,6 +15295,12 @@ body.home-page-reference .reference-socials :where(a, span) {
   border-radius: 0;
 }
 
+body.home-page-reference .reference-socials .social-logo {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
 body.home-page-reference .reference-footer-contact {
   font-style: normal;
 }
