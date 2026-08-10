@@ -1056,7 +1056,7 @@ function productCardHtml(product, compact = false) {
   return `
     <article class="product-card">
       <a class="product-media" href="${productUrl}">
-        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" width="640" height="640" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="product-body">
@@ -1091,7 +1091,7 @@ function homeProductRowHtml(product) {
   return `
     <article class="product-card app-home-product-card">
       <a class="app-home-product-media" href="${escapeAttr(appProductUrl(product))}">
-        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" width="700" height="620" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
       <div class="app-home-product-copy">
@@ -1293,7 +1293,7 @@ function renderHome() {
         ${benefitHtml("Stock en México", "grid")}
         ${benefitHtml("WhatsApp", "whatsapp")}
         ${benefitHtml("Calidad HAODE", "shield")}
-        ${benefitHtml("Envío rápido", "truck")}
+        ${benefitHtml("Envío por confirmar", "truck")}
       </section>
 
       ${seoLinksHtml()}
@@ -1350,7 +1350,7 @@ function promoCardHtml(product) {
   return `
     <a class="promo-card" href="${escapeAttr(appProductUrl(product))}">
       <span class="promo-label">Promoción</span>
-      <img src="${escapeAttr(safeImageSrc(media))}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+      <img src="${escapeAttr(safeImageSrc(media))}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.name)}" width="640" height="640" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
       <strong>${escapeHtml(product.displayName)}</strong>
       <span class="promo-price">${escapeHtml(displayPrice)}</span>
     </a>
@@ -1426,7 +1426,7 @@ function premiumSelectionHtml() {
           <a class="premium-tile" href="${escapeAttr(appProductUrl(item.product))}">
             <span>${escapeHtml(item.label)}</span>
             <strong>${escapeHtml(item.product.displayName)}</strong>
-            <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+            <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" width="640" height="640" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
           </a>
         `).join("")}
       </div>
@@ -1681,7 +1681,7 @@ function productGalleryHtml(product, images) {
   return `
     <div class="gallery-stage">
       ${isX200T(product) ? '<span class="gallery-badge">Galería de producto</span>' : ""}
-      <img src="${escapeAttr(safeImageSrc(selected))}"${optimizedImageSrcset(selected, "detail")} alt="${escapeAttr(product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+      <img src="${escapeAttr(safeImageSrc(selected))}"${optimizedImageSrcset(selected, "detail")} alt="${escapeAttr(product.name)}" width="960" height="960" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
       ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
     </div>
     ${thumbStripHtml(images, state.selectedGalleryIndex)}
@@ -1693,7 +1693,7 @@ function product360Html(product, frames) {
   return `
     <div class="viewer-stage" data-viewer-stage tabindex="0" role="group" aria-label="Vista 360 de ${escapeAttr(product.name)}">
       <span class="viewer-badge">360°</span>
-      <img src="${escapeAttr(safeImageSrc(frame))}"${optimizedImageSrcset(frame, "detail")} alt="${escapeAttr(product.name)} vista 360" data-viewer-image loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+      <img src="${escapeAttr(safeImageSrc(frame))}"${optimizedImageSrcset(frame, "detail")} alt="${escapeAttr(product.name)} vista 360" width="960" height="960" data-viewer-image loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
       <span class="viewer-help">Desliza para ver 360°</span>
       <div class="viewer-controls">
         <button type="button" data-viewer-prev aria-label="Vista anterior">‹</button>
@@ -1709,7 +1709,7 @@ function thumbStripHtml(images, selectedIndex, viewer = false) {
     <div class="thumb-strip" aria-label="Miniaturas del producto">
       ${images.map((image, index) => `
         <button class="${index === selectedIndex ? "is-active" : ""}" type="button" ${viewer ? `data-viewer-frame="${index}"` : `data-gallery-image="${index}"`} aria-label="Ver imagen ${index + 1}">
-          <img src="${escapeAttr(safeImageSrc(image))}"${optimizedImageSrcset(image)} alt="" loading="lazy" decoding="async" />
+          <img src="${escapeAttr(safeImageSrc(image))}"${optimizedImageSrcset(image)} alt="" width="160" height="160" loading="lazy" decoding="async" />
         </button>
       `).join("")}
     </div>
@@ -1767,7 +1767,7 @@ function renderCartPage() {
     const productIdAttr = escapeAttr(item.product.id);
     return `
       <article class="cart-item">
-        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" width="240" height="240" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         <div>
           <h3>${escapeHtml(item.product.displayName)}</h3>
           <p>${escapeHtml(item.product.model)}</p>
@@ -2164,7 +2164,7 @@ function renderCart() {
     const productIdAttr = escapeAttr(item.product.id);
     return `
       <article class="cart-item">
-        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" width="240" height="240" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         <div>
           <h3>${escapeHtml(item.product.displayName)}</h3>
           <p>${escapeHtml(item.product.model)}</p>

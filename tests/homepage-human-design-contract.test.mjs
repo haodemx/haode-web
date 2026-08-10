@@ -6,6 +6,7 @@ const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const appHtml = fs.readFileSync(new URL('../app/index.html', import.meta.url), 'utf8');
 const appJs = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8');
 const serviceWorker = fs.readFileSync(new URL('../service-worker.js', import.meta.url), 'utf8');
+const script = fs.readFileSync(new URL('../script.js', import.meta.url), 'utf8');
 const transparentWordmark = fs.readFileSync(new URL('../assets/images/haode-wordmark-transparent.png', import.meta.url));
 
 function openingTagWith(attribute) {
@@ -29,6 +30,13 @@ test('primary navigation is focused and controlled by an accessible button', () 
   assert.match(menuButton, /^<button\b/i);
   assert.match(menuButton, /aria-controls=["']primary-navigation["']/i);
   assert.match(menuButton, /aria-expanded=["']false["']/i);
+  assert.match(navigation[0], /\bhidden\b/i, 'mobile navigation must be closed before JavaScript runs');
+  assert.match(script, /panel\.hidden\s*=\s*mobile\.matches\s*\?\s*!shouldOpen\s*:\s*false/i);
+});
+
+test('homepage navigation script bypasses stale service-worker copies', () => {
+  assert.match(html, /<script\b[^>]*src=["']\/script\.js\?v=\d{8}-final-audit["'][^>]*><\/script>/i);
+  assert.match(serviceWorker, /url\.pathname\s*===\s*["']\/script\.js["']/i);
 });
 
 test('hero has one primary WhatsApp action and keeps official catalog search secondary', () => {
@@ -79,6 +87,20 @@ test('homepage and App lead with pantallas instead of talleres', () => {
   assert.doesNotMatch(html, /<h1>Fábrica directa\s*<span>para talleres<\/span><\/h1>/i);
   assert.match(appJs, /<h1>Fábrica directa para pantallas<\/h1>/i);
   assert.doesNotMatch(appJs, /<h1>Fábrica directa para talleres<\/h1>/i);
+});
+
+test('App keeps one primary heading, reserves product image space, and avoids unconfirmed delivery claims', () => {
+  assert.doesNotMatch(appHtml, /<h1\b[^>]*class=["']app-seo-title["']/i);
+  assert.match(appHtml, /<p\b[^>]*class=["']app-seo-title["']/i);
+  assert.doesNotMatch(appJs, /Envío rápido/i);
+  assert.match(appJs, /Envío por confirmar/i);
+
+  const dynamicImages = [...appJs.matchAll(/<img\b[^>]*>/gi)].map((match) => match[0]);
+  assert.ok(dynamicImages.length > 0, 'expected dynamic App images to validate');
+  for (const image of dynamicImages) {
+    assert.match(image, /\bwidth=["']\d+["']/i, `missing intrinsic width: ${image}`);
+    assert.match(image, /\bheight=["']\d+["']/i, `missing intrinsic height: ${image}`);
+  }
 });
 
 test('homepage footer uses the transparent wordmark and screen-first copy', () => {
