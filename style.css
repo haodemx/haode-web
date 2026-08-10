@@ -15894,3 +15894,155 @@ body.home-page-reference .reference-sticky-whatsapp {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Homepage product-family carousel: one restrained control system for all seven families. */
+body.home-page-reference .reference-home-carousel {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #151515;
+}
+
+body.home-page-reference .reference-home-carousel::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  z-index: 0;
+  background-image: linear-gradient(rgb(21 21 21 / 26%), rgb(21 21 21 / 26%)), var(--home-carousel-image);
+  background-position: center;
+  background-size: cover;
+  filter: blur(18px) saturate(0.82);
+  opacity: 0.78;
+  transform: scale(1.06);
+}
+
+body.home-page-reference .reference-home-carousel > img,
+body.home-page-reference .reference-factory-hero-image.reference-home-carousel > img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
+}
+
+body.home-page-reference .reference-factory-hero-image::after {
+  content: none;
+}
+
+body.home-page-reference .reference-home-carousel-controls {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 6px;
+  border: 1px solid rgb(255 255 255 / 42%);
+  border-radius: 999px;
+  background: rgb(21 21 21 / 92%);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 24%);
+  transform: translateX(-50%);
+}
+
+body.home-page-reference .reference-home-carousel-controls button {
+  display: grid;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+body.home-page-reference .reference-home-carousel-controls > button {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+body.home-page-reference .reference-home-carousel-controls button:hover {
+  background: rgb(255 255 255 / 12%);
+}
+
+body.home-page-reference .reference-home-carousel-controls button:focus-visible {
+  outline: 2px solid var(--haode-orange);
+  outline-offset: 1px;
+}
+
+body.home-page-reference .reference-home-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+body.home-page-reference .reference-home-carousel-dots button {
+  position: relative;
+  min-width: 20px;
+}
+
+body.home-page-reference .reference-home-carousel-dots button::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 62%);
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+body.home-page-reference .reference-home-carousel-dots button[aria-current="true"]::before {
+  width: 16px;
+  background: var(--haode-orange);
+}
+
+body.home-page-reference .reference-home-carousel-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  body.home-page-reference .reference-mobile-hero-visual {
+    aspect-ratio: 1672 / 941;
+    background: #151515;
+  }
+
+  body.home-page-reference .reference-mobile-hero-visual .reference-home-carousel {
+    width: 100%;
+    height: 100%;
+  }
+
+  body.home-page-reference .reference-mobile-hero-visual .reference-home-carousel::before {
+    content: none;
+  }
+
+  body.home-page-reference .reference-home-carousel-controls {
+    bottom: 8px;
+    min-height: 38px;
+    padding: 1px 4px;
+  }
+
+  body.home-page-reference .reference-home-carousel-controls button {
+    min-width: 32px;
+    min-height: 36px;
+  }
+
+  body.home-page-reference .reference-home-carousel-dots button {
+    min-width: 17px;
+  }
+}

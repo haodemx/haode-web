@@ -92,8 +92,9 @@ async function checkCriticalPage(page, pageCase, viewport) {
   if (pageCase.name === 'home') {
     await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
     await expect(page.locator('.reference-proof-band')).toContainText('Verificación de pedido');
-    const factoryImage = page.locator('img[src="/assets/images/factory-store-hero-products-hero.webp"]:visible').first();
+    const factoryImage = page.locator('[data-home-hero-carousel-image]:visible').first();
     await expect(factoryImage).toBeVisible();
+    await expect(factoryImage).toHaveAttribute('src', /\/assets\/images\/home-hero-carousel\/.+\.webp/);
     expect(await factoryImage.evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
     await expect(page.locator('.reference-product-composition')).toHaveCount(0);
     if (viewport.width <= 430) {
@@ -129,7 +130,8 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 async function expectMobileHomeVisual(page) {
   const visual = page.locator('.reference-mobile-hero-visual');
   await expect(visual).toBeVisible();
-  await expect(visual).toContainText('Modelo · versión · cantidad');
+  await expect(visual.locator('[data-home-hero-carousel-image]')).toBeVisible();
+  await expect(visual.locator('[data-home-hero-carousel-dot]')).toHaveCount(7);
   const box = await visual.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     return { top: Math.round(rect.top), height: Math.round(rect.height) };

@@ -53,6 +53,25 @@ test('homepage presents four primary supply paths without fake carousel controls
   assert.doesNotMatch(html, /class=["'][^"']*reference-round-arrow/i);
 });
 
+test('homepage hero exposes the approved seven-family carousel on desktop and mobile', () => {
+  const carousels = html.match(/<(?:div|figure)\b[^>]*\sdata-home-hero-carousel(?:\s|>)[^>]*>/gi) || [];
+  assert.equal(carousels.length, 2, 'desktop and mobile must share the same carousel contract');
+
+  for (const hook of [
+    'data-home-hero-carousel-image',
+    'data-home-hero-carousel-prev',
+    'data-home-hero-carousel-next',
+    'data-home-hero-carousel-dots',
+    'data-home-hero-carousel-status',
+  ]) {
+    const instances = html.match(new RegExp(`\\b${hook}\\b`, 'gi')) || [];
+    assert.equal(instances.length, 2, `${hook} must exist once in each carousel`);
+  }
+
+  const firstSlides = html.match(/src=["']\/assets\/images\/home-hero-carousel\/iphone-incell\.webp["']/gi) || [];
+  assert.equal(firstSlides.length, 2, 'both carousels must render the first approved family image');
+});
+
 test('dynamic promotion is announced and below-fold content media is deferred', () => {
   const dailyAd = openingTagWith('data-daily-ad');
   assert.match(dailyAd, /aria-live=["']polite["']/i);
