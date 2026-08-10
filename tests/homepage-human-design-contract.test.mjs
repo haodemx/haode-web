@@ -80,3 +80,24 @@ test('homepage and App lead with pantallas instead of talleres', () => {
   assert.match(appJs, /<h1>Fábrica directa para pantallas<\/h1>/i);
   assert.doesNotMatch(appJs, /<h1>Fábrica directa para talleres<\/h1>/i);
 });
+
+test('homepage footer uses the transparent wordmark and screen-first copy', () => {
+  const footer = html.match(/<footer\b[^>]*class=["'][^"']*reference-footer[^"']*["'][^>]*>([\s\S]*?)<\/footer>/i);
+  assert.ok(footer, 'homepage must include the reference footer');
+  assert.match(footer[1], /<img\b[^>]*src=["']\/assets\/images\/haode-wordmark-transparent\.png["'][^>]*>/i);
+  assert.match(footer[1], /Pantallas y refacciones para técnicos, tiendas y distribuidores\./i);
+  assert.doesNotMatch(footer[1], /Refacciones y productos para talleres/i);
+});
+
+test('homepage footer links the verified HAODE Instagram and YouTube accounts', () => {
+  assert.match(
+    html,
+    /<a\b[^>]*href=["']https:\/\/www\.instagram\.com\/cristi3an\/["'][^>]*target=["']_blank["'][^>]*rel=["']noopener noreferrer["'][^>]*aria-label=["']Instagram de HAODE México["'][^>]*>ig<\/a>/i,
+  );
+  assert.match(
+    html,
+    /<a\b[^>]*href=["']https:\/\/www\.youtube\.com\/@haodemx["'][^>]*target=["']_blank["'][^>]*rel=["']noopener noreferrer["'][^>]*aria-label=["']YouTube de HAODE México["'][^>]*>yt<\/a>/i,
+  );
+  assert.doesNotMatch(html, /<span\b[^>]*aria-label=["']Instagram[^"']*["'][^>]*>ig<\/span>/i);
+  assert.doesNotMatch(html, /<span\b[^>]*aria-label=["']YouTube[^"']*["'][^>]*>yt<\/span>/i);
+});
