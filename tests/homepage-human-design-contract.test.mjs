@@ -146,15 +146,26 @@ test('homepage footer uses the transparent wordmark and screen-first copy', () =
   assert.doesNotMatch(footer[1], /Refacciones y productos para talleres/i);
 });
 
-test('homepage footer links the verified HAODE Instagram and YouTube accounts', () => {
+test('homepage footer links the verified accounts and uses original-color social logos', () => {
+  const footer = html.match(/<footer\b[^>]*class=["'][^"']*reference-footer[^"']*["'][^>]*>([\s\S]*?)<\/footer>/i);
+  assert.ok(footer, 'homepage must include the reference footer');
+
   assert.match(
     html,
-    /<a\b[^>]*href=["']https:\/\/www\.instagram\.com\/cristi3an\/["'][^>]*target=["']_blank["'][^>]*rel=["']noopener noreferrer["'][^>]*aria-label=["']Instagram de HAODE México["'][^>]*>ig<\/a>/i,
+    /<a\b[^>]*href=["']https:\/\/www\.instagram\.com\/cristi3an\/["'][^>]*target=["']_blank["'][^>]*rel=["']noopener noreferrer["'][^>]*aria-label=["']Instagram de HAODE México["'][^>]*>[\s\S]*?social-logo--instagram[\s\S]*?<\/a>/i,
   );
   assert.match(
     html,
-    /<a\b[^>]*href=["']https:\/\/www\.youtube\.com\/@haodemx["'][^>]*target=["']_blank["'][^>]*rel=["']noopener noreferrer["'][^>]*aria-label=["']YouTube de HAODE México["'][^>]*>yt<\/a>/i,
+    /<a\b[^>]*href=["']https:\/\/www\.youtube\.com\/@haodemx["'][^>]*target=["']_blank["'][^>]*rel=["']noopener noreferrer["'][^>]*aria-label=["']YouTube de HAODE México["'][^>]*>[\s\S]*?social-logo--youtube[\s\S]*?<\/a>/i,
   );
-  assert.doesNotMatch(html, /<span\b[^>]*aria-label=["']Instagram[^"']*["'][^>]*>ig<\/span>/i);
-  assert.doesNotMatch(html, /<span\b[^>]*aria-label=["']YouTube[^"']*["'][^>]*>yt<\/span>/i);
+  assert.match(footer[1], /social-logo--facebook/i);
+  assert.match(footer[1], /social-logo--instagram/i);
+  assert.match(footer[1], /social-logo--youtube/i);
+  assert.match(footer[1], /social-logo--tiktok/i);
+  assert.match(footer[1], /#0866FF/i);
+  assert.match(footer[1], /#FFD600/i);
+  assert.match(footer[1], /#FF0000/i);
+  assert.match(footer[1], /#25F4EE/i);
+  assert.match(footer[1], /#FE2C55/i);
+  assert.doesNotMatch(footer[1], />\s*(?:f|ig|yt|tk)\s*</i);
 });
