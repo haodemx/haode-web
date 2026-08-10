@@ -492,7 +492,7 @@ function genericProductPage(product) {
   const retail = priceNumber(product.prices?.[0]?.price);
   const placeholder = image.includes('placeholder.svg');
   const seoName = productSeoName(product);
-  const whatsapp = `https://wa.me/525645866014?text=${encodeURIComponent([
+  const whatsapp = `https://wa.me/523326684296?text=${encodeURIComponent([
     'Hola HAODE México, quiero cotizar este producto:',
     `Producto: ${product.name}`,
     `Referencia web: ${product.id}`,

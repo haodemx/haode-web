@@ -59,7 +59,7 @@
     '[data-detail-whatsapp], .detail-quick-whatsapp, .detail-static-top-whatsapp, a[href*="wa.me"]'
   );
   const whatsappHref = sourceWhatsapp?.getAttribute('href')
-    || 'https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20cotizar%20un%20producto.';
+    || 'https://wa.me/523326684296?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20cotizar%20un%20producto.';
 
   if (headerInner.querySelector('[data-detail-header-actions]')) return;
 

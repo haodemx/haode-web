@@ -183,7 +183,7 @@ test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () =>
   assert.ok(types.has('WebPage'));
   assert.equal(itemList?.['@type'], 'ItemList');
   assert.equal(itemList.itemListElement.length, 8);
-  assert.equal(organization?.contactPoint?.telephone, '+52 56 4586 6014');
+  assert.equal(organization?.contactPoint?.telephone, '+52 33 2668 4296');
   assert.equal(organization?.contactPoint?.contactType, 'ventas');
   assert.ok(!Object.hasOwn(localBusiness || {}, 'priceRange'));
 });

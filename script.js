@@ -1,5 +1,5 @@
 (function () {
-const WHATSAPP_PHONE = '525645866014';
+const WHATSAPP_PHONE = '523326684296';
 const SERVICE_WORKER_URL = '/service-worker.js';
 
 function registerServiceWorker() {

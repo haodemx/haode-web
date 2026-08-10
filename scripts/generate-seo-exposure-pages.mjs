@@ -3,7 +3,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const SITE_URL = "https://haode.com.mx";
-const WHATSAPP = "525645866014";
+const WHATSAPP = "523326684296";
 
 const pages = [
   {

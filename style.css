@@ -15305,6 +15305,46 @@ body.home-page-reference .reference-footer-contact {
   font-style: normal;
 }
 
+body.home-page-reference .reference-footer-whatsapp-label {
+  margin: 4px 0 0;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+body.home-page-reference .reference-footer-whatsapp-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+body.home-page-reference .reference-footer-whatsapp-list a {
+  display: flex;
+  min-height: 42px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px 9px;
+  border: 1px solid #353532;
+  color: #d8d7d2;
+}
+
+body.home-page-reference .reference-footer-whatsapp-list a.is-primary {
+  grid-column: 1 / -1;
+  border-color: #ff5a16;
+  background: rgba(255, 90, 22, 0.08);
+}
+
+body.home-page-reference .reference-footer-whatsapp-list strong {
+  color: #ff7a3a;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+body.home-page-reference .reference-footer-whatsapp-list span {
+  color: inherit;
+  font-size: 11px;
+}
+
 body.home-page-reference .reference-footer-cta {
   grid-column: 1 / -1;
   display: grid;
@@ -15813,6 +15853,14 @@ body.home-page-reference .reference-sticky-whatsapp {
 
   body.home-page-reference .reference-footer-cta .reference-btn {
     width: 100%;
+  }
+
+  body.home-page-reference .reference-footer-whatsapp-list {
+    grid-template-columns: 1fr;
+  }
+
+  body.home-page-reference .reference-footer-whatsapp-list a.is-primary {
+    grid-column: auto;
   }
 
   body.home-page-reference .reference-copyright {

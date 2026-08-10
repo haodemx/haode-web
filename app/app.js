@@ -1,6 +1,6 @@
 import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
 
-const WHATSAPP_NUMBER = "525645866014";
+const WHATSAPP_NUMBER = "523326684296";
 const APP_BASE_PATH = (() => {
   const marker = "/app/";
   const index = window.location.pathname.indexOf(marker);

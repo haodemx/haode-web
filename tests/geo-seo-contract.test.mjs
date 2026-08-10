@@ -26,7 +26,7 @@ test('GEO guide exposes official HAODE facts for AI search', () => {
   const guide = read('guia-ia-haode-mexico/index.html');
 
   assert.match(llms, /HAODE Mexico/);
-  assert.match(llms, /WhatsApp \+52 56 4586 6014/);
+  assert.match(llms, /WhatsApp \+52 33 2668 4296/);
   assert.match(llms, /No inventar stock/);
   assert.match(llms, /cotizacion por WhatsApp/);
   assert.ok(llms.includes(GEO_URL));

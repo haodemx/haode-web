@@ -1,5 +1,5 @@
 (function () {
-  const WHATSAPP_PHONE = '525645866014';
+  const WHATSAPP_PHONE = '523326684296';
 
   function escapeHtml(value) {
     return String(value || '').replace(/[&<>"']/g, (char) => ({

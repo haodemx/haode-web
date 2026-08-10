@@ -51,7 +51,7 @@
         <strong>Atención privada por WhatsApp</strong>
         <span>Envía modelos, cantidades y ciudad. Confirmamos disponibilidad y precio final antes del pedido.</span>
         <div class="site-sales-footer-actions">
-          <a class="site-sales-footer-whatsapp" href="https://wa.me/525645866014?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20enviar%20una%20lista%20de%20productos.%0AModelos%3A%0ACantidades%3A%0ACiudad%3A" target="_blank" rel="noopener noreferrer">
+          <a class="site-sales-footer-whatsapp" href="https://wa.me/523326684296?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20enviar%20una%20lista%20de%20productos.%0AModelos%3A%0ACantidades%3A%0ACiudad%3A" target="_blank" rel="noopener noreferrer">
             <span aria-hidden="true">W</span>
             Enviar lista
           </a>
