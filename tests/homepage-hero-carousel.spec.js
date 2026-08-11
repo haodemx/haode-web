@@ -14,6 +14,9 @@ test.describe('homepage approved product-family carousel', () => {
     const image = carousel.locator('[data-home-hero-carousel-image]');
 
     await expect(carousel).toBeVisible();
+    const desktopArrow = await carousel.locator('[data-home-hero-carousel-next]').boundingBox();
+    expect(desktopArrow?.width).toBeGreaterThanOrEqual(44);
+    expect(desktopArrow?.height).toBeGreaterThanOrEqual(44);
     await expect(image).toHaveAttribute('src', '/assets/images/home-hero-carousel/iphone-incell.webp');
     await carousel.locator('[data-home-hero-carousel-next]').click();
     await expect(image).toHaveAttribute('src', '/assets/images/home-hero-carousel/iphone-oled.webp');
@@ -33,6 +36,13 @@ test.describe('homepage approved product-family carousel', () => {
     await expect(mobileCarousel).toBeVisible();
     await expect(page.locator('.reference-hero-visual')).toBeHidden();
     await expect(mobileCarousel.locator('[data-home-hero-carousel-dot]')).toHaveCount(7);
+
+    const mobileArrow = await mobileCarousel.locator('[data-home-hero-carousel-next]').boundingBox();
+    const mobileDot = await mobileCarousel.locator('[data-home-hero-carousel-dot]').first().boundingBox();
+    expect(mobileArrow?.width).toBeGreaterThanOrEqual(44);
+    expect(mobileArrow?.height).toBeGreaterThanOrEqual(44);
+    expect(mobileDot?.width).toBeGreaterThanOrEqual(24);
+    expect(mobileDot?.height).toBeGreaterThanOrEqual(44);
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(1);

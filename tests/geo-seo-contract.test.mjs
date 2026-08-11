@@ -24,6 +24,9 @@ function flattenGraph(blocks) {
 test('GEO guide exposes official HAODE facts for AI search', () => {
   const llms = read('llms.txt');
   const guide = read('guia-ia-haode-mexico/index.html');
+  const graph = flattenGraph(parseJsonLd('guia-ia-haode-mexico/index.html'));
+  const organization = graph.find((node) => node['@type'] === 'Organization');
+  const localBusiness = graph.find((node) => node['@type'] === 'LocalBusiness');
 
   assert.match(llms, /HAODE Mexico/);
   assert.match(llms, /WhatsApp \+52 33 2668 4296/);
@@ -37,7 +40,14 @@ test('GEO guide exposes official HAODE facts for AI search', () => {
   assert.match(guide, /cotización por WhatsApp/);
   assert.match(guide, /HAODE México/);
 
-  assert.ok(parseJsonLd('guia-ia-haode-mexico/index.html').length > 0, 'expected JSON-LD on GEO guide');
+  assert.ok(graph.length > 0, 'expected JSON-LD on GEO guide');
+  assert.deepEqual(organization?.sameAs, [
+    'https://www.tiktok.com/@haodemx',
+    'https://www.facebook.com/cristi3an/',
+    'https://www.instagram.com/cristi3an/',
+    'https://www.youtube.com/@haodemx',
+  ]);
+  assert.equal(localBusiness?.priceRange, undefined, 'GEO guide must not imply an unconfirmed price range');
 });
 
 test('GEO route is connected to homepage, sitemap and quality scripts', () => {

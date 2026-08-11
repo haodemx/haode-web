@@ -15994,7 +15994,7 @@ body.home-page-reference .reference-home-carousel-controls {
   left: 50%;
   z-index: 2;
   display: flex;
-  min-height: 42px;
+  min-height: 50px;
   align-items: center;
   gap: 2px;
   padding: 3px 6px;
@@ -16007,8 +16007,8 @@ body.home-page-reference .reference-home-carousel-controls {
 
 body.home-page-reference .reference-home-carousel-controls button {
   display: grid;
-  min-width: 36px;
-  min-height: 36px;
+  min-width: 44px;
+  min-height: 44px;
   padding: 0;
   place-items: center;
   border: 0;
@@ -16042,7 +16042,7 @@ body.home-page-reference .reference-home-carousel-dots {
 
 body.home-page-reference .reference-home-carousel-dots button {
   position: relative;
-  min-width: 20px;
+  min-width: 28px;
 }
 
 body.home-page-reference .reference-home-carousel-dots button::before {
@@ -16087,16 +16087,16 @@ body.home-page-reference .reference-home-carousel-status {
 
   body.home-page-reference .reference-home-carousel-controls {
     bottom: 8px;
-    min-height: 38px;
+    min-height: 46px;
     padding: 1px 4px;
   }
 
   body.home-page-reference .reference-home-carousel-controls button {
-    min-width: 32px;
-    min-height: 36px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   body.home-page-reference .reference-home-carousel-dots button {
-    min-width: 17px;
+    min-width: 24px;
   }
 }
