@@ -15,6 +15,7 @@
     "test:daily-ad-catalog": "node --test tests/daily-ad-catalog.test.mjs",
     "test:catalog-gap-audit": "node --test tests/catalog-gap-audit.test.mjs",
     "test:whatsapp-links": "node --test tests/whatsapp-link-template.test.mjs",
+    "test:whatsapp-sales": "node --test tests/whatsapp-primary-sales.test.mjs",
     "test:product-sync-aliases": "node --test tests/product-sync-alias-classification.test.mjs",
     "test:media-quality": "node --test tests/product-media-quality-audit.test.mjs",
     "test:erp-maintenance-sync": "node --test tests/erp-maintenance-sync-package.test.mjs",
@@ -43,7 +44,7 @@
     "verify:live": "node scripts/verify-live-deploy.mjs",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:homepage-human-design && npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:homepage-human-design && npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:geo-seo && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:whatsapp-sales && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"

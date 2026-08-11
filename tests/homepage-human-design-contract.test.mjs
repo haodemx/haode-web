@@ -112,7 +112,7 @@ test('homepage and App lead with pantallas instead of talleres', () => {
 test('homepage header uses one restrained dark action system', () => {
   const header = html.match(/<header\b[^>]*class=["'][^"']*reference-header[^"']*["'][^>]*>([\s\S]*?)<\/header>/i);
   assert.ok(header, 'homepage must include the reference header');
-  assert.match(header[1], /<strong>Atención por WhatsApp<\/strong>\s*<small>56 4586 6014<\/small>/i);
+  assert.match(header[1], /<strong>Atención por WhatsApp<\/strong>\s*<small>33 2668 4296<\/small>/i);
   assert.match(header[1], /<strong>Abrir APP<\/strong>\s*<small>Catálogo y pedido<\/small>/i);
   assert.match(header[1], /<strong>Pedido\s*<em>0<\/em><\/strong>\s*<small>Ver carrito<\/small>/i);
   assert.match(header[1], />\s*Lista por WhatsApp\s*<\/a>/i);

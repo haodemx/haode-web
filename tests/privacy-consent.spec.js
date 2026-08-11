@@ -111,7 +111,7 @@ test('App cart never exposes entered customer data in the tracked WhatsApp href'
   await page.locator('[data-customer-city]').fill('Ciudad de México');
 
   const href = await page.locator('[data-whatsapp-link]').getAttribute('href');
-  expect(href).toBe('https://wa.me/525645866014');
+  expect(href).toBe('https://wa.me/523326684296');
   expect(href).not.toContain('Cliente%20Privado');
   expect(href).not.toContain('5512345678');
 });

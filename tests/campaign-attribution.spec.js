@@ -71,7 +71,7 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
     };
   });
 
-  expect(checkoutState.href).toBe("https://wa.me/525645866014");
+  expect(checkoutState.href).toBe("https://wa.me/523326684296");
   expect(checkoutState.attribution).toMatchObject({
     source: "instagram",
     medium: "organic_social",

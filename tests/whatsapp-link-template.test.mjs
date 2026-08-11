@@ -4,7 +4,7 @@ import path from 'node:path';
 import test from 'node:test';
 
 const ROOT = path.resolve(new URL('..', import.meta.url).pathname);
-const WHATSAPP_PHONE = '525645866014';
+const WHATSAPP_PHONE = '523326684296';
 const SKIP_DIRS = new Set(['.git', 'node_modules', 'overnight-previews', 'playwright-report', 'test-results']);
 const WEAK_WHATSAPP_LABELS = [
   'Consultar por WhatsApp',
@@ -15,8 +15,8 @@ const WEAK_WHATSAPP_LABELS = [
   'Soporte para pedidos',
   'Precio distribuidor',
   'Confirmar stock',
-  'WhatsApp: 5645866014',
-  'WhatsApp 5645866014',
+  'WhatsApp: 3326684296',
+  'WhatsApp 3326684296',
 ];
 
 function collectFiles(dir = ROOT, files = []) {

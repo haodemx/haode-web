@@ -189,7 +189,7 @@ function pageSignals(page, locs) {
   const hasSitemap = locs.has(page.url);
   const canonicalOk = html.includes(`<link rel="canonical" href="${page.url}"`);
   const indexable = /<meta name=["']robots["'] content=["']index,follow/i.test(html);
-  const hasWhatsApp = /wa\.me\/525645866014|whatsapp\.com/i.test(html);
+  const hasWhatsApp = /wa\.me\/523326684296|whatsapp\.com/i.test(html);
   const hasTrackedCta = /utm_source=|campaign-attribution\.js/i.test(html);
   const hasAttributionScript = html.includes("campaign-attribution.js");
   const hasStructuredData = /type=["']application\/ld\+json["']/i.test(html);

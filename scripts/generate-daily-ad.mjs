@@ -9,7 +9,7 @@ const OUT_DIR = path.join(ROOT, "data", "marketing");
 const LATEST_PATH = path.join(OUT_DIR, "daily-ad-latest.json");
 const PRODUCTS_PATH = path.join(ROOT, "app", "products.json");
 export const ERP_PUBLIC_CATALOG_URL = "https://erp.haode.com.mx/api/public/catalog";
-const WHATSAPP_NUMBER = "525645866014";
+const WHATSAPP_NUMBER = "523326684296";
 const APP_URL = "https://haode.com.mx/app/";
 
 function formatDate(date = new Date()) {

@@ -1,4 +1,4 @@
-const WHATSAPP_PHONE = '525645866014';
+const WHATSAPP_PHONE = '523326684296';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['1 pza', '5+ pzs', '100 pzs surtido', '100 pzs/modelo', 'Caja/modelo'];
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
