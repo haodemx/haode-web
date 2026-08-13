@@ -8,12 +8,13 @@ function websiteProducts() {
 }
 
 const appProducts = JSON.parse(fs.readFileSync(new URL('../app/products.json', import.meta.url), 'utf8'));
-const sourceText = fs.readFileSync(new URL('../data/customer-price-list-2026-07.json', import.meta.url), 'utf8');
+const sourceText = fs.readFileSync(new URL('../data/customer-price-list-2026-08.json', import.meta.url), 'utf8');
 const source = JSON.parse(sourceText);
 const website = websiteProducts();
 const masterText = fs.readFileSync(new URL('../docs/master-data/products-master.csv', import.meta.url), 'utf8');
 const sitemapText = fs.readFileSync(new URL('../sitemap.xml', import.meta.url), 'utf8');
-const syncReport = JSON.parse(fs.readFileSync(new URL('../docs/reports/customer-price-sync-2026-07.json', import.meta.url), 'utf8'));
+const productsRuntimeText = fs.readFileSync(new URL('../products.js', import.meta.url), 'utf8');
+const syncReport = JSON.parse(fs.readFileSync(new URL('../docs/reports/customer-price-sync-2026-08.json', import.meta.url), 'utf8'));
 const deletedIds = [
   'funda-magnetica-17-pro-max',
   'funda-premium-17-pro-max',
@@ -51,11 +52,14 @@ test('public source excludes landed cost and records exact-match rules', () => {
   assert.equal(sourceText.includes('landed_cost'), false);
   assert.equal(source.rules.exactModelAndQualityOnly, true);
   assert.equal(source.rules.missingRowsAreNotPublished, true);
-  assert.equal(source.sourceVersion, '2026-07-16');
-  assert.equal(source.rows.length, 189);
+  assert.equal(source.sourceVersion, '2026-08-13');
+  assert.equal(source.sourceWorkbookSha256, '94e18be3fddb6b06f150d02b5a11f49fba67184514be42a9433d52a784cd2a94');
+  assert.equal(source.sourceSheet, 'Lista Clientes');
+  assert.equal(source.rows.length, 190);
+  assert.ok(productsRuntimeText.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx'));
 });
 
-test('Samsung S8 prices match the approved Lista_Precios sheet', () => {
+test('Samsung S8 prices match the approved Lista Clientes sheet', () => {
   const product = byId(website, 'samsung-incell-s8');
   assert.equal(price(product, '1 pza'), '$360 MXN');
   assert.equal(price(product, '5+ pzs'), '$350 MXN');
@@ -87,10 +91,13 @@ test('products absent from the approved list are removed from every catalog sour
 });
 
 test('updated prices use the new main sheet and preserve approved siblings', () => {
-  assert.equal(price(byId(website, 'iphone-incell-16e'), '1 pza'), '$400 MXN');
+  assert.equal(price(byId(website, 'iphone-incell-16e'), '1 pza'), '$300 MXN');
   assert.equal(price(byId(website, 'iphone-oled-12promax'), '1 pza'), '$700 MXN');
   assert.equal(price(byId(website, 'samsung-incell-s20-plus'), '1 pza'), '$550 MXN');
   assert.equal(byId(appProducts, 'samsung-original-note-20-ultra').precioPublico, 3000);
+  assert.equal(price(byId(website, 'mica-hd'), '10+ paquetes'), '$300 MXN');
+  assert.equal(price(byId(website, 'aimb-g5-ai-sports'), '5+ pzs'), '$855 MXN');
+  assert.equal(byId(appProducts, 'lk-018-camara-accion-hd').precioPublico, 850);
 });
 
 test('iPhone 11 standard FHD uses its confirmed media without changing Bolsa Protectora', () => {
@@ -134,10 +141,15 @@ test('every unique approved price-list product is aligned across website and App
     website.map((product) => product.id).sort(),
     appProducts.map((product) => product.id).sort()
   );
-  assert.equal(syncReport.summary.sourceRows, 189);
+  assert.equal(syncReport.summary.sourceRows, 190);
   assert.equal(syncReport.summary.uniqueSourceProducts, 186);
-  assert.equal(syncReport.summary.unpublishedSourceRows, 0);
-  assert.equal(syncReport.summary.duplicateSourceRows, 3);
+  assert.equal(syncReport.summary.websiteChanged, 45);
+  assert.equal(syncReport.summary.appChanged, 45);
+  assert.equal(syncReport.summary.unpublishedSourceRows, 8);
+  assert.equal(syncReport.summary.unmatchedWebsite, 5);
+  assert.equal(syncReport.summary.unmatchedApp, 5);
+  assert.equal(syncReport.summary.ambiguous, 0);
+  assert.equal(syncReport.summary.duplicateSourceRows, 0);
 });
 
 test('new products use approved prices and authorized media placeholders without fake official SKUs', () => {
@@ -155,8 +167,47 @@ test('new products use approved prices and authorized media placeholders without
   assert.ok(fs.existsSync(new URL(`../producto/${phone.id}/index.html`, import.meta.url)));
 });
 
-test('identical workbook rows are consolidated into one customer-visible product', () => {
-  const matching = website.filter((product) => product.name.includes('KIT ALUMINIO DE 17PROMAX SIN LOGO'));
-  assert.equal(matching.length, 1);
-  assert.deepEqual(matching[0].sourceRows, [173, 174, 175, 176]);
+test('rows without an exact product match are reported and existing products keep their prices', () => {
+  const unmatched = [...syncReport.report.unmatchedWebsite].sort();
+  assert.deepEqual(unmatched, [
+    'fundas-funda-5in1-con-mica-premium-3d',
+    'fundas-kit-aluminio-de-17promax-con-logo',
+    'fundas-kit-aluminio-de-17promax-sin-logo',
+    'gafas-ai-gafas-ai-m02',
+    'gafas-ai-gafas-ai-m08',
+  ]);
+  assert.deepEqual(syncReport.report.unpublishedSourceRows.map((row) => row.sourceRow), [
+    20, 22, 186, 187, 188, 189, 190, 200,
+  ]);
+  assert.equal(price(byId(website, 'gafas-ai-gafas-ai-m08'), '1 pza'), '$1,700 MXN');
+  assert.equal(byId(appProducts, 'gafas-ai-gafas-ai-m02').precioPublico, 1600);
+});
+
+test('legacy customer-visible pages use the approved prices', () => {
+  const files = [
+    ['../ai-smart-glasses-aimb-g5.html', ['$1000 MXN', '$855 MXN']],
+    ['../ai-smart-glasses-s1.html', ['$545 MXN', '$510 MXN']],
+    ['../ai-smart-glasses-w630.html', ['$1200 MXN', '$1000 MXN']],
+    ['../producto/lk-018-camara-accion-hd/index.html', ['$850 MXN', '$700 MXN']],
+    ['../producto/lk-032-camara-inteligente-con-gimbal/index.html', ['$500 MXN', '$400 MXN']],
+    ['../micas.html', ['$400 MXN', '$350 c/u', '$300 c/u']],
+  ];
+  for (const [path, prices] of files) {
+    const html = fs.readFileSync(new URL(path, import.meta.url), 'utf8');
+    for (const expected of prices) assert.ok(html.includes(expected), `${path} is missing ${expected}`);
+  }
+});
+
+test('static price fallback generation preserves valid product JSON-LD', () => {
+  const productRoot = new URL('../producto/', import.meta.url);
+  for (const entry of fs.readdirSync(productRoot, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const file = new URL(`${entry.name}/index.html`, productRoot);
+    if (!fs.existsSync(file)) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    const blocks = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+    for (const [, block] of blocks) {
+      assert.doesNotThrow(() => JSON.parse(block), `${entry.name} contains invalid JSON-LD`);
+    }
+  }
 });

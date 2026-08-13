@@ -177,8 +177,8 @@ test("keeps the approved App catalog authoritative and submits an attributed ide
   await expect(page.locator(".product-card", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
 
   const approvedCard = page.locator(".product-card", { hasText: "HAODE X200T Cortadora Inteligente de Micas" });
-  await expect(approvedCard).toContainText("$6,800");
   await expect(approvedCard).toContainText("$6,500");
+  await expect(approvedCard).toContainText("$6,200");
   await expect(approvedCard).not.toContainText("$6,700");
   await approvedCard.getByRole("button", { name: "Agregar" }).click();
 

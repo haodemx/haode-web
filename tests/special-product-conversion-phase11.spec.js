@@ -4,10 +4,10 @@ const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 
 const specialPages = [
   ['/producto/lk-007-camara-digital-4k/', 'special-camera-lk007', '$500 MXN'],
-  ['/producto/lk-018-camara-accion-hd/', 'special-camera-lk018', '$1,200 MXN'],
+  ['/producto/lk-018-camara-accion-hd/', 'special-camera-lk018', '$850 MXN'],
   ['/producto/lk-030-mini-camara-retro-digital/', 'special-camera-lk030', '$400 MXN'],
-  ['/producto/lk-032-camara-inteligente-con-gimbal/', 'special-camera-lk032', '$1,000 MXN'],
-  ['/producto/x200t-cortadora-micas/', 'special-machine-x200t', '$6,800 MXN'],
+  ['/producto/lk-032-camara-inteligente-con-gimbal/', 'special-camera-lk032', '$500 MXN'],
+  ['/producto/x200t-cortadora-micas/', 'special-machine-x200t', '$6,500 MXN'],
 ];
 
 test.describe('HAODE special product conversion UI phase 11', () => {

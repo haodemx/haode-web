@@ -46,7 +46,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 31",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -59,8 +59,8 @@
     "nombre": "Pantalla para iPhone 12 / 12 Pro",
     "modelo": "iPhone 12 / 12 Pro OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 650,
-    "precioMayoreo": 640,
+    "precioPublico": 600,
+    "precioMayoreo": 590,
     "imagen": "/assets/products/iphone-oled/12-12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -70,7 +70,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 640,
+        "price": 590,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -78,7 +78,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 630,
+        "price": 570,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -86,7 +86,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 615,
+        "price": 560,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -94,13 +94,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 600,
+        "price": 550,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 34",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -154,7 +154,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 36",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -167,8 +167,8 @@
     "nombre": "Pantalla para iPhone 13",
     "modelo": "iPhone 13 OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 13. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 730,
-    "precioMayoreo": 700,
+    "precioPublico": 650,
+    "precioMayoreo": 630,
     "imagen": "/assets/products/iphone-oled/13/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -178,7 +178,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 700,
+        "price": 630,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -186,7 +186,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 680,
+        "price": 620,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -194,7 +194,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 650,
+        "price": 600,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -202,13 +202,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 600,
+        "price": 550,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 39",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -221,8 +221,8 @@
     "nombre": "Pantalla para iPhone 13 Pro",
     "modelo": "iPhone 13 Pro OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 780,
-    "precioMayoreo": 760,
+    "precioPublico": 700,
+    "precioMayoreo": 650,
     "imagen": "/assets/products/iphone-oled/13pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -232,7 +232,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 760,
+        "price": 650,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -240,7 +240,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 750,
+        "price": 600,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -248,7 +248,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 730,
+        "price": 550,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -256,13 +256,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 700,
+        "price": 500,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 41",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -275,8 +275,8 @@
     "nombre": "Pantalla para iPhone 13 Pro Max",
     "modelo": "iPhone 13 Pro Max OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 800,
-    "precioMayoreo": 780,
+    "precioPublico": 750,
+    "precioMayoreo": 700,
     "imagen": "/assets/products/iphone-oled/13promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -286,61 +286,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 780,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
-      },
-      {
-        "code": "MIXED_100",
-        "minQty": 100,
-        "maxQty": null,
-        "price": 760,
-        "label": "100 pzs surtido",
-        "scope": "mixed_order"
-      },
-      {
-        "code": "MODEL_100",
-        "minQty": 100,
-        "maxQty": null,
-        "price": 750,
-        "label": "100 pzs/modelo",
-        "scope": "same_model"
-      },
-      {
-        "code": "BOX_MODEL",
-        "minQty": 1,
-        "maxQty": null,
         "price": 700,
-        "label": "Caja/modelo",
-        "scope": "box_model",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 28",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      28
-    ]
-  },
-  {
-    "id": "iphone-oled-14",
-    "categoria": "Pantallas iPhone OLED",
-    "nombre": "Pantalla para iPhone 14",
-    "modelo": "iPhone 14 OLED PREMIUM",
-    "descripcion": "OLED PREMIUM para reparación de iPhone 14. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 700,
-    "precioMayoreo": 680,
-    "imagen": "/assets/products/iphone-oled/14/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 90,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 680,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -356,7 +302,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 630,
+        "price": 600,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -364,13 +310,67 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 600,
+        "price": 580,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 30",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 43",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      28
+    ]
+  },
+  {
+    "id": "iphone-oled-14",
+    "categoria": "Pantallas iPhone OLED",
+    "nombre": "Pantalla para iPhone 14",
+    "modelo": "iPhone 14 OLED PREMIUM",
+    "descripcion": "OLED PREMIUM para reparación de iPhone 14. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "precioPublico": 650,
+    "precioMayoreo": 620,
+    "imagen": "/assets/products/iphone-oled/14/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 90,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE_5",
+        "minQty": 5,
+        "maxQty": 99,
+        "price": 620,
+        "label": "Mayoreo 5 pzs",
+        "scope": "single_product"
+      },
+      {
+        "code": "MIXED_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 600,
+        "label": "100 pzs surtido",
+        "scope": "mixed_order"
+      },
+      {
+        "code": "MODEL_100",
+        "minQty": 100,
+        "maxQty": null,
+        "price": 550,
+        "label": "100 pzs/modelo",
+        "scope": "same_model"
+      },
+      {
+        "code": "BOX_MODEL",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 500,
+        "label": "Caja/modelo",
+        "scope": "box_model",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 45",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -424,7 +424,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 33",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 48",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -478,7 +478,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 36",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 51",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -491,8 +491,8 @@
     "nombre": "Pantalla para iPhone 14 Pro Max",
     "modelo": "iPhone 14 Pro Max OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 14 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1000,
-    "precioMayoreo": 950,
+    "precioPublico": 750,
+    "precioMayoreo": 700,
     "imagen": "/assets/products/iphone-oled/14promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -502,7 +502,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 950,
+        "price": 700,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -510,7 +510,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 900,
+        "price": 650,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -518,7 +518,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 850,
+        "price": 600,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -526,13 +526,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 800,
+        "price": 580,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 38",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 53",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -586,7 +586,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 40",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 55",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -599,8 +599,8 @@
     "nombre": "Pantalla para iPhone 15 Pro Max",
     "modelo": "iPhone 15 Pro Max OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 15 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1200,
-    "precioMayoreo": 1100,
+    "precioPublico": 1000,
+    "precioMayoreo": 950,
     "imagen": "/assets/products/iphone-oled/15promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -610,7 +610,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1100,
+        "price": 950,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -618,7 +618,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1000,
+        "price": 900,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -626,7 +626,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 900,
+        "price": 850,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -634,13 +634,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 850,
+        "price": 800,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 45",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 60",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -653,8 +653,8 @@
     "nombre": "Pantalla para iPhone 16 Pro",
     "modelo": "iPhone 16 Pro OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 16 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1300,
-    "precioMayoreo": 1250,
+    "precioPublico": 1000,
+    "precioMayoreo": 950,
     "imagen": "/assets/products/iphone-oled/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -664,7 +664,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1250,
+        "price": 950,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -672,7 +672,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1200,
+        "price": 900,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -680,7 +680,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1150,
+        "price": 850,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -688,13 +688,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 1100,
+        "price": 800,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 51",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 66",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -748,7 +748,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 53",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 68",
     "videos": [
       "/assets/products/iphone-oled/16promax/video-01.mp4"
     ],
@@ -805,7 +805,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 29",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -818,8 +818,8 @@
     "nombre": "Pantalla para iPhone 16 Pro Max Hard OLED",
     "modelo": "iPhone 16 Pro Max OLED PREMIUM MOVE IC",
     "descripcion": "OLED PREMIUM MOVE IC para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1400,
-    "precioMayoreo": 1350,
+    "precioPublico": 1050,
+    "precioMayoreo": 1000,
     "imagen": "/assets/products/iphone-oled/16promax-hard/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -829,7 +829,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1350,
+        "price": 1000,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -837,7 +837,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1300,
+        "price": 950,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -845,7 +845,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1250,
+        "price": 900,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -853,13 +853,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 1200,
+        "price": 850,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 52",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 67",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -924,7 +924,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 25",
     "videos": [
       "/assets/products/iphone-incell/11-bolsa-protectora/video-01.mp4"
     ],
@@ -940,8 +940,8 @@
     "nombre": "Pantalla para iPhone 11 Pro",
     "modelo": "iPhone 11 Pro INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone 11 Pro. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 200,
-    "precioMayoreo": 190,
+    "precioPublico": 190,
+    "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/11pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -961,7 +961,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 190,
+        "price": 185,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -969,7 +969,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 185,
+        "price": 180,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -977,7 +977,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 180,
+        "price": 175,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -985,13 +985,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 175,
+        "price": 170,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 27",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1004,8 +1004,8 @@
     "nombre": "Pantalla para iPhone 11 Pro Max",
     "modelo": "iPhone 11 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 220,
-    "precioMayoreo": 210,
+    "precioPublico": 190,
+    "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/11promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1015,7 +1015,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 210,
+        "price": 185,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -1023,7 +1023,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 200,
+        "price": 180,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1031,7 +1031,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 195,
+        "price": 175,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1039,13 +1039,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 190,
+        "price": 170,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 30",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1058,8 +1058,8 @@
     "nombre": "Pantalla para iPhone 12 / 12 Pro",
     "modelo": "iPhone 12 / 12 Pro INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 220,
-    "precioMayoreo": 210,
+    "precioPublico": 190,
+    "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/12-12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1069,7 +1069,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 210,
+        "price": 185,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -1077,7 +1077,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 200,
+        "price": 180,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1085,7 +1085,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 195,
+        "price": 175,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1093,13 +1093,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 190,
+        "price": 170,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 33",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1153,7 +1153,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 32",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1207,7 +1207,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 35",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1261,7 +1261,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 38",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1274,8 +1274,8 @@
     "nombre": "Pantalla para iPhone 13 mini",
     "modelo": "iPhone 13 mini INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 260,
-    "precioMayoreo": 250,
+    "precioPublico": 220,
+    "precioMayoreo": 210,
     "imagen": "/assets/products/iphone-incell/13mini/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1285,7 +1285,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 250,
+        "price": 210,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -1293,7 +1293,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 245,
+        "price": 200,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1301,7 +1301,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 240,
+        "price": 190,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1309,13 +1309,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 235,
+        "price": 185,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 37",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1369,7 +1369,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 40",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1401,7 +1401,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 335,
+        "price": 330,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1409,7 +1409,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 330,
+        "price": 320,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1417,13 +1417,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 325,
+        "price": 300,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 27",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 42",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1436,8 +1436,8 @@
     "nombre": "Pantalla para iPhone 14",
     "modelo": "iPhone 14 INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 14. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 260,
-    "precioMayoreo": 250,
+    "precioPublico": 250,
+    "precioMayoreo": 240,
     "imagen": "/assets/products/iphone-incell/14/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1457,7 +1457,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 250,
+        "price": 240,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -1465,7 +1465,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 245,
+        "price": 230,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1473,7 +1473,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 240,
+        "price": 220,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1481,13 +1481,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 230,
+        "price": 210,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 29",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 44",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1541,7 +1541,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 32",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 47",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1554,8 +1554,8 @@
     "nombre": "Pantalla para iPhone 14 Pro",
     "modelo": "iPhone 14 Pro INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 350,
-    "precioMayoreo": 340,
+    "precioPublico": 300,
+    "precioMayoreo": 280,
     "imagen": "/assets/products/iphone-incell/14pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1565,7 +1565,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 340,
+        "price": 280,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -1573,7 +1573,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 330,
+        "price": 270,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1581,7 +1581,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 320,
+        "price": 260,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1589,13 +1589,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 310,
+        "price": 250,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 35",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 50",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1649,7 +1649,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 37",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 52",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1662,8 +1662,8 @@
     "nombre": "Pantalla para iPhone 15",
     "modelo": "iPhone 15 INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 300,
-    "precioMayoreo": 290,
+    "precioPublico": 270,
+    "precioMayoreo": 265,
     "imagen": "/assets/products/iphone-incell/15/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1673,7 +1673,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 290,
+        "price": 265,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -1681,7 +1681,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 285,
+        "price": 260,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1689,7 +1689,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 280,
+        "price": 255,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1697,13 +1697,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 275,
+        "price": 245,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 39",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 54",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1757,7 +1757,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 41",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 56",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1811,7 +1811,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 42",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 57",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1865,7 +1865,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 44",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 59",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1878,8 +1878,8 @@
     "nombre": "Pantalla para iPhone 16",
     "modelo": "iPhone 16 INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 400,
-    "precioMayoreo": 380,
+    "precioPublico": 310,
+    "precioMayoreo": 290,
     "imagen": "/assets/products/iphone-incell/16/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1889,7 +1889,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 380,
+        "price": 290,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -1897,7 +1897,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 350,
+        "price": 280,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -1905,7 +1905,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 330,
+        "price": 270,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -1913,13 +1913,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 320,
+        "price": 250,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 46",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 61",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1973,7 +1973,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 6",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 19",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2027,7 +2027,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 24",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2092,7 +2092,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 23",
     "videos": [
       "/assets/products/iphone-incell/xr-bolsa-protectora/video-01.mp4"
     ],
@@ -2149,7 +2149,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 21",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2203,7 +2203,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 90",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 104",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2216,8 +2216,8 @@
     "nombre": "Pantalla para iPhone XS Max",
     "modelo": "iPhone XS Max INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone XS Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 200,
-    "precioMayoreo": 190,
+    "precioPublico": 190,
+    "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/xsmax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2227,7 +2227,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 190,
+        "price": 185,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -2235,7 +2235,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 185,
+        "price": 180,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -2243,7 +2243,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 180,
+        "price": 175,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -2251,13 +2251,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 175,
+        "price": 170,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 28",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2311,7 +2311,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 91",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 105",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2324,8 +2324,8 @@
     "nombre": "Pantalla para iPhone 16e",
     "modelo": "iPhone 16e INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16e. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 400,
-    "precioMayoreo": 380,
+    "precioPublico": 300,
+    "precioMayoreo": 280,
     "imagen": "/assets/products/iphone-incell/16e/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2335,7 +2335,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 380,
+        "price": 280,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -2343,7 +2343,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 350,
+        "price": 270,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -2351,7 +2351,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 330,
+        "price": 260,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -2359,13 +2359,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 320,
+        "price": 240,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 47",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 62",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2419,7 +2419,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 92",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 106",
     "videos": [
       "/assets/products/samsung-incell/s9/video-01.mp4"
     ],
@@ -2435,8 +2435,8 @@
     "nombre": "Pantalla para iPhone 16 Plus",
     "modelo": "iPhone 16 Plus INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16 Plus. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 400,
-    "precioMayoreo": 380,
+    "precioPublico": 350,
+    "precioMayoreo": 330,
     "imagen": "/assets/products/iphone-incell/16plus/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2446,7 +2446,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 380,
+        "price": 330,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -2454,7 +2454,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 360,
+        "price": 320,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -2462,7 +2462,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 350,
+        "price": 300,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -2470,13 +2470,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 330,
+        "price": 280,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 49",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 64",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2530,7 +2530,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 93",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 107",
     "videos": [
       "/assets/products/samsung-incell/s9-plus/video-01.mp4"
     ],
@@ -2546,8 +2546,8 @@
     "nombre": "Pantalla para iPhone 16 Pro",
     "modelo": "iPhone 16 Pro INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 700,
-    "precioMayoreo": 680,
+    "precioPublico": 600,
+    "precioMayoreo": 580,
     "imagen": "/assets/products/iphone-incell/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2557,7 +2557,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 680,
+        "price": 580,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -2565,7 +2565,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 660,
+        "price": 550,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -2573,7 +2573,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 650,
+        "price": 500,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -2581,13 +2581,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 620,
+        "price": 450,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 50",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 65",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2641,7 +2641,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 94",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 108",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2654,8 +2654,8 @@
     "nombre": "Pantalla para iPhone 16 Pro Max",
     "modelo": "iPhone 16 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 750,
-    "precioMayoreo": 730,
+    "precioPublico": 620,
+    "precioMayoreo": 600,
     "imagen": "/assets/products/iphone-incell/16promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2665,7 +2665,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 730,
+        "price": 600,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -2673,7 +2673,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 700,
+        "price": 580,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -2681,7 +2681,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 680,
+        "price": 570,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -2689,13 +2689,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 650,
+        "price": 550,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 54",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 69",
     "videos": [
       "/assets/products/iphone-incell/16promax/video-01.mp4"
     ],
@@ -2752,7 +2752,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 95",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 109",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2765,8 +2765,8 @@
     "nombre": "Pantalla para iPhone 17",
     "modelo": "iPhone 17 INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 1000,
-    "precioMayoreo": 950,
+    "precioPublico": 600,
+    "precioMayoreo": 580,
     "imagen": "/assets/products/iphone-incell/17/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2776,7 +2776,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 950,
+        "price": 580,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -2784,7 +2784,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 920,
+        "price": 550,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -2792,7 +2792,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 900,
+        "price": 500,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -2800,13 +2800,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 850,
+        "price": 450,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 55",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 70",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2860,7 +2860,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 96",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 110",
     "videos": [
       "/assets/products/samsung-incell/s10e/video-01.mp4"
     ],
@@ -2876,8 +2876,8 @@
     "nombre": "Pantalla para iPhone 17 Air",
     "modelo": "iPhone 17 Air INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17 Air. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 2500,
-    "precioMayoreo": 2400,
+    "precioPublico": 1500,
+    "precioMayoreo": 1400,
     "imagen": "/assets/products/iphone-incell/17air/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2887,7 +2887,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 2400,
+        "price": 1400,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -2895,7 +2895,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 2300,
+        "price": 1300,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -2903,7 +2903,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 2200,
+        "price": 1200,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -2911,13 +2911,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 2100,
+        "price": 1100,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 57",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 72",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2971,7 +2971,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 97",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 111",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2984,8 +2984,8 @@
     "nombre": "Pantalla para iPhone 17 Pro",
     "modelo": "iPhone 17 Pro INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 850,
-    "precioMayoreo": 800,
+    "precioPublico": 650,
+    "precioMayoreo": 600,
     "imagen": "/assets/products/iphone-incell/17pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2995,7 +2995,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 800,
+        "price": 600,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -3003,7 +3003,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 755,
+        "price": 550,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -3011,7 +3011,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 750,
+        "price": 500,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -3019,13 +3019,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 700,
+        "price": 450,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 56",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 71",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3038,8 +3038,8 @@
     "nombre": "Pantalla para iPhone 17 Pro Max",
     "modelo": "iPhone 17 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 900,
-    "precioMayoreo": 850,
+    "precioPublico": 750,
+    "precioMayoreo": 720,
     "imagen": "/assets/products/iphone-incell/17promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -3049,7 +3049,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 850,
+        "price": 720,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -3057,7 +3057,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 805,
+        "price": 700,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -3065,7 +3065,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 800,
+        "price": 670,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -3073,13 +3073,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 750,
+        "price": 650,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 59",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 74",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3133,7 +3133,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 100",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 114",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3187,7 +3187,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 102",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 116",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3241,7 +3241,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 103",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 117",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3295,7 +3295,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 104",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 118",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3349,7 +3349,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 105",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 119",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3403,7 +3403,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 106",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 120",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3457,7 +3457,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 107",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 121",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3511,7 +3511,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 110",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 124",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3565,7 +3565,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 111",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 125",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3619,7 +3619,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 113",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 127",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3673,7 +3673,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 116",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 130",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3727,7 +3727,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 117",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 131",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3781,7 +3781,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 119",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 133",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3835,7 +3835,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 122",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 136",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3889,7 +3889,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 123",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 137",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3943,7 +3943,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 124",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 138",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3997,7 +3997,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 129",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 143",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4051,7 +4051,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 130",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 144",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4105,7 +4105,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 131",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 145",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4159,7 +4159,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 133",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 147",
     "videos": [
       "/assets/products/samsung-incell/note-10-plus/video-01.mp4"
     ],
@@ -4216,7 +4216,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 134",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 148",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4270,7 +4270,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 135",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 149",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4324,7 +4324,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 101",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 115",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4378,7 +4378,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 137",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 151",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4432,7 +4432,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 108",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 122",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4486,7 +4486,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 114",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 128",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4540,7 +4540,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 120",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 134",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4594,7 +4594,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 125",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 139",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4648,7 +4648,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 127",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 141",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4702,7 +4702,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 132",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 146",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4756,7 +4756,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 136",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 150",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4810,7 +4810,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 138",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 152",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4823,8 +4823,8 @@
     "nombre": "MICA HD",
     "modelo": "Paquete 50 pzs",
     "descripcion": "Mica transparente para corte profesional. Ideal para uso diario y alta claridad. Beneficios: Alta transparencia, Protección diaria, Compatible con corte profesional, Paquete de 50 pzs.",
-    "precioPublico": 450,
-    "precioMayoreo": 400,
+    "precioPublico": 400,
+    "precioMayoreo": 350,
     "imagen": "/assets/products/micas/hd/main.png",
     "stock": "disponible",
     "activo": true,
@@ -4834,19 +4834,19 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 400,
+        "price": 350,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
       {
         "minQty": 10,
         "maxQty": null,
-        "price": 350,
+        "price": 300,
         "label": "10+ paquetes",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 158",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 172",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4882,7 +4882,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 159",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 173",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4918,7 +4918,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 160",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 174",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4972,7 +4972,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 109",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 123",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5008,7 +5008,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 161",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 175",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5021,8 +5021,8 @@
     "nombre": "Pantalla para Samsung S22 Plus",
     "modelo": "Samsung S22 Plus TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S22 PLUS. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1700,
-    "precioMayoreo": 1650,
+    "precioPublico": 1400,
+    "precioMayoreo": 1300,
     "imagen": "/assets/products/samsung-original/s22-plus/main.png",
     "stock": "bajo pedido",
     "activo": true,
@@ -5032,7 +5032,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1650,
+        "price": 1300,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -5040,7 +5040,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1600,
+        "price": 1200,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -5048,7 +5048,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1500,
+        "price": 1100,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -5056,13 +5056,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 1400,
+        "price": 1000,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 112",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 126",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5075,8 +5075,8 @@
     "nombre": "HAODE X200T Cortadora Inteligente de Micas",
     "modelo": "X200T",
     "descripcion": "Maquina inteligente para corte de micas compatible con catalogo amplio de modelos. Ideal para tiendas de reparacion y negocios de accesorios.",
-    "precioPublico": 6800,
-    "precioMayoreo": 6500,
+    "precioPublico": 6500,
+    "precioMayoreo": 6200,
     "imagen": "/assets/products/cut-machine/x200t/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -5086,19 +5086,19 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 6500,
+        "price": 6200,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
       {
         "minQty": 10,
         "maxQty": null,
-        "price": 6200,
+        "price": 6000,
         "label": "10+ paquetes",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 156",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 170",
     "videos": [
       "/assets/videos/cut-machine/x200t/video-01.mp4",
       "/assets/videos/cut-machine/x200t/video-02.mp4",
@@ -5116,8 +5116,8 @@
     "nombre": "Pantalla para Samsung S22 Ultra",
     "modelo": "Samsung S22 Ultra TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 3000,
-    "precioMayoreo": 2900,
+    "precioPublico": 2500,
+    "precioMayoreo": 2400,
     "imagen": "/assets/products/samsung-original/s22-ultra/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
@@ -5127,7 +5127,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 2900,
+        "price": 2400,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -5135,7 +5135,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 2800,
+        "price": 2300,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -5143,7 +5143,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 2700,
+        "price": 2200,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -5151,13 +5151,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 2600,
+        "price": 2100,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 115",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 129",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5170,8 +5170,8 @@
     "nombre": "W630 AI PRO",
     "modelo": "Gafas AI blancas",
     "descripcion": "Gafas AI blancas de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1900,
-    "precioMayoreo": 1700,
+    "precioPublico": 1200,
+    "precioMayoreo": 1000,
     "imagen": "/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -5181,12 +5181,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1700,
+        "price": 1000,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 181",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 195",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5199,8 +5199,8 @@
     "nombre": "AIMB-G5 AI SPORTS",
     "modelo": "Gafas AI deportivas",
     "descripcion": "Gafas AI deportivas de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1800,
-    "precioMayoreo": 1600,
+    "precioPublico": 1000,
+    "precioMayoreo": 855,
     "imagen": "/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -5210,12 +5210,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1600,
+        "price": 855,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 180",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 194",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5269,7 +5269,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 118",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 132",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5282,8 +5282,8 @@
     "nombre": "HAODE AI CLASSIC S1",
     "modelo": "Gafas AI classic",
     "descripcion": "Gafas AI classic de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1500,
-    "precioMayoreo": 1300,
+    "precioPublico": 545,
+    "precioMayoreo": 510,
     "imagen": "/assets/products/productos-ai/s1-ai-classic/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -5293,12 +5293,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1300,
+        "price": 510,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 184",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 198",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5311,8 +5311,8 @@
     "nombre": "Pantalla para Samsung S23 Ultra",
     "modelo": "Samsung S23 Ultra TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 3300,
-    "precioMayoreo": 3200,
+    "precioPublico": 2500,
+    "precioMayoreo": 2400,
     "imagen": "/assets/products/samsung-original/s23-ultra/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
@@ -5322,7 +5322,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 3200,
+        "price": 2400,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -5330,7 +5330,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 3100,
+        "price": 2300,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -5338,7 +5338,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 3000,
+        "price": 2200,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -5346,13 +5346,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 2900,
+        "price": 2100,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 121",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 135",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5365,8 +5365,8 @@
     "nombre": "Gafas Inteligentes AI G3",
     "modelo": "HAODE AI G3 Smart Glasses",
     "descripcion": "HAODE AI G3 Smart Glasses de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1700,
-    "precioMayoreo": 1500,
+    "precioPublico": 1000,
+    "precioMayoreo": 855,
     "imagen": "/assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg",
     "stock": "disponible",
     "activo": true,
@@ -5376,12 +5376,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1500,
+        "price": 855,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 183",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 197",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5394,8 +5394,8 @@
     "nombre": "Gafas Inteligentes AI W610",
     "modelo": "HAODE AI W610 Smart Glasses",
     "descripcion": "HAODE AI W610 Smart Glasses de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1500,
-    "precioMayoreo": 1200,
+    "precioPublico": 1000,
+    "precioMayoreo": 900,
     "imagen": "/assets/products/productos-ai/w610-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -5405,12 +5405,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1200,
+        "price": 900,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 182",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 196",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5423,8 +5423,8 @@
     "nombre": "Pantalla para Samsung S24 Ultra",
     "modelo": "Samsung S24 Ultra TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 3500,
-    "precioMayoreo": 3400,
+    "precioPublico": 2500,
+    "precioMayoreo": 2400,
     "imagen": "/assets/products/samsung-original/s24-ultra/main.png",
     "stock": "bajo pedido",
     "activo": true,
@@ -5434,7 +5434,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 3400,
+        "price": 2400,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -5442,7 +5442,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 3300,
+        "price": 2300,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -5450,7 +5450,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 3200,
+        "price": 2200,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -5458,13 +5458,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 3100,
+        "price": 2100,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 126",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 140",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5477,8 +5477,8 @@
     "nombre": "Pantalla para Samsung S25 Ultra",
     "modelo": "Samsung S25 Ultra TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S25 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 3700,
-    "precioMayoreo": 3600,
+    "precioPublico": 2500,
+    "precioMayoreo": 2400,
     "imagen": "/assets/products/samsung-original/s25-ultra/main.png",
     "stock": "bajo pedido",
     "activo": true,
@@ -5488,7 +5488,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 3600,
+        "price": 2400,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -5496,7 +5496,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 3500,
+        "price": 2300,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -5504,7 +5504,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 3400,
+        "price": 2200,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -5512,13 +5512,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 3300,
+        "price": 2100,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 128",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 142",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5572,7 +5572,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 139",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 153",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5601,7 +5601,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 193",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 206",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5614,8 +5614,8 @@
     "nombre": "Pantalla para Samsung Z Flip3",
     "modelo": "Samsung Z Flip3 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP3. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 3000,
-    "precioMayoreo": 2900,
+    "precioPublico": 2600,
+    "precioMayoreo": 2500,
     "imagen": "/assets/products/samsung-original/z-flip3/main.png",
     "stock": "bajo pedido",
     "activo": true,
@@ -5625,7 +5625,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 2900,
+        "price": 2500,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -5633,7 +5633,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 2800,
+        "price": 2450,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -5641,7 +5641,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 2700,
+        "price": 2400,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -5649,13 +5649,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 2600,
+        "price": 2300,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 144",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 158",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5687,7 +5687,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 192",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 205",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5700,8 +5700,8 @@
     "nombre": "LK-032 Cámara Inteligente con Gimbal",
     "modelo": "Cámara inteligente con gimbal",
     "descripcion": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV.",
-    "precioPublico": 1000,
-    "precioMayoreo": 800,
+    "precioPublico": 500,
+    "precioMayoreo": 400,
     "imagen": "/assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -5711,12 +5711,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 800,
+        "price": 400,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 194",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 207",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5729,8 +5729,8 @@
     "nombre": "LK-018 Cámara de Acción HD",
     "modelo": "Pantalla abatible y diseño magnético",
     "descripcion": "Cámara de acción HD compacta con pantalla abatible y diseño magnético. Ideal para grabar contenido diario, viajes, actividades, manos libres y tomas en primera persona.",
-    "precioPublico": 1200,
-    "precioMayoreo": 1000,
+    "precioPublico": 850,
+    "precioMayoreo": 700,
     "imagen": "/assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
     "stock": "disponible",
     "activo": true,
@@ -5740,12 +5740,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1000,
+        "price": 700,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 195",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 208",
     "videos": [
       "/assets/products/productos-ai/lk-018-camara-accion-hd/video-01.mp4",
       "/assets/products/productos-ai/lk-018-camara-accion-hd/video-02.mp4"
@@ -5786,7 +5786,7 @@
         "scope": "mixed_order"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 145",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 159",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5826,7 +5826,7 @@
         "scope": "mixed_order"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 146",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 160",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5866,7 +5866,7 @@
         "scope": "mixed_order"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 147",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 161",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5910,7 +5910,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 148",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 162",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5954,7 +5954,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 149",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 163",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5995,7 +5995,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 150",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 164",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -6036,7 +6036,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 151",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 165",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -6077,7 +6077,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 152",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 166",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -6131,7 +6131,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 63",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 78",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6189,7 +6189,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 64",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 79",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6247,7 +6247,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 65",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 80",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6305,7 +6305,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 66",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 81",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6363,7 +6363,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 68",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 83",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6421,7 +6421,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 69",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 84",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6479,7 +6479,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 70",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 85",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6537,7 +6537,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 71",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 86",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6595,7 +6595,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 72",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 87",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6653,7 +6653,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 73",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 88",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6711,7 +6711,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 74",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 89",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6769,7 +6769,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 75",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 90",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6827,7 +6827,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 76",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 91",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6885,7 +6885,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 77",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 92",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6943,7 +6943,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 78",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 93",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7001,7 +7001,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 80",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 95",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7059,7 +7059,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 81",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 96",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7117,7 +7117,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 82",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 97",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7175,7 +7175,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 83",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 98",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7233,7 +7233,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 84",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 99",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7291,7 +7291,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 85",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 100",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7349,7 +7349,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 86",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 101",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -7407,7 +7407,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 26",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7461,7 +7461,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 31",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 46",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7515,7 +7515,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 34",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 49",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7528,8 +7528,8 @@
     "nombre": "Pantalla para iPhone 15PRO",
     "modelo": "iPhone 15PRO SOFT OLED PREMIUM",
     "descripcion": "SOFT OLED PREMIUM para reparación de iPhone 15PRO. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1300,
-    "precioMayoreo": 1250,
+    "precioPublico": 1100,
+    "precioMayoreo": 1000,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -7539,7 +7539,7 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1250,
+        "price": 1000,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       },
@@ -7547,7 +7547,7 @@
         "code": "MIXED_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1200,
+        "price": 950,
         "label": "100 pzs surtido",
         "scope": "mixed_order"
       },
@@ -7555,7 +7555,7 @@
         "code": "MODEL_100",
         "minQty": 100,
         "maxQty": null,
-        "price": 1150,
+        "price": 900,
         "label": "100 pzs/modelo",
         "scope": "same_model"
       },
@@ -7563,13 +7563,13 @@
         "code": "BOX_MODEL",
         "minQty": 1,
         "maxQty": null,
-        "price": 1100,
+        "price": 850,
         "label": "Caja/modelo",
         "scope": "box_model",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 43",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 58",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7623,7 +7623,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 48",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 63",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7677,7 +7677,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 58",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 73",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7731,7 +7731,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 67",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 82",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7785,7 +7785,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 79",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 94",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7839,7 +7839,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 98",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 112",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7893,7 +7893,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 99",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 113",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7947,7 +7947,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 140",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 154",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8001,7 +8001,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 141",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 155",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8055,7 +8055,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 142",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 156",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8109,7 +8109,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 143",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 157",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8138,7 +8138,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 165",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 179",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8167,7 +8167,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 166",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 180",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8196,7 +8196,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 167",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 181",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8225,7 +8225,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 168",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 182",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8254,7 +8254,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 169",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 183",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8312,7 +8312,7 @@
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 171",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 185",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8386,8 +8386,8 @@
     "nombre": "Gafas AI M89",
     "modelo": "Gafas AI M89",
     "descripcion": "Gafas AI M89 de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1500,
-    "precioMayoreo": 1300,
+    "precioPublico": 600,
+    "precioMayoreo": 535,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -8397,12 +8397,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1300,
+        "price": 535,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 185",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 199",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8473,8 +8473,8 @@
     "nombre": "Gafas AI M95",
     "modelo": "Gafas AI M95",
     "descripcion": "Gafas AI M95 de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1600,
-    "precioMayoreo": 1400,
+    "precioPublico": 1000,
+    "precioMayoreo": 855,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -8484,12 +8484,12 @@
         "code": "WHOLESALE_5",
         "minQty": 5,
         "maxQty": 99,
-        "price": 1400,
+        "price": 855,
         "label": "Mayoreo 5 pzs",
         "scope": "single_product"
       }
     ],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 188",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 201",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8509,7 +8509,7 @@
     "activo": true,
     "orden": 10301,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 199",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 212",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8529,7 +8529,7 @@
     "activo": true,
     "orden": 10311,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 200",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 213",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8549,7 +8549,7 @@
     "activo": true,
     "orden": 10321,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 201",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 214",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8569,7 +8569,7 @@
     "activo": true,
     "orden": 10331,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 202",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 215",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8589,7 +8589,7 @@
     "activo": true,
     "orden": 10341,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 203",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 216",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8609,7 +8609,7 @@
     "activo": true,
     "orden": 10351,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 204",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 217",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8629,7 +8629,7 @@
     "activo": true,
     "orden": 10361,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 205",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 218",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8649,7 +8649,7 @@
     "activo": true,
     "orden": 10371,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 206",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 219",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8669,7 +8669,7 @@
     "activo": true,
     "orden": 10381,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 207",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 220",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8689,7 +8689,7 @@
     "activo": true,
     "orden": 10391,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 208",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 221",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8709,7 +8709,7 @@
     "activo": true,
     "orden": 10401,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 209",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 222",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8729,7 +8729,7 @@
     "activo": true,
     "orden": 10411,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 210",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 223",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8749,7 +8749,7 @@
     "activo": true,
     "orden": 10421,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 211",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 224",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8769,7 +8769,7 @@
     "activo": true,
     "orden": 10431,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 212",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 225",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8789,7 +8789,7 @@
     "activo": true,
     "orden": 10441,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 213",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 226",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8809,7 +8809,7 @@
     "activo": true,
     "orden": 10451,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 214",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 227",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8829,7 +8829,7 @@
     "activo": true,
     "orden": 10461,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 215",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 228",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -8849,7 +8849,7 @@
     "activo": true,
     "orden": 10471,
     "priceTiers": [],
-    "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 216",
+    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 229",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
