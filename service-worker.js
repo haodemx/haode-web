@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-08-13-editorial-release";
+const CACHE_VERSION = "haode-pwa-v2026-08-13-mobile-visual-fix";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -8,7 +8,7 @@ const APP_SHELL_URLS = [
   "/app/",
   "/app/index.html",
   "/offline.html",
-  "/style.css?v=20260813-editorial-release",
+  "/style.css?v=20260813-mobile-visual-fix",
   "/analytics.js?v=20260726-growth-phase37",
   "/script.js?v=20260809-final-audit",
   "/campaign-attribution.js",
