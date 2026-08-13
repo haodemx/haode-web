@@ -557,6 +557,13 @@ function catalogIdentityKey(product) {
   return family && model && quality ? `${family}|${model}|${quality}` : "";
 }
 
+function hasAuthoritativeCustomerPrices(product) {
+  const source = String(product?.priceSource || "");
+  return source.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx")
+    || source.includes("Lista_de_Precios_HAODE_20260721.pdf")
+    || source.includes("HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx");
+}
+
 function stockClassName(value) {
   return String(value || "consultar inventario")
     .trim()
@@ -701,8 +708,7 @@ function mergeErpCatalog(localProducts, catalogRows) {
     const incoming = erpCatalogProduct(row, localCatalog[index].order);
     usedLocalIndexes.add(index);
     const current = localCatalog[index];
-    const hasAuthoritativeLocalPrices = current.priceSource.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx")
-      || current.priceSource.includes("Lista_de_Precios_HAODE_20260721.pdf");
+    const hasAuthoritativeLocalPrices = hasAuthoritativeCustomerPrices(current);
     const mergedTiers = hasAuthoritativeLocalPrices
       ? current.priceTiers
       : incoming.priceTiers;

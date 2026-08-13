@@ -88,7 +88,7 @@
 
   if (!document.querySelector('[data-site-sales-footer], script[src*="/site-footer.js"]')) {
     const footerScript = document.createElement('script');
-    footerScript.src = '/site-footer.js?v=20260725-ui-phase32';
+    footerScript.src = '/site-footer.js?v=20260813-final-ui-seo';
     footerScript.defer = true;
     document.body.appendChild(footerScript);
   }

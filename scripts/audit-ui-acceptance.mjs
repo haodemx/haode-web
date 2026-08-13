@@ -120,11 +120,23 @@ async function inspectTarget(page, target, viewport) {
       waitUntil: 'domcontentloaded',
       timeout: 20_000,
     });
-    await page.waitForTimeout(target.source === 'app-state' ? 450 : 140);
+    const readySelector = target.source === 'app-state'
+      ? '[data-view-root] h1'
+      : 'h1';
+    await page.locator(readySelector).first().waitFor({
+      state: 'visible',
+      timeout: 3_000,
+    }).catch(() => {});
+    if (target.source === 'app-state') {
+      await page.waitForFunction(
+        () => !document.querySelector('[data-view-root] .loading-state'),
+        { timeout: 3_000 },
+      ).catch(() => {});
+    }
     if (target.commercial) {
       await page.waitForFunction(
         () => typeof window.gtag === 'function' && Boolean(window.HaodeCampaign),
-        { timeout: 1_200 },
+        { timeout: 3_000 },
       ).catch(() => {});
     }
   } catch (error) {
