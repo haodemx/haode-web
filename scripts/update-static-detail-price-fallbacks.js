@@ -82,13 +82,20 @@ function priceTableHtml(rows) {
 }
 
 function replaceOfferPrice(text, publicPrice) {
-  return text.replace(/"offers":\s*\{[\s\S]*?\n\s*\}/, (offerBlock) => {
-    let next = offerBlock.replace(/\n\s*"price":\s*"[^"]*",?/g, '');
-    if (!publicPrice) return next;
-    if (/"priceCurrency":\s*"MXN"/.test(next)) {
+  return text.replace(/"offers":\s*\{[^{}]*\}/g, (offerBlock) => {
+    let seenPrice = false;
+    let next = offerBlock.replace(
+      /(\s*)"price":\s*(?:"[^"]*"|-?\d+(?:\.\d+)?)(,?)/g,
+      (match, spacing, comma) => {
+        if (seenPrice || !publicPrice) return '';
+        seenPrice = true;
+        return `${spacing}"price": "${publicPrice}"${comma}`;
+      }
+    );
+    if (!seenPrice && publicPrice && /"priceCurrency":\s*"MXN"/.test(next)) {
       next = next.replace(/("priceCurrency":\s*"MXN",?)/, `$1\n          "price": "${publicPrice}",`);
     }
-    return next;
+    return next.replace(/,(\s*)}$/, '$1}');
   });
 }
 
@@ -126,7 +133,9 @@ function main() {
       continue;
     }
 
-    const hasApprovedCustomerPrice = String(product.priceSource || '').includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx');
+    const priceSource = String(product.priceSource || '');
+    const hasApprovedCustomerPrice = priceSource.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
+      || priceSource.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx');
     if (PROTECTED_PRICE_SKUS.has(product.id) && !hasApprovedCustomerPrice) {
       skippedProtected.push(product.id);
       continue;

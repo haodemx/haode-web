@@ -1,0 +1,3648 @@
+{
+  "summary": {
+    "apply": true,
+    "deleteUnlisted": false,
+    "publishUnlisted": false,
+    "sourceRows": 190,
+    "uniqueSourceProducts": 186,
+    "websiteProducts": 186,
+    "websiteMatched": 186,
+    "websiteChanged": 45,
+    "websiteDeleted": 0,
+    "appProducts": 186,
+    "appMatched": 186,
+    "appChanged": 45,
+    "appDeleted": 0,
+    "retainedSkus": 181,
+    "deletedSkus": 0,
+    "unpublishedSourceRows": 8,
+    "removedStaticRoutes": 0,
+    "unmatchedWebsite": 5,
+    "unmatchedApp": 5,
+    "ambiguous": 0,
+    "duplicateSourceRows": 0,
+    "publishedProducts": 0,
+    "createdStaticRoutes": 0
+  },
+  "report": {
+    "website": [
+      {
+        "id": "lk-018-camara-accion-hd",
+        "row": 208,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$850 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$700 MXN"
+          }
+        ]
+      },
+      {
+        "id": "lk-032-camara-inteligente-con-gimbal",
+        "row": 207,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$500 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$400 MXN"
+          }
+        ]
+      },
+      {
+        "id": "aimb-g5-ai-sports",
+        "row": 194,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$855 MXN"
+          }
+        ]
+      },
+      {
+        "id": "gafas-ai-gafas-ai-m89",
+        "row": 199,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$535 MXN"
+          }
+        ]
+      },
+      {
+        "id": "gafas-ai-gafas-ai-m95",
+        "row": 201,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$855 MXN"
+          }
+        ]
+      },
+      {
+        "id": "haode-ai-g3-smart-glasses",
+        "row": 197,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$855 MXN"
+          }
+        ]
+      },
+      {
+        "id": "haode-ai-w610-smart-glasses",
+        "row": 196,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$900 MXN"
+          }
+        ]
+      },
+      {
+        "id": "s1-ai-classic",
+        "row": 198,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$545 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$510 MXN"
+          }
+        ]
+      },
+      {
+        "id": "w630-ai-pro",
+        "row": 195,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,200 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$1,000 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-11pro",
+        "row": 27,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$190 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$185 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$180 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$175 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$170 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-11promax",
+        "row": 30,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$190 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$185 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$180 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$175 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$170 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-12-12pro",
+        "row": 33,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$190 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$185 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$180 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$175 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$170 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-13mini",
+        "row": 37,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$220 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$210 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$200 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$190 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$185 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-13promax",
+        "row": 42,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$350 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$340 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$330 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$320 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$300 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-14",
+        "row": 44,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$250 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$240 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$230 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$220 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$210 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-14pro",
+        "row": 50,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$300 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$280 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$270 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$260 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$250 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-15",
+        "row": 54,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$270 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$265 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$260 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$255 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$245 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16",
+        "row": 61,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$310 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$290 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$280 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$270 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$250 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16e",
+        "row": 62,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$300 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$280 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$270 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$260 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$240 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16plus",
+        "row": 64,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$350 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$330 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$320 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$300 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$280 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16pro",
+        "row": 65,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$580 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$550 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$500 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$450 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16promax",
+        "row": 69,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$620 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$580 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$570 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$550 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17",
+        "row": 70,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$580 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$550 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$500 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$450 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17air",
+        "row": 72,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,500 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$1,400 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$1,300 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$1,200 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$1,100 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17pro",
+        "row": 71,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$650 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$550 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$500 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$450 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17promax",
+        "row": 74,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$750 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$720 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$700 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$670 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$650 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-xsmax",
+        "row": 28,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$190 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$185 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$180 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$175 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$170 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-12-12pro",
+        "row": 34,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$590 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$570 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$560 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$550 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-13",
+        "row": 39,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$650 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$630 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$620 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$550 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-13pro",
+        "row": 41,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$700 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$650 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$550 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$500 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-13promax",
+        "row": 43,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$750 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$700 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$650 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$580 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-14",
+        "row": 45,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$650 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$620 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$550 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$500 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-14promax",
+        "row": 53,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$750 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$700 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$650 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$600 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$580 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-15promax",
+        "row": 60,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$950 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$900 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$850 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$800 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-16pro",
+        "row": 66,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$950 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$900 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$850 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$800 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-16promax-hard",
+        "row": 67,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,050 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$950 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$900 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$850 MXN"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-soft-15pro",
+        "row": 58,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,100 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$1,000 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$950 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$900 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$850 MXN"
+          }
+        ]
+      },
+      {
+        "id": "mica-hd",
+        "row": 172,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$400 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$350 MXN"
+          },
+          {
+            "quantity": "10+ paquetes",
+            "price": "$300 MXN"
+          }
+        ]
+      },
+      {
+        "id": "x200t-cortadora-micas",
+        "row": 170,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$6,500 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$6,200 MXN"
+          },
+          {
+            "quantity": "10+ paquetes",
+            "price": "$6,000 MXN"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s22-plus",
+        "row": 126,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$1,400 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$1,300 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$1,200 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$1,100 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$1,000 MXN"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s22-ultra",
+        "row": 129,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$2,500 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$2,400 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$2,300 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$2,200 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$2,100 MXN"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s23-ultra",
+        "row": 135,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$2,500 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$2,400 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$2,300 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$2,200 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$2,100 MXN"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s24-ultra",
+        "row": 140,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$2,500 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$2,400 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$2,300 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$2,200 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$2,100 MXN"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s25-ultra",
+        "row": 142,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$2,500 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$2,400 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$2,300 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$2,200 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$2,100 MXN"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-z-flip3",
+        "row": 158,
+        "prices": [
+          {
+            "quantity": "1 pza",
+            "price": "$2,600 MXN"
+          },
+          {
+            "quantity": "5+ pzs",
+            "price": "$2,500 MXN"
+          },
+          {
+            "quantity": "100 pzs surtido",
+            "price": "$2,450 MXN"
+          },
+          {
+            "quantity": "100 pzs/modelo",
+            "price": "$2,400 MXN"
+          },
+          {
+            "quantity": "Caja/modelo",
+            "price": "$2,300 MXN"
+          }
+        ]
+      }
+    ],
+    "app": [
+      {
+        "id": "iphone-oled-12-12pro",
+        "row": 34,
+        "retail": 600,
+        "wholesale5": 590,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 590,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 570,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 560,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 550,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-13",
+        "row": 39,
+        "retail": 650,
+        "wholesale5": 630,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 630,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 620,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 600,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 550,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-13pro",
+        "row": 41,
+        "retail": 700,
+        "wholesale5": 650,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 650,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 600,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 550,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 500,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-13promax",
+        "row": 43,
+        "retail": 750,
+        "wholesale5": 700,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 700,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 650,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 600,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 580,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-14",
+        "row": 45,
+        "retail": 650,
+        "wholesale5": 620,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 620,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 600,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 550,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 500,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-14promax",
+        "row": 53,
+        "retail": 750,
+        "wholesale5": 700,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 700,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 650,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 600,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 580,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-15promax",
+        "row": 60,
+        "retail": 1000,
+        "wholesale5": 950,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 950,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 900,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 850,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 800,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-16pro",
+        "row": 66,
+        "retail": 1000,
+        "wholesale5": 950,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 950,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 900,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 850,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 800,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-16promax-hard",
+        "row": 67,
+        "retail": 1050,
+        "wholesale5": 1000,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 1000,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 950,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 900,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 850,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-11pro",
+        "row": 27,
+        "retail": 190,
+        "wholesale5": 185,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 185,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 180,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 175,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 170,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-11promax",
+        "row": 30,
+        "retail": 190,
+        "wholesale5": 185,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 185,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 180,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 175,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 170,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-12-12pro",
+        "row": 33,
+        "retail": 190,
+        "wholesale5": 185,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 185,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 180,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 175,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 170,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-13mini",
+        "row": 37,
+        "retail": 220,
+        "wholesale5": 210,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 210,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 200,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 190,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 185,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-13promax",
+        "row": 42,
+        "retail": 350,
+        "wholesale5": 340,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 340,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 330,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 320,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 300,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-14",
+        "row": 44,
+        "retail": 250,
+        "wholesale5": 240,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 240,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 230,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 220,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 210,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-14pro",
+        "row": 50,
+        "retail": 300,
+        "wholesale5": 280,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 280,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 270,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 260,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 250,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-15",
+        "row": 54,
+        "retail": 270,
+        "wholesale5": 265,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 265,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 260,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 255,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 245,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16",
+        "row": 61,
+        "retail": 310,
+        "wholesale5": 290,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 290,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 280,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 270,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 250,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-xsmax",
+        "row": 28,
+        "retail": 190,
+        "wholesale5": 185,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 185,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 180,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 175,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 170,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16e",
+        "row": 62,
+        "retail": 300,
+        "wholesale5": 280,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 280,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 270,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 260,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 240,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16plus",
+        "row": 64,
+        "retail": 350,
+        "wholesale5": 330,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 330,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 320,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 300,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 280,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16pro",
+        "row": 65,
+        "retail": 600,
+        "wholesale5": 580,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 580,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 550,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 500,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 450,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-16promax",
+        "row": 69,
+        "retail": 620,
+        "wholesale5": 600,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 600,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 580,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 570,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 550,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17",
+        "row": 70,
+        "retail": 600,
+        "wholesale5": 580,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 580,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 550,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 500,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 450,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17air",
+        "row": 72,
+        "retail": 1500,
+        "wholesale5": 1400,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 1400,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 1300,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 1200,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 1100,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17pro",
+        "row": 71,
+        "retail": 650,
+        "wholesale5": 600,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 600,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 550,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 500,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 450,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "iphone-incell-17promax",
+        "row": 74,
+        "retail": 750,
+        "wholesale5": 720,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 720,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 700,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 670,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 650,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "mica-hd",
+        "row": 172,
+        "retail": 400,
+        "wholesale5": 350,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 350,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "minQty": 10,
+            "maxQty": null,
+            "price": 300,
+            "label": "10+ paquetes",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s22-plus",
+        "row": 126,
+        "retail": 1400,
+        "wholesale5": 1300,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 1300,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 1200,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 1100,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 1000,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "x200t-cortadora-micas",
+        "row": 170,
+        "retail": 6500,
+        "wholesale5": 6200,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 6200,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "minQty": 10,
+            "maxQty": null,
+            "price": 6000,
+            "label": "10+ paquetes",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s22-ultra",
+        "row": 129,
+        "retail": 2500,
+        "wholesale5": 2400,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 2400,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2300,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2200,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 2100,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "w630-ai-pro",
+        "row": 195,
+        "retail": 1200,
+        "wholesale5": 1000,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 1000,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "aimb-g5-ai-sports",
+        "row": 194,
+        "retail": 1000,
+        "wholesale5": 855,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 855,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "s1-ai-classic",
+        "row": 198,
+        "retail": 545,
+        "wholesale5": 510,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 510,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s23-ultra",
+        "row": 135,
+        "retail": 2500,
+        "wholesale5": 2400,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 2400,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2300,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2200,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 2100,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "haode-ai-g3-smart-glasses",
+        "row": 197,
+        "retail": 1000,
+        "wholesale5": 855,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 855,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "haode-ai-w610-smart-glasses",
+        "row": 196,
+        "retail": 1000,
+        "wholesale5": 900,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 900,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s24-ultra",
+        "row": 140,
+        "retail": 2500,
+        "wholesale5": 2400,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 2400,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2300,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2200,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 2100,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-s25-ultra",
+        "row": 142,
+        "retail": 2500,
+        "wholesale5": 2400,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 2400,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2300,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2200,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 2100,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "samsung-original-z-flip3",
+        "row": 158,
+        "retail": 2600,
+        "wholesale5": 2500,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 2500,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2450,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 2400,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 2300,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "lk-032-camara-inteligente-con-gimbal",
+        "row": 207,
+        "retail": 500,
+        "wholesale5": 400,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 400,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "lk-018-camara-accion-hd",
+        "row": 208,
+        "retail": 850,
+        "wholesale5": 700,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 700,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "iphone-oled-soft-15pro",
+        "row": 58,
+        "retail": 1100,
+        "wholesale5": 1000,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 1000,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          },
+          {
+            "code": "MIXED_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 950,
+            "label": "100 pzs surtido",
+            "scope": "mixed_order"
+          },
+          {
+            "code": "MODEL_100",
+            "minQty": 100,
+            "maxQty": null,
+            "price": 900,
+            "label": "100 pzs/modelo",
+            "scope": "same_model"
+          },
+          {
+            "code": "BOX_MODEL",
+            "minQty": 1,
+            "maxQty": null,
+            "price": 850,
+            "label": "Caja/modelo",
+            "scope": "box_model",
+            "autoApply": false
+          }
+        ]
+      },
+      {
+        "id": "gafas-ai-gafas-ai-m89",
+        "row": 199,
+        "retail": 600,
+        "wholesale5": 535,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 535,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      },
+      {
+        "id": "gafas-ai-gafas-ai-m95",
+        "row": 201,
+        "retail": 1000,
+        "wholesale5": 855,
+        "tiers": [
+          {
+            "code": "WHOLESALE_5",
+            "minQty": 5,
+            "maxQty": 99,
+            "price": 855,
+            "label": "Mayoreo 5 pzs",
+            "scope": "single_product"
+          }
+        ]
+      }
+    ],
+    "unmatchedWebsite": [
+      "fundas-funda-5in1-con-mica-premium-3d",
+      "fundas-kit-aluminio-de-17promax-con-logo",
+      "fundas-kit-aluminio-de-17promax-sin-logo",
+      "gafas-ai-gafas-ai-m02",
+      "gafas-ai-gafas-ai-m08"
+    ],
+    "unmatchedApp": [
+      "fundas-funda-5in1-con-mica-premium-3d",
+      "fundas-kit-aluminio-de-17promax-con-logo",
+      "fundas-kit-aluminio-de-17promax-sin-logo",
+      "gafas-ai-gafas-ai-m08",
+      "gafas-ai-gafas-ai-m02"
+    ],
+    "ambiguous": [],
+    "retained": [
+      {
+        "id": "aimb-g5-ai-sports",
+        "section": "ai",
+        "sourceRow": 194
+      },
+      {
+        "id": "celular-samsung-note-20-ultra-12-plus-256",
+        "section": "phones",
+        "sourceRow": 229
+      },
+      {
+        "id": "celular-samsung-note10-8-plus-256",
+        "section": "phones",
+        "sourceRow": 227
+      },
+      {
+        "id": "celular-samsung-note10-plus-12-plus-256",
+        "section": "phones",
+        "sourceRow": 228
+      },
+      {
+        "id": "celular-samsung-note8-4-plus-64",
+        "section": "phones",
+        "sourceRow": 225
+      },
+      {
+        "id": "celular-samsung-note9-8-plus-128",
+        "section": "phones",
+        "sourceRow": 226
+      },
+      {
+        "id": "celular-samsung-s10-8-plus-128",
+        "section": "phones",
+        "sourceRow": 214
+      },
+      {
+        "id": "celular-samsung-s10-plus-8-plus-128",
+        "section": "phones",
+        "sourceRow": 215
+      },
+      {
+        "id": "celular-samsung-s10e-8-plus-128",
+        "section": "phones",
+        "sourceRow": 216
+      },
+      {
+        "id": "celular-samsung-s20-5g-12-plus-256",
+        "section": "phones",
+        "sourceRow": 217
+      },
+      {
+        "id": "celular-samsung-s20-plus-12-plus-256",
+        "section": "phones",
+        "sourceRow": 218
+      },
+      {
+        "id": "celular-samsung-s20-ultra-12-plus-256",
+        "section": "phones",
+        "sourceRow": 220
+      },
+      {
+        "id": "celular-samsung-s20fe-6-plus-128",
+        "section": "phones",
+        "sourceRow": 219
+      },
+      {
+        "id": "celular-samsung-s21-12-plus-256",
+        "section": "phones",
+        "sourceRow": 221
+      },
+      {
+        "id": "celular-samsung-s21-ultra-12-plus-256",
+        "section": "phones",
+        "sourceRow": 222
+      },
+      {
+        "id": "celular-samsung-s22-ultra-12-plus-256",
+        "section": "phones",
+        "sourceRow": 223
+      },
+      {
+        "id": "celular-samsung-s9-6-plus-64",
+        "section": "phones",
+        "sourceRow": 212
+      },
+      {
+        "id": "celular-samsung-z-fip3-pro-doble-pantalla-8-plus-128",
+        "section": "phones",
+        "sourceRow": 224
+      },
+      {
+        "id": "celular-samsungs9-plus-6-plus-64",
+        "section": "phones",
+        "sourceRow": 213
+      },
+      {
+        "id": "fundas-funda-5in1-con-mica-premium-3d-13pro-14pro-16pro",
+        "section": "fundas",
+        "sourceRow": 183
+      },
+      {
+        "id": "fundas-kit-aluminio-de-17pro-con-logo-13pro-14pro-15pro-16pro",
+        "section": "fundas",
+        "sourceRow": 185
+      },
+      {
+        "id": "fundas-kit-carcasa-metalica-con-flex-carcasas-11-17pro",
+        "section": "fundas",
+        "sourceRow": 180
+      },
+      {
+        "id": "fundas-kit-carcasa-metalica-con-flex-carcasas-xr-17pro",
+        "section": "fundas",
+        "sourceRow": 179
+      },
+      {
+        "id": "fundas-kit-carcasa-metalica-con-flex-carcasas-xs-17pro",
+        "section": "fundas",
+        "sourceRow": 181
+      },
+      {
+        "id": "fundas-kit-carcasa-metalica-con-flex-carcasas-xsmax-17pro",
+        "section": "fundas",
+        "sourceRow": 182
+      },
+      {
+        "id": "gafas-ai-gafas-ai-m89",
+        "section": "ai",
+        "sourceRow": 199
+      },
+      {
+        "id": "gafas-ai-gafas-ai-m95",
+        "section": "ai",
+        "sourceRow": 201
+      },
+      {
+        "id": "haode-ai-g3-smart-glasses",
+        "section": "ai",
+        "sourceRow": 197
+      },
+      {
+        "id": "haode-ai-w610-smart-glasses",
+        "section": "ai",
+        "sourceRow": 196
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 79
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
+        "section": "iphone-diagnostic",
+        "sourceRow": 80
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 81
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-13",
+        "section": "iphone-diagnostic",
+        "sourceRow": 83
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
+        "section": "iphone-diagnostic",
+        "sourceRow": 84
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 85
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-14",
+        "section": "iphone-diagnostic",
+        "sourceRow": 86
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
+        "section": "iphone-diagnostic",
+        "sourceRow": 89
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
+        "section": "iphone-diagnostic",
+        "sourceRow": 87
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 88
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-15",
+        "section": "iphone-diagnostic",
+        "sourceRow": 90
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
+        "section": "iphone-diagnostic",
+        "sourceRow": 93
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
+        "section": "iphone-diagnostic",
+        "sourceRow": 91
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 92
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-16",
+        "section": "iphone-diagnostic",
+        "sourceRow": 95
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
+        "section": "iphone-diagnostic",
+        "sourceRow": 98
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
+        "section": "iphone-diagnostic",
+        "sourceRow": 96
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 97
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-17",
+        "section": "iphone-diagnostic",
+        "sourceRow": 99
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
+        "section": "iphone-diagnostic",
+        "sourceRow": 100
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 101
+      },
+      {
+        "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
+        "section": "iphone-diagnostic",
+        "sourceRow": 78
+      },
+      {
+        "id": "iphone-incell-11",
+        "section": "iphone",
+        "sourceRow": 26
+      },
+      {
+        "id": "iphone-incell-11-bolsa-protectora",
+        "section": "iphone",
+        "sourceRow": 25
+      },
+      {
+        "id": "iphone-incell-11pro",
+        "section": "iphone",
+        "sourceRow": 27
+      },
+      {
+        "id": "iphone-incell-11promax",
+        "section": "iphone",
+        "sourceRow": 30
+      },
+      {
+        "id": "iphone-incell-12-12pro",
+        "section": "iphone",
+        "sourceRow": 33
+      },
+      {
+        "id": "iphone-incell-12mini",
+        "section": "iphone",
+        "sourceRow": 32
+      },
+      {
+        "id": "iphone-incell-12promax",
+        "section": "iphone",
+        "sourceRow": 35
+      },
+      {
+        "id": "iphone-incell-13",
+        "section": "iphone",
+        "sourceRow": 38
+      },
+      {
+        "id": "iphone-incell-13mini",
+        "section": "iphone",
+        "sourceRow": 37
+      },
+      {
+        "id": "iphone-incell-13pro",
+        "section": "iphone",
+        "sourceRow": 40
+      },
+      {
+        "id": "iphone-incell-13promax",
+        "section": "iphone",
+        "sourceRow": 42
+      },
+      {
+        "id": "iphone-incell-14",
+        "section": "iphone",
+        "sourceRow": 44
+      },
+      {
+        "id": "iphone-incell-14plus",
+        "section": "iphone",
+        "sourceRow": 47
+      },
+      {
+        "id": "iphone-incell-14pro",
+        "section": "iphone",
+        "sourceRow": 50
+      },
+      {
+        "id": "iphone-incell-14promax",
+        "section": "iphone",
+        "sourceRow": 52
+      },
+      {
+        "id": "iphone-incell-15",
+        "section": "iphone",
+        "sourceRow": 54
+      },
+      {
+        "id": "iphone-incell-15plus",
+        "section": "iphone",
+        "sourceRow": 56
+      },
+      {
+        "id": "iphone-incell-15pro",
+        "section": "iphone",
+        "sourceRow": 57
+      },
+      {
+        "id": "iphone-incell-15promax",
+        "section": "iphone",
+        "sourceRow": 59
+      },
+      {
+        "id": "iphone-incell-16",
+        "section": "iphone",
+        "sourceRow": 61
+      },
+      {
+        "id": "iphone-incell-16e",
+        "section": "iphone",
+        "sourceRow": 62
+      },
+      {
+        "id": "iphone-incell-16plus",
+        "section": "iphone",
+        "sourceRow": 64
+      },
+      {
+        "id": "iphone-incell-16pro",
+        "section": "iphone",
+        "sourceRow": 65
+      },
+      {
+        "id": "iphone-incell-16promax",
+        "section": "iphone",
+        "sourceRow": 69
+      },
+      {
+        "id": "iphone-incell-17",
+        "section": "iphone",
+        "sourceRow": 70
+      },
+      {
+        "id": "iphone-incell-17air",
+        "section": "iphone",
+        "sourceRow": 72
+      },
+      {
+        "id": "iphone-incell-17e",
+        "section": "iphone",
+        "sourceRow": 73
+      },
+      {
+        "id": "iphone-incell-17pro",
+        "section": "iphone",
+        "sourceRow": 71
+      },
+      {
+        "id": "iphone-incell-17promax",
+        "section": "iphone",
+        "sourceRow": 74
+      },
+      {
+        "id": "iphone-incell-x",
+        "section": "iphone",
+        "sourceRow": 19
+      },
+      {
+        "id": "iphone-incell-xr",
+        "section": "iphone",
+        "sourceRow": 24
+      },
+      {
+        "id": "iphone-incell-xr-bolsa-protectora",
+        "section": "iphone",
+        "sourceRow": 23
+      },
+      {
+        "id": "iphone-incell-xs",
+        "section": "iphone",
+        "sourceRow": 21
+      },
+      {
+        "id": "iphone-incell-xsmax",
+        "section": "iphone",
+        "sourceRow": 28
+      },
+      {
+        "id": "iphone-oled-11promax",
+        "section": "iphone",
+        "sourceRow": 31
+      },
+      {
+        "id": "iphone-oled-12-12pro",
+        "section": "iphone",
+        "sourceRow": 34
+      },
+      {
+        "id": "iphone-oled-12promax",
+        "section": "iphone",
+        "sourceRow": 36
+      },
+      {
+        "id": "iphone-oled-13",
+        "section": "iphone",
+        "sourceRow": 39
+      },
+      {
+        "id": "iphone-oled-13pro",
+        "section": "iphone",
+        "sourceRow": 41
+      },
+      {
+        "id": "iphone-oled-13promax",
+        "section": "iphone",
+        "sourceRow": 43
+      },
+      {
+        "id": "iphone-oled-14",
+        "section": "iphone",
+        "sourceRow": 45
+      },
+      {
+        "id": "iphone-oled-14plus",
+        "section": "iphone",
+        "sourceRow": 48
+      },
+      {
+        "id": "iphone-oled-14pro",
+        "section": "iphone",
+        "sourceRow": 51
+      },
+      {
+        "id": "iphone-oled-14promax",
+        "section": "iphone",
+        "sourceRow": 53
+      },
+      {
+        "id": "iphone-oled-15",
+        "section": "iphone",
+        "sourceRow": 55
+      },
+      {
+        "id": "iphone-oled-15promax",
+        "section": "iphone",
+        "sourceRow": 60
+      },
+      {
+        "id": "iphone-oled-16e",
+        "section": "iphone",
+        "sourceRow": 63
+      },
+      {
+        "id": "iphone-oled-16pro",
+        "section": "iphone",
+        "sourceRow": 66
+      },
+      {
+        "id": "iphone-oled-16promax",
+        "section": "iphone",
+        "sourceRow": 68
+      },
+      {
+        "id": "iphone-oled-16promax-hard",
+        "section": "iphone",
+        "sourceRow": 67
+      },
+      {
+        "id": "iphone-oled-soft-14",
+        "section": "iphone",
+        "sourceRow": 46
+      },
+      {
+        "id": "iphone-oled-soft-14-plus",
+        "section": "iphone",
+        "sourceRow": 49
+      },
+      {
+        "id": "iphone-oled-soft-15pro",
+        "section": "iphone",
+        "sourceRow": 58
+      },
+      {
+        "id": "iphone-oled-xsmax",
+        "section": "iphone",
+        "sourceRow": 29
+      },
+      {
+        "id": "lk-007-camara-digital-4k",
+        "section": "cameras",
+        "sourceRow": 206
+      },
+      {
+        "id": "lk-018-camara-accion-hd",
+        "section": "cameras",
+        "sourceRow": 208
+      },
+      {
+        "id": "lk-030-mini-camara-retro-digital",
+        "section": "cameras",
+        "sourceRow": 205
+      },
+      {
+        "id": "lk-032-camara-inteligente-con-gimbal",
+        "section": "cameras",
+        "sourceRow": 207
+      },
+      {
+        "id": "mica-hd",
+        "section": "micas",
+        "sourceRow": 172
+      },
+      {
+        "id": "mica-matte",
+        "section": "micas",
+        "sourceRow": 173
+      },
+      {
+        "id": "mica-privacidad-hd",
+        "section": "micas",
+        "sourceRow": 174
+      },
+      {
+        "id": "mica-privacidad-matte",
+        "section": "micas",
+        "sourceRow": 175
+      },
+      {
+        "id": "oled-diagnostica-12mini-hard",
+        "section": "iphone-diagnostic",
+        "sourceRow": 82
+      },
+      {
+        "id": "oled-diagnostica-16e-soft",
+        "section": "iphone-diagnostic",
+        "sourceRow": 94
+      },
+      {
+        "id": "s1-ai-classic",
+        "section": "ai",
+        "sourceRow": 198
+      },
+      {
+        "id": "samsung-incell-note-10",
+        "section": "samsung",
+        "sourceRow": 145
+      },
+      {
+        "id": "samsung-incell-note-10-lite",
+        "section": "samsung",
+        "sourceRow": 148
+      },
+      {
+        "id": "samsung-incell-note-10-plus",
+        "section": "samsung",
+        "sourceRow": 147
+      },
+      {
+        "id": "samsung-incell-note-20",
+        "section": "samsung",
+        "sourceRow": 149
+      },
+      {
+        "id": "samsung-incell-note-20-ultra",
+        "section": "samsung",
+        "sourceRow": 151
+      },
+      {
+        "id": "samsung-incell-note-8",
+        "section": "samsung",
+        "sourceRow": 143
+      },
+      {
+        "id": "samsung-incell-note-9",
+        "section": "samsung",
+        "sourceRow": 144
+      },
+      {
+        "id": "samsung-incell-s10",
+        "section": "samsung",
+        "sourceRow": 108
+      },
+      {
+        "id": "samsung-incell-s10-lite",
+        "section": "samsung",
+        "sourceRow": 111
+      },
+      {
+        "id": "samsung-incell-s10-plus",
+        "section": "samsung",
+        "sourceRow": 109
+      },
+      {
+        "id": "samsung-incell-s10e",
+        "section": "samsung",
+        "sourceRow": 110
+      },
+      {
+        "id": "samsung-incell-s20-4g",
+        "section": "samsung",
+        "sourceRow": 112
+      },
+      {
+        "id": "samsung-incell-s20-5g",
+        "section": "samsung",
+        "sourceRow": 113
+      },
+      {
+        "id": "samsung-incell-s20-fe",
+        "section": "samsung",
+        "sourceRow": 116
+      },
+      {
+        "id": "samsung-incell-s20-plus",
+        "section": "samsung",
+        "sourceRow": 114
+      },
+      {
+        "id": "samsung-incell-s20-ultra",
+        "section": "samsung",
+        "sourceRow": 117
+      },
+      {
+        "id": "samsung-incell-s21",
+        "section": "samsung",
+        "sourceRow": 118
+      },
+      {
+        "id": "samsung-incell-s21-fe",
+        "section": "samsung",
+        "sourceRow": 119
+      },
+      {
+        "id": "samsung-incell-s21-plus",
+        "section": "samsung",
+        "sourceRow": 120
+      },
+      {
+        "id": "samsung-incell-s21-ultra",
+        "section": "samsung",
+        "sourceRow": 121
+      },
+      {
+        "id": "samsung-incell-s22",
+        "section": "samsung",
+        "sourceRow": 124
+      },
+      {
+        "id": "samsung-incell-s22-plus",
+        "section": "samsung",
+        "sourceRow": 125
+      },
+      {
+        "id": "samsung-incell-s22-ultra",
+        "section": "samsung",
+        "sourceRow": 127
+      },
+      {
+        "id": "samsung-incell-s23",
+        "section": "samsung",
+        "sourceRow": 130
+      },
+      {
+        "id": "samsung-incell-s23-plus",
+        "section": "samsung",
+        "sourceRow": 131
+      },
+      {
+        "id": "samsung-incell-s23-ultra",
+        "section": "samsung",
+        "sourceRow": 133
+      },
+      {
+        "id": "samsung-incell-s24",
+        "section": "samsung",
+        "sourceRow": 136
+      },
+      {
+        "id": "samsung-incell-s24-plus",
+        "section": "samsung",
+        "sourceRow": 137
+      },
+      {
+        "id": "samsung-incell-s24-ultra",
+        "section": "samsung",
+        "sourceRow": 138
+      },
+      {
+        "id": "samsung-incell-s8",
+        "section": "samsung",
+        "sourceRow": 104
+      },
+      {
+        "id": "samsung-incell-s8-plus",
+        "section": "samsung",
+        "sourceRow": 105
+      },
+      {
+        "id": "samsung-incell-s9",
+        "section": "samsung",
+        "sourceRow": 106
+      },
+      {
+        "id": "samsung-incell-s9-plus",
+        "section": "samsung",
+        "sourceRow": 107
+      },
+      {
+        "id": "samsung-incell-z-flip3",
+        "section": "samsung",
+        "sourceRow": 154
+      },
+      {
+        "id": "samsung-incell-z-flip4",
+        "section": "samsung",
+        "sourceRow": 155
+      },
+      {
+        "id": "samsung-incell-z-flip5",
+        "section": "samsung",
+        "sourceRow": 156
+      },
+      {
+        "id": "samsung-incell-z-flip6",
+        "section": "samsung",
+        "sourceRow": 157
+      },
+      {
+        "id": "samsung-oled-note-10",
+        "section": "samsung",
+        "sourceRow": 146
+      },
+      {
+        "id": "samsung-oled-note-20",
+        "section": "samsung",
+        "sourceRow": 150
+      },
+      {
+        "id": "samsung-oled-note-20-ultra",
+        "section": "samsung",
+        "sourceRow": 152
+      },
+      {
+        "id": "samsung-oled-s20-plus",
+        "section": "samsung",
+        "sourceRow": 115
+      },
+      {
+        "id": "samsung-oled-s21-ultra",
+        "section": "samsung",
+        "sourceRow": 122
+      },
+      {
+        "id": "samsung-oled-s22-ultra",
+        "section": "samsung",
+        "sourceRow": 128
+      },
+      {
+        "id": "samsung-oled-s23-ultra",
+        "section": "samsung",
+        "sourceRow": 134
+      },
+      {
+        "id": "samsung-oled-s24-ultra",
+        "section": "samsung",
+        "sourceRow": 139
+      },
+      {
+        "id": "samsung-oled-s25-ultra",
+        "section": "samsung",
+        "sourceRow": 141
+      },
+      {
+        "id": "samsung-original-note-20-ultra",
+        "section": "samsung",
+        "sourceRow": 153
+      },
+      {
+        "id": "samsung-original-s21-ultra",
+        "section": "samsung",
+        "sourceRow": 123
+      },
+      {
+        "id": "samsung-original-s22-plus",
+        "section": "samsung",
+        "sourceRow": 126
+      },
+      {
+        "id": "samsung-original-s22-ultra",
+        "section": "samsung",
+        "sourceRow": 129
+      },
+      {
+        "id": "samsung-original-s23-plus",
+        "section": "samsung",
+        "sourceRow": 132
+      },
+      {
+        "id": "samsung-original-s23-ultra",
+        "section": "samsung",
+        "sourceRow": 135
+      },
+      {
+        "id": "samsung-original-s24-ultra",
+        "section": "samsung",
+        "sourceRow": 140
+      },
+      {
+        "id": "samsung-original-s25-ultra",
+        "section": "samsung",
+        "sourceRow": 142
+      },
+      {
+        "id": "samsung-original-z-flip3",
+        "section": "samsung",
+        "sourceRow": 158
+      },
+      {
+        "id": "samsung-original-z-flip4",
+        "section": "samsung",
+        "sourceRow": 159
+      },
+      {
+        "id": "samsung-original-z-flip5",
+        "section": "samsung",
+        "sourceRow": 160
+      },
+      {
+        "id": "samsung-original-z-flip6",
+        "section": "samsung",
+        "sourceRow": 161
+      },
+      {
+        "id": "samsung-original-z-flip7",
+        "section": "samsung",
+        "sourceRow": 162
+      },
+      {
+        "id": "samsung-original-z-fold3",
+        "section": "samsung",
+        "sourceRow": 163
+      },
+      {
+        "id": "samsung-original-z-fold4",
+        "section": "samsung",
+        "sourceRow": 164
+      },
+      {
+        "id": "samsung-original-z-fold5",
+        "section": "samsung",
+        "sourceRow": 165
+      },
+      {
+        "id": "samsung-original-z-fold6",
+        "section": "samsung",
+        "sourceRow": 166
+      },
+      {
+        "id": "w630-ai-pro",
+        "section": "ai",
+        "sourceRow": 195
+      },
+      {
+        "id": "x200t-cortadora-micas",
+        "section": "micas",
+        "sourceRow": 170
+      }
+    ],
+    "deleted": [],
+    "unpublishedSourceRows": [
+      {
+        "section": "iphone",
+        "sourceRow": 20,
+        "model": "X Bolsa Protectora",
+        "product": null,
+        "quality": "INCELL FHD"
+      },
+      {
+        "section": "iphone",
+        "sourceRow": 22,
+        "model": "Xs Bolsa Protectora",
+        "product": null,
+        "quality": "INCELL FHD"
+      },
+      {
+        "section": "fundas",
+        "sourceRow": 186,
+        "model": "13PRO/14PRO/15PRO/16PRO",
+        "product": "KIT ALUMINIO DE 17PROMAX CON LOGO",
+        "quality": null
+      },
+      {
+        "section": "fundas",
+        "sourceRow": 187,
+        "model": "13PRO/14PRO/15PRO/16PRO",
+        "product": "KIT ALUMINIO DE 17PROMAX SIN LOGO",
+        "quality": null
+      },
+      {
+        "section": "fundas",
+        "sourceRow": 188,
+        "model": "13PRO/14PRO/15PRO/16PRO",
+        "product": "KIT ALUMINIO DE 17PROMAX SIN LOGO",
+        "quality": null
+      },
+      {
+        "section": "fundas",
+        "sourceRow": 189,
+        "model": "13PRO/14PRO/15PRO/16PRO",
+        "product": "KIT ALUMINIO DE 17PROMAX SIN LOGO",
+        "quality": null
+      },
+      {
+        "section": "fundas",
+        "sourceRow": 190,
+        "model": "13PRO/14PRO/15PRO/16PRO",
+        "product": "KIT ALUMINIO DE 17PROMAX SIN LOGO",
+        "quality": null
+      },
+      {
+        "section": "ai",
+        "sourceRow": 200,
+        "model": null,
+        "product": "Gafas AI M08 13MP",
+        "quality": null
+      }
+    ],
+    "removedStaticRoutes": [],
+    "duplicateSourceRows": [],
+    "publishedProducts": [],
+    "createdStaticRoutes": []
+  }
+}

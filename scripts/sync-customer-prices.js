@@ -2,19 +2,19 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-07.json');
+const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-08.json');
 const WEBSITE_FILE = path.join(ROOT, 'data', 'products.generated.js');
 const APP_FILE = path.join(ROOT, 'app', 'products.json');
 const MASTER_FILE = path.join(ROOT, 'docs', 'master-data', 'products-master.csv');
-const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-07.md');
-const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-07.json');
+const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-08.md');
+const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-08.json');
 const PRODUCT_DIR = path.join(ROOT, 'producto');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const APPLY = process.argv.includes('--apply');
 const DELETE_UNLISTED = process.argv.includes('--delete-unlisted');
 const PUBLISH_UNLISTED = process.argv.includes('--publish-unlisted');
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
-const TODAY = '2026-07-25';
+const TODAY = '2026-08-13';
 const STATIC_ROUTE_ALIASES = {
   'funda-magnetica-17-pro-max': ['funda-magnetica-estilo-iphone-17-pro-max'],
   'funda-premium-17-pro-max': ['funda-premium-aluminio-estilo-iphone-17-pro-max'],
@@ -246,7 +246,7 @@ function sourceDescription(row) {
 }
 
 function sourcePriceReference(source, rows) {
-  return `${source.sourceWorkbook} · Lista_Precios · ${rows.length > 1 ? `filas ${rows.map((row) => row.sourceRow).join(', ')}` : `fila ${rows[0].sourceRow}`}`;
+  return `${source.sourceWorkbook} · ${source.sourceSheet} · ${rows.length > 1 ? `filas ${rows.map((row) => row.sourceRow).join(', ')}` : `fila ${rows[0].sourceRow}`}`;
 }
 
 function makeWebsiteProduct(id, row, rows, source, existing = null, appProduct = null) {
@@ -726,7 +726,7 @@ function main() {
     const before = JSON.stringify(product.prices || []);
     const after = JSON.stringify(nextPrices);
     product.prices = nextPrices;
-    product.priceSource = `${source.sourceWorkbook} · Lista_Precios · fila ${row.sourceRow}`;
+    product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== after) report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
     websiteDirectMatches.add(product.id);
     recordMatch(product, row);
@@ -745,7 +745,7 @@ function main() {
     product.precioPublico = retail;
     product.precioMayoreo = wholesale5;
     product.priceTiers = tiers;
-    product.priceSource = `${source.sourceWorkbook} · Lista_Precios · fila ${row.sourceRow}`;
+    product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
     const after = JSON.stringify({ retail, wholesale5, tiers });
     if (before !== after) report.app.push({ id: product.id, row: row.sourceRow, retail, wholesale5, tiers });
     recordMatch(product, row);
@@ -758,7 +758,7 @@ function main() {
     const nextPrices = websitePrices(row);
     const before = JSON.stringify(product.prices || []);
     product.prices = nextPrices;
-    product.priceSource = `${source.sourceWorkbook} · Lista_Precios · fila ${row.sourceRow}`;
+    product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== JSON.stringify(nextPrices)) {
       report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
     }
@@ -898,9 +898,9 @@ function main() {
       updateSitemap(retainedWebsiteProducts);
     }
     const lines = [
-      '# Customer Price Sync 2026-07',
+      '# Customer Price Sync 2026-08',
       '',
-      `- Source: ${source.sourceWorkbook} / Lista_Precios`,
+      `- Source: ${source.sourceWorkbook} / ${source.sourceSheet}`,
       `- Approved source rows: ${summary.sourceRows}`,
       `- Unique approved products: ${summary.uniqueSourceProducts}`,
       `- Website matched: ${summary.websiteMatched}/${summary.websiteProducts}`,
