@@ -223,7 +223,7 @@ function renderPage(page) {
   <link rel="canonical" href="${url}" />
   <title>${page.title}</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="/style.css?v=20260727-exposure-pages" />
+  <link rel="stylesheet" href="/style.css?v=20260813-editorial-release" />
   <script type="application/ld+json">
 ${JSON.stringify(jsonLdFor(page), null, 2)}
   </script>

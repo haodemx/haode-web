@@ -1223,9 +1223,9 @@ function renderHome() {
     <div class="page-stack">
       <section class="app-procurement-hero app-home-board">
         <div class="app-home-intro">
-          <span class="hero-badge">Tienda de fábrica HAODE</span>
-          <h1>Fábrica directa para pantallas</h1>
-          <p>Pantallas y refacciones listas para cotizar por modelo, cantidad y ciudad.</p>
+          <span class="hero-badge">HAODE México · Catálogo profesional</span>
+          <h1>Encuentra la pieza exacta.</h1>
+          <p>Pantallas y refacciones organizadas por modelo. Confirma versión, cantidad y disponibilidad antes del pedido.</p>
           <button class="app-quick-search" type="button" data-focus-search>
             <span>Buscar por SKU o modelo</span>
             <strong>Buscar</strong>
@@ -1240,7 +1240,7 @@ function renderHome() {
         </div>
 
         <div class="app-stock-strip" aria-label="Ventajas HAODE">
-          <span><strong>Stock en México</strong><small>Envíos a todo el país</small></span>
+          <span><strong>Stock en México</strong><small>Disponibilidad por confirmar</small></span>
           <span><strong>Precio por cantidad</strong><small>Mayoreo privado</small></span>
           <span><strong>Calidad revisada</strong><small>Pantallas y refacciones</small></span>
           <span><strong>WhatsApp privado</strong><small>Lista grande</small></span>

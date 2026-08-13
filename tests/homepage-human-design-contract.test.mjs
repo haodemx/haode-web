@@ -88,7 +88,7 @@ test('dynamic promotion is announced and below-fold content media is deferred', 
 
 test('mobile surface opts into safe-area layout and current theme color', () => {
   assert.match(html, /<meta\b[^>]*name=["']viewport["'][^>]*content=["'][^"']*viewport-fit=cover[^"']*["']/i);
-  assert.match(html, /<meta\b[^>]*name=["']theme-color["'][^>]*content=["']#151515["']/i);
+  assert.match(html, /<meta\b[^>]*name=["']theme-color["'][^>]*content=["']#fbfbf9["']/i);
 });
 
 test('homepage and App use the same transparent HAODE wordmark', () => {
@@ -102,14 +102,14 @@ test('homepage and App use the same transparent HAODE wordmark', () => {
   assert.ok([4, 6].includes(pngColorType), `wordmark PNG must carry alpha; color type was ${pngColorType}`);
 });
 
-test('homepage and App lead with pantallas instead of talleres', () => {
-  assert.match(html, /<h1>Fábrica directa\s*<span>para pantallas<\/span><\/h1>/i);
-  assert.doesNotMatch(html, /<h1>Fábrica directa\s*<span>para talleres<\/span><\/h1>/i);
-  assert.match(appJs, /<h1>Fábrica directa para pantallas<\/h1>/i);
-  assert.doesNotMatch(appJs, /<h1>Fábrica directa para talleres<\/h1>/i);
+test('homepage and App lead with the approved product-first editorial message', () => {
+  assert.match(html, /<h1>Precisión para reparar\.\s*<span>Empieza aquí\.<\/span><\/h1>/i);
+  assert.match(appJs, /<h1>Encuentra la pieza exacta\.<\/h1>/i);
+  assert.match(html, /Pantallas y refacciones para reparación móvil/i);
+  assert.match(appJs, /Pantallas y refacciones organizadas por modelo/i);
 });
 
-test('homepage header uses one restrained dark action system', () => {
+test('homepage header uses one restrained light editorial action system', () => {
   const header = html.match(/<header\b[^>]*class=["'][^"']*reference-header[^"']*["'][^>]*>([\s\S]*?)<\/header>/i);
   assert.ok(header, 'homepage must include the reference header');
   assert.match(header[1], /<strong>Atención por WhatsApp<\/strong>\s*<small>33 2668 4296<\/small>/i);
@@ -119,9 +119,9 @@ test('homepage header uses one restrained dark action system', () => {
 
   assert.match(styles, /body\.home-page-reference \.reference-header\s*{[^}]*height:\s*auto;/i);
   assert.match(styles, /body\.home-page-reference \.reference-head-info::before,\s*body\.home-page-reference \.reference-head-action::before\s*{[^}]*content:\s*none;/i);
-  assert.match(styles, /body\.home-page-reference \.reference-head-account strong\s*{[^}]*color:\s*#ff7a3a;/i);
+  assert.match(styles, /body\.home-page-reference \.reference-head-account strong\s*{[^}]*color:\s*var\(--brand-orange\);/i);
   assert.match(styles, /body\.home-page-reference \.reference-nav-actions a\[href\*="wa\.me"\]\s*{[^}]*background:\s*transparent;/i);
-  assert.match(styles, /body\.home-page-reference \.reference-nav-actions a\[href="\/app\/"\]\s*{[^}]*background:\s*transparent;/i);
+  assert.match(styles, /body\.home-page-reference \.reference-nav-actions a\[href="\/app\/"\]\s*{[^}]*background:\s*var\(--brand-ink\);/i);
 });
 
 test('App keeps one primary heading, reserves product image space, and avoids unconfirmed delivery claims', () => {

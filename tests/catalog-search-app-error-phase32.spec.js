@@ -33,7 +33,7 @@ test.describe('HAODE catalog search and App error state phase 32', () => {
     await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
     await expect(page.locator('[data-detail-header-app]')).toBeVisible();
     await expect(page.locator('[data-site-sales-footer]')).toBeVisible();
-    await expect(page.locator('.detail-shell')).toHaveCSS('border-radius', '4px');
+    await expect(page.locator('.detail-shell')).toHaveCSS('border-radius', '0px');
     await expectNoHorizontalOverflow(page);
   });
 

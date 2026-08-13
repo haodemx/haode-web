@@ -51,8 +51,8 @@ async function expectFactoryProofStrip(page) {
       strongColor: firstStrong ? getComputedStyle(firstStrong).color : '',
     };
   });
-  expect(details.backgroundImage).toContain('linear-gradient');
-  expect(details.strongColor).toBe('rgb(255, 255, 255)');
+  expect(details.backgroundImage).toBe('none');
+  expect(details.strongColor).toBe('rgb(16, 16, 18)');
 }
 
 async function expectCategoryContentStartsInView(page) {

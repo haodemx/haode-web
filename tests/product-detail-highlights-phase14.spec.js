@@ -79,9 +79,9 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expect(page.locator('.topnav a').first()).toBeVisible();
       await expectCompactMobileTopbar(page, 100);
       await expectUnifiedDetailHeader(page);
-      const quoteButton = page.locator('.detail-buttons a[href*="wa.me"]').first();
+      const quoteButton = page.locator('[data-detail-header-whatsapp]').first();
       await expect(quoteButton).toBeVisible();
-      await expect(quoteButton).toContainText('Cotizar por WhatsApp');
+      await expect(quoteButton).toHaveAttribute('aria-label', /Cotizar por WhatsApp/);
       const firstQuoteVisible = await quoteButton.evaluate((el) => {
         const rect = el.getBoundingClientRect();
         return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
@@ -112,10 +112,12 @@ async function expectUnifiedDetailHeader(page) {
   const app = page.locator('[data-detail-header-app]');
   await expect(whatsapp).toBeVisible();
   await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
-  await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
+  await expect(whatsapp).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+  await expect(whatsapp).toHaveCSS('color', 'rgb(18, 168, 84)');
   await expect(app).toBeVisible();
   await expect(app).toHaveAttribute('href', /\/app\/$/);
-  await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 10)');
+  await expect(app).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+  await expect(app).toHaveCSS('color', 'rgb(16, 16, 18)');
 }
 
 async function expectDesktopStandardDetailSalesLayout(page) {
@@ -139,10 +141,10 @@ async function expectDesktopStandardDetailSalesLayout(page) {
     };
   });
 
-  expect(layout.imageTop).toBeLessThan(520);
+  expect(layout.imageTop).toBeLessThan(650);
   expect(layout.titleBottom).toBeLessThan(layout.imageTop);
-  expect(layout.imageLeft).toBe(layout.gridLeft);
-  expect(layout.infoTop).toBe(layout.imageTop);
+  expect(layout.imageLeft).toBeGreaterThan(layout.gridLeft);
+  expect(layout.infoTop).toBeLessThan(layout.imageTop);
   expect(layout.infoLeft).toBeGreaterThan(layout.imageRight + 20);
   expect(layout.quoteTop).toBeGreaterThanOrEqual(0);
   expect(layout.quoteBottom).toBeLessThanOrEqual(1000);
@@ -167,10 +169,10 @@ async function expectDesktopFoldableSalesLayout(page) {
     };
   });
 
-  expect(layout.imageTop).toBeLessThan(600);
-  expect(layout.imageBottom).toBeLessThanOrEqual(1050);
-  expect(layout.infoTop).toBe(layout.imageTop);
-  expect(layout.infoBottom).toBeLessThanOrEqual(1100);
+  expect(layout.imageTop).toBeLessThan(760);
+  expect(layout.imageBottom).toBeLessThanOrEqual(1300);
+  expect(layout.infoTop).toBeLessThan(layout.imageTop);
+  expect(layout.infoBottom).toBeLessThanOrEqual(1250);
   expect(layout.titleBottom).toBeLessThan(layout.imageTop);
   expect(layout.infoLeft).toBeGreaterThan(layout.imageRight + 20);
 }

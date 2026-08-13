@@ -115,7 +115,7 @@ async function expectDetailProofStripReadable(page) {
     };
   });
 
-  expect(details.stripBackground).toContain('linear-gradient');
+  expect(details.stripBackground).toBe('none');
   expect(details.cellBackground).toBe('rgba(0, 0, 0, 0)');
-  expect(details.strongColor).toBe('rgb(255, 255, 255)');
+  expect(details.strongColor).toBe('rgb(16, 16, 18)');
 }
