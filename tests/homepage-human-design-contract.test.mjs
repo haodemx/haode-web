@@ -8,7 +8,7 @@ const appJs = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8')
 const serviceWorker = fs.readFileSync(new URL('../service-worker.js', import.meta.url), 'utf8');
 const script = fs.readFileSync(new URL('../script.js', import.meta.url), 'utf8');
 const styles = fs.readFileSync(new URL('../style.css', import.meta.url), 'utf8');
-const transparentWordmark = fs.readFileSync(new URL('../assets/images/haode-wordmark-transparent.png', import.meta.url));
+const approvedHorizontalLogo = fs.readFileSync(new URL('../assets/images/haode-header-logo-horizontal-preview.png', import.meta.url));
 
 function openingTagWith(attribute) {
   const pattern = new RegExp(`<[^>]+\\b${attribute}\\b[^>]*>`, 'i');
@@ -91,22 +91,22 @@ test('mobile surface opts into safe-area layout and current theme color', () => 
   assert.match(html, /<meta\b[^>]*name=["']theme-color["'][^>]*content=["']#fbfbf9["']/i);
 });
 
-test('homepage and App use the same transparent HAODE wordmark', () => {
-  const wordmarkPath = '/assets/images/haode-wordmark-transparent.png';
+test('homepage and App use the same approved horizontal HAODE logo', () => {
+  const wordmarkPath = '/assets/images/haode-header-logo-horizontal-preview.png';
   assert.match(html, new RegExp(`src=["']${wordmarkPath.replaceAll('/', '\\/')}["']`, 'i'));
   assert.match(appHtml, new RegExp(`src=["']${wordmarkPath.replaceAll('/', '\\/')}["']`, 'i'));
-  assert.ok(serviceWorker.includes(`"${wordmarkPath}"`), 'installed App must cache the transparent wordmark');
+  assert.ok(serviceWorker.includes(`"${wordmarkPath}"`), 'installed App must cache the approved horizontal logo');
 
-  assert.equal(transparentWordmark.subarray(1, 4).toString('ascii'), 'PNG');
-  const pngColorType = transparentWordmark[25];
+  assert.equal(approvedHorizontalLogo.subarray(1, 4).toString('ascii'), 'PNG');
+  const pngColorType = approvedHorizontalLogo[25];
   assert.ok([4, 6].includes(pngColorType), `wordmark PNG must carry alpha; color type was ${pngColorType}`);
 });
 
 test('homepage and App lead with the approved product-first editorial message', () => {
-  assert.match(html, /<h1>Precisión para reparar\.\s*<span>Empieza aquí\.<\/span><\/h1>/i);
-  assert.match(appJs, /<h1>Encuentra la pieza exacta\.<\/h1>/i);
+  assert.match(html, /<h1>Refacciones precisas\.\s*<span>Pedidos claros\.<\/span><\/h1>/i);
+  assert.match(appJs, /<h1>Encuentra tu refacción\.<\/h1>/i);
   assert.match(html, /Pantallas y refacciones para reparación móvil/i);
-  assert.match(appJs, /Pantallas y refacciones organizadas por modelo/i);
+  assert.match(appJs, /Catálogo y pedido para talleres/i);
 });
 
 test('homepage header uses one restrained light editorial action system', () => {
@@ -138,10 +138,10 @@ test('App keeps one primary heading, reserves product image space, and avoids un
   }
 });
 
-test('homepage footer uses the transparent wordmark and screen-first copy', () => {
+test('homepage footer uses the approved horizontal logo and screen-first copy', () => {
   const footer = html.match(/<footer\b[^>]*class=["'][^"']*reference-footer[^"']*["'][^>]*>([\s\S]*?)<\/footer>/i);
   assert.ok(footer, 'homepage must include the reference footer');
-  assert.match(footer[1], /<img\b[^>]*src=["']\/assets\/images\/haode-wordmark-transparent\.png["'][^>]*>/i);
+  assert.match(footer[1], /<img\b[^>]*src=["']\/assets\/images\/haode-header-logo-horizontal-preview\.png["'][^>]*>/i);
   assert.match(footer[1], /Pantallas y refacciones para técnicos, tiendas y distribuidores\./i);
   assert.doesNotMatch(footer[1], /Refacciones y productos para talleres/i);
 });

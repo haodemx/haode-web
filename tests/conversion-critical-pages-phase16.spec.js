@@ -6,12 +6,12 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Precisión para reparar. Empieza aquí.', 'Stock en México', 'WhatsApp'],
+    texts: ['Refacciones precisas. Pedidos claros.', 'Stock en México', 'WhatsApp'],
   },
   {
     path: '/app/',
     name: 'app home',
-    texts: ['Encuentra la pieza exacta.', 'Precio por cantidad', 'WhatsApp privado'],
+    texts: ['Encuentra tu refacción.', 'Precio por cantidad', 'WhatsApp privado'],
   },
   {
     path: '/productos/',

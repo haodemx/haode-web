@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-08-13-mobile-visual-fix";
+const CACHE_VERSION = "haode-pwa-v2026-08-13-approved-preview-v2";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -8,21 +8,22 @@ const APP_SHELL_URLS = [
   "/app/",
   "/app/index.html",
   "/offline.html",
-  "/style.css?v=20260813-mobile-visual-fix",
+  "/style.css?v=20260813-approved-preview-v2",
   "/analytics.js?v=20260726-growth-phase37",
   "/script.js?v=20260809-final-audit",
   "/campaign-attribution.js",
   "/products.js?v=20260725-price-allowlist",
   "/detail-header.js?v=20260725-ui-phase33",
   "/site-footer.js?v=20260725-ui-phase33",
-  "/app/app.css?v=20260813-editorial-release",
-  "/app/app.js?v=20260813-editorial-release",
+  "/app/app.css?v=20260813-approved-preview-v2",
+  "/app/app.js?v=20260813-approved-preview-v2",
   "/app/products.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",
   "/assets/logo/logo.png",
   "/assets/images/factory-store-wordmark.png",
   "/assets/images/haode-wordmark-transparent.png",
+  "/assets/images/haode-header-logo-horizontal-preview.png",
   "/assets/logo/favicon.png",
   "/assets/icons/haode-icon-192.png",
   "/assets/icons/haode-icon-512.png",

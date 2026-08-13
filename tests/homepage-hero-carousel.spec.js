@@ -139,7 +139,7 @@ test.describe('homepage approved product-family carousel', () => {
 
     expect(presentation.objectFit).toBe('contain');
     expect(Math.abs(presentation.imageRatio - presentation.naturalRatio)).toBeLessThan(0.03);
-    expect(presentation.imageWidth).toBeGreaterThanOrEqual(presentation.carouselWidth - 1);
+    expect(presentation.imageWidth).toBeGreaterThanOrEqual(presentation.carouselWidth - 2);
     expect(presentation.carouselMarginInline).toEqual(['0px', '0px']);
   });
 

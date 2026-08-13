@@ -42,8 +42,8 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(appURL, { waitUntil: 'domcontentloaded' });
 
-    await expect(page.getByRole('heading', { name: 'Encuentra la pieza exacta.' })).toBeVisible();
-    await expect(page.locator('.brand img')).toHaveAttribute('src', '/assets/images/haode-wordmark-transparent.png');
+    await expect(page.getByRole('heading', { name: 'Encuentra tu refacción.' })).toBeVisible();
+    await expect(page.locator('.brand img')).toHaveAttribute('src', '/assets/images/haode-header-logo-horizontal-preview.png');
     await expect(page.locator('.app-stock-strip')).toContainText('Stock en México');
     await expect(page.locator('.app-stock-strip')).toContainText('Precio por cantidad');
     await expect(page.locator('.app-stock-strip')).toContainText('Calidad revisada');
@@ -63,7 +63,7 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(appURL, { waitUntil: 'domcontentloaded' });
 
-    await expect(page.getByRole('heading', { name: 'Encuentra la pieza exacta.' })).toBeVisible({ timeout: 6000 });
+    await expect(page.getByRole('heading', { name: 'Encuentra tu refacción.' })).toBeVisible({ timeout: 6000 });
     await expect(page.locator('.app-home-product-card').first()).toBeVisible({ timeout: 6000 });
 
     const diagnostics = await page.evaluate(() => window.HAODE_DIAGNOSTICS);

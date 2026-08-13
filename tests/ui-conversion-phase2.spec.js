@@ -53,7 +53,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator(".new-product-badges").first()).toContainText("Precio por cantidad");
     await expect(page.locator(".new-product-b2b-strip").first()).toContainText("Lista grande por WhatsApp");
     await expect(page.locator(".new-product-b2b-strip").first()).toContainText("garantía local");
-    await expect(page.locator(".category-whatsapp-primary").first()).toHaveCSS("background-color", "rgb(18, 168, 84)");
+    await expect(page.locator(".category-whatsapp-primary").first()).toHaveCSS("background-color", "rgb(8, 122, 66)");
     await expect(page.locator("[data-category-whatsapp-panel]")).toBeVisible();
     await expect(page.locator(".category-whatsapp-cta")).toHaveAttribute("href", /wa\.me/);
 

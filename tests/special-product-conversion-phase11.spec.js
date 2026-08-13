@@ -46,7 +46,7 @@ async function expectUnifiedDetailHeader(page) {
   await expect(whatsapp).toBeVisible();
   await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
   await expect(whatsapp).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await expect(whatsapp).toHaveCSS('color', 'rgb(18, 168, 84)');
+  await expect(whatsapp).toHaveCSS('color', 'rgb(8, 122, 66)');
   await expect(app).toBeVisible();
   await expect(app).toHaveAttribute('href', /\/app\/$/);
   await expect(app).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
