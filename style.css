@@ -17887,6 +17887,8 @@ body.product-detail-page .floating-cta {
 
   body.product-detail-page.conversion-reference-page .floating-cta,
   body.product-detail-page .floating-cta {
+    position: fixed;
+    z-index: 80;
     right: 16px;
     bottom: max(16px, env(safe-area-inset-bottom));
     left: auto;
@@ -19580,6 +19582,38 @@ body.product-detail-page .catalog-topbar {
   color: var(--haode-v2-ink);
 }
 
+/* Final UI QA: accessible brand actions and stable product media. */
+body.home-page-reference .reference-eyebrow,
+body.home-page-reference .haode-hero-primary,
+body.home-page-reference .haode-supply-path > span {
+  color: var(--brand-orange-deep) !important;
+}
+
+body.home-page-reference .reference-bottom-whatsapp small {
+  color: #d8d7d2;
+}
+
+body.home-page-reference .reference-copyright {
+  color: #9b9a96;
+}
+
+.site-sales-footer-whatsapp {
+  background: #087a42;
+}
+
+.site-sales-footer-app {
+  background: #c9360c;
+}
+
+.site-sales-footer-actions > a {
+  color: #ffffff;
+}
+
+body.product-detail-page .detail-main-image,
+body.product-detail-page.conversion-reference-page .detail-main-image {
+  aspect-ratio: 1 / 1;
+}
+
 body.product-detail-page.conversion-reference-page .catalog-topbar .topnav a,
 body.product-detail-page .catalog-topbar .topnav a {
   color: #4d5157 !important;
@@ -19656,4 +19690,32 @@ body.catalog-page.catalog-reference-page .catalog-filter-strip .filter-chip {
   body.catalog-page.catalog-reference-page .catalog-filter-strip .filter-chip {
     min-height: 44px;
   }
+}
+
+/* Final UI QA overrides stay last to prevent later preview layers restoring low contrast. */
+body.home-page-reference .reference-eyebrow,
+body.home-page-reference .haode-hero-primary,
+body.home-page-reference .haode-supply-path > span {
+  color: #c9360c !important;
+}
+
+body.home-page-reference .reference-bottom-whatsapp small {
+  color: #d8d7d2 !important;
+}
+
+body.home-page-reference .reference-copyright {
+  color: #9b9a96 !important;
+}
+
+.site-sales-footer-whatsapp {
+  background: #087a42 !important;
+}
+
+.site-sales-footer-app {
+  background: #c9360c !important;
+}
+
+body.product-detail-page .detail-meta,
+body.product-detail-page .detail-price {
+  color: #c9360c !important;
 }

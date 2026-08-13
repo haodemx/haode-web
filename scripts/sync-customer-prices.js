@@ -533,26 +533,26 @@ function genericProductPage(product) {
   <link rel="canonical" href="${canonical}" />
   <title>${escapeHtml(seoName)} | HAODE México</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="/style.css?v=20260813-editorial-release" />
+  <link rel="stylesheet" href="/style.css?v=20260813-final-ui-seo" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <script src="/analytics.js?v=20260803-consent-privacy"></script>
 </head>
-<body class="product-detail-page">
+<body class="product-detail-page conversion-reference-page">
   <header class="topbar catalog-topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/logo/logo.png" alt="Logo oficial de HAODE" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
+      <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/images/factory-store-wordmark.png" alt="HAODE Refacciones para Celular" width="200" height="58" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
       <nav class="topnav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/productos/">Productos</a><a href="/app/">App</a><a href="/contacto/">Contacto</a></nav>
     </div>
   </header>
   <main class="detail-main">
     <div class="wrap detail-shell" data-product-detail>
       <div class="detail-top">
-        <div><span class="detail-kicker" data-detail-brand>${escapeHtml(product.brand || 'HAODE')}</span><h1 class="detail-title" data-detail-title>${escapeHtml(product.name)}</h1><p class="catalog-intro" data-detail-subtitle>${escapeHtml(product.model)}</p><div class="detail-highlights" data-detail-highlights><span>Stock en México bajo confirmación</span><span>Precio por cantidad</span><span>WhatsApp privado</span></div></div>
+        <div><span class="detail-kicker" data-detail-brand>${escapeHtml(product.brand || 'HAODE')}</span><h1 class="detail-title" data-detail-title>${escapeHtml(product.name)}</h1><p class="catalog-intro" data-detail-subtitle>${escapeHtml(product.model)}</p><div class="detail-mobile-product-preview" data-detail-mobile-preview><img src="${image}" alt="Imagen de ${escapeHtml(product.name)}" width="72" height="72" loading="eager" decoding="async" /><div><strong>Foto del producto</strong><small>Confirma stock en México y precio por cantidad por WhatsApp.</small></div></div><div class="detail-highlights" data-detail-highlights><span>Stock en México bajo confirmación</span><span>Precio por cantidad</span><span>WhatsApp privado</span></div></div>
         <a class="btn btn-secondary detail-back" data-detail-back href="/productos/">Volver al catálogo</a>
       </div>
       <div class="detail-grid">
         <section class="detail-visual" aria-label="Imagen del producto">
-          <img class="detail-main-image" data-detail-main-image src="${image}" alt="${escapeHtml(product.name)}" />
+          <img class="detail-main-image" data-detail-main-image src="${image}" alt="${escapeHtml(product.name)}" width="1000" height="1000" loading="eager" fetchpriority="high" decoding="async" />
 ${placeholder ? '          <p class="product-image-status" data-product-image-status>Imagen en actualización</p>\n' : ''}          <div class="detail-gallery-wrap"><h2>Galería</h2><div class="detail-gallery" data-detail-gallery></div></div>
           <div class="detail-video-wrap"><h2>Video</h2><div class="detail-videos" data-detail-videos></div></div>
         </section>
@@ -568,7 +568,7 @@ ${placeholder ? '          <p class="product-image-status" data-product-image-st
   <a class="floating-cta" href="${whatsapp}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
   <script src="/campaign-attribution.js?v=20260725"></script>
   <script src="/data/products.generated.js?v=20260725-catalog-complete"></script>
-  <script src="/products.js?v=20260725-catalog-complete"></script>
+  <script src="/products.js?v=20260813-final-ui-seo"></script>
   <script src="/detail-header.js?v=20260725-catalog-complete"></script>
 </body>
 </html>

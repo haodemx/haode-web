@@ -67,7 +67,10 @@ test("iPhone 11 standard FHD uses the confirmed image on website and App", async
     "/assets/products/iphone-incell/11/fhd-main.jpg"
   );
   await expect(page.locator("[data-product-image-status]")).toHaveCount(0);
-  expect(await page.locator("[data-detail-main-image]").evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await expect.poll(
+    () => page.locator("[data-detail-main-image]").evaluate((image) => image.complete && image.naturalWidth > 0),
+    { timeout: 10000 }
+  ).toBe(true);
   await saveEvidence(page, "website-iphone-11-fhd-confirmed-image.png");
 
   await page.goto(`${BASE_URL}/app/#producto/iphone-incell-11`, { waitUntil: "domcontentloaded" });
@@ -78,7 +81,10 @@ test("iPhone 11 standard FHD uses the confirmed image on website and App", async
     "/assets/products/iphone-incell/11/fhd-main.jpg"
   );
   await expect(page.locator("[data-product-gallery] .product-image-status")).toHaveCount(0);
-  expect(await page.locator("[data-product-gallery] img").first().evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await expect.poll(
+    () => page.locator("[data-product-gallery] img").first().evaluate((image) => image.complete && image.naturalWidth > 0),
+    { timeout: 10000 }
+  ).toBe(true);
 
   expect(consoleErrors).toEqual([]);
   await saveEvidence(page, "app-iphone-11-fhd-confirmed-image.png");

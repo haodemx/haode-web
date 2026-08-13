@@ -20,7 +20,7 @@
   footer.innerHTML = `
     <div class="wrap site-sales-footer-grid">
       <div class="site-sales-footer-brand">
-        <a href="/" aria-label="HAODE México">
+        <a href="/" aria-label="HAODE Refacciones para Celular">
           <strong>HAODE</strong>
           <span>REFACCIONES PARA CELULAR</span>
         </a>

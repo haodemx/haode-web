@@ -2785,14 +2785,23 @@ function renderProductDetailPage() {
     }
   }
   if (mainImageEl) {
-    mainImageEl.src = buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
+    const renderedLocalImage = mainImageEl.getAttribute('src') || '';
+    const preferredMainImage = isErpHostedAsset(product.mainImage)
+      && renderedLocalImage
+      && !isErpHostedAsset(renderedLocalImage)
+      && !renderedLocalImage.includes('/placeholder.svg')
+      ? renderedLocalImage
+      : buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
+    mainImageEl.src = preferredMainImage;
     mainImageEl.alt = product.name;
+    mainImageEl.loading = 'eager';
+    mainImageEl.fetchPriority = 'high';
     mainImageEl.decoding = 'async';
     mainImageEl.onerror = () => {
       const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
       if (mainImageEl.src !== fallback) mainImageEl.src = fallback;
     };
-    attachZoom(mainImageEl, new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href, product.name);
+    attachZoom(mainImageEl, new URL(preferredMainImage, `${SITE_ORIGIN}/`).href, product.name);
     const visual = mainImageEl.closest('.detail-visual');
     let imageStatus = visual?.querySelector('[data-product-image-status]');
     if (product.usesPlaceholder && visual && !imageStatus) {
@@ -2807,7 +2816,7 @@ function renderProductDetailPage() {
     }
   }
   syncDetailMobilePreview(page, {
-    imageSrc: buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE),
+    imageSrc: mainImageEl?.getAttribute('src') || buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE),
     title: product.name,
   });
 
@@ -2891,11 +2900,12 @@ function renderProductDetailPage() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function renderInitialProductViews() {
   renderCatalogPage();
   renderProductDetailPage();
+}
 
-  (async () => {
+async function hydrateProductViews() {
     const catalogRows = await loadErpPublicCatalog();
     if (catalogRows.length) {
       applyErpPublicCatalog(catalogRows);
@@ -2904,8 +2914,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     renderCatalogPage();
     renderProductDetailPage();
-  })();
-});
+}
+
+// This script is loaded at the end of the document. Render the static product
+// view before first paint so enhancement panels do not push visible content
+// after DOMContentLoaded; ERP data remains a non-blocking enrichment.
+renderInitialProductViews();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', hydrateProductViews, { once: true });
+} else {
+  hydrateProductViews();
+}
 
 document.addEventListener('click', (event) => {
   const whatsappLink = event.target.closest('a[href*="wa.me"]');
