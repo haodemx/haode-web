@@ -17964,6 +17964,65 @@ body.product-detail-page .floating-cta {
   }
 }
 
+/* HAODE mobile readability and media-fit correction */
+body.home-page-reference .reference-workshop-card {
+  color: #ffffff;
+}
+
+body.home-page-reference .reference-workshop-card p {
+  color: #d7d7d2;
+}
+
+body.home-page-reference .reference-workshop-card a {
+  color: var(--brand-orange);
+}
+
+body.home-page-reference .reference-proof-grid strong {
+  color: var(--brand-ink);
+}
+
+body.home-page-reference .reference-proof-grid small {
+  color: #55555a;
+}
+
+body.home-page-reference .reference-store-photo-card:not(.reference-warehouse-photo-card) figcaption {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body.home-page-reference .reference-mobile-hero-visual {
+    height: auto;
+    aspect-ratio: 1672 / 941;
+  }
+
+  body.home-page-reference .reference-mobile-hero-visual .reference-home-carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    aspect-ratio: 1672 / 941;
+    overflow: hidden;
+  }
+
+  body.home-page-reference .reference-mobile-hero-visual .reference-home-carousel-controls {
+    position: absolute;
+    right: auto;
+    bottom: 12px;
+    left: 50%;
+    width: auto;
+    max-width: calc(100% - 16px);
+    transform: translateX(-50%);
+  }
+
+  body.home-page-reference .reference-mobile-hero-visual [data-home-hero-carousel-image] {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   :is(
     body.home-page-reference,
