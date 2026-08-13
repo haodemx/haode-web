@@ -45,6 +45,53 @@ test.describe('homepage approved product-family carousel', () => {
     await expect(image).toHaveAttribute('src', '/assets/images/home-hero-carousel/samsung-plegables-incell.webp');
   });
 
+  test('desktop shows the complete landscape image with four confirmed logistics logos directly below', async ({ page }) => {
+    await page.setViewportSize({ width: 1792, height: 1500 });
+    const carousel = page.locator('.reference-hero-visual [data-home-hero-carousel]');
+    const image = carousel.locator('[data-home-hero-carousel-image]');
+    const controls = carousel.locator('.reference-home-carousel-controls');
+    const logistics = page.locator('.reference-hero-visual .reference-logistics-strip');
+
+    await expect(logistics).toBeVisible();
+    await expect(logistics.locator('.reference-logistics-logos img')).toHaveCount(4);
+    await expect(logistics).toContainText('Paqueterías con las que trabajamos');
+    for (const courier of ['DHL', 'Estafeta', 'FedEx', 'Paquetexpress']) {
+      await expect(logistics.getByAltText(courier, { exact: true })).toBeVisible();
+    }
+
+    const presentation = await page.locator('.reference-hero-visual').evaluate((visual) => {
+      const carouselElement = visual.querySelector('[data-home-hero-carousel]');
+      const imageElement = visual.querySelector('[data-home-hero-carousel-image]');
+      const controlsElement = visual.querySelector('.reference-home-carousel-controls');
+      const logisticsElement = visual.querySelector('.reference-logistics-strip');
+      const carouselRect = carouselElement.getBoundingClientRect();
+      const imageRect = imageElement.getBoundingClientRect();
+      const controlsRect = controlsElement.getBoundingClientRect();
+      const logisticsRect = logisticsElement.getBoundingClientRect();
+      const imageStyle = getComputedStyle(imageElement);
+      const carouselStyle = getComputedStyle(carouselElement);
+
+      return {
+        objectFit: imageStyle.objectFit,
+        imageMaxHeight: imageStyle.maxHeight,
+        carouselMaxHeight: carouselStyle.maxHeight,
+        imageRatio: imageRect.width / imageRect.height,
+        naturalRatio: imageElement.naturalWidth / imageElement.naturalHeight,
+        imageToCarouselWidthGap: carouselRect.width - imageRect.width,
+        controlsBelowImage: controlsRect.y >= imageRect.y + imageRect.height - 1,
+        carouselToLogisticsGap: logisticsRect.y - (carouselRect.y + carouselRect.height),
+      };
+    });
+
+    expect(presentation.objectFit).toBe('contain');
+    expect(presentation.imageMaxHeight).toBe('none');
+    expect(presentation.carouselMaxHeight).toBe('none');
+    expect(Math.abs(presentation.imageRatio - presentation.naturalRatio)).toBeLessThan(0.03);
+    expect(Math.abs(presentation.imageToCarouselWidthGap)).toBeLessThanOrEqual(2);
+    expect(presentation.controlsBelowImage).toBe(true);
+    expect(Math.abs(presentation.carouselToLogisticsGap)).toBeLessThanOrEqual(1);
+  });
+
   test('mobile shows its carousel without horizontal overflow', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const mobileCarousel = page.locator('.reference-mobile-hero-visual [data-home-hero-carousel]');

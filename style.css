@@ -18023,6 +18023,524 @@ body.home-page-reference .reference-store-photo-card:not(.reference-warehouse-ph
   }
 }
 
+/* HAODE desktop hero full-image and logistics preview */
+@media (min-width: 761px) {
+  body.home-page-reference .reference-hero-visual {
+    align-self: center;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 0;
+    overflow: visible;
+    border-left: 0;
+    background: transparent;
+  }
+
+  body.home-page-reference .reference-hero-visual .reference-factory-hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--brand-line);
+    border-radius: 0;
+    background: var(--brand-mist);
+    box-shadow: none;
+  }
+
+  body.home-page-reference .reference-hero-visual .reference-factory-hero-image::after {
+    content: none;
+  }
+
+  body.home-page-reference .reference-hero-visual .reference-factory-hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 1672 / 941;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  body.home-page-reference .reference-hero-visual .reference-home-carousel-controls {
+    position: static;
+    width: max-content;
+    max-width: calc(100% - 24px);
+    margin: 12px auto;
+    transform: none;
+  }
+
+  body.home-page-reference .reference-logistics-strip {
+    width: 100%;
+    padding: 16px 18px 18px;
+    border: 1px solid var(--brand-ink);
+    border-top: 0;
+    background: var(--brand-ink);
+    color: #ffffff;
+  }
+
+  body.home-page-reference .reference-logistics-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 0 13px;
+  }
+
+  body.home-page-reference .reference-logistics-heading span {
+    color: var(--brand-orange);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  body.home-page-reference .reference-logistics-heading strong {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  body.home-page-reference .reference-logistics-logos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid #3a3a3e;
+    background: #3a3a3e;
+  }
+
+  body.home-page-reference .reference-logistics-logos > span {
+    display: grid;
+    min-width: 0;
+    min-height: 68px;
+    padding: 12px 14px;
+    place-items: center;
+    background: #ffffff;
+  }
+
+  body.home-page-reference .reference-logistics-logos img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 30px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  body.home-page-reference .reference-logistics-logos > span {
+    min-height: 64px;
+    padding-inline: 10px;
+  }
+}
+
+/* HAODE catalog hierarchy and light-header readability preview */
+body.home-page-reference .reference-head-info strong,
+body.home-page-reference .reference-head-cart strong {
+  color: var(--brand-ink);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+body.home-page-reference .reference-head-info small,
+body.home-page-reference .reference-head-action small {
+  color: #55555a;
+  font-size: 12px;
+}
+
+body.home-page-reference .reference-head-info:hover,
+body.home-page-reference .reference-head-action:hover {
+  background: var(--brand-mist);
+}
+
+body.catalog-page.catalog-reference-page .reference-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--brand-line);
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+}
+
+body.catalog-page.catalog-reference-page .reference-nav {
+  color: #454549;
+}
+
+body.catalog-page.catalog-reference-page .reference-nav a {
+  color: inherit;
+}
+
+body.catalog-page.catalog-reference-page .reference-nav a:is(:hover, .is-active) {
+  color: var(--brand-ink);
+}
+
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href*="wa.me"] {
+  border-color: transparent;
+  background: transparent;
+  color: var(--brand-orange-deep);
+}
+
+body.catalog-page.catalog-reference-page .reference-nav-actions a[href="/app/"] {
+  border-color: var(--brand-orange);
+  background: var(--brand-orange);
+  color: #ffffff;
+}
+
+body.catalog-page.catalog-reference-page .catalog-hero {
+  padding: 0;
+}
+
+body.catalog-page.catalog-reference-page .catalog-hero-inner {
+  display: grid;
+  grid-template-areas:
+    "copy visual"
+    "filters filters"
+    "links links"
+    "positioning positioning"
+    "whatsapp whatsapp";
+  grid-template-columns: minmax(0, 1.55fr) minmax(380px, 0.85fr);
+  gap: 36px 48px;
+  padding-block: clamp(56px, 6vw, 88px);
+}
+
+body.catalog-page.catalog-reference-page .catalog-hero-copy {
+  grid-area: copy;
+  align-self: center;
+}
+
+body.catalog-page.catalog-reference-page .catalog-title-row {
+  display: block;
+}
+
+body.catalog-page.catalog-reference-page .catalog-title-row h1 {
+  max-width: 760px;
+  font-size: clamp(56px, 5.2vw, 84px);
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+body.catalog-page.catalog-reference-page .catalog-intro {
+  max-width: 720px;
+  margin-top: 28px;
+  font-size: clamp(17px, 1.45vw, 21px);
+  line-height: 1.52;
+}
+
+body.catalog-page.catalog-reference-page .catalog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+body.catalog-page.catalog-reference-page .catalog-site-search {
+  max-width: 720px;
+}
+
+body.catalog-page.catalog-reference-page .catalog-visual-strip {
+  grid-area: visual;
+  align-self: center;
+  height: 240px;
+  min-height: 0;
+  gap: 1px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--brand-line);
+  border-radius: 0;
+  background: var(--brand-line);
+}
+
+body.catalog-page.catalog-reference-page .catalog-visual-strip article {
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--brand-surface);
+}
+
+body.catalog-page.catalog-reference-page .catalog-visual-strip img {
+  width: 88%;
+  height: 62%;
+}
+
+body.catalog-page.catalog-reference-page .catalog-visual-strip span {
+  top: 16px;
+  left: 16px;
+  min-height: 28px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--brand-green);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+body.catalog-page.catalog-reference-page .catalog-filter-strip {
+  grid-area: filters;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 22px 0;
+  border-block: 1px solid var(--brand-line);
+}
+
+body.catalog-page.catalog-reference-page .catalog-filter-title {
+  display: flex;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  padding-right: 10px;
+  color: var(--brand-muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body.catalog-page.catalog-reference-page .catalog-filter-strip .filter-chip {
+  width: auto;
+  min-height: 44px;
+  flex: 0 0 auto;
+  padding: 0 16px;
+  border-radius: 999px;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links {
+  grid-area: links;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--brand-line);
+  border-radius: 0;
+  background: var(--brand-line);
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-heading {
+  display: flex;
+  min-height: 96px;
+  grid-column: 1 / -1;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  background: var(--brand-ink);
+  color: #ffffff;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-heading span {
+  margin: 0;
+  color: var(--brand-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-heading strong {
+  color: #ffffff;
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  text-align: right;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links a {
+  min-height: 158px;
+  padding: 22px;
+  border: 0;
+  background: var(--brand-surface);
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links a strong {
+  color: var(--brand-ink);
+  font-size: 16px;
+}
+
+body.catalog-page.catalog-reference-page .catalog-priority-links a span {
+  margin-top: 12px;
+  color: #55555a;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+body.catalog-page.catalog-reference-page .catalog-positioning {
+  grid-area: positioning;
+}
+
+body.catalog-page.catalog-reference-page .catalog-whatsapp-panel {
+  grid-area: whatsapp;
+}
+
+:is(
+  body.home-page-reference,
+  body.catalog-reference-page,
+  body.conversion-reference-page,
+  body.category-page,
+  body.product-detail-page,
+  body.trust-conversion-page,
+  body.distributor-conversion-page,
+  body.seo-conversion-page
+) .reference-header .reference-logo img {
+  width: 205px;
+  height: auto;
+  max-height: 60px;
+  content: url("/assets/images/haode-header-logo-horizontal-preview.png") !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+:is(
+  body.home-page-reference,
+  body.catalog-reference-page,
+  body.conversion-reference-page,
+  body.category-page,
+  body.product-detail-page,
+  body.trust-conversion-page,
+  body.distributor-conversion-page,
+  body.seo-conversion-page
+) :is(.topbar, .catalog-topbar, .site-header) .brand-logo {
+  width: 180px !important;
+  height: auto !important;
+  max-height: 56px !important;
+  content: url("/assets/images/haode-header-logo-horizontal-preview.png") !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+body.home-page-reference .reference-logo {
+  width: 210px;
+  min-width: 210px;
+}
+
+@media (min-width: 901px) {
+  body.catalog-page.catalog-reference-page .reference-nav-shell {
+    min-height: 78px;
+    grid-template-columns: 200px minmax(0, 1fr) auto;
+    gap: 24px;
+  }
+
+  body.catalog-page.catalog-reference-page .reference-nav a {
+    min-height: 78px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  body.catalog-page.catalog-reference-page .catalog-hero-inner {
+    grid-template-areas:
+      "copy"
+      "visual"
+      "filters"
+      "links"
+      "positioning"
+      "whatsapp";
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-visual-strip {
+    min-height: 300px;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-priority-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  :is(
+    body.home-page-reference,
+    body.catalog-reference-page,
+    body.conversion-reference-page,
+    body.category-page,
+    body.product-detail-page,
+    body.trust-conversion-page,
+    body.distributor-conversion-page,
+    body.seo-conversion-page
+  ) .reference-header .reference-logo img {
+    width: 150px;
+    max-height: 46px;
+  }
+
+  :is(
+    body.home-page-reference,
+    body.catalog-reference-page,
+    body.conversion-reference-page,
+    body.category-page,
+    body.product-detail-page,
+    body.trust-conversion-page,
+    body.distributor-conversion-page,
+    body.seo-conversion-page
+  ) :is(.topbar, .catalog-topbar, .site-header) .brand-logo {
+    width: min(132px, 36vw) !important;
+    max-height: 44px !important;
+  }
+
+  body.home-page-reference .reference-logo {
+    width: 156px;
+    min-width: 156px;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-hero-inner {
+    display: block;
+    padding-block: 38px 52px;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-title-row h1 {
+    font-size: clamp(48px, 14vw, 64px);
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-visual-strip,
+  body.catalog-page.catalog-reference-page .catalog-filter-strip,
+  body.catalog-page.catalog-reference-page .catalog-priority-links,
+  body.catalog-page.catalog-reference-page .catalog-positioning,
+  body.catalog-page.catalog-reference-page .catalog-whatsapp-panel {
+    margin-top: 28px;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-visual-strip {
+    min-height: 250px;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-filter-strip {
+    flex-wrap: nowrap;
+    padding: 18px 0;
+    overflow-x: auto;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-filter-title {
+    display: none;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-priority-links {
+    grid-template-columns: 1fr;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-priority-heading {
+    display: block;
+    min-height: 0;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-priority-heading strong {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  body.catalog-page.catalog-reference-page .catalog-priority-links a {
+    min-height: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   :is(
     body.home-page-reference,

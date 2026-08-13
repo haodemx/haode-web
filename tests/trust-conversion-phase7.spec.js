@@ -65,7 +65,7 @@ async function expectCompactTrustBrand(page) {
       brandWidth: Math.round(brand?.width || 0),
       logoDisplay: logo ? getComputedStyle(logo).display : null,
       logoWidth: Math.round(logo?.getBoundingClientRect().width || 0),
-      logoSource: logo?.getAttribute("src") || "",
+      logoSource: logo ? getComputedStyle(logo).content : "",
       brandCopyDisplay: brandCopy ? getComputedStyle(brandCopy).display : null,
       brandTextDisplay: brandText ? getComputedStyle(brandText).display : null,
     };
@@ -75,7 +75,7 @@ async function expectCompactTrustBrand(page) {
   expect(layout.brandWidth).toBeGreaterThanOrEqual(100);
   expect(layout.logoDisplay).toBe("block");
   expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
-  expect(layout.logoSource).toContain("factory-store-wordmark.png");
+  expect(layout.logoSource).toContain("haode-header-logo-horizontal-preview.png");
   expect([layout.brandCopyDisplay, layout.brandTextDisplay]).toContain("none");
 }
 

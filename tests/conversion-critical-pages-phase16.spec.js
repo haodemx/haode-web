@@ -204,7 +204,7 @@ async function expectReferenceDesktopWordmark(page) {
   expect(details.width).toBeGreaterThanOrEqual(180);
   expect(details.imageDisplay).toBe('block');
   expect(details.imageWidth).toBeGreaterThanOrEqual(180);
-  expect(details.imageContent).toContain('factory-store-wordmark.png');
+  expect(details.imageContent).toContain('haode-header-logo-horizontal-preview.png');
 }
 
 async function expectNoHorizontalOverflow(page) {
