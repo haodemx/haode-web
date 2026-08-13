@@ -125,6 +125,6 @@ async function expectHeaderAppButtonOrange(page) {
     };
   });
   expect(styles.text).toContain("Comprar en APP");
-  expect(styles.background).toBe("rgb(255, 90, 10)");
+  expect(styles.background).toBe("rgb(255, 88, 31)");
   expect(styles.color).toBe("rgb(255, 255, 255)");
 }

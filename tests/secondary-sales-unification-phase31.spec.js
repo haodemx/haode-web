@@ -49,7 +49,7 @@ test.describe('HAODE secondary sales unification phase 31', () => {
     expect(layout.fontSize).toBeLessThanOrEqual(58);
     expect(layout.headerHeight).toBeLessThanOrEqual(130);
     expect(layout.stripBackground).toBe('rgb(16, 18, 20)');
-    expect(layout.bodyBackground).toBe('rgb(243, 243, 241)');
+    expect(layout.bodyBackground).toBe('rgb(251, 251, 249)');
     await expectNoHorizontalOverflow(page);
   });
 
@@ -97,7 +97,7 @@ test.describe('HAODE secondary sales unification phase 31', () => {
 
       expect(alignment.left).toBeGreaterThanOrEqual(24);
       expect(alignment.right).toBeLessThanOrEqual(1416);
-      expect(alignment.width).toBeLessThanOrEqual(1216);
+      expect(alignment.width).toBeLessThanOrEqual(1280);
       await expectNoHorizontalOverflow(page);
     });
   }

@@ -42,7 +42,7 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(appURL, { waitUntil: 'domcontentloaded' });
 
-    await expect(page.getByRole('heading', { name: 'Fábrica directa para pantallas' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Encuentra la pieza exacta.' })).toBeVisible();
     await expect(page.locator('.brand img')).toHaveAttribute('src', '/assets/images/haode-wordmark-transparent.png');
     await expect(page.locator('.app-stock-strip')).toContainText('Stock en México');
     await expect(page.locator('.app-stock-strip')).toContainText('Precio por cantidad');
@@ -63,7 +63,7 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(appURL, { waitUntil: 'domcontentloaded' });
 
-    await expect(page.getByRole('heading', { name: 'Fábrica directa para pantallas' })).toBeVisible({ timeout: 6000 });
+    await expect(page.getByRole('heading', { name: 'Encuentra la pieza exacta.' })).toBeVisible({ timeout: 6000 });
     await expect(page.locator('.app-home-product-card').first()).toBeVisible({ timeout: 6000 });
 
     const diagnostics = await page.evaluate(() => window.HAODE_DIAGNOSTICS);
@@ -122,6 +122,6 @@ async function expectAppFastQuoteWorkbench(page) {
   expect(details.searchBottom).toBeLessThan(470);
   expect(details.whatsappTop).toBeGreaterThanOrEqual(0);
   expect(details.whatsappBottom).toBeLessThanOrEqual(620);
-  expect(details.proofBackground).toContain('linear-gradient');
-  expect(details.proofTextColor).toBe('rgb(255, 255, 255)');
+  expect(details.proofBackground).toBe('none');
+  expect(details.proofTextColor).toBe('rgb(16, 16, 18)');
 }

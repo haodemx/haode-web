@@ -533,7 +533,7 @@ function genericProductPage(product) {
   <link rel="canonical" href="${canonical}" />
   <title>${escapeHtml(seoName)} | HAODE México</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="/style.css?v=20260725-catalog-complete" />
+  <link rel="stylesheet" href="/style.css?v=20260813-editorial-release" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <script src="/analytics.js?v=20260803-consent-privacy"></script>
 </head>

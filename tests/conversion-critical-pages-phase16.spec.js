@@ -6,12 +6,12 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Fábrica directa para pantallas', 'Stock en México', 'WhatsApp'],
+    texts: ['Precisión para reparar. Empieza aquí.', 'Stock en México', 'WhatsApp'],
   },
   {
     path: '/app/',
     name: 'app home',
-    texts: ['Fábrica directa para pantallas', 'Precio por cantidad', 'WhatsApp privado'],
+    texts: ['Encuentra la pieza exacta.', 'Precio por cantidad', 'WhatsApp privado'],
   },
   {
     path: '/productos/',
@@ -109,11 +109,12 @@ async function checkCriticalPage(page, pageCase, viewport) {
 
 async function expectHomepageStickyWhatsapp(page, viewportHeight) {
   const stickyWhatsapp = page.locator('.reference-sticky-whatsapp');
-  await expect(stickyWhatsapp).toBeVisible();
-  await expect(stickyWhatsapp).toContainText('Enviar lista grande por WhatsApp');
-  await expect(stickyWhatsapp).toHaveAttribute('href', /wa\.me/);
+  await expect(stickyWhatsapp).toBeHidden();
+  const heroWhatsapp = page.locator('.haode-hero-primary[href*="wa.me"]');
+  await expect(heroWhatsapp).toBeVisible();
+  await expect(heroWhatsapp).toContainText('Cotizar');
 
-  const box = await stickyWhatsapp.evaluate((el) => {
+  const box = await heroWhatsapp.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     return {
       top: Math.round(rect.top),
@@ -124,7 +125,7 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 
   expect(box.top).toBeGreaterThanOrEqual(0);
   expect(box.bottom).toBeLessThanOrEqual(viewportHeight);
-  expect(box.width).toBeGreaterThan(300);
+  expect(box.width).toBeGreaterThan(40);
 }
 
 async function expectMobileHomeVisual(page) {

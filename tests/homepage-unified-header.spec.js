@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
   }, CONSENT_STORAGE_KEY);
 });
 
-test('desktop header keeps actions inside one restrained dark surface', async ({ page }) => {
+test('desktop header keeps actions inside one restrained editorial surface', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
 
@@ -27,10 +27,10 @@ test('desktop header keeps actions inside one restrained dark surface', async ({
 
   await expect(header).toBeVisible();
   await expect(appLabel).toHaveText('Abrir APP');
-  await expect(appLabel).toHaveCSS('color', 'rgb(255, 122, 58)');
+  await expect(appLabel).toHaveCSS('color', 'rgb(255, 88, 31)');
   await expect(appAction).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
   await expect(whatsappAction).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await expect(catalogAction).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+  await expect(catalogAction).toHaveCSS('background-color', 'rgb(16, 16, 18)');
   await expect(activeNavigation).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
 
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -46,8 +46,8 @@ test('mobile header remains compact, readable, and keyboard-operable', async ({ 
   await expect(desktopInfo).toHaveCount(2);
   await expect(desktopInfo.first()).toBeHidden();
   await expect(desktopInfo.last()).toBeHidden();
-  await expect(page.locator('.reference-nav-actions a[href*="wa.me"]')).toBeVisible();
-  await expect(page.locator('.reference-nav-actions a[href="/app/"]')).toBeVisible();
+  await expect(page.locator('.reference-nav-actions a[href*="wa.me"]')).toBeHidden();
+  await expect(page.locator('.reference-nav-actions a[href="/app/"]')).toBeHidden();
 
   const menu = page.locator('[data-reference-menu-button]');
   await menu.focus();
