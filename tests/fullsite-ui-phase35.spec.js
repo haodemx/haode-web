@@ -67,7 +67,8 @@ test.describe('factory-store shared page contracts', () => {
     await page.goto(`${baseURL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
 
     const wordmark = page.locator('.catalog-topbar .brand-logo');
-    await expect(wordmark).toHaveAttribute('src', '/assets/images/factory-store-wordmark.png');
+    const wordmarkContent = await wordmark.evaluate((image) => getComputedStyle(image).content);
+    expect(wordmarkContent).toContain('haode-header-logo-horizontal-preview.png');
 
     const layout = await page.evaluate(() => {
       const visual = document.querySelector('.detail-visual').getBoundingClientRect();
