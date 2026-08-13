@@ -49,7 +49,7 @@ test.describe('HAODE secondary sales unification phase 31', () => {
     expect(layout.fontSize).toBeLessThanOrEqual(58);
     expect(layout.headerHeight).toBeLessThanOrEqual(130);
     expect(layout.stripBackground).toBe('rgb(16, 18, 20)');
-    expect(layout.bodyBackground).toBe('rgb(251, 251, 249)');
+    expect(layout.bodyBackground).toBe('rgb(248, 248, 246)');
     await expectNoHorizontalOverflow(page);
   });
 
@@ -108,7 +108,7 @@ test.describe('HAODE secondary sales unification phase 31', () => {
 
       const whatsapp = page.locator('main a.btn[href*="wa.me"]').first();
       await expect(whatsapp).toBeVisible();
-      await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
+      await expect(whatsapp).toHaveCSS('background-color', 'rgb(8, 122, 66)');
     });
   }
 

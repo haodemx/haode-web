@@ -34,7 +34,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
-      await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expect(page.locator('.topnav')).toBeHidden();
       await expectCompactMobileTopbar(page, 100);
       await expectUnifiedDetailHeader(page);
       await expectMobileDetailPreview(page);
@@ -76,7 +76,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-      await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expect(page.locator('.topnav')).toBeHidden();
       await expectCompactMobileTopbar(page, 100);
       await expectUnifiedDetailHeader(page);
       const quoteButton = page.locator('[data-detail-header-whatsapp]').first();
@@ -113,7 +113,7 @@ async function expectUnifiedDetailHeader(page) {
   await expect(whatsapp).toBeVisible();
   await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
   await expect(whatsapp).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await expect(whatsapp).toHaveCSS('color', 'rgb(18, 168, 84)');
+  await expect(whatsapp).toHaveCSS('color', 'rgb(8, 122, 66)');
   await expect(app).toBeVisible();
   await expect(app).toHaveAttribute('href', /\/app\/$/);
   await expect(app).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');

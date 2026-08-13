@@ -1224,8 +1224,8 @@ function renderHome() {
       <section class="app-procurement-hero app-home-board">
         <div class="app-home-intro">
           <span class="hero-badge">HAODE México · Catálogo profesional</span>
-          <h1>Encuentra la pieza exacta.</h1>
-          <p>Pantallas y refacciones organizadas por modelo. Confirma versión, cantidad y disponibilidad antes del pedido.</p>
+          <h1>Encuentra tu refacción.</h1>
+          <p>Catálogo y pedido para talleres. Confirma modelo, versión, cantidad y disponibilidad antes de comprar.</p>
           <button class="app-quick-search" type="button" data-focus-search>
             <span>Buscar por SKU o modelo</span>
             <strong>Buscar</strong>
