@@ -18578,3 +18578,58 @@ body.home-page-reference .reference-logo {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* HAODE ultrawide density and desktop navigation readability */
+body.home-page-reference {
+  --brand-content: 1600px;
+}
+
+@media (min-width: 761px) {
+  body.home-page-reference .reference-nav a {
+    font-size: clamp(15px, 0.85vw, 16px);
+    font-weight: 700;
+  }
+
+  body.home-page-reference .reference-nav a:is(:hover, :focus-visible) {
+    background: var(--brand-mist);
+    color: var(--brand-ink);
+  }
+
+  body.home-page-reference .reference-nav a.is-active {
+    background: transparent;
+    color: var(--brand-orange-deep);
+  }
+
+  body.home-page-reference .reference-nav a:active {
+    background: #e5e5e1;
+    color: var(--brand-ink);
+  }
+
+  body.home-page-reference .reference-nav-actions .reference-btn {
+    font-size: 15px;
+  }
+
+  body.home-page-reference :is(.reference-head-info, .reference-head-action) strong {
+    font-size: 15px;
+  }
+
+  body.home-page-reference :is(.reference-head-info, .reference-head-action) small {
+    font-size: 13px;
+  }
+
+  body.home-page-reference .reference-quick-points article strong {
+    font-size: 15px;
+  }
+
+  body.home-page-reference .reference-quick-points article small {
+    font-size: 13px;
+  }
+
+  body.home-page-reference .reference-logistics-heading span {
+    font-size: 12px;
+  }
+
+  body.home-page-reference .reference-logistics-heading strong {
+    font-size: 14px;
+  }
+}
