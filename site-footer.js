@@ -7,8 +7,8 @@
     document.head.appendChild(script);
   };
 
-  ensureScript('/analytics.js?v=20260726-growth-phase37', '/analytics.js');
-  ensureScript('/campaign-attribution.js?v=20260726-growth-phase37', '/campaign-attribution.js');
+  ensureScript('/analytics.js?v=20260813-ga4-conversions', '/analytics.js');
+  ensureScript('/campaign-attribution.js?v=20260813-ga4-conversions', '/campaign-attribution.js');
 
   if (document.querySelector('[data-site-sales-footer]')) return;
 

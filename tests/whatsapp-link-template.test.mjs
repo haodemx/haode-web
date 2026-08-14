@@ -116,6 +116,6 @@ test('every static WhatsApp page loads the shared conversion tracker', () => {
   assert.equal(missingTracker.length, 0, missingTracker.join('\n'));
   assert.match(detailHeader, /analytics\.js/);
   assert.match(detailHeader, /campaign-attribution\.js/);
-  assert.match(campaignTracker, /gtag\("event", "contact"/);
+  assert.match(campaignTracker, /HaodeAnalytics\?\.event\?\.\("contact"/);
   assert.ok(whatsappPages.length > 250, `Expected broad WhatsApp page coverage, found ${whatsappPages.length}`);
 });

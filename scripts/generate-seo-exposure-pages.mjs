@@ -290,7 +290,7 @@ ${faqMarkup(page)}
     </section>
   </main>
 
-  <script src="/campaign-attribution.js?v=20260727-exposure-pages"></script>
+  <script src="/campaign-attribution.js?v=20260813-ga4-conversions"></script>
   <script src="/detail-header.js?v=20260727-exposure-pages"></script>
   <script src="/site-footer.js?v=20260727-exposure-pages"></script>
 </body>

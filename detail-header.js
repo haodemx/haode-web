@@ -7,8 +7,8 @@
     document.head.appendChild(script);
   };
 
-  ensureScript('/analytics.js?v=20260729-whatsapp-conversion', '/analytics.js');
-  ensureScript('/campaign-attribution.js?v=20260729-whatsapp-conversion', '/campaign-attribution.js');
+  ensureScript('/analytics.js?v=20260813-ga4-conversions', '/analytics.js');
+  ensureScript('/campaign-attribution.js?v=20260813-ga4-conversions', '/campaign-attribution.js');
 
   if (document.body.classList.contains('product-detail-page')) {
     document.body.classList.add('conversion-reference-page');

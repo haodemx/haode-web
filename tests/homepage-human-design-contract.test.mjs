@@ -36,7 +36,7 @@ test('primary navigation is focused and controlled by an accessible button', () 
 });
 
 test('homepage navigation script bypasses stale service-worker copies', () => {
-  assert.match(html, /<script\b[^>]*src=["']\/script\.js\?v=\d{8}-final-audit["'][^>]*><\/script>/i);
+  assert.match(html, /<script\b[^>]*src=["']\/script\.js\?v=20260813-ga4-conversions["'][^>]*><\/script>/i);
   assert.match(serviceWorker, /url\.pathname\s*===\s*["']\/script\.js["']/i);
 });
 

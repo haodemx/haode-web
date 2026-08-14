@@ -185,33 +185,27 @@
     if (!link) return;
     const attribution = capture();
     decorateWhatsAppLink(link, attribution);
-    if (typeof global.gtag === "function") {
-      const sharedParameters = {
-        source: attribution.source,
-        medium: attribution.medium,
-        campaign: attribution.campaign,
-        content: attribution.content,
-        landing_page: attribution.landingPage,
-        page_path: global.location.pathname || "/",
-        campaign_reference: reference(attribution),
-        contact_area: contactArea(link)
-      };
-      global.gtag("event", "whatsapp_click", {
-        ...sharedParameters
-      });
-      global.gtag("event", "contact", {
-        method: "whatsapp",
-        ...sharedParameters
-      });
+    const tracked = global.HaodeAnalytics?.event?.("contact", {
+      method: "whatsapp",
+      source: attribution.source,
+      medium: attribution.medium,
+      campaign: attribution.campaign,
+      content: attribution.content,
+      landing_page: attribution.landingPage,
+      page_path: global.location.pathname || "/",
+      campaign_reference: reference(attribution),
+      contact_area: contactArea(link)
+    });
+    if (tracked) {
       contactTrackedEvents.add(event);
     }
   }, true);
 
   global.document.addEventListener("click", (event) => {
     const link = event.target.closest?.('a[href^="/app/"], a[href*="haode.com.mx/app/"]');
-    if (!link || typeof global.gtag !== "function") return;
+    if (!link) return;
     const attribution = capture();
-    global.gtag("event", "app_open", {
+    global.HaodeAnalytics?.event?.("app_open", {
       source: attribution.source,
       medium: attribution.medium,
       campaign: attribution.campaign,

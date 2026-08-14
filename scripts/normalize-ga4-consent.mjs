@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SHARED_ANALYTICS = '<script src="/analytics.js?v=20260803-consent-privacy"></script>';
+const SHARED_ANALYTICS = '<script src="/analytics.js?v=20260813-ga4-conversions"></script>';
 const SKIP_DIRECTORIES = new Set([
   '.git',
   'node_modules',
@@ -59,13 +59,13 @@ for (const file of collectHtmlFiles()) {
     SHARED_ANALYTICS
   );
   updated = updated.replace(
-    /(<script src="\/analytics\.js\?v=20260803-consent-privacy"><\/script>)\r?\n[ \t]+\r?\n/g,
+    /(<script src="\/analytics\.js\?v=20260813-ga4-conversions"><\/script>)\r?\n[ \t]+\r?\n/g,
     '$1\n'
   );
 
   const isProductIndex = relativePath.startsWith(`producto${path.sep}`)
     && path.basename(file) === 'index.html';
-  const hasSharedAnalytics = updated.includes('/analytics.js?v=20260803-consent-privacy');
+  const hasSharedAnalytics = updated.includes('/analytics.js?v=20260813-ga4-conversions');
   if (isProductIndex && !hasSharedAnalytics) {
     if (!/<\/head>/i.test(updated)) {
       throw new Error(`Cannot add analytics before </head>: ${relativePath}`);
@@ -91,7 +91,7 @@ if (remainingDirectTags.length) {
 
 const untaggedProducts = collectHtmlFiles(path.join(ROOT, 'producto')).filter((file) => {
   return path.basename(file) === 'index.html'
-    && !fs.readFileSync(file, 'utf8').includes('/analytics.js?v=20260803-consent-privacy');
+    && !fs.readFileSync(file, 'utf8').includes('/analytics.js?v=20260813-ga4-conversions');
 });
 if (untaggedProducts.length) {
   throw new Error(`Product routes without shared analytics:\n${untaggedProducts.map((file) => path.relative(ROOT, file)).join('\n')}`);

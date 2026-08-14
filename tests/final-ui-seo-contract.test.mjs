@@ -21,7 +21,7 @@ test('sitemap reflects the final UI and product-detail release date', () => {
 test('service worker treats the product renderer as a fresh application resource', () => {
   const serviceWorker = read('service-worker.js');
   assert.match(serviceWorker, /url\.pathname === ["']\/products\.js["']/);
-  assert.match(serviceWorker, /20260813-performance1/);
+  assert.match(serviceWorker, /20260813-ga4-conversions/);
 });
 
 test('product detail uses optimized display media and defers below-fold payloads', () => {
