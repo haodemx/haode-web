@@ -3,6 +3,15 @@ const { test, expect } = require('@playwright/test');
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4175';
 
 test.describe('HAODE growth attribution phase 37', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.route('https://www.googletagmanager.com/**', (route) => route.fulfill({
+      status: 200,
+      contentType: 'application/javascript',
+      body: '',
+    }));
+    await page.route('https://www.google-analytics.com/**', (route) => route.fulfill({ status: 204, body: '' }));
+  });
+
   test('App queues tracked WhatsApp and App-open events', async ({ page }) => {
     await page.addInitScript(() => {
       localStorage.setItem('haode-privacy-consent-v1', JSON.stringify({
