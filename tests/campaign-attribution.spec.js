@@ -3,6 +3,15 @@ const { test, expect } = require("@playwright/test");
 const SERVER_URL = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/app\/?$/, "").replace(/\/$/, "");
 const APP_URL = `${SERVER_URL}/app/`;
 
+test.beforeEach(async ({ page }) => {
+  await page.route("https://www.googletagmanager.com/**", (route) => route.fulfill({
+    status: 200,
+    contentType: "application/javascript",
+    body: "",
+  }));
+  await page.route("https://www.google-analytics.com/**", (route) => route.fulfill({ status: 204, body: "" }));
+});
+
 const catalog = {
   products: [
     {

@@ -3,6 +3,15 @@ const { test, expect } = require("@playwright/test");
 const BASE_URL = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/$/, "");
 const CONSENT_KEY = "haode-privacy-consent-v1";
 
+test.beforeEach(async ({ page }) => {
+  await page.route("https://www.googletagmanager.com/**", (route) => route.fulfill({
+    status: 200,
+    contentType: "application/javascript",
+    body: "",
+  }));
+  await page.route("https://www.google-analytics.com/**", (route) => route.fulfill({ status: 204, body: "" }));
+});
+
 function eventByName(events, name) {
   return events.find((event) => event.name === name);
 }
