@@ -64,7 +64,7 @@ test("iPhone 11 standard FHD uses the confirmed image on website and App", async
   await expect(page.locator("[data-detail-quality]")).toHaveText("INCELL FHD");
   await expect(page.locator("[data-detail-main-image]")).toHaveAttribute(
     "src",
-    "/assets/products/iphone-incell/11/fhd-main.jpg"
+    "/assets/products/iphone-incell/11/fhd-main.display.webp"
   );
   await expect(page.locator("[data-product-image-status]")).toHaveCount(0);
   await expect.poll(

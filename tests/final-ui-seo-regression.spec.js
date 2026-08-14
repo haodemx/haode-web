@@ -86,7 +86,7 @@ test('homepage and shared product footer keep customer actions readable', async 
   await expectReadableText(page, '.site-sales-footer-app');
 });
 
-test('product detail keeps its verified local main image after ERP enrichment', async ({ page }) => {
+test('product detail keeps its optimized verified local main image after ERP enrichment', async ({ page }) => {
   await page.addInitScript(() => {
     window.__haodeCumulativeLayoutShift = 0;
     new PerformanceObserver((list) => {
@@ -125,12 +125,35 @@ test('product detail keeps its verified local main image after ERP enrichment', 
     .toContain('erp.haode.com.mx');
 
   const mainImage = page.locator('[data-detail-main-image]');
-  await expect(mainImage).toHaveAttribute('src', '/assets/products/iphone-incell/14/main.jpg');
+  await expect(mainImage).toHaveAttribute('src', '/assets/products/iphone-incell/14/main.display.webp');
   await expect(mainImage).toHaveAttribute('fetchpriority', 'high');
   await expect(mainImage).toHaveAttribute('loading', 'eager');
   await expect.poll(() => mainImage.evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
   await expect.poll(() => page.evaluate(() => window.__haodeCumulativeLayoutShift || 0), { timeout: 5_000 })
     .toBeLessThan(0.05);
+});
+
+test('product detail defers gallery, video, and related media until the customer scrolls to them', async ({ page }) => {
+  await page.route('https://erp.haode.com.mx/**', (route) => route.fulfill({
+    status: 200,
+    contentType: 'application/json',
+    body: '[]',
+  }));
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const requestedUrls = [];
+  page.on('request', (request) => requestedUrls.push(request.url()));
+  await page.goto(`${BASE_URL}/producto/iphone-incell-14/`, { waitUntil: 'load' });
+  await page.waitForTimeout(1_000);
+
+  expect(requestedUrls.some((url) => /\/gallery-\d+\.(?:jpe?g|png)$/i.test(url))).toBe(false);
+  expect(requestedUrls.some((url) => /\/video-\d+\.mp4$/i.test(url))).toBe(false);
+  expect(requestedUrls.some((url) => /iphone-incell\/(?:11|11pro)\/(?:fhd-)?main\.(?:jpe?g|png)$/i.test(url))).toBe(false);
+
+  const galleryImage = page.locator('[data-detail-gallery] img').first();
+  await expect(galleryImage).not.toHaveAttribute('src', /gallery-/);
+  await galleryImage.scrollIntoViewIfNeeded();
+  await expect.poll(() => requestedUrls.some((url) => /\/gallery-01\.jpg$/i.test(url))).toBe(true);
 });
 
 async function expectReadableText(page, selector, minimumFontSize = 0) {

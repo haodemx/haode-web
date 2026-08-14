@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-08-13-final-ui-seo2";
+const CACHE_VERSION = "haode-pwa-v2026-08-13-performance1";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -12,7 +12,7 @@ const APP_SHELL_URLS = [
   "/analytics.js?v=20260726-growth-phase37",
   "/script.js?v=20260809-final-audit",
   "/campaign-attribution.js",
-  "/products.js?v=20260813-final-ui-seo",
+  "/products.js?v=20260813-performance1",
   "/detail-header.js?v=20260725-ui-phase33",
   "/site-footer.js?v=20260813-final-ui-seo",
   "/app/app.css?v=20260813-final-ui-seo",
