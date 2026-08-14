@@ -31,6 +31,7 @@
     "marketing:exposure-pack": "node scripts/generate-exposure-pack.mjs",
     "sync-series-assets": "node scripts/sync-series-assets.js",
     "build-products": "node scripts/build-products.js",
+    "optimize:display-images": "node scripts/generate-product-display-images.mjs --apply",
     "publish-products": "node scripts/publish-products.js",
     "verify-products": "node scripts/verify-products.js",
     "browser-test": "playwright test",

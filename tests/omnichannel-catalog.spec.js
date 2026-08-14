@@ -221,7 +221,7 @@ test("keeps the approved desktop catalog authoritative", async ({ page }) => {
 
   const g3Card = page.locator(".shop-card", { hasText: "Gafas AI G3" });
   await expect(g3Card).toHaveCount(1);
-  await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
+  await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.display\.webp/);
 
   const localBolsaCard = page.locator(".shop-card", { hasText: "Pantalla para iPhone 11 Bolsa Protectora" });
   await expect(localBolsaCard).toBeVisible();

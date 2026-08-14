@@ -57,7 +57,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
     });
 
     const previewSrc = await page.locator('[data-detail-mobile-preview] img').getAttribute('src');
-    expect(previewSrc).toBe('/assets/products/iphone-incell/14/main.jpg');
+    expect(previewSrc).toBe('/assets/products/iphone-incell/14/main.display.webp');
   });
 
   for (const path of legacyPlegablePages) {

@@ -1237,6 +1237,45 @@ function buildAssetUrl(pathname = '') {
   return `${SITE_BASE_PATH}/${rawPath.replace(/^\/+/, '')}`;
 }
 
+function productDisplayImagePath(pathname = '') {
+  const rawPath = String(pathname || '').trim();
+  if (!rawPath || /^(?:https?:)?\/\//.test(rawPath) || rawPath.includes('/placeholder.svg')) return rawPath;
+  return rawPath.replace(/\.(?:jpe?g|png)$/i, '.display.webp');
+}
+
+let deferredProductMediaObserver;
+const DEFERRED_IMAGE_PLACEHOLDER = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
+
+function loadDeferredProductMedia(element) {
+  const source = element.dataset.performanceSrc;
+  if (!source) return;
+  element.src = source;
+  delete element.dataset.performanceSrc;
+  if (element.tagName === 'VIDEO') element.load();
+}
+
+function deferProductMedia(element, source) {
+  if (!source) return;
+  if (element.tagName === 'IMG' && !element.getAttribute('src')) {
+    element.src = DEFERRED_IMAGE_PLACEHOLDER;
+  }
+  element.dataset.performanceSrc = source;
+  if (!('IntersectionObserver' in window)) {
+    loadDeferredProductMedia(element);
+    return;
+  }
+  if (!deferredProductMediaObserver) {
+    deferredProductMediaObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadDeferredProductMedia(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px', threshold: 0.01 });
+  }
+  deferredProductMediaObserver.observe(element);
+}
+
 function productSeoName(product) {
   const quality = String(product?.quality || '').toUpperCase();
   const label = quality.includes('SOFT OLED')
@@ -1604,12 +1643,13 @@ function createProduct(definition) {
   const categoryMedia = CATEGORY_MEDIA[category]?.[definition.id] || null;
   const mediaImages = Array.isArray(definition.images) && definition.images.length ? definition.images.filter(Boolean) : null;
   const priceTable = buildPriceTable(definition.prices || definition.priceTable);
-  const mainImage = definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
+  const originalMainImage = definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
+  const mainImage = productDisplayImagePath(originalMainImage);
   const galleryImages = definition.galleryImages || (mediaImages ? mediaImages.slice(1) : null) || categoryMedia?.galleryImages || categoryMeta.galleryImages || [];
   const name = definition.name || `Pantalla para ${definition.model || definition.title || definition.id}`;
   const officialSkuPending = definition.officialSkuPending === true;
   const reference = definition.sku || definition.SKU || definition.id;
-  const usesPlaceholder = mainImage === PLACEHOLDER_IMAGE || String(mainImage).includes('/placeholder.svg');
+  const usesPlaceholder = originalMainImage === PLACEHOLDER_IMAGE || String(originalMainImage).includes('/placeholder.svg');
   return {
     id: definition.id,
     sku: officialSkuPending ? '' : reference,
@@ -1622,8 +1662,9 @@ function createProduct(definition) {
     name,
     quality: definition.quality,
     mainImage,
+    originalMainImage,
     cardImage: definition.cardImage || PRODUCT_CARD_IMAGE_BY_ID[definition.id] || mainImage,
-    galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== mainImage))),
+    galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== originalMainImage && src !== mainImage))),
     videos: definition.videos || categoryMedia?.videos || [],
     priceTable,
     priceSource: definition.priceSource || '',
@@ -1656,7 +1697,7 @@ function createFilterButton(category, isActive = false) {
   return button;
 }
 
-function createProductCard(product) {
+function createProductCard(product, { deferMedia = false } = {}) {
   const article = document.createElement('article');
   article.className = 'shop-card';
   article.dataset.category = product.category;
@@ -1671,7 +1712,7 @@ function createProductCard(product) {
   media.className = 'shop-media';
 
   const image = document.createElement('img');
-  image.src = buildAssetUrl(product.cardImage || product.mainImage || PLACEHOLDER_IMAGE);
+  const imageSource = buildAssetUrl(product.cardImage || product.mainImage || PLACEHOLDER_IMAGE);
   image.alt = product.name;
   image.loading = 'lazy';
   image.decoding = 'async';
@@ -1679,6 +1720,8 @@ function createProductCard(product) {
     const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
     if (image.src !== fallback) image.src = fallback;
   };
+  if (deferMedia) deferProductMedia(image, imageSource);
+  else image.src = imageSource;
 
   const brand = document.createElement('span');
   brand.className = 'shop-brand';
@@ -2691,7 +2734,7 @@ function renderProductDetailPage() {
   setMetaContent('meta[name="keywords"]', metaKeywords);
   setMetaContent('meta[property="og:title"]', `${seoName} | HAODE México`);
   setMetaContent('meta[property="og:description"]', metaDescription);
-  setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
+  setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
   setMetaContent('meta[property="og:url"]', detailUrl);
   setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
 
@@ -2802,7 +2845,8 @@ function renderProductDetailPage() {
       const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
       if (mainImageEl.src !== fallback) mainImageEl.src = fallback;
     };
-    attachZoom(mainImageEl, new URL(preferredMainImage, `${SITE_ORIGIN}/`).href, product.name);
+    const zoomMainImage = buildAssetUrl(product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE);
+    attachZoom(mainImageEl, new URL(zoomMainImage, `${SITE_ORIGIN}/`).href, product.name);
     const visual = mainImageEl.closest('.detail-visual');
     let imageStatus = visual?.querySelector('[data-product-image-status]');
     if (product.usesPlaceholder && visual && !imageStatus) {
@@ -2836,7 +2880,7 @@ function renderProductDetailPage() {
     const galleryImages = [...new Set((product.galleryImages || []).filter(Boolean))];
     galleryImages.slice(0, 4).forEach((src, index) => {
       const img = document.createElement('img');
-      img.src = buildAssetUrl(src);
+      const gallerySource = buildAssetUrl(src);
       img.alt = `${product.name} foto ${index + 1}`;
       img.loading = 'lazy';
       img.decoding = 'async';
@@ -2844,6 +2888,7 @@ function renderProductDetailPage() {
         const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
         if (img.src !== fallback) img.src = fallback;
       };
+      deferProductMedia(img, gallerySource);
       attachZoom(img, new URL(buildAssetUrl(src), `${SITE_ORIGIN}/`).href, `${product.name} foto ${index + 1}`);
       galleryEl.appendChild(img);
     });
@@ -2863,11 +2908,10 @@ function renderProductDetailPage() {
         const frame = document.createElement('video');
         frame.controls = true;
         frame.playsInline = true;
-        frame.autoplay = true;
         frame.muted = true;
         frame.loop = true;
-        frame.preload = 'metadata';
-        frame.src = buildAssetUrl(video);
+        frame.preload = 'none';
+        deferProductMedia(frame, buildAssetUrl(video));
         videosEl.appendChild(frame);
       });
     } else {
@@ -2896,7 +2940,7 @@ function renderProductDetailPage() {
   if (relatedRoot) {
     relatedRoot.innerHTML = '';
     getRelatedProducts(product).forEach((item) => {
-      relatedRoot.appendChild(createProductCard(item));
+      relatedRoot.appendChild(createProductCard(item, { deferMedia: true }));
     });
   }
 }

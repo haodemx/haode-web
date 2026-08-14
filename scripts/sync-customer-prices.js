@@ -488,6 +488,7 @@ function productSeoName(product) {
 
 function genericProductPage(product) {
   const image = `/${String(product.images?.[0] || PLACEHOLDER_IMAGE).replace(/^\/+/, '')}`;
+  const displayImage = image.replace(/\.(?:jpe?g|png)$/i, '.display.webp');
   const canonical = `https://haode.com.mx/producto/${product.id}/`;
   const retail = priceNumber(product.prices?.[0]?.price);
   const placeholder = image.includes('placeholder.svg');
@@ -547,12 +548,12 @@ function genericProductPage(product) {
   <main class="detail-main">
     <div class="wrap detail-shell" data-product-detail>
       <div class="detail-top">
-        <div><span class="detail-kicker" data-detail-brand>${escapeHtml(product.brand || 'HAODE')}</span><h1 class="detail-title" data-detail-title>${escapeHtml(product.name)}</h1><p class="catalog-intro" data-detail-subtitle>${escapeHtml(product.model)}</p><div class="detail-mobile-product-preview" data-detail-mobile-preview><img src="${image}" alt="Imagen de ${escapeHtml(product.name)}" width="72" height="72" loading="eager" decoding="async" /><div><strong>Foto del producto</strong><small>Confirma stock en México y precio por cantidad por WhatsApp.</small></div></div><div class="detail-highlights" data-detail-highlights><span>Stock en México bajo confirmación</span><span>Precio por cantidad</span><span>WhatsApp privado</span></div></div>
+        <div><span class="detail-kicker" data-detail-brand>${escapeHtml(product.brand || 'HAODE')}</span><h1 class="detail-title" data-detail-title>${escapeHtml(product.name)}</h1><p class="catalog-intro" data-detail-subtitle>${escapeHtml(product.model)}</p><div class="detail-mobile-product-preview" data-detail-mobile-preview><img src="${displayImage}" alt="Imagen de ${escapeHtml(product.name)}" width="72" height="72" loading="eager" decoding="async" /><div><strong>Foto del producto</strong><small>Confirma stock en México y precio por cantidad por WhatsApp.</small></div></div><div class="detail-highlights" data-detail-highlights><span>Stock en México bajo confirmación</span><span>Precio por cantidad</span><span>WhatsApp privado</span></div></div>
         <a class="btn btn-secondary detail-back" data-detail-back href="/productos/">Volver al catálogo</a>
       </div>
       <div class="detail-grid">
         <section class="detail-visual" aria-label="Imagen del producto">
-          <img class="detail-main-image" data-detail-main-image src="${image}" alt="${escapeHtml(product.name)}" width="1000" height="1000" loading="eager" fetchpriority="high" decoding="async" />
+          <img class="detail-main-image" data-detail-main-image src="${displayImage}" alt="${escapeHtml(product.name)}" width="1000" height="1000" loading="eager" fetchpriority="high" decoding="async" />
 ${placeholder ? '          <p class="product-image-status" data-product-image-status>Imagen en actualización</p>\n' : ''}          <div class="detail-gallery-wrap"><h2>Galería</h2><div class="detail-gallery" data-detail-gallery></div></div>
           <div class="detail-video-wrap"><h2>Video</h2><div class="detail-videos" data-detail-videos></div></div>
         </section>
@@ -568,7 +569,7 @@ ${placeholder ? '          <p class="product-image-status" data-product-image-st
   <a class="floating-cta" href="${whatsapp}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
   <script src="/campaign-attribution.js?v=20260725"></script>
   <script src="/data/products.generated.js?v=20260725-catalog-complete"></script>
-  <script src="/products.js?v=20260813-final-ui-seo"></script>
+  <script src="/products.js?v=20260813-performance1"></script>
   <script src="/detail-header.js?v=20260725-catalog-complete"></script>
 </body>
 </html>
