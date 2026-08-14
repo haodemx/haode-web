@@ -6,6 +6,17 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
+const REPAIRED_SAMSUNG_INCELL_ROUTES = new Set([
+  'samsung-incell-s10e',
+  'samsung-incell-s21-fe',
+  'samsung-incell-s21-plus',
+  'samsung-incell-s22',
+  'samsung-incell-s22-plus',
+  'samsung-incell-s23',
+  'samsung-incell-s23-plus',
+  'samsung-incell-s24',
+  'samsung-incell-s24-plus',
+]);
 
 function read(relativePath) {
   return fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
@@ -141,9 +152,18 @@ test('product SEO titles distinguish screen quality and static H1 text is crawla
     const slug = new URL(url).pathname.split('/').filter(Boolean).at(-1);
     const html = read(`producto/${slug}/index.html`);
     const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
-    const h1 = html.match(/<h1\b[^>]*data-detail-title[^>]*>([^<]+)<\/h1>/i)?.[1]?.trim();
+    const h1 = html.match(/<h1\b[^>]*>([^<]+)<\/h1>/i)?.[1]?.trim();
     assert.ok(title, `missing product title: ${slug}`);
+    assert.ok(h1, `missing crawlable product H1: ${slug}`);
     assert.notEqual(h1, 'Producto HAODE México', `generic product H1: ${slug}`);
+    assert.doesNotMatch(html, /window\.location\.replace\([^)]*producto\.html\?id=/i, `client redirect found: ${slug}`);
+    if (REPAIRED_SAMSUNG_INCELL_ROUTES.has(slug)) {
+      const productSchema = jsonLdBlocks(html)
+        .flatMap((block) => block['@graph'] || [block])
+        .find((node) => node['@type'] === 'Product');
+      assert.equal(productSchema?.brand?.name, 'HAODE México', `incorrect replacement-screen brand: ${slug}`);
+      assert.equal(productSchema?.offers?.availability, undefined, `unconfirmed availability claim: ${slug}`);
+    }
     const duplicates = titles.get(title) || [];
     duplicates.push(slug);
     titles.set(title, duplicates);
@@ -151,6 +171,15 @@ test('product SEO titles distinguish screen quality and static H1 text is crawla
 
   const duplicateTitles = [...titles].filter(([, slugs]) => slugs.length > 1);
   assert.deepEqual(duplicateTitles, []);
+});
+
+test('generic product renderer is a noindex fallback without unsupported Product schema', () => {
+  const html = read('producto.html');
+  const graph = jsonLdBlocks(html).flatMap((block) => block['@graph'] || [block]);
+
+  assert.match(html, /<meta name="robots" content="noindex,follow(?:,[^"]*)?" \/>/);
+  assert.equal(graph.some((node) => node['@type'] === 'Product'), false);
+  assert.doesNotMatch(html, /https:\/\/schema\.org\/InStock/);
 });
 
 test('legacy product redirects do not use root-relative producto.html paths', () => {

@@ -493,6 +493,9 @@ function genericProductPage(product) {
   const retail = priceNumber(product.prices?.[0]?.price);
   const placeholder = image.includes('placeholder.svg');
   const seoName = productSeoName(product);
+  const schemaBrand = String(product.category || '').startsWith('celulares-')
+    ? (product.brand || 'HAODE México')
+    : 'HAODE México';
   const whatsapp = `https://wa.me/523326684296?text=${encodeURIComponent([
     'Hola HAODE México, quiero cotizar este producto:',
     `Producto: ${product.name}`,
@@ -509,12 +512,11 @@ function genericProductPage(product) {
     description: product.description,
     image: `https://haode.com.mx${image}`,
     url: canonical,
-    brand: { '@type': 'Brand', name: product.brand || 'HAODE' },
+    brand: { '@type': 'Brand', name: schemaBrand },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'MXN',
       price: String(retail),
-      availability: 'https://schema.org/LimitedAvailability',
       url: canonical,
     },
   };
@@ -583,7 +585,9 @@ function publishStaticProductRoutes(products) {
     const indexFile = path.join(directory, 'index.html');
     if (fs.existsSync(indexFile)) {
       const current = fs.readFileSync(indexFile, 'utf8');
-      if (!current.includes('20260725-catalog-complete')) return;
+      const isManagedPage = current.includes('20260725-catalog-complete');
+      const isLegacyRedirect = /window\.location\.replace\([^)]*producto\.html\?id=/i.test(current);
+      if (!isManagedPage && !isLegacyRedirect) return;
     }
     fs.mkdirSync(directory, { recursive: true });
     fs.writeFileSync(indexFile, genericProductPage(product), 'utf8');
