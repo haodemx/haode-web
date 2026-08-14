@@ -3,6 +3,9 @@ const { test, expect } = require("@playwright/test");
 const BASE_URL = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/$/, "");
 
 test("homepage WhatsApp CTA sends one GA4 contact event", async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("haode-privacy-consent-v1", JSON.stringify({ version: 1, analytics: true, advertising: false }));
+  });
   await page.goto(`${BASE_URL}/?utm_source=google`, { waitUntil: "domcontentloaded" });
 
   await page.evaluate(() => {
@@ -33,6 +36,9 @@ test("homepage WhatsApp CTA sends one GA4 contact event", async ({ page }) => {
 });
 
 test("product catalog keeps product WhatsApp tracking as the single contact source", async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("haode-privacy-consent-v1", JSON.stringify({ version: 1, analytics: true, advertising: false }));
+  });
   await page.goto(`${BASE_URL}/productos/?utm_source=facebook`, { waitUntil: "domcontentloaded" });
 
   await page.evaluate(() => {
@@ -60,6 +66,9 @@ test("product catalog keeps product WhatsApp tracking as the single contact sour
 });
 
 test("shared detail header tracks a warranty WhatsApp click without manual page code", async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("haode-privacy-consent-v1", JSON.stringify({ version: 1, analytics: true, advertising: false }));
+  });
   await page.goto(`${BASE_URL}/garantia/?utm_source=instagram&utm_campaign=garantia`, { waitUntil: "domcontentloaded" });
   await page.waitForFunction(() => Boolean(window.HaodeCampaign));
 

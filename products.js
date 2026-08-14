@@ -1166,7 +1166,7 @@ function trafficReference() {
 }
 
 function trackWebsiteEvent(eventName, params = {}) {
-  if (typeof window.gtag === 'function') window.gtag('event', eventName, params);
+  return window.HaodeAnalytics?.event?.(eventName, params) === true;
 }
 
 function buildProductCotizacionText(name, reference = '') {

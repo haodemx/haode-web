@@ -536,7 +536,7 @@ function genericProductPage(product) {
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/style.css?v=20260813-final-ui-seo" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
-  <script src="/analytics.js?v=20260803-consent-privacy"></script>
+  <script src="/analytics.js?v=20260813-ga4-conversions"></script>
 </head>
 <body class="product-detail-page conversion-reference-page">
   <header class="topbar catalog-topbar">
@@ -567,9 +567,9 @@ ${placeholder ? '          <p class="product-image-status" data-product-image-st
   </main>
   <footer class="footer catalog-footer"><div class="wrap footer-inner"><small>© HAODE MÉXICO · Atención por WhatsApp · Envíos nacionales</small></div></footer>
   <a class="floating-cta" href="${whatsapp}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
-  <script src="/campaign-attribution.js?v=20260725"></script>
+  <script src="/campaign-attribution.js?v=20260813-ga4-conversions"></script>
   <script src="/data/products.generated.js?v=20260725-catalog-complete"></script>
-  <script src="/products.js?v=20260813-performance1"></script>
+  <script src="/products.js?v=20260813-ga4-conversions"></script>
   <script src="/detail-header.js?v=20260725-catalog-complete"></script>
 </body>
 </html>

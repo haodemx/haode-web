@@ -5,7 +5,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SHARED_ANALYTICS_PATTERN = /<script\b[^>]*src=["'][^"']*\/analytics\.js\?v=20260803-consent-privacy["'][^>]*><\/script>/i;
+const SHARED_ANALYTICS_PATTERN = /<script\b[^>]*src=["'][^"']*\/analytics\.js\?v=20260813-ga4-conversions["'][^>]*><\/script>/i;
 const SKIP_DIRECTORIES = new Set(['.git', 'node_modules', 'overnight-previews', 'playwright-report', 'test-results']);
 
 function collectFiles(directory = ROOT, files = []) {
@@ -74,6 +74,6 @@ test('cart keeps customer data out of the tracked WhatsApp anchor', () => {
 
 test('future generated product pages use the consent-aware entrypoint', () => {
   const generator = fs.readFileSync(path.join(ROOT, 'scripts', 'sync-customer-prices.js'), 'utf8');
-  assert.match(generator, /analytics\.js\?v=20260803-consent-privacy/);
+  assert.match(generator, /analytics\.js\?v=20260813-ga4-conversions/);
   assert.doesNotMatch(generator, /googletagmanager\.com\/gtag\/js\?id=G-22TCLJDXYS/);
 });

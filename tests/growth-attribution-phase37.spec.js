@@ -4,6 +4,13 @@ const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4175';
 
 test.describe('HAODE growth attribution phase 37', () => {
   test('App queues tracked WhatsApp and App-open events', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('haode-privacy-consent-v1', JSON.stringify({
+        version: 1,
+        analytics: true,
+        advertising: false,
+      }));
+    });
     await page.goto(
       `${baseURL}/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=mayoreo_julio&utm_content=video_1#inicio`,
       { waitUntil: 'domcontentloaded' },
@@ -36,9 +43,10 @@ test.describe('HAODE growth attribution phase 37', () => {
     expect(result.measurementId).toBe('G-22TCLJDXYS');
     expect(result.reference).toBe('facebook/mayoreo_julio/video_1');
     expect(result.events.map(({ name }) => name)).toEqual(
-      expect.arrayContaining(['whatsapp_click', 'app_open']),
+      expect.arrayContaining(['contact', 'app_open']),
     );
-    expect(result.events.find(({ name }) => name === 'whatsapp_click').parameters)
+    expect(result.events.map(({ name }) => name)).not.toContain('whatsapp_click');
+    expect(result.events.find(({ name }) => name === 'contact').parameters)
       .toMatchObject({
         source: 'facebook',
         campaign: 'mayoreo_julio',

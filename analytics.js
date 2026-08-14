@@ -287,7 +287,9 @@
   global.HaodeAnalytics = Object.freeze({
     measurementId: MEASUREMENT_ID,
     event(name, parameters = {}) {
+      if (!currentConsent.analytics) return false;
       global.gtag("event", name, parameters);
+      return true;
     }
   });
 

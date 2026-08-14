@@ -71,6 +71,7 @@ jobs:
             tests/homepage-site-search.spec.js \
             tests/app-interaction-regressions.spec.js \
             tests/haode-app.spec.js \
+            tests/ga4-ecommerce-tracking.spec.js \
             tests/homepage-whatsapp-tracking.spec.js \
             --workers=1
           npx playwright test tests/site-sales-shell-phase30.spec.js \

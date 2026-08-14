@@ -8,7 +8,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PRODUCT_DATA = path.join(ROOT, 'data', 'products.generated.js');
 const PRODUCT_ROUTES = path.join(ROOT, 'producto');
 const APPLY = process.argv.includes('--apply');
-const PRODUCTS_CACHE_KEY = '20260813-performance1';
+const PRODUCTS_CACHE_KEY = '20260813-ga4-conversions';
 
 function displayImagePath(source) {
   return String(source || '').replace(/\.(?:jpe?g|png)$/i, '.display.webp');

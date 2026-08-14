@@ -142,6 +142,7 @@ const state = {
   attribution: {},
   orderRequestId: "",
   orderSubmitting: false,
+  lastTrackedProductViewId: "",
   diagnostics: {
     firestoreTotal: null,
     firestoreActive: null,
@@ -289,9 +290,34 @@ function trafficAttribution() {
 }
 
 function trackGrowthEvent(name, parameters = {}) {
-  if (typeof window.gtag === "function") {
-    window.gtag("event", name, parameters);
-  }
+  return window.HaodeAnalytics?.event?.(name, parameters) === true;
+}
+
+function ga4Item(product, quantity = 1) {
+  return {
+    item_id: product.sku || product.reference || product.id,
+    item_name: product.name,
+    item_brand: "HAODE",
+    item_category: product.category || "",
+    item_variant: product.model || "",
+    price: Number(priceFor(product, quantity)) || 0,
+    quantity
+  };
+}
+
+function ga4CartItems() {
+  return getCartItems().map(({ product, quantity }) => ga4Item(product, quantity));
+}
+
+function trackProductView(product) {
+  if (!product || state.lastTrackedProductViewId === product.id) return false;
+  const tracked = trackGrowthEvent("view_item", {
+    currency: "MXN",
+    value: Number(priceFor(product, 1)) || 0,
+    items: [ga4Item(product, 1)]
+  });
+  if (tracked) state.lastTrackedProductViewId = product.id;
+  return tracked;
 }
 
 function attributionReference(attribution = state.attribution) {
@@ -1612,6 +1638,7 @@ function renderProductDetail(productId) {
     return;
   }
   state.route = { name: "product", productId };
+  trackProductView(product);
   state.selectedGalleryIndex = Math.min(state.selectedGalleryIndex, galleryImagesFor(product).length - 1);
   const gallery = galleryImagesFor(product);
   const uniqueFrames = gallery;
@@ -1972,6 +1999,7 @@ function focusProductSearch(attempt = 0) {
 
 function renderRoute({ resetScroll = false } = {}) {
   const route = parseRoute();
+  if (route.name !== "product") state.lastTrackedProductViewId = "";
   state.selectedGalleryIndex = 0;
   state.viewerIndex = 0;
   if (route.name === "product") {
@@ -2109,7 +2137,8 @@ async function submitWebOrder() {
       currency: "MXN",
       value: payload.total,
       source: state.attribution.source,
-      lead_registered: Boolean(result.order_number)
+      lead_registered: Boolean(result.order_number),
+      items: ga4CartItems()
     });
     return result;
   } catch (error) {
@@ -2203,7 +2232,8 @@ function addProduct(productId) {
   if (!product?.salesAvailable) return;
   resetCheckoutRequest();
   state.cart.set(productId, (state.cart.get(productId) || 0) + 1);
-  trackGrowthEvent("add_to_cart", { currency: "MXN", value: product.publicPrice, items: [{ item_id: product.sku, item_name: product.name }] });
+  const item = ga4Item(product, 1);
+  trackGrowthEvent("add_to_cart", { currency: "MXN", value: item.price, items: [item] });
   renderCart();
 }
 
@@ -2231,8 +2261,17 @@ function removeProduct(productId) {
 }
 
 function openCart() {
-  if (!cartDrawerEl.classList.contains("open")) {
+  const wasClosed = !cartDrawerEl.classList.contains("open");
+  if (wasClosed) {
     cartTriggerEl = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const items = ga4CartItems();
+    if (items.length) {
+      trackGrowthEvent("view_cart", {
+        currency: "MXN",
+        value: cartTotal(),
+        items
+      });
+    }
   }
   cartDrawerEl.classList.add("open");
   cartDrawerEl.setAttribute("aria-hidden", "false");
@@ -2354,7 +2393,12 @@ async function handleDocumentClick(event) {
     if (whatsappOrderLink.classList.contains("disabled") || state.orderSubmitting) return;
     const url = buildWhatsappUrl();
     state.orderSubmitting = true;
-    trackGrowthEvent("begin_checkout", { currency: "MXN", value: cartTotal(), source: state.attribution.source });
+    trackGrowthEvent("begin_checkout", {
+      currency: "MXN",
+      value: cartTotal(),
+      source: state.attribution.source,
+      items: ga4CartItems()
+    });
     window.open(url, "_blank", "noopener,noreferrer");
     await submitWebOrder();
     state.orderSubmitting = false;
@@ -2495,6 +2539,13 @@ async function init() {
   document.addEventListener("input", handleDocumentInput);
   document.addEventListener("change", handleDocumentChange);
   window.addEventListener("hashchange", () => renderRoute({ resetScroll: true }));
+  window.addEventListener("haode:privacy-consent", (event) => {
+    state.attribution = trafficAttribution();
+    if (event.detail?.analytics && state.route.name === "product") {
+      state.lastTrackedProductViewId = "";
+      trackProductView(products.find((product) => product.id === state.route.productId));
+    }
+  });
 
   try {
     const normalizedProducts = await loadProducts();
