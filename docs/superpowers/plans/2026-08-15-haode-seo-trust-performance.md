@@ -83,8 +83,8 @@
 - [x] Run `BASE_URL=http://127.0.0.1:4173 npm run browser-test`.
 - [x] Run `git diff --check` and inspect the full diff for protected-field changes.
 - [x] Perform the repository code-review checklist.
-- [ ] Commit and push the task branch after every required gate passes.
-- [ ] Do not merge or deploy production without explicit authorization.
+- [x] Commit and push the task branch after every required gate passes.
+- [x] Do not merge or deploy production without explicit authorization.
 
 ### Task 7: Display HL Follow-On
 
