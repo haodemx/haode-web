@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const APPLY = process.argv.includes('--apply');
 const SITE_URL = 'https://haode.com.mx';
+const SKIP_DIRECTORIES = new Set(['.git', 'node_modules', 'playwright-report', 'test-results']);
 
 const SEO_ALIASES = new Map([
   ['/categoria/micas/', '/micas.html'],
@@ -109,11 +110,82 @@ function refreshSitemap() {
   return current === updated ? null : { file, relativePath, updated };
 }
 
-const changes = [
+function publicHtmlFiles(directory = ROOT) {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    if (SKIP_DIRECTORIES.has(entry.name)) return [];
+    const absolutePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) return publicHtmlFiles(absolutePath);
+    return entry.isFile() && entry.name.endsWith('.html') ? [absolutePath] : [];
+  });
+}
+
+function regexEscape(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function stripProductAvailability(jsonSource, relativePath) {
+  let parsed;
+  try {
+    parsed = JSON.parse(jsonSource.trim());
+  } catch {
+    return jsonSource;
+  }
+
+  const products = (parsed['@graph'] || [parsed])
+    .filter((node) => node?.['@type'] === 'Product' && Object.hasOwn(node.offers || {}, 'availability'));
+  if (!products.length) return jsonSource;
+
+  let updated = jsonSource;
+  for (const product of products) {
+    const encodedValue = regexEscape(JSON.stringify(product.offers.availability));
+    const trailingComma = new RegExp(`\\s*"availability"\\s*:\\s*${encodedValue}\\s*,`);
+    const finalProperty = new RegExp(`,\\s*"availability"\\s*:\\s*${encodedValue}(?=\\s*})`);
+
+    if (trailingComma.test(updated)) {
+      updated = updated.replace(trailingComma, '');
+    } else if (finalProperty.test(updated)) {
+      updated = updated.replace(finalProperty, '');
+    } else {
+      throw new Error(`Unable to remove Product availability from ${relativePath}`);
+    }
+  }
+
+  const reparsed = JSON.parse(updated.trim());
+  const remaining = (reparsed['@graph'] || [reparsed])
+    .filter((node) => node?.['@type'] === 'Product' && Object.hasOwn(node.offers || {}, 'availability'));
+  if (remaining.length) throw new Error(`Product availability remains in ${relativePath}`);
+  return updated;
+}
+
+function removeUnconfirmedProductAvailability(html, relativePath) {
+  return html.replace(
+    /(<script[^>]+type=["']application\/ld\+json["'][^>]*>)([\s\S]*?)(<\/script>)/gi,
+    (block, opening, jsonSource, closing) => {
+      const updatedJson = stripProductAvailability(jsonSource, relativePath);
+      return updatedJson === jsonSource ? block : `${opening}${updatedJson}${closing}`;
+    },
+  );
+}
+
+function mergeSchemaTrustChanges(baseChanges) {
+  const changesByPath = new Map(baseChanges.map((change) => [change.relativePath, change]));
+
+  for (const file of publicHtmlFiles()) {
+    const relativePath = path.relative(ROOT, file);
+    const pending = changesByPath.get(relativePath);
+    const current = pending?.updated ?? fs.readFileSync(file, 'utf8');
+    const updated = removeUnconfirmedProductAvailability(current, relativePath);
+    if (updated !== current) changesByPath.set(relativePath, { file, relativePath, updated });
+  }
+
+  return [...changesByPath.values()].filter(({ file, updated }) => fs.readFileSync(file, 'utf8') !== updated);
+}
+
+const changes = mergeSchemaTrustChanges([
   ...readProducts().map(refreshProductPage).filter(Boolean),
   ...[...SEO_ALIASES].map(([aliasPath, canonicalPath]) => refreshAliasPage(aliasPath, canonicalPath)).filter(Boolean),
   refreshSitemap(),
-].filter(Boolean);
+].filter(Boolean));
 
 if (APPLY) {
   changes.forEach(({ file, updated }) => fs.writeFileSync(file, updated, 'utf8'));

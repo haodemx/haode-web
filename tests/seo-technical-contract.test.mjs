@@ -26,6 +26,13 @@ function sitemapLocs() {
   return [...read('sitemap.xml').matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((match) => match[1]);
 }
 
+function sitemapHtmlPath(url) {
+  const pathname = decodeURIComponent(new URL(url).pathname);
+  if (pathname === '/') return 'index.html';
+  if (pathname.endsWith('/')) return `${pathname.slice(1)}index.html`;
+  return pathname.slice(1);
+}
+
 function jsonLdBlocks(html) {
   return [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
     .map((match) => JSON.parse(match[1].trim()));
@@ -171,6 +178,26 @@ test('product SEO titles distinguish screen quality and static H1 text is crawla
 
   const duplicateTitles = [...titles].filter(([, slugs]) => slugs.length > 1);
   assert.deepEqual(duplicateTitles, []);
+});
+
+test('all sitemap Product schema omits unconfirmed availability', () => {
+  const violations = [];
+
+  for (const url of sitemapLocs()) {
+    const relativePath = sitemapHtmlPath(url);
+    const html = read(relativePath);
+    const products = jsonLdBlocks(html)
+      .flatMap((block) => block['@graph'] || [block])
+      .filter((node) => node['@type'] === 'Product');
+
+    for (const product of products) {
+      if (Object.hasOwn(product.offers || {}, 'availability')) {
+        violations.push(`${relativePath}: ${product.offers.availability}`);
+      }
+    }
+  }
+
+  assert.deepEqual(violations, []);
 });
 
 test('generic product renderer is a noindex fallback without unsupported Product schema', () => {

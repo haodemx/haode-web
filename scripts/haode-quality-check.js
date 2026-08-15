@@ -219,6 +219,11 @@ function main() {
     const rel = relative(file);
     const canonicalUrl = extractCanonicalUrl(text);
     const noindex = extractRobotsContent(text).includes('noindex');
+    jsonLdNodes(text)
+      .filter((node) => node?.['@type'] === 'Product' && Object.hasOwn(node.offers || {}, 'availability'))
+      .forEach((node) => {
+        add(issues, 'error', 'UNCONFIRMED_SCHEMA_AVAILABILITY', file, String(node.offers.availability));
+      });
     if (canonicalUrl && !canonicalUrl.startsWith(SITE_URL)) {
       add(issues, 'error', 'CANONICAL_DOMAIN', file, canonicalUrl);
     }
