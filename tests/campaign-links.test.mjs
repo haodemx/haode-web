@@ -60,10 +60,10 @@ test("keeps app hash routes when adding tracking parameters", () => {
 
 test("builds a 14-day organic launch pack with tracked App and SEO landing links", () => {
   const pack = buildExposurePack("20260725");
-  assert.equal(pack.items.length, 14);
+  assert.equal(pack.items.length, 15);
   assert.equal(pack.items[0].publish_date, "2026-07-25");
   assert.equal(pack.items.at(-1).publish_date, "2026-08-07");
-  assert.equal(new Set(pack.items.map((item) => item.campaign)).size, 14);
+  assert.equal(new Set(pack.items.map((item) => item.campaign)).size, 15);
   assert.equal(
     pack.execution_rows.length,
     pack.items.reduce((total, item) => total + item.channels.length, 0)
@@ -81,12 +81,14 @@ test("builds a 14-day organic launch pack with tracked App and SEO landing links
 
   const wholesale = pack.items.find((item) => item.focus === "Mayoreo México");
   const fundas = pack.items.find((item) => item.focus === "Fundas");
+  const iphoneMayoreo = pack.items.find((item) => item.focus === "iPhone mayoreo");
   const iphoneIncell = pack.items.find((item) => item.focus === "iPhone INCELL");
   const samsungIncell = pack.items.find((item) => item.focus === "Samsung INCELL");
   const iphoneOled = pack.items.find((item) => item.focus === "iPhone OLED");
   assert.equal(new URL(wholesale.tracking_links.google_business).pathname, "/refacciones-celulares-mayoreo-mexico/");
   assert.equal(new URL(wholesale.tracking_links.google_business).searchParams.get("utm_source"), "google_business");
   assert.equal(new URL(fundas.tracking_links.facebook).pathname, "/fundas-celular-mayoreo-mexico/");
+  assert.equal(new URL(iphoneMayoreo.tracking_links.instagram).pathname, "/pantallas-iphone-mayoreo-mexico/");
   assert.equal(new URL(iphoneIncell.tracking_links.instagram).pathname, "/pantallas-iphone-incell-mayoreo-mexico/");
   assert.equal(new URL(samsungIncell.tracking_links.facebook).pathname, "/pantallas-samsung-incell-mayoreo-mexico/");
   assert.equal(new URL(iphoneOled.tracking_links.instagram).pathname, "/pantallas-iphone-oled-mayoreo-mexico/");

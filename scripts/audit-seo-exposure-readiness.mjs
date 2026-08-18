@@ -29,6 +29,14 @@ export const SEO_PRIORITY_PAGES = Object.freeze([
   },
   {
     priority: "P0",
+    intent: "pantallas iphone mayoreo mexico",
+    url: "https://haode.com.mx/pantallas-iphone-mayoreo-mexico/",
+    audience: "Tecnicos, talleres y distribuidores",
+    cta: "Elegir calidad y cotizar",
+    requiredInExposurePack: true
+  },
+  {
+    priority: "P0",
     intent: "pantallas iphone 11 xr mayoreo",
     url: "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/",
     audience: "Tecnicos y talleres",

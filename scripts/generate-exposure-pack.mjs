@@ -84,6 +84,17 @@ const campaignItems = [
     whatsapp: "Publica pantallas iPhone INCELL con prueba o empaque real. No pongas precio si no está confirmado en la imagen. Manda a la página dedicada para cotizar."
   },
   {
+    day: 2,
+    focus: "iPhone mayoreo",
+    sku: "iphone_mayoreo",
+    url: "https://haode.com.mx/pantallas-iphone-mayoreo-mexico/",
+    channels: ["instagram", "facebook", "whatsapp"],
+    media: "assets/products/iphone-incell/main.jpg",
+    headline: "Pantallas iPhone de mayoreo",
+    caption: "Reúne INCELL y OLED en una sola entrada. Selecciona calidad y modelo, luego cotiza por WhatsApp para confirmar disponibilidad y precio por cantidad.",
+    whatsapp: "Este post es para consultas de mayoreo general de iPhone. Pide siempre modelo, calidad, cantidad y ciudad para no mezclar líneas."
+  },
+  {
     day: 3,
     focus: "Samsung INCELL",
     sku: "samsung_incell_con_marco",

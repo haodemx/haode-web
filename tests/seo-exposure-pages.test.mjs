@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE_URL = "https://haode.com.mx";
 const pages = [
+  "pantallas-iphone-mayoreo-mexico",
   "pantallas-iphone-incell-mayoreo-mexico",
   "pantallas-iphone-oled-mayoreo-mexico",
   "pantallas-samsung-incell-mayoreo-mexico",

@@ -52,6 +52,7 @@ const STATIC_SEO_URLS = [
   '/ai-smart-glasses-w630.html',
   '/ai-smart-glasses-w610.html',
   '/pantallas-iphone-11-xr-mayoreo/',
+  '/pantallas-iphone-mayoreo-mexico/',
   '/pantallas-iphone-incell-mayoreo-mexico/',
   '/pantallas-iphone-oled-mayoreo-mexico/',
   '/pantallas-premium-iphone-samsung-fabrica/',
