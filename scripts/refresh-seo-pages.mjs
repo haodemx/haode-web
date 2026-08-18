@@ -72,8 +72,13 @@ function refreshProductPage(product) {
   updated = replaceMetaContent(updated, 'property', 'og:title', seoTitle);
   updated = replaceMetaContent(updated, 'name', 'twitter:title', seoTitle);
   updated = updated.replace(
-    /(<h1\b[^>]*data-detail-title[^>]*>)\s*Producto HAODE México\s*(<\/h1>)/i,
-    `$1${escapeHtml(product.name)}$2`,
+    /(<h1\b[^>]*data-detail-title[^>]*>)\s*([^<]+?)\s*(<\/h1>)/i,
+    (match, open, currentH1, close) => {
+      const currentName = String(currentH1).trim();
+      const oldName = String(product.name || '').trim();
+      if (currentName !== 'Producto HAODE México' && currentName !== oldName) return match;
+      return `${open}${escapeHtml(productSeoName(product))}${close}`;
+    },
   );
 
   return current === updated ? null : { file, relativePath, updated };

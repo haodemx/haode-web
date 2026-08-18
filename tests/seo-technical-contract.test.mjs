@@ -62,6 +62,7 @@ test('sitemap keeps canonical static SEO pages and excludes redirect aliases', (
     '/pantallas-iphone-incell-mayoreo-mexico/',
     '/pantallas-iphone-oled-mayoreo-mexico/',
     '/pantallas-samsung-incell-mayoreo-mexico/',
+    '/pantallas-samsung-oled-mayoreo-mexico/',
     '/pantallas-samsung-zflip-zfold-original-mexico/',
     '/refacciones-celulares-mayoreo-mexico/',
   ].map((urlPath) => `${SITE_URL}${urlPath}`);
@@ -103,6 +104,7 @@ test('sitemap generator preserves the same static SEO routes', () => {
     '/pantallas-iphone-incell-mayoreo-mexico/',
     '/pantallas-iphone-oled-mayoreo-mexico/',
     '/pantallas-samsung-incell-mayoreo-mexico/',
+    '/pantallas-samsung-oled-mayoreo-mexico/',
     '/pantallas-samsung-mayoreo-mexico/',
     '/pantallas-samsung-zflip-zfold-original-mexico/',
     '/refacciones-celulares-mayoreo-mexico/',

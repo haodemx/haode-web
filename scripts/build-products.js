@@ -56,6 +56,7 @@ const STATIC_SEO_URLS = [
   '/pantallas-iphone-oled-mayoreo-mexico/',
   '/pantallas-premium-iphone-samsung-fabrica/',
   '/pantallas-samsung-incell-mayoreo-mexico/',
+  '/pantallas-samsung-oled-mayoreo-mexico/',
   '/pantallas-samsung-mayoreo-mexico/',
   '/pantallas-samsung-zflip-zfold-original-mexico/',
   '/fundas-celular-mayoreo-mexico/',
