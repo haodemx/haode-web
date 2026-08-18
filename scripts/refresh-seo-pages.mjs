@@ -7,6 +7,13 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const APPLY = process.argv.includes('--apply');
 const SITE_URL = 'https://haode.com.mx';
 const SKIP_DIRECTORIES = new Set(['.git', 'node_modules', 'playwright-report', 'test-results']);
+const SCREEN_CATEGORIES = new Set([
+  'iphone-incell',
+  'iphone-oled',
+  'samsung-incell',
+  'samsung-oled',
+  'samsung-tipo-original',
+]);
 
 const SEO_ALIASES = new Map([
   ['/categoria/micas/', '/micas.html'],
@@ -47,6 +54,11 @@ function productSeoName(product) {
   return `${name} ${label}`;
 }
 
+function localScreenDescription(product) {
+  if (!SCREEN_CATEGORIES.has(product.category)) return '';
+  return `${productSeoName(product)} para reparación profesional en México. Cotiza por cantidad y confirma compatibilidad por WhatsApp.`;
+}
+
 function escapeHtml(value) {
   return String(value || '')
     .replace(/&/g, '&amp;')
@@ -68,9 +80,15 @@ function refreshProductPage(product) {
 
   const current = fs.readFileSync(file, 'utf8');
   const seoTitle = escapeHtml(`${productSeoName(product)} | HAODE México`);
+  const localDescription = localScreenDescription(product);
   let updated = current.replace(/<title>[^<]*<\/title>/i, `<title>${seoTitle}</title>`);
   updated = replaceMetaContent(updated, 'property', 'og:title', seoTitle);
   updated = replaceMetaContent(updated, 'name', 'twitter:title', seoTitle);
+  if (localDescription) {
+    const escapedDescription = escapeHtml(localDescription);
+    updated = replaceMetaContent(updated, 'name', 'description', escapedDescription);
+    updated = replaceMetaContent(updated, 'property', 'og:description', escapedDescription);
+  }
   updated = updated.replace(
     /(<h1\b[^>]*data-detail-title[^>]*>)\s*([^<]+?)\s*(<\/h1>)/i,
     (match, open, currentH1, close) => {
