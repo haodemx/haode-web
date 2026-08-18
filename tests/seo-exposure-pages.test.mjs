@@ -10,6 +10,7 @@ const pages = [
   "pantallas-iphone-incell-mayoreo-mexico",
   "pantallas-iphone-oled-mayoreo-mexico",
   "pantallas-samsung-incell-mayoreo-mexico",
+  "pantallas-samsung-oled-mayoreo-mexico",
   "pantallas-samsung-zflip-zfold-original-mexico",
   "fundas-celular-mayoreo-mexico",
   "micas-hidrogel-mayoreo-mexico",

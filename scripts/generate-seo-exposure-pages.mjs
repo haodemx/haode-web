@@ -76,6 +76,29 @@ const pages = [
     ]
   },
   {
+    slug: "pantallas-samsung-oled-mayoreo-mexico",
+    title: "Pantallas Samsung OLED de mayoreo en México | HAODE",
+    meta: "Pantallas Samsung OLED de mayoreo en México para técnicos y talleres. Confirma modelo, cantidad, disponibilidad y precio por WhatsApp.",
+    ogImage: "/assets/products/samsung-oled/s24-ultra/main.jpg",
+    kicker: "Samsung OLED",
+    h1: "Pantallas Samsung OLED de mayoreo",
+    hero: "Entrada para talleres que buscan pantallas Samsung OLED por modelo. Confirma la serie Galaxy, la calidad y la cantidad antes de solicitar cotización.",
+    campaign: "samsung_oled_mayoreo",
+    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=samsung_oled_mayoreo&utm_content=landing_cta#categoria/Pantallas%20Samsung%20OLED",
+    whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas Samsung OLED.\nModelos Galaxy:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, precio por cantidad y envio?",
+    proof: ["Galaxy por modelo", "OLED separado", "Lista por cantidad"],
+    cards: [
+      ["Samsung por calidad", "Consulta la línea Samsung OLED separada de INCELL y TIPO ORIGINAL.", "/pantallas-samsung-mayoreo-mexico/"],
+      ["Samsung INCELL", "Si el pedido requiere INCELL, usa la ruta separada para evitar mezclar líneas.", "/pantallas-samsung-incell-mayoreo-mexico/"],
+      ["Plegables Samsung", "Para Z Flip y Z Fold, confirma generación y versión antes de cotizar.", "/pantallas-samsung-zflip-zfold-original-mexico/"]
+    ],
+    faq: [
+      ["¿Samsung OLED e INCELL son la misma línea?", "No. Indica la calidad, el modelo exacto y la cantidad para que HAODE revise la opción correcta."],
+      ["¿Qué datos debo mandar para cotizar?", "Envía modelo Galaxy, calidad requerida, cantidad y ciudad. La disponibilidad, el precio final y el envío se confirman antes del pedido."],
+      ["¿La página confirma inventario exacto?", "No. La página organiza la búsqueda de Samsung OLED; el inventario se confirma por WhatsApp."]
+    ]
+  },
+  {
     slug: "pantallas-samsung-zflip-zfold-original-mexico",
     title: "Pantallas Samsung Z Flip y Z Fold TIPO ORIGINAL | HAODE",
     meta: "Pantallas Samsung Z Flip y Z Fold TIPO ORIGINAL en Mexico. Cotiza modelo, version, cantidad, disponibilidad y envio por WhatsApp.",
