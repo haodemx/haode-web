@@ -70,6 +70,18 @@ function refreshProductPage(product) {
   let updated = current.replace(/<title>[^<]*<\/title>/i, `<title>${seoTitle}</title>`);
   updated = replaceMetaContent(updated, 'property', 'og:title', seoTitle);
   updated = replaceMetaContent(updated, 'name', 'twitter:title', seoTitle);
+  const mainImageAlt = escapeHtml(`${productSeoName(product)} para reparación`);
+  updated = updated.replace(
+    /(<img\s+[^>]*data-detail-main-image[^>]*\salt=["'])[^"']*(["'])/i,
+    `$1${mainImageAlt}$2`,
+  );
+  updated = updated.replace(
+    /(<img\b[^>]*data-detail-main-image\b[^>]*)(\s*\/?>)/i,
+    (match, prefix, closeTag) => {
+      if (/\salt=/.test(prefix)) return match;
+      return `${prefix} alt="${mainImageAlt}"${closeTag}`;
+    },
+  );
   updated = updated.replace(
     /(<h1\b[^>]*data-detail-title[^>]*>)\s*([^<]+?)\s*(<\/h1>)/i,
     (match, open, currentH1, close) => {
