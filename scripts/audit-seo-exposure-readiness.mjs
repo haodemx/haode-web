@@ -29,6 +29,14 @@ export const SEO_PRIORITY_PAGES = Object.freeze([
   },
   {
     priority: "P0",
+    intent: "pantallas iphone mayoreo mexico",
+    url: "https://haode.com.mx/pantallas-iphone-mayoreo-mexico/",
+    audience: "Tecnicos, talleres y distribuidores",
+    cta: "Elegir calidad y cotizar",
+    requiredInExposurePack: true
+  },
+  {
+    priority: "P0",
     intent: "pantallas iphone 11 xr mayoreo",
     url: "https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/",
     audience: "Tecnicos y talleres",
@@ -189,7 +197,7 @@ function pageSignals(page, locs) {
   const hasSitemap = locs.has(page.url);
   const canonicalOk = html.includes(`<link rel="canonical" href="${page.url}"`);
   const indexable = /<meta name=["']robots["'] content=["']index,follow/i.test(html);
-  const hasWhatsApp = /wa\.me\/523326684296|whatsapp\.com/i.test(html);
+  const hasWhatsApp = /wa\.me\/(?:523326684296|525645866014)|whatsapp\.com/i.test(html);
   const hasTrackedCta = /utm_source=|campaign-attribution\.js/i.test(html);
   const hasAttributionScript = html.includes("campaign-attribution.js");
   const hasStructuredData = /type=["']application\/ld\+json["']/i.test(html);
@@ -298,7 +306,6 @@ function renderMarkdown(report) {
   lines.push(`- 优先页面回填表：\`${path.relative(ROOT, report.files.priorityCsv)}\``);
   lines.push(`- 曝光执行包：\`data/marketing/exposure-pack-${report.date_key}.json\``);
   lines.push(`- 员工回填表：\`data/marketing/sales-growth-scorecard-${report.date_key}.csv\``);
-  lines.push("");
   return `${lines.join("\n")}\n`;
 }
 
