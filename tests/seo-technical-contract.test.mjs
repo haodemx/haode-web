@@ -20,6 +20,15 @@ function jsonLdBlocks(html) {
     .map((match) => JSON.parse(match[1].trim()));
 }
 
+function htmlFiles(directory, files = []) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) htmlFiles(target, files);
+    else if (entry.name === 'index.html') files.push(target);
+  }
+  return files;
+}
+
 test('sitemap keeps canonical static SEO pages and excludes redirect aliases', () => {
   const locs = sitemapLocs();
   const required = [
@@ -133,6 +142,51 @@ test('redirect aliases are noindex and point to canonical pages', () => {
   assert.match(micaCategoryAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/micas\.html" \/>/);
   assert.match(foldableAlias, /<meta name="robots" content="noindex,follow" \/>/);
   assert.match(foldableAlias, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/producto\/samsung-original-z-flip3\/" \/>/);
+});
+
+test('product routes with another canonical target stay noindex', () => {
+  const productDir = path.join(ROOT, 'producto');
+  const indexableAliases = [];
+
+  for (const slug of fs.readdirSync(productDir)) {
+    const relativePath = `producto/${slug}/index.html`;
+    const file = path.join(ROOT, relativePath);
+    if (!fs.existsSync(file)) continue;
+
+    const html = fs.readFileSync(file, 'utf8');
+    const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)/i)?.[1];
+    const self = `${SITE_URL}/producto/${slug}/`;
+    const robots = html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)/i)?.[1] || '';
+
+    if (canonical && canonical !== self && !/noindex/i.test(robots)) {
+      indexableAliases.push(relativePath);
+    }
+  }
+
+  assert.deepEqual(indexableAliases, []);
+});
+
+test('indexable pages do not link to noindex internal routes', () => {
+  const files = htmlFiles(ROOT);
+  const noindexPaths = new Set(files
+    .filter((file) => /<meta\s+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(fs.readFileSync(file, 'utf8')))
+    .map((file) => `/${path.relative(ROOT, file).replace(/\\/g, '/').replace(/\/index\.html$/, '')}`));
+  const badLinks = [];
+
+  for (const file of files) {
+    const html = fs.readFileSync(file, 'utf8');
+    if (/<meta\s+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) continue;
+    const source = `/${path.relative(ROOT, file).replace(/\\/g, '/').replace(/\/index\.html$/, '')}`;
+    const links = [...html.matchAll(/href=["'](?:https:\/\/haode\.com\.mx)?([^"'#?]+)["']/gi)]
+      .map((match) => match[1].replace(/\/$/, ''))
+      .filter((href) => href.startsWith('/') && href !== source);
+
+    for (const href of links) {
+      if (noindexPaths.has(href)) badLinks.push(`${source} -> ${href}`);
+    }
+  }
+
+  assert.deepEqual(badLinks, []);
 });
 
 test('product SEO titles distinguish screen quality and static H1 text is crawlable', () => {
