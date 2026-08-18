@@ -2746,6 +2746,42 @@ function renderProductDetailPage() {
     }
   }
 
+  if (!page.querySelector('[data-detail-purchase-guide]')) {
+    const category = CATEGORY_META[product.category];
+    const guide = document.createElement('section');
+    guide.className = 'detail-purchase-guide';
+    guide.setAttribute('data-detail-purchase-guide', '');
+    guide.setAttribute('aria-labelledby', 'detail-purchase-guide-title');
+
+    const heading = document.createElement('h2');
+    heading.id = 'detail-purchase-guide-title';
+    heading.textContent = `Cómo cotizar ${product.name} para mayoreo`;
+
+    const intro = document.createElement('p');
+    intro.textContent = `Esta página sirve como referencia para ${product.name}. Antes de preparar un pedido, comparte por WhatsApp el modelo exacto, la calidad publicada (${product.quality || 'por confirmar'}) y la cantidad que necesitas.`;
+
+    const steps = document.createElement('ol');
+    [
+      'Confirma el modelo y la versión del equipo antes de solicitar una cotización.',
+      'Indica la cantidad y la ciudad para recibir una atención comercial adecuada.',
+      'Verifica disponibilidad, precio vigente y compatibilidad antes de cerrar el pedido.'
+    ].forEach((text) => {
+      const item = document.createElement('li');
+      item.textContent = text;
+      steps.appendChild(item);
+    });
+
+    const categoryLink = document.createElement('a');
+    categoryLink.className = 'detail-purchase-guide-link';
+    categoryLink.href = buildSiteUrl(`categoria/${encodeURIComponent(product.category)}/`);
+    categoryLink.textContent = `Ver más opciones de ${category?.title || 'esta categoría'}`;
+
+    guide.append(heading, intro, steps, categoryLink);
+    const relatedSection = page.querySelector('.detail-related-section');
+    if (relatedSection) relatedSection.insertAdjacentElement('beforebegin', guide);
+    else page.appendChild(guide);
+  }
+
   if (!page.querySelector('[data-detail-conversion]')) {
     const conversion = document.createElement('aside');
     conversion.className = 'reference-conversion-panel detail-conversion-panel';

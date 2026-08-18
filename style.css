@@ -7235,6 +7235,38 @@ body.product-detail-page .detail-description {
   line-height: 1.7;
 }
 
+body.product-detail-page .detail-purchase-guide {
+  margin-top: 22px;
+  padding: 22px;
+  border: 1px solid rgba(32, 27, 21, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+body.product-detail-page .detail-purchase-guide h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+body.product-detail-page .detail-purchase-guide p,
+body.product-detail-page .detail-purchase-guide ol {
+  margin: 0;
+  color: #6a6157;
+  line-height: 1.7;
+}
+
+body.product-detail-page .detail-purchase-guide ol {
+  margin-top: 12px;
+  padding-left: 22px;
+}
+
+body.product-detail-page .detail-purchase-guide-link {
+  display: inline-flex;
+  margin-top: 14px;
+  color: #b75b0a;
+  font-weight: 800;
+}
+
 body.product-detail-page .detail-card {
   display: flex;
   flex-direction: column;
