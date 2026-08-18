@@ -136,6 +136,7 @@ test('redirect aliases are noindex and point to canonical pages', () => {
 test('product SEO titles distinguish screen quality and static H1 text is crawlable', () => {
   const locs = sitemapLocs().filter((url) => url.startsWith(`${SITE_URL}/producto/`));
   const titles = new Map();
+  const h1s = new Map();
 
   for (const url of locs) {
     const slug = new URL(url).pathname.split('/').filter(Boolean).at(-1);
@@ -143,14 +144,21 @@ test('product SEO titles distinguish screen quality and static H1 text is crawla
     const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
     const h1 = html.match(/<h1\b[^>]*data-detail-title[^>]*>([^<]+)<\/h1>/i)?.[1]?.trim();
     assert.ok(title, `missing product title: ${slug}`);
-    assert.notEqual(h1, 'Producto HAODE México', `generic product H1: ${slug}`);
+    if (h1) assert.notEqual(h1, 'Producto HAODE México', `generic product H1: ${slug}`);
     const duplicates = titles.get(title) || [];
     duplicates.push(slug);
     titles.set(title, duplicates);
+    if (h1) {
+      const h1Duplicates = h1s.get(h1) || [];
+      h1Duplicates.push(slug);
+      h1s.set(h1, h1Duplicates);
+    }
   }
 
   const duplicateTitles = [...titles].filter(([, slugs]) => slugs.length > 1);
+  const duplicateH1s = [...h1s].filter(([, slugs]) => slugs.length > 1);
   assert.deepEqual(duplicateTitles, []);
+  assert.deepEqual(duplicateH1s, []);
 });
 
 test('legacy product redirects do not use root-relative producto.html paths', () => {

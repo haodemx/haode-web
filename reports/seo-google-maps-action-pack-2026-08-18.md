@@ -11,7 +11,7 @@
 | --- | --- | ---: | --- |
 | P0 | 同型號、不同技術的產品頁共用 H1 | 25 組 | 讓 H1 清楚包含 INCELL、OLED、Soft OLED 或 TIPO ORIGINAL；不改產品型號、價格或相容性。 |
 | P0 | Samsung INCELL 產品頁可讀正文過薄（少於 250 字元） | 9 頁 | 依同一份經確認的產品資料補上「型號、技術、訂購確認方式」；不自行加入規格、庫存、保固或送達承諾。 |
-| P1 | 主入口頁覆蓋不完整 | 2 個入口待新增／確認 | 補建 Samsung OLED 與 Samsung 折疊屏主入口；現有 iPhone INCELL、iPhone OLED、Samsung INCELL、Micas 入口保留並強化內鏈。 |
+| P1 | 主入口頁覆蓋不完整 | 1 個入口待新增 | 補建 Samsung OLED 主入口；折疊屏、iPhone INCELL、iPhone OLED、Samsung INCELL、Micas 入口已存在，下一輪強化內鏈。 |
 | P1 | 品牌實體訊號不一致風險 | 全站模板範圍 | 重要頁固定使用「HAODE México · Pantallas y Refacciones para Celular · CDMX」作為品牌描述，不把它冒充為 Google 商家正式名稱。 |
 | P2 | 月度追蹤缺少單一可執行表 | 1 份 | 以 Search Console、GA4、GBP Insights 的實際數據追蹤，不以預估或零值補空。 |
 
@@ -26,7 +26,7 @@
 - canonical 與 sitemap URL 不同：0
 - 重複 title：0
 - 重複 meta description：0
-- 重複 H1：25 組
+- 重複 H1：0（本輪已修正原先的 25 組）
 - 內容少於 250 字元：9 頁
 
 ### 需先修的 9 個過薄頁
@@ -41,7 +41,7 @@
 - `/producto/samsung-incell-s24/`
 - `/producto/samsung-incell-s24-plus/`
 
-### H1 修正規則
+### H1 修正規則（已套用）
 
 目前重複最集中的情形是同一機型同時有 INCELL、OLED 或 TIPO ORIGINAL 頁面，H1 卻只有「Pantalla para [modelo]」。實作時採以下可審核格式：
 
@@ -70,14 +70,13 @@
 | 意圖 | 建議 slug | 主標題草案（ES） | 內鏈目標 |
 | --- | --- | --- | --- |
 | Samsung OLED | `/pantallas-samsung-oled-mayoreo-mexico/` | `Pantallas Samsung OLED para mayoreo en México` | Samsung INCELL、Samsung general、對應產品頁、採購指南 |
-| Samsung 折疊屏 | `/pantallas-samsung-plegables-mayoreo-mexico/` | `Pantallas Samsung Z Flip y Z Fold para compra profesional` | Samsung general、Z Flip／Z Fold 產品頁、採購指南 |
 
 每個入口頁只服務一個採購意圖：型號／技術、數量、城市與報價確認。避免在 title、H1、FAQ 同時反覆堆砌「pantalla iPhone」。
 
 ## 4. 內容與內鏈實作順序
 
 1. 先完成 9 頁內容與 25 組 H1 區分。
-2. 建立 Samsung OLED、Samsung 折疊屏兩個入口頁；各頁含可讀的選型說明、FAQ、JSON-LD FAQPage 與 canonical。
+2. 建立 Samsung OLED 入口頁；既有 Samsung 折疊屏入口補充與 Samsung general、產品頁、採購指南的內鏈。
 3. 新增兩篇採購內容：`INCELL vs OLED: cómo elegir para taller`、`Cómo cotizar pantallas por mayoreo desde CDMX`。比較內容只能使用經確認的技術差異；不能推導某款產品的規格或品質。
 4. 從首頁、品類頁、產品頁建立三向連結：主入口 → 技術入口 → 產品頁；產品頁 → 技術入口 → 選型指南。
 5. 圖片 alt 以「產品／技術／型號」為主，避免用價格、庫存或未證實的宣傳語；維持既有圖片，不替換未確認素材。
