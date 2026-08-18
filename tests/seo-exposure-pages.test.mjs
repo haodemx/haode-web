@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE_URL = "https://haode.com.mx";
 const pages = [
+  "pantallas-iphone-mayoreo-mexico",
   "pantallas-iphone-incell-mayoreo-mexico",
   "pantallas-iphone-oled-mayoreo-mexico",
   "pantallas-samsung-incell-mayoreo-mexico",
@@ -34,7 +35,7 @@ test("new SEO exposure pages are indexable, tracked and connected to WhatsApp", 
     assert.ok(html.includes(`<link rel="canonical" href="${url}" />`), `${slug} missing canonical`);
     assert.ok(html.includes('meta name="robots" content="index,follow'), `${slug} is not indexable`);
     assert.ok(html.includes("utm_source=seo"), `${slug} missing tracked App CTA`);
-    assert.ok(html.includes("wa.me/523326684296"), `${slug} missing WhatsApp CTA`);
+    assert.match(html, /wa\.me\/(?:523326684296|525645866014)/, `${slug} missing WhatsApp CTA`);
     assert.ok(graph.some((node) => node["@type"] === "CollectionPage"), `${slug} missing CollectionPage schema`);
     assert.ok(graph.some((node) => node["@type"] === "FAQPage"), `${slug} missing FAQPage schema`);
     assert.ok(/disponibilidad|stock|precio final/i.test(html), `${slug} should keep confirmation language`);

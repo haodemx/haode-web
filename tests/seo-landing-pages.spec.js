@@ -62,9 +62,20 @@ test("Samsung wholesale landing page separates approved quality lines", async ({
   await expect(page.getByRole("link", { name: "Ver celulares Samsung" })).toHaveAttribute("href", "/categoria/celulares-samsung/");
 });
 
+test("iPhone wholesale landing page separates INCELL and OLED quote paths", async ({ page }) => {
+  await page.goto(`${BASE_URL}/pantallas-iphone-mayoreo-mexico/`, { waitUntil: "domcontentloaded" });
+
+  await expect(page.getByRole("heading", { name: /Pantallas iPhone de mayoreo/i })).toBeVisible();
+  await expect(page.locator("body")).toContainText("INCELL");
+  await expect(page.locator("body")).toContainText("OLED");
+  await expect(page.getByRole("link", { name: /Ver ruta/i }).first()).toHaveAttribute("href", "/pantallas-iphone-incell-mayoreo-mexico/");
+  await expect(page.locator('[data-reference-conversion] a[href*="wa.me"]')).toBeVisible();
+});
+
 test("SEO conversion pages keep mobile layout inside viewport", async ({ page }) => {
   const paths = [
     "/pantallas-iphone-11-xr-mayoreo/",
+    "/pantallas-iphone-mayoreo-mexico/",
     "/pantallas-iphone-incell-mayoreo-mexico/",
     "/pantallas-iphone-oled-mayoreo-mexico/",
     "/pantallas-premium-iphone-samsung-fabrica/",

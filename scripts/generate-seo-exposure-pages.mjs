@@ -7,6 +7,29 @@ const WHATSAPP = "523326684296";
 
 const pages = [
   {
+    slug: "pantallas-iphone-mayoreo-mexico",
+    title: "Pantallas iPhone de mayoreo en Mexico | HAODE",
+    meta: "Pantallas iPhone de mayoreo en Mexico para técnicos y talleres. Encuentra opciones INCELL y OLED, confirma modelo, cantidad, disponibilidad y precio por WhatsApp con HAODE.",
+    ogImage: "/assets/products/iphone-oled/main.jpg",
+    kicker: "Todo en iPhone",
+    h1: "Pantallas iPhone de mayoreo",
+    hero: "Entrada única para clientes que compran pantallas iPhone al por mayor. Separa calidad (INCELL u OLED), modelo y cantidad para una cotización más rápida.",
+    campaign: "iphone_mayoreo",
+    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=iphone_mayoreo&utm_content=landing_cta#categoria/Pantallas%20iPhone",
+    whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas iPhone.\nModelos:\nCalidad (INCELL u OLED):\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, precio por cantidad y envio?",
+    proof: ["iPhone de mayor rotación", "INCELL y OLED", "Cotización por WhatsApp"],
+    cards: [
+      ["iPhone INCELL", "Si buscas volumen por precio y modelo estándar, entra a la línea dedicada.", "/pantallas-iphone-incell-mayoreo-mexico/"],
+      ["iPhone OLED", "Para modelos Pro o Pro Max, revisa la línea OLED.", "/pantallas-iphone-oled-mayoreo-mexico/"],
+      ["iPhone por modelo", "Consulta modelos exactos en la app y pide lista completa.", "/app/#lista"]
+    ],
+    faq: [
+      ["¿Qué calidad de pantallas iPhone tienen?", "HAODE organiza la oferta en líneas iPhone INCELL y iPhone OLED. La disponibilidad y calidad se validan por WhatsApp con el cliente antes del pedido."],
+      ["¿Cómo cotizo varios modelos?", "Envía modelo, calidad, cantidad y ciudad en una sola lista. Así se valida rápido disponibilidad y precio por volumen."],
+      ["¿La pagina confirma stock exacto?", "No. La página ayuda a elegir línea y ordenar la consulta. El stock y precio final se confirman por WhatsApp antes de cerrar la compra."]
+    ]
+  },
+  {
     slug: "pantallas-iphone-incell-mayoreo-mexico",
     title: "Pantallas iPhone INCELL de mayoreo en Mexico | HAODE",
     meta: "Pantallas iPhone INCELL de mayoreo en Mexico para tecnicos y talleres. Confirma modelo, cantidad, disponibilidad y precio por WhatsApp con HAODE.",
