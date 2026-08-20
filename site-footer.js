@@ -24,7 +24,7 @@
           <strong>HAODE</strong>
           <span>REFACCIONES PARA CELULAR</span>
         </a>
-        <p>Fábrica directa para técnicos, talleres y distribuidores en México.</p>
+        <p>Tienda oficial de fábrica HL para técnicos, talleres y distribuidores en México.</p>
         <div class="site-sales-footer-proof" aria-label="Ventajas HAODE">
           <span>Stock en México bajo confirmación</span>
           <span>Garantía local</span>
@@ -43,6 +43,7 @@
         <p>Atención</p>
         <a href="/garantia/">Garantía local</a>
         <a href="/contacto/">Contacto</a>
+        <a href="/tienda-oficial-hl-cdmx/">Tienda oficial HL CDMX</a>
         <a href="/distribuidores/">Distribuidores</a>
         <a href="/refacciones-celulares-mayoreo-mexico/">Mayoreo México</a>
       </nav>
@@ -64,7 +65,7 @@
     </div>
     <div class="site-sales-footer-bottom">
       <div class="wrap">
-        <span>HAODE México</span>
+        <span>HAODE México · Tienda oficial de fábrica HL</span>
         <span>Inventario y condiciones sujetos a confirmación.</span>
       </div>
     </div>
