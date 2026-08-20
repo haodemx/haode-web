@@ -14019,3 +14019,220 @@ body.home-page-reference .reference-btn-whatsapp {
   border-color: var(--ref-action-green);
   background: var(--ref-action-green);
 }
+
+/* HAODE México + HL brand relationship and official CDMX store route. */
+.home-hl-brand-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  padding: 28px 32px;
+  border: 1px solid rgba(255, 106, 0, 0.2);
+  border-radius: 22px;
+  background: linear-gradient(120deg, #fff7ee 0%, #ffffff 58%, #f1fff7 100%);
+  box-shadow: 0 18px 45px rgba(46, 32, 16, 0.08);
+}
+
+.home-hl-brand-band h2,
+.home-hl-brand-band p {
+  margin: 0;
+}
+
+.home-hl-brand-band h2 {
+  margin-bottom: 8px;
+  color: #20180f;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+}
+
+.home-hl-brand-band > div > p:last-child {
+  max-width: 760px;
+  color: #5c5145;
+  line-height: 1.65;
+}
+
+.store-location-hero {
+  padding: 56px 0 44px;
+  background: linear-gradient(135deg, #fff7ee 0%, #ffffff 55%, #effcf5 100%);
+}
+
+.store-location-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 70px);
+}
+
+.store-location-hero h1 {
+  max-width: 800px;
+  margin: 8px 0 18px;
+  color: #20180f;
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.store-location-hero .hero-text {
+  max-width: 760px;
+  color: #5d5146;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.store-brand-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.store-brand-facts span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid #eadfd3;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.store-brand-facts strong {
+  color: #ee6507;
+  font-size: 1.05rem;
+}
+
+.store-brand-facts small {
+  color: #675b4f;
+}
+
+.store-location-poster {
+  max-width: 410px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 8px solid #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(34, 27, 20, 0.2);
+}
+
+.store-location-poster img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+.store-route-shell,
+.store-visit-grid {
+  border-radius: 24px;
+}
+
+.store-route-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(320px, 1.3fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.store-route-grid video {
+  display: block;
+  width: min(100%, 390px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: #17120e;
+  box-shadow: 0 20px 45px rgba(34, 27, 20, 0.2);
+}
+
+.store-route-steps {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: store-route;
+}
+
+.store-route-steps li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 76px;
+  padding: 16px 18px 16px 76px;
+  border: 1px solid #eadfd3;
+  border-radius: 18px;
+  background: #ffffff;
+  counter-increment: store-route;
+}
+
+.store-route-steps li::before {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ff6a00;
+  color: #ffffff;
+  font-weight: 800;
+  content: counter(store-route);
+}
+
+.store-route-steps strong {
+  color: #241b14;
+  font-size: 1.05rem;
+}
+
+.store-route-steps span {
+  color: #6c6055;
+  line-height: 1.5;
+}
+
+.store-visit-section {
+  background: #fff8f1;
+}
+
+.store-visit-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(320px, 1.2fr);
+  gap: 24px;
+}
+
+.store-visit-grid .contact-card {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .home-hl-brand-band {
+    align-items: stretch;
+    flex-direction: column;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 22px;
+  }
+
+  .home-hl-brand-band .reference-btn {
+    width: 100%;
+  }
+
+  .store-location-hero-grid,
+  .store-route-grid,
+  .store-visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .store-location-hero {
+    padding-top: 32px;
+  }
+
+  .store-brand-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .store-location-poster {
+    max-width: 320px;
+  }
+}

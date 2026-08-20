@@ -8,6 +8,7 @@ const PUBLIC_DIRS = new Set([
   'app',
   'categoria',
   'contacto',
+  'tienda-oficial-hl-cdmx',
   'distribuidores',
   'fundas-celular-mayoreo-mexico',
   'garantia',
@@ -31,6 +32,7 @@ const REQUIRED_SITEMAP_URLS = [
   `${SITE_URL}/micas.html`,
   `${SITE_URL}/garantia/`,
   `${SITE_URL}/contacto/`,
+  `${SITE_URL}/tienda-oficial-hl-cdmx/`,
   `${SITE_URL}/distribuidores/`,
   `${SITE_URL}/fundas-celular-mayoreo-mexico/`,
   `${SITE_URL}/guia-ia-haode-mexico/`,
@@ -53,6 +55,7 @@ const REQUIRED_GEO_FAQ_PAGES = [
   'categoria/fundas/index.html',
   'productos-ai/index.html',
   'contacto/index.html',
+  'tienda-oficial-hl-cdmx/index.html',
   'distribuidores/index.html',
 ];
 const KEY_REPORTS = [

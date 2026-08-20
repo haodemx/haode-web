@@ -67,6 +67,7 @@ test('core GEO landing pages expose visible FAQ and FAQPage schema', () => {
     'categoria/fundas/index.html',
     'productos-ai/index.html',
     'contacto/index.html',
+    'tienda-oficial-hl-cdmx/index.html',
     'distribuidores/index.html',
   ];
 
@@ -95,6 +96,7 @@ test('llms.txt maps high-intent GEO searches to canonical HAODE pages', () => {
     '/categoria/fundas/',
     '/productos-ai/',
     '/distribuidores/',
+    '/tienda-oficial-hl-cdmx/',
   ];
 
   assert.match(llms, /Intenciones de busqueda recomendadas/);

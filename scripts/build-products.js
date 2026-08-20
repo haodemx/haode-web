@@ -27,6 +27,7 @@ const STATIC_SEO_URLS = [
   '/micas.html',
   '/garantia/',
   '/contacto/',
+  '/tienda-oficial-hl-cdmx/',
   '/privacidad/',
   '/eliminacion-de-datos/',
   '/terminos/',
