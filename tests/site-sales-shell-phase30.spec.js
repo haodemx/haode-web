@@ -27,7 +27,7 @@ test.describe('HAODE public sales shell phase 30', () => {
 
       const footer = page.locator('[data-site-sales-footer]');
       await expect(footer).toBeVisible();
-      await expect(footer).toContainText('Fábrica directa');
+      await expect(footer).toContainText('Tienda oficial de fábrica HL');
       await expect(footer).toContainText('Garantía local');
       await expect(footer.locator('a[href*="wa.me"]')).toBeVisible();
       await expect(footer.locator('a[href="/app/"]')).toBeVisible();

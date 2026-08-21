@@ -58,9 +58,12 @@
     try {
       const current = new URL(global.location.href);
       const safe = new URL(current.pathname, current.origin);
+      const source = String(current.searchParams.get("utm_source") || "").toLowerCase();
+      if (source === "haode_website" || source === "haode_app") return safe.toString();
       for (const key of SAFE_ANALYTICS_QUERY_KEYS) {
-        const value = current.searchParams.get(key);
+        let value = current.searchParams.get(key);
         if (!value || isSensitiveQueryValue(value)) continue;
+        if (key === "utm_medium" && value.toLowerCase() === "organic_social") value = "social";
         safe.searchParams.set(key, value.slice(0, 160));
       }
       return safe.toString();

@@ -59,7 +59,7 @@ test('desktop navigation hover stays light with readable contrast', async ({ pag
   await page.setViewportSize({ width: 2048, height: 1139 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
 
-  const link = page.locator('.reference-nav a[href="/productos/#pantallas"]');
+  const link = page.locator('.reference-nav a[href="/app/#lista"]');
   await link.hover();
   const state = await link.evaluate((element) => {
     const parseRgb = (value) => (value.match(/[\d.]+/g) || []).slice(0, 3).map(Number);

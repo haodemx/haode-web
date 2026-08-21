@@ -35,7 +35,8 @@ test('GEO guide exposes official HAODE facts for AI search', () => {
   assert.ok(llms.includes(GEO_URL));
 
   assert.ok(guide.includes('<link rel="canonical" href="https://haode.com.mx/guia-ia-haode-mexico/" />'));
-  assert.ok(guide.includes('<link rel="alternate" type="text/plain" href="/llms.txt"'));
+  assert.ok(guide.includes('<link rel="describedby" type="text/markdown" href="/llms.txt"'));
+  assert.ok(guide.includes('<link rel="alternate" type="text/markdown" href="/guia-ia-haode-mexico/index.md"'));
   assert.match(guide, /No inventar stock/);
   assert.match(guide, /cotización por WhatsApp/);
   assert.match(guide, /HAODE México/);
@@ -56,7 +57,8 @@ test('GEO route is connected to homepage, sitemap and quality scripts', () => {
   const buildProducts = read('scripts/build-products.js');
   const qualityCheck = read('scripts/haode-quality-check.js');
 
-  assert.ok(home.includes('<link rel="alternate" type="text/plain" href="/llms.txt"'));
+  assert.ok(home.includes('<link rel="describedby" type="text/markdown" href="/llms.txt"'));
+  assert.ok(home.includes('<link rel="alternate" type="text/markdown" href="/index.md"'));
   assert.ok(home.includes('/guia-ia-haode-mexico/'));
   assert.ok(sitemap.includes(GEO_URL));
   assert.ok(buildProducts.includes("'/guia-ia-haode-mexico/'"));
@@ -112,5 +114,33 @@ test('llms.txt maps high-intent GEO searches to canonical HAODE pages', () => {
   assert.match(llms, /Intenciones de busqueda recomendadas/);
   for (const route of routes) {
     assert.ok(llms.includes(`https://haode.com.mx${route}`), `missing llms route: ${route}`);
+  }
+});
+
+test('llms.txt follows the v2 discovery format and links to concise markdown sources', () => {
+  const llms = read('llms.txt');
+  const lines = llms.split(/\r?\n/);
+  const firstContentLine = lines.findIndex((line) => line.trim());
+  const summaryLine = lines.findIndex((line, index) => index > firstContentLine && line.trim());
+  const fileListLines = lines.filter((line) => line.startsWith('- ['));
+
+  assert.equal(lines[firstContentLine], '# HAODE Mexico');
+  assert.match(lines[summaryLine], /^> /);
+  assert.ok(fileListLines.length >= 8, 'expected curated markdown file links');
+  for (const line of fileListLines) {
+    assert.match(line, /^- \[[^\]]+\]\(https:\/\/haode\.com\.mx\/[^)]+\)(?:: .+)?$/);
+  }
+
+  for (const markdownPath of [
+    'index.md',
+    'productos/index.md',
+    'contacto/index.md',
+    'garantia/index.md',
+    'tienda-oficial-hl-cdmx/index.md',
+    'guia-ia-haode-mexico/index.md',
+  ]) {
+    const markdown = read(markdownPath);
+    assert.match(markdown, /^# /);
+    assert.match(markdown, /HAODE/);
   }
 });
