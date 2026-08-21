@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-08-13-ga4-conversions";
+const CACHE_VERSION = "haode-pwa-v2026-08-21-seo-index-strengthening";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 

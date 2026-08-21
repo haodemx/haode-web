@@ -1966,6 +1966,7 @@ function parseRoute() {
 }
 
 function resetRouteScroll() {
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   window.requestAnimationFrame(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   });

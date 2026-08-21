@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import test from 'node:test';
 
 const read = (relativePath) => fs.readFileSync(new URL(`../${relativePath}`, import.meta.url), 'utf8');
-const RELEASE_DATE = '2026-08-13';
+const HOMEPAGE_RELEASE_DATE = '2026-08-20';
+const SEO_STRENGTHENING_RELEASE_DATE = '2026-08-21';
 
 function sitemapLastmod(url) {
   const sitemap = read('sitemap.xml');
@@ -12,10 +13,10 @@ function sitemapLastmod(url) {
   return match?.[1] || '';
 }
 
-test('sitemap reflects the final UI and product-detail release date', () => {
-  assert.equal(sitemapLastmod('https://haode.com.mx/'), RELEASE_DATE);
-  assert.equal(sitemapLastmod('https://haode.com.mx/app/'), RELEASE_DATE);
-  assert.equal(sitemapLastmod('https://haode.com.mx/producto/iphone-incell-14/'), RELEASE_DATE);
+test('sitemap reflects the current homepage and SEO-strengthening release dates', () => {
+  assert.equal(sitemapLastmod('https://haode.com.mx/'), HOMEPAGE_RELEASE_DATE);
+  assert.equal(sitemapLastmod('https://haode.com.mx/app/'), SEO_STRENGTHENING_RELEASE_DATE);
+  assert.equal(sitemapLastmod('https://haode.com.mx/producto/iphone-incell-14/'), SEO_STRENGTHENING_RELEASE_DATE);
 });
 
 test('service worker treats the product renderer as a fresh application resource', () => {
