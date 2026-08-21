@@ -5,6 +5,8 @@ import vm from 'node:vm';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
+import { buildExposurePack } from '../scripts/generate-exposure-pack.mjs';
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
 const CHANGE_DATE = '2026-08-21';
@@ -111,6 +113,52 @@ test('hydrogel micas and AI glasses are directly discoverable as priority produc
   assert.match(llms, /Gafas inteligentes AI.+categoria\/gafas-inteligentes-ai\//i);
   assert.match(micas, /<h1>Micas de hidrogel para tiendas y técnicos<\/h1>/);
   assert.match(glasses, /<h1>Gafas inteligentes AI de mayoreo<\/h1>/);
+});
+
+test('priority landing pages expose every published canonical product route', () => {
+  const micas = read('micas-hidrogel-mayoreo-mexico/index.html');
+  const glasses = read('categoria/gafas-inteligentes-ai/index.html');
+  const micaRoutes = [
+    '/producto/mica-hd/',
+    '/producto/mica-matte/',
+    '/producto/mica-privacidad-hd/',
+    '/producto/mica-privacidad-matte/',
+    '/producto/x200t-cortadora-micas/',
+  ];
+  const glassesRoutes = [
+    '/ai-smart-glasses-s1.html',
+    '/ai-smart-glasses-aimb-g3.html',
+    '/ai-smart-glasses-aimb-g5.html',
+    '/ai-smart-glasses-w610.html',
+    '/ai-smart-glasses-w630.html',
+  ];
+
+  for (const route of micaRoutes) assert.match(micas, new RegExp(`href=["']${route}["']`));
+  for (const route of glassesRoutes) assert.match(glasses, new RegExp(`href=["']${route}["']`));
+
+  const micaNodes = jsonLdBlocks(micas).flatMap((block) => block['@graph'] || [block]);
+  const glassesNodes = jsonLdBlocks(glasses).flatMap((block) => block['@graph'] || [block]);
+  assert.equal(micaNodes.find((node) => node['@type'] === 'ItemList')?.numberOfItems, 5);
+  assert.equal(glassesNodes.find((node) => node['@type'] === 'CollectionPage')?.mainEntity?.itemListElement?.length, 5);
+  assert.match(micas, /id="guia-hidrogel"/);
+  assert.match(glasses, /id="guia-gafas-ai"/);
+});
+
+test('14-day exposure plan gives hydrogel micas and AI glasses two priority touches', () => {
+  const pack = buildExposurePack('20260821');
+  const micaItems = pack.items.filter((item) => item.url === `${SITE_URL}/micas-hidrogel-mayoreo-mexico/`);
+  const glassesItems = pack.items.filter((item) => item.url === `${SITE_URL}/categoria/gafas-inteligentes-ai/`);
+
+  assert.equal(micaItems.length, 2);
+  assert.equal(glassesItems.length, 2);
+  assert.ok(micaItems.some((item) => item.channels.includes('google_business')));
+  assert.ok(micaItems.some((item) => item.channels.includes('tiktok')));
+  assert.ok(glassesItems.some((item) => item.channels.includes('tiktok')));
+  assert.ok(glassesItems.some((item) => item.channels.includes('google_business')));
+  for (const item of [...micaItems, ...glassesItems]) {
+    assert.ok(fs.existsSync(path.join(ROOT, item.media_asset.path)), `missing media: ${item.media_asset.path}`);
+    assert.match(item.whatsapp, /confirma|confirmaci[oó]n/i);
+  }
 });
 
 test('changed canonical URLs publish the current lastmod date', () => {

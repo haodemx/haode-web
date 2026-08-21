@@ -63,10 +63,10 @@ test("keeps app hash routes when adding tracking parameters", () => {
 
 test("builds a 14-day organic launch pack with tracked App and SEO landing links", () => {
   const pack = buildExposurePack("20260725");
-  assert.equal(pack.items.length, 15);
+  assert.equal(pack.items.length, 17);
   assert.equal(pack.items[0].publish_date, "2026-07-25");
   assert.equal(pack.items.at(-1).publish_date, "2026-08-07");
-  assert.equal(new Set(pack.items.map((item) => item.campaign)).size, 15);
+  assert.equal(new Set(pack.items.map((item) => item.campaign)).size, 17);
   assert.equal(
     pack.execution_rows.length,
     pack.items.reduce((total, item) => total + item.channels.length, 0)

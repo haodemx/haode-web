@@ -114,7 +114,7 @@ const campaignItems = [
     media: "assets/products/cut-machine/x200t/main.jpg",
     headline: "Micas de hidrogel para tiendas y técnicos",
     caption: "Micas de hidrogel HAODE para tiendas, técnicos y distribuidores. Consulta el producto publicado y confirma cantidad, ciudad y condiciones por WhatsApp.",
-    whatsapp: "Este post es para consultas de micas de hidrogel. Pide producto, cantidad y ciudad para dar seguimiento."
+    whatsapp: "Este post es para consultas de micas de hidrogel. Pide producto, cantidad y ciudad, y confirma disponibilidad antes de cotizar."
   },
   {
     day: 5,
@@ -194,6 +194,17 @@ const campaignItems = [
     whatsapp: "Publica solo imagen confirmada de iPhone OLED. Pide modelo exacto, calidad, cantidad y ciudad."
   },
   {
+    day: 11,
+    focus: "Micas de hidrogel",
+    sku: "micas_hidrogel_catalogo",
+    url: "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/",
+    channels: ["instagram", "tiktok", "whatsapp"],
+    media: "assets/products/micas/hd/main.png",
+    headline: "Elige tu mica de hidrogel por acabado",
+    caption: "Revisa las fichas publicadas de MICA HD, MATTE y PRIVACIDAD HAODE. Envía producto, cantidad y ciudad para confirmar disponibilidad, precio final y envío.",
+    whatsapp: "Segunda publicación de micas: dirige a la guía y pide producto, cantidad y ciudad. No anuncies stock ni precio sin confirmación."
+  },
+  {
     day: 12,
     focus: "iPhone 11 y XR",
     sku: "iphone_11_xr_mayoreo",
@@ -203,6 +214,17 @@ const campaignItems = [
     headline: "Pantallas iPhone 11 y XR para mayoreo",
     caption: "Compara iPhone 11 y XR por versión y cantidad en HAODE México. Confirma modelo, versión, disponibilidad y envío por WhatsApp.",
     whatsapp: "Usa la página dedicada para no confundir versión estándar y Bolsa Protectora."
+  },
+  {
+    day: 12,
+    focus: "Gafas inteligentes AI",
+    sku: "gafas_ai_modelos_publicados",
+    url: "https://haode.com.mx/categoria/gafas-inteligentes-ai/",
+    channels: ["google_business", "facebook", "instagram", "whatsapp"],
+    media: "assets/products/productos-ai/w610-ai-smart-glasses/main.jpg",
+    headline: "Compara los modelos publicados de gafas AI",
+    caption: "Consulta S1, AIMB-G3, AIMB-G5, W610 y W630 en la categoría de gafas inteligentes AI HAODE. Confirma versión, funciones, cantidad y ciudad por WhatsApp.",
+    whatsapp: "Segunda publicación de gafas AI: usa solo la foto W610 confirmada y dirige a la categoría. Confirma versión y funciones antes de cotizar."
   },
   {
     day: 13,
@@ -354,7 +376,7 @@ function renderMarkdown(pack) {
     "",
     "## 结论",
     "",
-    `本包共 ${pack.items.length} 天、${pack.execution_rows.length} 个渠道任务，用于员工手动发布，不会自动发 Facebook、TikTok、Instagram、Google Business 或 WhatsApp。所有链接都带 UTM，客户进入 App 后下单或打开 WhatsApp 时会保留来源参考。`,
+    `本包共 ${new Set(pack.items.map((item) => item.day)).size} 天、${pack.items.length} 个内容主题、${pack.execution_rows.length} 个渠道任务，用于员工手动发布，不会自动发 Facebook、TikTok、Instagram、Google Business 或 WhatsApp。所有链接都带 UTM，客户进入 App 后下单或打开 WhatsApp 时会保留来源参考。`,
     "",
     "## 使用规则",
     "",

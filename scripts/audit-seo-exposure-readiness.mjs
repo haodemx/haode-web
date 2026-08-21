@@ -282,7 +282,7 @@ function renderMarkdown(report) {
     `- 已进入曝光包：${covered} 个。`,
     `- P0 缺口：${p0Failures.length} 个。`,
     `- P1 缺口：${p1Failures.length} 个。`,
-    `- 14 天任务：${report.exposure_pack.items} 天，${report.exposure_pack.execution_rows} 条渠道任务。`,
+    `- 14 天任务：${report.exposure_pack.items} 个内容主题，${report.exposure_pack.execution_rows} 条渠道任务。`,
     "",
     "| 优先级 | 页面 | 页面 | Sitemap | 追踪 | 曝光包 | 问题 |",
     "| --- | --- | --- | --- | --- | --- | --- |"
