@@ -22,6 +22,7 @@ const STATIC_SEO_URLS = [
   '/',
   '/app/',
   '/productos/',
+  '/catalogo-modelos/',
   '/productos-ai/',
   '/ai-productos.html',
   '/micas.html',
@@ -826,6 +827,11 @@ function main() {
   writeReport(reports, workbookPath);
   writeSeriesCheckReport(reports, workbookPath);
   writeSeoFiles(products);
+  const directoryBuild = spawnSync(process.execPath, [
+    path.join(__dirname, 'build-static-product-directory.mjs'),
+    '--apply',
+  ], { stdio: 'inherit' });
+  if (directoryBuild.status !== 0) throw new Error('No se pudo actualizar el catálogo estático de modelos.');
   console.log(`Generated ${products.length} products from ${path.basename(workbookPath)}`);
 }
 

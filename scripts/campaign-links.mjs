@@ -1,9 +1,9 @@
 const CHANNELS = Object.freeze({
-  website: { source: "haode_website", medium: "owned_web", content: "website_banner" },
-  app: { source: "haode_app", medium: "owned_app", content: "app_banner" },
-  facebook: { source: "facebook", medium: "organic_social" },
-  instagram: { source: "instagram", medium: "organic_social" },
-  tiktok: { source: "tiktok", medium: "organic_social" },
+  website: { internal: true },
+  app: { internal: true },
+  facebook: { source: "facebook", medium: "social" },
+  instagram: { source: "instagram", medium: "social" },
+  tiktok: { source: "tiktok", medium: "social" },
   google_business: { source: "google_business", medium: "organic" },
   whatsapp: { source: "whatsapp", medium: "referral" }
 });
@@ -31,6 +31,7 @@ export function buildCampaignLinks({ appUrl, campaign, productSku }) {
 
   return Object.fromEntries(Object.entries(CHANNELS).map(([channel, attribution]) => {
     const url = new URL(appUrl);
+    if (attribution.internal) return [channel, url.toString()];
     url.searchParams.set("utm_source", attribution.source);
     url.searchParams.set("utm_medium", attribution.medium);
     url.searchParams.set("utm_campaign", campaignCode);

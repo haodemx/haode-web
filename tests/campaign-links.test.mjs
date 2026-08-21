@@ -35,13 +35,16 @@ test("builds one campaign code and channel-specific app links", () => {
 
   const facebook = new URL(links.facebook);
   assert.equal(facebook.searchParams.get("utm_source"), "facebook");
-  assert.equal(facebook.searchParams.get("utm_medium"), "organic_social");
+  assert.equal(facebook.searchParams.get("utm_medium"), "social");
   assert.equal(facebook.searchParams.get("utm_campaign"), campaign);
   assert.equal(facebook.searchParams.get("utm_content"), "ip_14_incell_fhd");
 
   const app = new URL(links.app);
-  assert.equal(app.searchParams.get("utm_source"), "haode_app");
-  assert.equal(app.searchParams.get("utm_medium"), "owned_app");
+  assert.equal(app.search, "");
+  assert.equal(app.hash, "");
+
+  const website = new URL(links.website);
+  assert.equal(website.search, "");
 });
 
 test("keeps app hash routes when adding tracking parameters", () => {
