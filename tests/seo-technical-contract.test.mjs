@@ -44,7 +44,9 @@ test('sitemap keeps canonical static SEO pages and excludes redirect aliases', (
     '/',
     '/app/',
     '/productos/',
+    '/catalogo-modelos/',
     '/productos-ai/',
+    '/catalogo-modelos/',
     '/micas.html',
     '/garantia/',
     '/contacto/',
@@ -202,6 +204,26 @@ test('all sitemap Product schema omits unconfirmed availability', () => {
   assert.deepEqual(violations, []);
 });
 
+test('public LocalBusiness schema omits unconfirmed opening hours', () => {
+  const violations = [];
+
+  for (const url of sitemapLocs()) {
+    const relativePath = sitemapHtmlPath(url);
+    const html = read(relativePath);
+    const businesses = jsonLdBlocks(html)
+      .flatMap((block) => block['@graph'] || [block])
+      .filter((node) => node['@type'] === 'LocalBusiness');
+
+    for (const business of businesses) {
+      if (Object.hasOwn(business, 'openingHours') || Object.hasOwn(business, 'openingHoursSpecification')) {
+        violations.push(relativePath);
+      }
+    }
+  }
+
+  assert.deepEqual(violations, []);
+});
+
 test('generic product renderer is a noindex fallback without unsupported Product schema', () => {
   const html = read('producto.html');
   const graph = jsonLdBlocks(html).flatMap((block) => block['@graph'] || [block]);
@@ -244,6 +266,7 @@ test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () =>
   assert.equal(organization?.contactPoint?.telephone, '+52 33 2668 4296');
   assert.equal(organization?.contactPoint?.contactType, 'ventas');
   assert.ok(!Object.hasOwn(localBusiness || {}, 'priceRange'));
+  assert.ok(!Object.hasOwn(localBusiness || {}, 'openingHours'), 'unconfirmed opening hours must not be published');
 });
 
 test('homepage does not publish unsupported performance claims or testimonials', () => {

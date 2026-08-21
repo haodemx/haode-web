@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -16,6 +17,36 @@ function collectFiles(directory = ROOT, files = []) {
     if (entry.isFile() && entry.name.endsWith('.html')) files.push(fullPath);
   }
   return files;
+}
+
+function configuredPageLocation(href) {
+  const location = new URL(href);
+  const dataLayer = [];
+  const context = {
+    URL,
+    CustomEvent: class CustomEvent {},
+    console,
+    window: {
+      dataLayer,
+      location,
+      localStorage: { getItem: () => null, setItem: () => {} },
+      dispatchEvent: () => {},
+      document: {
+        readyState: 'loading',
+        addEventListener: () => {},
+        querySelector: () => null,
+        createElement: () => ({ setAttribute: () => {} }),
+        head: { appendChild: () => {} },
+      },
+    },
+  };
+  vm.runInNewContext(readFile('analytics.js'), context, { filename: 'analytics.js' });
+  const config = dataLayer.find((entry) => entry[0] === 'config');
+  return config?.[2]?.page_location;
+}
+
+function readFile(relativePath) {
+  return fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
 }
 
 test('HTML pages do not initialize GA before HAODE consent defaults', () => {
@@ -76,4 +107,22 @@ test('future generated product pages use the consent-aware entrypoint', () => {
   const generator = fs.readFileSync(path.join(ROOT, 'scripts', 'sync-customer-prices.js'), 'utf8');
   assert.match(generator, /analytics\.js\?v=20260813-ga4-conversions/);
   assert.doesNotMatch(generator, /googletagmanager\.com\/gtag\/js\?id=G-22TCLJDXYS/);
+});
+
+test('GA4 page location keeps external attribution in standard channel formats', () => {
+  assert.equal(
+    configuredPageLocation('https://haode.com.mx/productos/?utm_source=facebook&utm_medium=organic_social&utm_campaign=agosto'),
+    'https://haode.com.mx/productos/?utm_source=facebook&utm_medium=social&utm_campaign=agosto',
+  );
+});
+
+test('GA4 page location removes internal campaign tags that restart sessions', () => {
+  assert.equal(
+    configuredPageLocation('https://haode.com.mx/app/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=interno#lista'),
+    'https://haode.com.mx/app/',
+  );
+  assert.equal(
+    configuredPageLocation('https://haode.com.mx/productos/?utm_source=haode_app&utm_medium=owned_app&utm_campaign=interno'),
+    'https://haode.com.mx/productos/',
+  );
 });
