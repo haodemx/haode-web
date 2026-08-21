@@ -20,6 +20,7 @@ const PRIORITY_PAGES = [
   'categoria/samsung-incell/index.html',
   'fundas-celular-mayoreo-mexico/index.html',
   'micas-hidrogel-mayoreo-mexico/index.html',
+  'categoria/gafas-inteligentes-ai/index.html',
   'pantallas-samsung-mayoreo-mexico/index.html',
 ];
 
@@ -92,6 +93,24 @@ test('priority landing pages expose unique metadata and a crawlable category hub
     assert.match(html, /class="seo-index-hub-links"/);
     titles.add(title);
   }
+});
+
+test('hydrogel micas and AI glasses are directly discoverable as priority products', () => {
+  const home = read('index.html');
+  const catalog = read('productos/index.html');
+  const llms = read('llms.txt');
+  const micas = read('micas-hidrogel-mayoreo-mexico/index.html');
+  const glasses = read('categoria/gafas-inteligentes-ai/index.html');
+
+  for (const html of [home, catalog]) {
+    assert.match(html, /href=["']\/micas-hidrogel-mayoreo-mexico\/["']/);
+    assert.match(html, /href=["']\/categoria\/gafas-inteligentes-ai\/["']/);
+  }
+
+  assert.match(llms, /Micas de hidrogel.+micas-hidrogel-mayoreo-mexico\//i);
+  assert.match(llms, /Gafas inteligentes AI.+categoria\/gafas-inteligentes-ai\//i);
+  assert.match(micas, /<h1>Micas de hidrogel para tiendas y técnicos<\/h1>/);
+  assert.match(glasses, /<h1>Gafas inteligentes AI de mayoreo<\/h1>/);
 });
 
 test('changed canonical URLs publish the current lastmod date', () => {

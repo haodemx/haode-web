@@ -73,8 +73,12 @@ const PRIORITY_PAGES = new Map([
     description: 'Fundas para celular de mayoreo en México para tiendas y distribuidores. Consulta modelos publicados y cotiza cantidad y ciudad por WhatsApp.',
   }],
   ['micas-hidrogel-mayoreo-mexico/index.html', {
-    title: 'Micas e hidrogel de mayoreo | HAODE México',
-    description: 'Micas e hidrogel de mayoreo para técnicos y tiendas en México. Envía tipo de producto, cantidad y ciudad para recibir una cotización confirmada.',
+    title: 'Micas de hidrogel de mayoreo | HAODE México',
+    description: 'Micas de hidrogel, consumibles y opciones para tiendas y técnicos en México. Envía producto, cantidad y ciudad para cotizar por WhatsApp.',
+  }],
+  ['categoria/gafas-inteligentes-ai/index.html', {
+    title: 'Gafas inteligentes AI de mayoreo | HAODE México',
+    description: 'Gafas inteligentes AI para tiendas y distribuidores en México. Consulta modelos publicados y cotiza versión, cantidad y ciudad por WhatsApp.',
   }],
   ['pantallas-samsung-mayoreo-mexico/index.html', {
     title: 'Pantallas Samsung de mayoreo | HAODE México',
@@ -91,7 +95,9 @@ const INDEX_HUB_LINKS = [
   ['/pantallas-samsung-mayoreo-mexico/', 'Samsung mayoreo'],
   ['/refacciones-celulares-mayoreo-mexico/', 'Refacciones mayoreo'],
   ['/fundas-celular-mayoreo-mexico/', 'Fundas mayoreo'],
-  ['/micas-hidrogel-mayoreo-mexico/', 'Micas e hidrogel'],
+  ['/micas-hidrogel-mayoreo-mexico/', 'Micas de hidrogel'],
+  ['/categoria/gafas-inteligentes-ai/', 'Gafas inteligentes AI'],
+  ['/productos-ai/', 'Productos AI'],
   ['/distribuidores/', 'Distribuidores'],
   ['/app/', 'Catálogo App'],
 ];

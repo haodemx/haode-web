@@ -107,25 +107,25 @@ const campaignItems = [
   },
   {
     day: 4,
-    focus: "Máquinas de Mica",
+    focus: "Micas de hidrogel",
     sku: "x200t_cortadora_micas",
     url: "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/",
     channels: ["google_business", "facebook", "whatsapp"],
     media: "assets/products/cut-machine/x200t/main.jpg",
-    headline: "Micas, hidrogel y cortadora para tiendas",
-    caption: "HAODE atiende tiendas que venden micas, hidrogel y accesorios. Consulta disponibilidad, detalles del producto y condiciones por WhatsApp.",
-    whatsapp: "Este post es para tiendas con venta de mica e hidrogel. Pide producto, cantidad y ciudad para seguimiento."
+    headline: "Micas de hidrogel para tiendas y técnicos",
+    caption: "Micas de hidrogel HAODE para tiendas, técnicos y distribuidores. Consulta el producto publicado y confirma cantidad, ciudad y condiciones por WhatsApp.",
+    whatsapp: "Este post es para consultas de micas de hidrogel. Pide producto, cantidad y ciudad para dar seguimiento."
   },
   {
     day: 5,
-    focus: "Productos AI",
-    sku: "productos_ai_haode",
-    url: "https://haode.com.mx/productos-ai/",
+    focus: "Gafas inteligentes AI",
+    sku: "gafas_inteligentes_ai",
+    url: "https://haode.com.mx/categoria/gafas-inteligentes-ai/",
     channels: ["instagram", "tiktok", "whatsapp"],
-    media: "assets/images/home-categories/productos-ai.jpg",
-    headline: "Productos AI para vender en tienda",
-    caption: "Productos AI HAODE para tiendas y clientes que buscan novedades: gafas, cámaras y gadgets inteligentes. Consulta modelos disponibles por WhatsApp.",
-    whatsapp: "Usa solo videos confirmados del producto real. El objetivo es atraer curiosos y después pasar cotización por WhatsApp."
+    media: "assets/products/productos-ai/w630-ai-smart-glasses/main.jpg",
+    headline: "Gafas inteligentes AI para tu catálogo",
+    caption: "Consulta los modelos de gafas inteligentes AI publicados por HAODE. Confirma versión, cantidad, ciudad y funciones del modelo por WhatsApp antes de cotizar.",
+    whatsapp: "Usa solo material del modelo real confirmado. Pide modelo, versión, cantidad y ciudad antes de pasar la cotización."
   },
   {
     day: 6,

@@ -92,19 +92,19 @@ export const SEO_PRIORITY_PAGES = Object.freeze([
     requiredInExposurePack: true
   },
   {
-    priority: "P1",
-    intent: "micas hidrogel mayoreo mexico",
+    priority: "P0",
+    intent: "micas de hidrogel mayoreo mexico",
     url: "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/",
-    audience: "Tiendas de accesorios",
-    cta: "Consultar producto y ciudad",
+    audience: "Tiendas de accesorios, tecnicos y distribuidores",
+    cta: "Consultar producto, cantidad y ciudad",
     requiredInExposurePack: true
   },
   {
-    priority: "P1",
-    intent: "productos ai para tienda mexico",
-    url: "https://haode.com.mx/productos-ai/",
-    audience: "Tiendas y revendedores",
-    cta: "Consultar modelos disponibles",
+    priority: "P0",
+    intent: "gafas inteligentes ai mayoreo mexico",
+    url: "https://haode.com.mx/categoria/gafas-inteligentes-ai/",
+    audience: "Tiendas, distribuidores y revendedores",
+    cta: "Consultar modelo, version y cantidad",
     requiredInExposurePack: true
   },
   {
