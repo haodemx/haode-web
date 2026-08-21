@@ -2724,19 +2724,22 @@ function renderProductDetailPage() {
   }
 
   const seoName = productSeoName(product);
-  document.title = `${seoName} | HAODE México`;
   const detailUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(product.id))}/`);
   const metaDescription = `${product.name} en HAODE México. ${product.description}`;
   const metaKeywords = productMetaKeywords(product);
+  const preservesCuratedSeo = document.body.hasAttribute('data-curated-seo');
 
-  setCanonicalUrl(detailUrl);
-  setMetaContent('meta[name="description"]', metaDescription);
-  setMetaContent('meta[name="keywords"]', metaKeywords);
-  setMetaContent('meta[property="og:title"]', `${seoName} | HAODE México`);
-  setMetaContent('meta[property="og:description"]', metaDescription);
-  setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
-  setMetaContent('meta[property="og:url"]', detailUrl);
-  setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
+  if (!preservesCuratedSeo) {
+    document.title = `${seoName} | HAODE México`;
+    setCanonicalUrl(detailUrl);
+    setMetaContent('meta[name="description"]', metaDescription);
+    setMetaContent('meta[name="keywords"]', metaKeywords);
+    setMetaContent('meta[property="og:title"]', `${seoName} | HAODE México`);
+    setMetaContent('meta[property="og:description"]', metaDescription);
+    setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
+    setMetaContent('meta[property="og:url"]', detailUrl);
+    setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
+  }
 
   if (titleEl) titleEl.textContent = product.name;
   if (subtitleEl) subtitleEl.textContent = `${CATEGORY_META[product.category].title} · ${product.stockLabel || 'Consultar inventario'}`;
