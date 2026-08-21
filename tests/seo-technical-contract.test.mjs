@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
+const OFFICIAL_FACEBOOK_URL = 'https://www.facebook.com/people/HAODE-Display-Celular-HL-CDMX-HL-CDMX/100063509498956/';
+const PERSONAL_FACEBOOK_URL = 'https://www.facebook.com/cristi3an/';
 const REPAIRED_SAMSUNG_INCELL_ROUTES = new Set([
   'samsung-incell-s10e',
   'samsung-incell-s21-fe',
@@ -21,6 +23,37 @@ const REPAIRED_SAMSUNG_INCELL_ROUTES = new Set([
 function read(relativePath) {
   return fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
 }
+
+function publicTextFiles(directory = ROOT) {
+  const excluded = new Set([
+    '.git',
+    '.impeccable',
+    '.playwright-cli',
+    'node_modules',
+    'overnight-previews',
+    'playwright-report',
+    'test-results',
+  ]);
+  const extensions = new Set(['.html', '.js', '.json', '.xml', '.txt']);
+  const files = [];
+
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (excluded.has(entry.name)) continue;
+    const absolutePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...publicTextFiles(absolutePath));
+    if (entry.isFile() && extensions.has(path.extname(entry.name))) files.push(absolutePath);
+  }
+
+  return files;
+}
+
+test('public pages use the official Facebook business page and never the personal profile', () => {
+  const staleReferences = publicTextFiles().filter((file) => fs.readFileSync(file, 'utf8').includes(PERSONAL_FACEBOOK_URL));
+
+  assert.deepEqual(staleReferences, [], `personal Facebook URL found in: ${staleReferences.join(', ')}`);
+  assert.ok(read('index.html').includes(OFFICIAL_FACEBOOK_URL));
+  assert.ok(read('guia-ia-haode-mexico/index.html').includes(OFFICIAL_FACEBOOK_URL));
+});
 
 function sitemapLocs() {
   return [...read('sitemap.xml').matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((match) => match[1]);
