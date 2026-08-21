@@ -53,16 +53,11 @@ async function expectNoHorizontalOverflow(page) {
 }
 
 async function expectCartReviewCtaInView(page) {
-  const layout = await page.evaluate(() => {
+  await expect.poll(() => page.evaluate(() => {
     const cta = document.querySelector(".app-bulk-panel [data-open-cart]")?.getBoundingClientRect();
-    return {
-      top: Math.round(cta?.top || 0),
-      bottom: Math.round(cta?.bottom || 0),
-    };
-  });
-
-  expect(layout.top).toBeGreaterThanOrEqual(0);
-  expect(layout.bottom).toBeLessThanOrEqual(844);
+    if (!cta) return false;
+    return Math.round(cta.top) >= 0 && Math.round(cta.bottom) <= 844;
+  })).toBe(true);
 }
 
 async function expectListSearchBeforeBulkPanel(page) {

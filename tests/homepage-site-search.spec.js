@@ -48,6 +48,7 @@ test('homepage search reaches non-screen website products and handles no matches
 
   await page.locator('[data-site-catalog-search-input]').fill('modelo inexistente sitio 999');
   await page.locator('[data-site-catalog-search-input]').press('Enter');
+  await expect(page).toHaveURL(/\/productos\/\?q=modelo(?:\+|%20)inexistente(?:\+|%20)sitio(?:\+|%20)999$/i);
   await expect(page.locator('[data-site-catalog-empty]')).toBeVisible();
   await expect(page.locator('[data-site-catalog-empty]')).toContainText('modelo inexistente sitio 999');
   await expect(page.locator('[data-catalog-group]:visible')).toHaveCount(0);

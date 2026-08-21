@@ -20053,3 +20053,153 @@ body.product-detail-page .detail-price {
     max-width: 320px;
   }
 }
+
+/* 2026-08-21: crawlable product guidance and priority-page navigation. */
+body.product-detail-page .seo-product-breadcrumbs {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  color: #667085;
+  font-size: 0.9rem;
+  width: min(calc(100% - 48px), 1216px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.product-detail-page .seo-product-breadcrumbs a {
+  color: #c84f00;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+body.product-detail-page .seo-product-breadcrumbs a:hover,
+body.product-detail-page .seo-product-breadcrumbs a:focus-visible {
+  text-decoration: underline;
+}
+
+body.product-detail-page .detail-seo-guide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  margin-top: 24px;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid rgba(255, 106, 0, 0.18);
+  border-radius: 18px;
+  background: #fffaf5;
+  box-shadow: 0 14px 34px rgba(35, 55, 84, 0.08);
+  width: min(calc(100% - 48px), 1216px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.product-detail-page .detail-seo-guide h2 {
+  max-width: 820px;
+  margin: 4px 0 14px;
+  color: #121827;
+  font-size: clamp(1.45rem, 3vw, 2.05rem);
+  line-height: 1.16;
+}
+
+body.product-detail-page .detail-seo-guide p {
+  color: #526078;
+  line-height: 1.7;
+}
+
+body.product-detail-page .seo-product-faq {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+body.product-detail-page .seo-product-faq details {
+  padding: 14px 16px;
+  border: 1px solid #e1e7ef;
+  border-radius: 12px;
+  background: #fff;
+}
+
+body.product-detail-page .seo-product-faq summary {
+  cursor: pointer;
+  color: #1d2939;
+  font-weight: 800;
+}
+
+body.product-detail-page .seo-product-faq p {
+  margin: 10px 0 0;
+}
+
+body.product-detail-page .seo-related-static {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+body.product-detail-page .seo-related-static a,
+.seo-index-hub-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 106, 0, 0.22);
+  border-radius: 999px;
+  background: #fff;
+  color: #b64600;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+body.product-detail-page .seo-related-static a:hover,
+body.product-detail-page .seo-related-static a:focus-visible,
+.seo-index-hub-links a:hover,
+.seo-index-hub-links a:focus-visible {
+  border-color: #ff6a00;
+  background: #fff5eb;
+}
+
+.seo-index-hub .section-shell {
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid rgba(255, 106, 0, 0.16);
+  border-radius: 18px;
+  background: #fff8f1;
+}
+
+.seo-index-hub h2 {
+  margin: 4px 0 10px;
+  color: #121827;
+}
+
+.seo-index-hub p:not(.section-kicker) {
+  max-width: 820px;
+  color: #526078;
+  line-height: 1.65;
+}
+
+.seo-index-hub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+  body.product-detail-page .detail-seo-guide {
+    grid-template-columns: 1fr;
+  }
+
+  body.product-detail-page .seo-related-static,
+  .seo-index-hub-links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body.product-detail-page .seo-related-static a,
+  .seo-index-hub-links a {
+    justify-content: center;
+  }
+}
