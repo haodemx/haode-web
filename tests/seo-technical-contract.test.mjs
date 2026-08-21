@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
+const OFFICIAL_FACEBOOK_URL = 'https://www.facebook.com/people/HAODE-Display-Celular-HL-CDMX-HL-CDMX/100063509498956/';
+const PERSONAL_FACEBOOK_URL = 'https://www.facebook.com/cristi3an/';
 
 function read(relativePath) {
   return fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
@@ -28,6 +30,29 @@ function htmlFiles(directory, files = []) {
   }
   return files;
 }
+
+function publicTextFiles(directory = ROOT, files = []) {
+  const skippedDirectories = new Set(['.git', '.impeccable', '.playwright-cli', 'node_modules', 'overnight-previews', 'playwright-report', 'test-results']);
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (entry.isDirectory() && skippedDirectories.has(entry.name)) continue;
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) publicTextFiles(target, files);
+    else if (/\.(?:html|js|json|xml|txt)$/i.test(entry.name)) files.push(target);
+  }
+  return files;
+}
+
+test('public pages link to the official Facebook business presence, not the personal profile', () => {
+  const staleReferences = [];
+  for (const file of publicTextFiles()) {
+    const content = fs.readFileSync(file, 'utf8');
+    if (content.includes(PERSONAL_FACEBOOK_URL)) staleReferences.push(path.relative(ROOT, file));
+  }
+
+  assert.deepEqual(staleReferences, []);
+  assert.ok(read('index.html').includes(OFFICIAL_FACEBOOK_URL));
+  assert.ok(read('guia-ia-haode-mexico/index.html').includes(OFFICIAL_FACEBOOK_URL));
+});
 
 test('sitemap keeps canonical static SEO pages and excludes redirect aliases', () => {
   const locs = sitemapLocs();
