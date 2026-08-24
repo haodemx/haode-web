@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
-const OFFICIAL_FACEBOOK_URL = 'https://www.facebook.com/people/HAODE-Display-Celular-HL-CDMX-HL-CDMX/100063509498956/';
+const OFFICIAL_FACEBOOK_URL = 'https://www.facebook.com/haodemx';
 const PERSONAL_FACEBOOK_URL = 'https://www.facebook.com/cristi3an/';
 const REPAIRED_SAMSUNG_INCELL_ROUTES = new Set([
   'samsung-incell-s10e',
