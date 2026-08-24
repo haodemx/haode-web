@@ -44,7 +44,7 @@ test('GEO guide exposes official HAODE facts for AI search', () => {
   assert.ok(graph.length > 0, 'expected JSON-LD on GEO guide');
   assert.deepEqual(organization?.sameAs, [
     'https://www.tiktok.com/@haodemx',
-    'https://www.facebook.com/people/HAODE-Display-Celular-HL-CDMX-HL-CDMX/100063509498956/',
+    'https://www.facebook.com/haodemx',
     'https://www.instagram.com/cristi3an/',
     'https://www.youtube.com/@haodemx',
   ]);
