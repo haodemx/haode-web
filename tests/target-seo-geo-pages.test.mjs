@@ -18,7 +18,7 @@ function jsonLdBlocks(html) {
 test('four low-click pages retain aligned Spanish intent and conversion signals', () => {
   const pages = [
     ['categoria/samsung-oled/index.html', /Pantallas Samsung OLED y AMOLED/, /Pantallas Samsung OLED y AMOLED para técnicos/],
-    ['categoria/maquinas-de-hidrogel/index.html', /Máquinas de Hidrogel para corte de micas/, /Máquinas de Hidrogel para corte de micas/],
+    ['categoria/maquinas-de-hidrogel/index.html', /Máquinas de hidrogel y corte de micas/, /Máquinas de Hidrogel para corte de micas/],
     ['producto/iphone-incell-xr/index.html', /Pantalla para iPhone XR INCELL/, /Pantalla para iPhone XR INCELL/],
     ['app/index.html', /HAODE APP/, /HAODE App de catálogo/],
   ];
