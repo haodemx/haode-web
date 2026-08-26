@@ -18,7 +18,8 @@ test.describe('HAODE static category conversion UI phase 9', () => {
 
       await expect(page.locator('body')).toHaveClass(/conversion-reference-page/);
       await expect(page.locator('body')).toHaveClass(/category-entry-reference-page/);
-      await expect(page.locator('.reference-conversion-strip')).toContainText('Stock en México');
+      const expectedBadge = path === '/categoria/maquinas-de-hidrogel/' ? 'Modelo exacto' : 'Stock en México';
+      await expect(page.locator('.reference-conversion-strip')).toContainText(expectedBadge);
       await expectFactoryProofStrip(page);
       await expect(page.locator(`[data-reference-conversion="${panelId}"]`)).toContainText(/WhatsApp|Cotiza|Cotización|Envía/);
       await expect(page.locator('a[href*="wa.me"]').first()).toBeVisible();
