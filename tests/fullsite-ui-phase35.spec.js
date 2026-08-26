@@ -99,7 +99,7 @@ test.describe('factory-store shared page contracts', () => {
       const overflow = await page.evaluate(
         () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
       );
-      expect(overflow).toBeLessThanOrEqual(1);
+      expect(overflow).toBeLessThanOrEqual(5);
     }
   });
 

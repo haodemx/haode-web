@@ -41,7 +41,7 @@ const criticalPages = [
   {
     path: '/contacto/',
     name: 'contact',
-    texts: ['Fábrica directa en CDMX', 'Lista grande, precio por cantidad', 'Enviar lista'],
+    texts: ['Tienda oficial de fábrica HL en CDMX', 'Lista grande, precio por cantidad', 'Enviar lista'],
   },
   {
     path: '/distribuidores/',

@@ -233,6 +233,26 @@ img {
   clip-path: inset(50%);
 }
 
+.app-seo-content {
+  width: min(100% - 32px, 840px);
+  margin: 32px auto 96px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f7f7f7;
+}
+
+.app-seo-content h2 { margin: 0 0 12px; font-size: clamp(1.25rem, 3vw, 1.65rem); }
+.app-seo-content p { line-height: 1.6; }
+.app-seo-kicker { color: #ff7a00; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; }
+.app-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.app-seo-links a { color: #fff; border: 1px solid rgba(255, 122, 0, 0.65); border-radius: 999px; padding: 9px 12px; text-decoration: none; }
+.app-seo-links a:hover, .app-seo-links a:focus-visible { background: #ff7a00; color: #111; }
+.app-seo-faq { display: grid; gap: 10px; }
+.app-seo-faq details { border-top: 1px solid rgba(255, 255, 255, 0.14); padding: 12px 0 0; }
+.app-seo-faq summary { cursor: pointer; font-weight: 700; }
+
 body.cart-open {
   overflow: hidden;
 }

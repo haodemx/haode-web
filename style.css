@@ -6973,6 +6973,10 @@ body.product-detail-page .detail-main {
   padding: 28px 0 14px;
 }
 
+body.product-detail-page {
+  overflow-x: hidden;
+}
+
 body.product-detail-page .detail-shell {
   padding: 22px;
 }
@@ -7093,6 +7097,7 @@ body.product-detail-page .detail-title {
   font-size: clamp(2rem, 4.8vw, 3.6rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
 }
 
 body.product-detail-page .detail-grid {

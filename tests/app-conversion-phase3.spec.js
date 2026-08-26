@@ -53,6 +53,11 @@ async function expectNoHorizontalOverflow(page) {
 }
 
 async function expectCartReviewCtaInView(page) {
+  await page.waitForFunction(() => {
+    const cta = document.querySelector(".app-bulk-panel [data-open-cart]");
+    return cta && cta.getBoundingClientRect().top >= 0;
+  });
+
   const layout = await page.evaluate(() => {
     const cta = document.querySelector(".app-bulk-panel [data-open-cart]")?.getBoundingClientRect();
     return {
