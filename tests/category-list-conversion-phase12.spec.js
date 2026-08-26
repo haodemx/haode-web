@@ -6,7 +6,7 @@ const pages = [
   ['/categoria/iphone-incell/', 'Stock en México'],
   ['/categoria/iphone-oled/', 'Stock en México'],
   ['/categoria/samsung-incell/', 'Stock en México'],
-  ['/categoria/samsung-oled/', 'Stock en México'],
+  ['/categoria/samsung-oled/', 'Referencia exacta'],
   ['/categoria/samsung-tipo-original/', 'Stock en México'],
   ['/categoria/oled-diagnostica/', 'Stock en México'],
   ['/categoria/samsung-plegables/', 'Pedido especial'],

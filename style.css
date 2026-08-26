@@ -17894,6 +17894,10 @@ body.product-detail-page .floating-cta {
     padding-block: 38px 44px;
   }
 
+  body.maquinas-entry-page .new-page-hero-inner {
+    padding-bottom: 30px;
+  }
+
   body.category-page .new-page-hero h1,
   body.catalog-reference-page .catalog-title-row h1,
   body.conversion-reference-page .new-page-hero h1 {

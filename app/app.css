@@ -6025,3 +6025,61 @@ body .whatsapp-button {
   justify-content: center;
   padding-inline: 10px;
 }
+
+.seo-index-hub {
+  padding: 42px 20px;
+  background: #fbfbf9;
+}
+
+.seo-index-hub + .seo-index-hub {
+  padding-top: 0;
+}
+
+.seo-index-hub .section-shell {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.seo-index-hub h2 {
+  margin: 0 0 12px;
+  color: var(--brand-ink);
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.seo-index-hub-links,
+.seo-product-faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.seo-index-hub-links a,
+.seo-product-faq details {
+  border: 1px solid rgba(20, 18, 15, 0.14);
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.seo-index-hub-links a {
+  padding: 14px 16px;
+  color: var(--brand-ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.seo-product-faq details {
+  padding: 16px;
+}
+
+.seo-product-faq summary {
+  color: var(--brand-ink);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.seo-product-faq p {
+  margin: 10px 0 0;
+  color: var(--brand-muted);
+  line-height: 1.55;
+}
