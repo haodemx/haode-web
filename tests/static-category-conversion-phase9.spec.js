@@ -3,22 +3,22 @@ const { test, expect } = require('@playwright/test');
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 
 const categoryPages = [
-  ['/categoria/pantallas/', 'category-pantallas', 'Pantallas'],
-  ['/categoria/fundas/', 'category-fundas', 'Fundas'],
-  ['/categoria/maquinas-de-hidrogel/', 'category-maquinas', 'Máquinas'],
-  ['/categoria/camaras-inteligentes/', 'category-camaras', 'Cámaras'],
-  ['/categoria/gafas-inteligentes-ai/', 'category-gafas-ai', 'Gafas'],
-  ['/categoria/productos-ai/', 'category-productos-ai', 'Productos AI'],
+  ['/categoria/pantallas/', 'category-pantallas', 'Pantallas', 'Stock en México'],
+  ['/categoria/fundas/', 'category-fundas', 'Fundas', 'Stock en México'],
+  ['/categoria/maquinas-de-hidrogel/', 'category-maquinas', 'Máquinas', 'Modelo y consumibles'],
+  ['/categoria/camaras-inteligentes/', 'category-camaras', 'Cámaras', 'Stock en México'],
+  ['/categoria/gafas-inteligentes-ai/', 'category-gafas-ai', 'Gafas', 'Stock en México'],
+  ['/categoria/productos-ai/', 'category-productos-ai', 'Productos AI', 'Stock en México'],
 ];
 
 test.describe('HAODE static category conversion UI phase 9', () => {
-  for (const [path, panelId, label] of categoryPages) {
+  for (const [path, panelId, label, firstBadge] of categoryPages) {
     test(`${path} has unified category WhatsApp conversion`, async ({ page }) => {
       await page.goto(`${baseURL}${path}`);
 
       await expect(page.locator('body')).toHaveClass(/conversion-reference-page/);
       await expect(page.locator('body')).toHaveClass(/category-entry-reference-page/);
-      await expect(page.locator('.reference-conversion-strip')).toContainText('Stock en México');
+      await expect(page.locator('.reference-conversion-strip')).toContainText(firstBadge);
       await expectFactoryProofStrip(page);
       await expect(page.locator(`[data-reference-conversion="${panelId}"]`)).toContainText(/WhatsApp|Cotiza|Cotización|Envía/);
       await expect(page.locator('a[href*="wa.me"]').first()).toBeVisible();

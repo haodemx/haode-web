@@ -32,7 +32,7 @@ test.describe('HAODE App empty cart WhatsApp UI phase 21', () => {
     const drawer = page.locator('[data-cart-drawer]');
     await expect(drawer).toHaveClass(/open/);
     await expect(drawer.locator('.cart-drawer-proof')).toBeVisible();
-    await expect(drawer.locator('.cart-drawer-proof')).toContainText('Stock en México');
+    await expect(drawer.locator('.cart-drawer-proof')).toContainText('Referencia y cantidad');
     await expect(drawer.locator('.cart-drawer-proof')).toContainText('Precio por cantidad');
     await expectDarkDrawerProof(page);
     await expect(drawer.locator('.checkout-form')).toBeHidden();

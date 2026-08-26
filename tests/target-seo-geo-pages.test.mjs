@@ -44,3 +44,17 @@ test('App and iPhone XR expose visible FAQ content with FAQPage schema', () => {
     assert.match(html, /Preguntas frecuentes/, `${page} missing visible FAQ heading`);
   }
 });
+
+test('target pages ask for confirmation instead of claiming unverified inventory or warranty', () => {
+  const pages = [
+    'categoria/samsung-oled/index.html',
+    'categoria/maquinas-de-hidrogel/index.html',
+    'producto/iphone-incell-xr/index.html',
+    'app/index.html'
+  ];
+
+  for (const page of pages) {
+    const html = read(page);
+    assert.doesNotMatch(html, /Stock local en CDMX|Stock en México|Garantía local/i, `${page} claims unverified inventory or warranty`);
+  }
+});
