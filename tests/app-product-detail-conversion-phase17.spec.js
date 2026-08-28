@@ -21,7 +21,7 @@ test.describe('HAODE App product detail conversion UI phase 17', () => {
       await page.goto(`${APP_URL}#producto/${productId}`, { waitUntil: 'domcontentloaded' });
 
       await expect(page.getByRole('heading', { name: new RegExp(heading, 'i') })).toBeVisible({ timeout: 15000 });
-      await expect(page.locator('.detail-conversion-strip')).toContainText('Stock en México');
+      await expect(page.locator('.detail-conversion-strip')).toContainText('Referencia por confirmar');
       await expect(page.locator('.detail-conversion-strip')).toContainText('Precio por cantidad');
       await expect(page.locator('.detail-conversion-strip')).toContainText('Calidad revisada');
       await expect(page.locator('.detail-conversion-strip')).toContainText('WhatsApp privado');

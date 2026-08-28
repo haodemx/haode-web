@@ -1064,7 +1064,7 @@ function productCardHtml(product, compact = false) {
         <h3>${escapeHtml(product.displayName)}</h3>
         <span class="stock-badge stock-${stockClassName(product.stock)}">${escapeHtml(product.erpStockLabel || product.stock)}</span>
         <div class="app-card-badges" aria-label="Ventajas de compra">
-          <span>Stock México</span>
+          <span>Referencia por confirmar</span>
           <span>Precio por cantidad</span>
           <span>WhatsApp privado</span>
         </div>
@@ -1240,7 +1240,7 @@ function renderHome() {
         </div>
 
         <div class="app-stock-strip" aria-label="Ventajas HAODE">
-          <span><strong>Stock en México</strong><small>Envíos a todo el país</small></span>
+          <span><strong>Referencia por confirmar</strong><small>Antes de preparar pedido</small></span>
           <span><strong>Precio por cantidad</strong><small>Mayoreo privado</small></span>
           <span><strong>Calidad revisada</strong><small>Para talleres</small></span>
           <span><strong>WhatsApp privado</strong><small>Lista grande</small></span>
@@ -1262,7 +1262,7 @@ function renderHome() {
         </div>
         <div class="hero-proof" aria-label="Beneficios HAODE">
           <span>Fábrica directa</span>
-          <span>Inventario México</span>
+          <span>Referencia por confirmar</span>
           <span>Calidad revisada</span>
           <span>Precio por cantidad</span>
         </div>
@@ -1290,10 +1290,10 @@ function renderHome() {
       ${premiumSelectionHtml()}
 
       <section class="trust-bar" aria-label="Confianza HAODE">
-        ${benefitHtml("Stock en México", "grid")}
+        ${benefitHtml("Pedido por confirmar", "grid")}
         ${benefitHtml("WhatsApp", "whatsapp")}
         ${benefitHtml("Calidad HAODE", "shield")}
-        ${benefitHtml("Envío rápido", "truck")}
+        ${benefitHtml("Cotización privada", "truck")}
       </section>
 
       ${seoLinksHtml()}
@@ -1419,7 +1419,7 @@ function premiumSelectionHtml() {
     <section class="premium-showcase" aria-labelledby="premium-showcase-title">
       <div class="premium-showcase-copy">
         <h2 id="premium-showcase-title">Selección premium HAODE</h2>
-        <p>Pantallas premium seleccionadas, stock en México bajo confirmación y pedidos por WhatsApp.</p>
+        <p>Pantallas premium seleccionadas con referencia y disponibilidad por confirmar antes de pedir por WhatsApp.</p>
       </div>
       <div class="premium-showcase-grid">
         ${premiumItems.slice(0, 3).map((item) => `
@@ -1498,8 +1498,8 @@ function renderList({ group = "", category = "Todos" } = {}) {
       })}
 
       <section class="app-path-strip" aria-label="Compra profesional HAODE">
-        <span><strong>Stock en México</strong> salida rápida</span>
-        <span><strong>Garantía local</strong> calidad revisada</span>
+        <span><strong>Referencia por confirmar</strong> antes de cotizar</span>
+        <span><strong>Condiciones por confirmar</strong> según referencia</span>
         <span><strong>WhatsApp privado</strong> listas grandes</span>
       </section>
 
@@ -1668,7 +1668,7 @@ function renderProductDetail(productId) {
 function detailConversionStripHtml() {
   return `
     <div class="detail-conversion-strip" aria-label="Ventajas para cotizar este producto">
-      <span><strong>Stock en México</strong><small>Bajo confirmación</small></span>
+      <span><strong>Referencia por confirmar</strong><small>Antes de preparar pedido</small></span>
       <span><strong>Precio por cantidad</strong><small>Mayoreo privado</small></span>
       <span><strong>Calidad revisada</strong><small>Para talleres</small></span>
       <span><strong>WhatsApp privado</strong><small>Envía lista grande</small></span>
@@ -1799,7 +1799,7 @@ function renderCartPage() {
       <section class="app-path-strip" aria-label="Confirmación de pedido HAODE">
         <span><strong>Total estimado</strong> sin pago en línea</span>
         <span><strong>Precio final</strong> confirmado por asesor</span>
-        <span><strong>Envío</strong> a todo México</span>
+        <span><strong>Envío</strong> por confirmar</span>
       </section>
       ${items.length ? appBulkPanelHtml({
         label: "Lista lista para revisar",

@@ -43,7 +43,7 @@ test.describe('HAODE App home conversion UI phase 15', () => {
     await page.goto(appURL, { waitUntil: 'domcontentloaded' });
 
     await expect(page.getByRole('heading', { name: 'Fábrica directa para talleres' })).toBeVisible();
-    await expect(page.locator('.app-stock-strip')).toContainText('Stock en México');
+    await expect(page.locator('.app-stock-strip')).toContainText('Referencia por confirmar');
     await expect(page.locator('.app-stock-strip')).toContainText('Precio por cantidad');
     await expect(page.locator('.app-stock-strip')).toContainText('Calidad revisada');
     await expect(page.locator('.app-stock-strip')).toContainText('WhatsApp privado');

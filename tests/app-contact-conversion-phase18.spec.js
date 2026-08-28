@@ -16,7 +16,7 @@ test.describe('HAODE App contact conversion UI phase 18', () => {
 
     await expect(page.getByRole('heading', { name: 'Contacto HAODE' })).toBeVisible();
     await expect(page.locator('.app-contact-board')).toContainText('lista grande');
-    await expect(page.locator('.detail-conversion-strip')).toContainText('Stock en México');
+    await expect(page.locator('.detail-conversion-strip')).toContainText('Referencia por confirmar');
     await expect(page.locator('.detail-conversion-strip')).toContainText('Precio por cantidad');
     await expect(page.locator('.detail-conversion-strip')).toContainText('WhatsApp privado');
     await expect(page.getByRole('link', { name: 'Enviar lista por WhatsApp' })).toHaveAttribute('href', /wa\.me/);

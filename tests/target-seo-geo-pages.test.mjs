@@ -59,3 +59,21 @@ test('target pages ask for confirmation instead of claiming unverified inventory
     assert.doesNotMatch(html, /Disponible para técnicos, tiendas y mayoreo HAODE|https:\/\/schema\.org\/InStock/i, `${page} claims unverified availability`);
   }
 });
+
+test('App rendered conversion labels keep availability, warranty and delivery confirmation-first', () => {
+  const appSource = read('app/app.js');
+  const unverifiedLabels = [
+    '<span>Stock México</span>',
+    '<strong>Stock en México</strong>',
+    'benefitHtml("Stock en México", "grid")',
+    'Inventario México',
+    '<strong>Garantía local</strong>',
+    '<strong>Envío</strong> a todo México'
+  ];
+
+  for (const label of unverifiedLabels) {
+    assert.doesNotMatch(appSource, new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `App still presents unverified claim: ${label}`);
+  }
+  assert.match(appSource, /Referencia por confirmar/, 'App needs a confirmation-first availability label');
+  assert.match(appSource, /Condiciones por confirmar/, 'App needs a confirmation-first conditions label');
+});
