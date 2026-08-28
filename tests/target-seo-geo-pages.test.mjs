@@ -57,6 +57,7 @@ test('target pages ask for confirmation instead of claiming unverified inventory
     const html = read(page);
     assert.doesNotMatch(html, /Stock local en CDMX|Stock en México|Garantía local/i, `${page} claims unverified inventory or warranty`);
     assert.doesNotMatch(html, /Disponible para técnicos, tiendas y mayoreo HAODE|https:\/\/schema\.org\/InStock/i, `${page} claims unverified availability`);
+    assert.doesNotMatch(html, /envíos a todo México/i, `${page} claims unverified delivery coverage`);
   }
 });
 
