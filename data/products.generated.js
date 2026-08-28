@@ -2641,7 +2641,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx · Lista_Precios · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR",
-    "description": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora: caja/modelo $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
+    "description": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora: caja/modelo $155 MXN por pieza. Técnicos, tiendas y mayoreo confirman disponibilidad por WhatsApp antes de ordenar.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
