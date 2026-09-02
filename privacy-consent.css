@@ -262,18 +262,19 @@
     right: 10px;
     bottom: calc(10px + env(safe-area-inset-bottom));
     left: 10px;
-    padding: 14px;
+    padding: 12px;
   }
 
   .haode-privacy-actions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 12px;
+    grid-template-columns: 1.14fr 0.86fr 1fr;
+    gap: 6px;
+    margin-top: 10px;
   }
 
   .haode-privacy-actions .haode-privacy-button-primary {
-    grid-column: 1 / -1;
-    grid-row: 1;
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .haode-privacy-dialog-actions {
@@ -287,6 +288,18 @@
 
   .haode-privacy-button {
     width: 100%;
+    padding-inline: 8px;
+    font-size: 12px;
+  }
+
+  .haode-privacy-banner-copy strong {
+    margin-bottom: 3px;
+    font-size: 16px;
+  }
+
+  .haode-privacy-banner-copy p {
+    font-size: 12px;
+    line-height: 1.35;
   }
 }
 

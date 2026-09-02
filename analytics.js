@@ -133,7 +133,7 @@
     if (global.document.querySelector('link[data-haode-privacy-styles]')) return;
     const stylesheet = global.document.createElement("link");
     stylesheet.rel = "stylesheet";
-    stylesheet.href = "/privacy-consent.css?v=20260803";
+    stylesheet.href = "/privacy-consent.css?v=20260902-content-consistency";
     stylesheet.setAttribute("data-haode-privacy-styles", "");
     global.document.head.appendChild(stylesheet);
   }
