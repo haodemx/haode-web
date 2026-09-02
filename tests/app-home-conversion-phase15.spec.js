@@ -75,6 +75,9 @@ test.describe('HAODE App home conversion UI phase 15', () => {
 async function expectHomeProductMediaVisible(page) {
   const media = page.locator('.app-home-product-media').first();
   await expect(media).toBeVisible();
+  await expect.poll(async () => media.locator('img').evaluate((img) => img.complete && img.naturalWidth > 0), {
+    timeout: 5_000,
+  }).toBe(true);
   const details = await media.evaluate((el) => {
     const img = el.querySelector('img');
     const rect = el.getBoundingClientRect();

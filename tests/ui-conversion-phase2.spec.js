@@ -99,6 +99,9 @@ async function expectHeaderWhatsAppGreen(page) {
 async function expectCatalogVisualStrip(page) {
   const strip = page.locator(".catalog-visual-strip");
   await expect(strip).toBeVisible();
+  await expect.poll(async () => strip.locator("img").evaluateAll((images) => (
+    images.length >= 3 && images.every((img) => img.complete && img.naturalWidth > 0)
+  )), { timeout: 5_000 }).toBe(true);
   const details = await strip.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     const images = [...el.querySelectorAll("img")];
