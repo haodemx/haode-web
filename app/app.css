@@ -6083,3 +6083,274 @@ body .whatsapp-button {
   color: var(--brand-muted);
   line-height: 1.55;
 }
+
+/* UI maturity phase 2: the App behaves like a compact procurement catalog,
+   with square controls, flat information groups and one clear action tier. */
+body {
+  --app-mature-radius: 6px;
+  background: #f7f7f5;
+}
+
+.app-header {
+  border-bottom: 1px solid #deded9;
+  box-shadow: none;
+}
+
+.app-shell :is(
+  .app-home-board,
+  .section-block,
+  .promo-panel,
+  .app-order-panel,
+  .premium-showcase,
+  .trust-bar,
+  .app-explore-section,
+  .product-card,
+  .promo-card,
+  .app-home-product-card,
+  .premium-tile,
+  .seo-index-hub-links a,
+  .seo-product-faq details
+) {
+  border-radius: var(--app-mature-radius);
+  box-shadow: none;
+}
+
+.app-header .icon-action,
+.bottom-nav :is(a, button),
+.app-shell :is(button, .whatsapp-button, .outline-button, .text-button, .add-button, .primary-button) {
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.app-home-board {
+  border-color: #d9d9d3;
+}
+
+.app-home-board .app-home-intro {
+  padding-top: 30px;
+}
+
+.app-home-board .hero-badge {
+  width: fit-content;
+  padding: 4px 0 4px 10px;
+  border: 0;
+  border-left: 3px solid var(--brand-orange);
+  border-radius: 0;
+  background: transparent;
+}
+
+.app-home-board .app-home-intro h1 {
+  max-width: 650px;
+  font-size: clamp(40px, 4.2vw, 54px);
+}
+
+.app-home-board .app-quick-search {
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.app-home-board .app-home-categories .category-card {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.app-home-board .app-stock-strip {
+  border-block: 1px solid #d9d9d3;
+}
+
+.app-home-board .app-stock-strip span {
+  min-height: 66px;
+  border-radius: 0;
+  background: transparent;
+}
+
+.app-home-board .app-home-featured {
+  padding-top: 28px;
+}
+
+.app-home-board .app-home-product-card,
+.product-card,
+.promo-card {
+  border-color: #d9d9d3;
+  background: #ffffff;
+}
+
+.app-home-board .app-home-product-media,
+.product-card .product-media {
+  background: #f3f3f0;
+}
+
+.promo-panel,
+.section-block,
+.premium-showcase,
+.app-explore-section {
+  border-color: #d9d9d3;
+  background: transparent;
+}
+
+.app-order-panel {
+  border: 1px solid #d9d9d3;
+  background: #ffffff;
+}
+
+.app-order-steps {
+  gap: 0;
+}
+
+.app-order-steps article {
+  border: 0;
+  border-left: 1px solid #d9d9d3;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.premium-tile {
+  border-color: #d9d9d3;
+}
+
+.trust-bar {
+  gap: 0;
+  border-color: #d9d9d3;
+  background: #ffffff;
+}
+
+.trust-pill {
+  border: 0;
+  border-right: 1px solid #d9d9d3;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.trust-pill:last-child {
+  border-right: 0;
+}
+
+.premium-chip {
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.seo-index-hub {
+  background: transparent;
+}
+
+.seo-index-hub-links,
+.seo-product-faq {
+  gap: 0;
+  border-top: 1px solid #d9d9d3;
+}
+
+.seo-index-hub-links a,
+.seo-product-faq details {
+  border: 0;
+  border-bottom: 1px solid #d9d9d3;
+  border-radius: 0;
+  background: transparent;
+}
+
+.cart-panel {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.cart-head {
+  border-color: #2a2a27;
+  background: #171715;
+  color: #ffffff;
+}
+
+.cart-head h2,
+.cart-head .icon-action,
+.cart-head .icon-action svg {
+  color: #ffffff;
+  stroke: #ffffff;
+}
+
+.cart-drawer-proof {
+  gap: 0;
+  border-block: 1px solid #2a2a27;
+  background: #171715;
+}
+
+.cart-drawer-proof span {
+  border: 0;
+  border-right: 1px solid #343430;
+  border-radius: 0;
+  background: transparent;
+}
+
+.cart-drawer-proof span:last-child {
+  border-right: 0;
+}
+
+.cart-drawer-proof strong {
+  color: #ffffff;
+}
+
+.cart-drawer-proof small {
+  color: #c4c4bd;
+}
+
+.checkout-form :is(input, textarea) {
+  border-radius: 4px;
+}
+
+@media (max-width: 760px) {
+  .app-home-board .app-home-intro {
+    padding-top: 20px;
+  }
+
+  .app-home-board .app-home-intro h1 {
+    font-size: clamp(34px, 10vw, 40px);
+  }
+
+  .app-home-board .app-home-featured {
+    padding-top: 22px;
+  }
+
+  .app-order-panel {
+    padding: 18px 14px;
+  }
+
+  .app-order-steps article {
+    border-left: 0;
+    border-top: 1px solid #d9d9d3;
+  }
+
+  .trust-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trust-pill:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .cart-drawer-proof {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8px 12px;
+  }
+
+  .cart-drawer-proof span {
+    min-height: 42px;
+    padding: 7px 8px;
+  }
+
+  .cart-panel {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .cart-head {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    flex: 0 0 auto;
+  }
+
+  .cart-items {
+    flex: 0 0 auto;
+    overflow: visible;
+  }
+}
