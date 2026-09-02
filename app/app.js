@@ -1309,7 +1309,7 @@ function renderHome() {
       <section class="section-block" id="catalogo">
         <div class="section-head">
           <div>
-            <h2>Productos destacados</h2>
+            <h2>Catálogo activo</h2>
             <p>Selección activa para agregar al carrito y mandar lista por WhatsApp.</p>
           </div>
           <a class="text-button" href="#lista">Ver catálogo</a>
