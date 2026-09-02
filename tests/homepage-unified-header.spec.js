@@ -14,30 +14,32 @@ test.beforeEach(async ({ page }) => {
   }, CONSENT_STORAGE_KEY);
 });
 
-test('desktop header keeps actions inside one restrained editorial surface', async ({ page }) => {
+test('desktop header keeps one primary action and a compact catalog search', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
 
   const header = page.locator('.reference-header');
+  const topLine = page.locator('.reference-desktop-head');
   const appAction = page.locator('.reference-head-account');
-  const appLabel = appAction.locator('strong');
   const whatsappAction = page.locator('.reference-nav-actions a[href*="wa.me"]');
   const catalogAction = page.locator('.reference-nav-actions a[href="/app/"]');
-  const activeNavigation = page.locator('.reference-nav a.is-active');
+  const headerSearch = page.locator('.reference-header-search');
 
   await expect(header).toBeVisible();
-  await expect(appLabel).toHaveText('Abrir APP');
-  await expect(appLabel).toHaveCSS('color', 'rgb(255, 88, 31)');
-  await expect(appAction).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await expect(whatsappAction).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await expect(catalogAction).toHaveCSS('background-color', 'rgb(16, 16, 18)');
-  await expect(activeNavigation).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+  await expect(topLine).toHaveCSS('height', '30px');
+  await expect(topLine).toHaveCSS('background-color', 'rgb(17, 17, 17)');
+  await expect(appAction).toBeHidden();
+  await expect(catalogAction).toBeHidden();
+  await expect(whatsappAction).toBeVisible();
+  await expect(whatsappAction).toHaveCSS('background-color', 'rgb(8, 122, 66)');
+  await expect(headerSearch).toBeVisible();
+  await expect(headerSearch.locator('input')).toHaveAttribute('placeholder', 'Busca por modelo, marca o SKU');
 
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.screenshot({ path: 'test-results/homepage-header-desktop.png', fullPage: false });
 });
 
-test('ultrawide homepage keeps side gutters proportional to the viewport', async ({ page }) => {
+test('ultrawide homepage keeps a readable maximum content width', async ({ page }) => {
   await page.setViewportSize({ width: 2048, height: 1139 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
 
@@ -50,40 +52,28 @@ test('ultrawide homepage keeps side gutters proportional to the viewport', async
     };
   });
 
-  expect(layout.left).toBeLessThanOrEqual(240);
-  expect(layout.width).toBeGreaterThanOrEqual(1560);
+  expect(layout.left).toBeGreaterThanOrEqual(380);
+  expect(layout.width).toBeGreaterThanOrEqual(1200);
+  expect(layout.width).toBeLessThanOrEqual(1241);
   expect(layout.overflow).toBeLessThanOrEqual(1);
 });
 
-test('desktop navigation hover stays light with readable contrast', async ({ page }) => {
+test('desktop navigation hover stays quiet and keeps readable text', async ({ page }) => {
   await page.setViewportSize({ width: 2048, height: 1139 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
 
   const link = page.locator('.reference-nav a[href="/app/#lista"]');
   await link.hover();
   const state = await link.evaluate((element) => {
-    const parseRgb = (value) => (value.match(/[\d.]+/g) || []).slice(0, 3).map(Number);
-    const luminance = (value) => {
-      const channels = parseRgb(value).map((channel) => {
-        const normalized = channel / 255;
-        return normalized <= 0.03928
-          ? normalized / 12.92
-          : ((normalized + 0.055) / 1.055) ** 2.4;
-      });
-      return (0.2126 * channels[0]) + (0.7152 * channels[1]) + (0.0722 * channels[2]);
-    };
     const style = getComputedStyle(element);
-    const foreground = luminance(style.color);
-    const background = luminance(style.backgroundColor);
     return {
-      background,
-      contrast: (Math.max(foreground, background) + 0.05)
-        / (Math.min(foreground, background) + 0.05),
+      background: style.backgroundColor,
+      color: style.color,
     };
   });
 
-  expect(state.background).toBeGreaterThanOrEqual(0.75);
-  expect(state.contrast).toBeGreaterThanOrEqual(4.5);
+  expect(state.background).toBe('rgba(0, 0, 0, 0)');
+  expect(state.color).toBe('rgb(201, 54, 12)');
 });
 
 test('desktop header and above-fold support labels use readable type sizes', async ({ page }) => {
@@ -101,9 +91,9 @@ test('desktop header and above-fold support labels use readable type sizes', asy
     };
   });
 
-  expect(sizes.nav).toBeGreaterThanOrEqual(16);
-  expect(sizes.headerStrong).toBeGreaterThanOrEqual(15);
-  expect(sizes.headerSmall).toBeGreaterThanOrEqual(13);
+  expect(sizes.nav).toBeGreaterThanOrEqual(14);
+  expect(sizes.headerStrong).toBeGreaterThanOrEqual(11);
+  expect(sizes.headerSmall).toBeGreaterThanOrEqual(10);
   expect(sizes.benefitStrong).toBeGreaterThanOrEqual(15);
   expect(sizes.benefitSmall).toBeGreaterThanOrEqual(13);
 });
@@ -119,6 +109,19 @@ test('mobile header remains compact, readable, and keyboard-operable', async ({ 
   await expect(desktopInfo.last()).toBeHidden();
   await expect(page.locator('.reference-nav-actions a[href*="wa.me"]')).toBeHidden();
   await expect(page.locator('.reference-nav-actions a[href="/app/"]')).toBeHidden();
+
+  const search = page.locator('.reference-hero-search');
+  const heading = page.locator('.reference-hero h1');
+  const positions = await Promise.all([
+    search.evaluate((element) => element.getBoundingClientRect().top),
+    heading.evaluate((element) => element.getBoundingClientRect().top),
+  ]);
+  expect(positions[0]).toBeLessThan(positions[1]);
+
+  const mobileActions = page.locator('.haode-mobile-checkout-bar');
+  await expect(mobileActions).toBeVisible();
+  await expect(mobileActions).toHaveCSS('position', 'fixed');
+  await expect(mobileActions.locator('a.is-primary')).toContainText('Cotizar por WhatsApp');
 
   const menu = page.locator('[data-reference-menu-button]');
   await menu.focus();

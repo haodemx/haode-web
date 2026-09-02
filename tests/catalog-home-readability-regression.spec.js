@@ -75,7 +75,7 @@ test('website headers use the new horizontal HAODE quality mark', async ({ page 
   }
 });
 
-test('homepage desktop status labels remain readable on the light header', async ({ page }) => {
+test('homepage desktop status labels remain readable on the dark utility strip', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
 
@@ -83,10 +83,9 @@ test('homepage desktop status labels remain readable on the light header', async
     background: getComputedStyle(topline).backgroundColor,
     availability: getComputedStyle(topline.querySelector('.reference-head-info strong')).color,
     support: getComputedStyle(topline.querySelector('.reference-head-support strong')).color,
-    cart: getComputedStyle(topline.querySelector('.reference-head-cart strong')).color,
   }));
 
+  expect(colors.background).toBe('rgb(17, 17, 17)');
   expect(contrastRatio(colors.availability, colors.background)).toBeGreaterThanOrEqual(4.5);
   expect(contrastRatio(colors.support, colors.background)).toBeGreaterThanOrEqual(4.5);
-  expect(contrastRatio(colors.cart, colors.background)).toBeGreaterThanOrEqual(4.5);
 });
