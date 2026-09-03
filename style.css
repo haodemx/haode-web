@@ -16112,6 +16112,18 @@ body.home-page-reference .reference-sticky-whatsapp {
   }
 }
 
+/* 2026-09-03: final mobile accessibility closeout. */
+@media (max-width: 760px) {
+  .site-sales-footer-nav a,
+  .breadcrumb-nav a,
+  body.product-detail-page .seo-product-breadcrumbs a,
+  body.product-detail-page .detail-purchase-guide-link {
+    display: inline-flex;
+    min-height: 24px;
+    align-items: center;
+  }
+}
+
 /* Catalog closeout: keep the product grid retail-focused and visually quiet. */
 body.catalog-page.catalog-reference-page .shop-card {
   border: 1px solid #d9d9d3;
