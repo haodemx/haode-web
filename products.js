@@ -1433,7 +1433,6 @@ function hasAuthoritativeCustomerPrices(product) {
 function applyErpPublicCatalog(rows) {
   if (!Array.isArray(rows) || !rows.length) return;
   const localProducts = PRODUCTS.slice();
-  const catalogProducts = [];
   const usedLocalIndexes = new Set();
   const bySku = new Map();
   const byId = new Map();
@@ -1484,18 +1483,7 @@ function applyErpPublicCatalog(rows) {
     product.erpStockUpdatedAt = row.updated_at || '';
     product.whatsappText = buildProductCotizacionText(product.name, product.sku);
     if (row.image_url) product.mainImage = row.image_url;
-    catalogProducts.push(product);
   });
-
-  localProducts.forEach((product, index) => {
-    if (!usedLocalIndexes.has(index)) {
-      catalogProducts.push(product);
-    }
-  });
-
-  PRODUCTS.splice(0, PRODUCTS.length, ...catalogProducts);
-  PRODUCT_BY_ID.clear();
-  PRODUCTS.forEach((product) => PRODUCT_BY_ID.set(product.id, product));
 }
 
 function applyErpPublicStock(rows) {
@@ -1700,6 +1688,8 @@ function createFilterButton(category, isActive = false) {
 function createProductCard(product, { deferMedia = false, compact = false } = {}) {
   const article = document.createElement('article');
   article.className = `shop-card${compact ? ' shop-card-compact' : ''}`;
+  article.dataset.productId = product.id;
+  article.dataset.productSku = product.sku || '';
   article.dataset.category = product.category;
   article.dataset.salesAvailable = String(product.salesAvailable !== false);
 
@@ -1824,6 +1814,82 @@ function createProductCard(product, { deferMedia = false, compact = false } = {}
 
   article.append(overlay, media, content);
   return article;
+}
+
+function refreshRenderedCatalogCards() {
+  document.querySelectorAll('.shop-card[data-product-id]').forEach((card) => {
+    const product = PRODUCT_BY_ID.get(card.dataset.productId);
+    if (!product) return;
+
+    card.dataset.category = product.category;
+    card.dataset.salesAvailable = String(product.salesAvailable !== false);
+    const previousSku = card.dataset.productSku || '';
+    card.dataset.productSku = product.sku || '';
+
+    const productUrl = getProductUrl(product.id);
+    const overlay = card.querySelector('.shop-card-link');
+    if (overlay) {
+      overlay.href = productUrl;
+      overlay.setAttribute('aria-label', `Ver detalles de ${product.name}`);
+    }
+
+    const image = card.querySelector('.shop-media img');
+    if (image) {
+      const imageSource = buildAssetUrl(product.cardImage || product.mainImage || PLACEHOLDER_IMAGE);
+      image.alt = product.name;
+      const currentSource = image.dataset.performanceSrc || image.getAttribute('src');
+      if (currentSource !== imageSource) {
+        if (image.dataset.performanceSrc) image.dataset.performanceSrc = imageSource;
+        else image.src = imageSource;
+      }
+    }
+
+    const title = card.querySelector('.shop-content h3');
+    const productIdentityChanged = previousSku !== (product.sku || '')
+      || title?.textContent !== product.name;
+    if (title) title.textContent = product.name;
+    const priceTable = card.querySelector('.price-table');
+    if (priceTable) priceTable.setAttribute('aria-label', `Precios por cantidad de ${product.name}`);
+    const quality = card.querySelector('.shop-quality');
+    if (quality) quality.textContent = product.quality;
+    const stock = card.querySelector('.stock-badge');
+    if (stock) {
+      stock.className = `stock-badge stock-${stockClassName(product.stockStatus)}`;
+      stock.textContent = product.stockLabel || 'Consultar inventario';
+    }
+
+    const tableBody = card.querySelector('.price-table tbody');
+    if (tableBody) {
+      const currentRows = Array.from(tableBody.rows, (row) => (
+        [row.cells[0]?.textContent || '', row.cells[1]?.textContent || '']
+      ));
+      const desiredRows = product.priceTable.map((row) => [row.quantity, row.price]);
+      if (JSON.stringify(currentRows) !== JSON.stringify(desiredRows)) {
+        tableBody.innerHTML = '';
+        product.priceTable.forEach((row) => {
+          const tr = document.createElement('tr');
+          const quantity = document.createElement('th');
+          quantity.scope = 'row';
+          quantity.textContent = row.quantity;
+          const price = document.createElement('td');
+          price.textContent = row.price;
+          tr.append(quantity, price);
+          tableBody.appendChild(tr);
+        });
+      }
+    }
+
+    const note = card.querySelector('.shop-note');
+    if (note) {
+      note.textContent = product.salesAvailable === false
+        ? 'Precio pendiente de confirmación. Consulta disponibilidad por WhatsApp.'
+        : 'Precios por cantidad. Caja es el mejor precio publicado; más volumen se cotiza por WhatsApp.';
+    }
+    const details = card.querySelector('.shop-details');
+    if (details) details.href = productUrl;
+    const whatsapp = card.querySelector('.shop-cta');
+    if (whatsapp && productIdentityChanged) whatsapp.href = buildWhatsAppUrl(product.whatsappText);
+  });
 }
 
 function getRelatedProducts(product, limit = 3) {
@@ -3034,14 +3100,19 @@ function renderInitialProductViews() {
 }
 
 async function hydrateProductViews() {
-    const catalogRows = await loadErpPublicCatalog();
-    if (catalogRows.length) {
-      applyErpPublicCatalog(catalogRows);
-    } else {
-      applyErpPublicStock(await loadErpPublicStock());
-    }
-    renderCatalogPage();
-    renderProductDetailPage();
+  const catalogAlreadyRendered = Boolean(document.querySelector('[data-product-sections]'));
+  const catalogRows = await loadErpPublicCatalog();
+  if (catalogRows.length) {
+    applyErpPublicCatalog(catalogRows);
+  } else {
+    applyErpPublicStock(await loadErpPublicStock());
+  }
+  // Keep the initial catalog structure stable for LCP while applying approved
+  // ERP data to the existing cards. Product count and grouping remain governed
+  // by the verified local allowlist.
+  if (catalogAlreadyRendered) refreshRenderedCatalogCards();
+  else renderCatalogPage();
+  renderProductDetailPage();
 }
 
 // This script is loaded at the end of the document. Render the static product
