@@ -1697,9 +1697,9 @@ function createFilterButton(category, isActive = false) {
   return button;
 }
 
-function createProductCard(product, { deferMedia = false } = {}) {
+function createProductCard(product, { deferMedia = false, compact = false } = {}) {
   const article = document.createElement('article');
-  article.className = 'shop-card';
+  article.className = `shop-card${compact ? ' shop-card-compact' : ''}`;
   article.dataset.category = product.category;
   article.dataset.salesAvailable = String(product.salesAvailable !== false);
 
@@ -1817,7 +1817,7 @@ function createProductCard(product, { deferMedia = false } = {}) {
   const details = document.createElement('a');
   details.className = 'btn btn-secondary shop-details';
   details.href = getProductUrl(product.id);
-  details.textContent = 'Ver producto';
+  details.textContent = compact ? 'Ver producto y precios' : 'Ver producto';
 
   actions.append(details, whatsapp);
   content.append(title, badgeRow, quality, stock, bulkPrompt, priceWrap, actions);
@@ -2211,6 +2211,34 @@ function renderCatalogPage() {
     return product.category;
   }
 
+  function getCatalogInitialVisibleLimit() {
+    return window.matchMedia('(max-width: 720px)').matches ? 4 : 8;
+  }
+
+  function setCatalogElementVisible(element, isVisible) {
+    if (!element) return;
+    element.hidden = !isVisible;
+    element.style.display = isVisible ? '' : 'none';
+    element.setAttribute('aria-hidden', String(!isVisible));
+  }
+
+  function applyCategoryDisclosure(block, matchingCards, forceShowAll = false) {
+    const reveal = block.querySelector('[data-catalog-reveal]');
+    const limit = getCatalogInitialVisibleLimit();
+    const isExpanded = block.dataset.catalogExpanded === 'true';
+    const showAll = forceShowAll || isExpanded || matchingCards.length <= limit;
+
+    matchingCards.forEach((card, index) => {
+      setCatalogElementVisible(card, showAll || index < limit);
+    });
+
+    const hiddenCount = showAll ? 0 : Math.max(0, matchingCards.length - limit);
+    if (reveal) {
+      reveal.textContent = hiddenCount ? `Mostrar ${hiddenCount} modelos más` : 'Todos los modelos visibles';
+      setCatalogElementVisible(reveal, hiddenCount > 0);
+    }
+  }
+
   function renderCategoryBlock(category, products, groupId = '') {
     const meta = CATEGORY_META[category];
     if (!meta || !products.length) return null;
@@ -2238,9 +2266,12 @@ function renderCatalogPage() {
 
     const grid = document.createElement('div');
     grid.className = 'product-page-grid shop-grid';
+    grid.id = `catalog-grid-${groupId || 'general'}-${category}`;
 
-    products.forEach((product) => {
-      const productCard = createProductCard(product);
+    const initialLimit = getCatalogInitialVisibleLimit();
+
+    products.forEach((product, index) => {
+      const productCard = createProductCard(product, { deferMedia: index >= initialLimit, compact: true });
       const filterTags = getCatalogFilterTags(product, groupId);
       const searchIndex = buildCatalogSearchIndex([
         buildCatalogSearchText(product, meta),
@@ -2258,7 +2289,20 @@ function renderCatalogPage() {
       grid.appendChild(productCard);
     });
 
-    block.append(titleWrap, count, grid);
+    const reveal = document.createElement('button');
+    reveal.type = 'button';
+    reveal.className = 'catalog-reveal';
+    reveal.dataset.catalogReveal = category;
+    reveal.setAttribute('aria-controls', grid.id);
+    reveal.addEventListener('click', () => {
+      block.dataset.catalogExpanded = 'true';
+      const matchingCards = Array.from(block.querySelectorAll('[data-catalog-card]'))
+        .filter((card) => card.dataset.catalogMatches !== 'false');
+      applyCategoryDisclosure(block, matchingCards, true);
+    });
+
+    block.append(titleWrap, count, grid, reveal);
+    applyCategoryDisclosure(block, Array.from(grid.querySelectorAll('[data-catalog-card]')));
     return block;
   }
 
@@ -2340,13 +2384,6 @@ function renderCatalogPage() {
       query: '',
     };
 
-    const setVisible = (element, isVisible) => {
-      if (!element) return;
-      element.hidden = !isVisible;
-      element.style.display = isVisible ? '' : 'none';
-      element.setAttribute('aria-hidden', String(!isVisible));
-    };
-
     const matchesActiveFilter = (element) => {
       if (state.activeType === 'all') return true;
       const tags = `${element.dataset.catalogFilter || ''} ${element.dataset.catalogTags || ''}`.split(/\s+/).filter(Boolean);
@@ -2366,15 +2403,20 @@ function renderCatalogPage() {
 
       section.querySelectorAll('.catalog-category-block').forEach((block) => {
         let visibleInBlock = 0;
+        const matchingCards = [];
         block.querySelectorAll('[data-catalog-card]').forEach((card) => {
           const isVisible = matchesActiveFilter(card) && matchesSearch(card);
-          setVisible(card, isVisible);
+          card.dataset.catalogMatches = String(isVisible);
           if (isVisible) {
+            matchingCards.push(card);
             visibleInBlock += 1;
             visibleResults += 1;
+          } else {
+            setCatalogElementVisible(card, false);
           }
         });
-        setVisible(block, visibleInBlock > 0);
+        applyCategoryDisclosure(block, matchingCards, state.activeType !== 'all' || Boolean(state.query));
+        setCatalogElementVisible(block, visibleInBlock > 0);
         const blockCount = block.querySelector('.catalog-count');
         if (blockCount) blockCount.textContent = visibleInBlock ? `${visibleInBlock} modelos` : 'Sin resultados';
       });
@@ -2382,16 +2424,16 @@ function renderCatalogPage() {
       let visibleFeatures = 0;
       section.querySelectorAll('[data-catalog-feature]').forEach((card) => {
         const isVisible = matchesActiveFilter(card) && matchesSearch(card);
-        setVisible(card, isVisible);
+        setCatalogElementVisible(card, isVisible);
         if (isVisible) {
           visibleFeatures += 1;
           visibleResults += 1;
         }
       });
 
-      setVisible(section.querySelector('[data-catalog-feature-grid]'), visibleFeatures > 0);
+      setCatalogElementVisible(section.querySelector('[data-catalog-feature-grid]'), visibleFeatures > 0);
       updateCatalogEmptyCard(emptyState, searchInput?.value || '', group.title);
-      setVisible(emptyState, visibleResults === 0);
+      setCatalogElementVisible(emptyState, visibleResults === 0);
       if (resultCount) {
         const filterLabel = group.controls.filters.find((filter) => filter.id === state.activeType)?.label || group.title;
         const suffix = state.query ? ` para "${searchInput.value.trim()}"` : '';
@@ -2431,13 +2473,6 @@ function renderCatalogPage() {
       query: '',
     };
 
-    const setVisible = (element, isVisible) => {
-      if (!element) return;
-      element.hidden = !isVisible;
-      element.style.display = isVisible ? '' : 'none';
-      element.setAttribute('aria-hidden', String(!isVisible));
-    };
-
     const applyFilter = () => {
       pantallasState.query = normalizeCatalogSearchText(searchInput?.value || '');
       const compactQuery = pantallasState.query.replace(/\s+/g, '');
@@ -2446,19 +2481,28 @@ function renderCatalogPage() {
 
       section.querySelectorAll('.catalog-category-block').forEach((block) => {
         let visibleInBlock = 0;
+        const matchingCards = [];
         block.querySelectorAll('[data-pantallas-card]').forEach((card) => {
           const matchesFilter = pantallasState.activeType === 'all' || card.dataset.pantallasFilter === pantallasState.activeType;
           const searchText = card.dataset.pantallasSearch || '';
           const matchesQuery = !pantallasState.query || searchText.includes(pantallasState.query) || searchText.includes(compactQuery);
           const isVisible = matchesFilter && matchesQuery;
-          setVisible(card, isVisible);
+          card.dataset.catalogMatches = String(isVisible);
           if (isVisible) {
+            matchingCards.push(card);
             visibleInBlock += 1;
             visibleResults += 1;
             visibleProducts += 1;
+          } else {
+            setCatalogElementVisible(card, false);
           }
         });
-        setVisible(block, visibleInBlock > 0);
+        applyCategoryDisclosure(
+          block,
+          matchingCards,
+          pantallasState.activeType !== 'all' || Boolean(pantallasState.query),
+        );
+        setCatalogElementVisible(block, visibleInBlock > 0);
         const blockCount = block.querySelector('.catalog-count');
         if (blockCount) blockCount.textContent = visibleInBlock ? `${visibleInBlock} modelos` : 'Sin resultados';
       });
@@ -2469,7 +2513,7 @@ function renderCatalogPage() {
         const searchText = card.dataset.pantallasSearch || '';
         const matchesQuery = !pantallasState.query || searchText.includes(pantallasState.query) || searchText.includes(compactQuery);
         const isVisible = matchesFilter && matchesQuery;
-        setVisible(card, isVisible);
+        setCatalogElementVisible(card, isVisible);
         if (isVisible) {
           visibleFeatures += 1;
           visibleResults += 1;
@@ -2477,9 +2521,9 @@ function renderCatalogPage() {
         }
       });
 
-      setVisible(section.querySelector('[data-pantallas-feature-grid]'), visibleFeatures > 0);
+      setCatalogElementVisible(section.querySelector('[data-pantallas-feature-grid]'), visibleFeatures > 0);
       updateCatalogEmptyCard(emptyState, searchInput?.value || '', 'Pantallas');
-      setVisible(emptyState, visibleResults === 0);
+      setCatalogElementVisible(emptyState, visibleResults === 0);
       if (resultCount) {
         const filterLabel = PANTALLAS_FILTERS.find((filter) => filter.id === pantallasState.activeType)?.label || 'Pantallas';
         const suffix = pantallasState.query ? ` para "${searchInput.value.trim()}"` : '';
