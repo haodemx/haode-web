@@ -130,20 +130,23 @@
   }
 
   function ensureConsentStylesheet() {
-    if (global.document.querySelector('link[data-haode-privacy-styles]')) return;
+    const existing = global.document.querySelector('link[data-haode-privacy-styles]');
+    if (existing) return existing;
     const stylesheet = global.document.createElement("link");
     stylesheet.rel = "stylesheet";
     stylesheet.href = "/privacy-consent.css?v=20260902-content-consistency";
     stylesheet.setAttribute("data-haode-privacy-styles", "");
     global.document.head.appendChild(stylesheet);
+    return stylesheet;
   }
 
   function mountPrivacyControls() {
     if (!global.document.body || global.document.querySelector("[data-haode-privacy-root]")) return;
-    ensureConsentStylesheet();
+    const stylesheet = ensureConsentStylesheet();
 
     const root = global.document.createElement("div");
     root.setAttribute("data-haode-privacy-root", "");
+    root.hidden = true;
     root.innerHTML = `
       <section class="haode-privacy-banner" data-haode-privacy-banner role="region" aria-labelledby="haode-privacy-title" aria-describedby="haode-privacy-copy" hidden>
         <div class="haode-privacy-banner-copy">
@@ -278,6 +281,16 @@
       hideChoiceSurfaces();
     } else {
       showBanner();
+    }
+
+    const revealStyledControls = () => {
+      root.hidden = false;
+    };
+    if (stylesheet?.sheet) {
+      revealStyledControls();
+    } else {
+      stylesheet?.addEventListener("load", revealStyledControls, { once: true });
+      stylesheet?.addEventListener("error", revealStyledControls, { once: true });
     }
   }
 

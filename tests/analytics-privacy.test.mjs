@@ -87,6 +87,14 @@ test('analytics defaults storage to denied and gates the Google tag on consent',
   assert.match(analytics, /page_location: analyticsPageLocation\(\)/);
 });
 
+test('privacy controls do not flash before their stylesheet is ready', () => {
+  const analytics = readFile('analytics.js');
+  assert.match(analytics, /root\.hidden = true;/);
+  assert.match(analytics, /stylesheet\?\.addEventListener\("load", revealStyledControls/);
+  assert.match(analytics, /stylesheet\?\.addEventListener\("error", revealStyledControls/);
+  assert.match(analytics, /root\.hidden = false;/);
+});
+
 test('campaign attribution persists only after analytics consent', () => {
   const campaign = fs.readFileSync(path.join(ROOT, 'campaign-attribution.js'), 'utf8');
   assert.match(campaign, /function hasAnalyticsConsent\(\)/);
