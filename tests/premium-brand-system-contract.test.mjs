@@ -10,6 +10,7 @@ const [publicCss, appCss, homepage, catalog, productTemplate, appShell] = await 
   readFile(new URL('../producto/iphone-incell-14/index.html', import.meta.url), 'utf8'),
   readFile(new URL('../app/index.html', import.meta.url), 'utf8'),
 ]);
+const appScript = await readFile(new URL('../app/app.js', import.meta.url), 'utf8');
 
 const publicLayer = publicCss.split('/* HAODE premium brand system */')[1] || '';
 const appLayer = appCss.split('/* HAODE premium brand system */')[1] || '';
@@ -76,4 +77,10 @@ test('brand refinement preserves core website and App commerce hooks', () => {
   assert.match(appShell, /id="app-root"/);
   assert.match(appShell, /data-open-cart/);
   assert.match(appShell, /class="bottom-nav"/);
+});
+
+test('mobile navigation targets and App product media stay accessible', () => {
+  assert.match(publicCss, /\.site-sales-footer-nav a,[\s\S]*\.breadcrumb-nav a,[\s\S]*\.detail-purchase-guide-link[\s\S]*min-height:\s*24px/);
+  assert.match(appScript, /class="product-media"[^>]+aria-label="Ver /);
+  assert.match(appScript, /class="app-home-product-media"[^>]+aria-label="Ver /);
 });

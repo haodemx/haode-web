@@ -1087,7 +1087,7 @@ function productCardHtml(product, compact = false) {
   const productId = escapeAttr(product.id);
   return `
     <article class="product-card">
-      <a class="product-media" href="${productUrl}">
+      <a class="product-media" href="${productUrl}" aria-label="Ver ${escapeAttr(product.displayName || product.name)}">
         <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" width="640" height="640" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
@@ -1122,7 +1122,7 @@ function homeProductRowHtml(product) {
   const productId = escapeAttr(product.id);
   return `
     <article class="product-card app-home-product-card">
-      <a class="app-home-product-media" href="${escapeAttr(appProductUrl(product))}">
+      <a class="app-home-product-media" href="${escapeAttr(appProductUrl(product))}" aria-label="Ver ${escapeAttr(product.displayName || product.name)}">
         <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" width="700" height="620" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
       </a>
