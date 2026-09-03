@@ -137,6 +137,11 @@
   }
 
   function decorateCurrentPage() {
+    const params = new URLSearchParams(global.location.search);
+    const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content"]
+      .some((key) => params.has(key));
+    const storedAttribution = readStored();
+    if (!hasIncomingCampaign && !reference(storedAttribution)) return;
     const attribution = capture();
     global.document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach((link) => {
       decorateWhatsAppLink(link, attribution);
