@@ -16112,6 +16112,57 @@ body.home-page-reference .reference-sticky-whatsapp {
   }
 }
 
+/* Catalog closeout: keep the product grid retail-focused and visually quiet. */
+body.catalog-page.catalog-reference-page .shop-card {
+  border: 1px solid #d9d9d3;
+  border-top: 2px solid #ef4f16;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+body.catalog-page.catalog-reference-page .shop-card::before {
+  display: none;
+}
+
+body.catalog-page.catalog-reference-page .shop-card:hover {
+  border-color: #bdbdb6;
+  box-shadow: none;
+  transform: none;
+}
+
+body.catalog-page.catalog-reference-page .shop-media {
+  overflow: hidden;
+  border: 0;
+  border-bottom: 1px solid #e5e5df;
+  border-radius: 0;
+  background: #f5f5f2;
+  box-shadow: none;
+}
+
+body.catalog-page.catalog-reference-page .shop-media::after {
+  display: none;
+}
+
+body.catalog-page.catalog-reference-page .shop-brand {
+  padding: 3px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+body.catalog-page.catalog-reference-page .stock-badge {
+  padding: 3px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+body.catalog-page.catalog-reference-page .shop-actions .btn {
+  border-radius: 4px;
+  box-shadow: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.home-page-reference,
   body.home-page-reference *,
