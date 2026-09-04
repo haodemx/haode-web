@@ -6,6 +6,58 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
+test('diagnostic iPhone category aligns Mexican search intent without changing its canonical route', () => {
+  const html = read('categoria/oled-diagnostica/index.html');
+  const title = 'Pantallas diagnóstico para iPhone | HAODE México';
+  assert.ok(html.includes(`<title>${title}</title>`));
+  assert.ok(html.includes(`<meta property="og:title" content="${title}"`));
+  assert.equal((html.match(/<h1[ >]/g) || []).length, 1);
+  assert.match(html, /<h1>Pantallas diagnóstico para iPhone<\/h1>/);
+  assert.match(html, /<meta name="description" content="Pantallas diagnóstico para iPhone/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/haode.com.mx\/categoria\/oled-diagnostica\/"/);
+  assert.match(html, /data-category="oled-diagnostica"/);
+  assert.match(html, /name="robots" content="index,follow/);
+  assert.ok(read('sitemap.xml').includes('<loc>https://haode.com.mx/categoria/oled-diagnostica/</loc>'));
+  assert.doesNotMatch(html, /https:\/\/schema.org\/InStock|aggregateRating/);
+});
+
+test('diagnostic FAQ schema exactly matches visible answers and qualifies technical claims', () => {
+  const html = read('categoria/oled-diagnostica/index.html');
+  const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+  const graph = jsonLdBlocks(html).flatMap(block => block['@graph'] || [block]);
+  const faq = graph.find(node => node['@type'] === 'FAQPage');
+  assert.equal(faq.mainEntity.length, 4);
+  for (const question of faq.mainEntity) {
+    assert.ok(visible.includes(`<h3>${question.name}</h3>`));
+    assert.ok(visible.includes(`<p>${question.acceptedAnswer.text}</p>`));
+  }
+  assert.match(visible, /pantallas diagnosticables/);
+  assert.match(visible, /No es una guía para entrar al modo de diagnóstico del teléfono/);
+  assert.match(visible, /HAODE no los garantiza para toda la categoría/);
+  assert.match(visible, /modelo o SKU/);
+  assert.match(visible, /versión de iOS/);
+  assert.match(visible, /Disponibilidad, precio final, garantía y envío se confirman/);
+  const collection = graph.find(node => node['@type'] === 'CollectionPage');
+  assert.equal(collection.inLanguage, 'es-MX');
+  for (const item of collection.mainEntity.itemListElement) {
+    assert.ok(visible.includes(`href="${new URL(item.url).pathname}"`));
+    assert.ok(visible.includes(item.name));
+  }
+});
+
+test('diagnostic category has crawlable incoming links and existing local destinations', () => {
+  for (const page of ['categoria/iphone-oled/index.html', 'guia-ia-haode-mexico/index.html']) {
+    assert.match(read(page), /href="\/categoria\/oled-diagnostica\/"[^>]*>(?:<strong>)?Pantallas diagnóstico para iPhone/i);
+  }
+  const html = read('categoria/oled-diagnostica/index.html');
+  const links = [...html.matchAll(/href="(\/[^"?#]*)/g)].map(([, href]) => href);
+  for (const href of links) {
+    const destination = href.endsWith('/') ? `${href}index.html` : href;
+    assert.ok(fs.existsSync(path.join(ROOT, destination)), `Missing destination: ${href}`);
+  }
+  assert.match(html, /wa\.me\/525645866014/);
+});
+
 function read(relativePath) {
   return fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
 }
