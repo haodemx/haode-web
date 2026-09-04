@@ -214,10 +214,12 @@ img {
 .app-shell {
   width: min(100% - 28px, 1180px);
   margin: 0 auto;
+  display: flow-root;
 }
 
 [data-view-root] {
-  min-height: calc(100dvh - 152px);
+  display: flow-root;
+  min-height: 100dvh;
 }
 
 .app-seo-title,

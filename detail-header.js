@@ -80,7 +80,7 @@
   app.className = 'detail-header-action detail-header-app';
   app.setAttribute('data-detail-header-app', '');
   app.href = '/app/';
-  app.setAttribute('aria-label', 'Comprar en la APP HAODE');
+  app.setAttribute('aria-label', 'Comprar en APP HAODE');
   app.innerHTML = '<span class="detail-header-mark" aria-hidden="true">A</span><span>Comprar en APP</span>';
 
   actions.append(whatsapp, app);
