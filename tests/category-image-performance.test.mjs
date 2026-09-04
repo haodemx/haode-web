@@ -17,7 +17,7 @@ function listHtmlFiles(directory) {
 }
 
 test('category cards request existing display variants near the viewport', () => {
-  assert.match(source, /replace\(\/\\\/main\\\.\(\?:jpe\?g\|png\)\$\/i, '\/main\.display\.webp'\)/);
+  assert.match(source, /replace\(\/\\\.\(\?:jpe\?g\|png\)\$\/i, '\.display\.webp'\)/);
   assert.match(source, /data-product-src=/);
   assert.match(source, /rootMargin: '256px 0px'/);
   assert.match(source, /IntersectionObserver/);
@@ -58,6 +58,17 @@ test('screen wholesale panels use existing optimized display assets', () => {
     const html = read(path);
     assert.match(html, new RegExp(`reference-conversion-panel[\\s\\S]*?src="/assets/products/${asset.replaceAll('.', '\\.')}"`));
     assert.match(html, /brand-logo" src="\/assets\/images\/factory-store-wordmark\.png"/);
+  }
+});
+
+test('static Samsung original cards use existing display assets', () => {
+  const html = read('categoria/samsung-tipo-original/index.html');
+  const images = [...html.matchAll(/<img src="(\/assets\/products\/samsung-original\/[^"]+)"/g)]
+    .map((match) => match[1]);
+  assert.equal(images.length, 9);
+  for (const image of images) {
+    assert.match(image, /\/main\.display\.webp$/);
+    assert.ok(existsSync(join(repoRoot, image)), `${image} should exist`);
   }
 });
 

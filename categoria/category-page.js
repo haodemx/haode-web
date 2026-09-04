@@ -30,7 +30,7 @@
   function toCardImagePath(imagePath) {
     const original = toAssetPath(imagePath);
     if (!original.startsWith('/assets/products/')) return original;
-    return original.replace(/\/main\.(?:jpe?g|png)$/i, '/main.display.webp');
+    return original.replace(/\.(?:jpe?g|png)$/i, '.display.webp');
   }
 
   let categoryImageObserver;
