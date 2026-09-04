@@ -11,6 +11,7 @@ const pages = [
     title: "Pantallas iPhone de mayoreo en Mexico | HAODE",
     meta: "Pantallas iPhone de mayoreo en Mexico para técnicos y talleres. Encuentra opciones INCELL y OLED, confirma modelo, cantidad, disponibilidad y precio por WhatsApp con HAODE.",
     ogImage: "/assets/products/iphone-oled/main.jpg",
+    panelImage: "/assets/products/iphone-oled/main-card.webp",
     kicker: "Todo en iPhone",
     h1: "Pantallas iPhone de mayoreo",
     hero: "Entrada única para clientes que compran pantallas iPhone al por mayor. Separa calidad (INCELL u OLED), modelo y cantidad para una cotización más rápida.",
@@ -34,6 +35,7 @@ const pages = [
     title: "Pantallas iPhone INCELL de mayoreo en Mexico | HAODE",
     meta: "Pantallas iPhone INCELL de mayoreo en Mexico para tecnicos y talleres. Confirma modelo, cantidad, disponibilidad y precio por WhatsApp con HAODE.",
     ogImage: "/assets/products/iphone-incell/main.jpg",
+    panelImage: "/assets/products/iphone-incell/main-card.webp",
     kicker: "iPhone INCELL",
     h1: "Pantallas iPhone INCELL de mayoreo",
     hero: "Entrada directa para talleres que compran modelos iPhone de alta rotacion. Separa version, cantidad y ciudad para confirmar disponibilidad, precio aplicable y envio.",
@@ -57,6 +59,7 @@ const pages = [
     title: "Pantallas iPhone OLED de mayoreo en Mexico | HAODE",
     meta: "Pantallas iPhone OLED de mayoreo en Mexico para modelos Pro y Pro Max. Consulta calidad, cantidad, disponibilidad y precio por WhatsApp.",
     ogImage: "/assets/products/iphone-oled/main.jpg",
+    panelImage: "/assets/products/iphone-oled/main-card.webp",
     kicker: "iPhone OLED",
     h1: "Pantallas iPhone OLED para compra profesional",
     hero: "Pagina para clientes que buscan lineas OLED para iPhone. Antes de comprar, confirma modelo, calidad, cantidad y ciudad para evitar diferencias entre versiones.",
@@ -80,6 +83,7 @@ const pages = [
     title: "Pantallas Samsung INCELL de mayoreo en Mexico | HAODE",
     meta: "Pantallas Samsung INCELL de mayoreo en Mexico para Galaxy S, Note y Plus. Cotiza modelo, cantidad, disponibilidad y envio por WhatsApp.",
     ogImage: "/assets/products/samsung-incell/main.jpg",
+    panelImage: "/assets/products/samsung-incell/main-card.webp",
     kicker: "Samsung INCELL",
     h1: "Pantallas Samsung INCELL de mayoreo",
     hero: "Entrada para talleres que compran Galaxy INCELL por modelo. Separa Samsung INCELL de OLED y TIPO ORIGINAL antes de cotizar.",
@@ -103,6 +107,7 @@ const pages = [
     title: "Pantallas Samsung OLED de mayoreo en México | HAODE",
     meta: "Pantallas Samsung OLED de mayoreo en México para técnicos y talleres. Confirma modelo, cantidad, disponibilidad y precio por WhatsApp.",
     ogImage: "/assets/products/samsung-oled/s24-ultra/main.jpg",
+    panelImage: "/assets/products/samsung-oled/s24-ultra/main.display.webp",
     kicker: "Samsung OLED",
     h1: "Pantallas Samsung OLED de mayoreo",
     hero: "Entrada para talleres que buscan pantallas Samsung OLED por modelo. Confirma la serie Galaxy, la calidad y la cantidad antes de solicitar cotización.",
@@ -126,6 +131,7 @@ const pages = [
     title: "Pantallas Samsung Z Flip y Z Fold TIPO ORIGINAL | HAODE",
     meta: "Pantallas Samsung Z Flip y Z Fold TIPO ORIGINAL en Mexico. Cotiza modelo, version, cantidad, disponibilidad y envio por WhatsApp.",
     ogImage: "/assets/products/samsung-original/z-flip5/main.png",
+    panelImage: "/assets/products/samsung-original/z-flip5/main.display.webp",
     kicker: "Z Flip y Z Fold",
     h1: "Samsung Z Flip y Z Fold TIPO ORIGINAL",
     hero: "Busqueda enfocada en plegables Samsung. Estos modelos requieren confirmar serie, version y calidad antes de preparar una cotizacion.",
@@ -277,7 +283,7 @@ ${JSON.stringify(jsonLdFor(page), null, 2)}
 <body class="new-page seo-conversion-page conversion-reference-page seo-exposure-page">
   <header class="topbar catalog-topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/logo/logo.png" alt="Logo oficial de HAODE" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
+      <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/images/factory-store-wordmark.png" alt="HAODE Refacciones para Celular" width="200" height="58" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
       <nav class="topnav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/productos/">Productos</a><a href="/app/">App</a><a href="/distribuidores/">Distribuidores</a><a href="/contacto/">Contacto</a></nav>
     </div>
   </header>
@@ -307,7 +313,7 @@ ${JSON.stringify(jsonLdFor(page), null, 2)}
     <section class="section">
       <div class="wrap section-shell">
         <div class="reference-conversion-panel detail-conversion-panel" data-reference-conversion="seo-${page.campaign}">
-          <img src="${page.ogImage}" alt="${page.h1} HAODE" loading="eager" decoding="async" />
+          <img src="${page.panelImage || page.ogImage}" alt="${page.h1} HAODE" loading="${page.panelImage ? 'eager' : 'lazy'}" decoding="async" />
           <div>
             <p class="reference-panel-kicker">Busqueda de compra</p>
             <h2>Confirma modelo, cantidad y ciudad antes de preparar pedido</h2>

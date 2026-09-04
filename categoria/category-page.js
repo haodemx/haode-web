@@ -27,6 +27,43 @@
     return '/assets/products/placeholder.svg';
   }
 
+  function toCardImagePath(imagePath) {
+    const original = toAssetPath(imagePath);
+    if (!original.startsWith('/assets/products/')) return original;
+    return original.replace(/\/main\.(?:jpe?g|png)$/i, '/main.display.webp');
+  }
+
+  let categoryImageObserver;
+
+  function loadCategoryImage(image) {
+    const source = image.dataset.productSrc;
+    const fallback = image.dataset.productFallback;
+    if (!source) return;
+    image.addEventListener('error', () => {
+      if (fallback && image.getAttribute('src') !== fallback) image.src = fallback;
+    }, { once: true });
+    image.src = source;
+    delete image.dataset.productSrc;
+    delete image.dataset.productFallback;
+  }
+
+  function hydrateCategoryImages(root) {
+    categoryImageObserver?.disconnect();
+    const images = [...root.querySelectorAll('[data-product-src]')];
+    if (!('IntersectionObserver' in window)) {
+      images.forEach(loadCategoryImage);
+      return;
+    }
+    categoryImageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        categoryImageObserver.unobserve(entry.target);
+        loadCategoryImage(entry.target);
+      });
+    }, { rootMargin: '256px 0px' });
+    images.forEach((image) => categoryImageObserver.observe(image));
+  }
+
   function buildWhatsappUrl(item) {
     const existingText = item.whatsappText || '';
     const productName = item.name || item.model || 'producto';
@@ -108,13 +145,15 @@
     article.className = 'new-product-card';
 
     const image = item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
+    const originalImage = toAssetPath(image);
+    const cardImage = toCardImagePath(image);
     const priceRows = priceRowsFor(item);
 
     const detailHref = `/producto/${encodeURIComponent(String(item.id || ''))}/`;
 
     article.innerHTML = `
       <div class="new-product-visual">
-        <img src="${escapeHtml(toAssetPath(image))}" alt="${escapeHtml(item.name || item.model || 'Producto')}" loading="lazy" decoding="async" />
+        <img src="/assets/products/placeholder.svg" data-product-src="${escapeHtml(cardImage)}" data-product-fallback="${escapeHtml(originalImage)}" alt="${escapeHtml(item.name || item.model || 'Producto')}" loading="lazy" decoding="async" />
         <span class="new-arrival-tag">SKU ${escapeHtml(item.sku || item.id || 'HAODE')}</span>
       </div>
       <div class="new-product-content">
@@ -253,6 +292,7 @@
         for (const item of visibleProducts) {
           root.appendChild(buildProductCard(item));
         }
+        hydrateCategoryImages(root);
       } else {
         renderNoMatches(root, category, query);
       }

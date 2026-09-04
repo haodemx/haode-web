@@ -81,7 +81,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await expectUnifiedDetailHeader(page);
       const quoteButton = page.locator('[data-detail-header-whatsapp]').first();
       await expect(quoteButton).toBeVisible();
-      await expect(quoteButton).toHaveAttribute('aria-label', /Cotizar por WhatsApp/);
+      await expect(quoteButton).toHaveAccessibleName(/WhatsApp privado.*Cotizar por WhatsApp/);
       const firstQuoteVisible = await quoteButton.evaluate((el) => {
         const rect = el.getBoundingClientRect();
         return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;

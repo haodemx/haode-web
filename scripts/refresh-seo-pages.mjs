@@ -257,8 +257,16 @@ function productBreadcrumbMarkup(product) {
 function productVideoMarkup(product) {
   const videoPath = product.videos?.[0];
   if (!videoPath) return '';
-  const poster = product.images?.[0] ? ` poster="/${escapeHtml(product.images[0])}"` : '';
+  const posterPath = productVideoPosterPath(product);
+  const poster = posterPath ? ` poster="/${escapeHtml(posterPath)}"` : '';
   return `<video controls playsinline preload="none"${poster} data-seo-static-video="20260821"><source src="/${escapeHtml(videoPath)}" type="video/mp4" /></video>`;
+}
+
+function productVideoPosterPath(product) {
+  const original = product.images?.[0];
+  if (!original) return '';
+  const candidate = original.replace(/\/main\.(?:jpe?g|png)$/i, '/main.display.webp');
+  return candidate !== original && fs.existsSync(path.join(ROOT, candidate)) ? candidate : original;
 }
 
 function productGuideMarkup(product, products) {
@@ -324,9 +332,16 @@ function strengthenProductPage(html, product, products) {
   }
   updated = updated.replace(
     /<video\b[^>]*data-seo-static-video=["']20260821["'][^>]*>/gi,
-    (tag) => /\bpreload=["'][^"']*["']/i.test(tag)
-      ? tag.replace(/\bpreload=["'][^"']*["']/i, 'preload="none"')
-      : tag.replace(/>$/, ' preload="none">'),
+    (tag) => {
+      const posterPath = productVideoPosterPath(product);
+      let updatedTag = /\bpreload=["'][^"']*["']/i.test(tag)
+        ? tag.replace(/\bpreload=["'][^"']*["']/i, 'preload="none"')
+        : tag.replace(/>$/, ' preload="none">');
+      if (posterPath && /\bposter=["'][^"']*["']/i.test(updatedTag)) {
+        updatedTag = updatedTag.replace(/\bposter=["'][^"']*["']/i, `poster="/${escapeHtml(posterPath)}"`);
+      }
+      return updatedTag;
+    },
   );
   const schemas = [productBreadcrumbSchema(product), productVideoSchema(product)].filter(Boolean).join('\n');
   updated = updated.replace(/<\/head>/i, `${schemas}\n</head>`);
