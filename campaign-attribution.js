@@ -41,7 +41,7 @@
       try {
         const stored = JSON.parse(storage.getItem(STORAGE_KEY) || "{}");
         const capturedAt = Number(stored.capturedAt || 0);
-        const hasAttribution = ["source", "medium", "campaign", "content"]
+        const hasAttribution = ["source", "medium", "campaign", "content", "term"]
           .some((key) => Boolean(stored[key]));
         if (hasAttribution && (!capturedAt || Date.now() - capturedAt <= MAX_ATTRIBUTION_AGE_MS)) {
           return stored;
@@ -79,7 +79,7 @@
   function capture({ channel = "haode_web" } = {}) {
     const params = new URLSearchParams(global.location.search);
     const stored = readStored();
-    const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content"]
+    const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
       .some((key) => params.has(key));
     const defaultMedium = channel === "haode_app" ? "owned_app" : "owned_web";
     const storedOrReferrerSource = normalizeToken(stored.source || referrerSource(), channel);
@@ -95,6 +95,7 @@
           medium: normalizeToken(params.get("utm_medium"), defaultMedium),
           campaign: normalizeToken(params.get("utm_campaign")),
           content: normalizeToken(params.get("utm_content")),
+          term: normalizeToken(params.get("utm_term")),
           landingPage: global.location.pathname || "/",
           capturedAt: Date.now()
         }
@@ -103,6 +104,7 @@
           medium: normalizeToken(stored.medium, inferredMedium),
           campaign: normalizeToken(stored.campaign),
           content: normalizeToken(stored.content),
+          term: normalizeToken(stored.term),
           landingPage: String(stored.landingPage || global.location.pathname || "/").slice(0, 240),
           capturedAt: Number(stored.capturedAt || Date.now())
         };
@@ -138,7 +140,7 @@
 
   function decorateCurrentPage() {
     const params = new URLSearchParams(global.location.search);
-    const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content"]
+    const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
       .some((key) => params.has(key));
     const storedAttribution = readStored();
     if (!hasIncomingCampaign && !reference(storedAttribution)) return;

@@ -7,7 +7,7 @@
     "test:approved-editorial-release": "node --test tests/approved-editorial-release-contract.test.mjs",
     "test:premium-brand-system": "node --test tests/premium-brand-system-contract.test.mjs",
     "test:homepage-human-design": "node --test tests/homepage-human-design-contract.test.mjs",
-    "test:campaign-links": "node --test tests/campaign-links.test.mjs",
+    "test:campaign-links": "node --test tests/campaign-links.test.mjs tests/campaign-keyword.test.mjs",
     "test:analytics-privacy": "node --test tests/analytics-privacy.test.mjs",
     "test:ga4-conversions": "node --test tests/ga4-conversion-contract.test.mjs tests/ga4-lead-acknowledgement.test.mjs",
     "test:geo-seo": "node --test tests/geo-seo-contract.test.mjs",

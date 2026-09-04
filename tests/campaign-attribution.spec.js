@@ -57,7 +57,7 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   });
 
   await page.goto(
-    `${APP_URL}?utm_source=Instagram&utm_medium=Organic%20Social&utm_campaign=Verano%202026&utm_content=Video%20A#lista`,
+    `${APP_URL}?utm_source=Instagram&utm_medium=Organic%20Social&utm_campaign=Verano%202026&utm_content=Video%20A&utm_term=Pantallas%20Diagn%C3%B3stico%20iPhone#lista`,
     { waitUntil: "domcontentloaded" }
   );
   const approvedCard = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
@@ -85,7 +85,8 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
     source: "instagram",
     medium: "organic_social",
     campaign: "verano_2026",
-    content: "video_a"
+    content: "video_a",
+    term: "pantallas_diagnostico_iphone"
   });
   expect(checkoutState.reference).toBe("instagram/verano_2026/video_a");
   await page.locator("[data-whatsapp-link]").click();
@@ -101,6 +102,7 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   expect(submitted.utm_medium).toBe("organic_social");
   expect(submitted.utm_campaign).toBe("verano_2026");
   expect(submitted.utm_content).toBe("video_a");
+  expect(submitted.utm_term).toBe("pantallas_diagnostico_iphone");
   expect(submitted.landing_page).toBe("/app/");
   const unexpectedConsoleErrors = consoleErrors.filter((message) => (
     !message.includes("@firebase/firestore") || !message.includes("Could not reach Cloud Firestore backend")
