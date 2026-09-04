@@ -108,7 +108,10 @@ test('cart keeps customer data out of the tracked WhatsApp anchor', () => {
   assert.match(app, /whatsappLinkEl\.href = customerReady \? whatsappBaseUrl\(\) : "#"/);
   assert.doesNotMatch(app, /whatsappLinkEl\.href = customerReady \? buildWhatsappUrl\(\)/);
   assert.doesNotMatch(app, /trackGrowthEvent\("generate_lead",[\s\S]*?order_number\s*:/);
-  assert.match(app, /lead_registered: Boolean\(result\.order_number\)/);
+  assert.match(app, /typeof result\?\.order_number === "string"/);
+  assert.match(app, /result\.replayed !== true/);
+  assert.match(app, /if \(newLeadRegistered\) \{\s*trackGrowthEvent\("generate_lead"/);
+  assert.match(app, /lead_registered: true/);
 });
 
 test('future generated product pages use the consent-aware entrypoint', () => {

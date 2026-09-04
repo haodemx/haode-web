@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-08-21-seo-index-strengthening";
+const CACHE_VERSION = "haode-pwa-v2026-09-04-confirmed-leads";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -16,7 +16,7 @@ const APP_SHELL_URLS = [
   "/detail-header.js?v=20260725-ui-phase33",
   "/site-footer.js?v=20260813-final-ui-seo",
   "/app/app.css?v=20260813-final-ui-seo",
-  "/app/app.js?v=20260813-ga4-conversions",
+  "/app/app.js?v=20260904-confirmed-leads",
   "/app/products.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",

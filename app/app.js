@@ -2134,13 +2134,19 @@ async function submitWebOrder() {
     });
     if (!response.ok) throw new Error(`ERP web order ${response.status}`);
     const result = await response.json();
-    trackGrowthEvent("generate_lead", {
-      currency: "MXN",
-      value: payload.total,
-      source: state.attribution.source,
-      lead_registered: Boolean(result.order_number),
-      items: ga4CartItems()
-    });
+    const newLeadRegistered = typeof result?.order_number === "string"
+      && result.order_number.trim().length > 0
+      && result.replayed !== true
+      && result.ignored !== true;
+    if (newLeadRegistered) {
+      trackGrowthEvent("generate_lead", {
+        currency: "MXN",
+        value: payload.total,
+        source: state.attribution.source,
+        lead_registered: true,
+        items: ga4CartItems()
+      });
+    }
     return result;
   } catch (error) {
     console.info("HAODE app no pudo registrar pedido ERP:", error.message);
