@@ -21197,12 +21197,33 @@ body.category-page.conversion-reference-page .new-page-hero-inner h1 {
 }
 
 /* Screen buying pages use a light proof strip; retain readable text after theme overrides. */
-body[data-screen-seo-page].conversion-reference-page .reference-conversion-strip strong {
+body.category-page[data-screen-seo-page].conversion-reference-page .reference-conversion-strip strong {
   color: #101012 !important;
 }
 
-body[data-screen-seo-page].conversion-reference-page .reference-conversion-strip small {
+body.category-page[data-screen-seo-page].conversion-reference-page .reference-conversion-strip small {
   color: #5d626c !important;
+}
+
+body.seo-conversion-page[data-screen-seo-page]:not(.category-page) .reference-conversion-strip strong {
+  color: #ffffff !important;
+}
+
+body.seo-conversion-page[data-screen-seo-page]:not(.category-page) .reference-conversion-strip small {
+  color: #c9cccd !important;
+}
+
+/* Keep compact conversion labels readable on the light editorial surfaces. */
+body.seo-conversion-page .section-kicker,
+body.seo-conversion-page .reference-panel-kicker,
+body.seo-conversion-page .reference-section-head a {
+  color: #b9470a;
+}
+
+body.seo-conversion-page .high-end-seo-card h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.02rem;
 }
 
 @media (max-width: 760px) {
