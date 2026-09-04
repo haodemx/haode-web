@@ -9,7 +9,7 @@
     "test:homepage-human-design": "node --test tests/homepage-human-design-contract.test.mjs",
     "test:campaign-links": "node --test tests/campaign-links.test.mjs",
     "test:analytics-privacy": "node --test tests/analytics-privacy.test.mjs",
-    "test:ga4-conversions": "node --test tests/ga4-conversion-contract.test.mjs",
+    "test:ga4-conversions": "node --test tests/ga4-conversion-contract.test.mjs tests/ga4-lead-acknowledgement.test.mjs",
     "test:geo-seo": "node --test tests/geo-seo-contract.test.mjs",
     "test:seo-geo-audit-remediation": "node --test tests/seo-geo-audit-remediation.test.mjs",
     "test:hl-brand-local": "node --test tests/hl-brand-local-route.test.mjs",
