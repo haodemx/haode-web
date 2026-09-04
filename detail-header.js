@@ -73,12 +73,14 @@
   whatsapp.href = whatsappHref;
   whatsapp.target = '_blank';
   whatsapp.rel = 'noopener noreferrer';
+  whatsapp.setAttribute('aria-label', 'WhatsApp privado — Cotizar por WhatsApp');
   whatsapp.innerHTML = '<span class="detail-header-mark" aria-hidden="true">W</span><span>WhatsApp privado</span>';
 
   const app = document.createElement('a');
   app.className = 'detail-header-action detail-header-app';
   app.setAttribute('data-detail-header-app', '');
   app.href = '/app/';
+  app.setAttribute('aria-label', 'Comprar en APP HAODE');
   app.innerHTML = '<span class="detail-header-mark" aria-hidden="true">A</span><span>Comprar en APP</span>';
 
   actions.append(whatsapp, app);

@@ -9,8 +9,8 @@ test('audited small orange text and brand-band button have dedicated accessible 
 });
 test('detail header accessible labels contain their visible action verbatim',()=>{
   const script=readFileSync(new URL('../detail-header.js',import.meta.url),'utf8');
-  assert.doesNotMatch(script,/whatsapp\.setAttribute\('aria-label'/);
-  assert.doesNotMatch(script,/app\.setAttribute\('aria-label'/);
+  assert.match(script,/whatsapp\.setAttribute\('aria-label', 'WhatsApp privado[^']*'/);
+  assert.match(script,/app\.setAttribute\('aria-label', 'Comprar en APP[^']*'/);
   assert.match(script,/<span>WhatsApp privado<\/span>/);
   assert.match(script,/<span>Comprar en APP<\/span>/);
 });
