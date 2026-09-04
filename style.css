@@ -6671,7 +6671,7 @@ body.product-detail-page .floating-cta {
   align-items: center;
   min-height: 36px;
   margin-top: 12px;
-  color: #c55312;
+  color: #b9470a;
   font-size: 0.88rem;
   font-weight: 850;
   text-decoration: none;
@@ -8305,7 +8305,7 @@ body.geo-guide-page .seo-link-grid small {
 }
 
 .breadcrumb-nav a {
-  color: #d95500;
+  color: #b9470a;
   font-weight: 700;
   text-decoration: none;
 }
@@ -20185,7 +20185,7 @@ body.product-detail-page .seo-product-breadcrumbs {
 }
 
 body.product-detail-page .seo-product-breadcrumbs a {
-  color: #c84f00;
+  color: #b9470a;
   font-weight: 750;
   text-decoration: none;
 }
@@ -20617,6 +20617,28 @@ body.home-page-reference .home-hl-brand-band .reference-btn {
   border-radius: 6px;
   box-shadow: none;
   white-space: nowrap;
+}
+
+/* Small text and white button labels must retain AA contrast on this light band. */
+body.home-page-reference .home-hl-brand-band .section-kicker {
+  color: #b9470a;
+}
+
+body.home-page-reference .home-hl-brand-band .reference-btn-solid {
+  border-color: #b9470a;
+  background: #b9470a;
+}
+
+@media (min-width: 761px) {
+  body.conversion-reference-page:not(.product-detail-page) .detail-header-whatsapp {
+    background: #087443;
+    color: #ffffff;
+  }
+
+  body.conversion-reference-page:not(.product-detail-page) .detail-header-app {
+    background: #b9470a;
+    color: #ffffff;
+  }
 }
 
 body.home-page-reference .reference-wholesale-band {
