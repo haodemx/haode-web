@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-09-04-confirmed-leads";
+const CACHE_VERSION = "haode-pwa-v2026-09-04-keyword-handoff";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -11,12 +11,12 @@ const APP_SHELL_URLS = [
   "/style.css?v=20260813-final-ui-seo",
   "/analytics.js?v=20260813-ga4-conversions",
   "/script.js?v=20260813-ga4-conversions",
-  "/campaign-attribution.js?v=20260813-ga4-conversions",
+  "/campaign-attribution.js?v=20260904-keyword-handoff",
   "/products.js?v=20260813-ga4-conversions",
   "/detail-header.js?v=20260725-ui-phase33",
   "/site-footer.js?v=20260813-final-ui-seo",
   "/app/app.css?v=20260813-final-ui-seo",
-  "/app/app.js?v=20260904-confirmed-leads",
+  "/app/app.js?v=20260904-keyword-handoff",
   "/app/products.json",
   "/app/firebase-config.js",
   "/manifest.webmanifest",
@@ -62,6 +62,7 @@ function isFreshDataRequest(url) {
     || url.pathname === "/style.css"
     || url.pathname === "/script.js"
     || url.pathname === "/analytics.js"
+    || url.pathname === "/campaign-attribution.js"
     || url.pathname === "/app/app.css"
     || url.pathname === "/detail-header.js"
     || url.pathname === "/site-footer.js"

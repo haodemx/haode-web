@@ -247,6 +247,8 @@ function trafficAttribution() {
     return window.HaodeCampaign.capture({ channel: appChannel() });
   }
   const params = new URLSearchParams(window.location.search);
+  const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
+    .some((key) => params.has(key));
   const canPersist = window.HaodePrivacy?.getConsent?.().analytics === true;
   let stored = {};
   try {
@@ -277,6 +279,7 @@ function trafficAttribution() {
     medium: normalizeAttributionToken(params.get("utm_medium") || stored.medium, appChannel() === "haode_app" ? "app" : "website"),
     campaign: normalizeAttributionToken(params.get("utm_campaign") || stored.campaign),
     content: normalizeAttributionToken(params.get("utm_content") || stored.content),
+    term: normalizeAttributionToken(hasIncomingCampaign ? params.get("utm_term") : stored.term),
     landingPage: stored.landingPage || window.location.pathname || "/"
   };
   if (canPersist) {
@@ -2106,6 +2109,7 @@ function webOrderPayload() {
     utm_medium: state.attribution.medium,
     utm_campaign: state.attribution.campaign,
     utm_content: state.attribution.content,
+    utm_term: state.attribution.term,
     landing_page: state.attribution.landingPage,
     client_request_id: checkoutRequestId(),
     total: cartTotal(),
