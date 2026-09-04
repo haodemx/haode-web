@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
+import { SCREEN_DATE } from '../scripts/screen-seo-content.mjs';
 
 const read = (relativePath) => fs.readFileSync(new URL(`../${relativePath}`, import.meta.url), 'utf8');
 const HOMEPAGE_RELEASE_DATE = '2026-08-20';
@@ -16,7 +17,7 @@ function sitemapLastmod(url) {
 test('sitemap reflects the current homepage and SEO-strengthening release dates', () => {
   assert.equal(sitemapLastmod('https://haode.com.mx/'), HOMEPAGE_RELEASE_DATE);
   assert.equal(sitemapLastmod('https://haode.com.mx/app/'), SEO_STRENGTHENING_RELEASE_DATE);
-  assert.equal(sitemapLastmod('https://haode.com.mx/producto/iphone-incell-14/'), SEO_STRENGTHENING_RELEASE_DATE);
+  assert.equal(sitemapLastmod('https://haode.com.mx/producto/iphone-incell-14/'), SCREEN_DATE);
 });
 
 test('service worker treats the product renderer as a fresh application resource', () => {

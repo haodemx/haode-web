@@ -2851,7 +2851,8 @@ function renderProductDetailPage() {
     setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
   }
 
-  if (titleEl) titleEl.textContent = product.name;
+  if (titleEl) titleEl.textContent = preservesCuratedSeo && titleEl.dataset.detailSeoTitle
+    ? titleEl.dataset.detailSeoTitle : product.name;
   if (subtitleEl) subtitleEl.textContent = `${CATEGORY_META[product.category].title} · ${product.stockLabel || 'Consultar inventario'}`;
   if (brandEl) brandEl.textContent = product.brand;
   if (warningEl) {
