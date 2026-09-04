@@ -21174,6 +21174,21 @@ body.category-page.conversion-reference-page .new-page-hero-inner h1 {
   line-height: 1;
 }
 
+/* Screen buying pages use a light proof strip; retain readable text after theme overrides. */
+body[data-screen-seo-page].conversion-reference-page .reference-conversion-strip strong {
+  color: #101012 !important;
+}
+
+body[data-screen-seo-page].conversion-reference-page .reference-conversion-strip small {
+  color: #5d626c !important;
+}
+
+@media (max-width: 760px) {
+  body.pantallas-entry-page[data-screen-seo-page] .new-page-hero-inner {
+    padding-block: 24px;
+  }
+}
+
 body.category-page .new-page-hero-inner .hero-text {
   max-width: 760px;
   font-size: 16px;

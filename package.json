@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run haode:check",
+    "build": "npm run test:screen-seo && npm run haode:check",
     "test:approved-editorial-release": "node --test tests/approved-editorial-release-contract.test.mjs",
     "test:premium-brand-system": "node --test tests/premium-brand-system-contract.test.mjs",
     "test:homepage-human-design": "node --test tests/homepage-human-design-contract.test.mjs",
@@ -19,6 +19,8 @@
     "test:seo-index-strengthening": "node --test tests/seo-index-strengthening.test.mjs",
     "test:mica-machine-seo": "node --test tests/mica-machine-seo.test.mjs",
     "seo:refresh-pages": "node scripts/refresh-seo-pages.mjs --apply && node scripts/build-static-product-directory.mjs --apply",
+    "seo:refresh-screens": "node scripts/refresh-seo-pages.mjs --screens --apply",
+    "test:screen-seo": "node scripts/refresh-seo-pages.mjs --screens && node --test tests/screen-seo.test.mjs tests/final-ui-seo-contract.test.mjs",
     "test:static-product-directory": "node scripts/build-static-product-directory.mjs && node --test tests/static-product-discovery.test.mjs",
     "test:daily-ad-catalog": "node --test tests/daily-ad-catalog.test.mjs",
     "test:catalog-gap-audit": "node --test tests/catalog-gap-audit.test.mjs",

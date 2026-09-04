@@ -3,12 +3,13 @@ import path from 'node:path';
 import vm from 'node:vm';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { SCREEN_DATE, SCREEN_LANDINGS, isScreen, screenName, screenGuide, refreshScreenProduct, refreshScreenLanding } from './screen-seo-content.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const APPLY = process.argv.includes('--apply');
+const SCREENS_ONLY = process.argv.includes('--screens');
 const SITE_URL = 'https://haode.com.mx';
-const CHANGE_DATE = '2026-08-21';
-const SKIP_DIRECTORIES = new Set(['.git', 'node_modules', 'playwright-report', 'test-results']);
+const SKIP_DIRECTORIES = new Set(['.git', '.worktrees', 'node_modules', 'playwright-report', 'test-results']);
 const SCREEN_CATEGORIES = new Set([
   'iphone-incell',
   'iphone-oled',
@@ -135,6 +136,7 @@ function qualityLabel(product) {
 }
 
 function productSeoName(product) {
+  if (isScreen(product)) return screenName(product);
   const name = String(product.name || '').trim().replace(/\s*\|\s*HAODE México.*$/i, '');
   const label = qualityLabel(product);
   if (!label || !/^pantalla\b/i.test(name) || name.toLowerCase().includes(label.toLowerCase())) return name;
@@ -260,6 +262,7 @@ function productVideoMarkup(product) {
 }
 
 function productGuideMarkup(product, products) {
+  if (isScreen(product)) return screenGuide(product, products.filter((p) => INDEXABLE_PRODUCT_IDS.has(p.id)));
   const context = categoryContext(product);
   const related = productRelatedLinks(product, products);
   const relatedLinks = related
@@ -356,6 +359,7 @@ function refreshProductPage(product, products) {
       return `${open}${escapeHtml(productSeoName(product))}${close}`;
     },
   );
+  if (isScreen(product)) updated = refreshScreenProduct(updated, product);
   updated = strengthenProductPage(updated, product, products);
 
   return current === updated ? null : { file, relativePath, updated };
@@ -380,6 +384,10 @@ function refreshPriorityPage(relativePath, metadata) {
   if (!fs.existsSync(file)) throw new Error(`Missing priority page: ${relativePath}`);
 
   const current = fs.readFileSync(file, 'utf8');
+  if (SCREEN_LANDINGS.has(relativePath)) {
+    const updated = refreshScreenLanding(current, SCREEN_LANDINGS.get(relativePath), readProducts().filter((p) => INDEXABLE_PRODUCT_IDS.has(p.id)));
+    return current === updated ? null : { file, relativePath, updated };
+  }
   const title = escapeHtml(metadata.title);
   const description = escapeHtml(metadata.description);
   let updated = current.replace(/<title>[^<]*<\/title>/i, `<title>${title}</title>`);
@@ -412,25 +420,20 @@ function refreshAliasPage(aliasPath, canonicalPath) {
   return current === updated ? null : { file, relativePath, updated };
 }
 
-function refreshSitemap() {
+function refreshSitemap(pageChanges) {
   const relativePath = 'sitemap.xml';
   const file = path.join(ROOT, relativePath);
   const current = fs.readFileSync(file, 'utf8');
   const aliasUrls = new Set([...SEO_ALIASES.keys()].map((aliasPath) => `${SITE_URL}${aliasPath}`));
-  const changedUrls = new Set(
-    [...INDEXABLE_PRODUCT_IDS].map((id) => `${SITE_URL}/producto/${encodeURIComponent(id)}/`),
-  );
-  for (const relativePath of PRIORITY_PAGES.keys()) {
-    changedUrls.add(`${SITE_URL}/${relativePath.replace(/index\.html$/, '')}`);
-  }
+  const changedUrls = new Set(pageChanges.map(({ relativePath }) => `${SITE_URL}/${relativePath.replace(/index\.html$/, '')}`));
   const updated = current.replace(/\s*<url>[\s\S]*?<\/url>/g, (block) => {
     const location = block.match(/<loc>\s*([^<\s]+)\s*<\/loc>/)?.[1];
-    if (aliasUrls.has(location)) return '';
+    if (!SCREENS_ONLY && aliasUrls.has(location)) return '';
     if (!changedUrls.has(location)) return block;
     if (/<lastmod>[^<]*<\/lastmod>/.test(block)) {
-      return block.replace(/<lastmod>[^<]*<\/lastmod>/, `<lastmod>${CHANGE_DATE}</lastmod>`);
+      return block.replace(/<lastmod>[^<]*<\/lastmod>/, `<lastmod>${SCREEN_DATE}</lastmod>`);
     }
-    return block.replace(/<\/loc>/, `</loc>\n    <lastmod>${CHANGE_DATE}</lastmod>`);
+    return block.replace(/<\/loc>/, `</loc>\n    <lastmod>${SCREEN_DATE}</lastmod>`);
   });
   return current === updated ? null : { file, relativePath, updated };
 }
@@ -507,12 +510,13 @@ function mergeSchemaTrustChanges(baseChanges) {
 }
 
 const products = readProducts();
-const changes = mergeSchemaTrustChanges([
-  ...products.map((product) => refreshProductPage(product, products)).filter(Boolean),
-  ...[...PRIORITY_PAGES].map(([relativePath, metadata]) => refreshPriorityPage(relativePath, metadata)).filter(Boolean),
-  ...[...SEO_ALIASES].map(([aliasPath, canonicalPath]) => refreshAliasPage(aliasPath, canonicalPath)).filter(Boolean),
-  refreshSitemap(),
-].filter(Boolean));
+const pageChanges = [
+  ...products.filter((p) => !SCREENS_ONLY || isScreen(p)).map((product) => refreshProductPage(product, products)).filter(Boolean),
+  ...[...(SCREENS_ONLY ? SCREEN_LANDINGS : new Map([...PRIORITY_PAGES, ...SCREEN_LANDINGS]))].map(([relativePath, metadata]) => refreshPriorityPage(relativePath, metadata)).filter(Boolean),
+  ...(SCREENS_ONLY ? [] : [...SEO_ALIASES].map(([aliasPath, canonicalPath]) => refreshAliasPage(aliasPath, canonicalPath)).filter(Boolean)),
+];
+const scopedChanges = [...pageChanges, refreshSitemap(pageChanges)].filter(Boolean);
+const changes = SCREENS_ONLY ? scopedChanges : mergeSchemaTrustChanges(scopedChanges);
 
 if (APPLY) {
   changes.forEach(({ file, updated }) => fs.writeFileSync(file, updated, 'utf8'));

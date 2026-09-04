@@ -6,6 +6,7 @@ import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { buildExposurePack } from '../scripts/generate-exposure-pack.mjs';
+import { SCREEN_DATE, isScreen } from '../scripts/screen-seo-content.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
@@ -163,10 +164,12 @@ test('14-day exposure plan gives hydrogel micas and AI glasses two priority touc
 
 test('changed canonical URLs publish the current lastmod date', () => {
   const sitemap = read('sitemap.xml');
+  const screenIds = new Set(productData().filter(isScreen).map((p) => p.id));
 
   for (const id of sitemapProductIds()) {
     const url = `${SITE_URL}/producto/${encodeURIComponent(id)}/`;
     const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    assert.match(sitemap, new RegExp(`<loc>${escaped}</loc>\\s*<lastmod>${CHANGE_DATE}</lastmod>`));
+    const expectedDate = screenIds.has(id) ? SCREEN_DATE : CHANGE_DATE;
+    assert.match(sitemap, new RegExp(`<loc>${escaped}</loc>\\s*<lastmod>${expectedDate}</lastmod>`));
   }
 });
