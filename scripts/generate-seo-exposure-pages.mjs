@@ -283,7 +283,7 @@ ${JSON.stringify(jsonLdFor(page), null, 2)}
 <body class="new-page seo-conversion-page conversion-reference-page seo-exposure-page">
   <header class="topbar catalog-topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/images/factory-store-wordmark.png" alt="HAODE Refacciones para Celular" width="200" height="58" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
+      <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/images/haode-header-logo-horizontal-preview.png" alt="HAODE Refacciones para Celular" width="200" height="58" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
       <nav class="topnav" aria-label="Navegación principal"><a href="/">Inicio</a><a href="/productos/">Productos</a><a href="/app/">App</a><a href="/distribuidores/">Distribuidores</a><a href="/contacto/">Contacto</a></nav>
     </div>
   </header>

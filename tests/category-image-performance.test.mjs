@@ -39,7 +39,7 @@ test('screen category headers start with the final lightweight wordmark', () => 
     'categoria/samsung-tipo-original/index.html',
   ]) {
     const html = read(path);
-    assert.match(html, /brand-logo" src="\/assets\/images\/factory-store-wordmark\.png"/);
+    assert.match(html, /brand-logo" src="\/assets\/images\/haode-header-logo-horizontal-preview\.png"/);
     assert.doesNotMatch(html, /brand-logo" src="\/assets\/logo\/logo\.png"/);
   }
 });
@@ -57,8 +57,22 @@ test('screen wholesale panels use existing optimized display assets', () => {
   for (const [path, asset] of expected) {
     const html = read(path);
     assert.match(html, new RegExp(`reference-conversion-panel[\\s\\S]*?src="/assets/products/${asset.replaceAll('.', '\\.')}"`));
-    assert.match(html, /brand-logo" src="\/assets\/images\/factory-store-wordmark\.png"/);
+    assert.match(html, /brand-logo" src="\/assets\/images\/haode-header-logo-horizontal-preview\.png"/);
   }
+});
+
+test('screen product headers and shared renderer request the approved visible logo directly', () => {
+  let checked = 0;
+  for (const path of listHtmlFiles(join(repoRoot, 'producto'))) {
+    const html = readFileSync(path, 'utf8');
+    if (!html.includes('data-screen-seo=')) continue;
+    assert.match(html, /brand-logo" src="\/assets\/images\/haode-header-logo-horizontal-preview\.png"/, path);
+    checked += 1;
+  }
+  assert.ok(checked >= 141, `expected at least 141 screen product headers, found ${checked}`);
+  assert.match(read('detail-header.js'), /brandLogo\.src = '\/assets\/images\/haode-header-logo-horizontal-preview\.png'/);
+  assert.doesNotMatch(read('detail-header.js'), /factory-store-wordmark/);
+  assert.match(read('scripts/generate-seo-exposure-pages.mjs'), /brand-logo" src="\/assets\/images\/haode-header-logo-horizontal-preview\.png"/);
 });
 
 test('static Samsung original cards use existing display assets', () => {

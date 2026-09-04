@@ -19,7 +19,7 @@
 
   const brandLogo = headerInner.querySelector('.brand-logo');
   if (brandLogo) {
-    brandLogo.src = '/assets/images/factory-store-wordmark.png';
+    brandLogo.src = '/assets/images/haode-header-logo-horizontal-preview.png';
     brandLogo.alt = 'HAODE Refacciones para Celular';
     brandLogo.width = 200;
     brandLogo.height = 58;
