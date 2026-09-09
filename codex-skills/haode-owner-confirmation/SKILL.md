@@ -34,33 +34,25 @@ Forbidden actions:
 ## Trigger Conditions
 
 - Use when the task matches this skill description or HAODE rules explicitly name this workflow.
-- Use when the task may touch HAODE website, app, product, SEO, QA, deployment, marketing, assets, or protected business data.
+- Use for an actual unresolved protected field or manual-only decision that affects the requested work, not merely because a task concerns HAODE, SEO, QA, or deployment.
 
 ## Owner-Confirmation Stop Conditions
 
 - Stop before changing prices, product facts, product names, SKU, slug, categories, availability, WhatsApp numbers, images, videos, claims, brand, company data, store address, customer data, or deleting files unless the owner explicitly confirms.
-- Stop when required product/app sync data is missing, unclear, or conflicts across website data and app/products.json.
+- Stop when required product/app sync data is missing, unclear, or conflicts across website data and app/products.json. Continue independent authorized work without changing the blocked fields.
+
 ## Repository Mirror Guardrails
-
-### Trigger Conditions
-
-- Use when the task matches this skill description or HAODE rules explicitly name this workflow.
-- Use when the task may touch HAODE website, app, product, SEO, QA, deployment, marketing, assets, or protected business data.
 
 ### Forbidden Actions
 
 - Do not modify product data, prices, images, videos, WhatsApp numbers, customer-facing website pages, product claims, brand, company data, store address, or customer data unless the task explicitly requires it and owner confirmation exists for protected fields.
 - Do not delete products, replace assets, invent product facts, invent promotions, or rewrite unrelated files to complete a task.
 
-### Owner-Confirmation Stop Conditions
-
-- Stop before changing prices, product facts, product names, SKU, slug, categories, availability, WhatsApp numbers, images, videos, claims, brand, company data, store address, customer data, or deleting files unless the owner explicitly confirms.
-- Stop when required product/app sync data is missing, unclear, or conflicts across website product data and app/products.json.
-
 ### Verification Requirements
 
-- Verify target rule or skill files were created or updated successfully.
-- Run scoped checks before commit, including description length, required guardrail sections, `git diff --check`, `git diff --stat`, and `git status --short --branch`.
+- Verify the confirmation list itself: each item identifies the affected object/field, evidence source, uncertainty or conflict, exact owner decision needed, dependent blocked action, and independent work that may continue.
+- Confirm that approval evidence matches the task, operation, object, and environment; do not infer missing facts or mark pending human acceptance as passed. Preserve any explicit preview or human acceptance gate.
+- Collecting this list does not create or modify rule/Skill files. Deliver it in the requested format; write a file only when that output is authorized. If separate code changes are authorized, run their required scoped checks; do not substitute Skill metadata checks for business confirmation.
 - Confirm no product data, prices, images, videos, WhatsApp numbers, product claims, or customer-facing website pages changed unless explicitly requested.
 
 ### Website/App Sync Rule
