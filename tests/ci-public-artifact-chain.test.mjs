@@ -15,9 +15,12 @@ function job(name, nextName) {
 }
 
 test("pull requests exercise the cross-job public artifact integrity chain", () => {
+  const check = job("haode-check", "critical-business-gate");
   const critical = job("critical-business-gate", "verify-transferred-artifact");
   const transfer = job("verify-transferred-artifact", "package-pages");
 
+  assert.match(check, /uses: actions\/checkout@v6\s+with:\s+fetch-depth: 0/);
+  assert.match(critical, /uses: actions\/checkout@v6\s+with:\s+fetch-depth: 0/);
   assert.match(critical, /name: haode-public-site-\$\{\{ github\.sha \}\}/);
   assert.match(critical, /path: _site/);
   assert.doesNotMatch(transfer, /^\s+if:/m, "transfer verification must run on pull_request and branch push");
