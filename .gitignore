@@ -1,6 +1,7 @@
 _backup/
 .DS_Store
 node_modules/
+_site/
 test-results/
 playwright-report/
 /output/

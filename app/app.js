@@ -1,4 +1,4 @@
-import { firebaseConfig, isFirebaseConfigured } from "./firebase-config.js";
+import { firebaseConfig, isFirebaseConfigured } from "./firebase-public-config.js";
 
 const WHATSAPP_NUMBER = "523326684296";
 const APP_BASE_PATH = (() => {
@@ -11,7 +11,6 @@ const PRODUCTS_JSON_URL = sitePath("/app/products.json");
 const ERP_PUBLIC_CATALOG_URL = "https://erp.haode.com.mx/api/public/catalog";
 const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
 const ERP_WEB_ORDER_URL = "https://erp.haode.com.mx/api/public/web-orders";
-const DAILY_AD_URL = sitePath("/data/marketing/daily-ad-latest.json");
 const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
@@ -900,14 +899,9 @@ function afterFirstPaint(callback, delayMs = 0) {
 
 function scheduleBackgroundRefresh(normalizedProducts) {
   afterFirstPaint(() => {
-    Promise.all([
-      loadDailyAd(),
-      refreshProductsFromExternal(normalizedProducts)
-    ]).then(([dailyAdChanged, externalCatalogChanged]) => {
-      if (!dailyAdChanged && !externalCatalogChanged) return;
-      if (state.route.name !== "home" || dailyAdChanged) {
-        renderRoute();
-      }
+    refreshProductsFromExternal(normalizedProducts).then((externalCatalogChanged) => {
+      if (!externalCatalogChanged) return;
+      if (state.route.name !== "home") renderRoute();
       renderCart();
     }).catch((error) => {
       console.info("HAODE app no pudo actualizar datos secundarios:", error.message);
@@ -924,24 +918,6 @@ function scheduleBackgroundRefresh(normalizedProducts) {
       runDiagnostics();
     }
   }, 10000);
-}
-
-async function loadDailyAd() {
-  state.dailyAd = null;
-  try {
-    const response = await fetch(DAILY_AD_URL, { cache: "no-store" });
-    if (!response.ok) {
-      return false;
-    }
-    const data = await response.json();
-    if (data && data.status === "draft") {
-      state.dailyAd = data;
-      return true;
-    }
-  } catch (error) {
-    console.info("HAODE app sin banner diario:", error.message);
-  }
-  return false;
 }
 
 function priceRuleFor(product, quantity = 1) {

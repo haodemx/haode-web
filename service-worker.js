@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-09-04-keyword-handoff";
+const CACHE_VERSION = "haode-pwa-v2026-09-12-public-package";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 

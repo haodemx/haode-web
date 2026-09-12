@@ -3,7 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run test:screen-seo && npm run haode:check",
+    "build": "npm run test:screen-seo && npm run haode:check && npm run build:public && npm run verify:public-site",
+    "build:public": "node scripts/build-public-site.mjs",
+    "test:public-package": "node --test tests/public-site-package.test.mjs",
+    "verify:public-site": "node --test tests/public-site-artifact.test.mjs",
     "test:approved-editorial-release": "node --test tests/approved-editorial-release-contract.test.mjs",
     "test:premium-brand-system": "node --test tests/premium-brand-system-contract.test.mjs",
     "test:homepage-human-design": "node --test tests/homepage-human-design-contract.test.mjs",
@@ -55,7 +58,7 @@
     "verify:live": "node scripts/verify-live-deploy.mjs",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:approved-editorial-release && npm run test:premium-brand-system && npm run test:homepage-human-design && npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:ga4-conversions && npm run test:geo-seo && npm run test:seo-geo-audit-remediation && npm run test:hl-brand-local && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:seo-index-strengthening && npm run test:mica-machine-seo && npm run test:static-product-directory && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:whatsapp-sales && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:public-package && npm run test:approved-editorial-release && npm run test:premium-brand-system && npm run test:homepage-human-design && npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:ga4-conversions && npm run test:geo-seo && npm run test:seo-geo-audit-remediation && npm run test:hl-brand-local && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:seo-index-strengthening && npm run test:mica-machine-seo && npm run test:static-product-directory && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:whatsapp-sales && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"
