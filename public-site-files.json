@@ -43,6 +43,7 @@
   ],
   "trees": [
     { "path": "assets", "extensions": [".avif", ".gif", ".ico", ".jpeg", ".jpg", ".mp4", ".png", ".svg", ".webm", ".webp", ".woff", ".woff2", ".ttf"] },
+    { "path": "catalogo-modelos", "extensions": [".html"] },
     { "path": "categoria", "extensions": [".html", ".js"] },
     { "path": "contacto", "extensions": [".html"] },
     { "path": "distribuidores", "extensions": [".html"] },
