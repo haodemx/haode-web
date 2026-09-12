@@ -116,7 +116,9 @@ function normalizeUrl(raw, sourceFile, allowRoute) {
   if (!value || value.startsWith("#") || /^(?:data|mailto|tel|javascript):/i.test(value) || value.includes("${")) return null;
   let url;
   try {
-    url = new URL(value, new URL(path.posix.dirname(`/${sourceFile}`) + "/", LOCAL_ORIGIN));
+    const sourceDirectory = path.posix.dirname(`/${sourceFile}`);
+    const basePath = sourceDirectory === "/" ? "/" : `${sourceDirectory}/`;
+    url = new URL(value, new URL(basePath, LOCAL_ORIGIN));
   } catch {
     return null;
   }

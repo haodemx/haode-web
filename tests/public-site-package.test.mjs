@@ -4,7 +4,11 @@ import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
-import { buildPublicSite, findForbiddenFiles } from "../scripts/build-public-site.mjs";
+import {
+  auditPublicDependencies,
+  buildPublicSite,
+  findForbiddenFiles,
+} from "../scripts/build-public-site.mjs";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
 
@@ -88,4 +92,12 @@ test("public Firebase config preserves runtime values without exporting the admi
   const publicSource = await readFile(path.join(repoRoot, "app/firebase-public-config.js"), "utf8");
   assert.deepEqual(await readConfig("app/firebase-public-config.js"), await readConfig("app/firebase-config.js"));
   assert.doesNotMatch(publicSource, /firebaseAdminEmails|@gmail\.com/i);
+});
+
+test("dependency audit checks resources referenced by root-level scripts", async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "haode-root-dependency-"));
+  await writeFile(path.join(root, "service-worker.js"), 'const files = ["/app/missing.js"];\n');
+
+  const result = await auditPublicDependencies(root);
+  assert.deepEqual(result.missing, ["service-worker.js -> app/missing.js"]);
 });

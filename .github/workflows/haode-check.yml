@@ -91,11 +91,33 @@ jobs:
           include-hidden-files: true
           if-no-files-found: error
 
+  verify-transferred-artifact:
+    needs: critical-business-gate
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout verifier
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Download the browser-tested public artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: haode-public-site-${{ github.sha }}
+          path: _site
+
+      - name: Verify the transferred public artifact
+        run: npm run verify:public-site
+
   package-pages:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs:
-      - haode-check
-      - critical-business-gate
+      - verify-transferred-artifact
     permissions:
       contents: read
     runs-on: ubuntu-latest
