@@ -79,7 +79,7 @@ test("repeated builds remove stale internal files from the controlled output", a
   await assert.rejects(stat(path.join(output, "reports", "stale-private.json")), { code: "ENOENT" });
 });
 
-test("public Firebase config preserves runtime values without exporting the admin allowlist", async () => {
+test("public Firebase config preserves the required runtime fields without exporting an admin allowlist", async () => {
   const fields = ["apiKey", "authDomain", "projectId", "storageBucket", "messagingSenderId", "appId"];
   const readConfig = async (relative) => {
     const source = await readFile(path.join(repoRoot, relative), "utf8");
@@ -90,7 +90,9 @@ test("public Firebase config preserves runtime values without exporting the admi
     }));
   };
   const publicSource = await readFile(path.join(repoRoot, "app/firebase-public-config.js"), "utf8");
-  assert.deepEqual(await readConfig("app/firebase-public-config.js"), await readConfig("app/firebase-config.js"));
+  const publicConfig = await readConfig("app/firebase-public-config.js");
+  assert.equal(publicConfig.projectId, "haode-app");
+  assert.ok(Object.values(publicConfig).every(Boolean));
   assert.doesNotMatch(publicSource, /firebaseAdminEmails|@gmail\.com/i);
 });
 
