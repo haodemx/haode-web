@@ -19,3 +19,10 @@ playwright-report/
 *.heic
 .idea/
 ._*
+
+# Internal-only admin and marketing workspaces (never publish or recommit).
+/admin/marketing-drafts/
+/app/admin.css
+/app/admin.html
+/app/admin.js
+/app/firebase-config.js
