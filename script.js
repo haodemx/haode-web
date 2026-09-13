@@ -21,28 +21,6 @@ function displayText(value) {
   return String(value || '').trim();
 }
 
-async function loadDailyAdBanner() {
-  const banner = document.querySelector('[data-daily-ad]');
-  if (!banner) return;
-
-  try {
-    const response = await fetch('/data/marketing/daily-ad-latest.json', { cache: 'no-store' });
-    if (!response.ok) return;
-    const ad = await response.json();
-    if (!ad || ad.status !== 'draft') return;
-
-    const title = banner.querySelector('[data-daily-ad-title]');
-    const subtitle = banner.querySelector('[data-daily-ad-subtitle]');
-    const cta = banner.querySelector('[data-daily-ad-cta]');
-    if (title) title.textContent = displayText(ad.website_banner_title || ad.main_category || 'Producto destacado');
-    if (subtitle) subtitle.textContent = displayText(ad.website_banner_subtitle || ad.headline_es || 'Consulta disponibilidad por WhatsApp.');
-    if (cta && (ad.cta_website || ad.cta_whatsapp)) cta.href = ad.cta_website || ad.cta_whatsapp;
-    banner.hidden = false;
-  } catch (error) {
-    console.info('HAODE banner diario no disponible:', error.message);
-  }
-}
-
 function buildWhatsAppMessage(data) {
   const lines = [
     'Hola HAODE México, quiero cotizar por WhatsApp:',
@@ -310,7 +288,6 @@ function setupReferenceMenu() {
 
 document.addEventListener('DOMContentLoaded', attachWhatsAppTracking);
 document.addEventListener('DOMContentLoaded', attachHoverVideos);
-document.addEventListener('DOMContentLoaded', loadDailyAdBanner);
 document.addEventListener('DOMContentLoaded', setupHomeHeroCarousels);
 document.addEventListener('DOMContentLoaded', setupReferenceMenu);
 })();

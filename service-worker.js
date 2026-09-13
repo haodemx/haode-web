@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-09-04-keyword-handoff";
+const CACHE_VERSION = "haode-pwa-v2026-09-12-public-package";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -18,7 +18,7 @@ const APP_SHELL_URLS = [
   "/app/app.css?v=20260813-final-ui-seo",
   "/app/app.js?v=20260904-keyword-handoff",
   "/app/products.json",
-  "/app/firebase-config.js",
+  "/app/firebase-public-config.js",
   "/manifest.webmanifest",
   "/assets/logo/logo.png",
   "/assets/images/factory-store-wordmark.png",

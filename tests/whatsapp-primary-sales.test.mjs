@@ -14,7 +14,7 @@ const SALES_PHONES = [
   '525523316745',
   '525645866014',
 ];
-const SKIP_DIRS = new Set(['.git', 'node_modules', 'preview', 'playwright-report', 'test-results']);
+const SKIP_DIRS = new Set(['.git', '_site', 'node_modules', 'preview', 'playwright-report', 'test-results']);
 
 function collectCustomerFiles(dir = ROOT, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
