@@ -27,7 +27,7 @@ test("homepage WhatsApp CTA sends one GA4 contact event", async ({ page }) => {
     method: "whatsapp",
     source: "google",
     page_path: "/",
-    contact_area: "site_link",
+    contact_area: "header",
   }));
   expect(JSON.stringify(event)).not.toContain("quiero");
 });

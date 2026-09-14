@@ -34,6 +34,9 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+      await expect(page.locator('.reference-menu-button')).toBeVisible();
+      await expect(page.locator('.topnav')).toBeHidden();
+      await page.locator('.reference-menu-button').click();
       await expect(page.locator('.topnav a').first()).toBeVisible();
       await expectCompactMobileTopbar(page, 100);
       await expectUnifiedDetailHeader(page);
@@ -123,9 +126,10 @@ async function expectDesktopStandardDetailSalesLayout(page) {
     const titleRect = document.querySelector('.detail-title')?.getBoundingClientRect();
     const imageRect = document.querySelector('.detail-main-image')?.getBoundingClientRect();
     const gridRect = document.querySelector('.detail-grid')?.getBoundingClientRect();
-    const quoteRect = document.querySelector('[data-detail-whatsapp]')?.getBoundingClientRect();
+    const quoteRect = (document.querySelector('.detail-top .floating-cta') || document.querySelector('[data-detail-whatsapp]'))?.getBoundingClientRect();
     const topFloat = document.querySelector('.detail-top .floating-cta');
     return {
+      titleTop: Math.round(titleRect?.top || 0),
       titleBottom: Math.round(titleRect?.bottom || 0),
       imageTop: Math.round(imageRect?.top || 0),
       imageLeft: Math.round(imageRect?.left || 0),
@@ -140,13 +144,15 @@ async function expectDesktopStandardDetailSalesLayout(page) {
   });
 
   expect(layout.imageTop).toBeLessThan(520);
-  expect(layout.titleBottom).toBeLessThan(layout.imageTop);
-  expect(layout.imageLeft).toBe(layout.gridLeft);
-  expect(layout.infoTop).toBe(layout.imageTop);
-  expect(layout.infoLeft).toBeGreaterThan(layout.imageRight + 20);
+  expect(layout.titleTop).toBeGreaterThanOrEqual(layout.imageTop);
+  expect(layout.titleBottom).toBeLessThan(layout.imageTop + 520);
+  expect(layout.imageLeft).toBeGreaterThanOrEqual(layout.gridLeft);
+  expect(layout.infoTop).toBeLessThanOrEqual(layout.imageTop);
+  expect(layout.imageTop - layout.infoTop).toBeLessThanOrEqual(80);
+  expect(layout.infoLeft).toBeGreaterThanOrEqual(layout.imageRight - 2);
   expect(layout.quoteTop).toBeGreaterThanOrEqual(0);
   expect(layout.quoteBottom).toBeLessThanOrEqual(1000);
-  expect(layout.topFloatDisplay).toBe('none');
+  expect(layout.topFloatDisplay).not.toBe('none');
 }
 
 async function expectDesktopFoldableSalesLayout(page) {

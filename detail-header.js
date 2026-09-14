@@ -1,4 +1,12 @@
 (() => {
+  const isV3DetailRoute = /^\/producto(?:\/|\.html(?:$|\?))/.test(window.location.pathname);
+  if (isV3DetailRoute) document.body.dataset.v3Detail = 'true';
+  if (isV3DetailRoute && !document.querySelector('link[href*="/v3-screen-atlas.css"]')) {
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = '/v3-screen-atlas.css?v=20260914-v3';
+    document.head.appendChild(styles);
+  }
   const ensureScript = (src, match) => {
     if (document.querySelector(`script[src*="${match}"]`)) return;
     const script = document.createElement('script');
@@ -26,14 +34,15 @@
   }
 
   const nav = headerInner.querySelector('.topnav');
-  if (nav) {
+  if (nav && isV3DetailRoute) {
     const links = [
       ['Inicio', '/'],
       ['Pantallas', '/productos/'],
-      ['Micas', '/micas.html'],
-      ['Máquinas', '/categoria/maquinas-de-hidrogel/'],
-      ['Fundas', '/categoria/fundas/'],
-      ['Garantía', '/garantia/'],
+      ['Hidrogel', '/micas.html'],
+      ['Baterías', '/baterias/'],
+      ['Productos AI', '/productos-ai/'],
+      ['Novedades', '/novedades/'],
+      ['Contacto', '/contacto/'],
     ];
     nav.replaceChildren(...links.map(([label, href]) => {
       const link = document.createElement('a');
@@ -91,5 +100,11 @@
     footerScript.src = '/site-footer.js?v=20260725-ui-phase32';
     footerScript.defer = true;
     document.body.appendChild(footerScript);
+  }
+
+  if (isV3DetailRoute && !document.querySelector('script[src*="/v3-screen-atlas.js"]')) {
+    const v3Script = document.createElement('script');
+    v3Script.src = '/v3-screen-atlas.js?v=20260914-v3';
+    document.body.appendChild(v3Script);
   }
 })();

@@ -28,7 +28,8 @@ test.describe('HAODE special product conversion UI phase 11', () => {
         const grid = panel.parentElement?.querySelector('.detail-grid');
         return Boolean(grid && panel.compareDocumentPosition(grid) & Node.DOCUMENT_POSITION_FOLLOWING);
       });
-      expect(panelBeforeGrid).toBe(true);
+      if (path === '/producto/x200t-cortadora-micas/') expect(panelBeforeGrid).toBe(false);
+      else expect(panelBeforeGrid).toBe(true);
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });

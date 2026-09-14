@@ -23,6 +23,8 @@ const STATIC_SEO_URLS = [
   '/app/',
   '/productos/',
   '/productos-ai/',
+  '/baterias/',
+  '/novedades/',
   '/ai-productos.html',
   '/micas.html',
   '/garantia/',

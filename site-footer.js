@@ -1,4 +1,5 @@
 (() => {
+  if (document.body?.dataset.v3Page || document.body?.dataset.v3Detail) return;
   const ensureScript = (src, match) => {
     if (document.querySelector(`script[src*="${match}"]`)) return;
     const script = document.createElement('script');

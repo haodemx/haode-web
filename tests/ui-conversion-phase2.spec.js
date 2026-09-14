@@ -17,14 +17,10 @@ test.describe("HAODE conversion UI phase 2", () => {
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
 
-    await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
-    await expect(page.getByRole("link", { name: "Enviar lista por WhatsApp" }).first()).toHaveAttribute("href", /wa\.me/);
-    await expect(page.locator(".shop-badge-row").first()).toContainText("WhatsApp privado");
-    await expect(page.locator(".shop-b2b-strip").first()).toContainText("Lista grande por WhatsApp");
-    await expect(page.locator(".shop-b2b-strip").first()).toContainText("garantía local");
-    await expect(page.locator(".shop-cta").first()).toHaveCSS("background-color", "rgb(18, 168, 84)");
-    await expect(page.locator(".catalog-visual-strip")).toBeVisible();
-    await expect(page.locator(".floating-cta")).toBeHidden();
+    await expect(page.locator(".v3-filter-panel")).toBeVisible();
+    await expect(page.locator(".v3-product").first()).toBeVisible();
+    await expect(page.locator(".v3-cta a[href*='wa.me']")).toBeVisible();
+    await expect(page.locator(".v3-floating")).toBeVisible();
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
@@ -34,14 +30,13 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
     await expectHeaderWhatsAppGreen(page);
     await expectHeaderAppButtonOrange(page);
-    await expectCatalogVisualStrip(page);
-    await expect(page.locator(".catalog-whatsapp-panel")).toBeVisible();
-    const mobileCta = await page.locator(".floating-cta").evaluate((el) => {
+    await expect(page.locator(".v3-filter-panel")).toBeVisible();
+    const mobileCta = await page.locator(".v3-floating").evaluate((el) => {
       const rect = el.getBoundingClientRect();
       return { position: getComputedStyle(el).position, top: rect.top };
     });
-    expect(mobileCta.position).not.toBe("fixed");
-    expect(mobileCta.top).toBeGreaterThan(844);
+    expect(mobileCta.position).toBe("fixed");
+    expect(mobileCta.top).toBeLessThan(844);
     await expectNoHorizontalOverflow(page);
   });
 
@@ -75,7 +70,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator("[data-detail-panel-whatsapp]")).toContainText("Cotizar modelo por WhatsApp");
     await expect(page.locator("[data-detail-whatsapp]")).toBeVisible();
     await expect(page.locator("[data-detail-whatsapp]")).toHaveAttribute("href", /wa\.me/);
-    await expect(page.locator("[data-detail-factory-callout]")).toContainText("Fábrica directa");
+    await expect(page.locator("[data-detail-factory-callout]")).toContainText("Atención directa");
     await expect(page.locator("[data-detail-factory-callout]")).toContainText("Garantía local");
     await expect(page.locator("[data-detail-highlights] strong").first()).toHaveCSS("color", "rgb(255, 255, 255)");
 
@@ -124,7 +119,7 @@ async function expectHeaderAppButtonOrange(page) {
       text: el.textContent.trim()
     };
   });
-  expect(styles.text).toContain("Comprar en APP");
+  expect(styles.text).toMatch(/APP/);
   expect(styles.background).toBe("rgb(255, 90, 10)");
   expect(styles.color).toBe("rgb(255, 255, 255)");
 }

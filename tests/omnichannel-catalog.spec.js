@@ -219,7 +219,7 @@ test("keeps the approved desktop catalog authoritative", async ({ page }) => {
   await expect(page.locator(".shop-card", { hasText: "Producto con precio pendiente" })).toHaveCount(0);
   await expect(page.locator(".shop-card", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
 
-  const g3Card = page.locator(".shop-card", { hasText: "Gafas AI G3" });
+  const g3Card = page.locator(".shop-card", { hasText: "Gafas Inteligentes AI G3" });
   await expect(g3Card).toHaveCount(1);
   await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
 

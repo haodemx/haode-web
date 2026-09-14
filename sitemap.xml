@@ -18,6 +18,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://haode.com.mx/baterias/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haode.com.mx/novedades/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://haode.com.mx/ai-productos.html</loc>
     <lastmod>2026-06-03</lastmod>
   </url>

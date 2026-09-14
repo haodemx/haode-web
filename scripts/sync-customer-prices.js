@@ -534,6 +534,8 @@ function genericProductPage(product) {
   <title>${escapeHtml(seoName)} | HAODE México</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/style.css?v=20260725-catalog-complete" />
+  <link rel="stylesheet" href="/v3-screen-atlas.css?v=20260914-v3" />
+  <link rel="stylesheet" href="/v3-screen-atlas-fixes.css?v=20260914-v3" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <script src="/analytics.js?v=20260803-consent-privacy"></script>
 </head>
@@ -883,7 +885,8 @@ function main() {
   };
 
   if (APPLY) {
-    fs.writeFileSync(WEBSITE_FILE, `window.HAODE_PRODUCTS_DATA = ${JSON.stringify(retainedWebsiteProducts, null, 2)};${buildText}`, 'utf8');
+    const normalizedBuildText = buildText.replace(/^;+/, ';');
+    fs.writeFileSync(WEBSITE_FILE, `window.HAODE_PRODUCTS_DATA = ${JSON.stringify(retainedWebsiteProducts, null, 2)}${normalizedBuildText}`, 'utf8');
     fs.writeFileSync(APP_FILE, `${JSON.stringify(retainedAppProducts, null, 2)}\n`, 'utf8');
     fs.writeFileSync(MASTER_FILE, PUBLISH_UNLISTED
       ? rebuildMasterCsv(retainedWebsiteProducts, retainedAppProducts, sourceRowsById, source)

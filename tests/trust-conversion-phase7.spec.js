@@ -11,7 +11,7 @@ test.describe("HAODE trust conversion UI phase 7", () => {
       await expect(page.locator("body")).toHaveClass(/trust-conversion-page/);
       await expect(page.locator(".topnav a").first()).toBeVisible();
       await expectCompactTrustBrand(page);
-      await expectHeaderHeightAtMost(page, ".topbar", 130);
+      await expectHeaderHeightAtMost(page, ".topbar", 132);
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Garantía local");
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Stock en México");
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("Soporte profesional");

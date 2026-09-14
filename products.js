@@ -1958,7 +1958,7 @@ function renderCatalogPage() {
 
     const badgeRow = document.createElement('div');
     badgeRow.className = 'shop-badge-row';
-    ['Fábrica directa', 'WhatsApp privado', 'Mayoreo'].forEach((label) => {
+    ['Atención directa', 'WhatsApp privado', 'Mayoreo'].forEach((label) => {
       const badge = document.createElement('span');
       badge.textContent = label;
       badgeRow.appendChild(badge);
@@ -2550,6 +2550,94 @@ function isErpHostedAsset(src) {
   }
 }
 
+function buildV3DetailCotizacionText(product, quantity) {
+  return [
+    'Hola HAODE México, quiero cotizar este producto:',
+    `Producto: ${product.name || 'Producto HAODE'}`,
+    `Modelo/SKU: ${product.sku || product.id || 'N/A'}`,
+    `Calidad / versión: ${product.quality || 'Por confirmar'}`,
+    `Cantidad: ${quantity}`,
+    'Ciudad:',
+    `Origen: ${trafficReference()}.`,
+    '¿Me pueden confirmar stock en México, precio por cantidad, garantía local y envío?'
+  ].join('\n');
+}
+
+function enhanceV3ProductDetail(page, product) {
+  if (document.body.dataset.v3Detail !== 'true') return;
+
+  const grid = page.querySelector('.detail-grid');
+  const info = grid?.querySelector('.detail-info');
+  const top = page.querySelector(':scope > .detail-top');
+  const card = info?.querySelector('.detail-card');
+  if (!grid || !info || !card) return;
+
+  grid.classList.add('v3-detail-atlas');
+  info.classList.add('v3-detail-configurator');
+  if (top && top.parentElement === page) info.prepend(top);
+  if (page.firstElementChild !== grid) page.prepend(grid);
+
+  let controls = card.querySelector('[data-v3-detail-controls]');
+  if (!controls) {
+    controls = document.createElement('div');
+    controls.className = 'v3-detail-controls';
+    controls.setAttribute('data-v3-detail-controls', '');
+    controls.innerHTML = `
+      <div class="v3-detail-row">
+        <span class="v3-num">01</span>
+        <div><small>Modelo</small><strong data-v3-detail-model></strong></div>
+        <a href="/productos/">Cambiar modelo →</a>
+      </div>
+      <div class="v3-detail-row v3-detail-row--stack">
+        <span class="v3-num">02</span>
+        <div><small>Calidad / versión publicada</small><button type="button" class="v3-quality-option" aria-pressed="true" data-v3-detail-quality></button></div>
+      </div>
+      <div class="v3-detail-row v3-detail-row--stack">
+        <span class="v3-num">03</span>
+        <div><small>Cantidad</small><div class="v3-quantity" role="group" aria-label="Seleccionar cantidad"><button type="button" data-v3-qty-minus aria-label="Reducir cantidad">−</button><output data-v3-qty>1</output><button type="button" data-v3-qty-plus aria-label="Aumentar cantidad">+</button><button type="button" data-v3-qty-preset="5">5</button><button type="button" data-v3-qty-preset="10">10</button></div></div>
+      </div>
+      <div class="v3-detail-row v3-detail-row--confirm">
+        <span class="v3-num">04</span>
+        <div><small>Confirmación</small><p>Disponibilidad, precio y condiciones se revisan antes del pedido.</p></div>
+      </div>
+      <a class="v3-detail-app" href="/app/">Continuar en APP</a>
+      <p class="v3-detail-selection"><span>Tu selección</span><strong data-v3-detail-summary></strong></p>
+    `;
+    const description = card.querySelector('[data-detail-description]');
+    if (description) description.insertAdjacentElement('afterend', controls);
+    else card.prepend(controls);
+  }
+
+  const model = product.model || product.name;
+  const quality = product.quality || 'Por confirmar';
+  controls.querySelector('[data-v3-detail-model]').textContent = model;
+  controls.querySelector('[data-v3-detail-quality]').textContent = quality;
+
+  let quantity = Math.max(1, Number(controls.dataset.quantity || 1));
+  const quantityOutput = controls.querySelector('[data-v3-qty]');
+  const summary = controls.querySelector('[data-v3-detail-summary]');
+  const update = (nextQuantity) => {
+    quantity = Math.max(1, Math.min(999, Number(nextQuantity) || 1));
+    controls.dataset.quantity = String(quantity);
+    quantityOutput.textContent = String(quantity);
+    summary.textContent = `${model} · ${quality} · ${quantity} ${quantity === 1 ? 'pieza' : 'piezas'}`;
+    const href = buildWhatsAppUrl(buildV3DetailCotizacionText(product, quantity));
+    page.querySelectorAll('[data-detail-whatsapp], [data-detail-panel-whatsapp]').forEach((link) => { link.href = href; });
+    const floating = document.querySelector('.floating-cta');
+    if (floating) floating.href = href;
+  };
+
+  if (controls.dataset.bound !== 'true') {
+    controls.dataset.bound = 'true';
+    controls.querySelector('[data-v3-qty-minus]').addEventListener('click', () => update(quantity - 1));
+    controls.querySelector('[data-v3-qty-plus]').addEventListener('click', () => update(quantity + 1));
+    controls.querySelectorAll('[data-v3-qty-preset]').forEach((button) => {
+      button.addEventListener('click', () => update(Number(button.dataset.v3QtyPreset)));
+    });
+  }
+  update(quantity);
+}
+
 function renderProductDetailPage() {
   const page = document.querySelector('[data-product-detail]');
   if (!page) return;
@@ -2647,7 +2735,7 @@ function renderProductDetailPage() {
         text.textContent = 'Envía modelo exacto, cantidad y ciudad. HAODE confirma stock en México, precio por cantidad, garantía local y envío antes de preparar el pedido.';
         const proof = document.createElement('div');
         proof.className = 'reference-panel-proof';
-        ['Fábrica directa', 'Stock en México', 'Precio por cantidad'].forEach((label) => {
+        ['Atención directa', 'Stock en México', 'Precio por cantidad'].forEach((label) => {
           const span = document.createElement('span');
           span.textContent = label;
           proof.appendChild(span);
@@ -2731,7 +2819,7 @@ function renderProductDetailPage() {
     if (factoryCallout) {
       factoryCallout.innerHTML = '';
       [
-        ['Fábrica directa', 'Sin intermediarios'],
+        ['Atención directa', 'Canal HAODE'],
         ['Lista grande', 'Cotización privada'],
         ['Garantía local', 'Soporte en México'],
       ].forEach(([title, detail]) => {
@@ -2795,7 +2883,7 @@ function renderProductDetailPage() {
         <h2>Cotiza este modelo por WhatsApp privado</h2>
         <p>Confirma modelo exacto, referencia, cantidad y ciudad. HAODE valida stock en México, precio por cantidad, garantía local y entrega antes de cerrar.</p>
         <div class="reference-panel-proof">
-          <span>Fábrica directa</span>
+          <span>Atención directa</span>
           <span>Stock en México</span>
           <span>Precio por cantidad</span>
         </div>
@@ -2925,6 +3013,8 @@ function renderProductDetailPage() {
       relatedRoot.appendChild(createProductCard(item));
     });
   }
+
+  enhanceV3ProductDetail(page, product);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
