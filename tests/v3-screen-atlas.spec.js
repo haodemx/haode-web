@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 const baseURL = (process.env.BASE_URL || 'http://127.0.0.1:4177').replace(/\/$/, '');
 const pages = [
-  ['/', 'Pantallas para trabajo real.'],
+  ['/', 'Pantallas profesionales'],
   ['/productos/', 'Pantallas'],
   ['/producto/iphone-oled-11promax/', 'Pantalla para iPhone 11 Pro Max'],
   ['/micas.html', 'Hidrogel'],
@@ -75,4 +75,15 @@ test('Baterías exposes no invented catalog entries', async ({ page }) => {
   await expect(page.getByText('FOTOGRAFÍA REAL PENDIENTE DE VALIDACIÓN')).toBeVisible();
   await expect(page.getByText('Sin productos confirmados.')).toBeVisible();
   await expect(page.locator('[data-v3-product]')).toHaveCount(0);
+});
+
+test('selected repair-lab homepage uses real screen assets and the four-step buying flow', async ({ page }) => {
+  await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('body')).toHaveClass(/v3-lab/);
+  await expect(page.locator('.lab-screen-front')).toHaveAttribute('src', /assets\/products\/iphone-incell\/16plus\/16plus白底图\.jpg/);
+  await expect(page.locator('.lab-screen-back')).toHaveAttribute('src', /assets\/products\/iphone-incell\/16plus\/背板\.png/);
+  await expect(page.locator('.lab-buying-flow .v3-step')).toHaveCount(4);
+  await expect(page.locator('.lab-category--screens')).toBeVisible();
+  await expect(page.locator('.lab-category--hydrogel')).toBeVisible();
+  await expect(page.locator('.lab-category--battery [class*="pending"]')).toBeVisible();
 });
