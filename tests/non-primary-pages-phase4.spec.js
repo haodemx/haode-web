@@ -12,15 +12,17 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
     },
     {
       path: "/productos-ai/",
-      panel: "productos-ai",
-      text: "Cotiza Productos AI por WhatsApp privado",
-      cta: "Enviar lista AI"
+      v3: true,
+      surface: ".v3-shell",
+      text: "Gafas Inteligentes AI G3",
+      cta: "Cotizar por WhatsApp"
     },
     {
       path: "/contacto/",
-      panel: "contacto",
-      text: "Lista grande, precio por cantidad y respuesta privada",
-      cta: "Enviar lista"
+      v3: true,
+      surface: ".v3-shell",
+      text: "Visítanos o escríbenos",
+      cta: "Abrir WhatsApp"
     }
   ];
 
@@ -29,10 +31,11 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await page.setViewportSize({ width: 1280, height: 900 });
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
 
-      const panel = page.locator(`[data-reference-conversion="${pageCase.panel}"]`);
+      const panel = pageCase.v3
+        ? page.locator(pageCase.surface)
+        : page.locator(`[data-reference-conversion="${pageCase.panel}"]`);
       await expect(panel).toBeVisible();
       await expect(panel).toContainText(pageCase.text);
-      await expect(panel).toContainText("México");
       await expect(panel.getByRole("link", { name: pageCase.cta })).toHaveAttribute("href", /wa\.me/);
       await expectNoHorizontalOverflow(page);
 
@@ -46,15 +49,9 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await expectHeaderWhatsAppGreen(page);
       await expectHeaderHeightAtMost(page, ".reference-header", 200);
       await page.locator(".reference-menu-button").click();
-      await expect(page.locator(`[data-reference-conversion="${pageCase.panel}"]`)).toBeVisible();
+      await expect(panel).toBeVisible();
       if (pageCase.path === "/categoria/") {
         await expectFirstCategoryCardStartsInView(page);
-      }
-      if (pageCase.path === "/contacto/") {
-        await expect(page.locator(".contact-reference-strip")).toContainText("Fábrica directa");
-        await expect(page.locator(".contact-reference-strip")).toContainText("Bajo precio");
-        await expectDarkConversionStrip(page, ".contact-reference-strip");
-        await expectContactPanelCtaInView(page);
       }
       await expectNoHorizontalOverflow(page);
     });

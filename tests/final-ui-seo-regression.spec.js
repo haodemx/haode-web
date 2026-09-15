@@ -72,18 +72,16 @@ test('homepage and shared product footer keep customer actions readable', async 
   }));
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.reference-hero h1')).toBeVisible();
-
-  await expectReadableText(page, '.reference-eyebrow');
-  await expectReadableText(page, '.haode-hero-primary');
-  await expectReadableText(page, '.haode-supply-path > span');
-  await expectReadableText(page, '.reference-bottom-whatsapp small');
-  await expectReadableText(page, '.reference-copyright');
+  await expect(page.locator('.lab-hero h1')).toBeVisible();
+  await expectReadableText(page, '.lab-hero h1');
+  await expectReadableText(page, '.lab-promise');
+  await expectReadableText(page, '.lab-final-cta p');
+  await expectReadableText(page, '.v3-footer-brand p');
 
   await page.goto(`${BASE_URL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.site-sales-footer')).toBeVisible();
-  await expectReadableText(page, '.site-sales-footer-whatsapp');
-  await expectReadableText(page, '.site-sales-footer-app');
+  await expect(page.locator('.v3-footer')).toBeVisible();
+  await expectReadableText(page, '.v3-footer-brand p');
+  await expectReadableText(page, '.v3-footer a[href*="wa.me"]');
 });
 
 test('product detail keeps its optimized verified local main image after ERP enrichment', async ({ page }) => {

@@ -7,12 +7,9 @@ test('catalog cards use a restrained retail presentation instead of template eff
   await page.goto(`${BASE_URL}/productos/`, { waitUntil: 'domcontentloaded' });
 
   const card = page.locator('[data-catalog-card]:visible').first();
-  const media = card.locator('.shop-media');
-  const stock = card.locator('.stock-badge');
-
   await expect(card).toHaveCSS('background-image', 'none');
   await expect(card).toHaveCSS('box-shadow', 'none');
-  await expect(card).toHaveCSS('border-radius', '4px');
-  await expect(media).toHaveCSS('background-image', 'none');
-  await expect(stock).toHaveCSS('border-radius', '0px');
+  await expect(card).toHaveCSS('border-radius', '0px');
+  await expect(card.locator('img')).toHaveCSS('object-fit', 'contain');
+  await expect(card.locator('.v3-product-meta')).toBeVisible();
 });

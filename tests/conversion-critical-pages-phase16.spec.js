@@ -6,7 +6,7 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Refacciones precisas. Pedidos claros.', 'Stock en México', 'WhatsApp'],
+    texts: ['Pantallas para trabajo real', 'Hidrogel', 'WhatsApp'],
   },
   {
     path: '/app/',
@@ -16,7 +16,7 @@ const criticalPages = [
   {
     path: '/productos/',
     name: 'catalog',
-    texts: ['Catálogo HAODE México', 'Enviar lista por WhatsApp', 'Precio por cantidad'],
+    texts: ['Catálogo HAODE México', 'Atlas de modelos', 'Cotizar por WhatsApp'],
   },
   {
     path: '/categoria/samsung-oled/',
@@ -41,7 +41,7 @@ const criticalPages = [
   {
     path: '/contacto/',
     name: 'contact',
-    texts: ['Tienda oficial de fábrica HL en CDMX', 'Lista grande, precio por cantidad', 'Enviar lista'],
+    texts: ['Contacto', 'Local 225', 'Abrir WhatsApp'],
   },
   {
     path: '/distribuidores/',
@@ -90,18 +90,13 @@ async function checkCriticalPage(page, pageCase, viewport) {
     await expectReferenceDesktopWordmark(page);
   }
   if (pageCase.name === 'home') {
-    await expect(page.locator('.reference-proof-band')).toContainText('Fábrica directa');
-    await expect(page.locator('.reference-proof-band')).toContainText('Verificación de pedido');
-    const factoryImage = page.locator('[data-home-hero-carousel-image]:visible').first();
-    await expect(factoryImage).toBeVisible();
-    await expect(factoryImage).toHaveAttribute('src', /\/assets\/images\/home-hero-carousel\/.+\.webp/);
-    expect(await factoryImage.evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
-    await expect(page.locator('.reference-product-composition')).toHaveCount(0);
+    const productImages = page.locator('.v3-specimen img');
+    await expect(productImages).toHaveCount(2);
+    expect(await productImages.evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
     if (viewport.width <= 430) {
-      await expectHomepageStickyWhatsapp(page, viewport.height);
+      await expect(page.locator('.v3-floating')).toBeVisible();
     } else {
-      await expect(page.locator('.reference-bottom-whatsapp')).toBeVisible();
-      await expect(page.locator('.reference-bottom-whatsapp a[href*="wa.me"]')).toBeVisible();
+      await expect(page.locator('.v3-cta a[href*="wa.me"]')).toBeVisible();
     }
   }
   await expectNoHorizontalOverflow(page);
@@ -131,13 +126,13 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 async function expectMobileHomeVisual(page) {
   const visual = page.locator('.reference-mobile-hero-visual');
   await expect(visual).toBeVisible();
-  await expect(visual.locator('[data-home-hero-carousel-image]')).toBeVisible();
-  await expect(visual.locator('[data-home-hero-carousel-dot]')).toHaveCount(7);
+  await expect(visual).toContainText('Modelo · versión · cantidad');
+  await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   const box = await visual.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     return { top: Math.round(rect.top), height: Math.round(rect.height) };
   });
-  expect(box.top).toBeLessThan(620);
+  expect(box.top).toBeLessThan(760);
   expect(box.height).toBeGreaterThanOrEqual(110);
 }
 
@@ -201,10 +196,10 @@ async function expectReferenceDesktopWordmark(page) {
     };
   });
 
-  expect(details.width).toBeGreaterThanOrEqual(180);
+  expect(details.width).toBeGreaterThanOrEqual(170);
   expect(details.imageDisplay).toBe('block');
-  expect(details.imageWidth).toBeGreaterThanOrEqual(180);
-  expect(details.imageContent).toContain('haode-header-logo-horizontal-preview.png');
+  expect(details.imageWidth).toBeGreaterThanOrEqual(170);
+  await expect(logo.locator('img')).toHaveAttribute('src', '/assets/images/factory-store-wordmark.png');
 }
 
 async function expectNoHorizontalOverflow(page) {

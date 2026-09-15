@@ -1,4 +1,6 @@
 const WHATSAPP_PHONE = '523326684296';
+const IS_V3_DETAIL_ROUTE = /^\/producto(?:\/|\.html(?:$|\?))/.test(window.location.pathname);
+if (IS_V3_DETAIL_ROUTE) document.body.dataset.v3Detail = 'true';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['1 pza', '5+ pzs', '100 pzs surtido', '100 pzs/modelo', 'Caja/modelo'];
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
@@ -2704,6 +2706,132 @@ function isErpHostedAsset(src) {
   }
 }
 
+function buildV3DetailCotizacionText(product, quantity) {
+  return [
+    'Hola HAODE México, quiero cotizar este producto:',
+    `Producto: ${product.name || 'Producto HAODE'}`,
+    `Modelo/SKU: ${product.sku || product.id || 'N/A'}`,
+    `Calidad / versión: ${product.quality || 'Por confirmar'}`,
+    `Cantidad: ${quantity}`,
+    'Ciudad:',
+    `Origen: ${trafficReference()}.`,
+    '¿Me pueden confirmar stock en México, precio por cantidad, garantía local y envío?'
+  ].join('\n');
+}
+
+function enhanceV3ProductDetail(page, product) {
+  if (document.body.dataset.v3Detail !== 'true') return;
+
+  const grid = page.querySelector('.detail-grid');
+  const info = grid?.querySelector('.detail-info');
+  const top = page.querySelector(':scope > .detail-top');
+  const card = info?.querySelector('.detail-card');
+  if (!grid || !info || !card) return;
+
+  grid.classList.add('v3-detail-atlas');
+  info.classList.add('v3-detail-configurator');
+  if (top && top.parentElement === page) info.prepend(top);
+  if (page.firstElementChild !== grid) page.prepend(grid);
+
+  let controls = card.querySelector('[data-v3-detail-controls]');
+  if (!controls) {
+    controls = document.createElement('div');
+    controls.className = 'v3-detail-controls';
+    controls.setAttribute('data-v3-detail-controls', '');
+    controls.innerHTML = `
+      <div class="v3-detail-row">
+        <span class="v3-num">01</span>
+        <div><small>Modelo</small><strong data-v3-detail-model></strong></div>
+        <a href="/productos/">Cambiar modelo →</a>
+      </div>
+      <div class="v3-detail-row v3-detail-row--stack">
+        <span class="v3-num">02</span>
+        <div><small>Calidad / versión publicada</small><button type="button" class="v3-quality-option" aria-pressed="true" data-v3-detail-quality></button></div>
+      </div>
+      <div class="v3-detail-row v3-detail-row--stack">
+        <span class="v3-num">03</span>
+        <div><small>Cantidad</small><div class="v3-quantity" role="group" aria-label="Seleccionar cantidad"><button type="button" data-v3-qty-minus aria-label="Reducir cantidad">−</button><output data-v3-qty>1</output><button type="button" data-v3-qty-plus aria-label="Aumentar cantidad">+</button><button type="button" data-v3-qty-preset="5">5</button><button type="button" data-v3-qty-preset="10">10</button></div></div>
+      </div>
+      <div class="v3-detail-row v3-detail-row--confirm">
+        <span class="v3-num">04</span>
+        <div><small>Confirmación</small><p>Disponibilidad, precio y condiciones se revisan antes del pedido.</p></div>
+      </div>
+      <a class="v3-detail-app" href="/app/">Continuar en APP</a>
+      <p class="v3-detail-selection"><span>Tu selección</span><strong data-v3-detail-summary></strong></p>
+    `;
+    const description = card.querySelector('[data-detail-description]');
+    if (description) description.insertAdjacentElement('afterend', controls);
+    else card.prepend(controls);
+  }
+
+  const model = product.model || product.name;
+  const quality = product.quality || 'Por confirmar';
+  controls.querySelector('[data-v3-detail-model]').textContent = model;
+  controls.querySelector('[data-v3-detail-quality]').textContent = quality;
+
+  let quantity = Math.max(1, Number(controls.dataset.quantity || 1));
+  const quantityOutput = controls.querySelector('[data-v3-qty]');
+  const summary = controls.querySelector('[data-v3-detail-summary]');
+  const update = (nextQuantity) => {
+    quantity = Math.max(1, Math.min(999, Number(nextQuantity) || 1));
+    controls.dataset.quantity = String(quantity);
+    quantityOutput.textContent = String(quantity);
+    summary.textContent = `${model} · ${quality} · ${quantity} ${quantity === 1 ? 'pieza' : 'piezas'}`;
+    const href = buildWhatsAppUrl(buildV3DetailCotizacionText(product, quantity));
+    page.querySelectorAll('[data-detail-whatsapp], [data-detail-panel-whatsapp]').forEach((link) => { link.href = href; });
+    const floating = document.querySelector('.floating-cta');
+    if (floating) floating.href = href;
+  };
+
+  if (controls.dataset.bound !== 'true') {
+    controls.dataset.bound = 'true';
+    controls.querySelector('[data-v3-qty-minus]').addEventListener('click', () => update(quantity - 1));
+    controls.querySelector('[data-v3-qty-plus]').addEventListener('click', () => update(quantity + 1));
+    controls.querySelectorAll('[data-v3-qty-preset]').forEach((button) => {
+      button.addEventListener('click', () => update(Number(button.dataset.v3QtyPreset)));
+    });
+  }
+  update(quantity);
+}
+
+function refreshV3ProductDetailData() {
+  const page = document.querySelector('[data-product-detail]');
+  if (!page || document.body.dataset.v3Detail !== 'true') return;
+
+  const params = new URLSearchParams(window.location.search);
+  const pathMatch = window.location.pathname.match(/\/producto\/([^/]+)\/?$/);
+  const routeSlug = params.get('id') || (pathMatch ? decodeURIComponent(pathMatch[1]) : null);
+  const id = routeSlug ? resolveProductIdFromRoute(routeSlug) : null;
+  const product = PRODUCT_BY_ID.get(id);
+  if (!product) return;
+
+  const setText = (selector, value) => {
+    const element = page.querySelector(selector);
+    if (element) element.textContent = value;
+  };
+  if (!document.body.hasAttribute('data-curated-seo')) setText('[data-detail-title]', product.name);
+  setText('[data-detail-subtitle]', `${CATEGORY_META[product.category].title} · ${product.stockLabel || 'Consultar inventario'}`);
+  setText('[data-detail-brand]', product.brand);
+  setText('[data-detail-quality]', product.quality);
+  setText('[data-detail-description]', product.description);
+  setText('[data-detail-price]', product.lowestPriceText || 'Consultar');
+
+  const tableBody = page.querySelector('[data-detail-price-body]');
+  if (tableBody) {
+    tableBody.replaceChildren(...product.priceTable.map((row) => {
+      const tr = document.createElement('tr');
+      const quantity = document.createElement('th');
+      quantity.scope = 'row';
+      quantity.textContent = row.quantity;
+      const price = document.createElement('td');
+      price.textContent = row.price;
+      tr.append(quantity, price);
+      return tr;
+    }));
+  }
+  enhanceV3ProductDetail(page, product);
+}
+
 function renderProductDetailPage() {
   const page = document.querySelector('[data-product-detail]');
   if (!page) return;
@@ -3093,12 +3221,24 @@ function renderProductDetailPage() {
       relatedRoot.appendChild(createProductCard(item, { deferMedia: true }));
     });
   }
+
+  enhanceV3ProductDetail(page, product);
 }
 
 function renderInitialProductViews() {
   renderCatalogPage();
   renderProductDetailPage();
 }
+
+document.addEventListener('haode:v3-detail-ready', () => {
+  const page = document.querySelector('[data-product-detail]');
+  const params = new URLSearchParams(window.location.search);
+  const pathMatch = window.location.pathname.match(/\/producto\/([^/]+)\/?$/);
+  const routeSlug = params.get('id') || (pathMatch ? decodeURIComponent(pathMatch[1]) : null);
+  const id = routeSlug ? resolveProductIdFromRoute(routeSlug) : null;
+  const product = PRODUCT_BY_ID.get(id);
+  if (page && product) enhanceV3ProductDetail(page, product);
+});
 
 async function hydrateProductViews() {
   const catalogAlreadyRendered = Boolean(document.querySelector('[data-product-sections]'));
@@ -3113,7 +3253,9 @@ async function hydrateProductViews() {
   // by the verified local allowlist.
   if (catalogAlreadyRendered) refreshRenderedCatalogCards();
   else renderCatalogPage();
-  renderProductDetailPage();
+  if (IS_V3_DETAIL_ROUTE) refreshV3ProductDetailData();
+  else renderProductDetailPage();
+  document.dispatchEvent(new CustomEvent('haode:catalog-hydrated'));
 }
 
 // This script is loaded at the end of the document. Render the static product

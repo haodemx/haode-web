@@ -32,7 +32,7 @@ test('homepage search stays on the website and filters the official catalog', as
   await expect(page.locator('[data-site-catalog-status]')).toContainText('resultados');
 
   const visibleCards = page.locator('[data-site-search-item]:visible');
-  expect(await visibleCards.count()).toBeGreaterThan(0);
+  await expect.poll(() => visibleCards.count()).toBeGreaterThan(0);
   await expect(visibleCards.first()).toContainText(/iPhone 14 Pro Max/i);
 });
 

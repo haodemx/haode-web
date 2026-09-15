@@ -1,4 +1,12 @@
 (() => {
+  const isV3DetailRoute = /^\/producto(?:\/|\.html(?:$|\?))/.test(window.location.pathname);
+  if (isV3DetailRoute) document.body.dataset.v3Detail = 'true';
+  if (isV3DetailRoute && !document.querySelector('link[href*="/v3-screen-atlas.css"]')) {
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = '/v3-screen-atlas.css?v=20260914-v3-transplant';
+    document.head.appendChild(styles);
+  }
   const ensureScript = (src, match) => {
     if (document.querySelector(`script[src*="${match}"]`)) return;
     const script = document.createElement('script');
@@ -26,7 +34,7 @@
   }
 
   const nav = headerInner.querySelector('.topnav');
-  if (nav) {
+  if (nav && !isV3DetailRoute) {
     const links = [
       ['Inicio', '/'],
       ['Pantallas', '/productos/'],
@@ -92,4 +100,11 @@
     footerScript.defer = true;
     document.body.appendChild(footerScript);
   }
+
+  if (isV3DetailRoute && !document.querySelector('script[src*="/v3-screen-atlas.js"]')) {
+    const v3Script = document.createElement('script');
+    v3Script.src = '/v3-screen-atlas.js?v=20260914-v3-transplant';
+    document.body.appendChild(v3Script);
+  }
+  if (isV3DetailRoute) document.dispatchEvent(new CustomEvent('haode:v3-detail-ready'));
 })();

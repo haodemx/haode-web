@@ -20,6 +20,12 @@ test('contact, warranty, and distributor conversion panels keep readable contras
 
   for (const route of ['/contacto/', '/garantia/', '/distribuidores/']) {
     await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded' });
+    if (route === '/contacto/') {
+      const contact = page.locator('.v3-contact-grid');
+      await expect(contact).toBeVisible();
+      await expect(contact.getByRole('link', { name: 'Abrir WhatsApp' })).toHaveAttribute('href', /wa\.me/);
+      continue;
+    }
     const panel = page.locator('.reference-conversion-panel').first();
     await expect(panel).toBeVisible();
 
