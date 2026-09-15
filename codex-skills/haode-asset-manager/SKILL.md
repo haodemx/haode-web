@@ -45,6 +45,8 @@ Asset Factory batches use `scripts/run_asset_factory.py`. Import the Phase 1 inv
 
 Batch 2 provenance resolution uses `scripts/resolve_provenance_batch2.py` with the imported Batch 1 manifest. Promote a product source only when website, App, master CSV, price-list binding, exact asset path, Git history, and duplicate-chain identity agree. The generated `confirmed-assets.json` is the machine-readable approval registry; website consumers must enforce `provenance_status=CONFIRMED + qc_status=PASS + approved_for_web=true`. `MANUAL_REVIEW`, `LOW_RESOLUTION`, `REAL_ASSET_REQUIRED`, and rejected promo composites stay outside the homepage handoff.
 
+Batch 3 current-website coverage uses `scripts/run_asset_factory_batch3.py`. It may approve a detail image only when the exact current website path, unique product media directory, App/master model and quality, price-list row, Git history, QC pass, and SHA identity all agree. Video matching requires either an exact SHA chain to one current product or an explicit quality directory plus one exact model; model-only and shared-series videos remain `AMBIGUOUS`. Generate poster frames from the real matched video and keep raw videos outside the Git website drop.
+
 Runtime notes:
 
 - Use the existing Pillow/NumPy runtime at `/Users/mac/Documents/haode/HAODE-AUTOMATION/TOOLS/rembg/.venv/bin/python`; do not install another image stack merely to run this workflow.
