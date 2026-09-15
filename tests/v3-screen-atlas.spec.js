@@ -77,13 +77,31 @@ test('Baterías exposes no invented catalog entries', async ({ page }) => {
   await expect(page.locator('[data-v3-product]')).toHaveCount(0);
 });
 
-test('selected repair-lab homepage uses real screen assets and the four-step buying flow', async ({ page }) => {
+test('selected repair-lab homepage uses the locked laboratory photography and honest product assets', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('body')).toHaveClass(/v3-lab/);
-  await expect(page.locator('.lab-screen-front')).toHaveAttribute('src', /assets\/products\/iphone-incell\/16plus\/16plus白底图\.jpg/);
-  await expect(page.locator('.lab-screen-back')).toHaveAttribute('src', /assets\/products\/iphone-incell\/16plus\/背板\.png/);
+  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('src', '/assets/images/v3-lab-hero.png');
+  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('alt', /laboratorio/i);
+  await expect(page.locator('.lab-category--hydrogel')).toHaveAttribute('data-real-asset-required', 'true');
+  await expect(page.locator('.lab-category--battery')).toHaveAttribute('data-real-asset-required', 'true');
   await expect(page.locator('.lab-buying-flow .v3-step')).toHaveCount(4);
   await expect(page.locator('.lab-category--screens')).toBeVisible();
   await expect(page.locator('.lab-category--hydrogel')).toBeVisible();
   await expect(page.locator('.lab-category--battery [class*="pending"]')).toBeVisible();
+});
+
+test('laboratory homepage avoids synthetic hero and placeholder effects', async ({ page }) => {
+  await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
+  const visualStyle = await page.evaluate(() => {
+    const hero = getComputedStyle(document.querySelector('.lab-hero'));
+    const hydrogel = getComputedStyle(document.querySelector('.lab-hydrogel-visual'), '::after');
+    return {
+      heroBackgroundImage: hero.backgroundImage,
+      heroBackdropFilter: hero.backdropFilter,
+      hydrogelPseudoContent: hydrogel.content,
+    };
+  });
+  expect(visualStyle.heroBackgroundImage).toBe('none');
+  expect(visualStyle.heroBackdropFilter).toBe('none');
+  expect(visualStyle.hydrogelPseudoContent).toBe('none');
 });
