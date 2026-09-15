@@ -2706,6 +2706,142 @@ function isErpHostedAsset(src) {
   }
 }
 
+function productMediaDirectory(src) {
+  const value = String(src || '').trim();
+  if (!value || isErpHostedAsset(value) || value.includes('/placeholder.svg')) return '';
+  try {
+    const pathname = new URL(value, window.location.origin).pathname
+      .replace(/^\/+/, '')
+      .replace(/\/+$/, '');
+    return pathname.slice(0, pathname.lastIndexOf('/'));
+  } catch {
+    return '';
+  }
+}
+
+function hasExactProductMediaDirectory(src) {
+  const value = String(src || '').trim();
+  if (!productMediaDirectory(value)) return false;
+  try {
+    const filename = new URL(value, window.location.origin).pathname.split('/').pop() || '';
+    return /^main(?:\.display)?\.[a-z0-9]+$/i.test(filename);
+  } catch {
+    return false;
+  }
+}
+
+class ProductMediaGallery {
+  constructor(page, product) {
+    this.page = page;
+    this.product = product;
+    this.visual = page.querySelector('.detail-visual');
+    this.mainImage = page.querySelector('[data-detail-main-image]');
+    this.gallery = page.querySelector('[data-detail-gallery]');
+    this.videos = page.querySelector('[data-detail-videos]');
+    this.galleryWrap = this.gallery?.closest('.detail-gallery-wrap');
+    this.videoWrap = this.videos?.closest('.detail-video-wrap');
+    this.identity = {
+      sku: product.sku || product.id || '',
+      model: product.model || product.name || '',
+      quality: product.quality || '',
+    };
+    this.productDirectory = productMediaDirectory(product.originalMainImage || product.mainImage);
+    this.hasExactProductDirectory = hasExactProductMediaDirectory(product.originalMainImage || product.mainImage);
+  }
+
+  matchesProduct(src) {
+    const directory = productMediaDirectory(src);
+    return Boolean(this.hasExactProductDirectory && this.productDirectory && directory === this.productDirectory);
+  }
+
+  stampIdentity(element, kind) {
+    element.dataset.productMediaKind = kind;
+    element.dataset.mediaSku = this.identity.sku;
+    element.dataset.mediaModel = this.identity.model;
+    element.dataset.mediaQuality = this.identity.quality;
+  }
+
+  setSectionVisibility(wrapper, visible) {
+    if (!wrapper) return;
+    wrapper.hidden = !visible;
+    wrapper.setAttribute('aria-hidden', String(!visible));
+  }
+
+  renderGallery() {
+    if (!this.gallery) return 0;
+    this.gallery.replaceChildren();
+    const images = [...new Set((this.product.galleryImages || []).filter((src) => this.matchesProduct(src)))].slice(0, 4);
+    images.forEach((src, index) => {
+      const image = document.createElement('img');
+      const source = buildAssetUrl(src);
+      image.alt = `${this.product.name} foto ${index + 1}`;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      this.stampIdentity(image, 'image');
+      image.onerror = () => {
+        image.remove();
+        this.setSectionVisibility(this.galleryWrap, this.gallery.childElementCount > 0);
+        this.updateLayoutState();
+      };
+      deferProductMedia(image, source);
+      attachZoom(image, new URL(source, `${SITE_ORIGIN}/`).href, image.alt);
+      this.gallery.appendChild(image);
+    });
+    this.setSectionVisibility(this.galleryWrap, images.length > 0);
+    return images.length;
+  }
+
+  renderVideos() {
+    if (!this.videos) return 0;
+    this.videos.replaceChildren();
+    const videos = [...new Set((this.product.videos || []).filter((src) => this.matchesProduct(src)))];
+    videos.forEach((src, index) => {
+      const video = document.createElement('video');
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      video.poster = this.mainImage?.getAttribute('src') || buildAssetUrl(this.product.mainImage || PLACEHOLDER_IMAGE);
+      video.setAttribute('aria-label', `Video de prueba de ${this.product.name}${videos.length > 1 ? ` ${index + 1}` : ''}`);
+      this.stampIdentity(video, 'video');
+      video.addEventListener('error', () => {
+        video.remove();
+        this.setSectionVisibility(this.videoWrap, this.videos.childElementCount > 0);
+        this.updateLayoutState();
+      }, { once: true });
+      deferProductMedia(video, buildAssetUrl(src));
+      this.videos.appendChild(video);
+    });
+    this.setSectionVisibility(this.videoWrap, videos.length > 0);
+    return videos.length;
+  }
+
+  updateLayoutState() {
+    if (!this.visual) return;
+    const galleryCount = this.gallery?.childElementCount || 0;
+    const videoCount = this.videos?.childElementCount || 0;
+    this.visual.classList.toggle('has-product-gallery', galleryCount > 0);
+    this.visual.classList.toggle('has-product-video', videoCount > 0);
+    this.visual.classList.toggle('is-main-media-only', galleryCount === 0 && videoCount === 0);
+    this.visual.dataset.mediaSku = this.identity.sku;
+    this.visual.dataset.mediaModel = this.identity.model;
+    this.visual.dataset.mediaQuality = this.identity.quality;
+    this.visual.dataset.galleryCount = String(galleryCount);
+    this.visual.dataset.videoCount = String(videoCount);
+  }
+
+  render() {
+    this.renderGallery();
+    this.renderVideos();
+    this.updateLayoutState();
+  }
+}
+
+function renderProductMediaGallery(page, product) {
+  const gallery = new ProductMediaGallery(page, product);
+  gallery.render();
+  return gallery;
+}
+
 function buildV3DetailCotizacionText(product, quantity) {
   return [
     'Hola HAODE México, quiero cotizar este producto:',
@@ -2829,6 +2965,7 @@ function refreshV3ProductDetailData() {
       return tr;
     }));
   }
+  renderProductMediaGallery(page, product);
   enhanceV3ProductDetail(page, product);
 }
 
@@ -3134,7 +3271,7 @@ function renderProductDetailPage() {
       mainImageEl.insertAdjacentElement('afterend', imageStatus);
     }
     if (imageStatus) {
-      imageStatus.textContent = 'Imagen en actualización';
+      imageStatus.textContent = 'REAL ASSET REQUIRED';
       imageStatus.hidden = !product.usesPlaceholder;
     }
   }
@@ -3153,52 +3290,7 @@ function renderProductDetailPage() {
     backLink.href = buildSiteUrl('productos/');
   }
 
-  if (galleryEl) {
-    galleryEl.innerHTML = '';
-    const galleryImages = [...new Set((product.galleryImages || []).filter(Boolean))];
-    galleryImages.slice(0, 4).forEach((src, index) => {
-      const img = document.createElement('img');
-      const gallerySource = buildAssetUrl(src);
-      img.alt = `${product.name} foto ${index + 1}`;
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      img.onerror = () => {
-        const fallback = buildAssetUrl(PLACEHOLDER_IMAGE);
-        if (img.src !== fallback) img.src = fallback;
-      };
-      deferProductMedia(img, gallerySource);
-      attachZoom(img, new URL(buildAssetUrl(src), `${SITE_ORIGIN}/`).href, `${product.name} foto ${index + 1}`);
-      galleryEl.appendChild(img);
-    });
-
-    if (!galleryEl.children.length) {
-      const empty = document.createElement('div');
-      empty.className = 'detail-empty-note';
-      empty.textContent = 'Más fotos y videos próximamente.';
-      galleryEl.appendChild(empty);
-    }
-  }
-
-  if (videosEl) {
-    videosEl.innerHTML = '';
-    if (product.videos && product.videos.length) {
-      product.videos.forEach((video) => {
-        const frame = document.createElement('video');
-        frame.controls = true;
-        frame.playsInline = true;
-        frame.muted = true;
-        frame.loop = true;
-        frame.preload = 'none';
-        deferProductMedia(frame, buildAssetUrl(video));
-        videosEl.appendChild(frame);
-      });
-    } else {
-      const empty = document.createElement('div');
-      empty.className = 'detail-empty-note';
-      empty.textContent = 'Más fotos y videos próximamente.';
-      videosEl.appendChild(empty);
-    }
-  }
+  renderProductMediaGallery(page, product);
 
   if (tableBody) {
     tableBody.innerHTML = '';
@@ -3277,3 +3369,4 @@ document.addEventListener('click', (event) => {
 
 window.HAODE_PRODUCTS = PRODUCTS;
 window.HAODE_GET_PRODUCT = (id) => PRODUCT_BY_ID.get(id);
+window.HAODE_PRODUCT_MEDIA_GALLERY = ProductMediaGallery;

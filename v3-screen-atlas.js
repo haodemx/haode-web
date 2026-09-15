@@ -6,7 +6,7 @@
   if (!document.querySelector('link[href*="/v3-screen-atlas-fixes.css"]')) {
     const fixes = document.createElement('link');
     fixes.rel = 'stylesheet';
-    fixes.href = '/v3-screen-atlas-fixes.css?v=20260914-v3-transplant';
+    fixes.href = '/v3-screen-atlas-fixes.css?v=20260915-final-detail';
     document.head.appendChild(fixes);
   }
   const isV3Detail = body.dataset.v3Detail === 'true';

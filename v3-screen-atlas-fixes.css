@@ -184,6 +184,11 @@ body.product-detail-page.v3-atlas .detail-shell{display:block!important;backgrou
 body.product-detail-page.v3-atlas .v3-detail-atlas{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(390px,.82fr);align-items:stretch;border:1px solid var(--v3-line);background:#fff}
 body.product-detail-page.v3-atlas .v3-detail-atlas>.detail-visual{border:0!important;border-right:1px solid var(--v3-line)!important;padding:48px;min-width:0;background-color:#f8fafb;background-image:linear-gradient(#b8c1cf33 1px,transparent 1px),linear-gradient(90deg,#b8c1cf33 1px,transparent 1px);background-size:32px 32px}
 body.product-detail-page.v3-atlas .v3-detail-atlas .detail-main-image{height:570px;width:100%;object-fit:contain;filter:drop-shadow(0 18px 24px #0002)}
+body.product-detail-page.v3-atlas .v3-detail-atlas>.detail-visual.is-main-media-only{align-self:start}
+body.product-detail-page.v3-atlas .v3-detail-atlas>.detail-visual.is-main-media-only .detail-main-image{height:clamp(420px,42vw,520px)}
+body.product-detail-page.v3-atlas .detail-gallery-wrap[hidden],body.product-detail-page.v3-atlas .detail-video-wrap[hidden]{display:none!important}
+body.product-detail-page.v3-atlas .detail-gallery img{object-fit:contain;background:#fff}
+body.product-detail-page.v3-atlas .detail-videos video{aspect-ratio:16/9;object-fit:contain;background:#101012}
 body.product-detail-page.v3-atlas .v3-detail-configurator{display:flex;flex-direction:column;min-width:0}
 body.product-detail-page.v3-atlas .v3-detail-configurator>.detail-top{padding:34px 34px 22px;border:0;display:block;order:-2}
 body.product-detail-page.v3-atlas .v3-detail-configurator>.detail-top h1{font-size:clamp(48px,5.2vw,76px);margin:14px 0 8px}
@@ -229,6 +234,8 @@ body.product-detail-page.v3-atlas .detail-purchase-guide{display:none}
   body.product-detail-page.v3-atlas .v3-detail-atlas>.detail-visual{order:2}
   body.product-detail-page.v3-atlas .v3-detail-atlas>.detail-visual{border-right:0!important;border-bottom:1px solid var(--v3-line)!important;padding:20px}
   body.product-detail-page.v3-atlas .v3-detail-atlas .detail-main-image{height:390px}
+  body.product-detail-page.v3-atlas .v3-detail-atlas>.detail-visual.is-main-media-only .detail-main-image{height:min(82vw,340px)}
+  body.product-detail-page.v3-atlas .detail-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
   body.product-detail-page.v3-atlas .v3-detail-configurator>.detail-top{padding:26px 18px 18px}
   body.product-detail-page.v3-atlas .v3-detail-configurator>.detail-top h1{font-size:47px}
   body.product-detail-page.v3-atlas .v3-detail-configurator>.detail-card:first-of-type{padding:0 18px 22px}
