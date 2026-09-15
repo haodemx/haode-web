@@ -39,6 +39,8 @@ Required workflow:
 
 The repeatable file audit is `scripts/audit_assets.py`. Product-record normalization and manifest generation use `scripts/normalize_product_media.py`; browser evidence uses `scripts/capture_asset_preview.mjs`. All reports are technical evidence only; background classification, similarity, or a clean cutout do not prove product identity or approval.
 
+Phase 2 website-first work uses `scripts/normalize_website_batch.py` with the existing V1 manifest and `website-usage.csv`; it must not rerun the historical-library audit. It may apply the local non-generative u2net model only to current Pantallas records with white, gray, beige, or uniform rectangular backgrounds. Source selection stays inside the exact product folder, prefers a higher-resolution simple-background source, and records source and target SHA256. Complex scenes, Promo main-image misuse, Hidrogel, Baterías, X200T, and uncertain AI products remain in their protected review states. Use `scripts/capture_website_batch_preview.mjs` for the six Phase 2 desktop/mobile screenshots and search QA.
+
 Runtime notes:
 
 - Use the existing Pillow/NumPy runtime at `/Users/mac/Documents/haode/HAODE-AUTOMATION/TOOLS/rembg/.venv/bin/python`; do not install another image stack merely to run this workflow.
