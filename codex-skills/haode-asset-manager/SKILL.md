@@ -41,6 +41,8 @@ The repeatable file audit is `scripts/audit_assets.py`. Product-record normaliza
 
 Phase 2 website-first work uses `scripts/normalize_website_batch.py` with the existing V1 manifest and `website-usage.csv`; it must not rerun the historical-library audit. It may apply the local non-generative u2net model only to current Pantallas records with white, gray, beige, or uniform rectangular backgrounds. Source selection stays inside the exact product folder, prefers a higher-resolution simple-background source, and records source and target SHA256. Complex scenes, Promo main-image misuse, Hidrogel, Baterías, X200T, and uncertain AI products remain in their protected review states. Use `scripts/capture_website_batch_preview.mjs` for the six Phase 2 desktop/mobile screenshots and search QA.
 
+Asset Factory batches use `scripts/run_asset_factory.py`. Import the Phase 1 inventory instead of rebuilding it, scan only configured historical/source roots plus `/Users/mac/Documents/haode/HAODE-MASTER-ASSETS/INBOX`, and preserve every source byte. The factory may create technical drafts and review evidence but must emit `approved-web-assets.csv` only for records satisfying `SOURCE_CONFIRMED + QC_PASS + APPROVED_FOR_WEB`. It never edits website pages, CSS, product data, SEO, deployment, or production state. Limit the owner queue to prioritized decisions; retain the larger technical backlog in the manifest.
+
 Runtime notes:
 
 - Use the existing Pillow/NumPy runtime at `/Users/mac/Documents/haode/HAODE-AUTOMATION/TOOLS/rembg/.venv/bin/python`; do not install another image stack merely to run this workflow.
