@@ -24,16 +24,27 @@ Required workflow:
 2. Record SHA256 and detect exact duplicates.
 3. Detect perceptually similar images as review candidates, never as identity proof.
 4. Record dimensions and flag low resolution.
-5. Check true alpha and likely white, gray, or rectangular backgrounds.
-6. Suggest product/category and TYPE A/TYPE B mappings without inventing uncertain models.
+5. Check true alpha and likely white, gray, beige, or rectangular backgrounds.
+6. Suggest product/category and TYPE A/TYPE B/TYPE C/TYPE D mappings without inventing uncertain models.
 7. Suggest canonical filenames without renaming RAW files.
 8. Query website/App/ERP usage and distinguish referenced, unused, and missing paths.
 9. Report missing real assets and transparent-cutout status.
 10. Generate local contact sheets/previews and a machine-readable inventory.
-11. For conversions, preserve RAW and use deterministic removal first; mark damaged edges, glass, flex cables, labels, logos, packaging text, or uncertain results `MANUAL_REVIEW`.
-12. Never publish, deploy, replace production assets, or mark an uncertain product/model `APPROVED`.
+11. Update `asset-manifest.json`; keep authenticity, cutout, normalization, and QC as separate fields.
+12. Normalize only safe true-alpha sources to the 1200 x 1200 PNG master and transparent WebP standard.
+13. For conversions, preserve RAW and use deterministic removal first; mark damaged edges, glass, flex cables, labels, logos, packaging text, or uncertain results `MANUAL_REVIEW`.
+14. Run alpha-edge QC for halo/fringe, clipping, missing thin parts, white-object holes, and transparent/translucent loss signals.
+15. Prepare the local V3 preview and browser-check desktop, mobile, full catalog, and required search terms.
+16. Never publish, deploy, replace production assets, or mark an uncertain product/model `APPROVED`.
 
-The repeatable V3 audit implementation is `scripts/audit_assets.py`. Its reports are technical evidence only; background classification and similarity scores do not prove product identity or approval.
+The repeatable file audit is `scripts/audit_assets.py`. Product-record normalization and manifest generation use `scripts/normalize_product_media.py`; browser evidence uses `scripts/capture_asset_preview.mjs`. All reports are technical evidence only; background classification, similarity, or a clean cutout do not prove product identity or approval.
+
+Runtime notes:
+
+- Use the existing Pillow/NumPy runtime at `/Users/mac/Documents/haode/HAODE-AUTOMATION/TOOLS/rembg/.venv/bin/python`; do not install another image stack merely to run this workflow.
+- `normalize_product_media.py` requires `--root`, `--output`, `--logo-svg`, and `--current-logo`; pass `--prior-audit` only to reuse a previously reviewed deterministic draft.
+- Run the normalization command twice during final QA. The second run must report every unchanged cutout under `reused_outputs`.
+- Run `capture_asset_preview.mjs PREVIEW_DIR SCREENSHOT_DIR` after the final manifest. It uses the installed local Google Chrome and fails on broken images or horizontal overflow.
 
 Forbidden actions:
 
