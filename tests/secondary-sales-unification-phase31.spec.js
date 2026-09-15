@@ -86,7 +86,8 @@ test.describe('HAODE secondary sales unification phase 31', () => {
       await page.setViewportSize({ width: 1440, height: 900 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-      const alignment = await page.locator('.reference-nav-shell').evaluate((shell) => {
+      const shellSelector = path === '/contacto/' ? '.v3-header' : '.reference-nav-shell';
+      const alignment = await page.locator(shellSelector).evaluate((shell) => {
         const box = shell.getBoundingClientRect();
         return {
           left: Math.round(box.left),
@@ -95,9 +96,14 @@ test.describe('HAODE secondary sales unification phase 31', () => {
         };
       });
 
-      expect(alignment.left).toBeGreaterThanOrEqual(24);
-      expect(alignment.right).toBeLessThanOrEqual(1416);
-      expect(alignment.width).toBeLessThanOrEqual(1280);
+      if (path === '/contacto/') {
+        expect(alignment.left).toBe(0);
+        expect(alignment.right).toBe(1440);
+      } else {
+        expect(alignment.left).toBeGreaterThanOrEqual(24);
+        expect(alignment.right).toBeLessThanOrEqual(1416);
+        expect(alignment.width).toBeLessThanOrEqual(1280);
+      }
       await expectNoHorizontalOverflow(page);
     });
   }

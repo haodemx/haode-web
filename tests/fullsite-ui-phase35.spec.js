@@ -78,14 +78,14 @@ test.describe('factory-store shared page contracts', () => {
         visualWidth: visual.width,
         infoWidth: info.width,
         sameRow: Math.abs(visual.top - info.top),
-        titleAboveColumns: title.bottom <= visual.top,
+        titleInsideInfo: title.left >= info.left && title.right <= info.right + 1 && title.top >= info.top,
       };
     });
 
     expect(layout.visualWidth).toBeGreaterThan(480);
     expect(layout.infoWidth).toBeGreaterThan(380);
     expect(layout.sameRow).toBeLessThanOrEqual(2);
-    expect(layout.titleAboveColumns).toBe(true);
+    expect(layout.titleInsideInfo).toBe(true);
   });
 
   test('long bundle names wrap inside narrow product-detail viewports', async ({ page }) => {

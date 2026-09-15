@@ -537,10 +537,11 @@ function genericProductPage(product) {
   <title>${escapeHtml(seoName)} | HAODE México</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/style.css?v=20260813-final-ui-seo" />
+  <link rel="stylesheet" href="/v3-screen-atlas.css?v=20260914-v3-transplant" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <script src="/analytics.js?v=20260813-ga4-conversions"></script>
 </head>
-<body class="product-detail-page conversion-reference-page">
+<body class="product-detail-page conversion-reference-page" data-v3-detail="true">
   <header class="topbar catalog-topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/images/factory-store-wordmark.png" alt="HAODE Refacciones para Celular" width="200" height="58" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
@@ -571,6 +572,7 @@ ${placeholder ? '          <p class="product-image-status" data-product-image-st
   <a class="floating-cta" href="${whatsapp}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
   <script src="/campaign-attribution.js?v=20260813-ga4-conversions"></script>
   <script src="/data/products.generated.js?v=20260725-catalog-complete"></script>
+  <script src="/v3-screen-atlas.js?v=20260914-v3-transplant"></script>
   <script src="/products.js?v=20260813-ga4-conversions"></script>
   <script src="/detail-header.js?v=20260725-catalog-complete"></script>
 </body>

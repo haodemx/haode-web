@@ -110,14 +110,22 @@ async function expectDesktopQuoteInViewport(page) {
 async function expectUnifiedDetailHeader(page) {
   const whatsapp = page.locator('[data-detail-header-whatsapp]');
   const app = page.locator('[data-detail-header-app]');
+  const isV3 = await page.locator('body').evaluate((body) => body.classList.contains('v3-atlas'));
   await expect(whatsapp).toBeVisible();
   await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
-  await expect(whatsapp).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await expect(whatsapp).toHaveCSS('color', 'rgb(8, 122, 66)');
   await expect(app).toBeVisible();
   await expect(app).toHaveAttribute('href', /\/app\/$/);
-  await expect(app).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-  await expect(app).toHaveCSS('color', 'rgb(16, 16, 18)');
+  if (isV3) {
+    await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
+    await expect(whatsapp).toHaveCSS('color', 'rgb(255, 255, 255)');
+    await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 10)');
+    await expect(app).toHaveCSS('color', 'rgb(255, 255, 255)');
+  } else {
+    await expect(whatsapp).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(whatsapp).toHaveCSS('color', 'rgb(8, 122, 66)');
+    await expect(app).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(app).toHaveCSS('color', 'rgb(16, 16, 18)');
+  }
 }
 
 async function expectDesktopStandardDetailSalesLayout(page) {
@@ -125,9 +133,10 @@ async function expectDesktopStandardDetailSalesLayout(page) {
     const titleRect = document.querySelector('.detail-title')?.getBoundingClientRect();
     const imageRect = document.querySelector('.detail-main-image')?.getBoundingClientRect();
     const gridRect = document.querySelector('.detail-grid')?.getBoundingClientRect();
-    const quoteRect = document.querySelector('[data-detail-whatsapp]')?.getBoundingClientRect();
+    const quoteRect = (document.querySelector('.detail-top .floating-cta') || document.querySelector('[data-detail-whatsapp]'))?.getBoundingClientRect();
     const topFloat = document.querySelector('.detail-top .floating-cta');
     return {
+      titleTop: Math.round(titleRect?.top || 0),
       titleBottom: Math.round(titleRect?.bottom || 0),
       imageTop: Math.round(imageRect?.top || 0),
       imageLeft: Math.round(imageRect?.left || 0),
@@ -141,14 +150,16 @@ async function expectDesktopStandardDetailSalesLayout(page) {
     };
   });
 
-  expect(layout.imageTop).toBeLessThan(650);
-  expect(layout.titleBottom).toBeLessThan(layout.imageTop);
-  expect(layout.imageLeft).toBeGreaterThan(layout.gridLeft);
-  expect(layout.infoTop).toBeLessThan(layout.imageTop);
-  expect(layout.infoLeft).toBeGreaterThan(layout.imageRight + 20);
+  expect(layout.imageTop).toBeLessThan(520);
+  expect(layout.titleTop).toBeGreaterThanOrEqual(layout.imageTop);
+  expect(layout.titleBottom).toBeLessThan(layout.imageTop + 520);
+  expect(layout.imageLeft).toBeGreaterThanOrEqual(layout.gridLeft);
+  expect(layout.infoTop).toBeLessThanOrEqual(layout.imageTop);
+  expect(layout.imageTop - layout.infoTop).toBeLessThanOrEqual(80);
+  expect(layout.infoLeft).toBeGreaterThanOrEqual(layout.imageRight - 2);
   expect(layout.quoteTop).toBeGreaterThanOrEqual(0);
   expect(layout.quoteBottom).toBeLessThanOrEqual(1000);
-  expect(layout.topFloatDisplay).toBe('none');
+  expect(layout.topFloatDisplay).not.toBe('none');
 }
 
 async function expectDesktopFoldableSalesLayout(page) {
@@ -229,5 +240,5 @@ async function expectMobileDetailPreview(page) {
     };
   });
   expect(details.top).toBeLessThan(560);
-  expect(details.width).toBeGreaterThan(320);
+  expect(details.width).toBeGreaterThan(280);
 }

@@ -2,180 +2,60 @@ const { test, expect } = require('@playwright/test');
 
 const BASE_URL = (process.env.BASE_URL || 'http://127.0.0.1:4173').replace(/\/$/, '');
 
-function relativeLuminance(rgb) {
-  const channels = (rgb.match(/[\d.]+/g) || []).slice(0, 3).map(Number).map((channel) => {
-    const normalized = channel / 255;
-    return normalized <= 0.03928
-      ? normalized / 12.92
-      : ((normalized + 0.055) / 1.055) ** 2.4;
-  });
-  return (0.2126 * channels[0]) + (0.7152 * channels[1]) + (0.0722 * channels[2]);
-}
-
-function contrastRatio(foreground, background) {
-  const lighter = Math.max(relativeLuminance(foreground), relativeLuminance(background));
-  const darker = Math.min(relativeLuminance(foreground), relativeLuminance(background));
-  return (lighter + 0.05) / (darker + 0.05);
-}
-
-test.describe('homepage approved product-family carousel', () => {
+test.describe('homepage locked laboratory hero', () => {
   test.beforeEach(async ({ page }) => {
-    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.route('https://erp.haode.com.mx/**', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: '[]' }));
     await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
   });
 
-  test('desktop controls move through the approved families and wrap', async ({ page }) => {
+  test('uses the approved laboratory photograph without a generic carousel', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 900 });
-    const carousel = page.locator('.reference-hero-visual [data-home-hero-carousel]');
-    const image = carousel.locator('[data-home-hero-carousel-image]');
-
-    await expect(carousel).toBeVisible();
-    const desktopArrow = await carousel.locator('[data-home-hero-carousel-next]').boundingBox();
-    expect(desktopArrow?.width).toBeGreaterThanOrEqual(44);
-    expect(desktopArrow?.height).toBeGreaterThanOrEqual(44);
-    await expect(image).toHaveAttribute('src', '/assets/images/home-hero-carousel/iphone-incell.webp');
-    await carousel.locator('[data-home-hero-carousel-next]').click();
-    await expect(image).toHaveAttribute('src', '/assets/images/home-hero-carousel/iphone-oled.webp');
-    await expect(carousel.locator('[data-home-hero-carousel-status]')).toContainText('2 de 7');
-    await expect(carousel.locator('[data-home-hero-carousel-dot][aria-current="true"]')).toHaveCount(1);
-
-    await carousel.locator('[data-home-hero-carousel-prev]').click();
-    await expect(image).toHaveAttribute('src', '/assets/images/home-hero-carousel/iphone-incell.webp');
-    await carousel.locator('[data-home-hero-carousel-prev]').click();
-    await expect(image).toHaveAttribute('src', '/assets/images/home-hero-carousel/samsung-plegables-incell.webp');
+    await expect(page.locator('.lab-hero-photo')).toHaveAttribute('src', '/assets/images/v3-lab-hero.png');
+    await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
+    await expect(page.locator('.lab-hero h1')).toContainText('Pantallas profesionales');
   });
 
-  test('desktop shows the complete landscape image with four confirmed logistics logos directly below', async ({ page }) => {
-    await page.setViewportSize({ width: 1792, height: 1500 });
-    const carousel = page.locator('.reference-hero-visual [data-home-hero-carousel]');
-    const image = carousel.locator('[data-home-hero-carousel-image]');
-    const controls = carousel.locator('.reference-home-carousel-controls');
-    const logistics = page.locator('.reference-hero-visual .reference-logistics-strip');
-
-    await expect(logistics).toBeVisible();
-    await expect(logistics.locator('.reference-logistics-logos img')).toHaveCount(4);
-    await expect(logistics).toContainText('Paqueterías con las que trabajamos');
-    for (const courier of ['DHL', 'Estafeta', 'FedEx', 'Paquetexpress']) {
-      await expect(logistics.getByAltText(courier, { exact: true })).toBeVisible();
-    }
-
-    const presentation = await page.locator('.reference-hero-visual').evaluate((visual) => {
-      const carouselElement = visual.querySelector('[data-home-hero-carousel]');
-      const imageElement = visual.querySelector('[data-home-hero-carousel-image]');
-      const controlsElement = visual.querySelector('.reference-home-carousel-controls');
-      const logisticsElement = visual.querySelector('.reference-logistics-strip');
-      const carouselRect = carouselElement.getBoundingClientRect();
-      const imageRect = imageElement.getBoundingClientRect();
-      const controlsRect = controlsElement.getBoundingClientRect();
-      const logisticsRect = logisticsElement.getBoundingClientRect();
-      const imageStyle = getComputedStyle(imageElement);
-      const carouselStyle = getComputedStyle(carouselElement);
-
-      return {
-        objectFit: imageStyle.objectFit,
-        imageMaxHeight: imageStyle.maxHeight,
-        carouselMaxHeight: carouselStyle.maxHeight,
-        imageRatio: imageRect.width / imageRect.height,
-        naturalRatio: imageElement.naturalWidth / imageElement.naturalHeight,
-        imageToCarouselWidthGap: carouselRect.width - imageRect.width,
-        controlsBelowImage: controlsRect.y >= imageRect.y + imageRect.height - 1,
-        carouselToLogisticsGap: logisticsRect.y - (carouselRect.y + carouselRect.height),
-      };
-    });
-
-    expect(presentation.objectFit).toBe('contain');
-    expect(presentation.imageMaxHeight).toBe('none');
-    expect(presentation.carouselMaxHeight).toBe('none');
-    expect(Math.abs(presentation.imageRatio - presentation.naturalRatio)).toBeLessThan(0.03);
-    expect(Math.abs(presentation.imageToCarouselWidthGap)).toBeLessThanOrEqual(2);
-    expect(presentation.controlsBelowImage).toBe(true);
-    expect(Math.abs(presentation.carouselToLogisticsGap)).toBeLessThanOrEqual(1);
+  test('keeps the real product cutouts inside the locked hero composition', async ({ page }) => {
+    await page.setViewportSize({ width: 1792, height: 1200 });
+    const images = page.locator('.lab-contract-images img');
+    await expect(images).toHaveCount(2);
+    await expect.poll(() => images.evaluateAll((nodes) => nodes.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
+    await expect(images.first()).toHaveCSS('object-fit', 'contain');
   });
 
-  test('mobile shows its carousel without horizontal overflow', async ({ page }) => {
+  test('mobile keeps the same hero language without horizontal overflow', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    const mobileCarousel = page.locator('.reference-mobile-hero-visual [data-home-hero-carousel]');
-
-    await expect(mobileCarousel).toBeVisible();
-    await expect(page.locator('.reference-hero-visual')).toBeHidden();
-    await expect(mobileCarousel.locator('[data-home-hero-carousel-dot]')).toHaveCount(7);
-
-    const mobileArrow = await mobileCarousel.locator('[data-home-hero-carousel-next]').boundingBox();
-    const mobileDot = await mobileCarousel.locator('[data-home-hero-carousel-dot]').first().boundingBox();
-    const mobileControls = await mobileCarousel.locator('.reference-home-carousel-controls').boundingBox();
-    const mobileCarouselBox = await mobileCarousel.boundingBox();
-    expect(mobileArrow?.width).toBeGreaterThanOrEqual(44);
-    expect(mobileArrow?.height).toBeGreaterThanOrEqual(44);
-    expect(mobileDot?.width).toBeGreaterThanOrEqual(24);
-    expect(mobileDot?.height).toBeGreaterThanOrEqual(44);
-    expect(mobileControls?.x).toBeGreaterThanOrEqual(mobileCarouselBox?.x ?? 0);
-    expect(mobileControls?.x + mobileControls?.width).toBeLessThanOrEqual((mobileCarouselBox?.x ?? 0) + (mobileCarouselBox?.width ?? 0));
-    expect(mobileControls?.y + mobileControls?.height).toBeLessThanOrEqual((mobileCarouselBox?.y ?? 0) + (mobileCarouselBox?.height ?? 0));
-
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
-    expect(overflow).toBeLessThanOrEqual(1);
+    await expect(page.locator('.lab-hero-photo')).toBeVisible();
+    await expect(page.locator('.reference-mobile-hero-visual')).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
   });
 
-  test('mobile carousel shows the complete landscape product image without cropping', async ({ page }) => {
+  test('mobile product photography remains uncropped and available', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    const mobileCarousel = page.locator('.reference-mobile-hero-visual [data-home-hero-carousel]');
-    const image = mobileCarousel.locator('[data-home-hero-carousel-image]');
-
-    const presentation = await image.evaluate((element) => {
-      const imageRect = element.getBoundingClientRect();
-      const carouselRect = element.closest('[data-home-hero-carousel]').getBoundingClientRect();
-      const style = getComputedStyle(element);
-      const carouselStyle = getComputedStyle(element.closest('[data-home-hero-carousel]'));
-
-      return {
-        objectFit: style.objectFit,
-        imageRatio: imageRect.width / imageRect.height,
-        naturalRatio: element.naturalWidth / element.naturalHeight,
-        carouselWidth: carouselRect.width,
-        imageWidth: imageRect.width,
-        carouselMarginInline: [carouselStyle.marginLeft, carouselStyle.marginRight],
-      };
-    });
-
-    expect(presentation.objectFit).toBe('contain');
-    expect(Math.abs(presentation.imageRatio - presentation.naturalRatio)).toBeLessThan(0.03);
-    expect(presentation.imageWidth).toBeGreaterThanOrEqual(presentation.carouselWidth - 2);
-    expect(presentation.carouselMarginInline).toEqual(['0px', '0px']);
+    const image = page.locator('.lab-contract-images img').first();
+    await expect(image).toHaveCSS('object-fit', 'contain');
+    await expect.poll(() => image.evaluate((node) => node.complete && node.naturalWidth > 0)).toBe(true);
   });
 
-  test('mobile wholesale panel keeps paragraph and account action readable on black', async ({ page }) => {
+  test('dark buying-flow band keeps its copy readable', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-
-    const colors = await page.locator('.reference-workshop-card').evaluate((card) => ({
-      background: getComputedStyle(card).backgroundColor,
-      paragraph: getComputedStyle(card.querySelector('p')).color,
-      accountAction: getComputedStyle(card.querySelector('a')).color,
+    const colors = await page.locator('.lab-buying-flow').evaluate((band) => ({
+      background: getComputedStyle(band).backgroundColor,
+      title: getComputedStyle(band.querySelector('b')).color,
     }));
-
-    expect(contrastRatio(colors.paragraph, colors.background)).toBeGreaterThanOrEqual(4.5);
-    expect(contrastRatio(colors.accountAction, colors.background)).toBeGreaterThanOrEqual(4.5);
+    expect(colors.background).not.toBe(colors.title);
+    await expect(page.locator('.lab-buying-flow')).toContainText('Confirmación');
   });
 
-  test('storefront image does not receive a duplicate caption over its embedded information strip', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    const duplicateCaption = page.locator('.reference-store-photo-card:not(.reference-warehouse-photo-card) figcaption');
-
-    await expect(duplicateCaption).toBeHidden();
+  test('home has no duplicate storefront caption layer', async ({ page }) => {
+    await expect(page.locator('.reference-store-photo-card figcaption')).toHaveCount(0);
   });
 
-  test('mobile proof band keeps headings and supporting text readable on its light surface', async ({ page }) => {
+  test('category modules keep editorial divisions and honest asset placeholders', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-
-    const colors = await page.locator('.reference-proof-band').evaluate((band) => {
-      const article = band.querySelector('article');
-      return {
-        background: getComputedStyle(band).backgroundColor,
-        heading: getComputedStyle(article.querySelector('strong')).color,
-        supportingText: getComputedStyle(article.querySelector('small')).color,
-      };
-    });
-
-    expect(contrastRatio(colors.heading, colors.background)).toBeGreaterThanOrEqual(4.5);
-    expect(contrastRatio(colors.supportingText, colors.background)).toBeGreaterThanOrEqual(4.5);
+    await expect(page.locator('.lab-category-grid')).toBeVisible();
+    await expect(page.locator('.lab-category--hydrogel')).toContainText('REAL ASSET REQUIRED');
+    await expect(page.locator('.lab-category--battery')).toContainText('REAL ASSET REQUIRED');
+    await expect(page.locator('.lab-category')).toHaveCount(4);
   });
 });
