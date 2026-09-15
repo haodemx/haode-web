@@ -1,5 +1,9 @@
 # HAODE Website Rules
 
+## Authoritative Asset Standard
+
+Use `/Users/mac/Documents/haode/HAODE_ASSET_STANDARD.md` for product cutouts, real scenes, source approval, alpha/background requirements, naming, directory mapping, and conversion gates. Do not create a second website-specific asset standard. Production image replacement remains a separate explicitly verified action.
+
 This repository follows:
 
 - `/Users/mac/Documents/haode/AGENTS.md`

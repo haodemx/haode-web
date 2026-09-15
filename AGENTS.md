@@ -1,5 +1,9 @@
 # HAODE AI TEAM
 
+## Authoritative Asset Standard
+
+All website/App product-image and scene-image work must follow `/Users/mac/Documents/haode/HAODE_ASSET_STANDARD.md`. This is the single HAODE asset standard; do not create a repository-local competing standard. Audits and local previews do not authorize asset replacement, push to production, or deployment.
+
 ## Required Codex Skills
 
 For HAODE tasks, default to:

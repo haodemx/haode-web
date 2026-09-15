@@ -1,11 +1,13 @@
 ---
 name: haode-asset-manager
-description: HAODE product asset guardrail. Use for product images, videos, image path repairs, video path repairs, media validation, new product launches, and any task that could replace or reuse product assets.
+description: Audit, map, validate, inventory, and prepare local previews for HAODE product and real-scene assets without publishing or approving uncertain products.
 ---
 
 # HAODE Asset Manager
 
 Use this skill for HAODE product images and videos.
+
+Before acting, read `/Users/mac/Documents/haode/HAODE_ASSET_STANDARD.md`. It is the single authoritative asset standard. Do not create or apply a parallel standard.
 
 Rules:
 
@@ -18,11 +20,20 @@ Rules:
 
 Required workflow:
 
-1. Identify all affected image and video fields.
-2. Confirm whether the task is a path repair, validation, or asset replacement.
-3. Verify asset files exist at the referenced paths.
-4. Verify images and videos match the exact product model or confirmed series.
-5. Report missing or uncertain assets instead of substituting another product asset.
+1. Scan the scoped material roots without changing source files.
+2. Record SHA256 and detect exact duplicates.
+3. Detect perceptually similar images as review candidates, never as identity proof.
+4. Record dimensions and flag low resolution.
+5. Check true alpha and likely white, gray, or rectangular backgrounds.
+6. Suggest product/category and TYPE A/TYPE B mappings without inventing uncertain models.
+7. Suggest canonical filenames without renaming RAW files.
+8. Query website/App/ERP usage and distinguish referenced, unused, and missing paths.
+9. Report missing real assets and transparent-cutout status.
+10. Generate local contact sheets/previews and a machine-readable inventory.
+11. For conversions, preserve RAW and use deterministic removal first; mark damaged edges, glass, flex cables, labels, logos, packaging text, or uncertain results `MANUAL_REVIEW`.
+12. Never publish, deploy, replace production assets, or mark an uncertain product/model `APPROVED`.
+
+The repeatable V3 audit implementation is `scripts/audit_assets.py`. Its reports are technical evidence only; background classification and similarity scores do not prove product identity or approval.
 
 Forbidden actions:
 
