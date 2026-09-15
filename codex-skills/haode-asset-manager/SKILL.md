@@ -47,6 +47,8 @@ Batch 2 provenance resolution uses `scripts/resolve_provenance_batch2.py` with t
 
 Batch 3 current-website coverage uses `scripts/run_asset_factory_batch3.py`. It may approve a detail image only when the exact current website path, unique product media directory, App/master model and quality, price-list row, Git history, QC pass, and SHA identity all agree. Video matching requires either an exact SHA chain to one current product or an explicit quality directory plus one exact model; model-only and shared-series videos remain `AMBIGUOUS`. Generate poster frames from the real matched video and keep raw videos outside the Git website drop.
 
+Batch 4 main-image coverage uses `scripts/run_asset_factory_batch4.py`. Reuse the reviewed Phase 2 cutouts and Batch 3 registry instead of rescanning the library. A new main image must pass the exact website/App/master/price-list product binding, exact model and quality, a unique current-product source directory or exact primary path, unique source SHA identity, Git history, 1200 x 1200 true-alpha output checks, and the Batch 4 visual main-image allowlist. Gallery files qualify only when they show the complete real product and are suitable as a main image; detail crops, flex-only parts, incomplete back details, render-like assets, shared-model media, promos, and scenes remain outside the main-image gate. Carry the strict Batch 3 videos forward without expanding the video scan.
+
 Runtime notes:
 
 - Use the existing Pillow/NumPy runtime at `/Users/mac/Documents/haode/HAODE-AUTOMATION/TOOLS/rembg/.venv/bin/python`; do not install another image stack merely to run this workflow.
