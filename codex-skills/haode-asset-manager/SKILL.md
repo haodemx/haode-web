@@ -43,6 +43,8 @@ Phase 2 website-first work uses `scripts/normalize_website_batch.py` with the ex
 
 Asset Factory batches use `scripts/run_asset_factory.py`. Import the Phase 1 inventory instead of rebuilding it, scan only configured historical/source roots plus `/Users/mac/Documents/haode/HAODE-MASTER-ASSETS/INBOX`, and preserve every source byte. The factory may create technical drafts and review evidence but must emit `approved-web-assets.csv` only for records satisfying `SOURCE_CONFIRMED + QC_PASS + APPROVED_FOR_WEB`. It never edits website pages, CSS, product data, SEO, deployment, or production state. Limit the owner queue to prioritized decisions; retain the larger technical backlog in the manifest.
 
+Batch 2 provenance resolution uses `scripts/resolve_provenance_batch2.py` with the imported Batch 1 manifest. Promote a product source only when website, App, master CSV, price-list binding, exact asset path, Git history, and duplicate-chain identity agree. The generated `confirmed-assets.json` is the machine-readable approval registry; website consumers must enforce `provenance_status=CONFIRMED + qc_status=PASS + approved_for_web=true`. `MANUAL_REVIEW`, `LOW_RESOLUTION`, `REAL_ASSET_REQUIRED`, and rejected promo composites stay outside the homepage handoff.
+
 Runtime notes:
 
 - Use the existing Pillow/NumPy runtime at `/Users/mac/Documents/haode/HAODE-AUTOMATION/TOOLS/rembg/.venv/bin/python`; do not install another image stack merely to run this workflow.
