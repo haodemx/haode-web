@@ -21,7 +21,8 @@ test('V3 routes use the official horizontal HAODE wordmark', async ({ page }) =>
     await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded' });
     const logo = page.locator('.v3-logo img');
     await expect(logo).toHaveAttribute('src', '/assets/images/d21-light-stage/haode-logo-official.webp');
-    const ratio = await logo.evaluate((image) => image.getBoundingClientRect().width / image.getBoundingClientRect().height);
+    await expect.poll(() => logo.evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
+    const ratio = await logo.evaluate((image) => image.naturalWidth / image.naturalHeight);
     expect(ratio).toBeGreaterThan(2.5);
   }
 });

@@ -22,12 +22,13 @@ test('V3 entry pages load the shared Screen Atlas system', () => {
   }
 });
 
-test('V3 navigation prioritizes Pantallas and Hidrogel without removing Fundas compatibility', () => {
+test('V3 navigation matches the approved D2.1 categories while preserving the Fundas route', () => {
   const script = read('v3-screen-atlas.js');
   assert.match(script, /\['pantallas', 'Pantallas', '\/productos\/'\]/);
   assert.match(script, /\['hidrogel', 'Hidrogel', '\/micas\.html'\]/);
   assert.doesNotMatch(script, /\['fundas', 'Fundas'/);
-  assert.match(script, /href=\"\/categoria\/fundas\/\"/);
+  assert.doesNotMatch(script, /\['baterias', 'Baterías'/);
+  assert.match(read('categoria/fundas/index.html'), /rel=[\"']canonical[\"'] href=[\"']https:\/\/haode\.com\.mx\/categoria\/fundas\/[\"']/);
 });
 
 test('V3 preserves real catalog data and uses an honest battery placeholder', () => {
