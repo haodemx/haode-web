@@ -10,15 +10,15 @@ test.beforeEach(async ({ page }) => {
 test('desktop header exposes locked navigation and primary WhatsApp action', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await expect(page.locator('.v3-header')).toBeVisible();
-  await expect(page.locator('.v3-logo img')).toHaveAttribute('src', '/assets/images/factory-store-wordmark.png');
-  await expect(page.locator('.v3-nav a')).toHaveCount(7);
+  await expect(page.locator('.v3-logo img')).toHaveAttribute('src', '/assets/images/d21-light-stage/haode-logo-official.webp');
+  await expect(page.locator('.v3-nav a')).toHaveCount(6);
   await expect(page.locator('.v3-actions a[href*="wa.me"]')).toBeVisible();
   await expect(page.locator('.v3-actions a[href="/app/"]')).toBeVisible();
 });
 
 test('ultrawide homepage keeps a centered readable content width', async ({ page }) => {
   await page.setViewportSize({ width: 1920, height: 1000 });
-  const box = await page.locator('.lab-hero .v3-wrap').boundingBox();
+  const box = await page.locator('.d21-hero-inner').boundingBox();
   expect(box.width).toBeLessThanOrEqual(1690);
   expect(Math.abs(box.x - (1920 - box.x - box.width))).toBeLessThanOrEqual(2);
 });
@@ -28,7 +28,8 @@ test('desktop navigation hover remains readable and restrained', async ({ page }
   const link = page.locator('.v3-nav a[href="/productos/"]');
   await link.hover();
   const style = await link.evaluate((element) => ({ color: getComputedStyle(element).color, fontSize: parseFloat(getComputedStyle(element).fontSize) }));
-  expect(style.color).toBe('rgb(255, 90, 10)');
+  expect(style.color).toBe('rgb(255, 255, 255)');
+  await expect(link).toHaveCSS('border-bottom-color', 'rgb(255, 90, 20)');
   expect(style.fontSize).toBeGreaterThanOrEqual(12);
 });
 
@@ -36,12 +37,12 @@ test('desktop header and hero labels use readable type sizes', async ({ page }) 
   await page.setViewportSize({ width: 1440, height: 900 });
   const sizes = await page.evaluate(() => ({
     nav: parseFloat(getComputedStyle(document.querySelector('.v3-nav a')).fontSize),
-    title: parseFloat(getComputedStyle(document.querySelector('.lab-hero h1')).fontSize),
-    promise: parseFloat(getComputedStyle(document.querySelector('.lab-promise')).fontSize),
+    title: parseFloat(getComputedStyle(document.querySelector('.d21-hero h1')).fontSize),
+    meta: parseFloat(getComputedStyle(document.querySelector('.d21-hero-meta')).fontSize),
   }));
   expect(sizes.nav).toBeGreaterThanOrEqual(12);
   expect(sizes.title).toBeGreaterThanOrEqual(64);
-  expect(sizes.promise).toBeGreaterThanOrEqual(16);
+  expect(sizes.meta).toBeGreaterThanOrEqual(16);
 });
 
 test('mobile header is compact, readable, and keyboard-operable', async ({ page }) => {

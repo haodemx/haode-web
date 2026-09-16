@@ -77,31 +77,29 @@ test('Baterías exposes no invented catalog entries', async ({ page }) => {
   await expect(page.locator('[data-v3-product]')).toHaveCount(0);
 });
 
-test('selected repair-lab homepage uses the locked laboratory photography and honest product assets', async ({ page }) => {
+test('selected D2.1 homepage uses the locked factory photography and approved product assets', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('body')).toHaveClass(/v3-lab/);
-  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('src', '/assets/images/v3-lab-hero.png');
-  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('alt', /laboratorio/i);
-  await expect(page.locator('.lab-category--hydrogel')).toHaveAttribute('data-real-asset-required', 'true');
-  await expect(page.locator('.lab-category--battery')).toHaveAttribute('data-real-asset-required', 'true');
-  await expect(page.locator('.lab-buying-flow .v3-step')).toHaveCount(4);
-  await expect(page.locator('.lab-category--screens')).toBeVisible();
-  await expect(page.locator('.lab-category--hydrogel')).toBeVisible();
-  await expect(page.locator('.lab-category--battery [class*="pending"]')).toBeVisible();
+  await expect(page.locator('body')).toHaveClass(/d21-home/);
+  await expect(page.locator('.d21-hero-scene')).toHaveAttribute('src', '/assets/images/d21-light-stage/factory-laboratory.webp');
+  await expect(page.locator('.d21-hero-scene')).toHaveAttribute('alt', /inspección/i);
+  await expect(page.locator('.d21-product img')).toHaveCount(3);
+  await expect(page.locator('.d21-steps article')).toHaveCount(4);
+  await expect(page.locator('.d21-secondary')).toContainText('Hidrogel');
+  await expect(page.locator('.d21-secondary')).toContainText('Productos AI');
+  await expect(page.locator('body')).not.toContainText('Baterías');
 });
 
-test('laboratory homepage avoids synthetic hero and placeholder effects', async ({ page }) => {
+test('laboratory homepage keeps the light product stage and text-first secondary categories', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
   const visualStyle = await page.evaluate(() => {
-    const hero = getComputedStyle(document.querySelector('.lab-hero'));
-    const hydrogel = getComputedStyle(document.querySelector('.lab-hydrogel-visual'), '::after');
+    const stage = getComputedStyle(document.querySelector('.d21-product-stage'));
     return {
-      heroBackgroundImage: hero.backgroundImage,
-      heroBackdropFilter: hero.backdropFilter,
-      hydrogelPseudoContent: hydrogel.content,
+      stageBackground: stage.backgroundColor,
+      secondaryImages: document.querySelectorAll('.d21-secondary img').length,
+      productLinks: document.querySelectorAll('.d21-product[href^="/producto/"]').length,
     };
   });
-  expect(visualStyle.heroBackgroundImage).toBe('none');
-  expect(visualStyle.heroBackdropFilter).toBe('none');
-  expect(visualStyle.hydrogelPseudoContent).toBe('none');
+  expect(visualStyle.stageBackground).toBe('rgb(236, 239, 237)');
+  expect(visualStyle.secondaryImages).toBe(0);
+  expect(visualStyle.productLinks).toBe(3);
 });

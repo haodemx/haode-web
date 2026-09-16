@@ -6,7 +6,7 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Pantallas para trabajo real', 'Hidrogel', 'WhatsApp'],
+    texts: ['Pantallas profesionales', 'Hidrogel', 'WhatsApp'],
   },
   {
     path: '/app/',
@@ -90,13 +90,13 @@ async function checkCriticalPage(page, pageCase, viewport) {
     await expectReferenceDesktopWordmark(page);
   }
   if (pageCase.name === 'home') {
-    const productImages = page.locator('.v3-specimen img');
-    await expect(productImages).toHaveCount(2);
+    const productImages = page.locator('.d21-product img');
+    await expect(productImages).toHaveCount(3);
     expect(await productImages.evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
     if (viewport.width <= 430) {
-      await expect(page.locator('.v3-floating')).toBeVisible();
+      await expect(page.locator('.d21-hero-actions a[href*="wa.me"]')).toBeVisible();
     } else {
-      await expect(page.locator('.v3-cta a[href*="wa.me"]')).toBeVisible();
+      await expect(page.locator('.d21-final-cta a[href*="wa.me"]')).toBeVisible();
     }
   }
   await expectNoHorizontalOverflow(page);
@@ -124,16 +124,16 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 }
 
 async function expectMobileHomeVisual(page) {
-  const visual = page.locator('.reference-mobile-hero-visual');
+  const visual = page.locator('.d21-hero-product');
   await expect(visual).toBeVisible();
-  await expect(visual).toContainText('Modelo · versión · cantidad');
+  await expect(visual.locator('img')).toHaveAttribute('src', '/assets/images/d21-light-stage/iphone-16promax.webp');
   await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   const box = await visual.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     return { top: Math.round(rect.top), height: Math.round(rect.height) };
   });
   expect(box.top).toBeLessThan(760);
-  expect(box.height).toBeGreaterThanOrEqual(110);
+  expect(box.height).toBeGreaterThanOrEqual(280);
 }
 
 async function expectReferenceMobileSalesHeader(page) {
@@ -199,7 +199,7 @@ async function expectReferenceDesktopWordmark(page) {
   expect(details.width).toBeGreaterThanOrEqual(170);
   expect(details.imageDisplay).toBe('block');
   expect(details.imageWidth).toBeGreaterThanOrEqual(170);
-  await expect(logo.locator('img')).toHaveAttribute('src', '/assets/images/factory-store-wordmark.png');
+  await expect(logo.locator('img')).toHaveAttribute('src', '/assets/images/d21-light-stage/haode-logo-official.webp');
 }
 
 async function expectNoHorizontalOverflow(page) {

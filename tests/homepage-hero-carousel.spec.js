@@ -2,60 +2,58 @@ const { test, expect } = require('@playwright/test');
 
 const BASE_URL = (process.env.BASE_URL || 'http://127.0.0.1:4173').replace(/\/$/, '');
 
-test.describe('homepage locked laboratory hero', () => {
+test.describe('homepage locked D2.1 light-stage master', () => {
   test.beforeEach(async ({ page }) => {
     await page.route('https://erp.haode.com.mx/**', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: '[]' }));
     await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
   });
 
-  test('uses the approved laboratory photograph without a generic carousel', async ({ page }) => {
+  test('uses the approved factory scene without a carousel', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 900 });
-    await expect(page.locator('.lab-hero-photo')).toHaveAttribute('src', '/assets/images/v3-lab-hero.png');
+    await expect(page.locator('.d21-hero-scene')).toHaveAttribute('src', '/assets/images/d21-light-stage/factory-laboratory.webp');
     await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
-    await expect(page.locator('.lab-hero h1')).toContainText('Pantallas profesionales');
+    await expect(page.locator('.d21-hero h1')).toHaveText(/Pantallas profesionales.*para técnicos/s);
+    await expect(page.locator('.d21-brand-word')).toHaveText('HAODE');
   });
 
-  test('keeps the real product cutouts inside the locked hero composition', async ({ page }) => {
-    await page.setViewportSize({ width: 1792, height: 1200 });
-    const images = page.locator('.lab-contract-images img');
-    await expect(images).toHaveCount(2);
+  test('keeps the approved real product cutouts as the protagonists', async ({ page }) => {
+    const images = page.locator('.d21-product img');
+    await expect(images).toHaveCount(3);
     await expect.poll(() => images.evaluateAll((nodes) => nodes.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
     await expect(images.first()).toHaveCSS('object-fit', 'contain');
+    await expect(page.locator('.d21-hero-product img')).toHaveAttribute('src', '/assets/images/d21-light-stage/iphone-16promax.webp');
   });
 
-  test('mobile keeps the same hero language without horizontal overflow', async ({ page }) => {
+  test('mobile keeps the independent hero composition without horizontal overflow', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await expect(page.locator('.lab-hero-photo')).toBeVisible();
-    await expect(page.locator('.reference-mobile-hero-visual')).toBeVisible();
+    await expect(page.locator('.d21-hero-scene')).toBeVisible();
+    await expect(page.locator('.d21-hero-product')).toBeVisible();
+    await expect(page.locator('.d21-hero-actions')).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
   });
 
-  test('mobile product photography remains uncropped and available', async ({ page }) => {
+  test('mobile light stage keeps product photography uncropped', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    const image = page.locator('.lab-contract-images img').first();
+    const image = page.locator('.d21-product--b img');
     await expect(image).toHaveCSS('object-fit', 'contain');
     await expect.poll(() => image.evaluate((node) => node.complete && node.naturalWidth > 0)).toBe(true);
+    await expect(page.locator('.d21-product-stage')).toHaveCSS('background-color', 'rgb(236, 239, 237)');
   });
 
   test('dark buying-flow band keeps its copy readable', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    const colors = await page.locator('.lab-buying-flow').evaluate((band) => ({
+    const colors = await page.locator('.d21-process').evaluate((band) => ({
       background: getComputedStyle(band).backgroundColor,
-      title: getComputedStyle(band.querySelector('b')).color,
+      title: getComputedStyle(band.querySelector('h2')).color,
     }));
     expect(colors.background).not.toBe(colors.title);
-    await expect(page.locator('.lab-buying-flow')).toContainText('Confirmación');
+    await expect(page.locator('.d21-process')).toContainText('Confirmación');
   });
 
-  test('home has no duplicate storefront caption layer', async ({ page }) => {
-    await expect(page.locator('.reference-store-photo-card figcaption')).toHaveCount(0);
-  });
-
-  test('category modules keep editorial divisions and honest asset placeholders', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await expect(page.locator('.lab-category-grid')).toBeVisible();
-    await expect(page.locator('.lab-category--hydrogel')).toContainText('REAL ASSET REQUIRED');
-    await expect(page.locator('.lab-category--battery')).toContainText('REAL ASSET REQUIRED');
-    await expect(page.locator('.lab-category')).toHaveCount(4);
+  test('secondary categories stay text-first and batteries stay unpublished', async ({ page }) => {
+    await expect(page.locator('.d21-secondary')).toBeVisible();
+    await expect(page.locator('.d21-secondary img')).toHaveCount(0);
+    await expect(page.locator('.d21-secondary')).toContainText('Hidrogel');
+    await expect(page.locator('.d21-secondary')).toContainText('Productos AI');
+    await expect(page.locator('body')).not.toContainText('Baterías');
   });
 });

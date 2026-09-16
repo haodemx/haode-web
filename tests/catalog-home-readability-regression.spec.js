@@ -20,7 +20,7 @@ test('V3 routes use the official horizontal HAODE wordmark', async ({ page }) =>
   for (const route of ['/', '/productos/', '/contacto/', '/producto/iphone-incell-14/']) {
     await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded' });
     const logo = page.locator('.v3-logo img');
-    await expect(logo).toHaveAttribute('src', '/assets/images/factory-store-wordmark.png');
+    await expect(logo).toHaveAttribute('src', '/assets/images/d21-light-stage/haode-logo-official.webp');
     const ratio = await logo.evaluate((image) => image.getBoundingClientRect().width / image.getBoundingClientRect().height);
     expect(ratio).toBeGreaterThan(2.5);
   }
@@ -29,13 +29,13 @@ test('V3 routes use the official horizontal HAODE wordmark', async ({ page }) =>
 test('homepage laboratory hero labels remain readable over photography', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.lab-hero-shade')).toBeVisible();
-  const presentation = await page.locator('.lab-hero-copy').evaluate((copy) => ({
+  await expect(page.locator('.d21-hero-shade')).toBeVisible();
+  const presentation = await page.locator('.d21-hero-copy').evaluate((copy) => ({
     title: getComputedStyle(copy.querySelector('h1')).color,
     size: parseFloat(getComputedStyle(copy.querySelector('h1')).fontSize),
-    promise: getComputedStyle(copy.querySelector('.lab-promise')).color,
+    meta: getComputedStyle(copy.querySelector('.d21-hero-meta')).color,
   }));
-  expect(presentation.title).toBe('rgb(16, 16, 16)');
-  expect(presentation.promise).toBe('rgb(16, 16, 16)');
+  expect(presentation.title).toBe('rgb(255, 255, 255)');
+  expect(presentation.meta).toBe('rgb(226, 233, 232)');
   expect(presentation.size).toBeGreaterThanOrEqual(64);
 });

@@ -6,7 +6,7 @@
   if (!document.querySelector('link[href*="/v3-screen-atlas-fixes.css"]')) {
     const fixes = document.createElement('link');
     fixes.rel = 'stylesheet';
-    fixes.href = '/v3-screen-atlas-fixes.css?v=20260914-v3-transplant';
+    fixes.href = '/v3-screen-atlas-fixes.css?v=20260915-d21-final';
     document.head.appendChild(fixes);
   }
   const isV3Detail = body.dataset.v3Detail === 'true';
@@ -55,7 +55,6 @@
   const navItems = [
     ['pantallas', 'Pantallas', '/productos/'],
     ['hidrogel', 'Hidrogel', '/micas.html'],
-    ['baterias', 'Baterías', '/baterias/'],
     ['ai', 'Productos AI', '/productos-ai/'],
     ['novedades', 'Novedades', '/novedades/'],
     ['contacto', 'Contacto', '/contacto/'],
@@ -63,8 +62,8 @@
 
   function header(active = '') {
     return `<header class="v3-header reference-header topbar catalog-topbar" data-v3-header>
-      <a class="v3-logo reference-logo brand" href="/" aria-label="HAODE México, inicio"><img class="brand-logo" src="/assets/images/factory-store-wordmark.png" alt="HAODE Refacciones para Celular" width="174" height="56"><span class="brand-copy" hidden><strong>HAODE</strong></span></a>
-      <button class="v3-btn v3-menu reference-menu-button" type="button" aria-expanded="false" aria-controls="v3-navigation">Menú</button>
+      <a class="v3-logo reference-logo brand" href="/" aria-label="HAODE México, inicio"><img class="brand-logo" src="/assets/images/d21-light-stage/haode-logo-official.webp" alt="HAODE Calidad Profesional" width="184" height="45"><span class="brand-copy" hidden><strong>HAODE</strong></span></a>
+      <button class="v3-btn v3-menu reference-menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="v3-navigation"><span aria-hidden="true">≡</span><span class="v3-sr-only">Menú</span></button>
       <nav class="v3-nav reference-nav topnav" id="v3-navigation" aria-label="Navegación principal">${navItems.map(([key,label,href]) => `<a href="${href}"${key === active ? ' class="is-active" aria-current="page"' : ''}>${label}</a>`).join('')}<a class="v3-sr-only" href="/app/#lista">Catálogo</a></nav>
       <div class="v3-actions reference-nav-actions detail-header-actions">
         <a class="v3-btn v3-whatsapp detail-header-action detail-header-whatsapp" data-detail-header-whatsapp href="${quoteUrl()}" target="_blank" rel="noopener noreferrer"><span class="v3-mark" aria-hidden="true">W</span><span>Consultar por WhatsApp</span></a>
@@ -75,8 +74,8 @@
 
   function footer() {
     return `<footer class="v3-footer site-sales-footer" data-v3-footer data-site-sales-footer>
-      <div class="v3-footer-brand"><img src="/assets/images/factory-store-wordmark.png" alt="HAODE Refacciones para Celular"><p>Tienda oficial de fábrica HL. Refacciones y productos para técnicos, talleres, tiendas y distribuidores en México.</p><small>Garantía local · Precio por cantidad</small></div>
-      <nav aria-label="Productos"><h4>Productos</h4><a href="/productos/">Pantallas</a><a href="/micas.html">Hidrogel</a><a href="/baterias/">Baterías</a><a href="/productos-ai/">Productos AI</a><a href="/categoria/fundas/">Fundas</a></nav>
+      <div class="v3-footer-brand"><img src="/assets/images/d21-light-stage/haode-logo-official.webp" alt="HAODE Calidad Profesional"><p>Tienda oficial de fábrica HL. Refacciones y productos para técnicos, talleres, tiendas y distribuidores en México.</p><small>Garantía local · Precio por cantidad</small></div>
+      <nav aria-label="Productos"><h4>Productos</h4><a href="/productos/">Pantallas</a><a class="d21-footer-detail" href="/categoria/iphone-incell/">iPhone INCELL</a><a class="d21-footer-detail" href="/categoria/iphone-oled/">iPhone OLED</a><a class="d21-footer-detail" href="/categoria/samsung-incell/">Samsung INCELL</a><a class="d21-footer-detail" href="/categoria/samsung-oled/">Samsung OLED</a><a href="/micas.html">Hidrogel</a><a href="/productos-ai/">Productos AI</a></nav>
       <nav aria-label="Comprar"><h4>Comprar</h4><a class="site-sales-footer-app" href="/app/">APP HAODE</a><a href="/productos/">Buscar modelo</a><a class="site-sales-footer-whatsapp" href="${quoteUrl()}" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="/garantia/">Garantía</a></nav>
       <nav aria-label="HAODE México"><h4>HAODE México</h4><a href="/novedades/">Novedades</a><a href="/contacto/">Contacto</a><a href="/tienda-oficial-hl-cdmx/">Tienda HL CDMX</a><a href="/privacidad/">Privacidad</a><a href="/terminos/">Términos</a></nav>
     </footer>`;
@@ -111,15 +110,13 @@
   const cta = (title = 'Cotiza con precisión.') => `<section class="v3-section v3-grid"><div class="v3-wrap v3-cta"><div><p class="v3-eyebrow">Modelo · versión · cantidad</p><h2 class="v3-display">${title}</h2></div><div><p class="v3-page-intro">Comparte el modelo exacto, la calidad o versión publicada, la cantidad y tu ciudad. Confirmamos la información antes de continuar.</p><div class="v3-cta-row"><a class="v3-btn v3-btn--orange" href="${quoteUrl()}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a><a class="v3-btn" href="/app/">Abrir APP HAODE</a></div></div></div></section>`;
 
   function homePage() {
-    const all = products();
-    const screens = ['iphone-oled-11promax','iphone-incell-15promax','samsung-oled-s23-ultra'].map((id) => all.find((item) => item.id === id)).filter(Boolean);
-    const aiProduct = all.find((item) => item.id === 'lk-030-mini-camara-retro-digital') || all.find((item) => ['gafas-ai','camaras-inteligentes'].includes(item.category));
-    return `${header('')}<main>
-      <section class="lab-hero"><img class="lab-hero-photo" src="/assets/images/v3-lab-hero.png" alt="Composición editorial de laboratorio con pantallas, herramientas y microscopio"><div class="lab-hero-shade" aria-hidden="true"></div><div class="v3-wrap lab-hero-inner"><div class="lab-hero-copy"><span class="v3-sr-only">Pantallas para trabajo real</span><h1><span>HAODE</span> Pantallas<br> profesionales</h1><p class="lab-promise">Por modelo. Por calidad. Sin confusión.</p><form class="lab-finder" action="/productos/" method="get" role="search" data-home-catalog-search-form><label class="v3-sr-only" for="lab-home-search">Busca por modelo o SKU</label><input id="lab-home-search" name="q" type="search" placeholder="Ej. iPhone 15 Pro Max" autocomplete="off" data-home-catalog-search-input><button class="v3-btn v3-btn--orange" type="submit">Encontrar modelo <span aria-hidden="true">→</span></button></form></div></div><div class="reference-mobile-hero-visual"><strong>Modelo · versión · cantidad</strong><span>Confirma cada detalle antes de comprar.</span></div><div class="v3-specimen lab-contract-images" aria-hidden="true"><img src="/assets/products/iphone-incell/16plus/16plus白底图.jpg" alt=""><img src="/assets/products/iphone-incell/16plus/背板.png" alt=""></div></section>
-      <section class="lab-detail-strip" aria-label="Detalles técnicos de una pantalla"><figure><img src="/assets/products/iphone-incell/16plus/16plus白底图.jpg" alt="Detalle frontal de pantalla"><figcaption>Detalle de sensor</figcaption></figure><figure><img src="/assets/products/iphone-incell/16plus/背板.png" alt="Detalle del flex de conexión"><figcaption>Detalle de flex</figcaption></figure><figure><img src="/assets/products/iphone-incell/16plus/16plus白底图.jpg" alt="Detalle posterior de pantalla"><figcaption>Detalle de marco</figcaption></figure></section>
-      <section class="lab-category-grid"><a class="lab-category lab-category--screens" href="/productos/"><span class="lab-kicker">Categoría principal</span><h2>Pantallas</h2><div class="lab-screen-lineup">${screens.map((item) => `<img src="${imageFor(item)}" alt="${esc(item.name)}">`).join('')}</div><p>iPhone · Samsung · INCELL · OLED</p></a><a class="lab-category lab-category--hydrogel" href="/micas.html" data-real-asset-required="true"><span class="lab-kicker">Producto protagonista</span><h2>Hidrogel</h2><div class="lab-hydrogel-visual"><span><strong>REAL ASSET REQUIRED</strong>Fotografía real pendiente de validación</span></div><p>HD · Matte · Privacy HD · Privacy Matte</p></a><a class="lab-category lab-category--battery" href="/baterias/" data-real-asset-required="true"><span class="lab-kicker">Línea en preparación</span><h2>Baterías</h2><div class="lab-pending-visual"><strong>REAL ASSET REQUIRED</strong><span>Fotografía real pendiente de validación</span></div></a><a class="lab-category lab-category--ai" href="/productos-ai/"><span class="lab-kicker">Catálogo actual</span><h2>Productos AI</h2>${aiProduct ? `<img src="${imageFor(aiProduct)}" alt="${esc(aiProduct.name)}">` : '<div class="lab-pending-visual">Producto real pendiente</div>'}<p>Conoce los productos publicados</p></a></section>
-      <section class="lab-buying-flow">${steps()}</section>
-      <section class="lab-final-cta"><div class="v3-wrap v3-cta"><img src="/assets/images/factory-store-wordmark.png" alt="HAODE Refacciones para Celular"><p>Por modelo. Por calidad. Sin confusión.</p><div><a class="v3-btn" href="${quoteUrl()}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a><a class="v3-btn v3-btn--orange" href="/app/">Continuar en APP</a></div></div></section>
+    return `${header('pantallas')}<main>
+      <section class="d21-hero lab-hero" id="inicio" aria-labelledby="d21-hero-title"><img class="d21-hero-scene lab-hero-photo" src="/assets/images/d21-light-stage/factory-laboratory.webp" alt="Proceso real de inspección en fábrica de pantallas" fetchpriority="high"><div class="d21-hero-shade lab-hero-shade" aria-hidden="true"></div><div class="d21-hero-inner"><div class="d21-hero-copy lab-hero-copy"><p class="d21-brand-word">HAODE</p><h1 id="d21-hero-title">Pantallas profesionales<br>para técnicos</h1><p class="d21-hero-meta">iPhone · Samsung · INCELL · OLED</p><div class="d21-hero-actions"><a class="d21-button d21-button--hot" href="#pantallas">Ver pantallas</a><a class="d21-button d21-button--light" href="${quoteUrl('pantallas')}" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><a class="d21-hero-product" href="/producto/iphone-oled-16promax/" aria-label="Ver pantalla iPhone 16 Pro Max OLED"><img src="/assets/images/d21-light-stage/iphone-16promax.webp" alt="Pantalla iPhone 16 Pro Max OLED aprobada"></a><div class="d21-calibration" aria-hidden="true"></div></div></section>
+      <section class="d21-screens" id="pantallas" aria-labelledby="d21-screens-title"><div class="d21-section-head"><h2 id="d21-screens-title">Pantallas</h2><p>Tres referencias reales para iniciar la búsqueda.</p></div><div class="d21-product-stage"><a class="d21-product d21-product--a" href="/producto/iphone-incell-16e/"><img src="/assets/images/d21-light-stage/iphone-16e.webp" alt="Pantalla iPhone 16e INCELL"><span class="d21-product-caption"><strong>iPhone 16e</strong><small>INCELL FHD</small></span></a><a class="d21-product d21-product--b" href="/producto/iphone-oled-16promax/"><img src="/assets/images/d21-light-stage/iphone-16promax.webp" alt="Pantalla iPhone 16 Pro Max OLED"><span class="d21-product-caption"><strong>iPhone 16 Pro Max</strong><small>SOFT OLED</small></span></a><a class="d21-product d21-product--c" href="/producto/samsung-incell-s24/"><img src="/assets/images/d21-light-stage/samsung-s24.webp" alt="Pantalla Samsung S24 INCELL"><span class="d21-product-caption"><strong>Samsung S24</strong><small>INCELL CON MARCO</small></span></a></div></section>
+      <section class="d21-quick" aria-labelledby="d21-quick-title"><div class="d21-quick-inner"><h2 id="d21-quick-title">Encuentra modelo y calidad</h2><div><form class="d21-finder" action="/productos/" method="get" role="search" data-home-catalog-search-form><label class="v3-sr-only" for="d21-home-search">Modelo o referencia</label><input id="d21-home-search" name="q" type="search" placeholder="Modelo o referencia" autocomplete="off" enterkeyhint="search" maxlength="120" data-home-catalog-search-input><button class="d21-button d21-button--hot" type="submit">Buscar modelo</button></form><nav class="d21-quick-links" aria-label="Calidades de pantallas"><a href="/categoria/iphone-incell/">iPhone INCELL</a><a href="/categoria/iphone-oled/">iPhone OLED</a><a href="/categoria/samsung-incell/">Samsung INCELL</a><a href="/categoria/samsung-oled/">Samsung OLED</a></nav></div></div></section>
+      <section class="d21-secondary" aria-label="Categorías secundarias"><a href="/micas.html"><h2>Hidrogel</h2><p>Consulta tipo, medida y acabado.</p><strong>Consultar <span aria-hidden="true">→</span></strong></a><a href="/productos-ai/"><h2>Productos AI</h2><p>Explora referencias publicadas.</p><strong>Ver catálogo <span aria-hidden="true">→</span></strong></a></section>
+      <section class="d21-process lab-buying-flow" aria-labelledby="d21-process-title"><div class="d21-process-inner"><h2 id="d21-process-title">Cómo comprar</h2><div class="d21-steps"><article><b>01</b><h3>Modelo</h3></article><article><b>02</b><h3>Calidad</h3></article><article><b>03</b><h3>Cantidad</h3></article><article><b>04</b><h3>Confirmación</h3></article></div></div></section>
+      <section class="d21-final-cta" id="contacto" aria-labelledby="d21-final-title"><div class="d21-final-copy"><h2 id="d21-final-title">¿Ya tienes modelo y cantidad?</h2></div><div class="d21-final-actions"><a class="d21-button d21-button--light" href="${quoteUrl()}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a><a class="d21-button" href="/app/">Abrir APP HAODE</a></div></section>
       </main>${footer()}<a class="v3-floating" href="${quoteUrl()}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`;
   }
 
@@ -232,6 +229,7 @@
 
   function render() {
     const page = body.dataset.v3Page;
+    body.classList.toggle('d21-home', page === 'home');
     if (body.dataset.v3Detail === 'true') {
       installShellOnly('pantallas');
       return;

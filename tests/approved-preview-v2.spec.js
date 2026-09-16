@@ -13,10 +13,10 @@ async function expectNoOverflow(page) {
 test('homepage desktop matches the locked laboratory editorial master', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.lab-hero h1')).toContainText('HAODE');
-  await expect(page.locator('.lab-hero h1')).toContainText('Pantallas profesionales');
-  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('src', '/assets/images/v3-lab-hero.png');
-  await expect(page.locator('.lab-contract-images img')).toHaveCount(2);
+  await expect(page.locator('.d21-brand-word')).toHaveText('HAODE');
+  await expect(page.locator('.d21-hero h1')).toContainText('Pantallas profesionales');
+  await expect(page.locator('.d21-hero-scene')).toHaveAttribute('src', '/assets/images/d21-light-stage/factory-laboratory.webp');
+  await expect(page.locator('.d21-product img')).toHaveCount(3);
   await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   await expectNoOverflow(page);
 });
@@ -24,10 +24,10 @@ test('homepage desktop matches the locked laboratory editorial master', async ({
 test('homepage mobile preserves the laboratory composition and readable hierarchy', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.lab-hero h1')).toBeVisible();
-  await expect(page.locator('.lab-hero-photo')).toBeVisible();
-  await expect(page.locator('.reference-mobile-hero-visual')).toBeVisible();
-  const metrics = await page.locator('.lab-hero h1').evaluate((title) => ({ size: parseFloat(getComputedStyle(title).fontSize), line: parseFloat(getComputedStyle(title).lineHeight) }));
+  await expect(page.locator('.d21-hero h1')).toBeVisible();
+  await expect(page.locator('.d21-hero-scene')).toBeVisible();
+  await expect(page.locator('.d21-hero-product')).toBeVisible();
+  const metrics = await page.locator('.d21-hero h1').evaluate((title) => ({ size: parseFloat(getComputedStyle(title).fontSize), line: parseFloat(getComputedStyle(title).lineHeight) }));
   expect(metrics.size).toBeGreaterThanOrEqual(44);
   expect(metrics.line).toBeGreaterThanOrEqual(38);
   await expectNoOverflow(page);

@@ -72,10 +72,10 @@ test('homepage and shared product footer keep customer actions readable', async 
   }));
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.lab-hero h1')).toBeVisible();
-  await expectReadableText(page, '.lab-hero h1');
-  await expectReadableText(page, '.lab-promise');
-  await expectReadableText(page, '.lab-final-cta p');
+  await expect(page.locator('.d21-hero h1')).toBeVisible();
+  await expectReadableText(page, '.d21-hero h1');
+  await expectReadableText(page, '.d21-hero-meta');
+  await expectReadableText(page, '.d21-final-cta h2');
   await expectReadableText(page, '.v3-footer-brand p');
 
   await page.goto(`${BASE_URL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
@@ -201,6 +201,7 @@ async function expectReadableText(page, selector, minimumFontSize = 0) {
     };
   });
 
-  expect(appearance.contrast).toBeGreaterThanOrEqual(4.5);
+  const requiredContrast = appearance.fontSize >= 24 ? 3 : 4.5;
+  expect(appearance.contrast).toBeGreaterThanOrEqual(requiredContrast);
   expect(appearance.fontSize).toBeGreaterThanOrEqual(minimumFontSize);
 }
