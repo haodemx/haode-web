@@ -6,7 +6,7 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Pantallas profesionales', 'Hidrogel', 'WhatsApp'],
+    texts: ['el mundo conectado', 'Hidrogel', 'WhatsApp'],
   },
   {
     path: '/app/',
@@ -91,7 +91,8 @@ async function checkCriticalPage(page, pageCase, viewport) {
   }
   if (pageCase.name === 'home') {
     const productImages = page.locator('.d21-product img');
-    await expect(productImages).toHaveCount(3);
+    await expect(productImages).toHaveCount(2);
+    await expect(page.locator('.vm1-category--foldables')).toContainText('REAL ASSET REQUIRED');
     expect(await productImages.evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
     if (viewport.width <= 430) {
       await expect(page.locator('.d21-hero-actions a[href*="wa.me"]')).toBeVisible();
@@ -126,7 +127,7 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 async function expectMobileHomeVisual(page) {
   const visual = page.locator('.d21-hero-product');
   await expect(visual).toBeVisible();
-  await expect(visual.locator('img')).toHaveAttribute('src', '/assets/images/d21-light-stage/iphone-16promax.webp');
+  await expect(visual.locator('img')).toHaveAttribute('src', '/assets/images/d21-light-stage/samsung-s24.webp');
   await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   const box = await visual.evaluate((el) => {
     const rect = el.getBoundingClientRect();

@@ -36,7 +36,7 @@ test('homepage laboratory hero labels remain readable over photography', async (
     size: parseFloat(getComputedStyle(copy.querySelector('h1')).fontSize),
     meta: getComputedStyle(copy.querySelector('.d21-hero-meta')).color,
   }));
-  expect(presentation.title).toBe('rgb(255, 255, 255)');
-  expect(presentation.meta).toBe('rgb(226, 233, 232)');
+  expect(presentation.title).toBe('rgb(9, 10, 11)');
+  expect(presentation.meta).toBe('rgb(27, 29, 30)');
   expect(presentation.size).toBeGreaterThanOrEqual(64);
 });

@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 const baseURL = (process.env.BASE_URL || 'http://127.0.0.1:4177').replace(/\/$/, '');
 const pages = [
-  ['/', 'Pantallas profesionales'],
+  ['/', 'el mundo conectado'],
   ['/productos/', 'Pantallas'],
   ['/producto/iphone-oled-11promax/', 'Pantalla para iPhone 11 Pro Max'],
   ['/micas.html', 'Hidrogel'],
@@ -24,7 +24,7 @@ test('V3 renders every complete route with the shared navigation and footer', as
     await expect(page.locator('[data-v3-header]')).toBeVisible();
     await expect(page.locator('[data-v3-footer]')).toBeAttached();
     await expect(page.locator('.v3-nav')).toContainText('Pantallas');
-    await expect(page.locator('.v3-nav')).toContainText('Hidrogel');
+    await expect(page.locator('.v3-nav')).toContainText(route === '/' ? 'Películas' : 'Hidrogel');
     await expect(page.locator('.v3-nav')).not.toContainText('Fundas');
     await expect(page.locator('a[href="/app/"]').first()).toBeAttached();
   }
@@ -82,7 +82,8 @@ test('selected D2.1 homepage uses the locked factory photography and approved pr
   await expect(page.locator('body')).toHaveClass(/d21-home/);
   await expect(page.locator('.d21-hero-scene')).toHaveAttribute('src', '/assets/images/d21-light-stage/factory-laboratory.webp');
   await expect(page.locator('.d21-hero-scene')).toHaveAttribute('alt', /inspección/i);
-  await expect(page.locator('.d21-product img')).toHaveCount(3);
+  await expect(page.locator('.d21-product img')).toHaveCount(2);
+  await expect(page.locator('.vm1-category--foldables')).toContainText('REAL ASSET REQUIRED');
   await expect(page.locator('.d21-steps article')).toHaveCount(4);
   await expect(page.locator('.d21-secondary')).toContainText('Hidrogel');
   await expect(page.locator('.d21-secondary')).toContainText('Productos AI');
@@ -96,10 +97,10 @@ test('laboratory homepage keeps the light product stage and text-first secondary
     return {
       stageBackground: stage.backgroundColor,
       secondaryImages: document.querySelectorAll('.d21-secondary img').length,
-      productLinks: document.querySelectorAll('.d21-product[href^="/producto/"]').length,
+      productLinks: document.querySelectorAll('.d21-product[href^="/categoria/"]').length,
     };
   });
-  expect(visualStyle.stageBackground).toBe('rgb(236, 239, 237)');
+  expect(visualStyle.stageBackground).toBe('rgb(255, 255, 255)');
   expect(visualStyle.secondaryImages).toBe(0);
   expect(visualStyle.productLinks).toBe(3);
 });

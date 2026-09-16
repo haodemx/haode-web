@@ -13,7 +13,7 @@ test('desktop header exposes locked navigation and primary WhatsApp action', asy
   await expect(page.locator('.v3-logo img')).toHaveAttribute('src', '/assets/images/d21-light-stage/haode-logo-official.webp');
   await expect(page.locator('.v3-nav a')).toHaveCount(6);
   await expect(page.locator('.v3-actions a[href*="wa.me"]')).toBeVisible();
-  await expect(page.locator('.v3-actions a[href="/app/"]')).toBeVisible();
+  await expect(page.locator('.v3-actions a[href="/app/"]')).toBeHidden();
 });
 
 test('ultrawide homepage keeps a centered readable content width', async ({ page }) => {
@@ -28,8 +28,7 @@ test('desktop navigation hover remains readable and restrained', async ({ page }
   const link = page.locator('.v3-nav a[href="/productos/"]');
   await link.hover();
   const style = await link.evaluate((element) => ({ color: getComputedStyle(element).color, fontSize: parseFloat(getComputedStyle(element).fontSize) }));
-  expect(style.color).toBe('rgb(255, 255, 255)');
-  await expect(link).toHaveCSS('border-bottom-color', 'rgb(255, 90, 20)');
+  expect(style.color).toBe('rgb(255, 86, 18)');
   expect(style.fontSize).toBeGreaterThanOrEqual(12);
 });
 

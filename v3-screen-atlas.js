@@ -9,6 +9,12 @@
     fixes.href = '/v3-screen-atlas-fixes.css?v=20260915-d21-final';
     document.head.appendChild(fixes);
   }
+  if (!document.querySelector('link[href*="/v3-visual-master-v1.css"]')) {
+    const visualMaster = document.createElement('link');
+    visualMaster.rel = 'stylesheet';
+    visualMaster.href = '/v3-visual-master-v1.css?v=20260915-master-v1-3';
+    document.head.appendChild(visualMaster);
+  }
   const isV3Detail = body.dataset.v3Detail === 'true';
   if (!isV3Detail) {
     body.dataset.v3Ready = 'true';
@@ -60,14 +66,27 @@
     ['contacto', 'Contacto', '/contacto/'],
   ];
 
+  const homeNavItems = [
+    ['productos', 'Productos', '/productos/'],
+    ['pantallas', 'Pantallas', '#pantallas'],
+    ['peliculas', 'Películas', '/micas.html'],
+    ['accesorios', 'Accesorios', '/categoria/fundas/'],
+    ['nosotros', 'Sobre Nosotros', '/tienda-oficial-hl-cdmx/'],
+    ['contacto', 'Contacto', '/contacto/'],
+  ];
+
   function header(active = '') {
+    const isHome = active === 'home';
+    const items = isHome ? homeNavItems : navItems;
     return `<header class="v3-header reference-header topbar catalog-topbar" data-v3-header>
       <a class="v3-logo reference-logo brand" href="/" aria-label="HAODE México, inicio"><img class="brand-logo" src="/assets/images/d21-light-stage/haode-logo-official.webp" alt="HAODE Calidad Profesional" width="184" height="45"><span class="brand-copy" hidden><strong>HAODE</strong></span></a>
       <button class="v3-btn v3-menu reference-menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="v3-navigation"><span aria-hidden="true">≡</span><span class="v3-sr-only">Menú</span></button>
-      <nav class="v3-nav reference-nav topnav" id="v3-navigation" aria-label="Navegación principal">${navItems.map(([key,label,href]) => `<a href="${href}"${key === active ? ' class="is-active" aria-current="page"' : ''}>${label}</a>`).join('')}<a class="v3-sr-only" href="/app/#lista">Catálogo</a></nav>
+      <nav class="v3-nav reference-nav topnav" id="v3-navigation" aria-label="Navegación principal">${items.map(([key,label,href]) => `<a href="${href}"${key === active ? ' class="is-active" aria-current="page"' : ''}>${label}</a>`).join('')}${isHome ? '' : '<a class="v3-sr-only" href="/app/#lista">Catálogo</a>'}</nav>
       <div class="v3-actions reference-nav-actions detail-header-actions">
+        ${isHome ? '<a class="vm1-search" href="/productos/" aria-label="Buscar productos"><span aria-hidden="true"></span></a>' : ''}
         <a class="v3-btn v3-whatsapp detail-header-action detail-header-whatsapp" data-detail-header-whatsapp href="${quoteUrl()}" target="_blank" rel="noopener noreferrer"><span class="v3-mark" aria-hidden="true">W</span><span>Consultar por WhatsApp</span></a>
         <a class="v3-btn v3-btn--orange detail-header-action detail-header-app reference-head-account" data-detail-header-app href="/app/"><span class="v3-mark" aria-hidden="true">A</span><span>Abrir APP</span></a>
+        ${isHome ? '<span class="vm1-language" lang="es-MX">ES</span>' : ''}
       </div>
     </header>`;
   }
@@ -110,9 +129,9 @@
   const cta = (title = 'Cotiza con precisión.') => `<section class="v3-section v3-grid"><div class="v3-wrap v3-cta"><div><p class="v3-eyebrow">Modelo · versión · cantidad</p><h2 class="v3-display">${title}</h2></div><div><p class="v3-page-intro">Comparte el modelo exacto, la calidad o versión publicada, la cantidad y tu ciudad. Confirmamos la información antes de continuar.</p><div class="v3-cta-row"><a class="v3-btn v3-btn--orange" href="${quoteUrl()}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a><a class="v3-btn" href="/app/">Abrir APP HAODE</a></div></div></div></section>`;
 
   function homePage() {
-    return `${header('pantallas')}<main>
-      <section class="d21-hero lab-hero" id="inicio" aria-labelledby="d21-hero-title"><img class="d21-hero-scene lab-hero-photo" src="/assets/images/d21-light-stage/factory-laboratory.webp" alt="Proceso real de inspección en fábrica de pantallas" fetchpriority="high"><div class="d21-hero-shade lab-hero-shade" aria-hidden="true"></div><div class="d21-hero-inner"><div class="d21-hero-copy lab-hero-copy"><p class="d21-brand-word">HAODE</p><h1 id="d21-hero-title">Pantallas profesionales<br>para técnicos</h1><p class="d21-hero-meta">iPhone · Samsung · INCELL · OLED</p><div class="d21-hero-actions"><a class="d21-button d21-button--hot" href="#pantallas">Ver pantallas</a><a class="d21-button d21-button--light" href="${quoteUrl('pantallas')}" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><a class="d21-hero-product" href="/producto/iphone-oled-16promax/" aria-label="Ver pantalla iPhone 16 Pro Max OLED"><img src="/assets/images/d21-light-stage/iphone-16promax.webp" alt="Pantalla iPhone 16 Pro Max OLED aprobada"></a><div class="d21-calibration" aria-hidden="true"></div></div></section>
-      <section class="d21-screens" id="pantallas" aria-labelledby="d21-screens-title"><div class="d21-section-head"><h2 id="d21-screens-title">Pantallas</h2><p>Tres referencias reales para iniciar la búsqueda.</p></div><div class="d21-product-stage"><a class="d21-product d21-product--a" href="/producto/iphone-incell-16e/"><img src="/assets/images/d21-light-stage/iphone-16e.webp" alt="Pantalla iPhone 16e INCELL"><span class="d21-product-caption"><strong>iPhone 16e</strong><small>INCELL FHD</small></span></a><a class="d21-product d21-product--b" href="/producto/iphone-oled-16promax/"><img src="/assets/images/d21-light-stage/iphone-16promax.webp" alt="Pantalla iPhone 16 Pro Max OLED"><span class="d21-product-caption"><strong>iPhone 16 Pro Max</strong><small>SOFT OLED</small></span></a><a class="d21-product d21-product--c" href="/producto/samsung-incell-s24/"><img src="/assets/images/d21-light-stage/samsung-s24.webp" alt="Pantalla Samsung S24 INCELL"><span class="d21-product-caption"><strong>Samsung S24</strong><small>INCELL CON MARCO</small></span></a></div></section>
+    return `${header('home')}<main>
+      <section class="d21-hero vm1-hero" id="inicio" aria-labelledby="d21-hero-title"><img class="d21-hero-scene" src="/assets/images/d21-light-stage/factory-laboratory.webp" alt="Proceso real de inspección en fábrica de pantallas" fetchpriority="high"><div class="d21-hero-shade" aria-hidden="true"></div><div class="d21-hero-inner"><div class="d21-hero-copy"><p class="d21-brand-word">HAODE / DISPLAY TECHNOLOGY SUPPLIER</p><h1 id="d21-hero-title">Pantallas<br>que mantienen<br><span>el mundo conectado</span></h1><p class="d21-hero-meta">Pantallas, películas y accesorios para profesionales de reparación en México.</p><div class="d21-hero-actions"><a class="d21-button d21-button--hot" href="${quoteUrl('pantallas')}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a><a class="d21-button d21-button--light" href="#pantallas">Ver Pantallas</a></div></div><a class="d21-hero-product" href="/producto/samsung-incell-s24/" aria-label="Ver pantalla Samsung S24 INCELL"><img src="/assets/images/d21-light-stage/samsung-s24.webp" alt="Pantalla Samsung S24 INCELL aprobada"></a><div class="vm1-trust" aria-label="Información de confianza"><span><strong>Suministro directo</strong><small>Canal oficial HAODE</small></span><span><strong>Soporte para técnicos</strong><small>Modelo y calidad por confirmar</small></span><span><strong>Presencia en México</strong><small>Atención local</small></span></div></div></section>
+      <section class="d21-screens vm1-screens" id="pantallas" aria-labelledby="d21-screens-title"><div class="d21-section-head"><div><p class="vm1-section-kicker">Nuestros productos</p><h2 id="d21-screens-title">Pantallas</h2><strong>Cobertura para las principales líneas de reparación.</strong></div><p>Elige una familia para buscar el modelo y la calidad publicada.</p></div><div class="d21-product-stage vm1-category-grid"><a class="d21-product vm1-category vm1-category--iphone" href="/categoria/iphone-incell/"><span class="d21-product-caption"><strong>iPhone</strong><small>INCELL / OLED / ORIGINAL</small></span><img src="/assets/images/d21-light-stage/iphone-16promax.webp" alt="Pantalla real iPhone 16 Pro Max Soft OLED aprobada"><span class="vm1-category-cta">Ver Pantallas iPhone <b aria-hidden="true">→</b></span></a><a class="d21-product vm1-category vm1-category--samsung" href="/categoria/samsung-incell/"><span class="d21-product-caption"><strong>Samsung</strong><small>INCELL C/M / AMOLED C/M / TIPO ORIGINAL C/M</small></span><img src="/assets/images/d21-light-stage/samsung-s24.webp" alt="Pantalla real Samsung S24 INCELL con marco aprobada"><span class="vm1-category-cta">Ver Pantallas Samsung <b aria-hidden="true">→</b></span></a><a class="d21-product vm1-category vm1-category--foldables" href="/categoria/samsung-plegables/"><span class="d21-product-caption"><strong>Foldables</strong><small>Z Flip / Z Fold</small></span><span class="vm1-real-asset">REAL ASSET REQUIRED</span><span class="vm1-category-cta">Ver Pantallas Foldables <b aria-hidden="true">→</b></span></a></div></section>
       <section class="d21-quick" aria-labelledby="d21-quick-title"><div class="d21-quick-inner"><h2 id="d21-quick-title">Encuentra modelo y calidad</h2><div><form class="d21-finder" action="/productos/" method="get" role="search" data-home-catalog-search-form><label class="v3-sr-only" for="d21-home-search">Modelo o referencia</label><input id="d21-home-search" name="q" type="search" placeholder="Modelo o referencia" autocomplete="off" enterkeyhint="search" maxlength="120" data-home-catalog-search-input><button class="d21-button d21-button--hot" type="submit">Buscar modelo</button></form><nav class="d21-quick-links" aria-label="Calidades de pantallas"><a href="/categoria/iphone-incell/">iPhone INCELL</a><a href="/categoria/iphone-oled/">iPhone OLED</a><a href="/categoria/samsung-incell/">Samsung INCELL</a><a href="/categoria/samsung-oled/">Samsung OLED</a></nav></div></div></section>
       <section class="d21-secondary" aria-label="Categorías secundarias"><a href="/micas.html"><h2>Hidrogel</h2><p>Consulta tipo, medida y acabado.</p><strong>Consultar <span aria-hidden="true">→</span></strong></a><a href="/productos-ai/"><h2>Productos AI</h2><p>Explora referencias publicadas.</p><strong>Ver catálogo <span aria-hidden="true">→</span></strong></a></section>
       <section class="d21-process lab-buying-flow" aria-labelledby="d21-process-title"><div class="d21-process-inner"><h2 id="d21-process-title">Cómo comprar</h2><div class="d21-steps"><article><b>01</b><h3>Modelo</h3></article><article><b>02</b><h3>Calidad</h3></article><article><b>03</b><h3>Cantidad</h3></article><article><b>04</b><h3>Confirmación</h3></article></div></div></section>
