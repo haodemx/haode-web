@@ -111,5 +111,5 @@ test("homepage App links describe their real destinations", async ({ page }) => 
   await expect(appEntry).toContainText("Abrir");
   await expect(appEntry).toContainText("APP");
   await expect(appEntry).toHaveAttribute("href", "/app/");
-  await expect(page.locator('.reference-nav a[href="/app/#lista"]')).toHaveText("Catálogo");
+  await expect(page.locator('.reference-nav a[href="#pantallas"]')).toHaveText("Pantallas");
 });

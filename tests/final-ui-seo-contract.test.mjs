@@ -31,7 +31,8 @@ test('product detail uses optimized display media and defers below-fold payloads
   const productPage = read('producto/iphone-incell-14/index.html');
   assert.match(productRenderer, /\.display\.webp/);
   assert.match(productRenderer, /deferProductMedia\(img, gallerySource\)/);
-  assert.match(productRenderer, /frame\.preload = 'none'/);
+  assert.match(productRenderer, /stageVideo\.preload = 'metadata'/);
+  assert.match(productRenderer, /video\.status === 'UNIQUE_MATCH'/);
   assert.match(productPage, /data-detail-main-image[^>]+main\.display\.webp/);
   assert.ok(fs.existsSync(new URL('../assets/products/iphone-incell/14/main.display.webp', import.meta.url)));
 });

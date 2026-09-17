@@ -17,6 +17,14 @@ const SCREEN_CATEGORIES = new Set([
   'samsung-oled',
   'samsung-tipo-original',
 ]);
+const STEP3_MEDIA_MANIFEST = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'product-media-manifest.json'), 'utf8'));
+const STEP3_MEDIA_BY_PRODUCT = new Map((STEP3_MEDIA_MANIFEST.products || []).map((record) => [record.productId, record]));
+
+function approvedProductVideos(product) {
+  return (STEP3_MEDIA_BY_PRODUCT.get(product.id)?.testVideos || [])
+    .filter((video) => video.status === 'UNIQUE_MATCH' && video.path)
+    .map((video) => video.path);
+}
 
 const CATEGORY_CONTEXT = new Map([
   ['camaras-inteligentes', { label: 'Cámaras inteligentes', path: '/categoria/camaras-inteligentes/' }],
@@ -228,7 +236,7 @@ function videoUploadDate(videoPath) {
 }
 
 function productVideoSchema(product) {
-  const videoPath = product.videos?.[0];
+  const videoPath = approvedProductVideos(product)[0];
   if (!videoPath) return '';
   const uploadDate = videoUploadDate(videoPath);
   if (!uploadDate) return '';
@@ -255,7 +263,7 @@ function productBreadcrumbMarkup(product) {
 }
 
 function productVideoMarkup(product) {
-  const videoPath = product.videos?.[0];
+  const videoPath = approvedProductVideos(product)[0];
   if (!videoPath) return '';
   const posterPath = productVideoPosterPath(product);
   const poster = posterPath ? ` poster="/${escapeHtml(posterPath)}"` : '';
@@ -300,6 +308,7 @@ function strengthenProductPage(html, product, products) {
   updated = updated.replace(/\s*<script[^>]+data-seo-schema=["'](?:breadcrumb|video)-20260821["'][^>]*>[\s\S]*?<\/script>/gi, '');
   updated = updated.replace(/\s*<nav[^>]+data-seo-index-strengthening=["']20260821["'][\s\S]*?<\/nav>/gi, '');
   updated = updated.replace(/\s*<section[^>]+data-seo-product-guide=["']20260821["'][\s\S]*?<\/section>/gi, '');
+  updated = updated.replace(/\s*<video\b[^>]*data-seo-static-video=["']20260821["'][^>]*>[\s\S]*?<\/video>/gi, '');
   if (/<div class="wrap detail-shell" data-product-detail>/.test(updated)) {
     updated = updated.replace(
       /(<div class="wrap detail-shell" data-product-detail>)/,
@@ -318,7 +327,7 @@ function strengthenProductPage(html, product, products) {
   }
   const staticVideo = productVideoMarkup(product);
   if (staticVideo && !updated.includes('data-seo-static-video="20260821"')) {
-    const videoUrl = `/${product.videos[0]}`;
+    const videoUrl = `/${approvedProductVideos(product)[0]}`;
     const escapedVideoUrl = regexEscape(videoUrl);
     const existingVideo = new RegExp(`<video\\b([^>]*\\bsrc=["']${escapedVideoUrl}["'][^>]*)>`, 'i');
     if (existingVideo.test(updated)) {

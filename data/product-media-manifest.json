@@ -1,0 +1,4904 @@
+{
+  "schemaVersion": 1,
+  "matchingPolicy": "STRICT_MODEL_AND_VERSION",
+  "sourcePolicy": "REAL_HAODE_HL_HLA_ONLY_NO_GENERATED_SUBSTITUTES",
+  "summary": {
+    "productsTotal": 186,
+    "mainImageReady": 141,
+    "additionalImagesReady": 69,
+    "productsWithGallery": 84,
+    "productsWithVideo": 76,
+    "uniqueVideoMatch": 82,
+    "ambiguousVideo": 44,
+    "unmatchedVideo": 16,
+    "videoPosterReady": 76,
+    "foldableRealImageReady": 9,
+    "foldableRealAssetRequired": 4
+  },
+  "products": [
+    {
+      "productId": "lk-007-camara-digital-4k",
+      "model": "LK-007",
+      "version": "Cámara Digital 4K",
+      "mainImage": "assets/products/productos-ai/lk-007-camara-digital-4k/main.png",
+      "additionalImages": [
+        "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-01.png",
+        "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-02.png",
+        "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-03.png",
+        "assets/products/productos-ai/lk-007-camara-digital-4k/gallery-04.png"
+      ],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "lk-018-camara-accion-hd",
+      "model": "LK-018",
+      "version": "Cámara de Acción HD",
+      "mainImage": "assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
+      "additionalImages": [
+        "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-01.png",
+        "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-02.png",
+        "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-03.png",
+        "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-04.png",
+        "assets/products/productos-ai/lk-018-camara-accion-hd/gallery-05.png"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/productos-ai/lk-018-camara-accion-hd/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — LK-018 Cámara de Acción HD"
+        },
+        {
+          "path": "assets/products/productos-ai/lk-018-camara-accion-hd/video-02.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — LK-018 Cámara de Acción HD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/productos-ai/lk-018-camara-accion-hd/main.png",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "lk-030-mini-camara-retro-digital",
+      "model": "LK-030",
+      "version": "Cámara digital compacta",
+      "mainImage": "assets/products/productos-ai/lk-030-mini-camara-retro-digital/main-red-hd.jpeg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "lk-032-camara-inteligente-con-gimbal",
+      "model": "LK-032",
+      "version": "Cámara inteligente con gimbal",
+      "mainImage": "assets/products/productos-ai/lk-032-camara-inteligente-con-gimbal/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "celular-samsung-note-20-ultra-12-plus-256",
+      "model": "Samsung NOTE 20 Ultra",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-note10-8-plus-256",
+      "model": "Samsung NOTE10",
+      "version": "8+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-note10-plus-12-plus-256",
+      "model": "Samsung NOTE10 PLUS",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-note8-4-plus-64",
+      "model": "Samsung NOTE8",
+      "version": "4+64",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-note9-8-plus-128",
+      "model": "Samsung NOTE9",
+      "version": "8+128",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s10-8-plus-128",
+      "model": "Samsung S10",
+      "version": "8+128",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s10-plus-8-plus-128",
+      "model": "Samsung S10 PLUS",
+      "version": "8+128",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s10e-8-plus-128",
+      "model": "Samsung S10E",
+      "version": "8+128",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s20-5g-12-plus-256",
+      "model": "Samsung S20 5G",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s20-plus-12-plus-256",
+      "model": "Samsung S20 PLUS",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s20-ultra-12-plus-256",
+      "model": "Samsung S20 Ultra",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s20fe-6-plus-128",
+      "model": "Samsung S20FE",
+      "version": "6+128",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s21-12-plus-256",
+      "model": "Samsung S21",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s21-ultra-12-plus-256",
+      "model": "Samsung S21 Ultra",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s22-ultra-12-plus-256",
+      "model": "Samsung S22 Ultra",
+      "version": "12+256",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-s9-6-plus-64",
+      "model": "Samsung S9",
+      "version": "6+64",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsung-z-fip3-pro-doble-pantalla-8-plus-128",
+      "model": "Samsung Z FIP3 PRO ，Doble Pantalla",
+      "version": "8+128",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "celular-samsungs9-plus-6-plus-64",
+      "model": "SamsungS9 PLUS",
+      "version": "6+64",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-funda-5in1-con-mica-premium-3d",
+      "model": "FUNDA 5IN1 CON MICA PREMIUM 3D",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-funda-5in1-con-mica-premium-3d-13pro-14pro-16pro",
+      "model": "13PRO/14PRO/16PRO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-kit-aluminio-de-17pro-con-logo-13pro-14pro-15pro-16pro",
+      "model": "13PRO/14PRO/15PRO/16PRO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-kit-aluminio-de-17promax-con-logo",
+      "model": "KIT ALUMINIO DE 17PROMAX CON LOGO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-kit-aluminio-de-17promax-sin-logo",
+      "model": "KIT ALUMINIO DE 17PROMAX SIN LOGO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-kit-carcasa-metalica-con-flex-carcasas-11-17pro",
+      "model": "CARCASAS 11/17PRO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-kit-carcasa-metalica-con-flex-carcasas-xr-17pro",
+      "model": "CARCASAS XR/17PRO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-kit-carcasa-metalica-con-flex-carcasas-xs-17pro",
+      "model": "CARCASAS XS/17PRO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "fundas-kit-carcasa-metalica-con-flex-carcasas-xsmax-17pro",
+      "model": "CARCASAS XSMAX/17PRO",
+      "version": "145",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "aimb-g5-ai-sports",
+      "model": "Gafas AI deportivas",
+      "version": "Gafas AI deportivas",
+      "mainImage": "assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "gafas-ai-gafas-ai-m02",
+      "model": "Gafas AI M02",
+      "version": "Producto AI",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "gafas-ai-gafas-ai-m08",
+      "model": "Gafas AI M08",
+      "version": "Producto AI",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "gafas-ai-gafas-ai-m89",
+      "model": "Gafas AI M89",
+      "version": "Producto AI",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "gafas-ai-gafas-ai-m95",
+      "model": "Gafas AI M95",
+      "version": "Producto AI",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "haode-ai-g3-smart-glasses",
+      "model": "HAODE AI G3 Smart Glasses",
+      "version": "HAODE AI G3 Smart Glasses",
+      "mainImage": "assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-ai-w610-smart-glasses",
+      "model": "HAODE AI W610 Smart Glasses",
+      "version": "HAODE AI W610 Smart Glasses",
+      "mainImage": "assets/products/productos-ai/w610-ai-smart-glasses/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "s1-ai-classic",
+      "model": "Gafas AI classic",
+      "version": "Gafas AI classic",
+      "mainImage": "assets/products/productos-ai/s1-ai-classic/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "w630-ai-pro",
+      "model": "Gafas AI blancas",
+      "version": "Gafas AI blancas",
+      "mainImage": "assets/products/productos-ai/w630-ai-smart-glasses/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-11",
+      "model": "iPhone 11",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/11/fhd-main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/11/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 11 INCELL FHD"
+        },
+        {
+          "path": "assets/products/iphone-incell/11/video-02.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 11 INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/11/fhd-main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-11-bolsa-protectora",
+      "model": "iPhone 11 Bolsa Protectora",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/11-bolsa-protectora/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 11 Bolsa Protectora INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-11pro",
+      "model": "iPhone 11 Pro",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/11pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/11pro/gallery-01.jpg",
+        "assets/products/iphone-incell/11pro/gallery-02.jpg",
+        "assets/products/iphone-incell/11pro/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/11pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 11 Pro INCELL FHD"
+        },
+        {
+          "path": "assets/products/iphone-incell/11pro/video-02.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 11 Pro INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/11pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-11promax",
+      "model": "iPhone 11 Pro Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/11promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/11promax/gallery-01.jpg",
+        "assets/products/iphone-incell/11promax/gallery-02.jpg",
+        "assets/products/iphone-incell/11promax/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/11promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 11 Pro Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/11promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-12-12pro",
+      "model": "iPhone 12 / 12 Pro",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/12-12pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/12-12pro/gallery-01.jpg",
+        "assets/products/iphone-incell/12-12pro/gallery-02.jpg",
+        "assets/products/iphone-incell/12-12pro/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/12-12pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 12 / 12 Pro INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/12-12pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-12mini",
+      "model": "iPhone 12 mini",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/12mini/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/12mini/gallery-01.jpg",
+        "assets/products/iphone-incell/12mini/gallery-02.jpg",
+        "assets/products/iphone-incell/12mini/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/12mini/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 12 mini INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/12mini/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-12promax",
+      "model": "iPhone 12 Pro Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/12promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/12promax/gallery-01.jpg",
+        "assets/products/iphone-incell/12promax/gallery-02.jpg",
+        "assets/products/iphone-incell/12promax/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/12promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 12 Pro Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/12promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-13",
+      "model": "iPhone 13",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/13/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/13/gallery-01.jpg",
+        "assets/products/iphone-incell/13/gallery-02.jpg",
+        "assets/products/iphone-incell/13/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/13/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 13 INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/13/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-13mini",
+      "model": "iPhone 13 mini",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/13mini/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/13mini/gallery-01.jpg",
+        "assets/products/iphone-incell/13mini/gallery-02.jpg",
+        "assets/products/iphone-incell/13mini/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/13mini/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 13 mini INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/13mini/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-13pro",
+      "model": "iPhone 13 Pro",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/13pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/13pro/gallery-01.jpg",
+        "assets/products/iphone-incell/13pro/gallery-02.jpg",
+        "assets/products/iphone-incell/13pro/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/13pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 13 Pro INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/13pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-13promax",
+      "model": "iPhone 13 Pro Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/13promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/13promax/gallery-01.jpg",
+        "assets/products/iphone-incell/13promax/gallery-02.jpg",
+        "assets/products/iphone-incell/13promax/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/13promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 13 Pro Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/13promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-14",
+      "model": "iPhone 14",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/14/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/14/gallery-01.jpg",
+        "assets/products/iphone-incell/14/gallery-02.jpg",
+        "assets/products/iphone-incell/14/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/14/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/14/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-14plus",
+      "model": "iPhone 14 Plus",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/14plus/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/14plus/gallery-01.jpg",
+        "assets/products/iphone-incell/14plus/gallery-02.jpg",
+        "assets/products/iphone-incell/14plus/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/14plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 Plus INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/14plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-14pro",
+      "model": "iPhone 14 Pro",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/14pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/14pro/gallery-01.jpg",
+        "assets/products/iphone-incell/14pro/gallery-02.jpg",
+        "assets/products/iphone-incell/14pro/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/14pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 Pro INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/14pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-14promax",
+      "model": "iPhone 14 Pro Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/14promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/14promax/gallery-01.jpg",
+        "assets/products/iphone-incell/14promax/gallery-02.jpg",
+        "assets/products/iphone-incell/14promax/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/14promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 Pro Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/14promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-15",
+      "model": "iPhone 15",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/15/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/15/gallery-01.jpg",
+        "assets/products/iphone-incell/15/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/15/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 15 INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/15/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-15plus",
+      "model": "iPhone 15 Plus",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/15plus/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/15plus/gallery-01.jpg",
+        "assets/products/iphone-incell/15plus/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/15plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 15 Plus INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/15plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-15pro",
+      "model": "iPhone 15 Pro",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/15pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/15pro/gallery-01.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/15pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 15 Pro INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/15pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-15promax",
+      "model": "iPhone 15 Pro Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/15promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/15promax/gallery-01.jpg",
+        "assets/products/iphone-incell/15promax/gallery-02.jpg",
+        "assets/products/iphone-incell/15promax/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/15promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 15 Pro Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/15promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-16",
+      "model": "iPhone 16",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/16/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/16/gallery-01.jpg",
+        "assets/products/iphone-incell/16/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/16/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 INCELL FHD"
+        },
+        {
+          "path": "assets/products/iphone-incell/16/video-02.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/16/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-16e",
+      "model": "iPhone 16e",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/16e/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/16e/gallery-01.png",
+        "assets/products/iphone-incell/16e/gallery-02.jpg",
+        "assets/products/iphone-incell/16e/gallery-03.png"
+      ],
+      "transparentImage": "assets/products/iphone-incell/16e/gallery-01.png",
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/16e/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16e INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/16e/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-16plus",
+      "model": "iPhone 16 Plus",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/16plus/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/16plus/gallery-01.png",
+        "assets/products/iphone-incell/16plus/gallery-02.png",
+        "assets/products/iphone-incell/16plus/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/16plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 Plus INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/16plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-16pro",
+      "model": "iPhone 16 Pro",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/16pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/16pro/gallery-01.png",
+        "assets/products/iphone-incell/16pro/gallery-02.jpg",
+        "assets/products/iphone-incell/16pro/gallery-03.png"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/16pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 Pro INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/16pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-16promax",
+      "model": "iPhone 16 Pro Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/16promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/16promax/gallery-01.png",
+        "assets/products/iphone-incell/16promax/gallery-02.jpg",
+        "assets/products/iphone-incell/16promax/gallery-03.png"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/16promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 Pro Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/16promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-17",
+      "model": "iPhone 17",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/17/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/17/gallery-01.jpg",
+        "assets/products/iphone-incell/17/gallery-02.jpg",
+        "assets/products/iphone-incell/17/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-17air",
+      "model": "iPhone 17 Air",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/17air/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/17air/gallery-01.png",
+        "assets/products/iphone-incell/17air/gallery-02.jpg",
+        "assets/products/iphone-incell/17air/gallery-03.jpg"
+      ],
+      "transparentImage": "assets/products/iphone-incell/17air/gallery-01.png",
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-17e",
+      "model": "iPhone 17E",
+      "version": "INCELL FHD",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "iphone-incell-17pro",
+      "model": "iPhone 17 Pro",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/17pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/17pro/gallery-01.jpg",
+        "assets/products/iphone-incell/17pro/gallery-02.png",
+        "assets/products/iphone-incell/17pro/gallery-03.jpg"
+      ],
+      "transparentImage": "assets/products/iphone-incell/17pro/gallery-02.png",
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-17promax",
+      "model": "iPhone 17 Pro Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/17promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/17promax/gallery-01.jpg",
+        "assets/products/iphone-incell/17promax/gallery-02.png",
+        "assets/products/iphone-incell/17promax/gallery-03.png"
+      ],
+      "transparentImage": "assets/products/iphone-incell/17promax/gallery-02.png",
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/17promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 17 Pro Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/17promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-x",
+      "model": "iPhone X",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/x/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/x/gallery-01.jpg",
+        "assets/products/iphone-incell/x/gallery-02.jpg",
+        "assets/products/iphone-incell/x/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/x/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone X INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/x/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-xr",
+      "model": "iPhone XR",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/xr/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/xr/gallery-01.jpg",
+        "assets/products/iphone-incell/xr/gallery-02.jpg",
+        "assets/products/iphone-incell/xr/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/xr/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone XR INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/xr/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-xr-bolsa-protectora",
+      "model": "iPhone XR Bolsa Protectora",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/xr-bolsa-protectora/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone XR Bolsa Protectora INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-xs",
+      "model": "iPhone XS",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/xs/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/xs/gallery-01.jpg",
+        "assets/products/iphone-incell/xs/gallery-02.jpg",
+        "assets/products/iphone-incell/xs/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/xs/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone XS INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/xs/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-incell-xsmax",
+      "model": "iPhone XS Max",
+      "version": "INCELL FHD",
+      "mainImage": "assets/products/iphone-incell/xsmax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-incell/xsmax/gallery-01.jpg",
+        "assets/products/iphone-incell/xsmax/gallery-02.jpg",
+        "assets/products/iphone-incell/xsmax/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-incell/xsmax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone XS Max INCELL FHD"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-incell/xsmax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-11promax",
+      "model": "iPhone 11 Pro Max",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/11promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/11promax/gallery-01.jpg",
+        "assets/products/iphone-oled/11promax/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/11promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 11 Pro Max OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/11promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-12-12pro",
+      "model": "iPhone 12 / 12 Pro",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/12-12pro/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/12-12pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 12 / 12 Pro OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/12-12pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-12promax",
+      "model": "iPhone 12 Pro Max",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/12promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/12promax/gallery-01.jpg",
+        "assets/products/iphone-oled/12promax/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/12promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 12 Pro Max OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/12promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-13",
+      "model": "iPhone 13",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/13/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/13/gallery-01.jpg",
+        "assets/products/iphone-oled/13/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/13/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 13 OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/13/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-13pro",
+      "model": "iPhone 13 Pro",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/13pro/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/13pro/gallery-01.jpg",
+        "assets/products/iphone-oled/13pro/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/13pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 13 Pro OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/13pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-13promax",
+      "model": "iPhone 13 Pro Max",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/13promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/13promax/gallery-01.jpg",
+        "assets/products/iphone-oled/13promax/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/13promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 13 Pro Max OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/13promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-14",
+      "model": "iPhone 14",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/14/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/14/gallery-01.jpg",
+        "assets/products/iphone-oled/14/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/14/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/14/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-14plus",
+      "model": "iPhone 14 Plus",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/14plus/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/14plus/gallery-01.jpg",
+        "assets/products/iphone-oled/14plus/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/14plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 Plus OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/14plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-14pro",
+      "model": "iPhone 14 Pro",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/14pro/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/14pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 Pro OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/14pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-14promax",
+      "model": "iPhone 14 Pro Max",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/14promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/14promax/gallery-01.jpg",
+        "assets/products/iphone-oled/14promax/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/14promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 14 Pro Max OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/14promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-15",
+      "model": "iPhone 15",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/15/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/15/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 15 OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/15/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-15promax",
+      "model": "iPhone 15 Pro Max",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/15promax/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/15promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 15 Pro Max OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/15promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-16e",
+      "model": "iPhone 16E",
+      "version": "OLED PREMIUM",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "iphone-oled-16pro",
+      "model": "iPhone 16 Pro",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/16pro/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/16pro/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 Pro OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/16pro/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-16promax",
+      "model": "iPhone 16 Pro Max",
+      "version": "SOFT OLED PREMIUM MOVE IC",
+      "mainImage": "assets/products/iphone-oled/16promax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/16promax/gallery-01.jpg",
+        "assets/products/iphone-oled/16promax/gallery-02.jpg",
+        "assets/products/iphone-oled/16promax/gallery-03.png",
+        "assets/products/iphone-oled/16promax/gallery-04.png",
+        "assets/products/iphone-oled/16promax/gallery-05.png"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/16promax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 Pro Max SOFT OLED PREMIUM MOVE IC"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/16promax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-16promax-hard",
+      "model": "iPhone 16 Pro Max",
+      "version": "OLED PREMIUM MOVE IC",
+      "mainImage": "assets/products/iphone-oled/16promax-hard/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/16promax-hard/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone 16 Pro Max OLED PREMIUM MOVE IC"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/16promax-hard/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "iphone-oled-soft-14",
+      "model": "iPhone 14",
+      "version": "SOFT OLED PREMIUM",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "iphone-oled-soft-14-plus",
+      "model": "iPhone 14 plus",
+      "version": "SOFT OLED PREMIUM",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "iphone-oled-soft-15pro",
+      "model": "iPhone 15PRO",
+      "version": "SOFT OLED PREMIUM",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "iphone-oled-xsmax",
+      "model": "iPhone XS Max",
+      "version": "OLED PREMIUM",
+      "mainImage": "assets/products/iphone-oled/xsmax/main.jpg",
+      "additionalImages": [
+        "assets/products/iphone-oled/xsmax/gallery-01.jpg",
+        "assets/products/iphone-oled/xsmax/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/iphone-oled/xsmax/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — iPhone XS Max OLED PREMIUM"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/iphone-oled/xsmax/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "mica-hd",
+      "model": "MICA HD",
+      "version": "Contenido: 50 pzs · Precio por volumen",
+      "mainImage": "assets/products/micas/hd/main.png",
+      "additionalImages": [
+        "assets/products/micas/hd/gallery-01.png"
+      ],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "mica-matte",
+      "model": "MICA MATTE",
+      "version": "Contenido: 50 pzs · Precio por volumen",
+      "mainImage": "assets/products/micas/matte/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "mica-privacidad-hd",
+      "model": "MICA PRIVACIDAD HD",
+      "version": "Contenido: 50 pzs · Precio por volumen",
+      "mainImage": "assets/products/micas/privacidad-hd/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "mica-privacidad-matte",
+      "model": "MICA PRIVACIDAD MATTE",
+      "version": "Contenido: 50 pzs · Precio por volumen",
+      "mainImage": "assets/products/micas/privacidad-matte/main.png",
+      "additionalImages": [
+        "assets/products/micas/privacidad-matte/gallery-01.png"
+      ],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "x200t-cortadora-micas",
+      "model": "Máquina de Micas（X200T）",
+      "version": "Mayor cantidad, menor precio.",
+      "mainImage": "assets/products/cut-machine/x200t/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
+      "model": "Modelo 11 Pro Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/11-pro-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
+      "model": "Modelo 12 / 12 Pro",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/12-12-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
+      "model": "Modelo 12 Pro Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/12-pro-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-13",
+      "model": "Modelo 13",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/13-13-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-13-pro",
+      "model": "Modelo 13 Pro",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/13-13-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
+      "model": "Modelo 13 Pro Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/13-pro-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-14",
+      "model": "Modelo 14",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/14-14-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-14-plus",
+      "model": "Modelo 14 Plus",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/14-plus.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-14-pro",
+      "model": "Modelo 14 Pro",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/14-14-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
+      "model": "Modelo 14 Pro Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/14-pro-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-15",
+      "model": "Modelo 15",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/15.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-15-plus",
+      "model": "Modelo 15 Plus",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/15-plus.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-15-pro",
+      "model": "Modelo 15 Pro",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/15-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
+      "model": "Modelo 15 Pro Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/15-pro-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-16",
+      "model": "Modelo 16",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/16.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-16-plus",
+      "model": "Modelo 16 Plus",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/16-plus.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-16-pro",
+      "model": "Modelo 16 Pro",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/16-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
+      "model": "Modelo 16 Pro Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/16-pro-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-17",
+      "model": "Modelo 17",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/17.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-17-pro",
+      "model": "Modelo 17 Pro",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/17-pro.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
+      "model": "Modelo 17 Pro Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/17-pro-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "haode-pantalla-oled-diagnostica-modelo-xs-max",
+      "model": "Modelo XS Max",
+      "version": "OLED Diagnóstica · Tamaño original",
+      "mainImage": "assets/products/oled-diagnostica/xs-max.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [
+        {
+          "path": "assets/products/oled-diagnostica/video-01.mp4",
+          "status": "AMBIGUOUS"
+        },
+        {
+          "path": "assets/products/oled-diagnostica/video-02.mp4",
+          "status": "AMBIGUOUS"
+        }
+      ],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "oled-diagnostica-12mini-hard",
+      "model": "iPhone 12MINI",
+      "version": "DIAGNOTICO HARD OLED",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "oled-diagnostica-16e-soft",
+      "model": "iPhone 16E",
+      "version": "DIAGNOTICO  SOFT OLED",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-incell-note-10",
+      "model": "Samsung Note 10",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/note-10/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/note-10/gallery-01.jpg",
+        "assets/products/samsung-incell/note-10/gallery-02.jpg",
+        "assets/products/samsung-incell/note-10/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/note-10/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung Note 10 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/note-10/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-note-10-lite",
+      "model": "NOTE10 LITE",
+      "version": "INCELL FHD C/M",
+      "mainImage": "assets/products/samsung-incell/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-note-10-plus",
+      "model": "Samsung Note 10 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/note-10-plus/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/note-10-plus/gallery-01.jpg",
+        "assets/products/samsung-incell/note-10-plus/gallery-02.jpg",
+        "assets/products/samsung-incell/note-10-plus/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/note-10-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung Note 10 Plus INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/note-10-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-note-20",
+      "model": "NOTE 20",
+      "version": "INCELL FHD C/M",
+      "mainImage": "assets/products/samsung-incell/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-note-20-ultra",
+      "model": "Samsung Note 20 Ultra",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/note-20-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/note-20-ultra/gallery-01.jpg",
+        "assets/products/samsung-incell/note-20-ultra/gallery-02.jpg",
+        "assets/products/samsung-incell/note-20-ultra/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/note-20-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung Note 20 Ultra INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/note-20-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-note-8",
+      "model": "Samsung Note 8",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/note-8/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/note-8/gallery-01.jpg",
+        "assets/products/samsung-incell/note-8/gallery-02.jpg",
+        "assets/products/samsung-incell/note-8/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/note-8/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung Note 8 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/note-8/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-note-9",
+      "model": "Samsung Note 9",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/note-9/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/note-9/gallery-01.jpg",
+        "assets/products/samsung-incell/note-9/gallery-02.jpg",
+        "assets/products/samsung-incell/note-9/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/note-9/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung Note 9 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/note-9/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s10",
+      "model": "Samsung S10",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s10/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s10/gallery-01.jpg",
+        "assets/products/samsung-incell/s10/gallery-02.jpg",
+        "assets/products/samsung-incell/s10/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s10/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S10 INCELL CON MARCO"
+        },
+        {
+          "path": "assets/products/samsung-incell/s10/video-02.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S10 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s10/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s10-lite",
+      "model": "S10 LITE",
+      "version": "INCELL FHD C/M",
+      "mainImage": "assets/products/samsung-incell/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s10-plus",
+      "model": "Samsung S10 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s10-plus/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s10-plus/gallery-01.jpg",
+        "assets/products/samsung-incell/s10-plus/gallery-02.jpg",
+        "assets/products/samsung-incell/s10-plus/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s10-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S10 Plus INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s10-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s10e",
+      "model": "Samsung S10E",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s10e/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s10e/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S10E INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s10e/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s20-4g",
+      "model": "S20 4G",
+      "version": "INCELL FHD C/M",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-incell-s20-5g",
+      "model": "S20 5G",
+      "version": "INCELL FHD C/M",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-incell-s20-fe",
+      "model": "Samsung S20 FE",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s20-fe/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s20-fe/gallery-01.jpg",
+        "assets/products/samsung-incell/s20-fe/gallery-02.jpg",
+        "assets/products/samsung-incell/s20-fe/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s20-fe/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S20 FE INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s20-fe/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s20-plus",
+      "model": "Samsung S20 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s20-plus/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s20-plus/gallery-01.jpg",
+        "assets/products/samsung-incell/s20-plus/gallery-02.jpg",
+        "assets/products/samsung-incell/s20-plus/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s20-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S20 Plus INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s20-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s20-ultra",
+      "model": "Samsung S20 Ultra",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s20-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s20-ultra/gallery-01.jpg",
+        "assets/products/samsung-incell/s20-ultra/gallery-02.jpg",
+        "assets/products/samsung-incell/s20-ultra/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s20-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S20 Ultra INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s20-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s21",
+      "model": "Samsung S21",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s21/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s21/gallery-01.jpg",
+        "assets/products/samsung-incell/s21/gallery-02.jpg",
+        "assets/products/samsung-incell/s21/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s21/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S21 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s21/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s21-fe",
+      "model": "Samsung S21 FE",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s21-fe/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s21-plus",
+      "model": "Samsung S21 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s21-plus/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s21-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S21 Plus INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s21-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s21-ultra",
+      "model": "Samsung S21 Ultra",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s21-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s21-ultra/gallery-01.jpg",
+        "assets/products/samsung-incell/s21-ultra/gallery-02.jpg",
+        "assets/products/samsung-incell/s21-ultra/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s22",
+      "model": "Samsung S22",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s22/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s22/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S22 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s22/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s22-plus",
+      "model": "Samsung S22 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s22-plus/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s22-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S22 Plus INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s22-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s22-ultra",
+      "model": "Samsung S22 Ultra",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s22-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s22-ultra/gallery-01.jpg",
+        "assets/products/samsung-incell/s22-ultra/gallery-02.jpg",
+        "assets/products/samsung-incell/s22-ultra/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s22-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S22 Ultra INCELL CON MARCO"
+        },
+        {
+          "path": "assets/products/samsung-incell/s22-ultra/video-02.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S22 Ultra INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s22-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s23",
+      "model": "Samsung S23",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s23/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s23/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S23 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s23/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s23-plus",
+      "model": "Samsung S23 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s23-plus/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s23-ultra",
+      "model": "Samsung S23 Ultra",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s23-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s23-ultra/gallery-01.jpg",
+        "assets/products/samsung-incell/s23-ultra/gallery-02.jpg",
+        "assets/products/samsung-incell/s23-ultra/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s23-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S23 Ultra INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s23-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s24",
+      "model": "Samsung S24",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s24/main.png",
+      "additionalImages": [],
+      "transparentImage": "assets/products/samsung-incell/s24/main.png",
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s24/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S24 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s24/main.png",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s24-plus",
+      "model": "Samsung S24 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s24-plus/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s24-ultra",
+      "model": "Samsung S24 Ultra",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s24-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s24-ultra/gallery-01.jpg",
+        "assets/products/samsung-incell/s24-ultra/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s8",
+      "model": "Samsung S8",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s8/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s8/gallery-01.jpg",
+        "assets/products/samsung-incell/s8/gallery-02.jpg",
+        "assets/products/samsung-incell/s8/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s8/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S8 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s8/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s8-plus",
+      "model": "Samsung S8 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s8-plus/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s8-plus/gallery-01.jpg",
+        "assets/products/samsung-incell/s8-plus/gallery-02.jpg",
+        "assets/products/samsung-incell/s8-plus/gallery-03.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s8-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S8 Plus INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s8-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s9",
+      "model": "Samsung S9",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s9/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s9/gallery-01.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s9/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S9 INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s9/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-s9-plus",
+      "model": "Samsung S9 Plus",
+      "version": "INCELL CON MARCO",
+      "mainImage": "assets/products/samsung-incell/s9-plus/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-incell/s9-plus/gallery-01.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-incell/s9-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S9 Plus INCELL CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-incell/s9-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-incell-z-flip3",
+      "model": "Z FLIP3",
+      "version": "INCELL S/M",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-incell-z-flip4",
+      "model": "Z FLIP4",
+      "version": "INCELL S/M",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-incell-z-flip5",
+      "model": "Z FLIP5",
+      "version": "INCELL S/M",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-incell-z-flip6",
+      "model": "Z FLIP6",
+      "version": "INCELL S/M",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-oled-note-10",
+      "model": "Samsung Note 10",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/note-10/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-note-20",
+      "model": "Samsung Note 20",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/note-20/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-note-20-ultra",
+      "model": "Samsung Note 20 Ultra",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/note-20-ultra/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-s20-plus",
+      "model": "Samsung S20 Plus",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/s20-plus/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-oled/s20-plus/gallery-01.jpg",
+        "assets/products/samsung-oled/s20-plus/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-oled/s20-plus/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S20 Plus OLED CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-oled/s20-plus/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-s21-ultra",
+      "model": "Samsung S21 Ultra",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/s21-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-oled/s21-ultra/gallery-01.jpg",
+        "assets/products/samsung-oled/s21-ultra/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-oled/s21-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S21 Ultra OLED CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-oled/s21-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-s22-ultra",
+      "model": "Samsung S22 Ultra",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/s22-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-oled/s22-ultra/gallery-01.jpg",
+        "assets/products/samsung-oled/s22-ultra/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-oled/s22-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S22 Ultra OLED CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-oled/s22-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-s23-ultra",
+      "model": "Samsung S23 Ultra",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/s23-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-oled/s23-ultra/gallery-01.jpg",
+        "assets/products/samsung-oled/s23-ultra/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-oled/s23-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S23 Ultra OLED CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-oled/s23-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-s24-ultra",
+      "model": "Samsung S24 Ultra",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/s24-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-oled/s24-ultra/gallery-01.jpg",
+        "assets/products/samsung-oled/s24-ultra/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-oled/s24-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S24 Ultra OLED CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-oled/s24-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-oled-s25-ultra",
+      "model": "Samsung S25 Ultra",
+      "version": "OLED CON MARCO",
+      "mainImage": "assets/products/samsung-oled/s25-ultra/main.jpg",
+      "additionalImages": [
+        "assets/products/samsung-oled/s25-ultra/gallery-01.jpg",
+        "assets/products/samsung-oled/s25-ultra/gallery-02.jpg"
+      ],
+      "transparentImage": null,
+      "testVideos": [
+        {
+          "path": "assets/products/samsung-oled/s25-ultra/video-01.mp4",
+          "status": "UNIQUE_MATCH",
+          "title": "Prueba real — Samsung S25 Ultra OLED CON MARCO"
+        }
+      ],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": "assets/products/samsung-oled/s25-ultra/main.jpg",
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-note-20-ultra",
+      "model": "NOTE 20 Ultra",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": null,
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "NONE",
+      "reviewStatus": "REAL_ASSET_REQUIRED",
+      "gates": {
+        "sourceConfirmed": false,
+        "qcPass": false,
+        "approvedForWeb": false
+      }
+    },
+    {
+      "productId": "samsung-original-s21-ultra",
+      "model": "S21 Ultra",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/s21-ultra/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-s22-plus",
+      "model": "S22 PLUS",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/s22-plus/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-s22-ultra",
+      "model": "S22 Ultra",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/s22-ultra/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-s23-plus",
+      "model": "S23 PLUS",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/s23-plus/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-s23-ultra",
+      "model": "S23 Ultra",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/s23-ultra/main.jpg",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-s24-ultra",
+      "model": "S24 Ultra",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/s24-ultra/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-s25-ultra",
+      "model": "S25 Ultra",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/s25-ultra/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-flip3",
+      "model": "Z FLIP3",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-flip3/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-flip4",
+      "model": "Z FLIP4",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-flip4/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-flip5",
+      "model": "Z FLIP5",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-flip5/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-flip6",
+      "model": "Z FLIP6",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-flip6/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-flip7",
+      "model": "Z FLIP7",
+      "version": "TIPO ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-flip7/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-fold3",
+      "model": "Z FOLD3",
+      "version": "ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-fold3/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-fold4",
+      "model": "Z FOLD4",
+      "version": "ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-fold4/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-fold5",
+      "model": "Z FOLD5",
+      "version": "ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-fold5/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    },
+    {
+      "productId": "samsung-original-z-fold6",
+      "model": "Z FOLD6",
+      "version": "ORIGINAL C/M",
+      "mainImage": "assets/products/samsung-original/z-fold6/main.png",
+      "additionalImages": [],
+      "transparentImage": null,
+      "testVideos": [],
+      "ambiguousVideos": [],
+      "unmatchedVideos": [],
+      "videoPoster": null,
+      "mediaSource": "CURRENT_REPO_PUBLIC_ASSET",
+      "confidence": "HIGH",
+      "reviewStatus": "EXISTING_PUBLIC_ASSET",
+      "gates": {
+        "sourceConfirmed": true,
+        "qcPass": true,
+        "approvedForWeb": true
+      }
+    }
+  ],
+  "unreferencedVideos": [
+    "assets/products/fundas/funda-magnetica-estilo-iphone-17-pro-max/silicon-instalacion-video-01.mp4",
+    "assets/products/fundas/funda-magnetica-estilo-iphone-17-pro-max/silicon-instalacion-video-02.mp4",
+    "assets/products/fundas/funda-magnetica-estilo-iphone-17-pro-max/silicon-instalacion-video-03.mp4",
+    "assets/products/fundas/funda-premium-aluminio-estilo-iphone-17-pro-max/video-01.mp4",
+    "assets/products/fundas/funda-premium-aluminio-plus/video-01.mp4",
+    "assets/products/iphone-oled/11/video-01.mp4",
+    "assets/products/iphone-oled/11pro/video-01.mp4",
+    "assets/products/iphone-oled/12mini/video-01.mp4",
+    "assets/products/iphone-oled/12pro/video-01.mp4",
+    "assets/products/iphone-oled/13mini/video-01.mp4",
+    "assets/products/iphone-oled/15plus/video-01.mp4",
+    "assets/products/iphone-oled/16/video-01.mp4",
+    "assets/products/iphone-oled/16plus/video-01.mp4",
+    "assets/products/iphone-oled/x/video-01.mp4",
+    "assets/products/samsung-incell/s20/video-01.mp4",
+    "assets/products/samsung-original/z-flip-series-video-01.mp4"
+  ],
+  "lowResolutionAssets": [
+    {
+      "productId": "iphone-incell-16e",
+      "path": "assets/products/iphone-incell/16e/gallery-02.jpg",
+      "dimensions": {
+        "width": 326,
+        "height": 1600
+      }
+    },
+    {
+      "productId": "iphone-incell-16promax",
+      "path": "assets/products/iphone-incell/16promax/gallery-02.jpg",
+      "dimensions": {
+        "width": 488,
+        "height": 2400
+      }
+    },
+    {
+      "productId": "samsung-incell-s10e",
+      "path": "assets/products/samsung-incell/s10e/main.jpg",
+      "dimensions": {
+        "width": 343,
+        "height": 343
+      }
+    },
+    {
+      "productId": "samsung-oled-note-10",
+      "path": "assets/products/samsung-oled/note-10/main.jpg",
+      "dimensions": {
+        "width": 464,
+        "height": 502
+      }
+    },
+    {
+      "productId": "samsung-oled-note-20-ultra",
+      "path": "assets/products/samsung-oled/note-20-ultra/main.jpg",
+      "dimensions": {
+        "width": 438,
+        "height": 465
+      }
+    },
+    {
+      "productId": "samsung-oled-s20-plus",
+      "path": "assets/products/samsung-oled/s20-plus/main.jpg",
+      "dimensions": {
+        "width": 439,
+        "height": 489
+      }
+    },
+    {
+      "productId": "samsung-oled-s20-plus",
+      "path": "assets/products/samsung-oled/s20-plus/gallery-01.jpg",
+      "dimensions": {
+        "width": 478,
+        "height": 482
+      }
+    },
+    {
+      "productId": "samsung-oled-s20-plus",
+      "path": "assets/products/samsung-oled/s20-plus/gallery-02.jpg",
+      "dimensions": {
+        "width": 466,
+        "height": 472
+      }
+    },
+    {
+      "productId": "samsung-oled-s21-ultra",
+      "path": "assets/products/samsung-oled/s21-ultra/main.jpg",
+      "dimensions": {
+        "width": 460,
+        "height": 491
+      }
+    },
+    {
+      "productId": "samsung-oled-s21-ultra",
+      "path": "assets/products/samsung-oled/s21-ultra/gallery-01.jpg",
+      "dimensions": {
+        "width": 472,
+        "height": 486
+      }
+    },
+    {
+      "productId": "samsung-oled-s21-ultra",
+      "path": "assets/products/samsung-oled/s21-ultra/gallery-02.jpg",
+      "dimensions": {
+        "width": 461,
+        "height": 493
+      }
+    },
+    {
+      "productId": "samsung-oled-s22-ultra",
+      "path": "assets/products/samsung-oled/s22-ultra/main.jpg",
+      "dimensions": {
+        "width": 470,
+        "height": 481
+      }
+    },
+    {
+      "productId": "samsung-oled-s22-ultra",
+      "path": "assets/products/samsung-oled/s22-ultra/gallery-01.jpg",
+      "dimensions": {
+        "width": 463,
+        "height": 481
+      }
+    },
+    {
+      "productId": "samsung-oled-s22-ultra",
+      "path": "assets/products/samsung-oled/s22-ultra/gallery-02.jpg",
+      "dimensions": {
+        "width": 462,
+        "height": 492
+      }
+    },
+    {
+      "productId": "samsung-oled-s23-ultra",
+      "path": "assets/products/samsung-oled/s23-ultra/main.jpg",
+      "dimensions": {
+        "width": 467,
+        "height": 492
+      }
+    },
+    {
+      "productId": "samsung-oled-s23-ultra",
+      "path": "assets/products/samsung-oled/s23-ultra/gallery-01.jpg",
+      "dimensions": {
+        "width": 455,
+        "height": 496
+      }
+    },
+    {
+      "productId": "samsung-oled-s23-ultra",
+      "path": "assets/products/samsung-oled/s23-ultra/gallery-02.jpg",
+      "dimensions": {
+        "width": 455,
+        "height": 500
+      }
+    },
+    {
+      "productId": "samsung-oled-s24-ultra",
+      "path": "assets/products/samsung-oled/s24-ultra/main.jpg",
+      "dimensions": {
+        "width": 472,
+        "height": 496
+      }
+    },
+    {
+      "productId": "samsung-oled-s24-ultra",
+      "path": "assets/products/samsung-oled/s24-ultra/gallery-01.jpg",
+      "dimensions": {
+        "width": 456,
+        "height": 479
+      }
+    },
+    {
+      "productId": "samsung-oled-s24-ultra",
+      "path": "assets/products/samsung-oled/s24-ultra/gallery-02.jpg",
+      "dimensions": {
+        "width": 455,
+        "height": 496
+      }
+    },
+    {
+      "productId": "samsung-oled-s25-ultra",
+      "path": "assets/products/samsung-oled/s25-ultra/main.jpg",
+      "dimensions": {
+        "width": 478,
+        "height": 498
+      }
+    },
+    {
+      "productId": "samsung-oled-s25-ultra",
+      "path": "assets/products/samsung-oled/s25-ultra/gallery-01.jpg",
+      "dimensions": {
+        "width": 472,
+        "height": 496
+      }
+    },
+    {
+      "productId": "samsung-oled-s25-ultra",
+      "path": "assets/products/samsung-oled/s25-ultra/gallery-02.jpg",
+      "dimensions": {
+        "width": 456,
+        "height": 479
+      }
+    },
+    {
+      "productId": "samsung-original-s21-ultra",
+      "path": "assets/products/samsung-original/s21-ultra/main.jpg",
+      "dimensions": {
+        "width": 460,
+        "height": 491
+      }
+    },
+    {
+      "productId": "samsung-original-s22-ultra",
+      "path": "assets/products/samsung-original/s22-ultra/main.jpg",
+      "dimensions": {
+        "width": 470,
+        "height": 481
+      }
+    },
+    {
+      "productId": "samsung-original-s23-ultra",
+      "path": "assets/products/samsung-original/s23-ultra/main.jpg",
+      "dimensions": {
+        "width": 467,
+        "height": 492
+      }
+    }
+  ]
+}

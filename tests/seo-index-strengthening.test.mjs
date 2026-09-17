@@ -63,12 +63,14 @@ test('every canonical product page has crawlable guidance, breadcrumbs, and rela
 });
 
 test('published product videos have static playback markup and valid VideoObject dates', () => {
-  const products = new Map(productData().map((product) => [product.id, product]));
+  const mediaManifest = JSON.parse(read('data/product-media-manifest.json'));
+  const publishableIds = new Set(mediaManifest.products
+    .filter((product) => product.testVideos?.some((video) => video.status === 'UNIQUE_MATCH'))
+    .map((product) => product.productId));
   const failures = [];
 
   for (const id of sitemapProductIds()) {
-    const product = products.get(id);
-    if (!product?.videos?.length) continue;
+    if (!publishableIds.has(id)) continue;
     const html = read(`producto/${id}/index.html`);
     const nodes = jsonLdBlocks(html).flatMap((block) => block['@graph'] || [block]);
     const video = nodes.find((node) => node['@type'] === 'VideoObject');

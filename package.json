@@ -33,12 +33,14 @@
     "test:whatsapp-sales": "node --test tests/whatsapp-primary-sales.test.mjs",
     "test:product-sync-aliases": "node --test tests/product-sync-alias-classification.test.mjs",
     "test:media-quality": "node --test tests/product-media-quality-audit.test.mjs",
+    "test:product-media-step3": "node --test tests/product-media-step3.test.mjs",
     "test:erp-maintenance-sync": "node --test tests/erp-maintenance-sync-package.test.mjs",
     "test:live-deploy-verifier": "node --test tests/live-deploy-verifier.test.mjs",
     "maintenance:erp-sync": "node scripts/apply-erp-maintenance-package.mjs",
     "audit:erp-catalog": "node scripts/audit-erp-catalog-gaps.mjs",
     "audit:catalog-governance": "node scripts/audit-catalog-governance.js --write",
     "audit:media-quality": "node scripts/audit-product-media-quality.js --write",
+    "media:step3": "node scripts/build-product-media-manifest.mjs --apply",
     "audit:ui-acceptance": "node scripts/audit-ui-acceptance.mjs",
     "audit:seo-exposure": "node scripts/audit-seo-exposure-readiness.mjs",
     "marketing:exposure-pack": "node scripts/generate-exposure-pack.mjs",
@@ -60,7 +62,7 @@
     "verify:live": "node scripts/verify-live-deploy.mjs",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:public-package && npm run test:phase4-closeout && npm run test:ci-artifact-chain && npm run test:approved-editorial-release && npm run test:premium-brand-system && npm run test:homepage-human-design && npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:ga4-conversions && npm run test:geo-seo && npm run test:seo-geo-audit-remediation && npm run test:hl-brand-local && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:seo-index-strengthening && npm run test:mica-machine-seo && npm run test:static-product-directory && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:whatsapp-sales && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:public-package && npm run test:phase4-closeout && npm run test:ci-artifact-chain && npm run test:approved-editorial-release && npm run test:premium-brand-system && npm run test:homepage-human-design && npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:ga4-conversions && npm run test:geo-seo && npm run test:seo-geo-audit-remediation && npm run test:hl-brand-local && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:seo-index-strengthening && npm run test:mica-machine-seo && npm run test:static-product-directory && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:whatsapp-sales && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:product-media-step3 && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"

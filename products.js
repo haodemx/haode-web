@@ -1627,6 +1627,41 @@ const PRODUCT_CARD_IMAGE_BY_ID = {
   'samsung-original-z-fold6': 'assets/products/samsung-original/z-fold6/main-card.webp',
 };
 
+function mediaDirectory(assetPath) {
+  const normalized = String(assetPath || '').replace(/^\/+/, '');
+  const lastSlash = normalized.lastIndexOf('/');
+  return lastSlash >= 0 ? normalized.slice(0, lastSlash) : '';
+}
+
+function isStrictProductVideo(videoPath, mainImagePath) {
+  if (!videoPath || !mainImagePath || /placeholder/i.test(mainImagePath)) return false;
+  if (mediaDirectory(videoPath) !== mediaDirectory(mainImagePath)) return false;
+  if ((PRODUCT_VIDEO_REFERENCE_COUNTS.get(videoPath) || 0) !== 1) return false;
+  return !/(?:oled-diagnostica|series-video)/i.test(videoPath);
+}
+
+function buildProductMediaRecord(definition, mainImage, galleryImages) {
+  const requestedVideos = Array.isArray(definition.videos) ? definition.videos.filter(Boolean) : [];
+  const testVideos = requestedVideos.filter((video) => isStrictProductVideo(video, mainImage));
+  const ambiguousVideos = requestedVideos.filter((video) => !testVideos.includes(video));
+  const additionalImages = Array.from(new Set((galleryImages || []).filter(Boolean).filter((image) => image !== mainImage)));
+  const hasRealMainImage = Boolean(mainImage) && !/placeholder/i.test(mainImage);
+  const transparentImage = [mainImage, ...additionalImages].find((image) => /(?:transparent|cutout|recorte)/i.test(image)) || null;
+
+  return {
+    mainImage: hasRealMainImage ? mainImage : null,
+    additionalImages,
+    transparentImage,
+    testVideos,
+    videoPoster: hasRealMainImage ? mainImage : null,
+    mediaSource: 'CURRENT_REPO_PUBLIC_ASSET',
+    confidence: testVideos.length || hasRealMainImage ? 'HIGH' : 'NONE',
+    reviewStatus: testVideos.length || hasRealMainImage ? 'EXISTING_PUBLIC_ASSET' : 'REAL_ASSET_REQUIRED',
+    videoMatchStatus: testVideos.length ? 'UNIQUE_MATCH' : (ambiguousVideos.length ? 'AMBIGUOUS' : 'UNMATCHED'),
+    ambiguousVideos,
+  };
+}
+
 function createProduct(definition) {
   const category = normalizeCategory(definition.category);
   const categoryMeta = CATEGORY_META[category];
@@ -1640,6 +1675,7 @@ function createProduct(definition) {
   const officialSkuPending = definition.officialSkuPending === true;
   const reference = definition.sku || definition.SKU || definition.id;
   const usesPlaceholder = originalMainImage === PLACEHOLDER_IMAGE || String(originalMainImage).includes('/placeholder.svg');
+  const mediaRecord = buildProductMediaRecord(definition, originalMainImage, galleryImages);
   return {
     id: definition.id,
     sku: officialSkuPending ? '' : reference,
@@ -1655,7 +1691,8 @@ function createProduct(definition) {
     originalMainImage,
     cardImage: definition.cardImage || PRODUCT_CARD_IMAGE_BY_ID[definition.id] || mainImage,
     galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== originalMainImage && src !== mainImage))),
-    videos: definition.videos || categoryMedia?.videos || [],
+    videos: mediaRecord.testVideos,
+    media: mediaRecord,
     priceTable,
     priceSource: definition.priceSource || '',
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
@@ -1674,6 +1711,12 @@ const GENERATED_PRODUCT_DEFINITIONS = Array.isArray(window.HAODE_PRODUCTS_DATA) 
   ? window.HAODE_PRODUCTS_DATA
   : null;
 const PRODUCT_SOURCE = GENERATED_PRODUCT_DEFINITIONS || PRODUCT_DEFINITIONS;
+const PRODUCT_VIDEO_REFERENCE_COUNTS = PRODUCT_SOURCE.reduce((counts, product) => {
+  (product.videos || []).filter(Boolean).forEach((video) => {
+    counts.set(video, (counts.get(video) || 0) + 1);
+  });
+  return counts;
+}, new Map());
 const PRODUCTS = PRODUCT_SOURCE.map(createProduct);
 const PRODUCT_BY_ID = new Map(PRODUCTS.map((product) => [product.id, product]));
 
@@ -3155,11 +3198,91 @@ function renderProductDetailPage() {
 
   if (galleryEl) {
     galleryEl.innerHTML = '';
+    galleryEl.setAttribute('role', 'list');
+    const galleryHeading = galleryEl.closest('.detail-gallery-wrap')?.querySelector('h2');
+    if (galleryHeading) galleryHeading.textContent = 'Imágenes y prueba real';
+
+    const stage = mainImageEl?.parentElement;
+    let stageVideo = stage?.querySelector('[data-detail-stage-video]');
+    let stageVideoTitle = stage?.querySelector('[data-detail-stage-video-title]');
+    if (stage && !stageVideo) {
+      stageVideoTitle = document.createElement('p');
+      stageVideoTitle.className = 'detail-stage-video-title';
+      stageVideoTitle.setAttribute('data-detail-stage-video-title', '');
+      stageVideoTitle.hidden = true;
+      stageVideo = document.createElement('video');
+      stageVideo.className = 'detail-stage-video';
+      stageVideo.setAttribute('data-detail-stage-video', '');
+      stageVideo.controls = true;
+      stageVideo.playsInline = true;
+      stageVideo.preload = 'metadata';
+      stageVideo.hidden = true;
+      mainImageEl.insertAdjacentElement('afterend', stageVideo);
+      stageVideo.insertAdjacentElement('afterend', stageVideoTitle);
+    }
+
+    const mediaItems = [];
+    const mainSource = product.media?.mainImage || product.originalMainImage || product.mainImage;
+    if (mainSource && !/placeholder/i.test(mainSource)) {
+      mediaItems.push({ kind: 'image', src: mainSource, label: `${product.name} imagen principal` });
+    }
     const galleryImages = [...new Set((product.galleryImages || []).filter(Boolean))];
     galleryImages.slice(0, 4).forEach((src, index) => {
+      mediaItems.push({ kind: 'image', src, label: `${product.name} foto ${index + 1}` });
+    });
+    (product.videos || []).slice(0, 2).forEach((src) => {
+      mediaItems.push({
+        kind: 'video',
+        src,
+        poster: product.media?.videoPoster || mainSource,
+        label: `Prueba real — ${product.model} ${product.quality || ''}`.trim(),
+      });
+    });
+
+    const selectMedia = (item, button) => {
+      galleryEl.querySelectorAll('.detail-media-thumb').forEach((candidate) => {
+        const isActive = candidate === button;
+        candidate.classList.toggle('is-active', isActive);
+        candidate.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+      if (item.kind === 'video' && stageVideo && mainImageEl) {
+        mainImageEl.hidden = true;
+        stageVideo.hidden = false;
+        if (stageVideoTitle) {
+          stageVideoTitle.hidden = false;
+          stageVideoTitle.textContent = item.label;
+        }
+        stageVideo.poster = buildAssetUrl(item.poster || '');
+        if (stageVideo.dataset.mediaSrc !== item.src) {
+          stageVideo.pause();
+          stageVideo.src = buildAssetUrl(item.src);
+          stageVideo.dataset.mediaSrc = item.src;
+          stageVideo.load();
+        }
+        return;
+      }
+      if (stageVideo) {
+        stageVideo.pause();
+        stageVideo.hidden = true;
+      }
+      if (stageVideoTitle) stageVideoTitle.hidden = true;
+      if (mainImageEl) {
+        mainImageEl.hidden = false;
+        mainImageEl.src = buildAssetUrl(item.src);
+        mainImageEl.alt = item.label;
+      }
+    };
+
+    mediaItems.forEach((item, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `detail-media-thumb detail-media-thumb-${item.kind}${index === 0 ? ' is-active' : ''}`;
+      button.setAttribute('role', 'listitem');
+      button.setAttribute('aria-label', item.label);
+      button.setAttribute('aria-current', index === 0 ? 'true' : 'false');
       const img = document.createElement('img');
-      const gallerySource = buildAssetUrl(src);
-      img.alt = `${product.name} foto ${index + 1}`;
+      const gallerySource = buildAssetUrl(item.poster || item.src);
+      img.alt = '';
       img.loading = 'lazy';
       img.decoding = 'async';
       img.onerror = () => {
@@ -3167,37 +3290,30 @@ function renderProductDetailPage() {
         if (img.src !== fallback) img.src = fallback;
       };
       deferProductMedia(img, gallerySource);
-      attachZoom(img, new URL(buildAssetUrl(src), `${SITE_ORIGIN}/`).href, `${product.name} foto ${index + 1}`);
-      galleryEl.appendChild(img);
+      button.appendChild(img);
+      if (item.kind === 'video') {
+        const play = document.createElement('span');
+        play.className = 'detail-media-play';
+        play.setAttribute('aria-hidden', 'true');
+        play.textContent = '▶';
+        button.appendChild(play);
+      }
+      button.addEventListener('click', () => selectMedia(item, button));
+      galleryEl.appendChild(button);
     });
 
     if (!galleryEl.children.length) {
       const empty = document.createElement('div');
       empty.className = 'detail-empty-note';
-      empty.textContent = 'Más fotos y videos próximamente.';
+      empty.textContent = 'REAL ASSET REQUIRED';
       galleryEl.appendChild(empty);
     }
   }
 
   if (videosEl) {
     videosEl.innerHTML = '';
-    if (product.videos && product.videos.length) {
-      product.videos.forEach((video) => {
-        const frame = document.createElement('video');
-        frame.controls = true;
-        frame.playsInline = true;
-        frame.muted = true;
-        frame.loop = true;
-        frame.preload = 'none';
-        deferProductMedia(frame, buildAssetUrl(video));
-        videosEl.appendChild(frame);
-      });
-    } else {
-      const empty = document.createElement('div');
-      empty.className = 'detail-empty-note';
-      empty.textContent = 'Más fotos y videos próximamente.';
-      videosEl.appendChild(empty);
-    }
+    const legacyVideoWrap = videosEl.closest('.detail-video-wrap');
+    if (legacyVideoWrap) legacyVideoWrap.hidden = true;
   }
 
   if (tableBody) {
@@ -3228,6 +3344,40 @@ function renderProductDetailPage() {
 function renderInitialProductViews() {
   renderCatalogPage();
   renderProductDetailPage();
+}
+
+async function loadStep3ProductMedia() {
+  try {
+    const response = await fetch(buildAssetUrl('data/product-media-manifest.json'), { cache: 'no-cache' });
+    if (!response.ok) return false;
+    const manifest = await response.json();
+    if (manifest?.matchingPolicy !== 'STRICT_MODEL_AND_VERSION' || !Array.isArray(manifest.products)) return false;
+    manifest.products.forEach((record) => {
+      const product = PRODUCT_BY_ID.get(record.productId);
+      if (!product) return;
+      const testVideos = (record.testVideos || [])
+        .filter((video) => video.status === 'UNIQUE_MATCH' && video.path)
+        .map((video) => video.path);
+      product.videos = testVideos;
+      product.media = {
+        ...product.media,
+        mainImage: record.mainImage,
+        additionalImages: record.additionalImages || [],
+        transparentImage: record.transparentImage || null,
+        testVideos,
+        videoPoster: record.videoPoster || null,
+        mediaSource: record.mediaSource,
+        confidence: record.confidence,
+        reviewStatus: record.reviewStatus,
+        videoMatchStatus: testVideos.length ? 'UNIQUE_MATCH' : ((record.ambiguousVideos || []).length ? 'AMBIGUOUS' : 'UNMATCHED'),
+        ambiguousVideos: record.ambiguousVideos || [],
+      };
+    });
+    return true;
+  } catch (error) {
+    console.warn('HAODE Step 3 media manifest unavailable; using verified inline media only.', error);
+    return false;
+  }
 }
 
 document.addEventListener('haode:v3-detail-ready', () => {
@@ -3262,6 +3412,9 @@ async function hydrateProductViews() {
 // view before first paint so enhancement panels do not push visible content
 // after DOMContentLoaded; ERP data remains a non-blocking enrichment.
 renderInitialProductViews();
+loadStep3ProductMedia().then((loaded) => {
+  if (loaded && document.querySelector('[data-product-detail]')) renderProductDetailPage();
+});
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', hydrateProductViews, { once: true });
 } else {
