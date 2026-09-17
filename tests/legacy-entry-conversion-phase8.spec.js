@@ -3,13 +3,13 @@ const { test, expect } = require('@playwright/test');
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 
 test.describe('HAODE legacy entry conversion UI phase 8', () => {
-  test('/micas.html uses the V3 Hidrogel page with the four confirmed lines', async ({ page }) => {
+  test('/micas.html uses the Zay Hidrogel page with the four confirmed lines and X200T', async ({ page }) => {
     await page.goto(`${baseURL}/micas.html`);
 
-    await expect(page.locator('body')).toHaveClass(/v3-atlas/);
+    await expect(page.locator('body')).toHaveClass(/zay-candidate/);
     await expect(page.getByRole('heading', { level: 1, name: 'Hidrogel' })).toBeVisible();
-    await expect(page.locator('.v3-product')).toHaveCount(4);
-    await expect(page.locator('body')).toContainText('Cortadora X200T');
+    await expect(page.locator('[data-catalog-card]')).toHaveCount(5);
+    await expect(page.locator('body')).toContainText('Máquina X200T');
     await expect(page.locator('a[href*="wa.me"]').first()).toBeVisible();
     const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
     expect(overflow).toBe(0);

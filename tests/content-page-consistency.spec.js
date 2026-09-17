@@ -21,9 +21,9 @@ test('contact, warranty, and distributor conversion panels keep readable contras
   for (const route of ['/contacto/', '/garantia/', '/distribuidores/']) {
     await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded' });
     if (route === '/contacto/') {
-      const contact = page.locator('.v3-contact-grid');
+      const contact = page.locator('main');
       await expect(contact).toBeVisible();
-      await expect(contact.getByRole('link', { name: 'Abrir WhatsApp' })).toHaveAttribute('href', /wa\.me/);
+      await expect(contact.locator('a[href*="wa.me"]').first()).toHaveAttribute('href', /wa\.me/);
       continue;
     }
     const panel = page.locator('.reference-conversion-panel').first();
@@ -45,10 +45,11 @@ test('warranty header spans the viewport and navigation remains readable', async
   await dismissConsent(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/garantia/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('.zay-header')).toBeVisible();
 
   const presentation = await page.evaluate(() => {
-    const header = document.querySelector('header.catalog-topbar');
-    const link = header.querySelector('.topnav a');
+    const header = document.querySelector('header.zay-header');
+    const link = header.querySelector('.zay-nav a');
     return {
       headerWidth: header.getBoundingClientRect().width,
       viewportWidth: document.documentElement.clientWidth,
@@ -58,7 +59,7 @@ test('warranty header spans the viewport and navigation remains readable', async
   });
 
   expect(presentation.headerWidth).toBe(presentation.viewportWidth);
-  expect(presentation.linkColor).toBe('rgb(69, 69, 73)');
+  expect(presentation.linkColor).toBe('rgb(21, 21, 21)');
   expect(presentation.linkOpacity).toBe('1');
 });
 
@@ -98,9 +99,10 @@ test('model directory exposes both contact and App actions on desktop and mobile
     await page.setViewportSize(viewport);
     await page.goto(`${BASE_URL}/catalogo-modelos/`, { waitUntil: 'domcontentloaded' });
 
-    await expect(page.locator('.model-directory-whatsapp')).toBeVisible();
-    await expect(page.locator('.reference-nav-actions a[href="/app/"]')).toBeVisible();
-    const header = await page.locator('.reference-header').evaluate((element) => ({
+    await expect(page.locator('.zay-header a[href="/app/"]')).toBeVisible();
+    if (viewport.width > 1050) await expect(page.locator('.zay-header a[href*="wa.me"]')).toBeVisible();
+    else await expect(page.locator('.zay-floating')).toBeVisible();
+    const header = await page.locator('.zay-header').evaluate((element) => ({
       width: element.getBoundingClientRect().width,
       overflow: element.scrollWidth - element.clientWidth,
     }));

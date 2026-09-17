@@ -27,8 +27,8 @@ test.describe('HAODE public sales shell phase 30', () => {
 
       const footer = page.locator('[data-site-sales-footer]');
       await expect(footer).toBeVisible();
-      await expect(footer).toContainText('Tienda oficial de fábrica HL');
-      await expect(footer).toContainText('Garantía local');
+      await expect(footer).toContainText('Productos para técnicos');
+      await expect(footer).toContainText('Garantía');
       await expect(footer.locator('a[href*="wa.me"]')).toBeVisible();
       await expect(footer.locator('a[href="/app/"]')).toBeVisible();
     });
@@ -42,7 +42,8 @@ test.describe('HAODE public sales shell phase 30', () => {
       await expect(page.locator('[data-detail-header-app]')).toBeVisible();
 
       await page.setViewportSize({ width: 360, height: 844 });
-      await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
+      await expect(page.locator('[data-detail-header-whatsapp]')).toBeHidden();
+      await expect(page.locator('.zay-floating')).toBeVisible();
       await expect(page.locator('[data-detail-header-app]')).toBeVisible();
       const overflow = await page.evaluate(
         () => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)
@@ -56,8 +57,8 @@ test.describe('HAODE public sales shell phase 30', () => {
 
     await expect(page.locator('body')).toHaveClass(/not-found-reference-page/);
     await expect(page.getByRole('heading', { name: 'Esta página ya no está aquí' })).toBeVisible();
-    await expect(page.locator('.reference-header-wa')).toBeVisible();
-    await expect(page.locator('.reference-header-app')).toBeVisible();
+    await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
+    await expect(page.locator('[data-detail-header-app]')).toBeVisible();
     await expect(page.locator('.not-found-support a[href*="wa.me"]')).toBeVisible();
     await expect(page.locator('[data-site-sales-footer]')).toBeVisible();
   });
@@ -65,12 +66,13 @@ test.describe('HAODE public sales shell phase 30', () => {
   test('distributor header keeps WhatsApp and APP visible', async ({ page }) => {
     await page.goto(`${baseURL}/distribuidores/`, { waitUntil: 'domcontentloaded' });
 
-    await expect(page.locator('.distributor-header-whatsapp')).toBeVisible();
-    await expect(page.locator('.distributor-header-app')).toBeVisible();
+    await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
+    await expect(page.locator('[data-detail-header-app]')).toBeVisible();
 
     await page.setViewportSize({ width: 360, height: 844 });
-    await expect(page.locator('.distributor-header-whatsapp')).toBeVisible();
-    await expect(page.locator('.distributor-header-app')).toBeVisible();
+    await expect(page.locator('[data-detail-header-whatsapp]')).toBeHidden();
+    await expect(page.locator('.zay-floating')).toBeVisible();
+    await expect(page.locator('[data-detail-header-app]')).toBeVisible();
     const overflow = await page.evaluate(
       () => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)
     );

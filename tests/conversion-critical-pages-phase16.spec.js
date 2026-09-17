@@ -6,7 +6,7 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Pantallas para trabajo real', 'Hidrogel', 'WhatsApp'],
+    texts: ['Pantallas y tecnología para vender y reparar.', 'Hidrogel', 'WhatsApp'],
   },
   {
     path: '/app/',
@@ -16,7 +16,7 @@ const criticalPages = [
   {
     path: '/productos/',
     name: 'catalog',
-    texts: ['Catálogo HAODE México', 'Atlas de modelos', 'Cotizar por WhatsApp'],
+    texts: ['Catálogo HAODE México', 'Productos publicados', 'Cotizar'],
   },
   {
     path: '/categoria/samsung-oled/',
@@ -41,7 +41,7 @@ const criticalPages = [
   {
     path: '/contacto/',
     name: 'contact',
-    texts: ['Contacto', 'Local 225', 'Abrir WhatsApp'],
+    texts: ['Contacto', 'Local 225', 'WhatsApp'],
   },
   {
     path: '/distribuidores/',
@@ -90,13 +90,13 @@ async function checkCriticalPage(page, pageCase, viewport) {
     await expectReferenceDesktopWordmark(page);
   }
   if (pageCase.name === 'home') {
-    const productImages = page.locator('.v3-specimen img');
-    await expect(productImages).toHaveCount(2);
+    const productImages = page.locator('.zay-hero figure img');
+    await expect(productImages).toHaveCount(1);
     expect(await productImages.evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
     if (viewport.width <= 430) {
-      await expect(page.locator('.v3-floating')).toBeVisible();
+      await expect(page.locator('.zay-floating')).toBeVisible();
     } else {
-      await expect(page.locator('.v3-cta a[href*="wa.me"]')).toBeVisible();
+      await expect(page.locator('.zay-hero-actions a[href*="wa.me"]')).toBeVisible();
     }
   }
   await expectNoHorizontalOverflow(page);
@@ -124,42 +124,37 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 }
 
 async function expectMobileHomeVisual(page) {
-  const visual = page.locator('.reference-mobile-hero-visual');
+  const visual = page.locator('.zay-hero figure');
   await expect(visual).toBeVisible();
-  await expect(visual).toContainText('Modelo · versión · cantidad');
   await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   const box = await visual.evaluate((el) => {
     const rect = el.getBoundingClientRect();
     return { top: Math.round(rect.top), height: Math.round(rect.height) };
   });
   expect(box.top).toBeLessThan(760);
-  expect(box.height).toBeGreaterThanOrEqual(110);
+  expect(box.height).toBeGreaterThanOrEqual(180);
 }
 
 async function expectReferenceMobileSalesHeader(page) {
-  const header = page.locator('.reference-header');
-  const logo = page.locator('.reference-logo').first();
-  const nav = page.locator('.reference-nav').first();
-  const actions = page.locator('.reference-nav-actions').first();
+  const header = page.locator('.zay-header');
+  const logo = page.locator('.zay-brand').first();
+  const nav = page.locator('.zay-nav').first();
 
   await expect(header).toBeVisible();
   await expect(logo).toBeVisible();
   await expect(nav).toBeHidden();
-  await expect(actions).toBeVisible();
-  await expect(actions.locator('a[href*="wa.me"]')).toBeVisible();
-  await expect(actions.locator('a[href="/app/"]')).toBeVisible();
-  const menu = page.locator('.reference-menu-button');
+  await expect(header.locator('a[href="/app/"]')).toBeVisible();
+  await expect(page.locator('.zay-floating')).toBeVisible();
+  const menu = page.locator('.zay-menu-button');
   await expect(menu).toBeVisible();
   await menu.click();
   await expect(nav).toBeVisible();
-  await expect(actions).toBeVisible();
 
   const layout = await page.evaluate(() => {
-    const headerRect = document.querySelector('.reference-header')?.getBoundingClientRect();
-    const logoRect = document.querySelector('.reference-logo')?.getBoundingClientRect();
-    const logoImage = document.querySelector('.reference-logo img');
-    const navRect = document.querySelector('.reference-nav')?.getBoundingClientRect();
-    const actionsRect = document.querySelector('.reference-nav-actions')?.getBoundingClientRect();
+    const headerRect = document.querySelector('.zay-header')?.getBoundingClientRect();
+    const logoRect = document.querySelector('.zay-brand')?.getBoundingClientRect();
+    const logoImage = document.querySelector('.zay-brand img');
+    const navRect = document.querySelector('.zay-nav')?.getBoundingClientRect();
 
     return {
       headerHeight: Math.round(headerRect?.height || 0),
@@ -169,7 +164,6 @@ async function expectReferenceMobileSalesHeader(page) {
       logoWidth: Math.round(logoRect?.width || 0),
       imageDisplay: logoImage ? getComputedStyle(logoImage).display : null,
       navTop: Math.round(navRect?.top || 0),
-      actionsTop: Math.round(actionsRect?.top || 0),
     };
   });
 
@@ -179,11 +173,10 @@ async function expectReferenceMobileSalesHeader(page) {
   expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
   expect(layout.imageDisplay).toBe('block');
   expect(layout.navTop).toBeGreaterThan(layout.logoTop);
-  expect(layout.actionsTop).toBeLessThan(layout.navTop);
 }
 
 async function expectReferenceDesktopWordmark(page) {
-  const logo = page.locator('.reference-logo').first();
+  const logo = page.locator('.zay-brand').first();
   await expect(logo).toBeVisible();
   const details = await logo.evaluate((el) => {
     const rect = el.getBoundingClientRect();
@@ -196,10 +189,10 @@ async function expectReferenceDesktopWordmark(page) {
     };
   });
 
-  expect(details.width).toBeGreaterThanOrEqual(170);
+  expect(details.width).toBeGreaterThanOrEqual(130);
   expect(details.imageDisplay).toBe('block');
-  expect(details.imageWidth).toBeGreaterThanOrEqual(170);
-  await expect(logo.locator('img')).toHaveAttribute('src', '/assets/images/factory-store-wordmark.png');
+  expect(details.imageWidth).toBeGreaterThanOrEqual(130);
+  await expect(logo.locator('img')).toHaveAttribute('src', '/assets/images/haode-header-logo-horizontal-preview.png');
 }
 
 async function expectNoHorizontalOverflow(page) {

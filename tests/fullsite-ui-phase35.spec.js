@@ -37,8 +37,8 @@ test.describe('factory-store shared page contracts', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${baseURL}/productos/`, { waitUntil: 'domcontentloaded' });
 
-    const menu = page.locator('.reference-menu-button');
-    const nav = page.locator('.reference-nav');
+    const menu = page.locator('.zay-menu-button');
+    const nav = page.locator('.zay-nav');
     await expect(menu).toBeVisible();
     await expect(nav).toBeHidden();
     await menu.click();
@@ -51,10 +51,10 @@ test.describe('factory-store shared page contracts', () => {
       await page.setViewportSize({ width, height: 844 });
       for (const route of ['/productos/', '/categoria/', '/contacto/', '/pantallas-premium-iphone-samsung-fabrica/']) {
         await page.goto(`${baseURL}${route}`, { waitUntil: 'domcontentloaded' });
-        const header = page.locator('.reference-header');
-        await expect(header.locator('.reference-nav')).toBeHidden();
-        await expect(header.locator('.reference-nav-actions a[href*="wa.me"]')).toBeVisible();
-        await expect(header.locator('.reference-nav-actions a[href="/app/"]')).toBeVisible();
+        const header = page.locator('.zay-header');
+        await expect(header.locator('.zay-nav')).toBeHidden();
+        await expect(page.locator('.zay-floating')).toBeVisible();
+        await expect(header.locator('[data-detail-header-app]')).toBeVisible();
 
         const overflow = await header.evaluate((element) => element.scrollWidth - element.clientWidth);
         expect(overflow).toBeLessThanOrEqual(1);
@@ -66,9 +66,8 @@ test.describe('factory-store shared page contracts', () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(`${baseURL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
 
-    const wordmark = page.locator('.catalog-topbar .brand-logo');
-    const wordmarkContent = await wordmark.evaluate((image) => getComputedStyle(image).content);
-    expect(wordmarkContent).toContain('haode-header-logo-horizontal-preview.png');
+    const wordmark = page.locator('.zay-brand img');
+    await expect(wordmark).toHaveAttribute('src', '/assets/images/haode-header-logo-horizontal-preview.png');
 
     const layout = await page.evaluate(() => {
       const visual = document.querySelector('.detail-visual').getBoundingClientRect();
@@ -78,7 +77,7 @@ test.describe('factory-store shared page contracts', () => {
         visualWidth: visual.width,
         infoWidth: info.width,
         sameRow: Math.abs(visual.top - info.top),
-        titleInsideInfo: title.left >= info.left && title.right <= info.right + 1 && title.top >= info.top,
+        titleInsideInfo: title.left >= info.left && title.top >= info.top && title.bottom <= info.bottom,
       };
     });
 
@@ -156,7 +155,8 @@ test.describe('factory-store shared page contracts', () => {
 
     for (const route of ['/garantia/', '/distribuidores/']) {
       await page.goto(`${baseURL}${route}`, { waitUntil: 'domcontentloaded' });
-      const bounds = await page.locator('.topnav a').evaluateAll((links) => (
+      await page.locator('.zay-menu-button').click();
+      const bounds = await page.locator('.zay-nav a').evaluateAll((links) => (
         links.map((link) => {
           const rect = link.getBoundingClientRect();
           return { left: rect.left, right: rect.right };

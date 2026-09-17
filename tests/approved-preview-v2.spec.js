@@ -10,35 +10,34 @@ async function expectNoOverflow(page) {
   expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
 }
 
-test('homepage desktop matches the locked laboratory editorial master', async ({ page }) => {
+test('homepage desktop matches the approved Zay sales master', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.lab-hero h1')).toContainText('HAODE');
-  await expect(page.locator('.lab-hero h1')).toContainText('Pantallas profesionales');
-  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('src', '/assets/images/v3-lab-hero.png');
-  await expect(page.locator('.lab-contract-images img')).toHaveCount(2);
+  await expect(page.locator('.zay-hero h1')).toContainText('Pantallas y tecnología');
+  await expect(page.locator('.zay-brand img')).toHaveAttribute('src', '/assets/images/haode-header-logo-horizontal-preview.png');
+  await expect(page.locator('.zay-hero figure img')).toHaveAttribute('src', '/assets/products/iphone-incell/16e/gallery-01.png');
+  await expect(page.locator('.zay-category-card')).toHaveCount(3);
   await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   await expectNoOverflow(page);
 });
 
-test('homepage mobile preserves the laboratory composition and readable hierarchy', async ({ page }) => {
+test('homepage mobile preserves the approved Zay composition and readable hierarchy', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.lab-hero h1')).toBeVisible();
-  await expect(page.locator('.lab-hero-photo')).toBeVisible();
-  await expect(page.locator('.reference-mobile-hero-visual')).toBeVisible();
-  const metrics = await page.locator('.lab-hero h1').evaluate((title) => ({ size: parseFloat(getComputedStyle(title).fontSize), line: parseFloat(getComputedStyle(title).lineHeight) }));
-  expect(metrics.size).toBeGreaterThanOrEqual(44);
-  expect(metrics.line).toBeGreaterThanOrEqual(38);
+  await expect(page.locator('.zay-hero h1')).toBeVisible();
+  await expect(page.locator('.zay-hero figure img')).toBeVisible();
+  const metrics = await page.locator('.zay-hero h1').evaluate((title) => ({ size: parseFloat(getComputedStyle(title).fontSize), line: parseFloat(getComputedStyle(title).lineHeight) }));
+  expect(metrics.size).toBeGreaterThanOrEqual(40);
+  expect(metrics.line).toBeGreaterThanOrEqual(40);
   await expectNoOverflow(page);
 });
 
-test('catalog uses the V3 technical atlas on desktop and mobile', async ({ page }) => {
+test('catalog uses the approved Zay filters on desktop and mobile', async ({ page }) => {
   for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844 }]) {
     await page.setViewportSize(viewport);
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: 'domcontentloaded' });
-    await expect(page.locator('.v3-page-title')).toHaveText('Pantallas');
-    await expect(page.locator('.v3-filter-panel')).toBeVisible();
+    await expect(page.locator('.zay-page-head h1')).toHaveText('Productos publicados');
+    await expect(page.locator('.zay-filter-panel')).toBeVisible();
     await expect(page.locator('[data-catalog-card]:visible').first()).toBeVisible();
     await expectNoOverflow(page);
   }

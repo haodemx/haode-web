@@ -47,7 +47,7 @@ test.describe('HAODE dynamic category conversion UI phase 12', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
       await expect(page.locator('.reference-conversion-strip')).toBeVisible();
-      await expect(page.locator('.topnav a').first()).toBeVisible();
+      await expect(page.locator('.zay-menu-button')).toBeVisible();
       await expectCompactMobileTopbar(page, 100);
       const overflow = await page.evaluate(() => Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth));
       expect(overflow).toBe(0);
@@ -57,10 +57,9 @@ test.describe('HAODE dynamic category conversion UI phase 12', () => {
 
 async function expectCompactMobileTopbar(page, maxHeight) {
   const layout = await page.evaluate(() => {
-    const topbar = document.querySelector('.topbar')?.getBoundingClientRect();
-    const brand = document.querySelector('.brand')?.getBoundingClientRect();
-    const logo = document.querySelector('.brand-logo');
-    const brandText = document.querySelector('.brand-copy strong');
+    const topbar = document.querySelector('.zay-header')?.getBoundingClientRect();
+    const brand = document.querySelector('.zay-brand')?.getBoundingClientRect();
+    const logo = document.querySelector('.zay-brand img');
 
     return {
       topbarHeight: Math.round(topbar?.height || 0),
@@ -68,16 +67,14 @@ async function expectCompactMobileTopbar(page, maxHeight) {
       brandWidth: Math.round(brand?.width || 0),
       logoDisplay: logo ? getComputedStyle(logo).display : null,
       logoWidth: Math.round(logo?.getBoundingClientRect().width || 0),
-      logoSource: logo ? getComputedStyle(logo).content : '',
-      brandCopyDisplay: brandText ? getComputedStyle(brandText.parentElement).display : null,
+      logoSource: logo?.getAttribute('src') || '',
     };
   });
 
   expect(layout.topbarHeight).toBeLessThanOrEqual(maxHeight);
-  expect(layout.brandLeft).toBeLessThanOrEqual(18);
+  expect(layout.brandLeft).toBeLessThanOrEqual(24);
   expect(layout.brandWidth).toBeGreaterThanOrEqual(100);
   expect(layout.logoDisplay).toBe('block');
   expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
   expect(layout.logoSource).toContain('haode-header-logo-horizontal-preview.png');
-  expect(layout.brandCopyDisplay).toBe('none');
 }

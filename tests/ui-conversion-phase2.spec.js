@@ -17,21 +17,21 @@ test.describe("HAODE conversion UI phase 2", () => {
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
 
-    await expect(page.locator(".v3-filter-panel")).toBeVisible();
-    await expect(page.locator(".v3-product").first()).toBeVisible();
-    await expect(page.locator(".v3-cta a[href*='wa.me']")).toBeVisible();
-    await expect(page.locator(".v3-floating")).toBeVisible();
+    await expect(page.locator(".zay-filter-panel")).toBeVisible();
+    await expect(page.locator("[data-catalog-card]").first()).toBeVisible();
+    await expect(page.locator(".zay-footer a[href*='wa.me']")).toBeVisible();
+    await expect(page.locator(".zay-floating")).toBeVisible();
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
-    await expect(page.locator(".reference-menu-button")).toBeVisible();
-    await page.locator(".reference-menu-button").click();
-    await expect(page.locator(".reference-nav a").first()).toBeVisible();
-    await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
+    await expect(page.locator(".zay-menu-button")).toBeVisible();
+    await page.locator(".zay-menu-button").click();
+    await expect(page.locator(".zay-nav a").first()).toBeVisible();
+    await expect(page.locator(".zay-floating")).toBeVisible();
     await expectHeaderWhatsAppGreen(page);
     await expectHeaderAppButtonOrange(page);
-    await expect(page.locator(".v3-filter-panel")).toBeVisible();
-    const mobileCta = await page.locator(".v3-floating").evaluate((el) => {
+    await expect(page.locator(".zay-filter-panel")).toBeVisible();
+    const mobileCta = await page.locator(".zay-floating").evaluate((el) => {
       const rect = el.getBoundingClientRect();
       return { position: getComputedStyle(el).position, top: rect.top };
     });
@@ -87,8 +87,8 @@ async function expectNoHorizontalOverflow(page) {
 }
 
 async function expectHeaderWhatsAppGreen(page) {
-  const background = await page.locator(".reference-nav-actions a[href*='wa.me']").first().evaluate((el) => getComputedStyle(el).backgroundColor);
-  expect(background).toBe("rgb(18, 168, 84)");
+  const background = await page.locator(".zay-floating").evaluate((el) => getComputedStyle(el).backgroundColor);
+  expect(background).toBe("rgb(21, 154, 85)");
 }
 
 async function expectCatalogVisualStrip(page) {
@@ -112,7 +112,7 @@ async function expectCatalogVisualStrip(page) {
 }
 
 async function expectHeaderAppButtonOrange(page) {
-  const button = page.locator(".reference-nav-actions a[href$='/app/']").first();
+  const button = page.locator(".zay-header a[href$='/app/']").first();
   await expect(button).toBeVisible();
   const styles = await button.evaluate((el) => {
     const computed = getComputedStyle(el);
@@ -123,6 +123,6 @@ async function expectHeaderAppButtonOrange(page) {
     };
   });
   expect(styles.text).toMatch(/APP/);
-  expect(styles.background).toBe("rgb(255, 90, 10)");
+  expect(styles.background).toBe("rgb(255, 90, 18)");
   expect(styles.color).toBe("rgb(255, 255, 255)");
 }

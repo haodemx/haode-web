@@ -58,7 +58,7 @@ test("product catalog keeps product WhatsApp tracking as the single contact sour
     }, true);
   });
 
-  await page.getByRole("link", { name: /Cotizar por WhatsApp/i }).first().click();
+  await page.locator("[data-product-whatsapp]").first().click();
 
   await expect.poll(() => page.evaluate(() => (
     window.__haodeTrackedEvents.filter((event) => event[0] === "event" && event[1] === "contact").length

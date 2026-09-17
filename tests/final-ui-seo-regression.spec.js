@@ -72,16 +72,16 @@ test('homepage and shared product footer keep customer actions readable', async 
   }));
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.lab-hero h1')).toBeVisible();
-  await expectReadableText(page, '.lab-hero h1');
-  await expectReadableText(page, '.lab-promise');
-  await expectReadableText(page, '.lab-final-cta p');
-  await expectReadableText(page, '.v3-footer-brand p');
+  await expect(page.locator('.zay-hero h1')).toBeVisible();
+  await expectReadableText(page, '.zay-hero h1');
+  await expectReadableText(page, '.zay-hero-grid>div>p:not(.zay-kicker)');
+  await expectReadableText(page, '.zay-final p');
+  await expectReadableText(page, '.zay-footer p');
 
   await page.goto(`${BASE_URL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.v3-footer')).toBeVisible();
-  await expectReadableText(page, '.v3-footer-brand p');
-  await expectReadableText(page, '.v3-footer a[href*="wa.me"]');
+  await expect(page.locator('.zay-footer')).toBeVisible();
+  await expectReadableText(page, '.zay-footer p');
+  await expectReadableText(page, '.zay-footer a[href*="wa.me"]');
 });
 
 test('product detail keeps its optimized verified local main image after ERP enrichment', async ({ page }) => {
@@ -131,7 +131,7 @@ test('product detail keeps its optimized verified local main image after ERP enr
     .toBeLessThan(0.05);
 });
 
-test('product detail defers gallery, video, and related media until the customer scrolls to them', async ({ page }) => {
+test('product detail loads the visible gallery but defers video and related media until scrolling', async ({ page }) => {
   await page.route('https://erp.haode.com.mx/**', (route) => route.fulfill({
     status: 200,
     contentType: 'application/json',
@@ -144,14 +144,13 @@ test('product detail defers gallery, video, and related media until the customer
   await page.goto(`${BASE_URL}/producto/iphone-incell-14/`, { waitUntil: 'load' });
   await page.waitForTimeout(1_000);
 
-  expect(requestedUrls.some((url) => /\/gallery-\d+\.(?:jpe?g|png)$/i.test(url))).toBe(false);
+  expect(requestedUrls.some((url) => /\/gallery-\d+\.(?:jpe?g|png)$/i.test(url))).toBe(true);
   expect(requestedUrls.some((url) => /\/video-\d+\.mp4$/i.test(url))).toBe(false);
   expect(requestedUrls.some((url) => /iphone-incell\/(?:11|11pro)\/(?:fhd-)?main\.(?:jpe?g|png)$/i.test(url))).toBe(false);
 
   const galleryImage = page.locator('[data-detail-gallery] img').first();
-  await expect(galleryImage).not.toHaveAttribute('src', /gallery-/);
-  await galleryImage.scrollIntoViewIfNeeded();
-  await expect.poll(() => requestedUrls.some((url) => /\/gallery-01\.jpg$/i.test(url))).toBe(true);
+  await expect(galleryImage).toHaveAttribute('loading', 'lazy');
+  await expect(galleryImage).toHaveAttribute('src', /gallery-01\.jpg/);
 });
 
 async function expectReadableText(page, selector, minimumFontSize = 0) {

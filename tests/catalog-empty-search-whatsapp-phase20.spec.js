@@ -11,15 +11,12 @@ test.describe('HAODE catalog empty search WhatsApp UI phase 20', () => {
 
   test('pantallas empty search sends the searched model to WhatsApp', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto(`${BASE_URL}/productos/`, { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
-    await page.locator('[data-pantallas-search-input]').fill('modelo inexistente 999');
+    await page.goto(`${BASE_URL}/productos/?category=pantallas&q=modelo%20inexistente%20999`, { waitUntil: 'domcontentloaded' });
 
-    const emptyState = page.locator('[data-pantallas-empty]');
+    const emptyState = page.locator('[data-site-catalog-empty]');
     await expect(emptyState).toBeVisible();
-    await expect(emptyState).toContainText('No encontramos "modelo inexistente 999".');
-    await expect(emptyState).toContainText('lista grande por WhatsApp');
-    await expect(emptyState.getByRole('link', { name: 'Enviar búsqueda por WhatsApp' })).toHaveAttribute('href', /modelo%20inexistente%20999/);
+    await expect(emptyState).toContainText('modelo inexistente 999');
+    await expect(emptyState.getByRole('link', { name: 'Consultar por WhatsApp' })).toHaveAttribute('href', /modelo%20inexistente%20999/);
 
     const overflow = await page.evaluate(() => (
       Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)
@@ -29,15 +26,12 @@ test.describe('HAODE catalog empty search WhatsApp UI phase 20', () => {
 
   test('fundas micas empty search keeps the same WhatsApp intake', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto(`${BASE_URL}/productos/#fundas-micas`, { waitUntil: 'domcontentloaded' });
-    const searchInput = page.locator('[data-catalog-search-input="fundas-micas"]');
-    await expect(searchInput).toBeVisible();
-    await searchInput.fill('case mayorista imposible');
+    await page.goto(`${BASE_URL}/productos/?q=case%20mayorista%20imposible`, { waitUntil: 'domcontentloaded' });
 
-    const emptyState = page.locator('[data-catalog-empty="fundas-micas"]');
+    const emptyState = page.locator('[data-site-catalog-empty]');
     await expect(emptyState).toBeVisible();
-    await expect(emptyState).toContainText('No encontramos "case mayorista imposible".');
-    await expect(emptyState.getByRole('link', { name: 'Enviar búsqueda por WhatsApp' })).toHaveAttribute('href', /case%20mayorista%20imposible/);
+    await expect(emptyState).toContainText('case mayorista imposible');
+    await expect(emptyState.getByRole('link', { name: 'Consultar por WhatsApp' })).toHaveAttribute('href', /case%20mayorista%20imposible/);
 
     const overflow = await page.evaluate(() => (
       Math.max(0, document.documentElement.scrollWidth - document.documentElement.clientWidth)

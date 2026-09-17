@@ -10,6 +10,11 @@
   ensureScript('/analytics.js?v=20260813-ga4-conversions', '/analytics.js');
   ensureScript('/campaign-attribution.js?v=20260813-ga4-conversions', '/campaign-attribution.js');
 
+  if (!document.body?.dataset.v3Page && !document.body?.dataset.v3Detail) {
+    ensureScript('/v3-screen-atlas.js?v=20260917-zay-full', '/v3-screen-atlas.js');
+    return;
+  }
+
   if (document.body?.dataset.v3Page || document.body?.dataset.v3Detail) return;
 
   if (document.querySelector('[data-site-sales-footer]')) return;

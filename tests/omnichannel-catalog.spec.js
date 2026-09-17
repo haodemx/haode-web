@@ -215,17 +215,17 @@ test("keeps the approved desktop catalog authoritative", async ({ page }) => {
 
   await expect.poll(() => page.evaluate(() => window.HAODE_PRODUCTS?.length)).toBe(WEBSITE_LOCAL_PRODUCT_COUNT);
 
-  await expect(page.locator(".shop-card", { hasText: "Producto ERP exclusivo X200" })).toHaveCount(0);
-  await expect(page.locator(".shop-card", { hasText: "Producto con precio pendiente" })).toHaveCount(0);
-  await expect(page.locator(".shop-card", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
+  await expect(page.locator("[data-catalog-card]", { hasText: "Producto ERP exclusivo X200" })).toHaveCount(0);
+  await expect(page.locator("[data-catalog-card]", { hasText: "Producto con precio pendiente" })).toHaveCount(0);
+  await expect(page.locator("[data-catalog-card]", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
 
-  const g3Card = page.locator(".shop-card", { hasText: "Gafas AI G3" });
+  const g3Card = page.locator("[data-catalog-card]", { hasText: /Gafas.*AI.*G3|HAODE AI G3/i });
   await expect(g3Card).toHaveCount(1);
   await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.display\.webp/);
 
-  const localBolsaCard = page.locator(".shop-card", { hasText: "Pantalla para iPhone 11 Bolsa Protectora" });
-  await expect(localBolsaCard).toBeVisible();
-  await expect(localBolsaCard).toContainText("Caja/modelo");
-  await expect(localBolsaCard).toContainText("$140 MXN");
+  const localBolsaCard = page.locator("[data-catalog-card]", { hasText: "Pantalla para iPhone 11 Bolsa Protectora" });
+  await expect(localBolsaCard).toBeAttached();
+  await expect(localBolsaCard).toContainText("1 pza");
+  await expect(localBolsaCard).toContainText("$160 MXN");
   await saveEvidence(page, "website-erp-catalog.png");
 });

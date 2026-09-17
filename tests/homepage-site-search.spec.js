@@ -29,7 +29,7 @@ test('homepage search stays on the website and filters the official catalog', as
   expect(page.url()).not.toContain('/app/');
 
   await expect(page.locator('[data-site-catalog-search-input]')).toHaveValue('iPhone 14 Pro Max');
-  await expect(page.locator('[data-site-catalog-status]')).toContainText('resultados');
+  await expect(page.locator('[data-site-catalog-status]')).toContainText('productos encontrados');
 
   const visibleCards = page.locator('[data-site-search-item]:visible');
   await expect.poll(() => visibleCards.count()).toBeGreaterThan(0);
@@ -42,14 +42,13 @@ test('homepage search reaches non-screen website products and handles no matches
   await page.locator('[data-home-catalog-search-input]').press('Enter');
 
   await expect(page).toHaveURL(/\/productos\/\?q=LK-007$/i);
-  await expect(page.locator('[data-catalog-group="productos-ai"]')).toBeVisible();
-  await expect(page.locator('[data-catalog-group="pantallas"]')).toBeHidden();
   await expect(page.locator('[data-site-search-item]:visible').first()).toContainText('LK-007');
+  await expect(page.locator('[data-site-search-item]:visible')).toHaveCount(1);
 
   await page.locator('[data-site-catalog-search-input]').fill('modelo inexistente sitio 999');
   await page.locator('[data-site-catalog-search-input]').press('Enter');
   await expect(page).toHaveURL(/\/productos\/\?q=modelo(?:\+|%20)inexistente(?:\+|%20)sitio(?:\+|%20)999$/i);
   await expect(page.locator('[data-site-catalog-empty]')).toBeVisible();
   await expect(page.locator('[data-site-catalog-empty]')).toContainText('modelo inexistente sitio 999');
-  await expect(page.locator('[data-catalog-group]:visible')).toHaveCount(0);
+  await expect(page.locator('[data-site-search-item]:visible')).toHaveCount(0);
 });
