@@ -42,6 +42,7 @@
     "v3-screen-atlas-fixes.css",
     "v3-screen-atlas.css",
     "v3-screen-atlas.js",
+    "zay-full-candidate.css",
     "tiktoklwpc6RW5nXfj97kgUqcTEwk8XRqInKfD.txt"
   ],
   "trees": [
@@ -90,6 +91,7 @@
     "robots.txt",
     "service-worker.js",
     "sitemap.xml",
-    "style.css"
+    "style.css",
+    "zay-full-candidate.css"
   ]
 }

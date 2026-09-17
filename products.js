@@ -1627,15 +1627,33 @@ const PRODUCT_CARD_IMAGE_BY_ID = {
   'samsung-original-z-fold6': 'assets/products/samsung-original/z-fold6/main-card.webp',
 };
 
+// Product-specific media that already passed the strict model + version gate in
+// the isolated Zay preview. Keep this override narrow so generated catalog data
+// remains the source of truth for identity, price and availability.
+const VERIFIED_PRODUCT_MEDIA_BY_ID = {
+  'iphone-incell-11': {
+    mainImage: 'assets/products/iphone-incell/11/fhd-main.jpg',
+    galleryImages: [
+      'assets/products/iphone-incell/11/gallery-02.jpg',
+      'assets/products/iphone-incell/11/gallery-03.jpg',
+    ],
+    videos: [
+      'assets/products/iphone-incell/11/video-01.mp4',
+      'assets/products/iphone-incell/11/video-02.mp4',
+    ],
+  },
+};
+
 function createProduct(definition) {
   const category = normalizeCategory(definition.category);
   const categoryMeta = CATEGORY_META[category];
   const categoryMedia = CATEGORY_MEDIA[category]?.[definition.id] || null;
+  const verifiedMedia = VERIFIED_PRODUCT_MEDIA_BY_ID[definition.id] || null;
   const mediaImages = Array.isArray(definition.images) && definition.images.length ? definition.images.filter(Boolean) : null;
   const priceTable = buildPriceTable(definition.prices || definition.priceTable);
-  const originalMainImage = definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
+  const originalMainImage = verifiedMedia?.mainImage || definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
   const mainImage = productDisplayImagePath(originalMainImage);
-  const galleryImages = definition.galleryImages || (mediaImages ? mediaImages.slice(1) : null) || categoryMedia?.galleryImages || categoryMeta.galleryImages || [];
+  const galleryImages = verifiedMedia?.galleryImages || definition.galleryImages || (mediaImages ? mediaImages.slice(1) : null) || categoryMedia?.galleryImages || categoryMeta.galleryImages || [];
   const name = definition.name || `Pantalla para ${definition.model || definition.title || definition.id}`;
   const officialSkuPending = definition.officialSkuPending === true;
   const reference = definition.sku || definition.SKU || definition.id;
@@ -1655,7 +1673,7 @@ function createProduct(definition) {
     originalMainImage,
     cardImage: definition.cardImage || PRODUCT_CARD_IMAGE_BY_ID[definition.id] || mainImage,
     galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== originalMainImage && src !== mainImage))),
-    videos: definition.videos || categoryMedia?.videos || [],
+    videos: verifiedMedia?.videos || definition.videos || categoryMedia?.videos || [],
     priceTable,
     priceSource: definition.priceSource || '',
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
@@ -2724,7 +2742,7 @@ function hasExactProductMediaDirectory(src) {
   if (!productMediaDirectory(value)) return false;
   try {
     const filename = new URL(value, window.location.origin).pathname.split('/').pop() || '';
-    return /^main(?:\.display)?\.[a-z0-9]+$/i.test(filename);
+    return /^(?:fhd-)?main(?:\.display)?\.[a-z0-9]+$/i.test(filename);
   } catch {
     return false;
   }
@@ -2777,6 +2795,9 @@ class ProductMediaGallery {
       image.alt = `${this.product.name} foto ${index + 1}`;
       image.loading = 'lazy';
       image.decoding = 'async';
+      image.tabIndex = 0;
+      image.setAttribute('role', 'button');
+      image.setAttribute('aria-label', `Mostrar ${image.alt} como imagen principal`);
       this.stampIdentity(image, 'image');
       image.onerror = () => {
         image.remove();
@@ -2784,7 +2805,19 @@ class ProductMediaGallery {
         this.updateLayoutState();
       };
       deferProductMedia(image, source);
-      attachZoom(image, new URL(source, `${SITE_ORIGIN}/`).href, image.alt);
+      const selectImage = () => {
+        if (!this.mainImage) return;
+        this.mainImage.src = source;
+        this.mainImage.alt = image.alt;
+        attachZoom(this.mainImage, new URL(source, `${SITE_ORIGIN}/`).href, image.alt);
+        [...this.gallery.children].forEach((item) => item.classList.toggle('is-active', item === image));
+      };
+      image.addEventListener('click', selectImage);
+      image.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        selectImage();
+      });
       this.gallery.appendChild(image);
     });
     this.setSectionVisibility(this.galleryWrap, images.length > 0);
@@ -2812,6 +2845,17 @@ class ProductMediaGallery {
       this.videos.appendChild(video);
     });
     this.setSectionVisibility(this.videoWrap, videos.length > 0);
+    let jump = this.visual?.querySelector('[data-video-jump]');
+    if (videos.length > 0 && this.visual && !jump) {
+      jump = document.createElement('button');
+      jump.type = 'button';
+      jump.className = 'detail-video-jump';
+      jump.dataset.videoJump = '';
+      jump.textContent = '▶ Ver video de prueba';
+      jump.addEventListener('click', () => this.videoWrap?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      this.mainImage?.insertAdjacentElement('afterend', jump);
+    }
+    if (jump) jump.hidden = videos.length === 0;
     return videos.length;
   }
 
