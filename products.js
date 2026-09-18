@@ -1112,8 +1112,12 @@ const PRODUCT_DEFINITIONS = [
 ];
 
 function buildPriceTable(values) {
-  return QUANTITY_LABELS.map((quantity, index) => {
-    const entry = Array.isArray(values) ? values[index] : undefined;
+  const sourceRows = Array.isArray(values)
+    && values.some((entry) => entry && typeof entry === 'object' && entry.quantity)
+    ? values
+    : QUANTITY_LABELS.map((quantity, index) => ({ quantity, price: values?.[index] }));
+  return sourceRows.map((entry, index) => {
+    const quantity = QUANTITY_LABELS[index] || `Cantidad ${index + 1}`;
     const rawPrice = entry && typeof entry === 'object' && 'price' in entry ? entry.price : entry;
     const rowQuantity = entry && typeof entry === 'object' && entry.quantity ? entry.quantity : quantity;
     return {
@@ -1121,6 +1125,21 @@ function buildPriceTable(values) {
       price: formatPrice(rawPrice),
     };
   });
+}
+
+const APPROVED_TIERED_PRICE_PRODUCT_IDS = new Set([
+  'mica-hd',
+  'mica-matte',
+  'mica-privacidad-hd',
+  'mica-privacidad-matte',
+  'x200t-cortadora-micas',
+]);
+
+function buildProductPriceText(id, priceTable) {
+  if (APPROVED_TIERED_PRICE_PRODUCT_IDS.has(id) && priceTable[0]?.price !== 'Consultar') {
+    return `Precio público: ${priceTable[0].price}`;
+  }
+  return buildLowestPriceText(priceTable);
 }
 
 function formatPrice(value) {
@@ -1477,7 +1496,7 @@ function applyErpPublicCatalog(rows) {
     if (!hasAuthoritativeCustomerPrices(product)) {
       product.priceTable = buildPriceTable(prices);
     }
-    product.lowestPriceText = buildLowestPriceText(product.priceTable);
+    product.lowestPriceText = buildProductPriceText(product.id, product.priceTable);
     product.stockStatus = row.stock_status || 'ask_stock';
     product.stockLabel = publicStockLabel(product.stockStatus, row.stock_label);
     product.salesAvailable = row.sales_available !== false;
@@ -1677,7 +1696,7 @@ function createProduct(definition) {
     priceSource: definition.priceSource || '',
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
     whatsappText: buildProductCotizacionText(name, reference),
-    lowestPriceText: buildLowestPriceText(priceTable),
+    lowestPriceText: buildProductPriceText(definition.id, priceTable),
     stockStatus: 'ask_stock',
     stockLabel: 'Consultar inventario',
     salesAvailable: definition.salesAvailable !== false,

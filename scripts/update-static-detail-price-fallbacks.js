@@ -29,6 +29,14 @@ const PROTECTED_PRICE_SKUS = new Set([
   'samsung-incell-s9-plus',
 ]);
 
+const APPROVED_TIERED_PRICE_PAGES = new Map([
+  ['mica-hd', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
+  ['mica-matte', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
+  ['mica-privacidad-hd', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
+  ['mica-privacidad-matte', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
+  ['x200t-cortadora-micas', { unitLabel: 'equipo X200T', unitText: 'equipo X200T' }],
+]);
+
 function readWebsiteProducts() {
   const text = fs.readFileSync(WEBSITE_PRODUCTS, 'utf8');
   return JSON.parse(text.slice(text.indexOf('['), text.lastIndexOf(']') + 1));
@@ -81,6 +89,14 @@ function priceTableHtml(rows) {
                 </tr>`).join('\n');
 }
 
+function approvedPriceTableHtml(rows) {
+  const labels = ['Precio público', 'Mayoreo 5+', 'Volumen 10+'];
+  return rows.slice(0, 3).map((row, index) => `                <tr>
+                  <th scope="row">${labels[index]}</th>
+                  <td>${escapeHtml(row.price)}</td>
+                </tr>`).join('\n');
+}
+
 function replaceOfferPrice(text, publicPrice) {
   return text.replace(/"offers":\s*\{[^{}]*\}/g, (offerBlock) => {
     let seenPrice = false;
@@ -107,6 +123,62 @@ function replacePriceNote(text, lowest) {
       `<p class="detail-price-note" data-detail-price>${escapeHtml(lowest)}</p>`
     );
   }).join('\n');
+}
+
+function replacePriceHeading(text, label) {
+  return text.replace(
+    /<h2>Precios? por (?:volumen|cantidad)<\/h2>(?:\s*<p>Precios por [^<]+\.<\/p>)?/,
+    `<h2>Precios por volumen</h2>\n              <p>Precios por ${escapeHtml(label)}.</p>`
+  );
+}
+
+function tieredOffers(product, rows, config) {
+  const pageUrl = `https://haode.com.mx/producto/${product.id}/`;
+  const quantityRanges = [
+    { minValue: 1, maxValue: 4 },
+    { minValue: 5, maxValue: 9 },
+    { minValue: 10 },
+  ];
+  const names = ['Precio público', 'Mayoreo 5+', 'Volumen 10+'];
+  return rows.slice(0, 3).map((row, index) => ({
+    '@type': 'Offer',
+    name: names[index],
+    url: pageUrl,
+    priceCurrency: 'MXN',
+    price: row.value,
+    eligibleQuantity: {
+      '@type': 'QuantitativeValue',
+      ...quantityRanges[index],
+      unitText: config.unitText,
+    },
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      priceCurrency: 'MXN',
+      price: row.value,
+      referenceQuantity: {
+        '@type': 'QuantitativeValue',
+        value: 1,
+        unitText: config.unitText,
+      },
+    },
+  }));
+}
+
+function replaceProductOffers(text, product, rows, config) {
+  return text.replace(/<script([^>]*type=["']application\/ld\+json["'][^>]*)>([\s\S]*?)<\/script>/gi, (full, attrs, jsonText) => {
+    let data;
+    try {
+      data = JSON.parse(jsonText);
+    } catch {
+      return full;
+    }
+
+    const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
+    const productNode = nodes.find((node) => node?.['@type'] === 'Product');
+    if (!productNode) return full;
+    productNode.offers = tieredOffers(product, rows, config);
+    return `<script${attrs}>${JSON.stringify(data, null, 2)}\n    </script>`;
+  });
 }
 
 function replacePriceTable(text, table) {
@@ -150,12 +222,19 @@ function main() {
 
     let text = fs.readFileSync(file, 'utf8');
     const original = text;
-    const lowest = lowestPriceText(rows);
-    const table = priceTableHtml(rows);
-
-    text = replacePriceNote(text, lowest);
-    text = replacePriceTable(text, table);
-    text = replaceOfferPrice(text, publicPrice);
+    const approvedTier = APPROVED_TIERED_PRICE_PAGES.get(product.id);
+    if (approvedTier && rows.length >= 3) {
+      const publicPriceText = `$${Number(publicPrice).toLocaleString('es-MX')} MXN`;
+      text = replacePriceNote(text, `Precio público: ${publicPriceText}`);
+      text = replacePriceHeading(text, approvedTier.unitLabel);
+      text = replacePriceTable(text, approvedPriceTableHtml(rows));
+      text = replaceProductOffers(text, product, rows, approvedTier);
+    } else {
+      const lowest = lowestPriceText(rows);
+      text = replacePriceNote(text, lowest);
+      text = replacePriceTable(text, priceTableHtml(rows));
+      text = replaceOfferPrice(text, publicPrice);
+    }
 
     if (text !== original) {
       fs.writeFileSync(file, text, 'utf8');

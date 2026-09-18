@@ -315,7 +315,36 @@ function money(value) {
   return Number.isFinite(Number(value)) && Number(value) > 0 ? Number(value) : null;
 }
 
+const HYDROGEL_FILM_NAMES = new Set([
+  'MICA HD',
+  'MICA MATTE',
+  'MICA PRIVACIDAD HD',
+  'MICA PRIVACIDAD MATTE',
+]);
+
+function approvedTierContext(row) {
+  const productName = String(row.product || '').trim().toUpperCase();
+  if (HYDROGEL_FILM_NAMES.has(productName)) {
+    return { unit: 'paquetes', scope: 'single_product' };
+  }
+  if (productName.includes('X200T')) {
+    return { unit: 'equipos', scope: 'single_product' };
+  }
+  return null;
+}
+
 function websitePrices(row) {
+  const approvedTier = approvedTierContext(row);
+  if (approvedTier) {
+    return [
+      ['Precio público', row.prices.retail],
+      ['Mayoreo 5+', row.prices.wholesale5],
+      ['Volumen 10+', row.prices.quantity10],
+    ]
+      .filter(([, value]) => money(value))
+      .map(([quantity, value]) => ({ quantity, price: `$${Number(value).toLocaleString('es-MX')} MXN` }));
+  }
+
   const tiers = [
     ['1 pza', row.prices.retail],
     ['5+ pzs', row.prices.wholesale5],
@@ -332,6 +361,28 @@ function websitePrices(row) {
 }
 
 function appPriceTiers(row) {
+  const approvedTier = approvedTierContext(row);
+  if (approvedTier) {
+    return [
+      money(row.prices.wholesale5) && {
+        code: 'WHOLESALE_5',
+        minQty: 5,
+        maxQty: 9,
+        price: Number(row.prices.wholesale5),
+        label: `Mayoreo 5+ ${approvedTier.unit}`,
+        scope: approvedTier.scope,
+      },
+      money(row.prices.quantity10) && {
+        code: 'VOLUME_10',
+        minQty: 10,
+        maxQty: null,
+        price: Number(row.prices.quantity10),
+        label: `Volumen 10+ ${approvedTier.unit}`,
+        scope: approvedTier.scope,
+      },
+    ].filter(Boolean);
+  }
+
   const tiers = [];
   if (money(row.prices.wholesale5)) {
     tiers.push({ code: 'WHOLESALE_5', minQty: 5, maxQty: 99, price: Number(row.prices.wholesale5), label: 'Mayoreo 5 pzs', scope: 'single_product' });

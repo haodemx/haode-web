@@ -37,3 +37,29 @@ test('machine and MICA pages provide crawlable links in both directions', async 
   await page.goto(`${baseURL}/producto/mica-hd/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('a[href="/micas-hidrogel-mayoreo-mexico/"]').first()).toBeVisible();
 });
+
+test('candidate pricing stays public-first after client rendering', async ({ page }) => {
+  const expected = [
+    ['/producto/mica-hd/', '$400 MXN', ['$400 MXN', '$350 MXN', '$300 MXN']],
+    ['/producto/mica-matte/', '$450 MXN', ['$450 MXN', '$400 MXN', '$350 MXN']],
+    ['/producto/mica-privacidad-hd/', '$850 MXN', ['$850 MXN', '$800 MXN', '$750 MXN']],
+    ['/producto/mica-privacidad-matte/', '$850 MXN', ['$850 MXN', '$800 MXN', '$750 MXN']],
+    ['/producto/x200t-cortadora-micas/', '$6,500 MXN', ['$6,500 MXN', '$6,200 MXN', '$6,000 MXN']],
+  ];
+  for (const [route, publicPrice, tiers] of expected) {
+    await page.goto(`${baseURL}${route}`, { waitUntil: 'networkidle' });
+    await expect(page.locator('[data-detail-price]')).toHaveText(`Precio público: ${publicPrice}`);
+    await expect(page.locator('[data-detail-price-body] th')).toHaveText(['Precio público', 'Mayoreo 5+', 'Volumen 10+']);
+    await expect(page.locator('[data-detail-price-body] td')).toHaveText(tiers);
+  }
+});
+
+test('OEM landing is readable and overflow-free on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const response = await page.goto(`${baseURL}/micas-hidrogel-marca-propia/`, { waitUntil: 'networkidle' });
+  expect(response?.status()).toBe(200);
+  await expect(page.getByRole('heading', { level: 1, name: 'Micas de hidrogel con tu marca' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Solicitar cotización' }).first()).toBeVisible();
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(overflow).toBeLessThanOrEqual(1);
+});

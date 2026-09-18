@@ -62,13 +62,14 @@ test('client renderer preserves metadata on curated SEO product pages', () => {
 
 test('sitemap exposes the machine and MICA landing paths with current release date', () => {
   const sitemap = read('sitemap.xml');
+  assert.match(sitemap, /<loc>https:\/\/haode\.com\.mx\/categoria\/maquinas-de-hidrogel\/<\/loc>\s*<lastmod>2026-08-21<\/lastmod>/);
   const urls = [
-    'https://haode.com.mx/categoria/maquinas-de-hidrogel/',
     'https://haode.com.mx/producto/x200t-cortadora-micas/',
     'https://haode.com.mx/micas-hidrogel-mayoreo-mexico/',
+    'https://haode.com.mx/micas-hidrogel-marca-propia/',
     ...productPages.map(([, , canonical]) => canonical),
   ];
   for (const url of urls) {
-    assert.match(sitemap, new RegExp(`<loc>${url.replaceAll('.', '\\\.')}</loc>\\s*<lastmod>2026-08-21</lastmod>`));
+    assert.match(sitemap, new RegExp(`<loc>${url.replaceAll('.', '\\\.')}</loc>\\s*<lastmod>2026-09-18</lastmod>`));
   }
 });

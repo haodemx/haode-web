@@ -4833,16 +4833,17 @@
       {
         "code": "WHOLESALE_5",
         "minQty": 5,
-        "maxQty": 99,
+        "maxQty": 9,
         "price": 350,
-        "label": "Mayoreo 5 pzs",
+        "label": "Mayoreo 5+ paquetes",
         "scope": "single_product"
       },
       {
+        "code": "VOLUME_10",
         "minQty": 10,
         "maxQty": null,
         "price": 300,
-        "label": "10+ paquetes",
+        "label": "Volumen 10+ paquetes",
         "scope": "single_product"
       }
     ],
@@ -4869,16 +4870,17 @@
       {
         "code": "WHOLESALE_5",
         "minQty": 5,
-        "maxQty": 99,
+        "maxQty": 9,
         "price": 400,
-        "label": "Mayoreo 5 pzs",
+        "label": "Mayoreo 5+ paquetes",
         "scope": "single_product"
       },
       {
+        "code": "VOLUME_10",
         "minQty": 10,
         "maxQty": null,
         "price": 350,
-        "label": "10+ paquetes",
+        "label": "Volumen 10+ paquetes",
         "scope": "single_product"
       }
     ],
@@ -4905,16 +4907,17 @@
       {
         "code": "WHOLESALE_5",
         "minQty": 5,
-        "maxQty": 99,
+        "maxQty": 9,
         "price": 800,
-        "label": "Mayoreo 5 pzs",
+        "label": "Mayoreo 5+ paquetes",
         "scope": "single_product"
       },
       {
+        "code": "VOLUME_10",
         "minQty": 10,
         "maxQty": null,
         "price": 750,
-        "label": "10+ paquetes",
+        "label": "Volumen 10+ paquetes",
         "scope": "single_product"
       }
     ],
@@ -4995,16 +4998,17 @@
       {
         "code": "WHOLESALE_5",
         "minQty": 5,
-        "maxQty": 99,
+        "maxQty": 9,
         "price": 800,
-        "label": "Mayoreo 5 pzs",
+        "label": "Mayoreo 5+ paquetes",
         "scope": "single_product"
       },
       {
+        "code": "VOLUME_10",
         "minQty": 10,
         "maxQty": null,
         "price": 750,
-        "label": "10+ paquetes",
+        "label": "Volumen 10+ paquetes",
         "scope": "single_product"
       }
     ],
@@ -5085,16 +5089,17 @@
       {
         "code": "WHOLESALE_5",
         "minQty": 5,
-        "maxQty": 99,
+        "maxQty": 9,
         "price": 6200,
-        "label": "Mayoreo 5 pzs",
+        "label": "Mayoreo 5+ equipos",
         "scope": "single_product"
       },
       {
+        "code": "VOLUME_10",
         "minQty": 10,
         "maxQty": null,
         "price": 6000,
-        "label": "10+ paquetes",
+        "label": "Volumen 10+ equipos",
         "scope": "single_product"
       }
     ],
