@@ -148,7 +148,10 @@ test('product detail loads the visible gallery but defers video and related medi
   expect(requestedUrls.some((url) => /\/video-\d+\.mp4$/i.test(url))).toBe(false);
   expect(requestedUrls.some((url) => /iphone-incell\/(?:11|11pro)\/(?:fhd-)?main\.(?:jpe?g|png)$/i.test(url))).toBe(false);
 
-  const galleryImage = page.locator('[data-detail-gallery] img').first();
+  const mainThumbnail = page.locator('[data-detail-gallery] img').first();
+  await expect(mainThumbnail).toHaveAttribute('loading', 'lazy');
+  await expect(mainThumbnail).toHaveAttribute('src', /main\.display\.webp/);
+  const galleryImage = page.locator('[data-detail-gallery] img').nth(1);
   await expect(galleryImage).toHaveAttribute('loading', 'lazy');
   await expect(galleryImage).toHaveAttribute('src', /gallery-01\.jpg/);
 });

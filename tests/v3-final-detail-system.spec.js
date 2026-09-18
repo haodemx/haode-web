@@ -18,11 +18,15 @@ test('ProductMediaGallery shows only media from the exact product directory', as
   const visual = page.locator('.detail-visual');
   await expect(visual).toHaveAttribute('data-media-model', 'iPhone 14');
   await expect(visual).toHaveAttribute('data-media-quality', /INCELL/i);
-  await expect(page.locator('.detail-video-wrap')).toBeVisible();
-  const video = page.locator('[data-detail-videos] video').first();
-  await expect(video).toHaveAttribute('data-media-model', 'iPhone 14');
-  await expect(video).toHaveAttribute('data-media-quality', /INCELL/i);
-  await expect(video).toHaveAttribute('data-performance-src', /assets\/products\/iphone-incell\/14\/video-01\.mp4/);
+  await expect(page.locator('.detail-video-wrap')).toBeHidden();
+  const videoThumb = page.locator('[data-detail-media-thumb][data-product-media-kind="video"]').first();
+  await expect(videoThumb).toHaveAttribute('data-media-model', 'iPhone 14');
+  await expect(videoThumb).toHaveAttribute('data-media-quality', /INCELL/i);
+  await expect(videoThumb).toHaveAttribute('data-media-src', /assets\/products\/iphone-incell\/14\/video-01\.mp4/);
+  await videoThumb.click();
+  const video = page.locator('[data-detail-stage-video]');
+  await expect(video).toBeVisible();
+  await expect(video).toHaveAttribute('src', /assets\/products\/iphone-incell\/14\/video-01\.mp4/);
   await expect(video).toHaveAttribute('poster', /assets\/products\/iphone-incell\/14\/main\.display\.webp/);
 
   await page.evaluate(() => {
@@ -31,7 +35,7 @@ test('ProductMediaGallery shows only media from the exact product directory', as
     new window.HAODE_PRODUCT_MEDIA_GALLERY(document.querySelector('[data-product-detail]'), product).render();
   });
   await expect(page.locator('.detail-video-wrap')).toBeHidden();
-  await expect(page.locator('[data-detail-videos] video')).toHaveCount(0);
+  await expect(page.locator('[data-detail-media-thumb][data-product-media-kind="video"]')).toHaveCount(0);
 });
 
 test('missing galleries and videos collapse without coming-soon whitespace', async ({ page }) => {
@@ -48,16 +52,16 @@ test('missing galleries and videos collapse without coming-soon whitespace', asy
 test('gallery-only products retain real images and hide the absent video entry', async ({ page }) => {
   await page.goto(`${baseURL}/producto/iphone-incell-17/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('.detail-visual > .detail-gallery-wrap')).toBeVisible();
-  await expect(page.locator('[data-detail-gallery] img')).toHaveCount(3);
+  await expect(page.locator('[data-detail-media-thumb][data-product-media-kind="image"]')).toHaveCount(4);
   await expect(page.locator('.detail-visual > .detail-video-wrap')).toBeHidden();
-  const sources = await page.locator('[data-detail-gallery] img').evaluateAll((images) => images.map((image) => image.dataset.performanceSrc));
+  const sources = await page.locator('[data-detail-media-thumb][data-product-media-kind="image"] img').evaluateAll((images) => images.map((image) => image.dataset.performanceSrc || image.getAttribute('src')));
   expect(sources.every((src) => /assets\/products\/iphone-incell\/17\//.test(src))).toBe(true);
 });
 
 test('series-level videos stay hidden when no exact product manifest directory exists', async ({ page }) => {
   await page.goto(`${baseURL}/producto/haode-pantalla-oled-diagnostica-modelo-14/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('.detail-video-wrap')).toBeHidden();
-  await expect(page.locator('[data-detail-videos] video')).toHaveCount(0);
+  await expect(page.locator('[data-detail-media-thumb][data-product-media-kind="video"]')).toHaveCount(0);
 });
 
 for (const viewport of viewports) {
