@@ -2824,16 +2824,8 @@ class ProductMediaGallery {
     this.mainImage.hidden = false;
     this.stage.classList.remove('is-video-active');
 
-    let title = stage.querySelector('[data-detail-media-title]');
-    if (!title) {
-      title = document.createElement('p');
-      title.className = 'detail-media-title';
-      title.dataset.detailMediaTitle = '';
-      stage.appendChild(title);
-    }
-    this.mediaTitleElement = title;
+    stage.querySelector('[data-detail-media-title]')?.remove();
     this.mainImage.classList.add('is-active');
-    this.mediaTitleElement.textContent = this.mediaTitle('image');
   }
 
   setActiveThumbnail(active) {
@@ -2857,7 +2849,6 @@ class ProductMediaGallery {
     this.mainImage.src = buildAssetUrl(src);
     this.mainImage.alt = alt;
     attachZoom(this.mainImage, new URL(buildAssetUrl(src), `${SITE_ORIGIN}/`).href, alt);
-    this.mediaTitleElement.textContent = this.mediaTitle('image');
     this.setActiveThumbnail(thumbnail);
   }
 
@@ -2874,7 +2865,6 @@ class ProductMediaGallery {
     this.stampIdentity(this.stageVideo, 'video');
     this.stageVideo.src = buildAssetUrl(src);
     this.stageVideo.load();
-    this.mediaTitleElement.textContent = title;
     this.setActiveThumbnail(thumbnail);
   }
 

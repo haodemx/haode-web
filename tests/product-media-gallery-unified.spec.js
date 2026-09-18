@@ -46,7 +46,8 @@ for (const viewport of [
     await expect(stageVideo).toBeVisible();
     await expect(stageVideo).toHaveAttribute('poster', /iphone-incell\/11\/fhd-main\.display\.webp/);
     await expect(stageVideo).toHaveAttribute('src', /iphone-incell\/11\/video-01\.mp4/);
-    await expect(stage.locator('[data-detail-media-title]')).toHaveText('Prueba real — iPhone 11 INCELL FHD');
+    await expect(stage.locator('[data-detail-media-title]')).toHaveCount(0);
+    await expect(stageVideo).toHaveAttribute('aria-label', 'Prueba real — iPhone 11 INCELL FHD');
     await stageVideo.evaluate(async (video) => {
       video.muted = true;
       await video.play();
