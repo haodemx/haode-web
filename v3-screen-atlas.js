@@ -3,7 +3,7 @@
   if (!body || body.dataset.zayBooted) return;
   body.dataset.zayBooted = 'true';
   const css = document.createElement('link');
-  css.rel = 'stylesheet'; css.href = '/zay-full-candidate.css?v=20260917-full';
+  css.rel = 'stylesheet'; css.href = '/zay-full-candidate.css?v=20260918-polish-1';
   document.head.append(css);
 
   const PHONE = '523326684296';
