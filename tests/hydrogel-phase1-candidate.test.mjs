@@ -71,41 +71,27 @@ test('keyword map assigns one distinct search intent to every Phase 1 URL', () =
   for (const url of urls) assert.equal(map.split(url).length - 1, 1, `${url} must have one target row`);
 });
 
-test('owner-confirmed clean assets are approved while risky claims and identities stay gated', () => {
+test('all five owner-approved assets pass the final website handoff gate', () => {
   const review = JSON.parse(read('docs/reports/hydrogel-asset-owner-review-20260918.json'));
   assert.equal(review.assets.length, 5);
-  const hd = review.assets.find((asset) => asset.product === 'HD Clear');
-  assert.ok(hd);
-  assert.equal(hd.source, '/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/haode mica hd.png');
-  assert.equal(hd.sha256, 'df542437288941c231905d692d9462149a3567a03bfaed7d0cf57d31a62d0f4e');
-  assert.equal(hd.sourceStatus, 'OWNER_CONFIRMED');
-  assert.equal(hd.currentQc, 'QC_PASS');
-  assert.equal(hd.sourceConfirmed, true);
-  assert.equal(hd.qcPass, true);
-  assert.equal(hd.approvedForWeb, true);
-
-  const matte = review.assets.find((asset) => asset.product === 'Matte');
-  assert.equal(matte.source, '/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/haode mica matte.png');
-  assert.equal(matte.sourceStatus, 'OWNER_CONFIRMED');
-  assert.equal(matte.currentQc, 'QC_PASS');
-  assert.equal(matte.sourceConfirmed, true);
-  assert.equal(matte.qcPass, true);
-  assert.equal(matte.approvedForWeb, true);
-
-  for (const asset of review.assets.filter((item) => ['Privacy HD', 'X200T'].includes(item.product))) {
-    assert.equal(asset.sourceConfirmed, false);
-    assert.equal(asset.qcPass, false);
-    assert.equal(asset.approvedForWeb, false);
+  for (const asset of review.assets) {
+    assert.equal(asset.sourceStatus, 'OWNER_CONFIRMED');
+    assert.equal(asset.currentQc, 'QC_PASS');
+    assert.equal(asset.sourceConfirmed, true);
+    assert.equal(asset.qcPass, true);
+    assert.equal(asset.approvedForWeb, true);
   }
 
-  assert.equal(review.assets.find((asset) => asset.product === 'Privacy HD').currentQc, 'HOLD_FOR_OWNER_IDENTITY_CONFIRMATION');
-  const privacyMatte = review.assets.find((asset) => asset.product === 'Privacy Matte');
-  assert.equal(privacyMatte.source, '/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/privacy matte.png');
-  assert.equal(privacyMatte.sourceConfirmed, true);
-  assert.equal(privacyMatte.qcPass, false);
-  assert.equal(privacyMatte.approvedForWeb, false);
-  assert.equal(privacyMatte.currentQc, 'HOLD_FOR_PUBLIC_CLAIMS_CONFIRMATION');
-  assert.equal(review.assets.find((asset) => asset.product === 'X200T').currentQc, 'HOLD_FOR_OWNER_IDENTITY_CONFIRMATION');
+  const expectedAssets = new Map([
+    ['HD Clear', ['assets/products/micas/hd/main.png', 'df542437288941c231905d692d9462149a3567a03bfaed7d0cf57d31a62d0f4e']],
+    ['Matte', ['assets/products/micas/matte/main.png', 'ed0bf69572a19da5d8602512e9339f04e8a2c28484e325af73ede2ee30f75ab6']],
+    ['Privacy HD', ['assets/products/micas/privacidad-hd/main.png', '03a7c7ca2eac23327e98c303671de3ea56d1515a64bb70f86243f1185289a894']],
+    ['Privacy Matte', ['assets/products/micas/privacidad-matte/main.png', '27c3e03dfcf2be1bafaf8bda976b713cb95ced9a8efc38b6aaf49ac17302983e']],
+    ['X200T', ['assets/products/cut-machine/x200t/main.jpg', 'b1ddba6da770ea592c4bf47034cd26055549bc51fba27619b080fee5c4a1d514']],
+  ]);
+  for (const asset of review.assets) {
+    assert.deepEqual([asset.filePath, asset.sha256], expectedAssets.get(asset.product));
+  }
 
   const products = read('data/products.generated.js');
   const hdProduct = products.match(/"id": "mica-hd",[\s\S]*?"videos": \[\]/)?.[0] ?? '';

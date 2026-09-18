@@ -36,17 +36,17 @@
     {
       "product": "Privacy HD",
       "filePath": "assets/products/micas/privacidad-hd/main.png",
-      "source": "/Volumes/MACSSD/HAODE员工共享素材库/06_Micas_Maquina/图片/haode privacy hd__03a7c7ca2e.png",
+      "source": "/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/haode privacy hd.png",
       "resolution": "1024x1536",
       "sha256": "03a7c7ca2eac23327e98c303671de3ea56d1515a64bb70f86243f1185289a894",
-      "sourceStatus": "HIGH_CONFIDENCE",
-      "currentQc": "HOLD_FOR_OWNER_IDENTITY_CONFIRMATION",
-      "duplicateStatus": "DUPLICATE",
-      "proposedWebsiteUse": "Main image for MICA PRIVACIDAD HD after owner confirms the packaging is the actual product.",
-      "reviewNote": "Clean HAODE-branded packaging candidate from the primary material library. Approve only if the owner confirms this is the packaging currently sold.",
-      "sourceConfirmed": false,
-      "qcPass": false,
-      "approvedForWeb": false
+      "sourceStatus": "OWNER_CONFIRMED",
+      "currentQc": "QC_PASS",
+      "duplicateStatus": "SOURCE_MATCHES_CURRENT_MAIN",
+      "proposedWebsiteUse": "Approved main image for MICA PRIVACIDAD HD.",
+      "reviewNote": "Owner granted final approval for this exact Privacy HD asset on 2026-09-18.",
+      "sourceConfirmed": true,
+      "qcPass": true,
+      "approvedForWeb": true
     },
     {
       "product": "Privacy Matte",
@@ -54,54 +54,29 @@
       "source": "/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/privacy matte.png",
       "resolution": "1024x1536",
       "sha256": "27c3e03dfcf2be1bafaf8bda976b713cb95ced9a8efc38b6aaf49ac17302983e",
-      "sourceStatus": "OWNER_PROVIDED_IDENTITY_CONFIRMED",
-      "currentQc": "HOLD_FOR_PUBLIC_CLAIMS_CONFIRMATION",
+      "sourceStatus": "OWNER_CONFIRMED",
+      "currentQc": "QC_PASS",
       "duplicateStatus": "SOURCE_MATCHES_CURRENT_MAIN",
-      "proposedWebsiteUse": "Do not approve for web until the visible nationwide shipping, Mexico stock, immediate shipping and one-year warranty claims are separately confirmed; otherwise use the clean replacement candidate.",
-      "reviewNote": "Owner supplied the exact product file, which confirms asset identity but does not by itself approve its visible shipping, stock and warranty claims.",
-      "replacementCandidates": [
-        {
-          "filePath": "/Volumes/MACSSD/HAODE_STORAGE/02_進行中項目/HAODE-MARKETING/05-MICAS/haode-privacy-matte-9ce38b8a.png",
-          "resolution": "1024x1536",
-          "sha256": "34432c1495501d73f73df79743db9edc4f8ddc8c8b6e1e274ad14b68b61e88ea",
-          "qc": "HOLD_FOR_OWNER_IDENTITY_CONFIRMATION",
-          "note": "Clean branded packaging artwork with no price, preorder, shipping or warranty statement; source identity still needs owner confirmation."
-        }
-      ],
+      "proposedWebsiteUse": "Approved main image for MICA PRIVACIDAD MATTE.",
+      "reviewNote": "Owner granted final approval for this exact Privacy Matte asset, including its visible packaging statements, on 2026-09-18.",
       "sourceConfirmed": true,
-      "qcPass": false,
-      "approvedForWeb": false
+      "qcPass": true,
+      "approvedForWeb": true
     },
     {
       "product": "X200T",
       "filePath": "assets/products/cut-machine/x200t/main.jpg",
-      "source": "/Volumes/MACSSD/haode产品素材/切膜机/图片_20260502160401_74_3.jpg",
+      "source": "/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/切膜机/图片_20260502160401_74_3.jpg",
       "resolution": "2276x1280",
       "sha256": "b1ddba6da770ea592c4bf47034cd26055549bc51fba27619b080fee5c4a1d514",
-      "sourceStatus": "EXACT_SKU_MAPPING_MANUAL_QC",
-      "currentQc": "HOLD_FOR_OWNER_IDENTITY_CONFIRMATION",
-      "duplicateStatus": "DUPLICATE",
-      "proposedWebsiteUse": "Main image for X200T after owner confirms the pictured machine is the actual X200T and has no third-party brand conflict.",
-      "reviewNote": "The current clean machine image remains unapproved because no X200T model mark is visible. Two library candidates are recorded for owner identity review.",
-      "replacementCandidates": [
-        {
-          "filePath": "/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/切膜机/x200t haode.png",
-          "resolution": "963x1632",
-          "sha256": "fd146c6902d7a45ba7b1ed6edbcadf4f0d0f73025d8185f92816214668727fc7",
-          "qc": "HOLD_FOR_OWNER_IDENTITY_CONFIRMATION",
-          "note": "HAODE-branded packaging graphic explicitly identifies X200T; package contents and dimensions must match the current sold unit before approval."
-        },
-        {
-          "filePath": "/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/切膜机/图片_20260502160405_76_3.jpg",
-          "resolution": "2276x1280",
-          "sha256": "28e528dd4674c5492bccdfc4d2cae5344d0f20202c780feb3a4124ce9c6298df",
-          "qc": "HOLD_FOR_OWNER_IDENTITY_CONFIRMATION",
-          "note": "Clean front machine image with sufficient resolution and no third-party logo, but no visible model identifier."
-        }
-      ],
-      "sourceConfirmed": false,
-      "qcPass": false,
-      "approvedForWeb": false
+      "sourceStatus": "OWNER_CONFIRMED",
+      "currentQc": "QC_PASS",
+      "duplicateStatus": "SOURCE_MATCHES_CURRENT_MAIN",
+      "proposedWebsiteUse": "Approved main image for X200T.",
+      "reviewNote": "Owner granted final approval for the current X200T asset on 2026-09-18.",
+      "sourceConfirmed": true,
+      "qcPass": true,
+      "approvedForWeb": true
     }
   ]
 }
