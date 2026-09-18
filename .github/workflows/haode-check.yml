@@ -87,6 +87,14 @@ jobs:
 
           BASE_URL=http://127.0.0.1:4173 npm run browser-test
 
+      - name: Upload browser failure evidence
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: haode-browser-failure-${{ github.sha }}-${{ github.run_id }}
+          path: test-results
+          if-no-files-found: warn
+
       - name: Upload the browser-tested public artifact
         uses: actions/upload-artifact@v7
         with:
