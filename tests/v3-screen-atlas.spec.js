@@ -87,6 +87,11 @@ test('approved Zay homepage uses a real product hero and the three truthful cate
 
 test('approved Zay homepage avoids synthetic background and placeholder effects', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('body')).toHaveClass(/zay-candidate/);
+  await page.waitForFunction(() => {
+    const hero = document.querySelector('.zay-hero');
+    return hero && getComputedStyle(hero).backgroundImage.includes('linear-gradient');
+  });
   const visualStyle = await page.evaluate(() => {
     const hero = getComputedStyle(document.querySelector('.zay-hero'));
     const image = document.querySelector('.zay-hero figure img');

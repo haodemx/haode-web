@@ -24,19 +24,26 @@ test('V3 entry pages load the shared Screen Atlas system', () => {
 
 test('V3 navigation prioritizes Pantallas and Hidrogel without removing Fundas compatibility', () => {
   const script = read('v3-screen-atlas.js');
-  assert.match(script, /\['pantallas', 'Pantallas', '\/productos\/'\]/);
-  assert.match(script, /\['hidrogel', 'Hidrogel', '\/micas\.html'\]/);
-  assert.doesNotMatch(script, /\['fundas', 'Fundas'/);
-  assert.match(script, /href=\"\/categoria\/fundas\/\"/);
+  const fundas = read('categoria/fundas/index.html');
+  assert.match(script, /\['pantallas','Pantallas','\/productos\/\?category=pantallas'\]/);
+  assert.match(script, /\['hidrogel','Hidrogel','\/micas\.html'\]/);
+  assert.match(script, /\['ai','Productos AI','\/productos-ai\/'\]/);
+  assert.doesNotMatch(script, /\['fundas','Fundas'/);
+  assert.match(script, /GENERIC_DETAIL_CATEGORIES = new Set\(\[[^\]]*'fundas'/);
+  assert.match(fundas, /rel=\"canonical\" href=\"https:\/\/haode\.com\.mx\/categoria\/fundas\/\"/);
 });
 
 test('V3 preserves real catalog data and uses an honest battery placeholder', () => {
   const script = read('v3-screen-atlas.js');
+  const batteries = read('baterias/index.html');
   assert.match(script, /window\.HAODE_PRODUCTS_DATA/);
-  assert.match(script, /FOTOGRAFÍA REAL PENDIENTE DE VALIDACIÓN/);
+  assert.match(script, /\/assets\/products\/placeholder\.svg/);
+  assert.match(script, /Imagen pendiente/);
+  assert.match(batteries, /Modelos, imágenes, compatibilidad y precios se publicarán únicamente después de su validación\./);
+  assert.doesNotMatch(batteries, /data-catalog-card/);
   assert.doesNotMatch(script, /fábrica directa|factory direct/i);
+  assert.ok(script.includes("${p.quality?` · ${p.quality}`:''}"));
   assert.match(script, /Modelo\/SKU:/);
-  assert.match(script, /Calidad \/ versión:/);
   assert.match(script, /Cantidad:/);
 });
 

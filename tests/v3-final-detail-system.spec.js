@@ -92,6 +92,18 @@ for (const viewport of viewports) {
       }
       window.scrollTo(0, 0);
     });
+    await page.evaluate(() => {
+      document.querySelectorAll('img[data-performance-src]').forEach((image) => {
+        image.loading = 'eager';
+        image.src = image.dataset.performanceSrc;
+        delete image.dataset.performanceSrc;
+      });
+    });
+    await page.waitForFunction(() => Array.from(document.images).every((image) => image.complete));
+    await page.evaluate(async () => {
+      await Promise.all(Array.from(document.images, (image) => image.decode().catch(() => undefined)));
+      window.scrollTo(0, 0);
+    });
     await page.waitForTimeout(200);
     await expect(page).toHaveScreenshot(`v3-product-detail-${viewport.name}.png`, {
       animations: 'disabled',
