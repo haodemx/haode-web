@@ -72,7 +72,7 @@ test.describe("HAODE conversion UI phase 2", () => {
     await expect(page.locator("[data-detail-whatsapp]")).toHaveAttribute("href", /wa\.me/);
     await expect(page.locator("[data-detail-factory-callout]")).toContainText("Fábrica directa");
     await expect(page.locator("[data-detail-factory-callout]")).toContainText("Garantía local");
-    await expect(page.locator("[data-detail-highlights] strong").first()).toHaveCSS("color", "rgb(255, 255, 255)");
+    await expect(page.locator("[data-detail-highlights] strong").first()).toHaveCSS("color", "rgb(32, 32, 30)");
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/producto/samsung-incell-s8/`, { waitUntil: "domcontentloaded" });

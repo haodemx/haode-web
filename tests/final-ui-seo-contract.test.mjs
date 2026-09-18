@@ -30,9 +30,9 @@ test('product detail uses optimized display media and defers below-fold payloads
   const productRenderer = read('products.js');
   const productPage = read('producto/iphone-incell-14/index.html');
   assert.match(productRenderer, /\.display\.webp/);
-  assert.match(productRenderer, /deferProductMedia\(image, source\)/);
-  assert.match(productRenderer, /video\.preload = 'metadata'/);
-  assert.match(productRenderer, /deferProductMedia\(video, buildAssetUrl\(src\)\)/);
+  assert.match(productRenderer, /deferProductMedia\(image, buildAssetUrl\(displaySource\)\)/);
+  assert.match(productRenderer, /stageVideo\.preload = 'metadata'/);
+  assert.match(productRenderer, /this\.stageVideo\.src = buildAssetUrl\(src\)/);
   assert.match(productPage, /data-detail-main-image[^>]+main\.display\.webp/);
   assert.ok(fs.existsSync(new URL('../assets/products/iphone-incell/14/main.display.webp', import.meta.url)));
 });

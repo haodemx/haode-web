@@ -1657,7 +1657,6 @@ const VERIFIED_PRODUCT_MEDIA_BY_ID = {
       'assets/products/iphone-incell/11/gallery-03.jpg',
     ],
     videos: [
-      'assets/products/iphone-incell/11/video-01.mp4',
       'assets/products/iphone-incell/11/video-02.mp4',
     ],
   },
@@ -2784,6 +2783,8 @@ class ProductMediaGallery {
     };
     this.productDirectory = productMediaDirectory(product.originalMainImage || product.mainImage);
     this.hasExactProductDirectory = hasExactProductMediaDirectory(product.originalMainImage || product.mainImage);
+    this.primaryImage = product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE;
+    this.posterImage = product.mainImage || this.primaryImage;
   }
 
   matchesProduct(src) {
@@ -2804,42 +2805,154 @@ class ProductMediaGallery {
     wrapper.setAttribute('aria-hidden', String(!visible));
   }
 
+  mediaTitle(kind) {
+    const model = String(this.product.model || this.product.name || '').trim();
+    const quality = String(this.product.quality || '').trim();
+    if (kind === 'video') return `Prueba real — ${[model, quality].filter(Boolean).join(' ')}`;
+    return `Foto real — ${model}`;
+  }
+
+  ensureUnifiedStage() {
+    if (!this.visual || !this.mainImage) return;
+    let stage = this.visual.querySelector('[data-detail-media-stage]');
+    if (!stage) {
+      stage = document.createElement('div');
+      stage.className = 'detail-media-stage';
+      stage.dataset.detailMediaStage = '';
+      this.mainImage.before(stage);
+      stage.appendChild(this.mainImage);
+    }
+    this.stage = stage;
+
+    let stageVideo = stage.querySelector('[data-detail-stage-video]');
+    if (!stageVideo) {
+      stageVideo = document.createElement('video');
+      stageVideo.className = 'detail-stage-video';
+      stageVideo.dataset.detailStageVideo = '';
+      stageVideo.controls = true;
+      stageVideo.playsInline = true;
+      stageVideo.preload = 'metadata';
+      stageVideo.hidden = true;
+      stage.appendChild(stageVideo);
+    }
+    this.stageVideo = stageVideo;
+    this.stageVideo.pause();
+    this.stageVideo.hidden = true;
+    this.stageVideo.removeAttribute('src');
+    this.mainImage.hidden = false;
+    this.stage.classList.remove('is-video-active');
+
+    stage.querySelector('[data-detail-media-title]')?.remove();
+    this.mainImage.classList.add('is-active');
+  }
+
+  setActiveThumbnail(active) {
+    if (!this.gallery) return;
+    this.gallery.querySelectorAll('[data-detail-media-thumb]').forEach((item) => {
+      const selected = item === active;
+      item.classList.toggle('is-active', selected);
+      item.setAttribute('aria-pressed', String(selected));
+    });
+  }
+
+  showImage(src, alt, thumbnail) {
+    if (!this.mainImage || !this.stageVideo) return;
+    this.stageVideo.pause();
+    this.stageVideo.hidden = true;
+    this.stageVideo.removeAttribute('src');
+    this.stageVideo.load();
+    this.mainImage.hidden = false;
+    this.mainImage.classList.add('is-active');
+    this.stage?.classList.remove('is-video-active');
+    this.mainImage.src = buildAssetUrl(src);
+    this.mainImage.alt = alt;
+    attachZoom(this.mainImage, new URL(buildAssetUrl(src), `${SITE_ORIGIN}/`).href, alt);
+    this.setActiveThumbnail(thumbnail);
+  }
+
+  showVideo(src, thumbnail) {
+    if (!this.mainImage || !this.stageVideo) return;
+    const title = this.mediaTitle('video');
+    this.mainImage.hidden = true;
+    this.mainImage.classList.remove('is-active');
+    this.stage?.classList.add('is-video-active');
+    this.stageVideo.hidden = false;
+    this.stageVideo.poster = buildAssetUrl(this.posterImage);
+    this.stageVideo.setAttribute('aria-label', title);
+    this.stageVideo.title = title;
+    this.stampIdentity(this.stageVideo, 'video');
+    this.stageVideo.src = buildAssetUrl(src);
+    this.stageVideo.load();
+    this.setActiveThumbnail(thumbnail);
+  }
+
+  createImageThumbnail(src, index) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'detail-media-thumb detail-media-thumb--image';
+    button.dataset.detailMediaThumb = '';
+    button.setAttribute('aria-pressed', 'false');
+    this.stampIdentity(button, 'image');
+
+    const image = document.createElement('img');
+    const alt = `${this.product.name} foto ${index + 1}`;
+    image.alt = alt;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.onerror = () => {
+      button.remove();
+      this.updateLayoutState();
+    };
+    const displaySource = index === 0 ? this.posterImage : src;
+    deferProductMedia(image, buildAssetUrl(displaySource));
+    button.setAttribute('aria-label', `Mostrar ${alt}`);
+    button.addEventListener('click', () => this.showImage(displaySource, alt, button));
+    button.appendChild(image);
+    return button;
+  }
+
+  createVideoThumbnail(src, index, count) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'detail-media-thumb detail-media-thumb--video';
+    button.dataset.detailMediaThumb = '';
+    button.dataset.mediaSrc = src;
+    button.setAttribute('aria-pressed', 'false');
+    this.stampIdentity(button, 'video');
+
+    const poster = document.createElement('img');
+    poster.alt = '';
+    poster.loading = 'lazy';
+    poster.decoding = 'async';
+    deferProductMedia(poster, buildAssetUrl(this.posterImage));
+    const badge = document.createElement('span');
+    badge.className = 'detail-media-play';
+    badge.setAttribute('aria-hidden', 'true');
+    badge.textContent = '▶';
+    const label = document.createElement('span');
+    label.className = 'detail-media-thumb-label';
+    label.textContent = count > 1 ? `Video ${index + 1}` : 'Video';
+    button.setAttribute('aria-label', `${this.mediaTitle('video')}${count > 1 ? `, video ${index + 1}` : ''}`);
+    button.addEventListener('click', () => this.showVideo(src, button));
+    button.append(poster, badge, label);
+    return button;
+  }
+
   renderGallery() {
     if (!this.gallery) return 0;
     this.gallery.replaceChildren();
-    const images = [...new Set((this.product.galleryImages || []).filter((src) => this.matchesProduct(src)))].slice(0, 4);
-    images.forEach((src, index) => {
-      const image = document.createElement('img');
-      const source = buildAssetUrl(src);
-      image.alt = `${this.product.name} foto ${index + 1}`;
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      image.tabIndex = 0;
-      image.setAttribute('role', 'button');
-      image.setAttribute('aria-label', `Mostrar ${image.alt} como imagen principal`);
-      this.stampIdentity(image, 'image');
-      image.onerror = () => {
-        image.remove();
-        this.setSectionVisibility(this.galleryWrap, this.gallery.childElementCount > 0);
-        this.updateLayoutState();
-      };
-      deferProductMedia(image, source);
-      const selectImage = () => {
-        if (!this.mainImage) return;
-        this.mainImage.src = source;
-        this.mainImage.alt = image.alt;
-        attachZoom(this.mainImage, new URL(source, `${SITE_ORIGIN}/`).href, image.alt);
-        [...this.gallery.children].forEach((item) => item.classList.toggle('is-active', item === image));
-      };
-      image.addEventListener('click', selectImage);
-      image.addEventListener('keydown', (event) => {
-        if (event.key !== 'Enter' && event.key !== ' ') return;
-        event.preventDefault();
-        selectImage();
-      });
-      this.gallery.appendChild(image);
-    });
+    this.ensureUnifiedStage();
+    const images = [...new Set([this.primaryImage, ...(this.product.galleryImages || [])]
+      .filter((src) => this.matchesProduct(src)))].slice(0, 5);
+    images.forEach((src, index) => this.gallery.appendChild(this.createImageThumbnail(src, index)));
+    const heading = this.galleryWrap?.querySelector('h2');
+    if (heading) heading.textContent = 'Fotos y pruebas reales';
     this.setSectionVisibility(this.galleryWrap, images.length > 0);
+    const first = this.gallery.querySelector('[data-detail-media-thumb]');
+    if (first) {
+      first.classList.add('is-active');
+      first.setAttribute('aria-pressed', 'true');
+    }
     return images.length;
   }
 
@@ -2847,41 +2960,19 @@ class ProductMediaGallery {
     if (!this.videos) return 0;
     this.videos.replaceChildren();
     const videos = [...new Set((this.product.videos || []).filter((src) => this.matchesProduct(src)))];
-    videos.forEach((src, index) => {
-      const video = document.createElement('video');
-      video.controls = true;
-      video.playsInline = true;
-      video.preload = 'metadata';
-      video.poster = this.mainImage?.getAttribute('src') || buildAssetUrl(this.product.mainImage || PLACEHOLDER_IMAGE);
-      video.setAttribute('aria-label', `Video de prueba de ${this.product.name}${videos.length > 1 ? ` ${index + 1}` : ''}`);
-      this.stampIdentity(video, 'video');
-      video.addEventListener('error', () => {
-        video.remove();
-        this.setSectionVisibility(this.videoWrap, this.videos.childElementCount > 0);
-        this.updateLayoutState();
-      }, { once: true });
-      deferProductMedia(video, buildAssetUrl(src));
-      this.videos.appendChild(video);
-    });
-    this.setSectionVisibility(this.videoWrap, videos.length > 0);
-    let jump = this.visual?.querySelector('[data-video-jump]');
-    if (videos.length > 0 && this.visual && !jump) {
-      jump = document.createElement('button');
-      jump.type = 'button';
-      jump.className = 'detail-video-jump';
-      jump.dataset.videoJump = '';
-      jump.textContent = '▶ Ver video de prueba';
-      jump.addEventListener('click', () => this.videoWrap?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-      this.mainImage?.insertAdjacentElement('afterend', jump);
-    }
-    if (jump) jump.hidden = videos.length === 0;
+    videos.forEach((src, index) => this.gallery?.appendChild(this.createVideoThumbnail(src, index, videos.length)));
+    this.setSectionVisibility(this.videoWrap, false);
+    const imageCount = this.gallery?.querySelectorAll('[data-product-media-kind="image"]').length || 0;
+    this.setSectionVisibility(this.galleryWrap, imageCount > 1 || videos.length > 0);
+    this.visual?.querySelector('[data-video-jump]')?.remove();
     return videos.length;
   }
 
   updateLayoutState() {
     if (!this.visual) return;
-    const galleryCount = this.gallery?.childElementCount || 0;
-    const videoCount = this.videos?.childElementCount || 0;
+    const imageCount = this.gallery?.querySelectorAll('[data-product-media-kind="image"]').length || 0;
+    const galleryCount = Math.max(0, imageCount - 1);
+    const videoCount = this.gallery?.querySelectorAll('[data-product-media-kind="video"]').length || 0;
     this.visual.classList.toggle('has-product-gallery', galleryCount > 0);
     this.visual.classList.toggle('has-product-video', videoCount > 0);
     this.visual.classList.toggle('is-main-media-only', galleryCount === 0 && videoCount === 0);
