@@ -67,6 +67,7 @@ test('official HL store hero respects real poster proportions', async ({ page })
   await dismissConsent(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/tienda-oficial-hl-cdmx/`, { waitUntil: 'domcontentloaded' });
+  await expect.poll(async () => page.locator('.zay-header').evaluate((header) => header.getBoundingClientRect().height)).toBeLessThan(100);
 
   const presentation = await page.evaluate(() => {
     const hero = document.querySelector('.store-location-hero');

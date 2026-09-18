@@ -121,3 +121,112 @@ body[data-v3-page="home"].zay-candidate .zay-footer-bottom{font-size:13px}
   body[data-v3-page="home"].zay-candidate .zay-final h2{font-size:31px}
   body[data-v3-page="home"].zay-candidate .zay-final p{font-size:16px;line-height:1.5}
 }
+
+/* Catalog cleanup: consistent media stage and clear category architecture. */
+body:not(.zay-detail) .zay-card-media{height:auto;aspect-ratio:1/1;padding:10%;background:linear-gradient(145deg,#f7f8f7,#ecefed);isolation:isolate}
+body:not(.zay-detail) .zay-card-media:before{content:"";position:absolute;inset:7%;border:1px solid rgba(88,98,105,.08);border-radius:6px;z-index:-1}
+body:not(.zay-detail) .zay-card-media img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center;transform:none}
+body:not(.zay-detail) .zay-card-body{min-height:220px;padding:21px}
+body:not(.zay-detail) .zay-card-body h3{order:1;min-height:2.6em;margin:0 0 9px;font-size:20px}
+body:not(.zay-detail) .zay-card-body>p{order:2;min-height:2.9em;margin:0 0 14px;font-size:14px;line-height:1.45}
+body:not(.zay-detail) .zay-card-body>strong{order:3}
+body:not(.zay-detail) .zay-card-body>div{order:4}
+.zay-family-landing>header{max-width:720px;margin-bottom:30px}
+.zay-family-landing>header h2{margin:0;font-size:42px;letter-spacing:-.035em;line-height:1.08}
+.zay-family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.zay-family-card{min-height:230px;border:1px solid var(--z-line);border-radius:10px;background:#fff;padding:28px;display:flex;flex-direction:column;color:var(--z-ink);box-shadow:0 8px 25px rgba(25,31,36,.055);transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.zay-family-card:hover{border-color:#ffb38f;box-shadow:0 12px 30px rgba(64,39,27,.1);transform:translateY(-2px)}
+.zay-family-card>span{font-size:28px;font-weight:800;letter-spacing:-.025em}
+.zay-family-card>strong{display:inline-flex;align-self:flex-start;margin-top:12px;padding:6px 10px;border-radius:999px;background:#fff0e8;color:var(--z-orange-dark);font-size:14px}
+.zay-family-card>p{margin:18px 0 24px;color:var(--z-muted);font-size:16px;line-height:1.5}
+.zay-family-card>b{margin-top:auto;color:var(--z-orange-dark);font-size:15px}
+.zay-view-all{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:28px;padding:0 20px;border:1px solid #aeb4b9;border-radius:6px;font-weight:750}
+.zay-category-products{margin-top:70px;padding-top:58px;border-top:1px solid var(--z-line)}
+.zay-filter-group h2,.zay-attribute-filters>h2{font-size:14px;line-height:1.3;letter-spacing:.08em}
+.zay-filter-row{min-height:48px;margin-bottom:4px;font-size:15px;font-weight:680;text-decoration:none}
+.zay-filter-row b{min-width:34px;height:27px;font-size:13px}
+.zay-attribute-filters{margin-top:26px;padding-top:24px;border-top:1px solid var(--z-line)}
+.zay-filter-select{display:grid;gap:7px;margin-top:14px;color:#353c42;font-size:14px;font-weight:700}
+.zay-filter-select select{width:100%;min-height:48px;border:1px solid #bbc1c5;border-radius:6px;background:#fff;padding:0 36px 0 11px;color:var(--z-ink);font:inherit}
+.zay-attribute-filters>button{width:100%;min-height:48px;margin-top:16px;border:0;border-radius:6px;background:var(--z-orange);color:#fff;font-size:15px;font-weight:800;cursor:pointer}
+.zay-results>header>a[data-clear]{min-height:44px;display:inline-flex;align-items:center;color:var(--z-orange-dark);font-weight:750}
+
+@media(max-width:1050px){.zay-family-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){
+  body:not(.zay-detail) .zay-card-media{height:auto;aspect-ratio:1/1;padding:10%}
+  body:not(.zay-detail) .zay-card-body{min-height:216px;padding:20px}
+  .zay-family-landing>header{margin-bottom:24px}
+  .zay-family-landing>header h2{font-size:34px}
+  .zay-family-grid{grid-template-columns:1fr;gap:14px}
+  .zay-family-card{min-height:0;padding:23px}
+  .zay-family-card>span{font-size:25px}
+  .zay-family-card>p{font-size:16px;margin:14px 0 20px}
+  .zay-filter-row,.zay-filter-select select,.zay-attribute-filters>button{min-height:48px}
+}
+
+/* Screen quality architecture. Brand first, then technology/quality, then model. */
+.zay-quality-section{margin-bottom:48px;padding:34px;border:1px solid var(--z-line);border-radius:12px;background:#fff;box-shadow:0 10px 30px rgba(25,31,36,.05)}
+.zay-quality-section>header{max-width:780px;margin-bottom:26px}
+.zay-quality-section>header h2{margin:0;font-size:36px;letter-spacing:-.03em;line-height:1.1}
+.zay-quality-section>header>p:last-child{margin:12px 0 0;color:var(--z-muted);font-size:16px;line-height:1.5}
+.zay-quality-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.zay-quality-card{border:1px solid #d7dcdf;border-radius:9px;background:#f7f8f7;overflow:hidden}
+.zay-quality-card>a{min-height:210px;padding:24px;display:flex;flex-direction:column;color:var(--z-ink)}
+.zay-quality-card>a>span{font-size:24px;font-weight:850;letter-spacing:-.02em}
+.zay-quality-card>a>strong{align-self:flex-start;margin-top:10px;padding:6px 10px;border-radius:999px;background:#fff;color:var(--z-orange-dark);font-size:14px}
+.zay-quality-card>a>p{margin:20px 0;color:var(--z-muted);font-size:16px;line-height:1.45}
+.zay-quality-card>a>b{margin-top:auto;color:var(--z-orange-dark);font-size:15px}
+.zay-quality-card>small{display:block;padding:13px 24px;border-top:1px solid #f2b99f;background:#fff7f2;color:#83320e;font-size:14px;font-weight:750}
+.zay-quality-card.is-active{border-color:var(--z-orange);background:#fff2eb;box-shadow:0 0 0 2px rgba(255,81,20,.12)}
+.zay-variant-panel{margin-top:22px;padding-top:22px;border-top:1px solid var(--z-line)}
+.zay-variant-panel h3{margin:0 0 14px;font-size:19px}
+.zay-variant-panel>div{display:flex;flex-wrap:wrap;gap:10px}
+.zay-variant-panel a{min-height:48px;padding:0 16px;border:1px solid #c9ced1;border-radius:7px;background:#fff;display:inline-flex;align-items:center;gap:10px;color:var(--z-ink);font-size:16px;font-weight:750}
+.zay-variant-panel a strong{display:inline-grid;place-items:center;min-width:28px;height:28px;border-radius:50%;background:#edf0f1;font-size:13px}
+.zay-variant-panel a.is-active{border-color:var(--z-orange);background:#fff0e8;color:var(--z-orange-dark)}
+.zay-fold-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.zay-fold-card{border:1px solid #d7dcdf;border-radius:10px;background:#f7f8f7;padding:24px}
+.zay-fold-card.is-active{border-color:var(--z-orange);background:#fff2eb;box-shadow:0 0 0 2px rgba(255,81,20,.12)}
+.zay-fold-card>a{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--z-ink)}
+.zay-fold-card>a span{font-size:25px;font-weight:850}.zay-fold-card>a strong{color:var(--z-orange-dark);font-size:14px}
+.zay-fold-card nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:17px}
+.zay-fold-card nav a{min-height:46px;padding:10px 12px;border:1px solid #d7dcdf;border-radius:6px;background:#fff;display:flex;align-items:center;color:#2d3439;font-size:15px;font-weight:700}
+
+/* Restored footer content in the current Zay visual language. */
+.zay-footer{padding:64px 32px 22px}
+.zay-footer-grid{width:min(1280px,100%);grid-template-columns:1.25fr .8fr 1.35fr .8fr;gap:48px}
+.zay-footer h2{margin:0 0 18px;color:#fff;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
+.zay-footer p,.zay-footer a{font-size:15px;line-height:1.55}
+.zay-footer-brand>img{width:190px;height:56px;object-fit:contain;object-position:left center;filter:none}
+.zay-footer-brand>p{max-width:34ch;margin:18px 0 22px;color:#c4c9cc}
+.zay-footer nav,.zay-footer-contact,.zay-footer-actions{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+.zay-footer nav a,.zay-footer-contact a,.zay-footer-actions a{min-height:32px;color:#dce0e2;text-decoration:none}
+.zay-footer nav a:hover,.zay-footer-contact a:hover,.zay-footer-actions a:hover{color:#fff}
+.zay-footer-contact p{margin:4px 0 0;color:#c4c9cc}.zay-footer-contact strong{color:#fff}
+.zay-footer .site-sales-footer-whatsapp{min-height:44px!important;padding:10px 14px!important;border:1px solid rgba(255,255,255,.25)!important;border-radius:6px!important;background:#087a40!important;color:#fff!important;font-weight:800}
+.zay-footer-app{min-height:46px!important;padding:11px 18px!important;border-radius:6px;background:var(--z-orange);color:#fff!important;font-weight:850}
+.zay-socials{display:flex;gap:10px}.zay-socials a{width:46px;height:46px;border:1px solid #454a4e;border-radius:50%;display:grid;place-items:center;background:#2a2e31;color:#fff}
+.zay-socials svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.zay-socials [data-social-link="facebook"]{color:#6da5ff}.zay-socials [data-social-link="facebook"] svg{fill:currentColor;stroke:none}
+.zay-socials [data-social-link="instagram"]{color:#f166b6}.zay-socials [data-social-link="tiktok"]{color:#70e7e3}.zay-socials [data-social-link="youtube"]{color:#ff6464}.zay-socials [data-social-link="youtube"] svg path{fill:currentColor;stroke:none}
+.zay-footer-bottom{width:min(1280px,100%);font-size:13px}
+
+@media(max-width:1050px){
+  .zay-quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .zay-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:800px){
+  .zay-quality-section{margin-bottom:26px;padding:22px 18px}
+  .zay-quality-section>header h2{font-size:30px}
+  .zay-quality-grid,.zay-fold-grid{grid-template-columns:1fr;gap:12px}
+  .zay-quality-card>a{min-height:0;padding:21px}
+  .zay-quality-card>a>span{font-size:22px}
+  .zay-quality-card>a>p{margin:14px 0 18px}
+  .zay-variant-panel>div{display:grid}.zay-variant-panel a{width:100%;justify-content:space-between}
+  .zay-fold-card{padding:20px}.zay-fold-card nav{grid-template-columns:1fr}.zay-fold-card nav a{min-height:48px}
+  .zay-footer{padding:50px 22px 20px}
+  .zay-footer-grid{grid-template-columns:1fr;gap:34px}
+  .zay-footer nav a,.zay-footer-contact a,.zay-footer-actions a{min-height:44px;display:flex;align-items:center}
+  .zay-footer-bottom{margin-top:38px;font-size:13px}
+  .zay-socials a{width:48px;height:48px}
+}
