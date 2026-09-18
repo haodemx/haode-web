@@ -32,11 +32,11 @@ test.describe('HAODE secondary sales unification phase 31', () => {
 
     await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
     await expect(page.locator('[data-detail-header-app]')).toBeVisible();
-    await expect(page.locator('.topnav a[aria-current="page"]')).toHaveAttribute('href', '/garantia/');
+    await expect(page.locator('.zay-footer a[href="/garantia/"]')).toBeVisible();
 
     const layout = await page.evaluate(() => {
       const h1 = document.querySelector('h1');
-      const header = document.querySelector('.catalog-topbar');
+      const header = document.querySelector('.zay-header');
       const strip = document.querySelector('.reference-conversion-strip');
       return {
         fontSize: Number.parseFloat(getComputedStyle(h1).fontSize),
@@ -49,7 +49,7 @@ test.describe('HAODE secondary sales unification phase 31', () => {
     expect(layout.fontSize).toBeLessThanOrEqual(58);
     expect(layout.headerHeight).toBeLessThanOrEqual(130);
     expect(layout.stripBackground).toBe('rgb(16, 18, 20)');
-    expect(layout.bodyBackground).toBe('rgb(248, 248, 246)');
+    expect(layout.bodyBackground).toBe('rgb(255, 255, 255)');
     await expectNoHorizontalOverflow(page);
   });
 
@@ -86,7 +86,7 @@ test.describe('HAODE secondary sales unification phase 31', () => {
       await page.setViewportSize({ width: 1440, height: 900 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-      const shellSelector = path === '/contacto/' ? '.v3-header' : '.reference-nav-shell';
+      const shellSelector = '.zay-header';
       const alignment = await page.locator(shellSelector).evaluate((shell) => {
         const box = shell.getBoundingClientRect();
         return {
@@ -96,14 +96,8 @@ test.describe('HAODE secondary sales unification phase 31', () => {
         };
       });
 
-      if (path === '/contacto/') {
-        expect(alignment.left).toBe(0);
-        expect(alignment.right).toBe(1440);
-      } else {
-        expect(alignment.left).toBeGreaterThanOrEqual(24);
-        expect(alignment.right).toBeLessThanOrEqual(1416);
-        expect(alignment.width).toBeLessThanOrEqual(1280);
-      }
+      expect(alignment.left).toBe(0);
+      expect(alignment.right).toBe(1440);
       await expectNoHorizontalOverflow(page);
     });
   }
@@ -123,7 +117,11 @@ test.describe('HAODE secondary sales unification phase 31', () => {
       await page.setViewportSize({ width, height: width < 700 ? 844 : 1000 });
       await page.goto(`${baseURL}/ai-smart-glasses-s1.html`, { waitUntil: 'domcontentloaded' });
 
-      await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
+      if (width > 1050) {
+        await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
+      } else {
+        await expect(page.locator('.zay-floating')).toBeVisible();
+      }
       await expect(page.locator('[data-detail-header-app]')).toBeVisible();
       await expect(page.locator('[data-site-sales-footer]')).toBeVisible();
       await expectNoHorizontalOverflow(page);

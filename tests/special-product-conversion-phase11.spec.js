@@ -44,12 +44,15 @@ test.describe('HAODE special product conversion UI phase 11', () => {
 async function expectUnifiedDetailHeader(page) {
   const whatsapp = page.locator('[data-detail-header-whatsapp]');
   const app = page.locator('[data-detail-header-app]');
-  await expect(whatsapp).toBeVisible();
   await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
-  await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
-  await expect(whatsapp).toHaveCSS('color', 'rgb(255, 255, 255)');
   await expect(app).toBeVisible();
   await expect(app).toHaveAttribute('href', /\/app\/$/);
-  await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 10)');
+  await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 18)');
   await expect(app).toHaveCSS('color', 'rgb(255, 255, 255)');
+  if ((await page.viewportSize()).width > 1050) {
+    await expect(whatsapp).toBeVisible();
+    await expect(whatsapp).toHaveCSS('background-color', 'rgb(21, 154, 85)');
+  } else {
+    await expect(page.locator('.zay-floating')).toBeVisible();
+  }
 }

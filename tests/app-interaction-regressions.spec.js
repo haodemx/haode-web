@@ -96,20 +96,19 @@ test("desktop share copies the product URL when native sharing is unavailable", 
 test("catalog group and category use unique IDs", async ({ page }) => {
   await page.goto(`${BASE_URL}/productos/`, { waitUntil: "domcontentloaded" });
 
-  await expect(page.locator('[data-catalog-group="celulares-samsung"]')).toBeVisible({ timeout: 15000 });
-  await expect(page.locator('[id="celulares-samsung"]')).toHaveCount(1);
-  await expect(page.locator('section[data-category="celulares-samsung"]')).toHaveAttribute(
-    "id",
-    "celulares-samsung-productos",
-  );
+  const cards = page.locator('[data-catalog-card]');
+  await expect(cards.first()).toBeAttached({ timeout: 15000 });
+  const ids = await cards.evaluateAll((nodes) => nodes.map((node) => node.dataset.id));
+  expect(ids.length).toBe(186);
+  expect(new Set(ids).size).toBe(ids.length);
+  expect(await page.locator('[data-catalog-card][data-id="celular-samsung-note-20-ultra-12-plus-256"]').count()).toBe(1);
 });
 
 test("homepage App links describe their real destinations", async ({ page }) => {
   await page.goto(`${BASE_URL}/`, { waitUntil: "domcontentloaded" });
 
-  const appEntry = page.locator(".reference-head-account");
-  await expect(appEntry).toContainText("Abrir");
+  const appEntry = page.locator("[data-detail-header-app]");
   await expect(appEntry).toContainText("APP");
   await expect(appEntry).toHaveAttribute("href", "/app/");
-  await expect(page.locator('.reference-nav a[href="/app/#lista"]')).toHaveText("Catálogo");
+  await expect(page.locator('.zay-footer a[href="/app/"]')).toContainText("APP");
 });

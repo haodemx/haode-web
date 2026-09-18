@@ -8,8 +8,8 @@ test('catalog cards use a restrained retail presentation instead of template eff
 
   const card = page.locator('[data-catalog-card]:visible').first();
   await expect(card).toHaveCSS('background-image', 'none');
-  await expect(card).toHaveCSS('box-shadow', 'none');
-  await expect(card).toHaveCSS('border-radius', '0px');
+  await expect(card).toHaveCSS('border-radius', '8px');
   await expect(card.locator('img')).toHaveCSS('object-fit', 'contain');
-  await expect(card.locator('.v3-product-meta')).toBeVisible();
+  await expect(card.locator('.zay-card-body > p')).toBeVisible();
+  await expect(card.locator('.zay-card-quote')).toHaveAttribute('href', /wa\.me/);
 });

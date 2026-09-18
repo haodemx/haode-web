@@ -7480,6 +7480,20 @@ body.product-detail-page .detail-video-wrap {
   border: 1px solid rgba(32, 27, 21, 0.08);
 }
 
+body.product-detail-page :is(.detail-gallery-wrap, .detail-video-wrap)[hidden] {
+  display: none !important;
+}
+
+body.product-detail-page .detail-visual.is-main-media-only {
+  gap: 0;
+}
+
+body.product-detail-page .detail-videos video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #101012;
+}
+
 body.product-detail-page .detail-gallery-wrap h2,
 body.product-detail-page .detail-video-wrap h2,
 body.product-detail-page .detail-card h2 {

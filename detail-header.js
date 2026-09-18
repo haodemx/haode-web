@@ -101,9 +101,9 @@
     document.body.appendChild(footerScript);
   }
 
-  if (isV3DetailRoute && !document.querySelector('script[src*="/v3-screen-atlas.js"]')) {
+  if (!document.querySelector('script[src*="/v3-screen-atlas.js"]')) {
     const v3Script = document.createElement('script');
-    v3Script.src = '/v3-screen-atlas.js?v=20260914-v3-transplant';
+    v3Script.src = '/v3-screen-atlas.js?v=20260917-zay-full-candidate';
     document.body.appendChild(v3Script);
   }
   if (isV3DetailRoute) document.dispatchEvent(new CustomEvent('haode:v3-detail-ready'));

@@ -2,14 +2,13 @@ const { test, expect } = require('@playwright/test');
 
 const baseURL = (process.env.BASE_URL || 'http://127.0.0.1:4177').replace(/\/$/, '');
 const pages = [
-  ['/', 'Pantallas profesionales'],
-  ['/productos/', 'Pantallas'],
+  ['/', 'Pantallas y tecnología'],
+  ['/productos/', 'Productos publicados'],
   ['/producto/iphone-oled-11promax/', 'Pantalla para iPhone 11 Pro Max'],
   ['/micas.html', 'Hidrogel'],
-  ['/baterias/', 'Baterías'],
   ['/productos-ai/', 'Productos AI'],
   ['/novedades/', 'Novedades'],
-  ['/contacto/', 'Contacto'],
+  ['/contacto/', 'HAODE México'],
 ];
 
 test.beforeEach(async ({ page }) => {
@@ -23,9 +22,9 @@ test('V3 renders every complete route with the shared navigation and footer', as
     await expect(page.locator('h1')).toContainText(heading);
     await expect(page.locator('[data-v3-header]')).toBeVisible();
     await expect(page.locator('[data-v3-footer]')).toBeAttached();
-    await expect(page.locator('.v3-nav')).toContainText('Pantallas');
-    await expect(page.locator('.v3-nav')).toContainText('Hidrogel');
-    await expect(page.locator('.v3-nav')).not.toContainText('Fundas');
+    await expect(page.locator('.zay-nav')).toContainText('Pantallas');
+    await expect(page.locator('.zay-nav')).toContainText('Hidrogel');
+    await expect(page.locator('.zay-nav')).not.toContainText('Fundas');
     await expect(page.locator('a[href="/app/"]').first()).toBeAttached();
   }
 });
@@ -37,22 +36,20 @@ test('390px layouts do not overflow and mobile navigation is usable', async ({ p
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
   }
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
-  const menu = page.locator('.v3-menu');
+  const menu = page.locator('.zay-menu-button');
   await expect(menu).toBeVisible();
   await menu.click();
-  await expect(page.locator('#v3-navigation')).toBeVisible();
+  await expect(page.locator('#zay-nav')).toBeVisible();
   await expect(menu).toHaveAttribute('aria-expanded', 'true');
 });
 
 test('Pantallas uses real catalog data and supports filter and search', async ({ page }) => {
-  await page.goto(`${baseURL}/productos/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('[data-v3-product]:visible')).toHaveCount(12);
-  await page.locator('[data-v3-search]').fill('S23 Ultra');
-  await expect(page.locator('[data-v3-product]:visible').first()).toContainText('S23 Ultra');
-  await expect(page.locator('[data-v3-results]')).toContainText('modelos visibles');
-  await page.locator('[data-v3-search]').fill('');
-  await page.locator('[data-v3-filter="iphone-oled"]').click();
-  await expect(page.locator('[data-v3-product]:visible').first()).toHaveAttribute('data-category', 'iphone-oled');
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(`${baseURL}/productos/?q=S23%20Ultra`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-catalog-card]:visible').first()).toContainText('S23 Ultra');
+  await expect(page.locator('[data-v3-results]')).toContainText('productos encontrados');
+  await page.goto(`${baseURL}/productos/?category=pantallas&sub=iphone-oled`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-catalog-card]:visible').first()).toHaveAttribute('data-category', 'iphone-oled');
 });
 
 test('product detail keeps price, quantity, WhatsApp, APP and canonical behavior', async ({ page }) => {
@@ -72,36 +69,39 @@ test('product detail keeps price, quantity, WhatsApp, APP and canonical behavior
 
 test('Baterías exposes no invented catalog entries', async ({ page }) => {
   await page.goto(`${baseURL}/baterias/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.getByText('FOTOGRAFÍA REAL PENDIENTE DE VALIDACIÓN')).toBeVisible();
-  await expect(page.getByText('Sin productos confirmados.')).toBeVisible();
-  await expect(page.locator('[data-v3-product]')).toHaveCount(0);
+  await expect(page.locator('[data-catalog-card]')).toHaveCount(0);
+  await expect(page.locator('body')).not.toContainText(/comprar batería|precio de batería/i);
 });
 
-test('selected repair-lab homepage uses the locked laboratory photography and honest product assets', async ({ page }) => {
+test('approved Zay homepage uses a real product hero and the three truthful categories', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('body')).toHaveClass(/v3-lab/);
-  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('src', '/assets/images/v3-lab-hero.png');
-  await expect(page.locator('.lab-hero-photo')).toHaveAttribute('alt', /laboratorio/i);
-  await expect(page.locator('.lab-category--hydrogel')).toHaveAttribute('data-real-asset-required', 'true');
-  await expect(page.locator('.lab-category--battery')).toHaveAttribute('data-real-asset-required', 'true');
-  await expect(page.locator('.lab-buying-flow .v3-step')).toHaveCount(4);
-  await expect(page.locator('.lab-category--screens')).toBeVisible();
-  await expect(page.locator('.lab-category--hydrogel')).toBeVisible();
-  await expect(page.locator('.lab-category--battery [class*="pending"]')).toBeVisible();
+  await expect(page.locator('body')).toHaveClass(/zay-candidate/);
+  const hero = page.locator('.zay-hero figure img');
+  await expect(hero).toBeVisible();
+  await expect(hero).not.toHaveAttribute('src', /placeholder/);
+  await expect(page.locator('.zay-steps>div')).toHaveCount(4);
+  await expect(page.locator('.zay-category-card')).toHaveCount(3);
+  await expect(page.locator('.zay-category-card')).toContainText(['Pantallas', 'Hidrogel', 'Productos AI']);
+  await expect(page.locator('body')).not.toContainText('Baterías');
 });
 
-test('laboratory homepage avoids synthetic hero and placeholder effects', async ({ page }) => {
+test('approved Zay homepage avoids synthetic background and placeholder effects', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('body')).toHaveClass(/zay-candidate/);
+  await page.waitForFunction(() => {
+    const hero = document.querySelector('.zay-hero');
+    return hero && getComputedStyle(hero).backgroundImage.includes('linear-gradient');
+  });
   const visualStyle = await page.evaluate(() => {
-    const hero = getComputedStyle(document.querySelector('.lab-hero'));
-    const hydrogel = getComputedStyle(document.querySelector('.lab-hydrogel-visual'), '::after');
+    const hero = getComputedStyle(document.querySelector('.zay-hero'));
+    const image = document.querySelector('.zay-hero figure img');
     return {
       heroBackgroundImage: hero.backgroundImage,
       heroBackdropFilter: hero.backdropFilter,
-      hydrogelPseudoContent: hydrogel.content,
+      imageSrc: image?.getAttribute('src') || '',
     };
   });
-  expect(visualStyle.heroBackgroundImage).toBe('none');
+  expect(visualStyle.heroBackgroundImage).toContain('linear-gradient');
   expect(visualStyle.heroBackdropFilter).toBe('none');
-  expect(visualStyle.hydrogelPseudoContent).toBe('none');
+  expect(visualStyle.imageSrc).not.toContain('placeholder');
 });

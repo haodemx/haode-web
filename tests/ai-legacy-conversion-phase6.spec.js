@@ -16,7 +16,7 @@ test.describe("HAODE legacy AI conversion UI phase 6", () => {
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${BASE_URL}/ai-productos.html`, { waitUntil: "domcontentloaded" });
-    await expect(page.locator(".topnav a").first()).toBeVisible();
+    await expect(page.locator(".zay-menu-button")).toBeVisible();
     await expect(page.locator('[data-reference-conversion="ai-legacy-list"]')).toBeVisible();
     await expectNoHorizontalOverflow(page);
   });
@@ -27,8 +27,8 @@ test.describe("HAODE legacy AI conversion UI phase 6", () => {
       await page.goto(`${BASE_URL}${path}`, { waitUntil: "domcontentloaded" });
 
       await expect(page.locator("body")).toHaveClass(/ai-detail-reference-page/);
-      await expect(page.locator(".topnav")).toBeHidden();
-      await expect(page.locator("[data-detail-header-whatsapp]")).toBeVisible();
+      await expect(page.locator(".zay-menu-button")).toBeVisible();
+      await expect(page.locator(".zay-floating")).toBeVisible();
       await expect(page.locator("[data-detail-header-app]")).toBeVisible();
       await expect(page.locator(".reference-conversion-strip").first()).toContainText("WhatsApp privado");
       await expect(page.locator(".new-page-hero-inner a[href*='wa.me']").first()).toBeVisible();

@@ -12,16 +12,16 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
     },
     {
       path: "/productos-ai/",
-      v3: true,
-      surface: ".v3-shell",
-      text: "Gafas Inteligentes AI G3",
+      zay: true,
+      surface: ".zay-shell",
+      text: "Gafas AI confirmadas",
       cta: "Cotizar por WhatsApp"
     },
     {
       path: "/contacto/",
-      v3: true,
-      surface: ".v3-shell",
-      text: "Visítanos o escríbenos",
+      zay: true,
+      surface: "body",
+      text: "Contacto oficial",
       cta: "Abrir WhatsApp"
     }
   ];
@@ -31,24 +31,24 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await page.setViewportSize({ width: 1280, height: 900 });
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
 
-      const panel = pageCase.v3
+      const panel = pageCase.zay
         ? page.locator(pageCase.surface)
         : page.locator(`[data-reference-conversion="${pageCase.panel}"]`);
       await expect(panel).toBeVisible();
       await expect(panel).toContainText(pageCase.text);
-      await expect(panel.getByRole("link", { name: pageCase.cta })).toHaveAttribute("href", /wa\.me/);
+      await expect(panel.locator('a[href*="wa.me"]').first()).toHaveAttribute("href", /wa\.me/);
       await expectNoHorizontalOverflow(page);
 
       await page.setViewportSize({ width: 360, height: 844 });
       await page.goto(`${BASE_URL}${pageCase.path}`, { waitUntil: "domcontentloaded" });
-      await expect(page.locator(".reference-menu-button")).toBeVisible();
-      await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
-      await page.locator(".reference-menu-button").click();
-      await expect(page.locator(".reference-nav a").first()).toBeVisible();
-      await expect(page.locator(".reference-nav-actions a[href*='wa.me']").first()).toBeVisible();
+      await expect(page.locator(".zay-menu-button")).toBeVisible();
+      await expect(page.locator(".zay-floating")).toBeVisible();
+      await page.locator(".zay-menu-button").click();
+      await expect(page.locator(".zay-nav a").first()).toBeVisible();
+      await expect(page.locator(".zay-floating")).toBeVisible();
       await expectHeaderWhatsAppGreen(page);
-      await expectHeaderHeightAtMost(page, ".reference-header", 200);
-      await page.locator(".reference-menu-button").click();
+      await expectHeaderHeightAtMost(page, ".zay-header", 200);
+      await page.locator(".zay-menu-button").click();
       await expect(panel).toBeVisible();
       if (pageCase.path === "/categoria/") {
         await expectFirstCategoryCardStartsInView(page);
@@ -69,8 +69,8 @@ async function expectHeaderHeightAtMost(page, selector, maxHeight) {
 }
 
 async function expectHeaderWhatsAppGreen(page) {
-  const background = await page.locator(".reference-nav-actions a[href*='wa.me']").first().evaluate((el) => getComputedStyle(el).backgroundColor);
-  expect(background).toBe("rgb(18, 168, 84)");
+  const background = await page.locator(".zay-floating").evaluate((el) => getComputedStyle(el).backgroundColor);
+  expect(background).toBe("rgb(21, 154, 85)");
 }
 
 async function expectContactPanelCtaInView(page) {

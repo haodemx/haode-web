@@ -313,6 +313,7 @@
     getConsent() {
       return { ...currentConsent };
     },
-    updateConsent
+    updateConsent,
+    mountControls: mountPrivacyControls
   });
 })(window);

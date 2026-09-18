@@ -18,7 +18,7 @@ test.describe('V3 catalog progressive disclosure', () => {
 
   test('plain catalog WhatsApp entry keeps the confirmed quote template', async ({ page }) => {
     await page.goto(`${BASE_URL}/productos/`, { waitUntil: 'domcontentloaded' });
-    const href = await page.locator('.v3-floating[href*="wa.me"]').getAttribute('href');
+    const href = await page.locator('.zay-floating[href*="wa.me"]').getAttribute('href');
     expect(decodeURIComponent(href || '')).toContain('Modelo/SKU:');
     expect(decodeURIComponent(href || '')).toContain('Cantidad:');
   });

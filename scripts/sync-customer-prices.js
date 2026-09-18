@@ -557,8 +557,8 @@ function genericProductPage(product) {
       <div class="detail-grid">
         <section class="detail-visual" aria-label="Imagen del producto">
           <img class="detail-main-image" data-detail-main-image src="${displayImage}" alt="${escapeHtml(product.name)}" width="1000" height="1000" loading="eager" fetchpriority="high" decoding="async" />
-${placeholder ? '          <p class="product-image-status" data-product-image-status>Imagen en actualización</p>\n' : ''}          <div class="detail-gallery-wrap"><h2>Galería</h2><div class="detail-gallery" data-detail-gallery></div></div>
-          <div class="detail-video-wrap"><h2>Video</h2><div class="detail-videos" data-detail-videos></div></div>
+${placeholder ? '          <p class="product-image-status" data-product-image-status>REAL ASSET REQUIRED</p>\n' : ''}          <div class="detail-gallery-wrap"><h2>Fotos del producto</h2><div class="detail-gallery" data-detail-gallery></div></div>
+          <div class="detail-video-wrap"><h2>Video de prueba</h2><div class="detail-videos" data-detail-videos></div></div>
         </section>
         <aside class="detail-info">
           <article class="detail-card"><p class="detail-meta" data-detail-quality>${escapeHtml(product.quality)}</p><p class="detail-description" data-detail-description>${escapeHtml(product.description)}</p><div><p class="detail-price">Precio publicado</p><p class="detail-price-note" data-detail-price>${escapeHtml(product.prices?.[0]?.price)}</p></div><div class="detail-buttons"><a class="btn btn-primary" data-detail-whatsapp href="${whatsapp}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a><a class="btn btn-secondary" href="/app/">Abrir App HAODE</a></div></article>
@@ -573,7 +573,7 @@ ${placeholder ? '          <p class="product-image-status" data-product-image-st
   <script src="/campaign-attribution.js?v=20260813-ga4-conversions"></script>
   <script src="/data/products.generated.js?v=20260725-catalog-complete"></script>
   <script src="/v3-screen-atlas.js?v=20260914-v3-transplant"></script>
-  <script src="/products.js?v=20260813-ga4-conversions"></script>
+  <script src="/products.js?v=20260915-final-detail"></script>
   <script src="/detail-header.js?v=20260725-catalog-complete"></script>
 </body>
 </html>

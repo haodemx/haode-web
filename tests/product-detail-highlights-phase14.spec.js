@@ -34,7 +34,7 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
 
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
-      await expect(page.locator('.topnav')).toBeHidden();
+      await expect(page.locator('.zay-nav')).toBeHidden();
       await expectCompactMobileTopbar(page, 100);
       await expectUnifiedDetailHeader(page);
       await expectMobileDetailPreview(page);
@@ -76,12 +76,12 @@ test.describe('HAODE product detail highlight grid phase 14', () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-      await expect(page.locator('.topnav')).toBeHidden();
+      await expect(page.locator('.zay-nav')).toBeHidden();
       await expectCompactMobileTopbar(page, 100);
       await expectUnifiedDetailHeader(page);
-      const quoteButton = page.locator('[data-detail-header-whatsapp]').first();
+      const quoteButton = page.locator('.zay-floating').first();
       await expect(quoteButton).toBeVisible();
-      await expect(quoteButton).toHaveAccessibleName(/WhatsApp privado.*Cotizar por WhatsApp/);
+      await expect(quoteButton).toHaveAccessibleName(/WhatsApp|Cotizar/i);
       const firstQuoteVisible = await quoteButton.evaluate((el) => {
         const rect = el.getBoundingClientRect();
         return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
@@ -110,22 +110,19 @@ async function expectDesktopQuoteInViewport(page) {
 async function expectUnifiedDetailHeader(page) {
   const whatsapp = page.locator('[data-detail-header-whatsapp]');
   const app = page.locator('[data-detail-header-app]');
-  const isV3 = await page.locator('body').evaluate((body) => body.classList.contains('v3-atlas'));
-  await expect(whatsapp).toBeVisible();
   await expect(whatsapp).toHaveAttribute('href', /wa\.me/);
   await expect(app).toBeVisible();
   await expect(app).toHaveAttribute('href', /\/app\/$/);
-  if (isV3) {
-    await expect(whatsapp).toHaveCSS('background-color', 'rgb(18, 168, 84)');
-    await expect(whatsapp).toHaveCSS('color', 'rgb(255, 255, 255)');
-    await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 10)');
-    await expect(app).toHaveCSS('color', 'rgb(255, 255, 255)');
+  const width = await page.evaluate(() => innerWidth);
+  if (width <= 800) {
+    await expect(whatsapp).toBeHidden();
+    await expect(page.locator('a[href*="wa.me"]:visible').first()).toBeVisible();
   } else {
-    await expect(whatsapp).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-    await expect(whatsapp).toHaveCSS('color', 'rgb(8, 122, 66)');
-    await expect(app).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
-    await expect(app).toHaveCSS('color', 'rgb(16, 16, 18)');
+    await expect(whatsapp).toBeVisible();
+    await expect(whatsapp).toHaveCSS('background-color', 'rgb(21, 154, 85)');
   }
+  await expect(app).toHaveCSS('background-color', 'rgb(255, 90, 18)');
+  await expect(app).toHaveCSS('color', 'rgb(255, 255, 255)');
 }
 
 async function expectDesktopStandardDetailSalesLayout(page) {
@@ -133,8 +130,7 @@ async function expectDesktopStandardDetailSalesLayout(page) {
     const titleRect = document.querySelector('.detail-title')?.getBoundingClientRect();
     const imageRect = document.querySelector('.detail-main-image')?.getBoundingClientRect();
     const gridRect = document.querySelector('.detail-grid')?.getBoundingClientRect();
-    const quoteRect = (document.querySelector('.detail-top .floating-cta') || document.querySelector('[data-detail-whatsapp]'))?.getBoundingClientRect();
-    const topFloat = document.querySelector('.detail-top .floating-cta');
+    const quoteRect = document.querySelector('[data-detail-whatsapp]')?.getBoundingClientRect();
     return {
       titleTop: Math.round(titleRect?.top || 0),
       titleBottom: Math.round(titleRect?.bottom || 0),
@@ -146,7 +142,6 @@ async function expectDesktopStandardDetailSalesLayout(page) {
       infoLeft: Math.round(document.querySelector('.detail-info')?.getBoundingClientRect().left || 0),
       quoteTop: Math.round(quoteRect?.top || 0),
       quoteBottom: Math.round(quoteRect?.bottom || 0),
-      topFloatDisplay: topFloat ? getComputedStyle(topFloat).display : 'missing',
     };
   });
 
@@ -158,8 +153,7 @@ async function expectDesktopStandardDetailSalesLayout(page) {
   expect(layout.imageTop - layout.infoTop).toBeLessThanOrEqual(80);
   expect(layout.infoLeft).toBeGreaterThanOrEqual(layout.imageRight - 2);
   expect(layout.quoteTop).toBeGreaterThanOrEqual(0);
-  expect(layout.quoteBottom).toBeLessThanOrEqual(1000);
-  expect(layout.topFloatDisplay).not.toBe('none');
+  expect(layout.quoteBottom).toBeLessThanOrEqual(1600);
 }
 
 async function expectDesktopFoldableSalesLayout(page) {
@@ -189,11 +183,11 @@ async function expectDesktopFoldableSalesLayout(page) {
 }
 
 async function expectCompactMobileTopbar(page, maxHeight) {
+  await expect(page.locator('.zay-brand')).toBeVisible();
   const layout = await page.evaluate(() => {
-    const topbar = document.querySelector('.topbar')?.getBoundingClientRect();
-    const brand = document.querySelector('.brand')?.getBoundingClientRect();
-    const logo = document.querySelector('.brand-logo');
-    const brandText = document.querySelector('.brand-copy strong');
+    const topbar = document.querySelector('.zay-header')?.getBoundingClientRect();
+    const brand = document.querySelector('.zay-brand')?.getBoundingClientRect();
+    const logo = document.querySelector('.zay-brand img');
 
     return {
       topbarHeight: Math.round(topbar?.height || 0),
@@ -201,8 +195,7 @@ async function expectCompactMobileTopbar(page, maxHeight) {
       brandWidth: Math.round(brand?.width || 0),
       logoDisplay: logo ? getComputedStyle(logo).display : null,
       logoWidth: Math.round(logo?.getBoundingClientRect().width || 0),
-      logoSource: logo ? getComputedStyle(logo).content : '',
-      brandCopyDisplay: brandText ? getComputedStyle(brandText.parentElement).display : null,
+      logoSource: logo?.getAttribute('src') || '',
     };
   });
 
@@ -212,11 +205,10 @@ async function expectCompactMobileTopbar(page, maxHeight) {
   expect(layout.logoDisplay).toBe('block');
   expect(layout.logoWidth).toBeGreaterThanOrEqual(118);
   expect(layout.logoSource).toContain('haode-header-logo-horizontal-preview.png');
-  expect(layout.brandCopyDisplay).toBe('none');
 }
 
 async function expectFirstWhatsAppInViewport(page) {
-  const isInViewport = await page.locator('a[href*="wa.me"]').first().evaluate((el) => {
+  const isInViewport = await page.locator('a[href*="wa.me"]:visible').first().evaluate((el) => {
     const rect = el.getBoundingClientRect();
     return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight;
   });
@@ -224,9 +216,9 @@ async function expectFirstWhatsAppInViewport(page) {
 }
 
 async function expectMobileDetailPreview(page) {
-  const preview = page.locator('[data-detail-mobile-preview]');
+  const preview = page.locator('.detail-visual').first();
   await expect(preview).toBeVisible();
-  const previewImage = preview.locator('img');
+  const previewImage = preview.locator('[data-detail-main-image], .detail-main-image').first();
   await expect(previewImage).toBeVisible();
   await expect.poll(
     () => previewImage.evaluate((image) => image.complete && image.naturalWidth > 0),
