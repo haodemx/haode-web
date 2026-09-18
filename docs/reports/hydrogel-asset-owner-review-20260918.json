@@ -21,17 +21,17 @@
     {
       "product": "Matte",
       "filePath": "assets/products/micas/matte/main.png",
-      "source": "/Volumes/MACSSD/haode产品素材/手机膜/haode mica matte.png",
+      "source": "/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/haode mica matte.png",
       "resolution": "1024x1536",
       "sha256": "ed0bf69572a19da5d8602512e9339f04e8a2c28484e325af73ede2ee30f75ab6",
-      "sourceStatus": "SOURCE_UNCONFIRMED",
-      "currentQc": "REJECTED_CURRENT_MAIN",
-      "duplicateStatus": "DUPLICATE",
-      "proposedWebsiteUse": "Main image for MICA MATTE after owner confirms this is HAODE's real packaging/product artwork.",
-      "reviewNote": "Owner rejected the current main image because it looks like packaging artwork and its source identity is not confirmed. No stronger real-asset alternative was found in the reviewed library.",
-      "sourceConfirmed": false,
-      "qcPass": false,
-      "approvedForWeb": false
+      "sourceStatus": "OWNER_CONFIRMED",
+      "currentQc": "QC_PASS",
+      "duplicateStatus": "SOURCE_MATCHES_CURRENT_MAIN",
+      "proposedWebsiteUse": "Approved main image for MICA MATTE.",
+      "reviewNote": "Owner supplied this exact primary-library file for the Matte product on 2026-09-18. It contains no price, preorder, shipping or warranty statement.",
+      "sourceConfirmed": true,
+      "qcPass": true,
+      "approvedForWeb": true
     },
     {
       "product": "Privacy HD",
@@ -51,14 +51,14 @@
     {
       "product": "Privacy Matte",
       "filePath": "assets/products/micas/privacidad-matte/main.png",
-      "source": "/Volumes/MACSSD/haode产品素材/手机膜/privacy matte.png",
+      "source": "/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/privacy matte.png",
       "resolution": "1024x1536",
       "sha256": "27c3e03dfcf2be1bafaf8bda976b713cb95ced9a8efc38b6aaf49ac17302983e",
-      "sourceStatus": "SOURCE_UNCONFIRMED",
-      "currentQc": "REJECTED_CURRENT_MAIN",
-      "duplicateStatus": "DUPLICATE",
-      "proposedWebsiteUse": "Main image for MICA PRIVACIDAD MATTE after owner confirms the product and every visible claim.",
-      "reviewNote": "Owner rejected the current main image because it contains unconfirmed stock, shipping and one-year warranty claims.",
+      "sourceStatus": "OWNER_PROVIDED_IDENTITY_CONFIRMED",
+      "currentQc": "HOLD_FOR_PUBLIC_CLAIMS_CONFIRMATION",
+      "duplicateStatus": "SOURCE_MATCHES_CURRENT_MAIN",
+      "proposedWebsiteUse": "Do not approve for web until the visible nationwide shipping, Mexico stock, immediate shipping and one-year warranty claims are separately confirmed; otherwise use the clean replacement candidate.",
+      "reviewNote": "Owner supplied the exact product file, which confirms asset identity but does not by itself approve its visible shipping, stock and warranty claims.",
       "replacementCandidates": [
         {
           "filePath": "/Volumes/MACSSD/HAODE_STORAGE/02_進行中項目/HAODE-MARKETING/05-MICAS/haode-privacy-matte-9ce38b8a.png",
@@ -68,7 +68,7 @@
           "note": "Clean branded packaging artwork with no price, preorder, shipping or warranty statement; source identity still needs owner confirmation."
         }
       ],
-      "sourceConfirmed": false,
+      "sourceConfirmed": true,
       "qcPass": false,
       "approvedForWeb": false
     },

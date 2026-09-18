@@ -71,7 +71,7 @@ test('keyword map assigns one distinct search intent to every Phase 1 URL', () =
   for (const url of urls) assert.equal(map.split(url).length - 1, 1, `${url} must have one target row`);
 });
 
-test('owner-confirmed HD asset is approved while the remaining candidates stay gated', () => {
+test('owner-confirmed clean assets are approved while risky claims and identities stay gated', () => {
   const review = JSON.parse(read('docs/reports/hydrogel-asset-owner-review-20260918.json'));
   assert.equal(review.assets.length, 5);
   const hd = review.assets.find((asset) => asset.product === 'HD Clear');
@@ -84,15 +84,27 @@ test('owner-confirmed HD asset is approved while the remaining candidates stay g
   assert.equal(hd.qcPass, true);
   assert.equal(hd.approvedForWeb, true);
 
-  for (const asset of review.assets.filter((item) => item.product !== 'HD Clear')) {
+  const matte = review.assets.find((asset) => asset.product === 'Matte');
+  assert.equal(matte.source, '/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/haode mica matte.png');
+  assert.equal(matte.sourceStatus, 'OWNER_CONFIRMED');
+  assert.equal(matte.currentQc, 'QC_PASS');
+  assert.equal(matte.sourceConfirmed, true);
+  assert.equal(matte.qcPass, true);
+  assert.equal(matte.approvedForWeb, true);
+
+  for (const asset of review.assets.filter((item) => ['Privacy HD', 'X200T'].includes(item.product))) {
     assert.equal(asset.sourceConfirmed, false);
     assert.equal(asset.qcPass, false);
     assert.equal(asset.approvedForWeb, false);
   }
 
-  assert.equal(review.assets.find((asset) => asset.product === 'Matte').currentQc, 'REJECTED_CURRENT_MAIN');
   assert.equal(review.assets.find((asset) => asset.product === 'Privacy HD').currentQc, 'HOLD_FOR_OWNER_IDENTITY_CONFIRMATION');
-  assert.equal(review.assets.find((asset) => asset.product === 'Privacy Matte').currentQc, 'REJECTED_CURRENT_MAIN');
+  const privacyMatte = review.assets.find((asset) => asset.product === 'Privacy Matte');
+  assert.equal(privacyMatte.source, '/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/privacy matte.png');
+  assert.equal(privacyMatte.sourceConfirmed, true);
+  assert.equal(privacyMatte.qcPass, false);
+  assert.equal(privacyMatte.approvedForWeb, false);
+  assert.equal(privacyMatte.currentQc, 'HOLD_FOR_PUBLIC_CLAIMS_CONFIRMATION');
   assert.equal(review.assets.find((asset) => asset.product === 'X200T').currentQc, 'HOLD_FOR_OWNER_IDENTITY_CONFIRMATION');
 
   const products = read('data/products.generated.js');
