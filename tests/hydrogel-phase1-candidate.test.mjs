@@ -71,13 +71,32 @@ test('keyword map assigns one distinct search intent to every Phase 1 URL', () =
   for (const url of urls) assert.equal(map.split(url).length - 1, 1, `${url} must have one target row`);
 });
 
-test('candidate asset records remain unapproved pending owner review', () => {
+test('owner-confirmed HD asset is approved while the remaining candidates stay gated', () => {
   const review = JSON.parse(read('docs/reports/hydrogel-asset-owner-review-20260918.json'));
   assert.equal(review.assets.length, 5);
-  for (const asset of review.assets) {
+  const hd = review.assets.find((asset) => asset.product === 'HD Clear');
+  assert.ok(hd);
+  assert.equal(hd.source, '/Volumes/MACSSD/HAODE_STORAGE/01_素材主庫/haode产品素材/手机膜/haode mica hd.png');
+  assert.equal(hd.sha256, 'df542437288941c231905d692d9462149a3567a03bfaed7d0cf57d31a62d0f4e');
+  assert.equal(hd.sourceStatus, 'OWNER_CONFIRMED');
+  assert.equal(hd.currentQc, 'QC_PASS');
+  assert.equal(hd.sourceConfirmed, true);
+  assert.equal(hd.qcPass, true);
+  assert.equal(hd.approvedForWeb, true);
+
+  for (const asset of review.assets.filter((item) => item.product !== 'HD Clear')) {
     assert.equal(asset.sourceConfirmed, false);
     assert.equal(asset.qcPass, false);
     assert.equal(asset.approvedForWeb, false);
-    assert.equal(asset.currentQc, 'OWNER_REVIEW');
   }
+
+  assert.equal(review.assets.find((asset) => asset.product === 'Matte').currentQc, 'REJECTED_CURRENT_MAIN');
+  assert.equal(review.assets.find((asset) => asset.product === 'Privacy HD').currentQc, 'HOLD_FOR_OWNER_IDENTITY_CONFIRMATION');
+  assert.equal(review.assets.find((asset) => asset.product === 'Privacy Matte').currentQc, 'REJECTED_CURRENT_MAIN');
+  assert.equal(review.assets.find((asset) => asset.product === 'X200T').currentQc, 'HOLD_FOR_OWNER_IDENTITY_CONFIRMATION');
+
+  const products = read('data/products.generated.js');
+  const hdProduct = products.match(/"id": "mica-hd",[\s\S]*?"videos": \[\]/)?.[0] ?? '';
+  assert.match(hdProduct, /assets\/products\/micas\/hd\/main\.png/);
+  assert.doesNotMatch(hdProduct, /gallery-01\.png/);
 });

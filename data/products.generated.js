@@ -3714,8 +3714,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "MICA HD",
     "quality": "Contenido: 50 pzs · Precio por volumen",
     "images": [
-      "assets/products/micas/hd/main.png",
-      "assets/products/micas/hd/gallery-01.png"
+      "assets/products/micas/hd/main.png"
     ],
     "videos": [],
     "prices": [
