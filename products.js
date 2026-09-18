@@ -1638,7 +1638,6 @@ const VERIFIED_PRODUCT_MEDIA_BY_ID = {
       'assets/products/iphone-incell/11/gallery-03.jpg',
     ],
     videos: [
-      'assets/products/iphone-incell/11/video-01.mp4',
       'assets/products/iphone-incell/11/video-02.mp4',
     ],
   },

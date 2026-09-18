@@ -22,7 +22,7 @@ for (const viewport of [
 
     await expect(stage).toBeVisible();
     await expect(imageThumbs).toHaveCount(3);
-    await expect(videoThumbs).toHaveCount(2);
+    await expect(videoThumbs).toHaveCount(1);
     await expect(stageVideo).toBeHidden();
     await expect(page.locator('[data-video-jump]')).toHaveCount(0);
 
@@ -45,7 +45,7 @@ for (const viewport of [
     await expect(mainImage).toBeHidden();
     await expect(stageVideo).toBeVisible();
     await expect(stageVideo).toHaveAttribute('poster', /iphone-incell\/11\/fhd-main\.display\.webp/);
-    await expect(stageVideo).toHaveAttribute('src', /iphone-incell\/11\/video-01\.mp4/);
+    await expect(stageVideo).toHaveAttribute('src', /iphone-incell\/11\/video-02\.mp4/);
     await expect(stage.locator('[data-detail-media-title]')).toHaveCount(0);
     await expect(stageVideo).toHaveAttribute('aria-label', 'Prueba real — iPhone 11 INCELL FHD');
     await stageVideo.evaluate(async (video) => {
@@ -85,7 +85,7 @@ test('ambiguous diagnostic and foldable series videos stay unbound', async ({ pa
 
 test('representative exact-match media keeps brand, model, and quality identity', async ({ page }) => {
   const products = [
-    ['iphone-incell-11', /iPhone 11/i, /INCELL FHD/i, 2],
+    ['iphone-incell-11', /iPhone 11/i, /INCELL FHD/i, 1],
     ['iphone-oled-13', /iPhone 13/i, /OLED PREMIUM/i, 1],
     ['haode-pantalla-oled-diagnostica-modelo-14', /Modelo 14/i, /OLED Diagnóstica/i, 0],
     ['samsung-incell-s22-ultra', /Samsung S22 Ultra/i, /INCELL CON MARCO/i, 2],
