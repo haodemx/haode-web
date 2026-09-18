@@ -18,6 +18,12 @@ Scope: local candidate only. No ERP, product, price, inventory, SEO, hero or hea
 
 The two `MOVE IC` OLED records remain within their real Premium/Soft groups and retain their exact published quality fields on the product cards and filters.
 
+### iPhone Original source-of-truth verification
+
+The production ERP public catalog generated at `2026-09-18T18:06:51.039Z` contains 252 products. A field-level check of SKU, slug, public name, category, quality and model found zero iPhone records named `Original`, `Tipo Original`, `Original C/M`, `OEM`, `Original Screen` or `Pantalla Original`. The July and August approved customer price imports likewise contain zero iPhone Original rows, and repository history contains no published iPhone Original catalog record. The local ERP database mirror contains no product rows, so it was not treated as evidence of absence or presence.
+
+Conclusion: iPhone Original is a real business line but is not currently recorded in the available ERP/public website source data. This remains a `DATA GAP`; no SKU or customer-facing count was invented. The current import classifier has no dedicated iPhone Original category and would need an explicit mapping when verified SKUs are added.
+
 ### Samsung, excluding foldables — 50 SKU
 
 | Customer group | Real catalog detail | SKU |
@@ -58,10 +64,12 @@ The URLs are reused from the existing structured data and the previously approve
 
 The address and hours match the current official-store route: Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Centro, CDMX; Monday–Saturday 10:00–18:00; Sunday closed.
 
+The Instagram footer decision was revalidated against current integrations. Postiz has two enabled standalone connections (`cristi3an` and `haodemx`), and neither was removed. The current direct Instagram API credential identifies `cristi3an` as the BUSINESS account named `HAODE México Pantallas`; the configured Meta page `haodemx` currently has no linked Instagram Business account. The approved channel register also marks `@cristi3an` as the confirmed HAODE public Instagram. Therefore the website footer remains `https://www.instagram.com/cristi3an/`.
+
 ## Verification
 
 - Build and controlled public package: PASS.
 - Targeted quality, footer and existing Zay behavior tests: 47/47 PASS (41 feature/regression checks plus 6 shared-footer compatibility checks).
-- Complete browser gate: 249/261 PASS on the first exact-candidate run. The six shared-footer failures were corrected and passed on the targeted rerun. Two unrelated checks passed when rerun and were not reproducible. The remaining four product-detail visual snapshots differ because the restored footer changes full-page height at 390, 430, 768 and 1440; baselines were intentionally not accepted before owner visual approval.
+- Complete browser gate: 261/261 PASS on the final candidate. Two timing-sensitive checks were synchronized with the real rendered state: product cards must have non-zero layout dimensions before their exact stage assertions run, and the store hero waits for the asynchronously injected approved stylesheet before measuring its position. Assertions, coverage and screenshot thresholds were not weakened. The four product-detail snapshots were reviewed after owner accepted the visual structure: the current render contains the restored footer and correctly loaded approved related-product images that the stale baselines captured as blank. All four baselines were regenerated at 390, 430, 768 and 1440 without changing the comparison threshold.
 - Runtime audit at 1440 and 390 across homepage, Pantallas, iPhone, Samsung and Foldables: 0 broken images, 0 horizontal overflow and 0 page/console errors.
 - Production deployment: NOT RUN.

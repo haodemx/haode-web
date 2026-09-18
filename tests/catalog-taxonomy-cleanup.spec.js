@@ -127,7 +127,10 @@ test('catalog cards use a square contained media stage and stable information or
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${baseURL}/productos/?category=pantallas&sub=samsung`, { waitUntil: 'domcontentloaded' });
 
-  const metrics = await page.locator('[data-catalog-card]:visible').evaluateAll((cards) => cards.slice(0, 12).map((card) => {
+  const metrics = await page.locator('[data-catalog-card]').evaluateAll((cards) => cards
+    .filter((card) => card.getClientRects().length > 0 && card.offsetWidth > 0 && card.offsetHeight > 0)
+    .slice(0, 12)
+    .map((card) => {
     const stage = card.querySelector('.zay-card-media');
     const image = stage.querySelector('img');
     const body = card.querySelector('.zay-card-body');
@@ -138,7 +141,7 @@ test('catalog cards use a square contained media stage and stable information or
       padding: parseFloat(getComputedStyle(stage).paddingTop),
       bodyOrder: [...body.children].map((node) => node.tagName),
     };
-  }));
+    }));
 
   expect(metrics.length).toBeGreaterThan(0);
   metrics.forEach((item) => {
