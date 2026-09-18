@@ -93,6 +93,7 @@ test('restored footer exposes confirmed navigation, contact, social and legal li
   await expect(footer).toContainText('Eje Central Lázaro Cárdenas 87');
   await expect(footer).toContainText('Lun–Sáb · 10:00–18:00');
   await expect(footer.getByRole('link', { name: 'Abrir APP' })).toHaveAttribute('href', '/app/');
+  await expect(footer.getByRole('link', { name: 'Cómo llegar' })).toBeVisible();
   const expected = {
     facebook: 'https://www.facebook.com/haodemx',
     instagram: 'https://www.instagram.com/cristi3an/',
