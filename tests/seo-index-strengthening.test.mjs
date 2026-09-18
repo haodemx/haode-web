@@ -11,6 +11,14 @@ import { SCREEN_DATE, isScreen } from '../scripts/screen-seo-content.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
 const CHANGE_DATE = '2026-08-21';
+const HYDROGEL_CANDIDATE_DATE = '2026-09-18';
+const HYDROGEL_CANDIDATE_IDS = new Set([
+  'mica-hd',
+  'mica-matte',
+  'mica-privacidad-hd',
+  'mica-privacidad-matte',
+  'x200t-cortadora-micas',
+]);
 const PRIORITY_PAGES = [
   'app/index.html',
   'guia-ia-haode-mexico/index.html',
@@ -169,7 +177,11 @@ test('changed canonical URLs publish the current lastmod date', () => {
   for (const id of sitemapProductIds()) {
     const url = `${SITE_URL}/producto/${encodeURIComponent(id)}/`;
     const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const expectedDate = screenIds.has(id) ? SCREEN_DATE : CHANGE_DATE;
+    const expectedDate = screenIds.has(id)
+      ? SCREEN_DATE
+      : HYDROGEL_CANDIDATE_IDS.has(id)
+        ? HYDROGEL_CANDIDATE_DATE
+        : CHANGE_DATE;
     assert.match(sitemap, new RegExp(`<loc>${escaped}</loc>\\s*<lastmod>${expectedDate}</lastmod>`));
   }
 });

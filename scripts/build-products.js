@@ -66,6 +66,7 @@ const STATIC_SEO_URLS = [
   '/pantallas-samsung-zflip-zfold-original-mexico/',
   '/fundas-celular-mayoreo-mexico/',
   '/micas-hidrogel-mayoreo-mexico/',
+  '/micas-hidrogel-marca-propia/',
   '/refacciones-celulares-mayoreo-mexico/',
   '/guia-ia-haode-mexico/',
 ];

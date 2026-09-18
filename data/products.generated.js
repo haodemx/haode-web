@@ -3720,15 +3720,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
+        "quantity": "Precio público",
         "price": "$400 MXN"
       },
       {
-        "quantity": "5+ pzs",
+        "quantity": "Mayoreo 5+",
         "price": "$350 MXN"
       },
       {
-        "quantity": "10+ paquetes",
+        "quantity": "Volumen 10+",
         "price": "$300 MXN"
       }
     ],
@@ -3755,15 +3755,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
+        "quantity": "Precio público",
         "price": "$450 MXN"
       },
       {
-        "quantity": "5+ pzs",
+        "quantity": "Mayoreo 5+",
         "price": "$400 MXN"
       },
       {
-        "quantity": "10+ paquetes",
+        "quantity": "Volumen 10+",
         "price": "$350 MXN"
       }
     ],
@@ -3790,15 +3790,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
+        "quantity": "Precio público",
         "price": "$850 MXN"
       },
       {
-        "quantity": "5+ pzs",
+        "quantity": "Mayoreo 5+",
         "price": "$800 MXN"
       },
       {
-        "quantity": "10+ paquetes",
+        "quantity": "Volumen 10+",
         "price": "$750 MXN"
       }
     ],
@@ -3826,15 +3826,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
+        "quantity": "Precio público",
         "price": "$850 MXN"
       },
       {
-        "quantity": "5+ pzs",
+        "quantity": "Mayoreo 5+",
         "price": "$800 MXN"
       },
       {
-        "quantity": "10+ paquetes",
+        "quantity": "Volumen 10+",
         "price": "$750 MXN"
       }
     ],
@@ -3861,15 +3861,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
+        "quantity": "Precio público",
         "price": "$6,500 MXN"
       },
       {
-        "quantity": "5+ pzs",
+        "quantity": "Mayoreo 5+",
         "price": "$6,200 MXN"
       },
       {
-        "quantity": "10+ paquetes",
+        "quantity": "Volumen 10+",
         "price": "$6,000 MXN"
       }
     ],
@@ -7759,4 +7759,4 @@ window.HAODE_PRODUCTS_DATA = [
       152
     ]
   }
-];;
+];;;

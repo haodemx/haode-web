@@ -22,7 +22,7 @@
     "test:seo-exposure-readiness": "node --test tests/seo-exposure-readiness.test.mjs",
     "test:seo-technical": "node --test tests/seo-technical-contract.test.mjs",
     "test:seo-index-strengthening": "node --test tests/seo-index-strengthening.test.mjs",
-    "test:mica-machine-seo": "node --test tests/mica-machine-seo.test.mjs",
+    "test:mica-machine-seo": "node --test tests/mica-machine-seo.test.mjs tests/hydrogel-phase1-candidate.test.mjs",
     "seo:refresh-pages": "node scripts/refresh-seo-pages.mjs --apply && node scripts/build-static-product-directory.mjs --apply",
     "seo:refresh-screens": "node scripts/refresh-seo-pages.mjs --screens --apply",
     "test:screen-seo": "node scripts/refresh-seo-pages.mjs --screens && node --test tests/screen-seo.test.mjs tests/final-ui-seo-contract.test.mjs",

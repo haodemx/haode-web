@@ -95,7 +95,9 @@ test('updated prices use the new main sheet and preserve approved siblings', () 
   assert.equal(price(byId(website, 'iphone-oled-12promax'), '1 pza'), '$700 MXN');
   assert.equal(price(byId(website, 'samsung-incell-s20-plus'), '1 pza'), '$550 MXN');
   assert.equal(byId(appProducts, 'samsung-original-note-20-ultra').precioPublico, 3000);
-  assert.equal(price(byId(website, 'mica-hd'), '10+ paquetes'), '$300 MXN');
+  assert.equal(price(byId(website, 'mica-hd'), 'Precio público'), '$400 MXN');
+  assert.equal(price(byId(website, 'mica-hd'), 'Mayoreo 5+'), '$350 MXN');
+  assert.equal(price(byId(website, 'mica-hd'), 'Volumen 10+'), '$300 MXN');
   assert.equal(price(byId(website, 'aimb-g5-ai-sports'), '5+ pzs'), '$855 MXN');
   assert.equal(byId(appProducts, 'lk-018-camara-accion-hd').precioPublico, 850);
 });

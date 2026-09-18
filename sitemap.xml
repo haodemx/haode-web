@@ -512,19 +512,19 @@
   </url>
   <url>
     <loc>https://haode.com.mx/producto/mica-hd/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
   </url>
   <url>
     <loc>https://haode.com.mx/producto/mica-matte/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
   </url>
   <url>
     <loc>https://haode.com.mx/producto/mica-privacidad-hd/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
   </url>
   <url>
     <loc>https://haode.com.mx/producto/mica-privacidad-matte/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
   </url>
   <url>
     <loc>https://haode.com.mx/categoria/oled-diagnostica/</loc>
@@ -890,7 +890,7 @@
   </url>
   <url>
     <loc>https://haode.com.mx/producto/x200t-cortadora-micas/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1100,7 +1100,13 @@
   </url>
   <url>
     <loc>https://haode.com.mx/micas-hidrogel-mayoreo-mexico/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://haode.com.mx/micas-hidrogel-marca-propia/</loc>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

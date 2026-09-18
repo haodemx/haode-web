@@ -1,0 +1,81 @@
+{
+  "reviewDate": "2026-09-18",
+  "policy": "No candidate is approved until the owner confirms the physical product and web use.",
+  "assets": [
+    {
+      "product": "HD Clear",
+      "filePath": "assets/products/micas/hd/main.png",
+      "source": "/Volumes/MACSSD/haode产品素材/手机膜/haode mica hd 50pzs.png",
+      "resolution": "1024x1536",
+      "sha256": "653f993f5206c26f9d0d8222967c12623d939b4b2489a9b407b1022b561d63d4",
+      "sourceStatus": "AMBIGUOUS",
+      "currentQc": "OWNER_REVIEW",
+      "duplicateStatus": "DUPLICATE",
+      "proposedWebsiteUse": "Main image for MICA HD after owner confirms product identity and the promotional text is acceptable.",
+      "reviewNote": "Image includes promotional, preorder, shipping and customization text that needs owner confirmation.",
+      "sourceConfirmed": false,
+      "qcPass": false,
+      "approvedForWeb": false
+    },
+    {
+      "product": "Matte",
+      "filePath": "assets/products/micas/matte/main.png",
+      "source": "/Volumes/MACSSD/haode产品素材/手机膜/haode mica matte.png",
+      "resolution": "1024x1536",
+      "sha256": "ed0bf69572a19da5d8602512e9339f04e8a2c28484e325af73ede2ee30f75ab6",
+      "sourceStatus": "UNCONFIRMED",
+      "currentQc": "OWNER_REVIEW",
+      "duplicateStatus": "DUPLICATE",
+      "proposedWebsiteUse": "Main image for MICA MATTE after owner confirms this is HAODE's real packaging/product artwork.",
+      "reviewNote": "Looks like packaging artwork rather than a photographed physical product; identical bytes also exist in an archived generated-image folder.",
+      "sourceConfirmed": false,
+      "qcPass": false,
+      "approvedForWeb": false
+    },
+    {
+      "product": "Privacy HD",
+      "filePath": "assets/products/micas/privacidad-hd/main.png",
+      "source": "/Volumes/MACSSD/HAODE员工共享素材库/06_Micas_Maquina/图片/haode privacy hd__03a7c7ca2e.png",
+      "resolution": "1024x1536",
+      "sha256": "03a7c7ca2eac23327e98c303671de3ea56d1515a64bb70f86243f1185289a894",
+      "sourceStatus": "HIGH_CONFIDENCE",
+      "currentQc": "OWNER_REVIEW",
+      "duplicateStatus": "DUPLICATE",
+      "proposedWebsiteUse": "Main image for MICA PRIVACIDAD HD after owner confirms the packaging is the actual product.",
+      "reviewNote": "Preferred library source is known, but the image is packaging artwork and still requires product-identity confirmation.",
+      "sourceConfirmed": false,
+      "qcPass": false,
+      "approvedForWeb": false
+    },
+    {
+      "product": "Privacy Matte",
+      "filePath": "assets/products/micas/privacidad-matte/main.png",
+      "source": "/Volumes/MACSSD/haode产品素材/手机膜/privacy matte.png",
+      "resolution": "1024x1536",
+      "sha256": "27c3e03dfcf2be1bafaf8bda976b713cb95ced9a8efc38b6aaf49ac17302983e",
+      "sourceStatus": "UNCONFIRMED",
+      "currentQc": "OWNER_REVIEW",
+      "duplicateStatus": "DUPLICATE",
+      "proposedWebsiteUse": "Main image for MICA PRIVACIDAD MATTE after owner confirms the product and every visible claim.",
+      "reviewNote": "Artwork contains stock, immediate shipping, nationwide shipping and one-year warranty claims that are not approved by this task.",
+      "sourceConfirmed": false,
+      "qcPass": false,
+      "approvedForWeb": false
+    },
+    {
+      "product": "X200T",
+      "filePath": "assets/products/cut-machine/x200t/main.jpg",
+      "source": "/Volumes/MACSSD/haode产品素材/切膜机/图片_20260502160401_74_3.jpg",
+      "resolution": "2276x1280",
+      "sha256": "b1ddba6da770ea592c4bf47034cd26055549bc51fba27619b080fee5c4a1d514",
+      "sourceStatus": "EXACT_SKU_MAPPING_MANUAL_QC",
+      "currentQc": "OWNER_REVIEW",
+      "duplicateStatus": "DUPLICATE",
+      "proposedWebsiteUse": "Main image for X200T after owner confirms the pictured machine is the actual X200T and has no third-party brand conflict.",
+      "reviewNote": "Resolution is sufficient, but no visible X200T model mark is readable in the image.",
+      "sourceConfirmed": false,
+      "qcPass": false,
+      "approvedForWeb": false
+    }
+  ]
+}
