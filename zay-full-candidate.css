@@ -121,3 +121,45 @@ body[data-v3-page="home"].zay-candidate .zay-footer-bottom{font-size:13px}
   body[data-v3-page="home"].zay-candidate .zay-final h2{font-size:31px}
   body[data-v3-page="home"].zay-candidate .zay-final p{font-size:16px;line-height:1.5}
 }
+
+/* Catalog cleanup: consistent media stage and clear category architecture. */
+body:not(.zay-detail) .zay-card-media{height:auto;aspect-ratio:1/1;padding:10%;background:linear-gradient(145deg,#f7f8f7,#ecefed);isolation:isolate}
+body:not(.zay-detail) .zay-card-media:before{content:"";position:absolute;inset:7%;border:1px solid rgba(88,98,105,.08);border-radius:6px;z-index:-1}
+body:not(.zay-detail) .zay-card-media img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center;transform:none}
+body:not(.zay-detail) .zay-card-body{min-height:220px;padding:21px}
+body:not(.zay-detail) .zay-card-body h3{order:1;min-height:2.6em;margin:0 0 9px;font-size:20px}
+body:not(.zay-detail) .zay-card-body>p{order:2;min-height:2.9em;margin:0 0 14px;font-size:14px;line-height:1.45}
+body:not(.zay-detail) .zay-card-body>strong{order:3}
+body:not(.zay-detail) .zay-card-body>div{order:4}
+.zay-family-landing>header{max-width:720px;margin-bottom:30px}
+.zay-family-landing>header h2{margin:0;font-size:42px;letter-spacing:-.035em;line-height:1.08}
+.zay-family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.zay-family-card{min-height:230px;border:1px solid var(--z-line);border-radius:10px;background:#fff;padding:28px;display:flex;flex-direction:column;color:var(--z-ink);box-shadow:0 8px 25px rgba(25,31,36,.055);transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.zay-family-card:hover{border-color:#ffb38f;box-shadow:0 12px 30px rgba(64,39,27,.1);transform:translateY(-2px)}
+.zay-family-card>span{font-size:28px;font-weight:800;letter-spacing:-.025em}
+.zay-family-card>strong{display:inline-flex;align-self:flex-start;margin-top:12px;padding:6px 10px;border-radius:999px;background:#fff0e8;color:var(--z-orange-dark);font-size:14px}
+.zay-family-card>p{margin:18px 0 24px;color:var(--z-muted);font-size:16px;line-height:1.5}
+.zay-family-card>b{margin-top:auto;color:var(--z-orange-dark);font-size:15px}
+.zay-view-all{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:28px;padding:0 20px;border:1px solid #aeb4b9;border-radius:6px;font-weight:750}
+.zay-category-products{margin-top:70px;padding-top:58px;border-top:1px solid var(--z-line)}
+.zay-filter-group h2,.zay-attribute-filters>h2{font-size:14px;line-height:1.3;letter-spacing:.08em}
+.zay-filter-row{min-height:48px;margin-bottom:4px;font-size:15px;font-weight:680;text-decoration:none}
+.zay-filter-row b{min-width:34px;height:27px;font-size:13px}
+.zay-attribute-filters{margin-top:26px;padding-top:24px;border-top:1px solid var(--z-line)}
+.zay-filter-select{display:grid;gap:7px;margin-top:14px;color:#353c42;font-size:14px;font-weight:700}
+.zay-filter-select select{width:100%;min-height:48px;border:1px solid #bbc1c5;border-radius:6px;background:#fff;padding:0 36px 0 11px;color:var(--z-ink);font:inherit}
+.zay-attribute-filters>button{width:100%;min-height:48px;margin-top:16px;border:0;border-radius:6px;background:var(--z-orange);color:#fff;font-size:15px;font-weight:800;cursor:pointer}
+.zay-results>header>a[data-clear]{min-height:44px;display:inline-flex;align-items:center;color:var(--z-orange-dark);font-weight:750}
+
+@media(max-width:1050px){.zay-family-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){
+  body:not(.zay-detail) .zay-card-media{height:auto;aspect-ratio:1/1;padding:10%}
+  body:not(.zay-detail) .zay-card-body{min-height:216px;padding:20px}
+  .zay-family-landing>header{margin-bottom:24px}
+  .zay-family-landing>header h2{font-size:34px}
+  .zay-family-grid{grid-template-columns:1fr;gap:14px}
+  .zay-family-card{min-height:0;padding:23px}
+  .zay-family-card>span{font-size:25px}
+  .zay-family-card>p{font-size:16px;margin:14px 0 20px}
+  .zay-filter-row,.zay-filter-select select,.zay-attribute-filters>button{min-height:48px}
+}
