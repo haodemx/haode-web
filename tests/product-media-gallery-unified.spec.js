@@ -24,6 +24,22 @@ for (const viewport of [
     await expect(imageThumbs).toHaveCount(3);
     await expect(videoThumbs).toHaveCount(2);
     await expect(stageVideo).toBeHidden();
+    await expect(page.locator('[data-video-jump]')).toHaveCount(0);
+
+    const detailLayout = await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll('.v3-detail-row'), (row) => {
+        const rect = row.getBoundingClientRect();
+        return { top: rect.top, bottom: rect.bottom, width: rect.width };
+      });
+      return {
+        rows,
+        titleSize: Number.parseFloat(getComputedStyle(document.querySelector('.detail-title')).fontSize),
+      };
+    });
+    expect(detailLayout.rows).toHaveLength(4);
+    expect(detailLayout.rows.every((row) => row.width > 250)).toBe(true);
+    expect(detailLayout.rows.slice(1).every((row, index) => row.top >= detailLayout.rows[index].bottom - 1)).toBe(true);
+    expect(detailLayout.titleSize).toBeLessThanOrEqual(viewport.width <= 760 ? 34 : 44);
 
     await videoThumbs.first().click();
     await expect(mainImage).toBeHidden();

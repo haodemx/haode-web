@@ -2956,17 +2956,7 @@ class ProductMediaGallery {
     this.setSectionVisibility(this.videoWrap, false);
     const imageCount = this.gallery?.querySelectorAll('[data-product-media-kind="image"]').length || 0;
     this.setSectionVisibility(this.galleryWrap, imageCount > 1 || videos.length > 0);
-    let jump = this.visual?.querySelector('[data-video-jump]');
-    if (videos.length > 0 && this.visual && !jump) {
-      jump = document.createElement('button');
-      jump.type = 'button';
-      jump.className = 'detail-video-jump';
-      jump.dataset.videoJump = '';
-      jump.textContent = '▶ Ver video de prueba';
-      jump.addEventListener('click', () => this.gallery?.querySelector('[data-product-media-kind="video"]')?.click());
-      this.stage?.insertAdjacentElement('afterend', jump);
-    }
-    if (jump) jump.hidden = videos.length === 0;
+    this.visual?.querySelector('[data-video-jump]')?.remove();
     return videos.length;
   }
 
