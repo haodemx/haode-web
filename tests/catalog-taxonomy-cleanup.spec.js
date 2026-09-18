@@ -43,6 +43,68 @@ test('screen family and attribute filters preserve real result counts', async ({
   expect(optionLabels.some((label) => /\b0\b/.test(label))).toBe(false);
 });
 
+test('iPhone quality architecture reflects the real catalog and exposes OLED variants', async ({ page }) => {
+  await page.goto(`${baseURL}/productos/?category=pantallas&sub=iphone`, { waitUntil: 'domcontentloaded' });
+
+  const quality = page.locator('[data-quality-navigation="iphone"]');
+  await expect(quality).toContainText(/INCELL FHD\s*34 SKU/s);
+  await expect(quality).toContainText(/OLED\s*20 SKU/s);
+  await expect(quality).toContainText(/Diagnóstico OLED\s*24 SKU/s);
+  await expect(quality.locator('.zay-quality-card')).toHaveCount(3);
+  await expect(quality.locator('.zay-quality-card>a>span', { hasText: /^Original$/ })).toHaveCount(0);
+
+  await page.goto(`${baseURL}/productos/?category=pantallas&sub=iphone&technology=OLED`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-result-count]')).toHaveText('20 productos encontrados');
+  await expect(page.locator('.zay-variant-panel')).toContainText(/OLED Premium\s*16/s);
+  await expect(page.locator('.zay-variant-panel')).toContainText(/Soft OLED Premium\s*4/s);
+
+  await page.goto(`${baseURL}/productos/?category=pantallas&sub=iphone&technology=OLED%20diagn%C3%B3stica`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-result-count]')).toHaveText('24 productos encontrados');
+  await expect(page.locator('.zay-variant-panel')).toContainText(/Tamaño original\s*22/s);
+  await expect(page.locator('.zay-variant-panel')).toContainText(/Hard OLED\s*1/s);
+  await expect(page.locator('.zay-variant-panel')).toContainText(/Soft OLED\s*1/s);
+});
+
+test('Samsung quality architecture separates technology before model', async ({ page }) => {
+  await page.goto(`${baseURL}/productos/?category=pantallas&sub=samsung`, { waitUntil: 'domcontentloaded' });
+  const quality = page.locator('[data-quality-navigation="samsung"]');
+  await expect(quality).toContainText(/INCELL\s*33 SKU/s);
+  await expect(quality).toContainText(/AMOLED \/ OLED\s*9 SKU/s);
+  await expect(quality).toContainText(/TIPO ORIGINAL\s*8 SKU/s);
+  await expect(quality).toContainText('50 SKU Samsung no plegables publicados son versiones con marco');
+
+  await page.goto(`${baseURL}/productos/?category=pantallas&sub=samsung&technology=Tipo%20original`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-result-count]')).toHaveText('8 productos encontrados');
+});
+
+test('Foldables expose only published Z Flip and Z Fold models', async ({ page }) => {
+  await page.goto(`${baseURL}/productos/?category=pantallas&sub=foldables`, { waitUntil: 'domcontentloaded' });
+  const quality = page.locator('[data-quality-navigation="foldables"]');
+  await expect(quality).toContainText(/Z Flip\s*9 productos/s);
+  await expect(quality).toContainText(/Z Fold\s*4 productos/s);
+  for (const model of ['Z FLIP3', 'Z FLIP4', 'Z FLIP5', 'Z FLIP6', 'Z FLIP7', 'Z FOLD3', 'Z FOLD4', 'Z FOLD5', 'Z FOLD6']) {
+    await expect(quality.getByRole('link', { name: model, exact: true })).toBeVisible();
+  }
+});
+
+test('restored footer exposes confirmed navigation, contact, social and legal links', async ({ page }) => {
+  await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
+  const footer = page.locator('[data-v3-footer]');
+  await expect(footer).toContainText('Eje Central Lázaro Cárdenas 87');
+  await expect(footer).toContainText('Lun–Sáb · 10:00–18:00');
+  await expect(footer.getByRole('link', { name: 'Abrir APP' })).toHaveAttribute('href', '/app/');
+  const expected = {
+    facebook: 'https://www.facebook.com/haodemx',
+    instagram: 'https://www.instagram.com/cristi3an/',
+    tiktok: 'https://www.tiktok.com/@haodemx',
+    youtube: 'https://www.youtube.com/@haodemx',
+  };
+  for (const [platform, href] of Object.entries(expected)) {
+    await expect(footer.locator(`[data-social-link="${platform}"]`)).toHaveAttribute('href', href);
+  }
+  expect(await footer.locator('[data-social-link]').evaluateAll((links) => links.every((link) => link.href && !link.href.endsWith('#')))).toBe(true);
+});
+
 test('legacy technology links remain compatible with the new family hierarchy', async ({ page }) => {
   await page.goto(`${baseURL}/productos/?category=pantallas&sub=iphone-oled`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('[data-result-count]')).toHaveText('20 productos encontrados');
@@ -100,6 +162,8 @@ test('mobile category controls remain readable, tappable and overflow-free', asy
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
 
   await page.goto(`${baseURL}/productos/?category=pantallas&sub=foldables`, { waitUntil: 'domcontentloaded' });
+  const qualityTargets = await page.locator('.zay-fold-card a').evaluateAll((links) => links.map((link) => link.getBoundingClientRect().height));
+  expect(qualityTargets.every((height) => height >= 44)).toBe(true);
   await page.locator('.zay-filter-toggle').click();
   await expect(page.locator('.zay-filter-content')).toBeVisible();
   await expect(page.locator('[data-result-count]')).toHaveText('13 productos encontrados');
