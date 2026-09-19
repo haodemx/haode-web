@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-09-15-v3-final-detail";
+const CACHE_VERSION = "haode-pwa-v2026-09-19-visual-final-pass";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -64,6 +64,8 @@ function isFreshDataRequest(url) {
     || url.pathname === "/style.css"
     || url.pathname === "/v3-screen-atlas.css"
     || url.pathname === "/v3-screen-atlas-fixes.css"
+    || url.pathname === "/zay-full-candidate.css"
+    || url.pathname === "/v3-screen-atlas.js"
     || url.pathname === "/script.js"
     || url.pathname === "/analytics.js"
     || url.pathname === "/campaign-attribution.js"
