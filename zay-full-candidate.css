@@ -240,3 +240,73 @@ body:not(.zay-detail) .zay-card-body>div{order:4}
   .zay-footer-bottom{margin-top:38px;font-size:13px}
   .zay-socials a{width:48px;height:48px}
 }
+
+/* Visual final pass: shared scale, balanced grids, and tablet continuity. */
+body.zay-candidate{
+  --z-content-width:1480px;
+  --z-shell-width:1540px;
+  --z-page-gutter:clamp(32px,5vw,96px);
+}
+body.zay-candidate .zay-container,
+body.zay-candidate .zay-steps{
+  width:min(var(--z-content-width),calc(100% - var(--z-page-gutter)));
+}
+body.zay-candidate .zay-header-inner{
+  width:min(var(--z-shell-width),calc(100% - var(--z-page-gutter)));
+  grid-template-columns:210px minmax(0,1fr) auto;
+  gap:28px;
+}
+body.zay-candidate .zay-brand img{width:190px;height:58px}
+body.zay-candidate .zay-nav{gap:clamp(18px,1.6vw,30px);font-size:15px}
+body.zay-candidate .zay-ui-icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round}
+body.zay-candidate .zay-menu-button{align-items:center;justify-content:center}
+body.zay-candidate .zay-search-icon{font-size:0}
+body.zay-candidate .zay-page-head{padding-block:78px}
+body.zay-candidate .zay-page-head h1{font-size:clamp(56px,5vw,82px)}
+body.zay-candidate .zay-catalog{padding-block:68px 104px}
+body.zay-candidate .zay-category-products{margin-top:78px;padding-top:64px}
+body.zay-candidate .zay-card-media{padding:8%}
+body.zay-candidate .zay-final .zay-light{color:var(--z-ink)!important;border-color:#fff}
+body.zay-candidate .zay-footer-grid,
+body.zay-candidate .zay-footer-bottom{width:min(var(--z-content-width),100%)}
+body.zay-detail .detail-shell{width:min(1360px,calc(100% - var(--z-page-gutter)))}
+
+body[data-v3-page="home"].zay-candidate{--z-home-content:var(--z-content-width)}
+body[data-v3-page="home"].zay-candidate .zay-container,
+body[data-v3-page="home"].zay-candidate .zay-steps{width:min(var(--z-content-width),calc(100% - var(--z-page-gutter)))}
+body[data-v3-page="home"].zay-candidate .zay-header-inner{width:min(var(--z-shell-width),calc(100% - var(--z-page-gutter)))}
+body[data-v3-page="home"].zay-candidate .zay-hero-grid{grid-template-columns:minmax(0,.9fr) minmax(620px,1.1fr);gap:clamp(52px,4vw,78px)}
+body[data-v3-page="home"].zay-candidate .zay-product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+body[data-v3-page="home"].zay-candidate .zay-card-body{min-height:238px}
+
+@media(max-width:1180px){
+  body.zay-candidate .zay-header-inner{grid-template-columns:175px minmax(0,1fr) auto;gap:14px}
+  body.zay-candidate .zay-brand img{width:165px}
+  body[data-v3-page="home"].zay-candidate .zay-hero-grid{grid-template-columns:minmax(0,1fr) minmax(450px,1fr);gap:38px}
+}
+
+@media(min-width:681px) and (max-width:1050px){
+  body.zay-candidate{--z-page-gutter:32px}
+  body.zay-candidate .zay-product-grid,
+  body[data-v3-page="home"].zay-candidate .zay-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-v3-page="home"].zay-candidate .zay-hero-grid{grid-template-columns:minmax(0,1fr) minmax(300px,.92fr);gap:30px;padding-block:42px}
+  body[data-v3-page="home"].zay-candidate .zay-hero figure{order:0;min-height:360px}
+  body[data-v3-page="home"].zay-candidate .zay-hero figure img{height:340px}
+  body[data-v3-page="home"].zay-candidate .zay-hero h1{font-size:clamp(42px,6vw,54px)}
+  body[data-v3-page="home"].zay-candidate .zay-category-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  body[data-v3-page="home"].zay-candidate .zay-category-image{height:220px}
+  body[data-v3-page="home"].zay-candidate .zay-category-card>div{padding:20px}
+  body[data-v3-page="home"].zay-candidate .zay-category-card h3{font-size:25px}
+  body[data-v3-page="home"].zay-candidate .zay-category-card p{font-size:14px}
+}
+
+@media(max-width:680px){
+  body.zay-candidate{--z-page-gutter:28px}
+  body.zay-candidate .zay-header-inner{width:calc(100% - 28px);grid-template-columns:1fr auto auto;gap:8px}
+  body.zay-candidate .zay-brand img{width:148px;height:48px}
+  body[data-v3-page="home"].zay-candidate .zay-hero-grid{grid-template-columns:1fr}
+  body[data-v3-page="home"].zay-candidate .zay-hero figure{order:-1}
+  body[data-v3-page="home"].zay-candidate .zay-category-grid,
+  body[data-v3-page="home"].zay-candidate .zay-product-grid{grid-template-columns:1fr}
+  body.zay-detail .detail-shell{width:calc(100% - 20px)}
+}

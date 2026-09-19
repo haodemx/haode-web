@@ -19,8 +19,19 @@ test('desktop header exposes locked navigation and primary WhatsApp action', asy
 test('ultrawide homepage keeps a centered readable content width', async ({ page }) => {
   await page.setViewportSize({ width: 1920, height: 1000 });
   const box = await page.locator('.zay-hero .zay-container').boundingBox();
-  expect(box.width).toBeLessThanOrEqual(1320);
+  expect(box.width).toBeGreaterThanOrEqual(1400);
+  expect(box.width).toBeLessThanOrEqual(1480);
   expect(Math.abs(box.x - (1920 - box.x - box.width))).toBeLessThanOrEqual(2);
+});
+
+test('featured products form a complete desktop row and a balanced tablet grid', async ({ page }) => {
+  const grid = page.locator('[data-ui-id="home-featured-products"] .zay-product-grid');
+
+  await page.setViewportSize({ width: 1440, height: 900 });
+  expect((await grid.evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ').length))).toBe(4);
+
+  await page.setViewportSize({ width: 768, height: 1024 });
+  expect((await grid.evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ').length))).toBe(2);
 });
 
 test('desktop navigation hover remains readable and restrained', async ({ page }) => {
