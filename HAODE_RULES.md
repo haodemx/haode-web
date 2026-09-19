@@ -1,5 +1,16 @@
 # HAODE Website Rules
 
+## Owner-Locked Image Production Authority
+
+`docs/HAODE_IMAGE_DESIGN_MASTER.md` is mandatory reading before every HAODE image, price-list, product-family, website-product-media, and ad-design task. Its status is `OWNER LOCKED`.
+
+- `PRODUCT LAYER = LOCKED REAL ASSET`; `DESIGN LAYER = EDITABLE`.
+- AI must not redraw, regenerate, alter, replace, or invent a real product or its packaging, logo, model, brand text, original text, structure, or details.
+- Clear tasks must run continuously from rule reading through final QC and delivery; completing one asset, page, or check is not a stop condition.
+- Missing required real material is `STATUS = ASSET MISSING`; complete independent work and never synthesize a product substitute.
+- Delivery is forbidden until every mandatory image QC line in the master file passes.
+- Only explicit Owner authorization may remove, weaken, make optional, or bypass these rules.
+
 This repository follows:
 
 - `/Users/mac/Documents/haode/AGENTS.md`

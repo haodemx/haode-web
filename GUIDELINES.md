@@ -1,5 +1,14 @@
 # HAODE Website Guidelines
 
+## Owner-Locked Image Gate
+
+Before any HAODE image, price list, product family, website product media, or ad design task, read `docs/HAODE_IMAGE_DESIGN_MASTER.md` first. Its real-product lock, continuous-execution rule, allowed stop conditions, and mandatory QC are `OWNER LOCKED` and take priority over aesthetic preferences or generative-media workflows.
+
+- Keep the real product layer unchanged; edit only the design layer.
+- Never redraw, regenerate, alter, or substitute a real product with AI.
+- If required real material is missing, use `STATUS = ASSET MISSING`, finish all independent work, and do not create a fake placeholder product.
+- Do not pause between clear, safe, in-scope steps; continue through correction and final QC.
+
 Follow the shared HAODE guidelines:
 
 - `/Users/mac/Documents/haode/GUIDELINES.md`

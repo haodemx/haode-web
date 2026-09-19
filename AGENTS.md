@@ -1,5 +1,20 @@
 # HAODE AI TEAM
 
+## Owner-Locked Image Production Rules
+
+Status: `OWNER LOCKED`
+
+Before any HAODE image, price-list, product-family, website-product-media, or ad-design task, read and follow `docs/HAODE_IMAGE_DESIGN_MASTER.md` first. This pre-read is mandatory even when another image, marketing, website, automation, or generative-media workflow also applies.
+
+Two rules have highest priority for those tasks:
+
+1. `PRODUCT LAYER = LOCKED REAL ASSET`. A real HAODE product asset must not be redrawn, regenerated, altered, substituted, or completed with AI. Product identity, structure, packaging, logo, model, brand text, and original product/packaging text must remain unchanged. Only non-destructive extraction, cleanup, scaling, cropping, proportional normalization, slight structure-preserving perspective correction, presentation shadow/lighting, background, composition, layout, and informational typography are allowed.
+2. `CONTINUOUS EXECUTION`. When the goal, real assets, data, design rules, and output requirements are clear, continue through production, self-QC, correction, final QC, and delivery without stopping after intermediate steps or repeating confirmed questions.
+
+If a required real asset is unavailable, record `STATUS = ASSET MISSING`, complete every independent part, and never generate or substitute a fake product. Pause only for a mandatory missing real asset, irreconcilable trusted-data conflict, conflicting explicit owner instructions, a high-risk or irreversible operation, or an explicit owner request to preview before continuing.
+
+These rules may not be deleted, weakened, made optional, bypassed through another AI workflow, or traded away for visual appeal without explicit Owner authorization. The mandatory QC and exact precedence rules are defined in `docs/HAODE_IMAGE_DESIGN_MASTER.md`.
+
 ## Required Codex Skills
 
 For HAODE tasks, default to:
