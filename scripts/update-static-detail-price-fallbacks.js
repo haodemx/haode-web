@@ -207,7 +207,8 @@ function main() {
 
     const priceSource = String(product.priceSource || '');
     const hasApprovedCustomerPrice = priceSource.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
-      || priceSource.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx');
+      || priceSource.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx')
+      || priceSource.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx');
     if (PROTECTED_PRICE_SKUS.has(product.id) && !hasApprovedCustomerPrice) {
       skippedProtected.push(product.id);
       continue;
