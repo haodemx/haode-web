@@ -1448,7 +1448,8 @@ function hasAuthoritativeCustomerPrices(product) {
   const source = String(product.priceSource || '');
   return source.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
     || source.includes('Lista_de_Precios_HAODE_20260721.pdf')
-    || source.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx');
+    || source.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx')
+    || source.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx');
 }
 
 function applyErpPublicCatalog(rows) {
