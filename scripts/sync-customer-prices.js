@@ -2,19 +2,19 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-08.json');
+const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-09-21.json');
 const WEBSITE_FILE = path.join(ROOT, 'data', 'products.generated.js');
 const APP_FILE = path.join(ROOT, 'app', 'products.json');
 const MASTER_FILE = path.join(ROOT, 'docs', 'master-data', 'products-master.csv');
-const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-08.md');
-const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-08.json');
+const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-21.md');
+const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-21.json');
 const PRODUCT_DIR = path.join(ROOT, 'producto');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const APPLY = process.argv.includes('--apply');
 const DELETE_UNLISTED = process.argv.includes('--delete-unlisted');
 const PUBLISH_UNLISTED = process.argv.includes('--publish-unlisted');
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
-const TODAY = '2026-08-13';
+const TODAY = '2026-09-21';
 const STATIC_ROUTE_ALIASES = {
   'funda-magnetica-17-pro-max': ['funda-magnetica-estilo-iphone-17-pro-max'],
   'funda-premium-17-pro-max': ['funda-premium-aluminio-estilo-iphone-17-pro-max'],
@@ -288,7 +288,7 @@ function makeAppProduct(id, row, rows, source, existing = null, websiteProduct =
     modelo: existing?.modelo || [displayModel(row), row.quality].filter(Boolean).join(' '),
     descripcion: existing?.descripcion || websiteProduct?.description || sourceDescription(row),
     precioPublico: Number(row.prices.retail),
-    precioMayoreo: Number(row.prices.wholesale5 || row.prices.retail),
+    precioMayoreo: Number(row.prices.wholesale || row.prices.retail),
     imagen: existing?.imagen || `/${webImage}`,
     stock: existing?.stock || 'consultar inventario',
     activo: true,
@@ -333,12 +333,12 @@ function approvedTierContext(row) {
   return null;
 }
 
-function websitePrices(row) {
+function websitePricesLegacy(row) {
   const approvedTier = approvedTierContext(row);
   if (approvedTier) {
     return [
       ['Precio público', row.prices.retail],
-      ['Mayoreo 5+', row.prices.wholesale5],
+      ['Mayoreo 5+', row.prices.wholesale],
       ['Volumen 10+', row.prices.quantity10],
     ]
       .filter(([, value]) => money(value))
@@ -347,7 +347,7 @@ function websitePrices(row) {
 
   const tiers = [
     ['1 pza', row.prices.retail],
-    ['5+ pzs', row.prices.wholesale5],
+    ['5+ pzs', row.prices.wholesale],
     ['100 pzs surtido', row.prices.mixed100],
     ['100 pzs/modelo', row.prices.model100],
     ['Caja/modelo', row.prices.boxModel],
@@ -360,15 +360,37 @@ function websitePrices(row) {
     .map(([quantity, value]) => ({ quantity, price: `$${Number(value).toLocaleString('es-MX')} MXN` }));
 }
 
+
+function websitePrices(row) {
+  const tiers = [
+    ['Menudeo', row.prices.retail],
+    ['Mayoreo', row.prices.wholesale],
+    ['Caja', row.prices.box],
+    ['⭐ VIP', row.prices.vip],
+  ];
+  return tiers.filter(([, value]) => money(value)).map(([quantity, value]) => ({
+    quantity,
+    price: `$${Number(value).toLocaleString('es-MX')} MXN`,
+  }));
+}
+
 function appPriceTiers(row) {
+  return [
+    money(row.prices.wholesale) && { code: 'WHOLESALE', minQty: 1, maxQty: null, price: Number(row.prices.wholesale), label: 'Mayoreo · confirmar condiciones', scope: 'manual_quote', autoApply: false },
+    money(row.prices.box) && { code: 'BOX', minQty: 1, maxQty: null, price: Number(row.prices.box), label: 'Caja · confirmar presentación', scope: 'manual_quote', autoApply: false },
+    money(row.prices.vip) && { code: 'VIP', minQty: 1, maxQty: null, price: Number(row.prices.vip), label: 'VIP · cliente autorizado', scope: 'manual_quote', autoApply: false },
+  ].filter(Boolean);
+}
+
+function appPriceTiersLegacy(row) {
   const approvedTier = approvedTierContext(row);
   if (approvedTier) {
     return [
-      money(row.prices.wholesale5) && {
+      money(row.prices.wholesale) && {
         code: 'WHOLESALE_5',
         minQty: 5,
         maxQty: 9,
-        price: Number(row.prices.wholesale5),
+        price: Number(row.prices.wholesale),
         label: `Mayoreo 5+ ${approvedTier.unit}`,
         scope: approvedTier.scope,
       },
@@ -384,8 +406,8 @@ function appPriceTiers(row) {
   }
 
   const tiers = [];
-  if (money(row.prices.wholesale5)) {
-    tiers.push({ code: 'WHOLESALE_5', minQty: 5, maxQty: 99, price: Number(row.prices.wholesale5), label: 'Mayoreo 5 pzs', scope: 'single_product' });
+  if (money(row.prices.wholesale)) {
+    tiers.push({ code: 'WHOLESALE_5', minQty: 5, maxQty: 99, price: Number(row.prices.wholesale), label: 'Mayoreo 5 pzs', scope: 'single_product' });
   }
   if (money(row.prices.mixed100)) {
     tiers.push({ code: 'MIXED_100', minQty: 100, maxQty: null, price: Number(row.prices.mixed100), label: '100 pzs surtido', scope: 'mixed_order' });
@@ -770,7 +792,7 @@ function main() {
     masterChanges.set(product.id, {
       id: product.id,
       retail: row.prices.retail,
-      wholesale5: row.prices.wholesale5,
+      wholesale5: row.prices.wholesale,
     });
   }
 
@@ -797,7 +819,7 @@ function main() {
       return;
     }
     const retail = Number(row.prices.retail);
-    const wholesale5 = Number(row.prices.wholesale5 || row.prices.retail);
+    const wholesale5 = Number(row.prices.wholesale || row.prices.retail);
     const tiers = appPriceTiers(row);
     const before = JSON.stringify({ retail: product.precioPublico, wholesale5: product.precioMayoreo, tiers: product.priceTiers || [] });
     product.precioPublico = retail;
@@ -956,7 +978,7 @@ function main() {
       updateSitemap(retainedWebsiteProducts);
     }
     const lines = [
-      '# Customer Price Sync 2026-08',
+      '# Customer Price Sync 2026-09-21',
       '',
       `- Source: ${source.sourceWorkbook} / ${source.sourceSheet}`,
       `- Approved source rows: ${summary.sourceRows}`,
