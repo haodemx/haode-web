@@ -1,0 +1,3141 @@
+{
+  "sourceWorkbook": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx",
+  "sourceSheet": "01-08 categorías",
+  "sourceVersion": "2026-09-21",
+  "importedAt": "2026-09-21",
+  "currency": "MXN",
+  "rules": {
+    "exactModelAndQualityOnly": true,
+    "missingRowsAreNotPublished": true,
+    "tiers": [
+      "Menudeo",
+      "Mayoreo",
+      "Caja",
+      "VIP"
+    ],
+    "automaticQuantityDiscounts": false,
+    "vipRequiresAuthorization": true
+  },
+  "rows": [
+    {
+      "section": "micas",
+      "sourceSheet": "01 HIDROGEL",
+      "sourceRow": 7,
+      "model": null,
+      "product": "Máquina de Micas（X200T）",
+      "quality": "Equipo",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 6000,
+        "wholesale": 5800,
+        "box": 5500,
+        "vip": 5300,
+        "wholesale5": 5800,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 5500,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "01 HIDROGEL",
+      "sourceRow": 8,
+      "model": null,
+      "product": "MICA HD",
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 350,
+        "wholesale": 300,
+        "box": 275,
+        "vip": 250,
+        "wholesale5": 300,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 275,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "01 HIDROGEL",
+      "sourceRow": 9,
+      "model": null,
+      "product": "MICA MATTE",
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 350,
+        "wholesale": 300,
+        "box": 275,
+        "vip": 250,
+        "wholesale5": 300,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 275,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "01 HIDROGEL",
+      "sourceRow": 10,
+      "model": null,
+      "product": "MICA PRIVACIDAD HD",
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 800,
+        "wholesale": 750,
+        "box": 700,
+        "vip": 650,
+        "wholesale5": 750,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 700,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "01 HIDROGEL",
+      "sourceRow": 11,
+      "model": null,
+      "product": "MICA PRIVACIDAD MATTE",
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 800,
+        "wholesale": 750,
+        "box": 700,
+        "vip": 650,
+        "wholesale5": 750,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 700,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 7,
+      "model": null,
+      "product": "Gafas AI G5",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 900,
+        "wholesale": 850,
+        "box": 750,
+        "vip": null,
+        "wholesale5": 850,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 750,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 8,
+      "model": null,
+      "product": "Gafas AI W630",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1100,
+        "wholesale": 1000,
+        "box": 950,
+        "vip": null,
+        "wholesale5": 1000,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 950,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 9,
+      "model": null,
+      "product": "Gafas AI W610",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1000,
+        "wholesale": 900,
+        "box": 800,
+        "vip": null,
+        "wholesale5": 900,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 800,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 10,
+      "model": null,
+      "product": "Gafas AI G3",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 900,
+        "wholesale": 850,
+        "box": 750,
+        "vip": null,
+        "wholesale5": 850,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 750,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 11,
+      "model": null,
+      "product": "Gafas AI M89",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 550,
+        "wholesale": 500,
+        "box": 480,
+        "vip": null,
+        "wholesale5": 500,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 480,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 12,
+      "model": null,
+      "product": "Gafas AI M08",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1000,
+        "wholesale": 900,
+        "box": 800,
+        "vip": null,
+        "wholesale5": 900,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 800,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 13,
+      "model": null,
+      "product": "Gafas AI M02",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 800,
+        "wholesale": 750,
+        "box": 680,
+        "vip": null,
+        "wholesale5": 750,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 680,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "02 PRODUCTOS AI",
+      "sourceRow": 14,
+      "model": null,
+      "product": "Gafas AI M95",
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 700,
+        "wholesale": 650,
+        "box": 600,
+        "vip": null,
+        "wholesale5": 650,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 600,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 7,
+      "model": "X",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 170,
+        "wholesale": 160,
+        "box": 150,
+        "vip": 145,
+        "wholesale5": 160,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 150,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 8,
+      "model": "X Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 160,
+        "wholesale": 155,
+        "box": 145,
+        "vip": 140,
+        "wholesale5": 155,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 145,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 9,
+      "model": "XS",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 170,
+        "wholesale": 160,
+        "box": 150,
+        "vip": 145,
+        "wholesale5": 160,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 150,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 10,
+      "model": "Xs Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 160,
+        "wholesale": 155,
+        "box": 145,
+        "vip": 140,
+        "wholesale5": 155,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 145,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 11,
+      "model": "XR Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 155,
+        "wholesale": 145,
+        "box": 135,
+        "vip": 130,
+        "wholesale5": 145,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 135,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 12,
+      "model": "XR",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 175,
+        "wholesale": 165,
+        "box": 155,
+        "vip": 150,
+        "wholesale5": 165,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 155,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 13,
+      "model": "11 Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 155,
+        "wholesale": 145,
+        "box": 135,
+        "vip": 130,
+        "wholesale5": 145,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 135,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 14,
+      "model": "11",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 175,
+        "wholesale": 165,
+        "box": 155,
+        "vip": 150,
+        "wholesale5": 165,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 155,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 15,
+      "model": "11 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 210,
+        "wholesale": 195,
+        "box": 185,
+        "vip": 180,
+        "wholesale5": 195,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 185,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 16,
+      "model": "XS Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 195,
+        "wholesale": 180,
+        "box": 170,
+        "vip": 165,
+        "wholesale5": 180,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 170,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 17,
+      "model": "11 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 210,
+        "wholesale": 195,
+        "box": 185,
+        "vip": 180,
+        "wholesale5": 195,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 185,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 18,
+      "model": "12 mini",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 210,
+        "wholesale": 195,
+        "box": 185,
+        "vip": 180,
+        "wholesale5": 195,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 185,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 19,
+      "model": "12/12 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 210,
+        "wholesale": 195,
+        "box": 185,
+        "vip": 180,
+        "wholesale5": 195,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 185,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 20,
+      "model": "12 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 240,
+        "wholesale": 225,
+        "box": 210,
+        "vip": 205,
+        "wholesale5": 225,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 210,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 21,
+      "model": "13 mini",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 255,
+        "wholesale": 235,
+        "box": 225,
+        "vip": 215,
+        "wholesale5": 235,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 225,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 22,
+      "model": "13",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 240,
+        "wholesale": 225,
+        "box": 210,
+        "vip": 205,
+        "wholesale5": 225,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 210,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 23,
+      "model": "13 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 305,
+        "wholesale": 285,
+        "box": 270,
+        "vip": 260,
+        "wholesale5": 285,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 270,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 24,
+      "model": "13 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 340,
+        "wholesale": 320,
+        "box": 300,
+        "vip": 290,
+        "wholesale5": 320,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 300,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 25,
+      "model": "14",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 245,
+        "wholesale": 230,
+        "box": 215,
+        "vip": 210,
+        "wholesale5": 230,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 215,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 26,
+      "model": "14 plus",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 280,
+        "wholesale": 260,
+        "box": 245,
+        "vip": 240,
+        "wholesale5": 260,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 245,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 27,
+      "model": "14 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 340,
+        "wholesale": 320,
+        "box": 300,
+        "vip": 290,
+        "wholesale5": 320,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 300,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 28,
+      "model": "14 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale": 325,
+        "box": 310,
+        "vip": 300,
+        "wholesale5": 325,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 310,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 29,
+      "model": "15",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 305,
+        "wholesale": 285,
+        "box": 270,
+        "vip": 260,
+        "wholesale5": 285,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 270,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 30,
+      "model": "15 plus",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 305,
+        "wholesale": 285,
+        "box": 270,
+        "vip": 260,
+        "wholesale5": 285,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 270,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 31,
+      "model": "15 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 340,
+        "wholesale": 320,
+        "box": 300,
+        "vip": 290,
+        "wholesale5": 320,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 300,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 32,
+      "model": "15 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 355,
+        "wholesale": 335,
+        "box": 315,
+        "vip": 305,
+        "wholesale5": 335,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 315,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 33,
+      "model": "16",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 285,
+        "wholesale": 265,
+        "box": 250,
+        "vip": 240,
+        "wholesale5": 265,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 250,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 34,
+      "model": "16E",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale": 325,
+        "box": 310,
+        "vip": 300,
+        "wholesale5": 325,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 310,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 35,
+      "model": "16 Plus",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 295,
+        "wholesale": 275,
+        "box": 260,
+        "vip": 250,
+        "wholesale5": 275,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 260,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 36,
+      "model": "16 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 415,
+        "wholesale": 390,
+        "box": 365,
+        "vip": 355,
+        "wholesale5": 390,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 365,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 37,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 730,
+        "wholesale": 685,
+        "box": 645,
+        "vip": 625,
+        "wholesale5": 685,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 645,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 38,
+      "model": "17",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 465,
+        "wholesale": 435,
+        "box": 410,
+        "vip": 400,
+        "wholesale5": 435,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 410,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 39,
+      "model": "17 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 465,
+        "wholesale": 435,
+        "box": 410,
+        "vip": 400,
+        "wholesale5": 435,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 410,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 40,
+      "model": "17 AIR",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 2175,
+        "wholesale": 2040,
+        "box": 1920,
+        "vip": 1855,
+        "wholesale5": 2040,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1920,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 41,
+      "model": "17E",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale": 325,
+        "box": 310,
+        "vip": 300,
+        "wholesale5": 325,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 310,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "03 IPHONE INCELL",
+      "sourceRow": 42,
+      "model": "17 PROMAX",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 465,
+        "wholesale": 435,
+        "box": 410,
+        "vip": 400,
+        "wholesale5": 435,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 410,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 7,
+      "model": "XS Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 580,
+        "wholesale": 565,
+        "box": 520,
+        "vip": 500,
+        "wholesale5": 565,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 520,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 8,
+      "model": "11 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 620,
+        "wholesale": 600,
+        "box": 550,
+        "vip": 535,
+        "wholesale5": 600,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 550,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 9,
+      "model": "12/12 Pro",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 655,
+        "wholesale": 640,
+        "box": 585,
+        "vip": 565,
+        "wholesale5": 640,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 585,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 10,
+      "model": "12 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 590,
+        "wholesale": 575,
+        "box": 530,
+        "vip": 510,
+        "wholesale5": 575,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 530,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 11,
+      "model": "13",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 690,
+        "wholesale": 675,
+        "box": 615,
+        "vip": 595,
+        "wholesale5": 675,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 615,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 12,
+      "model": "13 Pro",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 835,
+        "wholesale": 815,
+        "box": 745,
+        "vip": 720,
+        "wholesale5": 815,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 745,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 13,
+      "model": "13 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 905,
+        "wholesale": 885,
+        "box": 810,
+        "vip": 780,
+        "wholesale5": 885,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 810,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 14,
+      "model": "14",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 690,
+        "wholesale": 675,
+        "box": 615,
+        "vip": 595,
+        "wholesale5": 675,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 615,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 15,
+      "model": "14",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "DD",
+      "prices": {
+        "retail": 1070,
+        "wholesale": 1040,
+        "box": 955,
+        "vip": 920,
+        "wholesale5": 1040,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 955,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 16,
+      "model": "14 plus",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 940,
+        "wholesale": 920,
+        "box": 840,
+        "vip": 815,
+        "wholesale5": 920,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 840,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 17,
+      "model": "14 plus",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "DD",
+      "prices": {
+        "retail": 1070,
+        "wholesale": 1040,
+        "box": 955,
+        "vip": 920,
+        "wholesale5": 1040,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 955,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 18,
+      "model": "14 Pro",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1025,
+        "wholesale": 1000,
+        "box": 915,
+        "vip": 885,
+        "wholesale5": 1000,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 915,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 19,
+      "model": "14 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 880,
+        "wholesale": 860,
+        "box": 785,
+        "vip": 760,
+        "wholesale5": 860,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 785,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 20,
+      "model": "15",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1025,
+        "wholesale": 1000,
+        "box": 915,
+        "vip": 885,
+        "wholesale5": 1000,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 915,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 21,
+      "model": "15 Pro",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1025,
+        "wholesale": 1000,
+        "box": 915,
+        "vip": 885,
+        "wholesale5": 1000,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 915,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 22,
+      "model": "15 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 935,
+        "wholesale": 910,
+        "box": 835,
+        "vip": 805,
+        "wholesale5": 910,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 835,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 23,
+      "model": "16E",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 725,
+        "wholesale": 710,
+        "box": 650,
+        "vip": 625,
+        "wholesale5": 710,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 650,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 24,
+      "model": "16 Pro",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1365,
+        "wholesale": 1330,
+        "box": 1220,
+        "vip": 1175,
+        "wholesale5": 1330,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1220,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 25,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1400,
+        "wholesale": 1365,
+        "box": 1250,
+        "vip": 1205,
+        "wholesale5": 1365,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1250,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "04 IPHONE OLED",
+      "sourceRow": 26,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1805,
+        "wholesale": 1760,
+        "box": 1615,
+        "vip": 1560,
+        "wholesale5": 1760,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1615,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 7,
+      "model": "XS Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 650,
+        "wholesale": 605,
+        "box": 570,
+        "vip": 535,
+        "wholesale5": 605,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 570,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 8,
+      "model": "11 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 685,
+        "wholesale": 640,
+        "box": 600,
+        "vip": 565,
+        "wholesale5": 640,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 600,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 9,
+      "model": "12/12 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 735,
+        "wholesale": 685,
+        "box": 640,
+        "vip": 605,
+        "wholesale5": 685,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 640,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 10,
+      "model": "12 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 865,
+        "wholesale": 805,
+        "box": 755,
+        "vip": 710,
+        "wholesale5": 805,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 755,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 11,
+      "model": "12 mini",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1065,
+        "wholesale": 995,
+        "box": 930,
+        "vip": 875,
+        "wholesale5": 995,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 930,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 12,
+      "model": "13",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 865,
+        "wholesale": 805,
+        "box": 755,
+        "vip": 710,
+        "wholesale5": 805,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 755,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 13,
+      "model": "13 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 975,
+        "wholesale": 910,
+        "box": 855,
+        "vip": 805,
+        "wholesale5": 910,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 855,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 14,
+      "model": "13 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 920,
+        "wholesale": 860,
+        "box": 805,
+        "vip": 755,
+        "wholesale5": 860,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 805,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 15,
+      "model": "14",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 865,
+        "wholesale": 805,
+        "box": 755,
+        "vip": 710,
+        "wholesale5": 805,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 755,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 16,
+      "model": "14 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1390,
+        "wholesale": 1300,
+        "box": 1215,
+        "vip": 1145,
+        "wholesale5": 1300,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1215,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 17,
+      "model": "14 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 975,
+        "wholesale": 910,
+        "box": 855,
+        "vip": 805,
+        "wholesale5": 910,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 855,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 18,
+      "model": "14 Plus",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 920,
+        "wholesale": 860,
+        "box": 805,
+        "vip": 755,
+        "wholesale5": 860,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 805,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 19,
+      "model": "15",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1270,
+        "wholesale": 1185,
+        "box": 1115,
+        "vip": 1050,
+        "wholesale5": 1185,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1115,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 20,
+      "model": "15 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1390,
+        "wholesale": 1300,
+        "box": 1215,
+        "vip": 1145,
+        "wholesale5": 1300,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1215,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 21,
+      "model": "15 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1270,
+        "wholesale": 1185,
+        "box": 1115,
+        "vip": 1050,
+        "wholesale5": 1185,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1115,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 22,
+      "model": "15 Plus",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1255,
+        "wholesale": 1170,
+        "box": 1095,
+        "vip": 1030,
+        "wholesale5": 1170,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1095,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 23,
+      "model": "16E",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 880,
+        "wholesale": 825,
+        "box": 770,
+        "vip": 725,
+        "wholesale5": 825,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 770,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 24,
+      "model": "16",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1400,
+        "wholesale": 1310,
+        "box": 1225,
+        "vip": 1155,
+        "wholesale5": 1310,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1225,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 25,
+      "model": "16 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1440,
+        "wholesale": 1345,
+        "box": 1260,
+        "vip": 1185,
+        "wholesale5": 1345,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1260,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 26,
+      "model": "16 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1920,
+        "wholesale": 1795,
+        "box": 1680,
+        "vip": 1585,
+        "wholesale5": 1795,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1680,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 27,
+      "model": "16 Plus",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1420,
+        "wholesale": 1325,
+        "box": 1245,
+        "vip": 1170,
+        "wholesale5": 1325,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1245,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 28,
+      "model": "17",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1530,
+        "wholesale": 1430,
+        "box": 1340,
+        "vip": 1260,
+        "wholesale5": 1430,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1340,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 29,
+      "model": "17 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1530,
+        "wholesale": 1430,
+        "box": 1340,
+        "vip": 1260,
+        "wholesale5": 1430,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1340,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "05 IPHONE DIAGNOSTICO",
+      "sourceRow": 30,
+      "model": "17 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2275,
+        "wholesale": 2125,
+        "box": 1990,
+        "vip": 1875,
+        "wholesale5": 2125,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1990,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 7,
+      "model": "S8",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 365,
+        "wholesale": 345,
+        "box": 325,
+        "vip": 315,
+        "wholesale5": 345,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 325,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 8,
+      "model": "S8+",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 310,
+        "wholesale": 295,
+        "box": 275,
+        "vip": 265,
+        "wholesale5": 295,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 275,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 9,
+      "model": "S9",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 340,
+        "wholesale": 320,
+        "box": 300,
+        "vip": 290,
+        "wholesale5": 320,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 300,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 10,
+      "model": "S9 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 350,
+        "wholesale": 325,
+        "box": 310,
+        "vip": 300,
+        "wholesale5": 325,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 310,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 11,
+      "model": "S10",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 375,
+        "wholesale": 355,
+        "box": 335,
+        "vip": 320,
+        "wholesale5": 355,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 335,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 12,
+      "model": "S10 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 385,
+        "wholesale": 360,
+        "box": 340,
+        "vip": 325,
+        "wholesale5": 360,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 340,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 13,
+      "model": "S10E",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 555,
+        "wholesale": 520,
+        "box": 490,
+        "vip": 475,
+        "wholesale5": 520,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 490,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 14,
+      "model": "S10 LITE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 290,
+        "wholesale": 270,
+        "box": 255,
+        "vip": 250,
+        "wholesale5": 270,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 255,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 15,
+      "model": "S20 4G",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 410,
+        "wholesale": 385,
+        "box": 365,
+        "vip": 350,
+        "wholesale5": 385,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 365,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 16,
+      "model": "S20 5G",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 410,
+        "wholesale": 385,
+        "box": 365,
+        "vip": 350,
+        "wholesale5": 385,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 365,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 17,
+      "model": "S20 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 420,
+        "wholesale": 390,
+        "box": 370,
+        "vip": 355,
+        "wholesale5": 390,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 370,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 18,
+      "model": "S20FE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 280,
+        "wholesale": 260,
+        "box": 245,
+        "vip": 235,
+        "wholesale5": 260,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 245,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 19,
+      "model": "S20 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 440,
+        "wholesale": 415,
+        "box": 390,
+        "vip": 375,
+        "wholesale5": 415,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 390,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 20,
+      "model": "S21",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 410,
+        "wholesale": 385,
+        "box": 365,
+        "vip": 350,
+        "wholesale5": 385,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 365,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 21,
+      "model": "S21 FE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 455,
+        "wholesale": 430,
+        "box": 405,
+        "vip": 390,
+        "wholesale5": 430,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 405,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 22,
+      "model": "S21 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale": 375,
+        "box": 355,
+        "vip": 340,
+        "wholesale5": 375,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 355,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 23,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 370,
+        "wholesale": 350,
+        "box": 330,
+        "vip": 315,
+        "wholesale5": 350,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 330,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 24,
+      "model": "S22",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 505,
+        "wholesale": 475,
+        "box": 445,
+        "vip": 430,
+        "wholesale5": 475,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 445,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 25,
+      "model": "S22 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 505,
+        "wholesale": 475,
+        "box": 445,
+        "vip": 430,
+        "wholesale5": 475,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 445,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 26,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 515,
+        "wholesale": 485,
+        "box": 455,
+        "vip": 440,
+        "wholesale5": 485,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 455,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 27,
+      "model": "S23",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 505,
+        "wholesale": 475,
+        "box": 445,
+        "vip": 430,
+        "wholesale5": 475,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 445,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 28,
+      "model": "S23 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 505,
+        "wholesale": 475,
+        "box": 445,
+        "vip": 430,
+        "wholesale5": 475,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 445,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 29,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 440,
+        "wholesale": 415,
+        "box": 390,
+        "vip": 375,
+        "wholesale5": 415,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 390,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 30,
+      "model": "S24",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 680,
+        "wholesale": 635,
+        "box": 600,
+        "vip": 580,
+        "wholesale5": 635,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 600,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 31,
+      "model": "S24 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 655,
+        "wholesale": 615,
+        "box": 580,
+        "vip": 560,
+        "wholesale5": 615,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 580,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 32,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 625,
+        "wholesale": 585,
+        "box": 555,
+        "vip": 535,
+        "wholesale5": 585,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 555,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 33,
+      "model": "NOTE 8",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 455,
+        "wholesale": 425,
+        "box": 400,
+        "vip": 385,
+        "wholesale5": 425,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 400,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 34,
+      "model": "NOTE 9",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale": 375,
+        "box": 350,
+        "vip": 340,
+        "wholesale5": 375,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 350,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 35,
+      "model": "NOTE 10",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 475,
+        "wholesale": 445,
+        "box": 420,
+        "vip": 405,
+        "wholesale5": 445,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 420,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 36,
+      "model": "NOTE 10+",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 505,
+        "wholesale": 475,
+        "box": 445,
+        "vip": 430,
+        "wholesale5": 475,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 445,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 37,
+      "model": "NOTE10 LITE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 695,
+        "wholesale": 650,
+        "box": 615,
+        "vip": 595,
+        "wholesale5": 650,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 615,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 38,
+      "model": "NOTE 20",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 425,
+        "wholesale": 395,
+        "box": 375,
+        "vip": 360,
+        "wholesale5": 395,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 375,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 39,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 470,
+        "wholesale": 440,
+        "box": 415,
+        "vip": 400,
+        "wholesale5": 440,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 415,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 40,
+      "model": "Z FLIP3",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 690,
+        "wholesale": 645,
+        "box": 610,
+        "vip": 590,
+        "wholesale5": 645,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 610,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 41,
+      "model": "Z FLIP4",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 690,
+        "wholesale": 645,
+        "box": 610,
+        "vip": 590,
+        "wholesale5": 645,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 610,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 42,
+      "model": "Z FLIP5",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1700,
+        "wholesale": 1600,
+        "box": 1400,
+        "vip": 1300,
+        "wholesale5": 1600,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1400,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "06 SAMSUNG INCELL",
+      "sourceRow": 43,
+      "model": "Z FLIP6",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 830,
+        "wholesale": 775,
+        "box": 730,
+        "vip": 705,
+        "wholesale5": 775,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 730,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 7,
+      "model": "S20 PLUS",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1100,
+        "wholesale": 1025,
+        "box": 960,
+        "vip": 905,
+        "wholesale5": 1025,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 960,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 8,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1365,
+        "wholesale": 1275,
+        "box": 1195,
+        "vip": 1125,
+        "wholesale5": 1275,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1195,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 9,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1340,
+        "wholesale": 1250,
+        "box": 1170,
+        "vip": 1105,
+        "wholesale5": 1250,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1170,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 10,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1295,
+        "wholesale": 1210,
+        "box": 1130,
+        "vip": 1065,
+        "wholesale5": 1210,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1130,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 11,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1525,
+        "wholesale": 1425,
+        "box": 1335,
+        "vip": 1255,
+        "wholesale5": 1425,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1335,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 12,
+      "model": "S25 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2080,
+        "wholesale": 1945,
+        "box": 1820,
+        "vip": 1715,
+        "wholesale5": 1945,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1820,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 13,
+      "model": "NOTE 10",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1380,
+        "wholesale": 1290,
+        "box": 1210,
+        "vip": 1140,
+        "wholesale5": 1290,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1210,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 14,
+      "model": "NOTE 20",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1100,
+        "wholesale": 1025,
+        "box": 960,
+        "vip": 905,
+        "wholesale5": 1025,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 960,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "07 SAMSUNG OLED",
+      "sourceRow": 15,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1420,
+        "wholesale": 1325,
+        "box": 1240,
+        "vip": 1170,
+        "wholesale5": 1325,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1240,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 7,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2720,
+        "wholesale": 2540,
+        "box": 2380,
+        "vip": 2240,
+        "wholesale5": 2540,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2380,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 8,
+      "model": "S22 PLUS",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1320,
+        "wholesale": 1230,
+        "box": 1155,
+        "vip": 1085,
+        "wholesale5": 1230,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1155,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 9,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2850,
+        "wholesale": 2660,
+        "box": 2495,
+        "vip": 2350,
+        "wholesale5": 2660,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2495,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 10,
+      "model": "S23 PLUS",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1320,
+        "wholesale": 1230,
+        "box": 1155,
+        "vip": 1085,
+        "wholesale5": 1230,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1155,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 11,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1525,
+        "wholesale": 1425,
+        "box": 1335,
+        "vip": 1255,
+        "wholesale5": 1425,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 1335,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 12,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2660,
+        "wholesale": 2480,
+        "box": 2325,
+        "vip": 2190,
+        "wholesale5": 2480,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2325,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 13,
+      "model": "S25 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2650,
+        "wholesale": 2475,
+        "box": 2320,
+        "vip": 2185,
+        "wholesale5": 2475,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2320,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 14,
+      "model": "S26 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2915,
+        "wholesale": 2720,
+        "box": 2550,
+        "vip": 2400,
+        "wholesale5": 2720,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2550,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 15,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2870,
+        "wholesale": 2680,
+        "box": 2515,
+        "vip": 2365,
+        "wholesale5": 2680,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2515,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 16,
+      "model": "Z FLIP3",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2930,
+        "wholesale": 2735,
+        "box": 2560,
+        "vip": 2410,
+        "wholesale5": 2735,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2560,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 17,
+      "model": "Z FLIP4",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2580,
+        "wholesale": 2410,
+        "box": 2260,
+        "vip": 2125,
+        "wholesale5": 2410,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2260,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 18,
+      "model": "Z FLIP5",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3215,
+        "wholesale": 3000,
+        "box": 2810,
+        "vip": 2645,
+        "wholesale5": 3000,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 2810,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 19,
+      "model": "Z FLIP6",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3585,
+        "wholesale": 3345,
+        "box": 3135,
+        "vip": 2955,
+        "wholesale5": 3345,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 3135,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 20,
+      "model": "Z FOLD3",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4100,
+        "wholesale": 3825,
+        "box": 3585,
+        "vip": 3375,
+        "wholesale5": 3825,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 3585,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 21,
+      "model": "Z FOLD4",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 5585,
+        "wholesale": 5215,
+        "box": 4885,
+        "vip": 4600,
+        "wholesale5": 5215,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 4885,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 22,
+      "model": "Z FOLD5",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 7440,
+        "wholesale": 6945,
+        "box": 6510,
+        "vip": 6130,
+        "wholesale5": 6945,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 6510,
+        "quantity10": null
+      }
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "08 SAMSUNG ORIGINAL",
+      "sourceRow": 23,
+      "model": "Z FOLD6",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 11455,
+        "wholesale": 10690,
+        "box": 10020,
+        "vip": 9435,
+        "wholesale5": 10690,
+        "mixed100": null,
+        "model100": null,
+        "boxModel": 10020,
+        "quantity10": null
+      }
+    }
+  ]
+}
