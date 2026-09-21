@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import test from 'node:test';
 
 function websiteProducts() {
@@ -52,8 +55,109 @@ test('manual Mayoreo/Caja/VIP tiers are displayed but never auto-applied', () =>
   assert.deepEqual(p.priceTiers.map(x=>x.code),['WHOLESALE','BOX','VIP']);
   assert.ok(p.priceTiers.every(x=>x.autoApply===false));
   assert.ok(appJs.includes('New 2026-09-21 customer list'));
+  for (const id of ['iphone-incell-11-bolsa-protectora', 'iphone-incell-11pro', 'iphone-incell-14', 'iphone-incell-xr-bolsa-protectora']) {
+    const product = byId(app, id);
+    const box = product.priceTiers.find((tier) => tier.code === 'BOX');
+    assert.equal(product.offerDisplayPrice, `$${box.price.toLocaleString('es-MX')} MXN / pieza`);
+    assert.equal(product.offerDisplayNote, 'Caja · confirmar por WhatsApp');
+  }
 });
 
 test('source rows without an exact website product are reported, not guessed', () => {
   assert.deepEqual(report.unmatchedSource.map(x=>x.model),['X Bolsa Protectora','Xs Bolsa Protectora','S26 Ultra']);
+});
+
+test('legacy AI product pages expose every source-backed tier and matching Product JSON-LD', () => {
+  const routes = new Map([
+    ['aimb-g5-ai-sports', 'ai-smart-glasses-aimb-g5.html'],
+    ['haode-ai-g3-smart-glasses', 'ai-smart-glasses-aimb-g3.html'],
+    ['haode-ai-w610-smart-glasses', 'ai-smart-glasses-w610.html'],
+    ['w630-ai-pro', 'ai-smart-glasses-w630.html'],
+  ]);
+  for (const [id, route] of routes) {
+    const product = byId(website, id);
+    const html = fs.readFileSync(new URL(`../${route}`, import.meta.url), 'utf8');
+    for (const tier of product.prices) {
+      assert.match(html, new RegExp(`${tier.quantity}[\\s\\S]*?${tier.price.replace('$', '\\$')}`));
+    }
+    const schema = [...html.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
+      .flatMap((match) => {
+        const data = JSON.parse(match[1]);
+        return Array.isArray(data['@graph']) ? data['@graph'] : [data];
+      })
+      .find((node) => node['@type'] === 'Product');
+    assert.ok(schema, `${route} must contain Product JSON-LD`);
+    assert.deepEqual(schema.offers.map((offer) => offer.name), product.prices.map((tier) => tier.quantity));
+    assert.equal(product.prices.some((tier) => tier.quantity.includes('VIP')), false, `${id} must not invent a missing VIP price`);
+  }
+});
+
+test('reapplying the customer price sync preserves named manual tiers', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'haode-price-sync-'));
+  for (const directory of ['scripts', 'data', 'app', 'docs/master-data', 'docs/reports']) {
+    fs.mkdirSync(path.join(root, directory), { recursive: true });
+  }
+  for (const file of [
+    'scripts/sync-customer-prices.js',
+    'data/customer-price-list-2026-09-21.json',
+    'data/products.generated.js',
+    'app/products.json',
+    'docs/master-data/products-master.csv',
+  ]) {
+    fs.copyFileSync(new URL(`../${file}`, import.meta.url), path.join(root, file));
+  }
+
+  const result = spawnSync(process.execPath, [path.join(root, 'scripts/sync-customer-prices.js'), '--apply'], {
+    cwd: root,
+    encoding: 'utf8',
+  });
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+
+  const syncedWebsiteText = fs.readFileSync(path.join(root, 'data/products.generated.js'), 'utf8');
+  const syncedWebsite = JSON.parse(syncedWebsiteText.slice(syncedWebsiteText.indexOf('['), syncedWebsiteText.lastIndexOf(']') + 1));
+  const syncedApp = JSON.parse(fs.readFileSync(path.join(root, 'app/products.json'), 'utf8'));
+  assert.deepEqual(byId(syncedWebsite, 'samsung-incell-s8').prices.map((row) => row.quantity), ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
+  assert.deepEqual(byId(syncedApp, 'samsung-incell-s8').priceTiers.map((tier) => tier.code), ['WHOLESALE', 'BOX', 'VIP']);
+  assert.ok(byId(syncedApp, 'samsung-incell-s8').priceTiers.every((tier) => tier.autoApply === false));
+  assert.equal(byId(syncedApp, 'iphone-incell-11-bolsa-protectora').offerDisplayPrice, '$135 MXN / pieza');
+});
+
+test('static detail fallback updater writes four named tiers and matching Product offers', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'haode-static-price-'));
+  fs.mkdirSync(path.join(root, 'scripts'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'data'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'producto/x200t-cortadora-micas'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'producto/x200t-legacy-route'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'producto/unmatched-product'), { recursive: true });
+  fs.copyFileSync(new URL('../scripts/update-static-detail-price-fallbacks.js', import.meta.url), path.join(root, 'scripts/update-static-detail-price-fallbacks.js'));
+  const unmatchedProduct = {
+    id: 'unmatched-product',
+    priceSource: 'Fuente anterior confirmada',
+    prices: [{ quantity: '1 pza', price: '$999 MXN' }],
+  };
+  fs.writeFileSync(path.join(root, 'data/products.generated.js'), `window.HAODE_PRODUCTS_DATA = ${JSON.stringify([byId(website, 'x200t-cortadora-micas'), unmatchedProduct])};\n`);
+  fs.writeFileSync(path.join(root, 'producto/x200t-cortadora-micas/index.html'), `<!doctype html><body><p class="detail-price-note" data-detail-price>$6,500 MXN</p><h2>Precios por volumen</h2><p>Precios por equipo.</p><table><tbody data-detail-price-body><tr><th>Precio público</th><td>$6,500 MXN</td></tr><tr><th>Mayoreo 5+</th><td>$6,200 MXN</td></tr><tr><th>Volumen 10+</th><td>$6,000 MXN</td></tr></tbody></table><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","offers":{"@type":"Offer","priceCurrency":"MXN","price":"6500"}}</script></body>`);
+  fs.writeFileSync(path.join(root, 'producto/x200t-legacy-route/index.html'), `<!doctype html><head><link rel="canonical" href="https://haode.com.mx/producto/x200t-cortadora-micas/" /></head><body><p class="detail-price-note" data-detail-price>$6,500 MXN</p><table><tbody data-detail-price-body><tr><th>Precio público</th><td>$6,500 MXN</td></tr></tbody></table><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","offers":{"@type":"Offer","priceCurrency":"MXN","price":"6500"}}</script></body>`);
+  const unmatchedHtml = '<!doctype html><body><p class="detail-price-note" data-detail-price>$999 MXN</p><table><tbody data-detail-price-body><tr><th>1 pza</th><td>$999 MXN</td></tr></tbody></table></body>';
+  fs.writeFileSync(path.join(root, 'producto/unmatched-product/index.html'), unmatchedHtml);
+
+  const result = spawnSync(process.execPath, [path.join(root, 'scripts/update-static-detail-price-fallbacks.js')], {
+    cwd: root,
+    encoding: 'utf8',
+  });
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+
+  const html = fs.readFileSync(path.join(root, 'producto/x200t-cortadora-micas/index.html'), 'utf8');
+  assert.match(html, /Menudeo: \$6,000 MXN/);
+  assert.match(html, /<th scope="row">Menudeo<\/th>/);
+  assert.match(html, /<th scope="row">Mayoreo<\/th>/);
+  assert.match(html, /<th scope="row">Caja<\/th>/);
+  assert.match(html, /<th scope="row">⭐ VIP<\/th>/);
+  const schemaText = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/)?.[1];
+  const schema = JSON.parse(schemaText);
+  assert.deepEqual(schema.offers.map((offer) => offer.name), ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
+  const aliasHtml = fs.readFileSync(path.join(root, 'producto/x200t-legacy-route/index.html'), 'utf8');
+  assert.match(aliasHtml, /Menudeo: \$6,000 MXN/);
+  assert.match(aliasHtml, /<th scope="row">⭐ VIP<\/th>/);
+  assert.equal(fs.readFileSync(path.join(root, 'producto/unmatched-product/index.html'), 'utf8'), unmatchedHtml);
 });

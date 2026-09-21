@@ -20,20 +20,23 @@ async function saveEvidence(page, fileName) {
   await page.screenshot({ path: path.join(directory, fileName), fullPage: true });
 }
 
-test("Samsung S8 detail shows all five approved customer prices", async ({ page }) => {
+test("Samsung S8 detail shows all four approved named customer prices", async ({ page }) => {
   const consoleErrors = captureConsoleErrors(page);
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: { products: [] } }));
   await page.route("**/public-stock.json**", (route) => route.fulfill({ json: { products: [] } }));
   await page.goto(`${BASE_URL}/producto/samsung-incell-s8/`, { waitUntil: "networkidle" });
 
   const priceTable = page.getByRole("table", { name: "Tabla completa de precios" });
-  await expect(priceTable).toContainText("$360 MXN");
-  await expect(priceTable).toContainText("$350 MXN");
-  await expect(priceTable).toContainText("$340 MXN");
-  await expect(priceTable).toContainText("$320 MXN");
-  await expect(priceTable).toContainText("$310 MXN");
+  await expect(priceTable).toContainText("Menudeo");
+  await expect(priceTable).toContainText("$365 MXN");
+  await expect(priceTable).toContainText("Mayoreo");
+  await expect(priceTable).toContainText("$345 MXN");
+  await expect(priceTable).toContainText("Caja");
+  await expect(priceTable).toContainText("$325 MXN");
+  await expect(priceTable).toContainText("VIP");
+  await expect(priceTable).toContainText("$315 MXN");
   expect(consoleErrors).toEqual([]);
-  await saveEvidence(page, "website-samsung-s8-five-prices.png");
+  await saveEvidence(page, "website-samsung-s8-four-named-prices.png");
 });
 
 test("App uses retail price for one Samsung S8 instead of box price", async ({ page }) => {
@@ -43,13 +46,13 @@ test("App uses retail price for one Samsung S8 instead of box price", async ({ p
   await page.goto(`${BASE_URL}/app/#producto/samsung-incell-s8`, { waitUntil: "domcontentloaded" });
 
   await expect(page.getByRole("heading", { name: /Pantalla Samsung S8$/ })).toBeVisible();
-  await expect(page.locator(".price-stack")).toContainText("$360 MXN");
+  await expect(page.locator(".price-stack")).toContainText("$365 MXN");
   await page.locator("[data-add-product='samsung-incell-s8']").click();
   await page.goto(`${BASE_URL}/app/#carrito`, { waitUntil: "domcontentloaded" });
 
   const cartItem = page.locator(".cart-items-page .cart-item", { hasText: "Pantalla Samsung S8" });
-  await expect(cartItem).toContainText("$360 MXN");
-  await expect(cartItem).not.toContainText("$310 MXN");
+  await expect(cartItem).toContainText("$365 MXN");
+  await expect(cartItem).not.toContainText("$315 MXN");
   expect(consoleErrors).toEqual([]);
   await saveEvidence(page, "app-samsung-s8-retail-price.png");
 });

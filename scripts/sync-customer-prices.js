@@ -315,52 +315,6 @@ function money(value) {
   return Number.isFinite(Number(value)) && Number(value) > 0 ? Number(value) : null;
 }
 
-const HYDROGEL_FILM_NAMES = new Set([
-  'MICA HD',
-  'MICA MATTE',
-  'MICA PRIVACIDAD HD',
-  'MICA PRIVACIDAD MATTE',
-]);
-
-function approvedTierContext(row) {
-  const productName = String(row.product || '').trim().toUpperCase();
-  if (HYDROGEL_FILM_NAMES.has(productName)) {
-    return { unit: 'paquetes', scope: 'single_product' };
-  }
-  if (productName.includes('X200T')) {
-    return { unit: 'equipos', scope: 'single_product' };
-  }
-  return null;
-}
-
-function websitePricesLegacy(row) {
-  const approvedTier = approvedTierContext(row);
-  if (approvedTier) {
-    return [
-      ['Precio público', row.prices.retail],
-      ['Mayoreo 5+', row.prices.wholesale],
-      ['Volumen 10+', row.prices.quantity10],
-    ]
-      .filter(([, value]) => money(value))
-      .map(([quantity, value]) => ({ quantity, price: `$${Number(value).toLocaleString('es-MX')} MXN` }));
-  }
-
-  const tiers = [
-    ['1 pza', row.prices.retail],
-    ['5+ pzs', row.prices.wholesale],
-    ['100 pzs surtido', row.prices.mixed100],
-    ['100 pzs/modelo', row.prices.model100],
-    ['Caja/modelo', row.prices.boxModel],
-  ];
-  if (row.section === 'micas' && row.prices.quantity10) {
-    tiers.splice(2, 3, ['10+ paquetes', row.prices.quantity10]);
-  }
-  return tiers
-    .filter(([, value]) => money(value))
-    .map(([quantity, value]) => ({ quantity, price: `$${Number(value).toLocaleString('es-MX')} MXN` }));
-}
-
-
 function websitePrices(row) {
   const tiers = [
     ['Menudeo', row.prices.retail],
@@ -382,46 +336,22 @@ function appPriceTiers(row) {
   ].filter(Boolean);
 }
 
-function appPriceTiersLegacy(row) {
-  const approvedTier = approvedTierContext(row);
-  if (approvedTier) {
-    return [
-      money(row.prices.wholesale) && {
-        code: 'WHOLESALE_5',
-        minQty: 5,
-        maxQty: 9,
-        price: Number(row.prices.wholesale),
-        label: `Mayoreo 5+ ${approvedTier.unit}`,
-        scope: approvedTier.scope,
-      },
-      money(row.prices.quantity10) && {
-        code: 'VOLUME_10',
-        minQty: 10,
-        maxQty: null,
-        price: Number(row.prices.quantity10),
-        label: `Volumen 10+ ${approvedTier.unit}`,
-        scope: approvedTier.scope,
-      },
-    ].filter(Boolean);
-  }
+function updateCustomerPriceCopy(value, row) {
+  const box = money(row.prices.box);
+  if (!box || !value) return value;
+  return String(value)
+    .replace(/precio de caja\/modelo confirmado en \$[0-9,.]+ MXN por pieza/gi, `precio de Caja confirmado en $${box.toLocaleString('es-MX')} MXN por pieza`)
+    .replace(/caja\/modelo \$[0-9,.]+ MXN por pieza/gi, `Caja $${box.toLocaleString('es-MX')} MXN por pieza`);
+}
 
-  const tiers = [];
-  if (money(row.prices.wholesale)) {
-    tiers.push({ code: 'WHOLESALE_5', minQty: 5, maxQty: 99, price: Number(row.prices.wholesale), label: 'Mayoreo 5 pzs', scope: 'single_product' });
-  }
-  if (money(row.prices.mixed100)) {
-    tiers.push({ code: 'MIXED_100', minQty: 100, maxQty: null, price: Number(row.prices.mixed100), label: '100 pzs surtido', scope: 'mixed_order' });
-  }
-  if (money(row.prices.model100)) {
-    tiers.push({ code: 'MODEL_100', minQty: 100, maxQty: null, price: Number(row.prices.model100), label: '100 pzs/modelo', scope: 'same_model' });
-  }
-  if (money(row.prices.boxModel)) {
-    tiers.push({ code: 'BOX_MODEL', minQty: 1, maxQty: null, price: Number(row.prices.boxModel), label: 'Caja/modelo', scope: 'box_model', autoApply: false });
-  }
-  if (row.section === 'micas' && money(row.prices.quantity10)) {
-    tiers.push({ minQty: 10, maxQty: null, price: Number(row.prices.quantity10), label: '10+ paquetes', scope: 'single_product' });
-  }
-  return tiers;
+function updateSpecialOfferPricing(product, row) {
+  if (!(product.specialOffer || product.offerActive)) return;
+  const box = money(row.prices.box);
+  if (!box) return;
+  const formatted = box.toLocaleString('es-MX');
+  product.offerBadge = `Caja $${formatted}`;
+  product.offerDisplayPrice = `$${formatted} MXN / pieza`;
+  product.offerDisplayNote = 'Caja · confirmar por WhatsApp';
 }
 
 function priceNumber(value) {
@@ -470,6 +400,7 @@ function updateMasterCsv(changes, deletedIds, sourceVersion) {
   const idIndex = headers.indexOf('id');
   const publicIndex = headers.indexOf('precio_publico');
   const wholesaleIndex = headers.indexOf('precio_mayoreo');
+  const descriptionIndex = headers.indexOf('descripcion');
   const updatedIndex = headers.indexOf('last_updated');
   const byId = new Map(changes.map((change) => [change.id, change]));
   const retainedRows = rows.slice(1).filter((row) => !deletedIds.has(row[idIndex]));
@@ -478,6 +409,10 @@ function updateMasterCsv(changes, deletedIds, sourceVersion) {
     if (!change) return;
     row[publicIndex] = String(change.retail);
     row[wholesaleIndex] = String(change.wholesale5 || change.retail);
+    if (descriptionIndex >= 0) {
+      row[descriptionIndex] = change.description
+        || updateCustomerPriceCopy(row[descriptionIndex], { prices: { box: change.box } });
+    }
     row[updatedIndex] = sourceVersion;
   });
   return `${[headers, ...retainedRows].map((row) => row.map(csvCell).join(',')).join('\n')}\n`;
@@ -783,16 +718,19 @@ function main() {
     return candidates[0] || null;
   }
 
-  function recordMatch(product, row) {
+  function recordMatch(product, row, description = '') {
     matchedById.set(product.id, row);
     matchedIdByIdentity.set(sourceIdentity(row), product.id);
     (byIdentity.get(sourceIdentity(row)) || [row]).forEach((candidate) => {
-      usedSourceRows.add(`${candidate.section}:${candidate.sourceRow}`);
+      usedSourceRows.add(`${candidate.sourceSheet}:${candidate.sourceRow}`);
     });
     masterChanges.set(product.id, {
+      ...(masterChanges.get(product.id) || {}),
       id: product.id,
       retail: row.prices.retail,
       wholesale5: row.prices.wholesale,
+      box: row.prices.box,
+      ...(description ? { description } : {}),
     });
   }
 
@@ -803,13 +741,15 @@ function main() {
       return;
     }
     const nextPrices = websitePrices(row);
+    const previousDescription = product.description;
     const before = JSON.stringify(product.prices || []);
     const after = JSON.stringify(nextPrices);
     product.prices = nextPrices;
+    product.description = updateCustomerPriceCopy(product.description, row);
     product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== after) report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
     websiteDirectMatches.add(product.id);
-    recordMatch(product, row);
+    recordMatch(product, row, previousDescription !== product.description ? product.description : '');
   });
 
   appProducts.forEach((product) => {
@@ -821,14 +761,17 @@ function main() {
     const retail = Number(row.prices.retail);
     const wholesale5 = Number(row.prices.wholesale || row.prices.retail);
     const tiers = appPriceTiers(row);
+    const previousDescription = product.descripcion;
     const before = JSON.stringify({ retail: product.precioPublico, wholesale5: product.precioMayoreo, tiers: product.priceTiers || [] });
     product.precioPublico = retail;
     product.precioMayoreo = wholesale5;
     product.priceTiers = tiers;
+    product.descripcion = updateCustomerPriceCopy(product.descripcion, row);
+    updateSpecialOfferPricing(product, row);
     product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
     const after = JSON.stringify({ retail, wholesale5, tiers });
     if (before !== after) report.app.push({ id: product.id, row: row.sourceRow, retail, wholesale5, tiers });
-    recordMatch(product, row);
+    recordMatch(product, row, previousDescription !== product.descripcion ? product.descripcion : '');
   });
 
   websiteProducts.forEach((product) => {
@@ -838,6 +781,7 @@ function main() {
     const nextPrices = websitePrices(row);
     const before = JSON.stringify(product.prices || []);
     product.prices = nextPrices;
+    product.description = updateCustomerPriceCopy(product.description, row);
     product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== JSON.stringify(nextPrices)) {
       report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
@@ -919,17 +863,21 @@ function main() {
     .filter((product) => !deletedIds.has(product.id))
     .sort((left, right) => Number(left.orden || 9999) - Number(right.orden || 9999) || left.id.localeCompare(right.id));
   report.retained = [...matchedById.entries()]
-    .map(([id, row]) => ({ id, section: row.section, sourceRow: row.sourceRow }))
-    .sort((a, b) => a.id.localeCompare(b.id));
+    .map(([id, row]) => ({ id, section: row.section, sourceSheet: row.sourceSheet, sourceRow: row.sourceRow }))
+    .sort((a, b) => {
+      const sectionOrder = ['ai', 'iphone', 'micas', 'iphone-diagnostic', 'samsung'];
+      return sectionOrder.indexOf(a.section) - sectionOrder.indexOf(b.section) || a.id.localeCompare(b.id);
+    });
   report.deleted = [...deletedIds].sort().map((id) => ({
     id,
     website: websiteProducts.some((product) => product.id === id),
     app: appProducts.some((product) => product.id === id),
   }));
   report.unpublishedSourceRows = sourceRows
-    .filter((row) => !usedSourceRows.has(`${row.section}:${row.sourceRow}`))
+    .filter((row) => !usedSourceRows.has(`${row.sourceSheet}:${row.sourceRow}`))
     .map((row) => ({
       section: row.section,
+      sourceSheet: row.sourceSheet,
       sourceRow: row.sourceRow,
       model: row.model,
       product: row.product,
@@ -943,16 +891,17 @@ function main() {
     sourceRows: sourceRows.length,
     uniqueSourceProducts: byIdentity.size,
     websiteProducts: websiteProducts.length,
-    websiteMatched: retainedWebsiteProducts.length,
+    websiteMatched: matchedById.size,
     websiteChanged: report.website.length,
     websiteDeleted: websiteProducts.length - retainedWebsiteProducts.length,
     appProducts: appProducts.length,
-    appMatched: retainedAppProducts.length,
+    appMatched: matchedById.size,
     appChanged: report.app.length,
     appDeleted: appProducts.length - retainedAppProducts.length,
     retainedSkus: matchedById.size,
     deletedSkus: deletedIds.size,
     unpublishedSourceRows: report.unpublishedSourceRows.length,
+    unmatchedSource: report.unpublishedSourceRows.length,
     removedStaticRoutes: 0,
     unmatchedWebsite: report.unmatchedWebsite.length,
     unmatchedApp: report.unmatchedApp.length,
@@ -980,72 +929,67 @@ function main() {
     const lines = [
       '# Customer Price Sync 2026-09-21',
       '',
-      `- Source: ${source.sourceWorkbook} / ${source.sourceSheet}`,
-      `- Approved source rows: ${summary.sourceRows}`,
-      `- Unique approved products: ${summary.uniqueSourceProducts}`,
-      `- Website matched: ${summary.websiteMatched}/${summary.websiteProducts}`,
-      `- Website changed: ${summary.websiteChanged}`,
-      `- Website deleted: ${summary.websiteDeleted}`,
-      `- App matched: ${summary.appMatched}/${summary.appProducts}`,
-      `- App changed: ${summary.appChanged}`,
-      `- App deleted: ${summary.appDeleted}`,
-      `- Retained SKU: ${summary.retainedSkus}`,
-      `- Deleted SKU: ${summary.deletedSkus}`,
-      `- Source rows not yet published: ${summary.unpublishedSourceRows}`,
-      `- Newly aligned or published products: ${summary.publishedProducts}`,
-      `- Duplicate source rows consolidated: ${summary.duplicateSourceRows}`,
-      `- Static product routes created: ${summary.createdStaticRoutes}`,
-      `- Static product routes removed: ${summary.removedStaticRoutes}`,
+      `- Source: ${source.sourceWorkbook}`,
+      `- Source price rows: ${summary.sourceRows}`,
+      `- Website exact matches updated: ${summary.websiteMatched}/${summary.websiteProducts}`,
+      `- App exact matches updated: ${summary.appMatched}/${summary.appProducts}`,
       `- Ambiguous matches: ${summary.ambiguous}`,
+      `- Source rows without an exact website product: ${summary.unmatchedSource}`,
       '',
       '## Rules',
       '',
-      '- Only exact model and quality matches were updated.',
-      `- Products absent from the source list were ${DELETE_UNLISTED ? 'deleted from website, App and master data' : 'not created or priced'}.`,
-      '- Empty source tiers were not invented.',
-      '- Internal page IDs are references only and are not presented as official commercial SKUs.',
-      '- Missing media uses the approved HAODE placeholder and is marked Imagen en actualización.',
-      '- `landed_cost` was intentionally excluded from public website/App files.',
+      '- Exact model + quality matching only.',
+      '- New public tiers are Menudeo / Mayoreo / Caja / VIP.',
+      '- Mayoreo, Caja and VIP are display/quote levels; the website cart does not infer quantity thresholds from this workbook.',
+      '- VIP is shown only when the workbook contains a VIP price.',
+      '- Products absent from this workbook keep their existing price; they are not deleted or repriced.',
+      '- No price was inferred from another model or quality.',
       '',
-      '## Unmatched website products',
+      '## Source rows not matched to an existing website product',
+      '',
+      ...report.unpublishedSourceRows.map((row) => `- ${row.sourceSheet} fila ${row.sourceRow}: ${row.model || row.product} · ${row.quality}`),
+      '',
+      '## Existing website products outside this workbook (unchanged)',
       '',
       ...report.unmatchedWebsite.map((id) => `- ${id}`),
       '',
-      '## Unmatched App products',
-      '',
-      ...report.unmatchedApp.map((id) => `- ${id}`),
-      '',
-      '## Deleted SKU',
-      '',
-      ...(report.deleted.length
-        ? report.deleted.map((item) => `- ${item.id} (website=${item.website}; app=${item.app})`)
-        : ['- Ninguno']),
-      '',
-      '## Source rows not yet published',
-      '',
-      ...report.unpublishedSourceRows.map((row) => `- ${row.section} · fila ${row.sourceRow}: ${row.model || row.product} ${row.quality || ''}`.trim()),
-      '',
-      '## Duplicate source rows consolidated',
-      '',
-      ...(report.duplicateSourceRows.length
-        ? report.duplicateSourceRows.map((item) => `- ${item.identity}: canonical row ${item.canonicalRow}; duplicate rows ${item.duplicateRows.join(', ')}`)
-        : ['- Ninguno']),
-      '',
-      '## Newly aligned or published products',
-      '',
-      ...(report.publishedProducts.length
-        ? report.publishedProducts.map((item) => `- ${item.id} · source rows ${item.sourceRows.join(', ')} · website=${item.websiteCreated} · app=${item.appCreated} · placeholder=${item.placeholder}`)
-        : ['- Ninguno']),
-      '',
-      '## Removed static routes',
-      '',
-      ...(report.removedStaticRoutes.length
-        ? report.removedStaticRoutes.map((slug) => `- /producto/${slug}/`)
-        : ['- Ninguno']),
-      '',
     ];
     fs.writeFileSync(REPORT_FILE, lines.join('\n'), 'utf8');
-    fs.writeFileSync(REPORT_JSON_FILE, `${JSON.stringify({ summary, report }, null, 2)}\n`, 'utf8');
+    const unmatchedSource = sourceRows
+      .filter((row) => !usedSourceRows.has(`${row.sourceSheet}:${row.sourceRow}`))
+      .map((row) => ({
+        sheet: row.sourceSheet,
+        row: row.sourceRow,
+        model: row.model || row.product,
+        quality: row.quality,
+        prices: {
+          retail: row.prices.retail,
+          wholesale: row.prices.wholesale,
+          box: row.prices.box,
+          vip: row.prices.vip,
+        },
+      }));
+    const reportSummary = {
+      sourceRows: summary.sourceRows,
+      websiteProducts: summary.websiteProducts,
+      websiteMatched: summary.websiteMatched,
+      appProducts: summary.appProducts,
+      appMatched: summary.appMatched,
+      ambiguous: summary.ambiguous,
+      unmatchedWebsite: summary.unmatchedWebsite,
+      unmatchedSource: summary.unmatchedSource,
+    };
+    const matched = report.retained.map((item) => ({
+      id: item.id,
+      sheet: item.sourceSheet,
+      row: item.sourceRow,
+    }));
+    fs.writeFileSync(REPORT_JSON_FILE, `${JSON.stringify({
+      summary: reportSummary,
+      unmatchedWebsite: report.unmatchedWebsite,
+      unmatchedSource,
+      matched,
+    }, null, 2)}\n`, 'utf8');
   }
 
   console.log(JSON.stringify(process.argv.includes('--summary-only') ? { summary } : { summary, report }, null, 2));

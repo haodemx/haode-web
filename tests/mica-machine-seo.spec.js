@@ -38,18 +38,18 @@ test('machine and MICA pages provide crawlable links in both directions', async 
   await expect(page.locator('a[href="/micas-hidrogel-mayoreo-mexico/"]').first()).toBeVisible();
 });
 
-test('candidate pricing stays public-first after client rendering', async ({ page }) => {
+test('candidate pricing keeps the four approved named tiers after client rendering', async ({ page }) => {
   const expected = [
-    ['/producto/mica-hd/', '$400 MXN', ['$400 MXN', '$350 MXN', '$300 MXN']],
-    ['/producto/mica-matte/', '$450 MXN', ['$450 MXN', '$400 MXN', '$350 MXN']],
-    ['/producto/mica-privacidad-hd/', '$850 MXN', ['$850 MXN', '$800 MXN', '$750 MXN']],
-    ['/producto/mica-privacidad-matte/', '$850 MXN', ['$850 MXN', '$800 MXN', '$750 MXN']],
-    ['/producto/x200t-cortadora-micas/', '$6,500 MXN', ['$6,500 MXN', '$6,200 MXN', '$6,000 MXN']],
+    ['/producto/mica-hd/', '$350 MXN', ['$350 MXN', '$300 MXN', '$275 MXN', '$250 MXN']],
+    ['/producto/mica-matte/', '$350 MXN', ['$350 MXN', '$300 MXN', '$275 MXN', '$250 MXN']],
+    ['/producto/mica-privacidad-hd/', '$800 MXN', ['$800 MXN', '$750 MXN', '$700 MXN', '$650 MXN']],
+    ['/producto/mica-privacidad-matte/', '$800 MXN', ['$800 MXN', '$750 MXN', '$700 MXN', '$650 MXN']],
+    ['/producto/x200t-cortadora-micas/', '$6,000 MXN', ['$6,000 MXN', '$5,800 MXN', '$5,500 MXN', '$5,300 MXN']],
   ];
-  for (const [route, publicPrice, tiers] of expected) {
+  for (const [route, retailPrice, tiers] of expected) {
     await page.goto(`${baseURL}${route}`, { waitUntil: 'networkidle' });
-    await expect(page.locator('[data-detail-price]')).toHaveText(`Precio público: ${publicPrice}`);
-    await expect(page.locator('[data-detail-price-body] th')).toHaveText(['Precio público', 'Mayoreo 5+', 'Volumen 10+']);
+    await expect(page.locator('[data-detail-price]')).toHaveText(`Menudeo: ${retailPrice}`);
+    await expect(page.locator('[data-detail-price-body] th')).toHaveText(['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
     await expect(page.locator('[data-detail-price-body] td')).toHaveText(tiers);
   }
 });
