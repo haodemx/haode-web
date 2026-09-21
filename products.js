@@ -1136,6 +1136,9 @@ const APPROVED_TIERED_PRICE_PRODUCT_IDS = new Set([
 ]);
 
 function buildProductPriceText(id, priceTable) {
+  if (priceTable[0]?.quantity === 'Menudeo' && priceTable[0]?.price !== 'Consultar') {
+    return `Menudeo: ${priceTable[0].price}`;
+  }
   if (APPROVED_TIERED_PRICE_PRODUCT_IDS.has(id) && priceTable[0]?.price !== 'Consultar') {
     return `Precio público: ${priceTable[0].price}`;
   }
@@ -3085,6 +3088,33 @@ function enhanceV3ProductDetail(page, product) {
   update(quantity);
 }
 
+
+function syncRuntimeProductJsonLd(product) {
+  if (!product || !Array.isArray(product.priceTable)) return;
+  const pageUrl = window.location.href.split('?')[0].split('#')[0];
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    let data;
+    try {
+      data = JSON.parse(script.textContent || '');
+    } catch {
+      return;
+    }
+    const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
+    const productNode = nodes.find((node) => node?.['@type'] === 'Product');
+    if (!productNode) return;
+    productNode.offers = product.priceTable
+      .filter((row) => row.price && row.price !== 'Consultar')
+      .map((row) => ({
+        '@type': 'Offer',
+        name: row.quantity,
+        url: pageUrl,
+        priceCurrency: 'MXN',
+        price: String(row.price).replace(/[^0-9.]/g, ''),
+      }));
+    script.textContent = JSON.stringify(data, null, 2);
+  });
+}
+
 function refreshV3ProductDetailData() {
   const page = document.querySelector('[data-product-detail]');
   if (!page || document.body.dataset.v3Detail !== 'true') return;
@@ -3120,6 +3150,7 @@ function refreshV3ProductDetailData() {
       return tr;
     }));
   }
+  syncRuntimeProductJsonLd(product);
   renderProductMediaGallery(page, product);
   enhanceV3ProductDetail(page, product);
 }
@@ -3445,6 +3476,7 @@ function renderProductDetailPage() {
     backLink.href = buildSiteUrl('productos/');
   }
 
+  syncRuntimeProductJsonLd(product);
   renderProductMediaGallery(page, product);
 
   if (tableBody) {
