@@ -932,6 +932,11 @@ function priceRuleFor(product, quantity = 1) {
   if (matchingTier) {
     return { unitPrice: matchingTier.price, label: matchingTier.label };
   }
+  // New 2026-09-21 customer list uses named price levels (Menudeo/Mayoreo/Caja/VIP),
+  // not automatic quantity thresholds. Manual tiers must never be auto-applied in cart.
+  if (product.priceTiers.length) {
+    return { unitPrice: product.publicPrice, label: "Precio menudeo" };
+  }
   if (quantity >= 10) {
     if (product.category === "Pantallas OLED Diagnóstica" && !product.wholesalePrice) {
       return { unitPrice: product.publicPrice, label: "Precio menudeo" };
