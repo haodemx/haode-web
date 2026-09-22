@@ -107,8 +107,8 @@ test("catalog group and category use unique IDs", async ({ page }) => {
 test("homepage App links describe their real destinations", async ({ page }) => {
   await page.goto(`${BASE_URL}/`, { waitUntil: "domcontentloaded" });
 
-  const appEntry = page.locator("[data-detail-header-app]");
+  const appEntry = page.locator('[data-ui-id="header-app"]');
   await expect(appEntry).toContainText("APP");
   await expect(appEntry).toHaveAttribute("href", "/app/");
-  await expect(page.locator('.zay-footer a[href="/app/"]')).toContainText("APP");
+  await expect(page.locator('.reference-footer a[href="/app/"]')).toContainText("APP");
 });

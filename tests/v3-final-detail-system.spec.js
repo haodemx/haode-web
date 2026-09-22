@@ -70,8 +70,13 @@ for (const viewport of viewports) {
     for (const route of ['/', '/productos/', '/producto/iphone-incell-14/', '/producto/samsung-original-s22-plus/']) {
       const response = await page.goto(`${baseURL}${route}`, { waitUntil: 'domcontentloaded' });
       expect(response?.status(), route).toBe(200);
-      await expect(page.locator('[data-v3-header]')).toBeVisible();
-      await expect(page.locator('[data-v3-footer]')).toBeAttached();
+      if (route === '/') {
+        await expect(page.locator('[data-ui-id="site-header"]')).toBeVisible();
+        await expect(page.locator('[data-ui-id="site-footer"]')).toBeAttached();
+      } else {
+        await expect(page.locator('[data-v3-header]')).toBeVisible();
+        await expect(page.locator('[data-v3-footer]')).toBeAttached();
+      }
       await expect(page.locator('a[href*="wa.me"]').first()).toBeAttached();
       await expect(page.locator('a[href="/app/"]').first()).toBeAttached();
       const audit = await page.evaluate(() => ({

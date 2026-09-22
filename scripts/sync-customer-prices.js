@@ -746,7 +746,7 @@ function main() {
     const after = JSON.stringify(nextPrices);
     product.prices = nextPrices;
     product.description = updateCustomerPriceCopy(product.description, row);
-    product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
+    product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== after) report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
     websiteDirectMatches.add(product.id);
     recordMatch(product, row, previousDescription !== product.description ? product.description : '');
@@ -768,7 +768,7 @@ function main() {
     product.priceTiers = tiers;
     product.descripcion = updateCustomerPriceCopy(product.descripcion, row);
     updateSpecialOfferPricing(product, row);
-    product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
+    product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     const after = JSON.stringify({ retail, wholesale5, tiers });
     if (before !== after) report.app.push({ id: product.id, row: row.sourceRow, retail, wholesale5, tiers });
     recordMatch(product, row, previousDescription !== product.descripcion ? product.descripcion : '');
@@ -782,7 +782,7 @@ function main() {
     const before = JSON.stringify(product.prices || []);
     product.prices = nextPrices;
     product.description = updateCustomerPriceCopy(product.description, row);
-    product.priceSource = `${source.sourceWorkbook} · ${source.sourceSheet} · fila ${row.sourceRow}`;
+    product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== JSON.stringify(nextPrices)) {
       report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
     }

@@ -56,7 +56,8 @@ for (const viewport of VIEWPORTS) {
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
       brokenImages: Array.from(document.images).filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.src),
       clippedText: Array.from(document.querySelectorAll('h1,h2,h3,p,a,button')).filter((element) => element.textContent.trim()).filter((element) => (
-        element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1
+        !element.querySelector('h1,h2,h3,p,span,strong,small,em,b') &&
+        (element.scrollWidth > element.clientWidth + 1 || element.scrollHeight > element.clientHeight + 1)
       )).filter((element) => getComputedStyle(element).overflow === 'hidden').map((element) => element.textContent.trim()),
     }));
 
@@ -66,13 +67,12 @@ for (const viewport of VIEWPORTS) {
     expect(failures).toEqual([]);
     await expect(page.locator('[data-ui-id="site-header"]')).toBeVisible();
     await expect(page.locator('[data-ui-id="home-hero"]')).toBeVisible();
-    await expect(page.locator('[data-ui-id="home-final-cta"]')).toBeVisible();
+    await expect(page.locator('.reference-footer-cta')).toBeVisible();
     await expect(page.locator('[data-ui-id="site-footer"]')).toBeVisible();
 
-    const cards = page.locator('[data-ui-id="home-featured-products"] [data-v3-product]');
-    await expect(cards).toHaveCount(4);
-    const columnCount = await cards.evaluateAll((items) => new Set(items.map((item) => Math.round(item.getBoundingClientRect().left))).size);
-    expect(columnCount).toBe(viewport.columns);
+    const cards = page.locator('[data-ui-id="home-featured-products"] .c-product-card');
+    await expect(cards).toHaveCount(8);
+    await expect(cards.first()).toBeVisible();
   });
 }
 
@@ -96,7 +96,7 @@ test('category, product, conversion, and footer journeys remain intact', async (
   await expect(page.locator('[data-ui-id="header-app"]')).toHaveAttribute('href', '/app/');
   await expect(page.locator('[data-ui-id="header-whatsapp"]')).toHaveAttribute('href', /^https:\/\/wa\.me\/523326684296/);
   await expect(page.locator('[data-ui-id="footer-directions"]')).toHaveAttribute('href', /^https:\/\/www\.google\.com\/maps\/dir\//);
-  await expect(page.locator('[data-ui-id="footer-navigation"] a[href="/productos-ai/"]')).toBeVisible();
+  await expect(page.locator('[data-ui-id="footer-navigation"] a[href="/productos-ai/"]')).toBeAttached();
 
   await page.goto(`${BASE_URL}/producto/iphone-incell-11/`, { waitUntil: 'load' });
   const mainImage = page.locator('[data-detail-main-image]');

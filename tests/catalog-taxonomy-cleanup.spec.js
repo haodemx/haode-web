@@ -89,21 +89,19 @@ test('Foldables expose only published Z Flip and Z Fold models', async ({ page }
 
 test('restored footer exposes confirmed navigation, contact, social and legal links', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
-  const footer = page.locator('[data-v3-footer]');
+  const footer = page.locator('[data-ui-id="site-footer"]');
   await expect(footer).toContainText('Eje Central Lázaro Cárdenas 87');
-  await expect(footer).toContainText('Lun–Sáb · 10:00–18:00');
+  await expect(footer).not.toContainText('Lun–Sáb · 10:00–18:00');
   await expect(footer.getByRole('link', { name: 'Abrir APP' })).toHaveAttribute('href', '/app/');
   await expect(footer.getByRole('link', { name: 'Cómo llegar' })).toBeVisible();
   const expected = {
-    facebook: 'https://www.facebook.com/haodemx',
-    instagram: 'https://www.instagram.com/cristi3an/',
-    tiktok: 'https://www.tiktok.com/@haodemx',
-    youtube: 'https://www.youtube.com/@haodemx',
+    'Facebook HAODE México': 'https://www.facebook.com/haodemx',
+    'TikTok tk': 'https://www.tiktok.com/@haodemx',
   };
-  for (const [platform, href] of Object.entries(expected)) {
-    await expect(footer.locator(`[data-social-link="${platform}"]`)).toHaveAttribute('href', href);
+  for (const [label, href] of Object.entries(expected)) {
+    await expect(footer.getByRole('link', { name: label })).toHaveAttribute('href', href);
   }
-  expect(await footer.locator('[data-social-link]').evaluateAll((links) => links.every((link) => link.href && !link.href.endsWith('#')))).toBe(true);
+  await expect(footer.locator('a[href*="instagram.com"], a[href*="youtube.com"]')).toHaveCount(0);
 });
 
 test('legacy technology links remain compatible with the new family hierarchy', async ({ page }) => {
@@ -121,7 +119,9 @@ test('Hidrogel and confirmed AI families use actual catalog counts', async ({ pa
 
   await page.goto(`${baseURL}/productos-ai/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('[data-family-link="gafas-ai"]')).toContainText('9 productos');
-  await expect(page.locator('.zay-review-note')).toContainText('4 productos de cámara');
+  await expect(page.locator('.zay-review-note').filter({ hasText: 'También puedes explorar cámaras' })).toBeVisible();
+  await page.goto(`${baseURL}/categoria/camaras-inteligentes/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('.new-product-card')).toHaveCount(4);
 });
 
 test('catalog cards use a square contained media stage and stable information order', async ({ page }) => {
@@ -166,7 +166,10 @@ test('mobile category controls remain readable, tappable and overflow-free', asy
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
 
   await page.goto(`${baseURL}/productos/?category=pantallas&sub=foldables`, { waitUntil: 'domcontentloaded' });
-  const qualityTargets = await page.locator('.zay-fold-card a').evaluateAll((links) => links.map((link) => link.getBoundingClientRect().height));
+  const foldCards = page.locator('.zay-fold-card');
+  await expect(foldCards).toHaveCount(2);
+  await expect(foldCards.first()).toBeVisible();
+  const qualityTargets = await foldCards.locator('a').evaluateAll((links) => links.map((link) => link.getBoundingClientRect().height));
   expect(qualityTargets.every((height) => height >= 44)).toBe(true);
   await page.locator('.zay-filter-toggle').click();
   await expect(page.locator('.zay-filter-content')).toBeVisible();

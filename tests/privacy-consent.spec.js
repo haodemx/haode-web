@@ -46,7 +46,8 @@ test('Consent Mode starts denied and saves an explicit analytics choice', async 
   const saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), consentStorageKey);
   expect(saved).toMatchObject({ version: 1, analytics: true, advertising: false });
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('haode-campaign-attribution-v1')))).toMatchObject({
-    source: 'haode_web',
+    source: 'direct',
+    medium: 'none',
   });
   const update = await page.evaluate(() => window.dataLayer
     .map((entry) => Array.from(entry))

@@ -37,7 +37,7 @@ test("homepage WhatsApp CTA sends one GA4 contact event", async ({ page }) => {
   expect(event[1]).toBe("contact");
   expect(event[2]).toEqual(expect.objectContaining({
     method: "whatsapp",
-    source: "google",
+    attribution_source: "google",
     page_path: "/",
     contact_area: "header",
   }));
@@ -70,7 +70,7 @@ test("product catalog keeps product WhatsApp tracking as the single contact sour
   expect(event[1]).toBe("contact");
   expect(event[2]).toEqual(expect.objectContaining({
     method: "whatsapp",
-    source: "facebook",
+    attribution_source: "facebook",
   }));
 });
 
@@ -99,8 +99,8 @@ test("shared detail header tracks a warranty WhatsApp click without manual page 
   ));
   expect(event[2]).toEqual(expect.objectContaining({
     method: "whatsapp",
-    source: "instagram",
-    campaign: "garantia",
+    attribution_source: "instagram",
+    attribution_campaign: "garantia",
     page_path: "/garantia/",
   }));
 });

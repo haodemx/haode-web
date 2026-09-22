@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-09-21-customer-prices-v3";
+const CACHE_VERSION = "haode-pwa-v2026-09-22-c-layout-release";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -9,6 +9,7 @@ const APP_SHELL_URLS = [
   "/app/index.html",
   "/offline.html",
   "/style.css?v=20260813-final-ui-seo",
+  "/homepage-c.css?v=20260922-phase3-visual-polish",
   "/v3-screen-atlas.css?v=20260914-v3-transplant",
   "/v3-screen-atlas-fixes.css?v=20260915-final-detail",
   "/analytics.js?v=20260813-ga4-conversions",
@@ -62,6 +63,7 @@ function isFreshDataRequest(url) {
     || url.pathname.endsWith("/products.generated.js")
     || url.pathname.includes("/data/marketing/daily-ad-")
     || url.pathname === "/style.css"
+    || url.pathname === "/homepage-c.css"
     || url.pathname === "/v3-screen-atlas.css"
     || url.pathname === "/v3-screen-atlas-fixes.css"
     || url.pathname === "/zay-full-candidate.css"

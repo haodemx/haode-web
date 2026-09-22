@@ -5,16 +5,14 @@ import test from 'node:test';
 
 const ROOT = path.resolve(new URL('..', import.meta.url).pathname);
 const PRIMARY_PHONE = '523326684296';
-const FORMER_PRIMARY_PHONE = '525645866014';
-const SALES_PHONES = [
-  PRIMARY_PHONE,
+const LEGACY_SALES_PHONES = [
   '525531881173',
   '525576710941',
   '525574387940',
   '525523316745',
   '525645866014',
 ];
-const SKIP_DIRS = new Set(['.git', '_site', 'node_modules', 'preview', 'playwright-report', 'test-results']);
+const SKIP_DIRS = new Set(['.git', '_site', 'node_modules', 'preview', 'playwright-report', 'test-results', 'tests', 'docs', 'reports']);
 
 function collectCustomerFiles(dir = ROOT, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -25,40 +23,37 @@ function collectCustomerFiles(dir = ROOT, files = []) {
       continue;
     }
     const relativePath = path.relative(ROOT, fullPath);
-    const isHtml = entry.name.endsWith('.html');
+    const isPublicSource = /\.(?:html|js|json)$/.test(entry.name);
     const isMarketingJson = relativePath.startsWith(`data${path.sep}marketing${path.sep}`) && entry.name.endsWith('.json');
-    if (isHtml || isMarketingJson) files.push(fullPath);
+    if (isPublicSource || isMarketingJson) files.push(fullPath);
   }
   return files;
 }
 
-test('all customer-facing quote links use the new primary WhatsApp number', () => {
-  const oldLinks = [];
-  let formerPrimaryLinks = 0;
+test('all customer-facing quote links use the owner-confirmed WhatsApp number', () => {
+  const legacyLinks = [];
   let newPrimaryLinks = 0;
 
   for (const file of collectCustomerFiles()) {
     const relativePath = path.relative(ROOT, file);
     const content = fs.readFileSync(file, 'utf8');
-    const oldCount = content.match(new RegExp(`wa\\.me/${FORMER_PRIMARY_PHONE}`, 'g'))?.length || 0;
-    formerPrimaryLinks += oldCount;
-    if (oldCount && relativePath !== 'index.html') oldLinks.push(relativePath);
+    for (const phone of LEGACY_SALES_PHONES) {
+      if (new RegExp(`wa\\.me/${phone}`).test(content)) legacyLinks.push(`${relativePath}: ${phone}`);
+    }
     newPrimaryLinks += content.match(new RegExp(`wa\\.me/${PRIMARY_PHONE}`, 'g'))?.length || 0;
   }
 
-  assert.equal(oldLinks.length, 0, oldLinks.join('\n'));
-  assert.equal(formerPrimaryLinks, 1, 'the former primary line must remain only once as a footer backup');
+  assert.equal(legacyLinks.length, 0, legacyLinks.join('\n'));
   assert.ok(newPrimaryLinks > 500, `Expected broad primary-number coverage, found ${newPrimaryLinks}`);
 });
 
-test('homepage header and Contacto footer identify the primary line and all six sales numbers', () => {
+test('homepage header and footer identify the one authoritative sales line', () => {
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const header = html.match(/<header\b[\s\S]*?<\/header>/i)?.[0] || '';
   const contact = html.match(/<address\b[^>]*class=["'][^"']*reference-footer-contact[^"']*["'][^>]*>[\s\S]*?<\/address>/i)?.[0] || '';
 
-  assert.match(header, /<small>33 2668 4296<\/small>/i);
-  assert.match(contact, /WhatsApp principal/i);
-  for (const phone of SALES_PHONES) {
-    assert.match(contact, new RegExp(`https://wa\\.me/${phone}(?:\\?|["'])`));
-  }
+  assert.match(header, new RegExp(`https://wa\\.me/${PRIMARY_PHONE}(?:\\?|["'])`));
+  assert.match(contact, /Tel: \+52 33 2668 4296/i);
+  assert.match(contact, new RegExp(`https://wa\\.me/${PRIMARY_PHONE}(?:\\?|["'])`));
+  for (const phone of LEGACY_SALES_PHONES) assert.doesNotMatch(`${header}${contact}`, new RegExp(phone));
 });

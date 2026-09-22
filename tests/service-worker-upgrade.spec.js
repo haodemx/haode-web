@@ -48,7 +48,7 @@ test("service worker replaces old HAODE caches without clearing site storage", a
     };
   });
 
-  expect(result.cacheNames).toContain("haode-pwa-v2026-09-21-customer-prices-v3-shell");
+  expect(result.cacheNames).toContain("haode-pwa-v2026-09-22-c-layout-release-shell");
   expect(result.cacheNames).not.toContain("haode-pwa-v2026-07-legacy-shell");
   expect(result.cacheNames).toContain("third-party-test-cache");
   expect(result.legacyResponseFound).toBe(false);
