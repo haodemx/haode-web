@@ -32,7 +32,7 @@ const FORBIDDEN = [
 ];
 const TEXT_EXTENSIONS = new Set([".css", ".html", ".js", ".json", ".webmanifest", ".xml"]);
 const RESOURCE_EXTENSIONS = new Set([
-  ".avif", ".css", ".gif", ".html", ".ico", ".jpeg", ".jpg", ".js", ".json", ".mp4",
+  ".avif", ".css", ".gif", ".html", ".ico", ".jpeg", ".jpg", ".js", ".json", ".md", ".mp4",
   ".png", ".svg", ".txt", ".webm", ".webmanifest", ".webp", ".woff", ".woff2", ".xml",
 ]);
 const LOCAL_ORIGIN = "https://haode.com.mx";

@@ -160,14 +160,14 @@ test('privacy and data deletion pages expose canonical public instructions', () 
   const terms = read('terminos/index.html');
 
   assert.match(privacy, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/privacidad\/" \/>/);
-  assert.match(privacy, /ventas@haode\.com\.mx/);
+  assert.match(privacy, /haodemx@gmail\.com/);
   assert.match(privacy, /No vendemos datos personales/);
   assert.match(deletion, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/eliminacion-de-datos\/" \/>/);
   assert.match(deletion, /No envíes contraseñas, códigos de verificación, tokens ni información bancaria\./);
   assert.match(deletion, /Integración en modo de verificación/);
   assert.match(terms, /<link rel="canonical" href="https:\/\/haode\.com\.mx\/terminos\/" \/>/);
   assert.match(terms, /No se permiten envíos masivos no solicitados/);
-  assert.match(terms, /ventas@haode\.com\.mx/);
+  assert.match(terms, /haodemx@gmail\.com/);
 });
 
 test('redirect aliases are noindex and point to canonical pages', () => {
@@ -297,7 +297,7 @@ test('homepage JSON-LD has parseable WebPage and category ItemList nodes', () =>
   assert.ok(types.has('WebSite'));
   assert.ok(types.has('WebPage'));
   assert.equal(itemList?.['@type'], 'ItemList');
-  assert.equal(itemList.itemListElement.length, 8);
+  assert.equal(itemList.itemListElement.length, 9);
   assert.equal(organization?.contactPoint?.telephone, '+52 33 2668 4296');
   assert.equal(organization?.contactPoint?.contactType, 'ventas');
   assert.ok(!Object.hasOwn(localBusiness || {}, 'priceRange'));

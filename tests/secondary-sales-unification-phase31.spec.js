@@ -29,6 +29,7 @@ test.describe('HAODE secondary sales unification phase 31', () => {
   test('trust page keeps a compact desktop hierarchy and active navigation', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(`${baseURL}/garantia/`, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => [...document.querySelectorAll('link[rel="stylesheet"]')].every(link => link.sheet));
 
     await expect(page.locator('[data-detail-header-whatsapp]')).toBeVisible();
     await expect(page.locator('[data-detail-header-app]')).toBeVisible();

@@ -128,6 +128,9 @@ test('catalog cards use a square contained media stage and stable information or
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${baseURL}/productos/?category=pantallas&sub=samsung`, { waitUntil: 'domcontentloaded' });
 
+  // The shared shell appends its stylesheet during boot; measure after it loads.
+  await page.waitForFunction(() => [...document.querySelectorAll('link[rel="stylesheet"]')].every(link => link.sheet));
+
   const metrics = await page.locator('[data-catalog-card]').evaluateAll((cards) => cards
     .filter((card) => card.getClientRects().length > 0 && card.offsetWidth > 0 && card.offsetHeight > 0)
     .slice(0, 12)

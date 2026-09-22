@@ -1,6 +1,6 @@
 @import url('/v3-screen-atlas-fixes.css?v=20260915-final-detail');
 
-body[data-v3-page]:not([data-v3-ready="true"]),body[data-v3-detail="true"]:not([data-v3-ready="true"]){visibility:hidden}
+@media (scripting: enabled){body[data-v3-page]:not([data-v3-ready="true"]),body[data-v3-detail="true"]:not([data-v3-ready="true"]){visibility:hidden}}
 :root{--v3-orange:#ff5a0a;--v3-ink:#0b0b0c;--v3-muted:#657087;--v3-line:#b8c1cf;--v3-paper:#fbfcfc;--v3-soft:#f2f4f4;--v3-green:#136c4f;--v3-font-sans:"Helvetica Neue",Helvetica,sans-serif;--v3-font-condensed:"Helvetica Neue Condensed","HelveticaNeue-CondensedBold",Impact,sans-serif;--v3-font-heavy:"HelveticaNeue-CondensedBlack","Helvetica Neue Condensed",Impact,sans-serif}
 body.v3-atlas{margin:0;background:var(--v3-paper);color:var(--v3-ink);font-family:var(--v3-font-sans);overflow-x:hidden}
 body.v3-atlas [data-haode-privacy-root]{font-family:var(--v3-font-sans)}

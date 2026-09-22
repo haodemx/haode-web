@@ -23,7 +23,8 @@ function collectCustomerFiles(dir = ROOT, files = []) {
       continue;
     }
     const relativePath = path.relative(ROOT, fullPath);
-    const isPublicSource = /\.(?:html|js|json)$/.test(entry.name);
+    const isPublicSource = /\.(?:html|js|mjs|json|xml)$/.test(entry.name)
+      || ['index.md', 'productos/index.md', 'contacto/index.md', 'garantia/index.md', 'guia-ia-haode-mexico/index.md', 'tienda-oficial-hl-cdmx/index.md', 'llms.txt'].includes(relativePath);
     const isMarketingJson = relativePath.startsWith(`data${path.sep}marketing${path.sep}`) && entry.name.endsWith('.json');
     if (isPublicSource || isMarketingJson) files.push(fullPath);
   }
@@ -38,7 +39,9 @@ test('all customer-facing quote links use the owner-confirmed WhatsApp number', 
     const relativePath = path.relative(ROOT, file);
     const content = fs.readFileSync(file, 'utf8');
     for (const phone of LEGACY_SALES_PHONES) {
-      if (new RegExp(`wa\\.me/${phone}`).test(content)) legacyLinks.push(`${relativePath}: ${phone}`);
+      // Covers visible text, Schema, tel:, wa.me and generated fallback formats.
+      const national = phone.slice(2).split('').join('[\\s().+\\-]*');
+      if (new RegExp(national).test(content)) legacyLinks.push(`${relativePath}: ${phone}`);
     }
     newPrimaryLinks += content.match(new RegExp(`wa\\.me/${PRIMARY_PHONE}`, 'g'))?.length || 0;
   }

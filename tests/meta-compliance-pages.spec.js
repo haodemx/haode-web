@@ -26,7 +26,7 @@ for (const compliancePage of pages) {
 
     await expect(page.getByRole("heading", { name: compliancePage.heading })).toBeVisible();
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", compliancePage.canonical);
-    await expect(page.locator('a[href^="mailto:ventas@haode.com.mx"]')).toBeVisible();
+    await expect(page.locator('a[href^="mailto:haodemx@gmail.com"]')).toBeVisible();
     await expectNoHorizontalOverflow(page);
   });
 }
@@ -37,7 +37,7 @@ test("Meta compliance pages remain usable on mobile", async ({ page }) => {
   for (const compliancePage of pages) {
     await page.goto(`${BASE_URL}${compliancePage.path}`, { waitUntil: "domcontentloaded" });
     await expect(page.getByRole("heading", { name: compliancePage.heading })).toBeVisible();
-    await expect(page.locator('a[href^="mailto:ventas@haode.com.mx"]')).toBeVisible();
+    await expect(page.locator('a[href^="mailto:haodemx@gmail.com"]')).toBeVisible();
     await expectNoHorizontalOverflow(page);
   }
 });
