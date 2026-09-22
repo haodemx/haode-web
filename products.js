@@ -2,7 +2,7 @@ const WHATSAPP_PHONE = '523326684296';
 const IS_V3_DETAIL_ROUTE = /^\/producto(?:\/|\.html(?:$|\?))/.test(window.location.pathname);
 if (IS_V3_DETAIL_ROUTE) document.body.dataset.v3Detail = 'true';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
-const QUANTITY_LABELS = ['1 pza', '5+ pzs', '100 pzs surtido', '100 pzs/modelo', 'Caja/modelo'];
+const QUANTITY_LABELS = ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP'];
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
   'AI-GAFAS-G3': 'haode-ai-g3-smart-glasses',
   'MICA-X200T': 'x200t-cortadora-micas',
@@ -818,7 +818,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone X',
     quality: 'INCELL FHD+',
-    prices: [180, 175, 170, 165, 155],
+    prices: [],
     description: 'Reemplazo INCELL para talleres que buscan una opción confiable con precio competitivo.',
   },
   {
@@ -826,7 +826,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone XS',
     quality: 'INCELL FHD+',
-    prices: [180, 175, 170, 165, 155],
+    prices: [],
     description: 'Pantalla INCELL pensada para reparación rápida y venta por mayoreo.',
   },
   {
@@ -834,7 +834,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone XR',
     quality: 'INCELL FHD+',
-    prices: [180, 175, 170, 165, 155],
+    prices: [],
     description: 'Opción práctica para técnicos con buena respuesta táctil y compatibilidad estable.',
   },
   {
@@ -842,7 +842,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 11 Pro',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [200, 195, 190, 190, 185],
+    prices: [],
     description: 'Opción INCELL para iPhone 11 Pro con disponibilidad para pedidos de taller.',
   },
   {
@@ -850,7 +850,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 11 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [220, 210, 200, 195, 190],
+    prices: [],
     description: 'Producto de rotación alta para clientes que buscan precio de entrada y buen inventario.',
   },
   {
@@ -858,7 +858,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 12 mini',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [230, 220, 210, 200, 195],
+    prices: [],
     description: 'Repuesto compacto para reparación ágil y venta por pieza o mayoreo.',
   },
   {
@@ -866,7 +866,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 12 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [250, 240, 235, 230, 220],
+    prices: [],
     description: 'Pantalla INCELL para 12 Pro Max con disponibilidad por confirmar en CDMX.',
   },
   {
@@ -874,7 +874,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 13 mini',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [260, 250, 245, 240, 235],
+    prices: [],
     description: 'Pantalla para 13 mini con precio competitivo para talleres y distribuidores.',
   },
   {
@@ -882,7 +882,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 13',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [250, 245, 240, 235, 230],
+    prices: [],
     description: 'Modelo de alta demanda con una tabla clara de compra por cantidad.',
   },
   {
@@ -890,7 +890,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 13 Pro',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [300, 290, 285, 280, 275],
+    prices: [],
     description: 'Pantalla INCELL para 13 Pro con enfoque en reventa y reparación profesional.',
   },
   {
@@ -898,7 +898,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 13 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [350, 340, 335, 330, 325],
+    prices: [],
     description: 'Una de las referencias más fuertes de mayoreo para clientes de CDMX.',
   },
   {
@@ -906,7 +906,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 14',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [260, 250, 245, 240, 230],
+    prices: [],
     description: 'Pantalla estable para reparaciones rápidas con disponibilidad para mayoreo.',
   },
   {
@@ -914,7 +914,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 14 Plus',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [300, 290, 280, 275, 265],
+    prices: [],
     description: 'Opción para 14 Plus con precio escalonado por cantidad.',
   },
   {
@@ -922,7 +922,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 14 Pro',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [350, 340, 330, 320, 310],
+    prices: [],
     description: 'Pantalla para 14 Pro con precio por volumen disponible para mayoristas.',
   },
   {
@@ -930,7 +930,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 14 Pro Max',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [380, 350, 340, 330, 310],
+    prices: [],
     description: 'Modelo fuerte para talleres que requieren rotación constante.',
   },
   {
@@ -938,7 +938,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-incell',
     name: 'Pantalla para iPhone 15',
     quality: 'INCELL FHD+ MOVE IC',
-    prices: [300, 290, 285, 280, 275],
+    prices: [],
     description: 'Referencia reciente para stock activo y cotización directa por WhatsApp.',
   },
   {
@@ -946,7 +946,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone XS MAX',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [320, 297.6, 281.6, null, null],
+    prices: [],
     description: 'Pantalla OLED premium para clientes que buscan mejor calidad visual.',
   },
   {
@@ -954,7 +954,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 11 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [680, 632.4, 598.4, null, null],
+    prices: [],
     description: 'OLED premium con una tabla clara para venta por pieza o por volumen.',
   },
   {
@@ -962,7 +962,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 12 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [950, 883.5, 836, null, null],
+    prices: [],
     description: 'Una de las referencias OLED más consultadas en CDMX.',
   },
   {
@@ -970,7 +970,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 13',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [780, 725.4, 686.4, null, null],
+    prices: [],
     description: 'Pantalla OLED con disponibilidad para técnicos y distribuidores.',
   },
   {
@@ -978,7 +978,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 13 Pro',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [920, 855.6, 809.6, null, null],
+    prices: [],
     description: 'Opción premium para reparación con mejor respuesta visual.',
   },
   {
@@ -986,7 +986,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 13 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [1100, 1023, 968, null, null],
+    prices: [],
     description: 'Alta rotación para compras por mayoreo en CDMX y envío nacional.',
   },
   {
@@ -994,7 +994,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 14',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [750, 697.5, 660, null, null],
+    prices: [],
     description: 'Pantalla OLED pensada para clientes que piden mejor acabado.',
   },
   {
@@ -1002,7 +1002,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 14 Plus',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [1000, 930, 880, null, null],
+    prices: [],
     description: 'Referencia premium para 14 Plus con compra por volumen.',
   },
   {
@@ -1010,7 +1010,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'iphone-oled',
     name: 'Pantalla para iPhone 14 Pro Max',
     quality: 'OLED PREMIUM MOVE IC',
-    prices: [1600, 1488, 1408, null, null],
+    prices: [],
     description: 'Pantalla premium para 14 Pro Max con precios escalonados por cantidad.',
   },
   {
@@ -1018,7 +1018,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-incell',
     name: 'Pantalla para Samsung S20',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [520, 483.6, 457.6, null, null],
+    prices: [],
     description: 'Producto Samsung con marco para instalación rápida.',
   },
   {
@@ -1026,7 +1026,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-incell',
     name: 'Pantalla para Samsung S21',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [550, 511.5, 484, null, null],
+    prices: [],
     description: 'Pantalla con marco para talleres y reventa en CDMX.',
   },
   {
@@ -1034,7 +1034,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-incell',
     name: 'Pantalla para Samsung S22 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [null, null, null, null, null],
+    prices: [],
     description: 'Opción INCELL para S22 Ultra con compra sencilla por WhatsApp.',
   },
   {
@@ -1042,7 +1042,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-incell',
     name: 'Pantalla para Samsung S23 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [null, null, null, null, null],
+    prices: [],
     description: 'Pantalla Samsung con marco enfocada en mayoreo y stock local.',
   },
   {
@@ -1050,7 +1050,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-incell',
     name: 'Pantalla para Samsung S24 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [null, null, null, null, null],
+    prices: [],
     description: 'Producto de gama alta para rotación en talleres y distribuidores.',
   },
   {
@@ -1058,7 +1058,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-incell',
     name: 'Pantalla para Samsung Note 20 Ultra',
     quality: 'INCELL-HD+ CON MARCO',
-    prices: [null, null, null, null, null],
+    prices: [],
     description: 'Pantalla Note 20 Ultra con disponibilidad para cotización inmediata.',
   },
   {
@@ -1066,7 +1066,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-oled',
     name: 'Pantalla para Samsung S20 Plus',
     quality: 'OLED PREMIUM C/M',
-    prices: [1200, 1116, 1056, null, null],
+    prices: [],
     description: 'Pantalla OLED premium para S20 Plus con enfoque profesional.',
   },
   {
@@ -1074,7 +1074,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-oled',
     name: 'Pantalla para Samsung S21 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1650, 1534.5, 1452, null, null],
+    prices: [],
     description: 'Gama alta con tabla de precios por cantidad para distribuidores.',
   },
   {
@@ -1082,7 +1082,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-oled',
     name: 'Pantalla para Samsung S22 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1600, 1488, 1408, null, null],
+    prices: [],
     description: 'Una de las referencias premium más consultadas en Samsung.',
   },
   {
@@ -1090,7 +1090,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-oled',
     name: 'Pantalla para Samsung S23 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1650, 1534.5, 1452, null, null],
+    prices: [],
     description: 'Pantalla premium para un acabado cercano al original.',
   },
   {
@@ -1098,7 +1098,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-oled',
     name: 'Pantalla para Samsung S24 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [1950, 1813.5, 1716, null, null],
+    prices: [],
     description: 'Producto premium con foco en mayoreo y atención a distribuidores.',
   },
   {
@@ -1106,7 +1106,7 @@ const PRODUCT_DEFINITIONS = [
     category: 'samsung-oled',
     name: 'Pantalla para Samsung S25 Ultra',
     quality: 'OLED PREMIUM C/M',
-    prices: [2200, 2046, 1936, null, null],
+    prices: [],
     description: 'Pantalla OLED premium para S25 Ultra con compra por cantidad.',
   },
 ];
@@ -1136,6 +1136,9 @@ const APPROVED_TIERED_PRICE_PRODUCT_IDS = new Set([
 ]);
 
 function buildProductPriceText(id, priceTable) {
+  if (priceTable[0]?.quantity === 'Menudeo' && priceTable[0]?.price !== 'Consultar') {
+    return `Menudeo: ${priceTable[0].price}`;
+  }
   if (APPROVED_TIERED_PRICE_PRODUCT_IDS.has(id) && priceTable[0]?.price !== 'Consultar') {
     return `Precio público: ${priceTable[0].price}`;
   }
@@ -1448,7 +1451,8 @@ function hasAuthoritativeCustomerPrices(product) {
   const source = String(product.priceSource || '');
   return source.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
     || source.includes('Lista_de_Precios_HAODE_20260721.pdf')
-    || source.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx');
+    || source.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx')
+    || source.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx');
 }
 
 function applyErpPublicCatalog(rows) {
@@ -3084,6 +3088,33 @@ function enhanceV3ProductDetail(page, product) {
   update(quantity);
 }
 
+
+function syncRuntimeProductJsonLd(product) {
+  if (!product || !Array.isArray(product.priceTable)) return;
+  const pageUrl = window.location.href.split('?')[0].split('#')[0];
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    let data;
+    try {
+      data = JSON.parse(script.textContent || '');
+    } catch {
+      return;
+    }
+    const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
+    const productNode = nodes.find((node) => node?.['@type'] === 'Product');
+    if (!productNode) return;
+    productNode.offers = product.priceTable
+      .filter((row) => row.price && row.price !== 'Consultar')
+      .map((row) => ({
+        '@type': 'Offer',
+        name: row.quantity,
+        url: pageUrl,
+        priceCurrency: 'MXN',
+        price: String(row.price).replace(/[^0-9.]/g, ''),
+      }));
+    script.textContent = JSON.stringify(data, null, 2);
+  });
+}
+
 function refreshV3ProductDetailData() {
   const page = document.querySelector('[data-product-detail]');
   if (!page || document.body.dataset.v3Detail !== 'true') return;
@@ -3119,6 +3150,7 @@ function refreshV3ProductDetailData() {
       return tr;
     }));
   }
+  syncRuntimeProductJsonLd(product);
   renderProductMediaGallery(page, product);
   enhanceV3ProductDetail(page, product);
 }
@@ -3444,6 +3476,7 @@ function renderProductDetailPage() {
     backLink.href = buildSiteUrl('productos/');
   }
 
+  syncRuntimeProductJsonLd(product);
   renderProductMediaGallery(page, product);
 
   if (tableBody) {

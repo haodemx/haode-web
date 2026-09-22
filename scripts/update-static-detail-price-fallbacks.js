@@ -5,38 +5,6 @@ const ROOT = path.resolve(__dirname, '..');
 const WEBSITE_PRODUCTS = path.join(ROOT, 'data', 'products.generated.js');
 const PRODUCT_DIR = path.join(ROOT, 'producto');
 
-const PROTECTED_PRICE_SKUS = new Set([
-  'iphone-oled-12mini',
-  'iphone-oled-13mini',
-  'iphone-oled-15plus',
-  'iphone-oled-16',
-  'iphone-oled-16plus',
-  'samsung-oled-note-9',
-  'samsung-oled-s20',
-  'samsung-oled-s20-ultra',
-  'samsung-oled-s21',
-  'samsung-oled-s21-plus',
-  'samsung-oled-s22-plus',
-  'samsung-oled-s23-plus',
-  'samsung-oled-s24-plus',
-  'samsung-oled-s9-plus',
-  'iphone-incell-12promax',
-  'iphone-incell-14',
-  'iphone-incell-14plus',
-  'iphone-incell-15plus',
-  'iphone-oled-13promax',
-  'samsung-incell-s20-plus',
-  'samsung-incell-s9-plus',
-]);
-
-const APPROVED_TIERED_PRICE_PAGES = new Map([
-  ['mica-hd', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
-  ['mica-matte', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
-  ['mica-privacidad-hd', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
-  ['mica-privacidad-matte', { unitLabel: 'paquete de 50 pzs', unitText: 'paquete de 50 piezas' }],
-  ['x200t-cortadora-micas', { unitLabel: 'equipo X200T', unitText: 'equipo X200T' }],
-]);
-
 function readWebsiteProducts() {
   const text = fs.readFileSync(WEBSITE_PRODUCTS, 'utf8');
   return JSON.parse(text.slice(text.indexOf('['), text.lastIndexOf(']') + 1));
@@ -68,51 +36,36 @@ function priceRows(product) {
     : [];
 }
 
-function lowestPriceText(rows) {
-  const values = rows
-    .map((row) => Number(row.value))
-    .filter((value) => Number.isFinite(value) && value > 0);
-  if (!values.length) return 'Consultar';
-  const lowest = Math.min(...values);
-  return `$${lowest.toLocaleString('es-MX')} MXN`;
-}
-
 function firstPublicPrice(rows) {
   return rows.find((row) => row.value)?.value || '';
 }
 
 function priceTableHtml(rows) {
-  const safeRows = rows.length ? rows : [{ quantity: '1 pza', price: 'Consultar' }];
+  const safeRows = rows.length ? rows : [{ quantity: 'Menudeo', price: 'Consultar' }];
   return safeRows.map((row) => `                <tr>
                   <th scope="row">${escapeHtml(row.quantity)}</th>
                   <td>${escapeHtml(row.price)}</td>
                 </tr>`).join('\n');
 }
 
-function approvedPriceTableHtml(rows) {
-  const labels = ['Precio público', 'Mayoreo 5+', 'Volumen 10+'];
-  return rows.slice(0, 3).map((row, index) => `                <tr>
-                  <th scope="row">${labels[index]}</th>
-                  <td>${escapeHtml(row.price)}</td>
-                </tr>`).join('\n');
+function hasApprovedCustomerPrice(product) {
+  const priceSource = String(product?.priceSource || '');
+  return priceSource.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx');
 }
 
-function replaceOfferPrice(text, publicPrice) {
-  return text.replace(/"offers":\s*\{[^{}]*\}/g, (offerBlock) => {
-    let seenPrice = false;
-    let next = offerBlock.replace(
-      /(\s*)"price":\s*(?:"[^"]*"|-?\d+(?:\.\d+)?)(,?)/g,
-      (match, spacing, comma) => {
-        if (seenPrice || !publicPrice) return '';
-        seenPrice = true;
-        return `${spacing}"price": "${publicPrice}"${comma}`;
-      }
-    );
-    if (!seenPrice && publicPrice && /"priceCurrency":\s*"MXN"/.test(next)) {
-      next = next.replace(/("priceCurrency":\s*"MXN",?)/, `$1\n          "price": "${publicPrice}",`);
-    }
-    return next.replace(/,(\s*)}$/, '$1}');
-  });
+function updateStaticPage(file, product, rows) {
+  let text = fs.readFileSync(file, 'utf8');
+  const original = text;
+  const publicPrice = firstPublicPrice(rows);
+  const retailPriceText = `$${Number(publicPrice).toLocaleString('es-MX')} MXN`;
+  text = replacePriceNote(text, `Menudeo: ${retailPriceText}`);
+  text = replacePriceHeading(text);
+  text = replacePriceTable(text, priceTableHtml(rows));
+  text = replaceProductOffers(text, product, rows);
+
+  if (text === original) return false;
+  fs.writeFileSync(file, text, 'utf8');
+  return true;
 }
 
 function replacePriceNote(text, lowest) {
@@ -125,46 +78,25 @@ function replacePriceNote(text, lowest) {
   }).join('\n');
 }
 
-function replacePriceHeading(text, label) {
+function replacePriceHeading(text) {
   return text.replace(
     /<h2>Precios? por (?:volumen|cantidad)<\/h2>(?:\s*<p>Precios por [^<]+\.<\/p>)?/,
-    `<h2>Precios por volumen</h2>\n              <p>Precios por ${escapeHtml(label)}.</p>`
+    '<h2>Niveles de precio</h2>\n              <p>Mayoreo, Caja y VIP se confirman por WhatsApp; no se aplican automáticamente por cantidad.</p>'
   );
 }
 
-function tieredOffers(product, rows, config) {
+function namedOffers(product, rows) {
   const pageUrl = `https://haode.com.mx/producto/${product.id}/`;
-  const quantityRanges = [
-    { minValue: 1, maxValue: 4 },
-    { minValue: 5, maxValue: 9 },
-    { minValue: 10 },
-  ];
-  const names = ['Precio público', 'Mayoreo 5+', 'Volumen 10+'];
-  return rows.slice(0, 3).map((row, index) => ({
+  return rows.map((row) => ({
     '@type': 'Offer',
-    name: names[index],
+    name: row.quantity,
     url: pageUrl,
     priceCurrency: 'MXN',
     price: row.value,
-    eligibleQuantity: {
-      '@type': 'QuantitativeValue',
-      ...quantityRanges[index],
-      unitText: config.unitText,
-    },
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      priceCurrency: 'MXN',
-      price: row.value,
-      referenceQuantity: {
-        '@type': 'QuantitativeValue',
-        value: 1,
-        unitText: config.unitText,
-      },
-    },
   }));
 }
 
-function replaceProductOffers(text, product, rows, config) {
+function replaceProductOffers(text, product, rows) {
   return text.replace(/<script([^>]*type=["']application\/ld\+json["'][^>]*)>([\s\S]*?)<\/script>/gi, (full, attrs, jsonText) => {
     let data;
     try {
@@ -176,7 +108,7 @@ function replaceProductOffers(text, product, rows, config) {
     const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
     const productNode = nodes.find((node) => node?.['@type'] === 'Product');
     if (!productNode) return full;
-    productNode.offers = tieredOffers(product, rows, config);
+    productNode.offers = namedOffers(product, rows);
     return `<script${attrs}>${JSON.stringify(data, null, 2)}\n    </script>`;
   });
 }
@@ -194,9 +126,12 @@ function replacePriceTable(text, table) {
 function main() {
   const products = readWebsiteProducts();
   const updated = [];
-  const skippedProtected = [];
+  const skippedUnmatchedSource = [];
   const skippedNoPrice = [];
   const missingPage = [];
+  const updatedAliases = [];
+  const processedFiles = new Set();
+  const productsById = new Map(products.map((product) => [product.id, product]));
 
   for (const product of products) {
     const file = path.join(PRODUCT_DIR, product.id, 'index.html');
@@ -204,12 +139,10 @@ function main() {
       missingPage.push(product.id);
       continue;
     }
+    processedFiles.add(file);
 
-    const priceSource = String(product.priceSource || '');
-    const hasApprovedCustomerPrice = priceSource.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
-      || priceSource.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx');
-    if (PROTECTED_PRICE_SKUS.has(product.id) && !hasApprovedCustomerPrice) {
-      skippedProtected.push(product.id);
+    if (!hasApprovedCustomerPrice(product)) {
+      skippedUnmatchedSource.push(product.id);
       continue;
     }
 
@@ -220,35 +153,37 @@ function main() {
       continue;
     }
 
-    let text = fs.readFileSync(file, 'utf8');
-    const original = text;
-    const approvedTier = APPROVED_TIERED_PRICE_PAGES.get(product.id);
-    if (approvedTier && rows.length >= 3) {
-      const publicPriceText = `$${Number(publicPrice).toLocaleString('es-MX')} MXN`;
-      text = replacePriceNote(text, `Precio público: ${publicPriceText}`);
-      text = replacePriceHeading(text, approvedTier.unitLabel);
-      text = replacePriceTable(text, approvedPriceTableHtml(rows));
-      text = replaceProductOffers(text, product, rows, approvedTier);
-    } else {
-      const lowest = lowestPriceText(rows);
-      text = replacePriceNote(text, lowest);
-      text = replacePriceTable(text, priceTableHtml(rows));
-      text = replaceOfferPrice(text, publicPrice);
-    }
-
-    if (text !== original) {
-      fs.writeFileSync(file, text, 'utf8');
+    if (updateStaticPage(file, product, rows)) {
       updated.push(product.id);
     }
   }
 
+  for (const entry of fs.readdirSync(PRODUCT_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const file = path.join(PRODUCT_DIR, entry.name, 'index.html');
+    if (processedFiles.has(file) || !fs.existsSync(file)) continue;
+
+    const text = fs.readFileSync(file, 'utf8');
+    const canonicalMatch = text.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']https:\/\/haode\.com\.mx\/producto\/([^/"']+)\/?["']/i)
+      || text.match(/<link[^>]+href=["']https:\/\/haode\.com\.mx\/producto\/([^/"']+)\/?["'][^>]+rel=["']canonical["']/i);
+    if (!canonicalMatch) continue;
+
+    const product = productsById.get(canonicalMatch[1]);
+    if (!product || !hasApprovedCustomerPrice(product)) continue;
+    const rows = priceRows(product);
+    if (!firstPublicPrice(rows)) continue;
+    if (updateStaticPage(file, product, rows)) updatedAliases.push(entry.name);
+  }
+
   console.log(JSON.stringify({
     updated: updated.length,
-    skippedProtected: skippedProtected.length,
+    skippedUnmatchedSource: skippedUnmatchedSource.length,
     skippedNoPrice: skippedNoPrice.length,
     missingPage: missingPage.length,
+    updatedAliases: updatedAliases.length,
     updatedSkus: updated,
-    skippedProtected,
+    skippedUnmatchedSource,
+    updatedAliasRoutes: updatedAliases,
   }, null, 2));
 }
 

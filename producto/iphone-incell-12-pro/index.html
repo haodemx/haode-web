@@ -20,62 +20,86 @@
   <link rel="apple-touch-icon" href="/assets/logo/logo.png" />
   <link rel="stylesheet" href="/style.css?v=20260813-final-ui-seo" />
   <link rel="stylesheet" href="/v3-screen-atlas.css?v=20260914-v3-transplant" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://haode.com.mx/#organization",
-        "name": "HAODE México",
-        "url": "https://haode.com.mx/",
-        "logo": "https://haode.com.mx/assets/logo/logo.png"
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://haode.com.mx/#organization",
+      "name": "HAODE México",
+      "url": "https://haode.com.mx/",
+      "logo": "https://haode.com.mx/assets/logo/logo.png"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://haode.com.mx/#localbusiness",
+      "name": "HAODE México",
+      "url": "https://haode.com.mx/",
+      "image": "https://haode.com.mx/assets/logo/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "CDMX",
+        "addressRegion": "CDMX",
+        "addressCountry": "MX"
       },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://haode.com.mx/#localbusiness",
-        "name": "HAODE México",
-        "url": "https://haode.com.mx/",
-        "image": "https://haode.com.mx/assets/logo/logo.png",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "CDMX",
-          "addressRegion": "CDMX",
-          "addressCountry": "MX"
-        },
-        "areaServed": "CDMX, México",
-        "description": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp."
+      "areaServed": "CDMX, México",
+      "description": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://haode.com.mx/#website",
+      "url": "https://haode.com.mx/",
+      "name": "HAODE México",
+      "publisher": {
+        "@id": "https://haode.com.mx/#organization"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://haode.com.mx/#website",
-        "url": "https://haode.com.mx/",
-        "name": "HAODE México",
-        "publisher": {
-          "@id": "https://haode.com.mx/#organization"
-        },
-        "inLanguage": "es-MX"
+      "inLanguage": "es-MX"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://haode.com.mx/producto.html#product",
+      "name": "Pantalla HAODE México",
+      "brand": {
+        "@type": "Brand",
+        "name": "HAODE México"
       },
-      {
-        "@type": "Product",
-        "@id": "https://haode.com.mx/producto.html#product",
-        "name": "Pantalla HAODE México",
-        "brand": {
-          "@type": "Brand",
-          "name": "HAODE México"
-        },
-        "description": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-        "image": "https://haode.com.mx/assets/logo/logo.png",
-        "url": "https://haode.com.mx/producto.html",
-        "offers": {
+      "description": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+      "image": "https://haode.com.mx/assets/logo/logo.png",
+      "url": "https://haode.com.mx/producto.html",
+      "offers": [
+        {
           "@type": "Offer",
+          "name": "Menudeo",
+          "url": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
           "priceCurrency": "MXN",
-          "url": "https://haode.com.mx/producto.html"
+          "price": "210"
+        },
+        {
+          "@type": "Offer",
+          "name": "Mayoreo",
+          "url": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
+          "priceCurrency": "MXN",
+          "price": "195"
+        },
+        {
+          "@type": "Offer",
+          "name": "Caja",
+          "url": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
+          "priceCurrency": "MXN",
+          "price": "185"
+        },
+        {
+          "@type": "Offer",
+          "name": "⭐ VIP",
+          "url": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
+          "priceCurrency": "MXN",
+          "price": "180"
         }
-      }
-    ]
-  }
-</script>
+      ]
+    }
+  ]
+}
+    </script>
 
   <!-- Google tag (gtag.js) -->
   <script src="/analytics.js?v=20260813-ga4-conversions"></script>
@@ -140,7 +164,7 @@
             <p class="detail-description" data-detail-description>INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.</p>
             <div>
               <p class="detail-price">Precio de mayoreo</p>
-              <p class="detail-price-note" data-detail-price>Consultar</p>
+              <p class="detail-price-note" data-detail-price>Menudeo: $210 MXN</p>
             </div>
 
             <div class="detail-buttons">
@@ -154,8 +178,20 @@
             <table class="detail-price-table" aria-label="Tabla completa de precios">
               <tbody data-detail-price-body>
                 <tr>
-                  <th scope="row">1 pza</th>
-                  <td>Consultar</td>
+                  <th scope="row">Menudeo</th>
+                  <td>$210 MXN</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mayoreo</th>
+                  <td>$195 MXN</td>
+                </tr>
+                <tr>
+                  <th scope="row">Caja</th>
+                  <td>$185 MXN</td>
+                </tr>
+                <tr>
+                  <th scope="row">⭐ VIP</th>
+                  <td>$180 MXN</td>
                 </tr>
               </tbody>
             </table>

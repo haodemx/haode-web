@@ -1,0 +1,852 @@
+{
+  "summary": {
+    "sourceRows": 156,
+    "websiteProducts": 186,
+    "websiteMatched": 153,
+    "appProducts": 186,
+    "appMatched": 153,
+    "ambiguous": 0,
+    "unmatchedWebsite": 33,
+    "unmatchedSource": 3
+  },
+  "unmatchedWebsite": [
+    "lk-007-camara-digital-4k",
+    "lk-018-camara-accion-hd",
+    "lk-030-mini-camara-retro-digital",
+    "lk-032-camara-inteligente-con-gimbal",
+    "celular-samsung-note-20-ultra-12-plus-256",
+    "celular-samsung-note10-8-plus-256",
+    "celular-samsung-note10-plus-12-plus-256",
+    "celular-samsung-note8-4-plus-64",
+    "celular-samsung-note9-8-plus-128",
+    "celular-samsung-s10-8-plus-128",
+    "celular-samsung-s10-plus-8-plus-128",
+    "celular-samsung-s10e-8-plus-128",
+    "celular-samsung-s20-5g-12-plus-256",
+    "celular-samsung-s20-plus-12-plus-256",
+    "celular-samsung-s20-ultra-12-plus-256",
+    "celular-samsung-s20fe-6-plus-128",
+    "celular-samsung-s21-12-plus-256",
+    "celular-samsung-s21-ultra-12-plus-256",
+    "celular-samsung-s22-ultra-12-plus-256",
+    "celular-samsung-s9-6-plus-64",
+    "celular-samsung-z-fip3-pro-doble-pantalla-8-plus-128",
+    "celular-samsungs9-plus-6-plus-64",
+    "fundas-funda-5in1-con-mica-premium-3d",
+    "fundas-funda-5in1-con-mica-premium-3d-13pro-14pro-16pro",
+    "fundas-kit-aluminio-de-17pro-con-logo-13pro-14pro-15pro-16pro",
+    "fundas-kit-aluminio-de-17promax-con-logo",
+    "fundas-kit-aluminio-de-17promax-sin-logo",
+    "fundas-kit-carcasa-metalica-con-flex-carcasas-11-17pro",
+    "fundas-kit-carcasa-metalica-con-flex-carcasas-xr-17pro",
+    "fundas-kit-carcasa-metalica-con-flex-carcasas-xs-17pro",
+    "fundas-kit-carcasa-metalica-con-flex-carcasas-xsmax-17pro",
+    "s1-ai-classic",
+    "samsung-original-z-flip7"
+  ],
+  "unmatchedSource": [
+    {
+      "sheet": "03 IPHONE INCELL",
+      "row": 8,
+      "model": "X Bolsa Protectora",
+      "quality": "INCELL FHD C/IC",
+      "prices": {
+        "retail": 160,
+        "wholesale": 155,
+        "box": 145,
+        "vip": 140
+      }
+    },
+    {
+      "sheet": "03 IPHONE INCELL",
+      "row": 10,
+      "model": "Xs Bolsa Protectora",
+      "quality": "INCELL FHD C/IC",
+      "prices": {
+        "retail": 160,
+        "wholesale": 155,
+        "box": 145,
+        "vip": 140
+      }
+    },
+    {
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 14,
+      "model": "S26 Ultra",
+      "quality": "TIPO ORIGINAL C/M",
+      "prices": {
+        "retail": 2915,
+        "wholesale": 2720,
+        "box": 2550,
+        "vip": 2400
+      }
+    }
+  ],
+  "matched": [
+    {
+      "id": "aimb-g5-ai-sports",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 7
+    },
+    {
+      "id": "gafas-ai-gafas-ai-m02",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 13
+    },
+    {
+      "id": "gafas-ai-gafas-ai-m08",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 12
+    },
+    {
+      "id": "gafas-ai-gafas-ai-m89",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 11
+    },
+    {
+      "id": "gafas-ai-gafas-ai-m95",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 14
+    },
+    {
+      "id": "haode-ai-g3-smart-glasses",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 10
+    },
+    {
+      "id": "haode-ai-w610-smart-glasses",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 9
+    },
+    {
+      "id": "w630-ai-pro",
+      "sheet": "02 PRODUCTOS AI",
+      "row": 8
+    },
+    {
+      "id": "iphone-incell-11",
+      "sheet": "03 IPHONE INCELL",
+      "row": 14
+    },
+    {
+      "id": "iphone-incell-11-bolsa-protectora",
+      "sheet": "03 IPHONE INCELL",
+      "row": 13
+    },
+    {
+      "id": "iphone-incell-11pro",
+      "sheet": "03 IPHONE INCELL",
+      "row": 15
+    },
+    {
+      "id": "iphone-incell-11promax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 17
+    },
+    {
+      "id": "iphone-incell-12-12pro",
+      "sheet": "03 IPHONE INCELL",
+      "row": 19
+    },
+    {
+      "id": "iphone-incell-12mini",
+      "sheet": "03 IPHONE INCELL",
+      "row": 18
+    },
+    {
+      "id": "iphone-incell-12promax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 20
+    },
+    {
+      "id": "iphone-incell-13",
+      "sheet": "03 IPHONE INCELL",
+      "row": 22
+    },
+    {
+      "id": "iphone-incell-13mini",
+      "sheet": "03 IPHONE INCELL",
+      "row": 21
+    },
+    {
+      "id": "iphone-incell-13pro",
+      "sheet": "03 IPHONE INCELL",
+      "row": 23
+    },
+    {
+      "id": "iphone-incell-13promax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 24
+    },
+    {
+      "id": "iphone-incell-14",
+      "sheet": "03 IPHONE INCELL",
+      "row": 25
+    },
+    {
+      "id": "iphone-incell-14plus",
+      "sheet": "03 IPHONE INCELL",
+      "row": 26
+    },
+    {
+      "id": "iphone-incell-14pro",
+      "sheet": "03 IPHONE INCELL",
+      "row": 27
+    },
+    {
+      "id": "iphone-incell-14promax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 28
+    },
+    {
+      "id": "iphone-incell-15",
+      "sheet": "03 IPHONE INCELL",
+      "row": 29
+    },
+    {
+      "id": "iphone-incell-15plus",
+      "sheet": "03 IPHONE INCELL",
+      "row": 30
+    },
+    {
+      "id": "iphone-incell-15pro",
+      "sheet": "03 IPHONE INCELL",
+      "row": 31
+    },
+    {
+      "id": "iphone-incell-15promax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 32
+    },
+    {
+      "id": "iphone-incell-16",
+      "sheet": "03 IPHONE INCELL",
+      "row": 33
+    },
+    {
+      "id": "iphone-incell-16e",
+      "sheet": "03 IPHONE INCELL",
+      "row": 34
+    },
+    {
+      "id": "iphone-incell-16plus",
+      "sheet": "03 IPHONE INCELL",
+      "row": 35
+    },
+    {
+      "id": "iphone-incell-16pro",
+      "sheet": "03 IPHONE INCELL",
+      "row": 36
+    },
+    {
+      "id": "iphone-incell-16promax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 37
+    },
+    {
+      "id": "iphone-incell-17",
+      "sheet": "03 IPHONE INCELL",
+      "row": 38
+    },
+    {
+      "id": "iphone-incell-17air",
+      "sheet": "03 IPHONE INCELL",
+      "row": 40
+    },
+    {
+      "id": "iphone-incell-17e",
+      "sheet": "03 IPHONE INCELL",
+      "row": 41
+    },
+    {
+      "id": "iphone-incell-17pro",
+      "sheet": "03 IPHONE INCELL",
+      "row": 39
+    },
+    {
+      "id": "iphone-incell-17promax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 42
+    },
+    {
+      "id": "iphone-incell-x",
+      "sheet": "03 IPHONE INCELL",
+      "row": 7
+    },
+    {
+      "id": "iphone-incell-xr",
+      "sheet": "03 IPHONE INCELL",
+      "row": 12
+    },
+    {
+      "id": "iphone-incell-xr-bolsa-protectora",
+      "sheet": "03 IPHONE INCELL",
+      "row": 11
+    },
+    {
+      "id": "iphone-incell-xs",
+      "sheet": "03 IPHONE INCELL",
+      "row": 9
+    },
+    {
+      "id": "iphone-incell-xsmax",
+      "sheet": "03 IPHONE INCELL",
+      "row": 16
+    },
+    {
+      "id": "iphone-oled-11promax",
+      "sheet": "04 IPHONE OLED",
+      "row": 8
+    },
+    {
+      "id": "iphone-oled-12-12pro",
+      "sheet": "04 IPHONE OLED",
+      "row": 9
+    },
+    {
+      "id": "iphone-oled-12promax",
+      "sheet": "04 IPHONE OLED",
+      "row": 10
+    },
+    {
+      "id": "iphone-oled-13",
+      "sheet": "04 IPHONE OLED",
+      "row": 11
+    },
+    {
+      "id": "iphone-oled-13pro",
+      "sheet": "04 IPHONE OLED",
+      "row": 12
+    },
+    {
+      "id": "iphone-oled-13promax",
+      "sheet": "04 IPHONE OLED",
+      "row": 13
+    },
+    {
+      "id": "iphone-oled-14",
+      "sheet": "04 IPHONE OLED",
+      "row": 14
+    },
+    {
+      "id": "iphone-oled-14plus",
+      "sheet": "04 IPHONE OLED",
+      "row": 16
+    },
+    {
+      "id": "iphone-oled-14pro",
+      "sheet": "04 IPHONE OLED",
+      "row": 18
+    },
+    {
+      "id": "iphone-oled-14promax",
+      "sheet": "04 IPHONE OLED",
+      "row": 19
+    },
+    {
+      "id": "iphone-oled-15",
+      "sheet": "04 IPHONE OLED",
+      "row": 20
+    },
+    {
+      "id": "iphone-oled-15promax",
+      "sheet": "04 IPHONE OLED",
+      "row": 22
+    },
+    {
+      "id": "iphone-oled-16e",
+      "sheet": "04 IPHONE OLED",
+      "row": 23
+    },
+    {
+      "id": "iphone-oled-16pro",
+      "sheet": "04 IPHONE OLED",
+      "row": 24
+    },
+    {
+      "id": "iphone-oled-16promax",
+      "sheet": "04 IPHONE OLED",
+      "row": 26
+    },
+    {
+      "id": "iphone-oled-16promax-hard",
+      "sheet": "04 IPHONE OLED",
+      "row": 25
+    },
+    {
+      "id": "iphone-oled-soft-14",
+      "sheet": "04 IPHONE OLED",
+      "row": 15
+    },
+    {
+      "id": "iphone-oled-soft-14-plus",
+      "sheet": "04 IPHONE OLED",
+      "row": 17
+    },
+    {
+      "id": "iphone-oled-soft-15pro",
+      "sheet": "04 IPHONE OLED",
+      "row": 21
+    },
+    {
+      "id": "iphone-oled-xsmax",
+      "sheet": "04 IPHONE OLED",
+      "row": 7
+    },
+    {
+      "id": "mica-hd",
+      "sheet": "01 HIDROGEL",
+      "row": 8
+    },
+    {
+      "id": "mica-matte",
+      "sheet": "01 HIDROGEL",
+      "row": 9
+    },
+    {
+      "id": "mica-privacidad-hd",
+      "sheet": "01 HIDROGEL",
+      "row": 10
+    },
+    {
+      "id": "mica-privacidad-matte",
+      "sheet": "01 HIDROGEL",
+      "row": 11
+    },
+    {
+      "id": "x200t-cortadora-micas",
+      "sheet": "01 HIDROGEL",
+      "row": 7
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 8
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 9
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 10
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 12
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 13
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 14
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 15
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 18
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 16
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 17
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 19
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 22
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 20
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 21
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 24
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 27
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 25
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 26
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 28
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 29
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 30
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 7
+    },
+    {
+      "id": "oled-diagnostica-12mini-hard",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 11
+    },
+    {
+      "id": "oled-diagnostica-16e-soft",
+      "sheet": "05 IPHONE DIAGNOSTICO",
+      "row": 23
+    },
+    {
+      "id": "samsung-incell-note-10",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 35
+    },
+    {
+      "id": "samsung-incell-note-10-lite",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 37
+    },
+    {
+      "id": "samsung-incell-note-10-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 36
+    },
+    {
+      "id": "samsung-incell-note-20",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 38
+    },
+    {
+      "id": "samsung-incell-note-20-ultra",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 39
+    },
+    {
+      "id": "samsung-incell-note-8",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 33
+    },
+    {
+      "id": "samsung-incell-note-9",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 34
+    },
+    {
+      "id": "samsung-incell-s10",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 11
+    },
+    {
+      "id": "samsung-incell-s10-lite",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 14
+    },
+    {
+      "id": "samsung-incell-s10-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 12
+    },
+    {
+      "id": "samsung-incell-s10e",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 13
+    },
+    {
+      "id": "samsung-incell-s20-4g",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 15
+    },
+    {
+      "id": "samsung-incell-s20-5g",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 16
+    },
+    {
+      "id": "samsung-incell-s20-fe",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 18
+    },
+    {
+      "id": "samsung-incell-s20-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 17
+    },
+    {
+      "id": "samsung-incell-s20-ultra",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 19
+    },
+    {
+      "id": "samsung-incell-s21",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 20
+    },
+    {
+      "id": "samsung-incell-s21-fe",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 21
+    },
+    {
+      "id": "samsung-incell-s21-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 22
+    },
+    {
+      "id": "samsung-incell-s21-ultra",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 23
+    },
+    {
+      "id": "samsung-incell-s22",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 24
+    },
+    {
+      "id": "samsung-incell-s22-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 25
+    },
+    {
+      "id": "samsung-incell-s22-ultra",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 26
+    },
+    {
+      "id": "samsung-incell-s23",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 27
+    },
+    {
+      "id": "samsung-incell-s23-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 28
+    },
+    {
+      "id": "samsung-incell-s23-ultra",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 29
+    },
+    {
+      "id": "samsung-incell-s24",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 30
+    },
+    {
+      "id": "samsung-incell-s24-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 31
+    },
+    {
+      "id": "samsung-incell-s24-ultra",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 32
+    },
+    {
+      "id": "samsung-incell-s8",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 7
+    },
+    {
+      "id": "samsung-incell-s8-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 8
+    },
+    {
+      "id": "samsung-incell-s9",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 9
+    },
+    {
+      "id": "samsung-incell-s9-plus",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 10
+    },
+    {
+      "id": "samsung-incell-z-flip3",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 40
+    },
+    {
+      "id": "samsung-incell-z-flip4",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 41
+    },
+    {
+      "id": "samsung-incell-z-flip5",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 42
+    },
+    {
+      "id": "samsung-incell-z-flip6",
+      "sheet": "06 SAMSUNG INCELL",
+      "row": 43
+    },
+    {
+      "id": "samsung-oled-note-10",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 13
+    },
+    {
+      "id": "samsung-oled-note-20",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 14
+    },
+    {
+      "id": "samsung-oled-note-20-ultra",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 15
+    },
+    {
+      "id": "samsung-oled-s20-plus",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 7
+    },
+    {
+      "id": "samsung-oled-s21-ultra",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 8
+    },
+    {
+      "id": "samsung-oled-s22-ultra",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 9
+    },
+    {
+      "id": "samsung-oled-s23-ultra",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 10
+    },
+    {
+      "id": "samsung-oled-s24-ultra",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 11
+    },
+    {
+      "id": "samsung-oled-s25-ultra",
+      "sheet": "07 SAMSUNG OLED",
+      "row": 12
+    },
+    {
+      "id": "samsung-original-note-20-ultra",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 15
+    },
+    {
+      "id": "samsung-original-s21-ultra",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 7
+    },
+    {
+      "id": "samsung-original-s22-plus",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 8
+    },
+    {
+      "id": "samsung-original-s22-ultra",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 9
+    },
+    {
+      "id": "samsung-original-s23-plus",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 10
+    },
+    {
+      "id": "samsung-original-s23-ultra",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 11
+    },
+    {
+      "id": "samsung-original-s24-ultra",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 12
+    },
+    {
+      "id": "samsung-original-s25-ultra",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 13
+    },
+    {
+      "id": "samsung-original-z-flip3",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 16
+    },
+    {
+      "id": "samsung-original-z-flip4",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 17
+    },
+    {
+      "id": "samsung-original-z-flip5",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 18
+    },
+    {
+      "id": "samsung-original-z-flip6",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 19
+    },
+    {
+      "id": "samsung-original-z-fold3",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 20
+    },
+    {
+      "id": "samsung-original-z-fold4",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 21
+    },
+    {
+      "id": "samsung-original-z-fold5",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 22
+    },
+    {
+      "id": "samsung-original-z-fold6",
+      "sheet": "08 SAMSUNG ORIGINAL",
+      "row": 23
+    }
+  ]
+}

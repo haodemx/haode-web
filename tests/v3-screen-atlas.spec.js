@@ -54,7 +54,8 @@ test('Pantallas uses real catalog data and supports filter and search', async ({
 
 test('product detail keeps price, quantity, WhatsApp, APP and canonical behavior', async ({ page }) => {
   await page.goto(`${baseURL}/producto/iphone-oled-11promax/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('[data-detail-price-body] tr')).toHaveCount(5);
+  await expect(page.locator('[data-detail-price-body] tr')).toHaveCount(4);
+  await expect(page.locator('[data-detail-price-body] th')).toHaveText(['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
   await expect(page.locator('[data-detail-whatsapp]')).toHaveAttribute('href', /wa\.me\/523326684296\?text=/);
   await expect(page.locator('[data-v3-detail-quality]')).toHaveText(/OLED/i);
   await expect(page.locator('[data-v3-qty]')).toHaveText('1');

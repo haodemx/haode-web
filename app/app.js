@@ -589,7 +589,8 @@ function hasAuthoritativeCustomerPrices(product) {
   const source = String(product?.priceSource || "");
   return source.includes("Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx")
     || source.includes("Lista_de_Precios_HAODE_20260721.pdf")
-    || source.includes("HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx");
+    || source.includes("HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx")
+    || source.includes("HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx");
 }
 
 function stockClassName(value) {
@@ -931,6 +932,11 @@ function priceRuleFor(product, quantity = 1) {
     .pop();
   if (matchingTier) {
     return { unitPrice: matchingTier.price, label: matchingTier.label };
+  }
+  // New 2026-09-21 customer list uses named price levels (Menudeo/Mayoreo/Caja/VIP),
+  // not automatic quantity thresholds. Manual tiers must never be auto-applied in cart.
+  if (product.priceTiers.length) {
+    return { unitPrice: product.publicPrice, label: "Precio menudeo" };
   }
   if (quantity >= 10) {
     if (product.category === "Pantallas OLED Diagnóstica" && !product.wholesalePrice) {

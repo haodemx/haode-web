@@ -5,11 +5,11 @@ import test from 'node:test';
 const read = (path) => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 
 const expected = [
-  ['mica-hd', ['400', '350', '300'], 'paquete de 50 piezas'],
-  ['mica-matte', ['450', '400', '350'], 'paquete de 50 piezas'],
-  ['mica-privacidad-hd', ['850', '800', '750'], 'paquete de 50 piezas'],
-  ['mica-privacidad-matte', ['850', '800', '750'], 'paquete de 50 piezas'],
-  ['x200t-cortadora-micas', ['6500', '6200', '6000'], 'equipo X200T'],
+  ['mica-hd', ['350', '300', '275', '250']],
+  ['mica-matte', ['350', '300', '275', '250']],
+  ['mica-privacidad-hd', ['800', '750', '700', '650']],
+  ['mica-privacidad-matte', ['800', '750', '700', '650']],
+  ['x200t-cortadora-micas', ['6000', '5800', '5500', '5300']],
 ];
 
 function schemas(html) {
@@ -20,23 +20,21 @@ function schemas(html) {
     });
 }
 
-test('five candidate pages publish three explicit approved tiers and matching schema', () => {
-  for (const [id, prices, unitText] of expected) {
+test('five candidate pages publish the source-backed named tiers without automatic quantity thresholds', () => {
+  for (const [id, prices] of expected) {
     const html = read(`producto/${id}/index.html`);
-    assert.match(html, /data-detail-price>Precio público:/, `${id} main price is not public price`);
-    for (const label of ['Precio público', 'Mayoreo 5+', 'Volumen 10+']) {
+    assert.match(html, /data-detail-price>Menudeo:/, `${id} main price is not Menudeo`);
+    for (const label of ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']) {
       assert.ok(html.includes(`<th scope="row">${label}</th>`), `${id} missing ${label}`);
     }
 
     const product = schemas(html).find((node) => node['@type'] === 'Product');
     assert.ok(product, `${id} missing Product schema`);
-    assert.equal(product.offers.length, 3, `${id} must expose exactly three offers`);
+    assert.equal(product.offers.length, 4, `${id} must expose exactly four offers`);
     assert.deepEqual(product.offers.map((offer) => offer.price), prices);
-    assert.deepEqual(product.offers.map((offer) => offer.name), ['Precio público', 'Mayoreo 5+', 'Volumen 10+']);
-    assert.deepEqual(product.offers.map((offer) => offer.eligibleQuantity.minValue), [1, 5, 10]);
-    assert.deepEqual(product.offers.map((offer) => offer.eligibleQuantity.maxValue ?? null), [4, 9, null]);
-    assert.ok(product.offers.every((offer) => offer.eligibleQuantity.unitText === unitText));
-    assert.ok(product.offers.every((offer) => offer.priceSpecification.price === offer.price));
+    assert.deepEqual(product.offers.map((offer) => offer.name), ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
+    assert.ok(product.offers.every((offer) => !('eligibleQuantity' in offer)));
+    assert.ok(product.offers.every((offer) => !('priceSpecification' in offer)));
   }
 });
 

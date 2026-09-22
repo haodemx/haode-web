@@ -177,8 +177,8 @@ test("keeps the approved App catalog authoritative and submits an attributed ide
   await expect(page.locator(".product-card", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
 
   const approvedCard = page.locator(".product-card", { hasText: "HAODE X200T Cortadora Inteligente de Micas" });
-  await expect(approvedCard).toContainText("$6,500");
-  await expect(approvedCard).toContainText("$6,200");
+  await expect(approvedCard).toContainText("$6,000");
+  await expect(approvedCard).toContainText("$5,800");
   await expect(approvedCard).not.toContainText("$6,700");
   await approvedCard.getByRole("button", { name: "Agregar" }).click();
 
@@ -201,7 +201,7 @@ test("keeps the approved App catalog authoritative and submits an attributed ide
 
   const localBolsaCard = page.locator(".product-card", { hasText: "iPhone 11 Bolsa Protectora" });
   await expect(localBolsaCard).toBeVisible();
-  await expect(localBolsaCard).toContainText("$160 MXN");
+  await expect(localBolsaCard).toContainText("$155 MXN");
 
   await page.goto(`${APP_URL}#producto/x200t-cortadora-micas`, { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { name: /X200T/i })).toBeVisible();
@@ -225,7 +225,7 @@ test("keeps the approved desktop catalog authoritative", async ({ page }) => {
 
   const localBolsaCard = page.locator("[data-catalog-card]", { hasText: "Pantalla para iPhone 11 Bolsa Protectora" });
   await expect(localBolsaCard).toBeAttached();
-  await expect(localBolsaCard).toContainText("1 pza");
-  await expect(localBolsaCard).toContainText("$160 MXN");
+  await expect(localBolsaCard).toContainText("Menudeo");
+  await expect(localBolsaCard).toContainText("$155 MXN");
   await saveEvidence(page, "website-erp-catalog.png");
 });
