@@ -565,8 +565,8 @@ function genericProductPage(product) {
       <div class="detail-grid">
         <section class="detail-visual" aria-label="Imagen del producto">
           <img class="detail-main-image" data-detail-main-image src="${displayImage}" alt="${escapeHtml(product.name)}" width="1000" height="1000" loading="eager" fetchpriority="high" decoding="async" />
-${placeholder ? '          <p class="product-image-status" data-product-image-status>REAL ASSET REQUIRED</p>\n' : ''}          <div class="detail-gallery-wrap"><h2>Fotos del producto</h2><div class="detail-gallery" data-detail-gallery></div></div>
-          <div class="detail-video-wrap"><h2>Video de prueba</h2><div class="detail-videos" data-detail-videos></div></div>
+${placeholder ? '          <p class="product-image-status" data-product-image-status>REAL ASSET REQUIRED</p>\n' : ''}          <div class="detail-gallery-wrap" hidden aria-hidden="true"><h2>Fotos del producto</h2><div class="detail-gallery" data-detail-gallery></div></div>
+          <div class="detail-video-wrap" hidden aria-hidden="true"><h2>Video de prueba</h2><div class="detail-videos" data-detail-videos></div></div>
         </section>
         <aside class="detail-info">
           <article class="detail-card"><p class="detail-meta" data-detail-quality>${escapeHtml(product.quality)}</p><p class="detail-description" data-detail-description>${escapeHtml(product.description)}</p><div><p class="detail-price">Precio publicado</p><p class="detail-price-note" data-detail-price>${escapeHtml(product.prices?.[0]?.price)}</p></div><div class="detail-buttons"><a class="btn btn-primary" data-detail-whatsapp href="${whatsapp}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a><a class="btn btn-secondary" href="/app/">Abrir App HAODE</a></div></article>

@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run test:screen-seo && npm run haode:check && npm run build:public && npm run verify:public-site",
+    "build": "npm run test:non-image-cleanup && npm run test:screen-seo && npm run haode:check && npm run build:public && npm run verify:public-site",
+    "test:non-image-cleanup": "node --test tests/non-image-cleanup.test.mjs",
     "build:public": "node scripts/build-public-site.mjs",
     "test:public-package": "node --test tests/public-site-package.test.mjs",
     "test:phase4-closeout": "node --test tests/phase4-closeout-contract.test.mjs",

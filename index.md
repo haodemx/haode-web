@@ -1,19 +1,24 @@
-# HAODE México
+# Pantallas y tecnología para vender y reparar
 
 HAODE México es la tienda oficial de fábrica HL en CDMX para técnicos, talleres, tiendas y distribuidores de refacciones para celular.
 
 ## Categorías principales
 
-- Pantallas iPhone INCELL y OLED
-- Pantallas Samsung INCELL, OLED y TIPO ORIGINAL
-- Micas, fundas y máquinas de hidrogel
-- Productos AI y celulares Samsung publicados
+- [iPhone INCELL](https://haode.com.mx/categoria/iphone-incell/)
+- [iPhone OLED](https://haode.com.mx/categoria/iphone-oled/)
+- [Diagnóstico OLED](https://haode.com.mx/categoria/oled-diagnostica/)
+- [Samsung INCELL](https://haode.com.mx/categoria/samsung-incell/)
+- [Samsung AMOLED](https://haode.com.mx/categoria/samsung-oled/)
+- [Tipo Original](https://haode.com.mx/categoria/samsung-tipo-original/)
+- [Fold / Flip](https://haode.com.mx/categoria/samsung-plegables/)
+- [Hydrogel](https://haode.com.mx/micas-hidrogel-mayoreo-mexico/)
+- [Productos AI](https://haode.com.mx/categoria/gafas-inteligentes-ai/)
 
 ## Cómo comprar
 
 1. Consulta el [catálogo visual](https://haode.com.mx/productos/) o el [directorio completo por modelo](https://haode.com.mx/catalogo-modelos/).
 2. Prepara modelo o SKU, versión cuando aplique, cantidad y ciudad.
-3. Confirma por [WhatsApp](https://haode.com.mx/contacto/) disponibilidad, compatibilidad, precio final y envío antes de ordenar.
+3. Confirma por [WhatsApp +52 33 2668 4296](https://wa.me/523326684296) disponibilidad, compatibilidad, precio final y envío antes de ordenar.
 
 ## Información oficial
 

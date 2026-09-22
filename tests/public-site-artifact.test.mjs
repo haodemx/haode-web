@@ -27,6 +27,12 @@ test("final package retains required website and App dynamic resources", async (
 
   for (const relative of [
     "index.html",
+    "index.md",
+    "productos/index.md",
+    "contacto/index.md",
+    "garantia/index.md",
+    "guia-ia-haode-mexico/index.md",
+    "tienda-oficial-hl-cdmx/index.md",
     "app/index.html",
     "app/app.js",
     "app/products.json",

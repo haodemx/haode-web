@@ -129,8 +129,10 @@ test('attribution and contact_area preserve explicit custom classifications', as
   expect(classifications.utm).toMatchObject({ source: 'boletin', medium: 'email', campaign: 'septiembre' });
   expect([classifications.header, classifications.hero, classifications.floating]).toEqual(['header', 'home_hero', 'floating']);
   await page.goto(`${BASE_URL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => typeof window.HaodeCampaign?.contactArea === 'function');
   expect(await page.evaluate(() => window.HaodeCampaign.contactArea(document.querySelector('[data-product-whatsapp], [data-detail-whatsapp]')))).toBe('product');
   await page.goto(`${BASE_URL}/app/`, { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => typeof window.HaodeCampaign?.contactArea === 'function');
   expect(await page.evaluate(() => window.HaodeCampaign.contactArea(document.querySelector('[data-whatsapp-link]')))).toBe('cart');
   await context.close();
 });

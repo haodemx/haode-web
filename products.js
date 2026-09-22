@@ -2540,8 +2540,9 @@ function renderCatalogPage() {
       });
 
       setCatalogElementVisible(section.querySelector('[data-catalog-feature-grid]'), visibleFeatures > 0);
-      updateCatalogEmptyCard(emptyState, searchInput?.value || '', group.title);
-      setCatalogElementVisible(emptyState, visibleResults === 0);
+      const showEmpty = visibleResults === 0 && (Boolean(state.query) || state.activeType !== 'all');
+      if (showEmpty) updateCatalogEmptyCard(emptyState, searchInput?.value || '', group.title);
+      setCatalogElementVisible(emptyState, showEmpty);
       if (resultCount) {
         const filterLabel = group.controls.filters.find((filter) => filter.id === state.activeType)?.label || group.title;
         const suffix = state.query ? ` para "${searchInput.value.trim()}"` : '';
@@ -2630,8 +2631,9 @@ function renderCatalogPage() {
       });
 
       setCatalogElementVisible(section.querySelector('[data-pantallas-feature-grid]'), visibleFeatures > 0);
-      updateCatalogEmptyCard(emptyState, searchInput?.value || '', 'Pantallas');
-      setCatalogElementVisible(emptyState, visibleResults === 0);
+      const showEmpty = visibleResults === 0 && (Boolean(pantallasState.query) || pantallasState.activeType !== 'all');
+      if (showEmpty) updateCatalogEmptyCard(emptyState, searchInput?.value || '', 'Pantallas');
+      setCatalogElementVisible(emptyState, showEmpty);
       if (resultCount) {
         const filterLabel = PANTALLAS_FILTERS.find((filter) => filter.id === pantallasState.activeType)?.label || 'Pantallas';
         const suffix = pantallasState.query ? ` para "${searchInput.value.trim()}"` : '';
