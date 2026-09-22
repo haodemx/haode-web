@@ -56,3 +56,28 @@ test("public warranty routes do not expose the internal copywriting note", async
     assert.doesNotMatch(await readFile(path.join(root, relative), "utf8"), internalNote, relative);
   }
 });
+
+test("public AI routes and static catalog fallbacks use customer-facing copy", async () => {
+  const internalCopy = /base lista|cargar (?:un )?producto|m[oó]dulos pendientes|espacios reservados|reserved slots|backend|admin/i;
+
+  for (const relative of [
+    "productos-ai.html",
+    path.join("productos-ai", "index.html"),
+    path.join("categoria", "productos-ai", "index.html"),
+    path.join("baterias", "index.html"),
+  ]) {
+    assert.doesNotMatch(await readFile(path.join(root, relative), "utf8"), internalCopy, relative);
+  }
+
+  assert.doesNotMatch(
+    await readFile(path.join(root, "baterias", "index.html"), "utf8"),
+    /REAL ASSET REQUIRED|pendiente de validaci[oó]n/i,
+  );
+
+  const catalog = await readFile(path.join(root, "productos", "index.html"), "utf8");
+  const app = await readFile(path.join(root, "app", "index.html"), "utf8");
+  assert.doesNotMatch(catalog, /No encontramos ese producto/i);
+  assert.match(catalog, /Cargando cat[aá]logo HAODE/i);
+  assert.doesNotMatch(app, /No se pudieron cargar los productos/i);
+  assert.match(app, /Consulta el cat[aá]logo HAODE/i);
+});
