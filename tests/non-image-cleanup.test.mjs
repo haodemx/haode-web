@@ -5,6 +5,19 @@ import test from 'node:test';
 
 const root = path.resolve(import.meta.dirname, '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
+test('public email roles match owner decision and secondary contact stays on Contacto', () => {
+  const walk = dir => fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => ['.git','node_modules','_site'].includes(e.name) ? [] : e.isDirectory() ? walk(path.join(dir,e.name)) : [path.join(dir,e.name)]);
+  for (const file of walk(root).filter(f => f.endsWith('.html'))) {
+    const html = fs.readFileSync(file,'utf8');
+    assert.doesNotMatch(html, /ventas@haode\.com\.mx/i, file);
+    if (file !== path.join(root,'contacto/index.html')) assert.doesNotMatch(html, /mailto:cristi3an@gmail\.com/i, file);
+  }
+  const contact=read('contacto/index.html');
+  assert.match(contact, /Ventas \/ Cotizaciones \/ Mayoreo \/ Contacto general/);
+  assert.match(contact, /Dirección: <a[^>]+href="mailto:cristi3an@gmail.com"/);
+  assert.match(contact, /"email": "haodemx@gmail.com"/);
+  assert.match(read('index.html'), /mailto:haodemx@gmail.com/);
+});
 test('homepage structured categories match all nine locked C-layout entries', () => {
   const html = read('index.html');
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
