@@ -320,15 +320,17 @@ test('homepage does not publish unsupported performance claims or testimonials',
     assert.ok(!homepage.includes(unsupportedClaim), `unsupported homepage claim found: ${unsupportedClaim}`);
   }
   for (const confirmedServiceFact of [
-    'Atención local',
-    'Precio por cantidad',
-    'Cotización directa',
-    'Envío bajo confirmación',
-    'Stock en México',
-    'Sujeto a confirmación',
-    'Garantía según producto',
-    'Modelo o SKU',
-    'Ciudad de entrega',
+    'Fábrica directa para talleres',
+    'Verificación de pedido',
+    'Confirmación por WhatsApp',
+    'Envíos a todo México',
+    'Consulta condiciones',
+    'Calidad profesional',
+    'Directo de fábrica',
+    'Soporte profesional',
+    'Atención por WhatsApp',
+    'Catálogo profesional',
+    'Consulta el modelo exacto',
   ]) {
     assert.ok(homepage.includes(confirmedServiceFact), `missing confirmed homepage fact: ${confirmedServiceFact}`);
   }

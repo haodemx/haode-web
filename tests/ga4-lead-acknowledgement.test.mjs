@@ -14,6 +14,7 @@ function harness(responses) {
     ERP_WEB_ORDER_URL: 'https://example.invalid/orders',
     webOrderPayload: () => ({customer_name: 'QA', whatsapp: 'not-a-real-phone', items: [{}], client_request_id: 'QA', total: 100}),
     state: {attribution: {source: 'google'}},
+    analyticsAttributionParameters: () => ({attribution_source: 'google'}),
     ga4CartItems: () => [{item_id: 'QA', quantity: 1}],
     trackGrowthEvent: (name, parameters) => { events.push({name, parameters}); return true; },
     fetch: async () => {

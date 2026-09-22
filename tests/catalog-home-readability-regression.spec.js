@@ -16,8 +16,10 @@ test('catalog keeps its technical filters and products readable', async ({ page 
   expect(panel.width).toBeGreaterThanOrEqual(240);
 });
 
-test('Zay routes use the official horizontal HAODE wordmark', async ({ page }) => {
-  for (const route of ['/', '/productos/', '/contacto/', '/producto/iphone-incell-14/']) {
+test('current homepage and V3 routes use their approved HAODE wordmarks', async ({ page }) => {
+  await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('.c-logo img')).toHaveAttribute('src', '/assets/images/homepage-c/phase3/brand/haode-official-trimmed.webp');
+  for (const route of ['/productos/', '/contacto/', '/producto/iphone-incell-14/']) {
     await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded' });
     const logo = page.locator('.zay-brand img');
     await expect(logo).toHaveAttribute('src', '/assets/images/haode-header-logo-horizontal-preview.png');
@@ -26,16 +28,15 @@ test('Zay routes use the official horizontal HAODE wordmark', async ({ page }) =
   }
 });
 
-test('homepage Zay hero labels remain readable beside product photography', async ({ page }) => {
+test('homepage C-layout hero labels remain readable beside product photography', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.zay-hero figure img')).toBeVisible();
-  const presentation = await page.locator('.zay-hero-grid > div').evaluate((copy) => ({
+  await expect(page.locator('.c-hero-media img')).toBeVisible();
+  const presentation = await page.locator('.c-hero-copy').evaluate((copy) => ({
     title: getComputedStyle(copy.querySelector('h1')).color,
     size: parseFloat(getComputedStyle(copy.querySelector('h1')).fontSize),
-    promise: getComputedStyle(copy.querySelector('p:not(.zay-kicker)')).color,
+    promise: getComputedStyle(copy.querySelector('.c-hero-lead')).color,
   }));
-  expect(presentation.title).toBe('rgb(21, 21, 21)');
-  expect(presentation.promise).toBe('rgb(57, 64, 71)');
-  expect(presentation.size).toBeGreaterThanOrEqual(64);
+  expect(presentation.title).not.toBe(presentation.promise);
+  expect(presentation.size).toBeGreaterThanOrEqual(52);
 });

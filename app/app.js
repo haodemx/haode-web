@@ -266,16 +266,19 @@ function trafficAttribution() {
       return "";
     }
   })();
-  const detectedSource = /facebook|instagram/i.test(referrerHost)
-    ? "facebook"
-    : /tiktok/i.test(referrerHost)
-      ? "tiktok"
-      : /google/i.test(referrerHost)
-        ? "google"
-        : "";
+  const detected = (() => {
+    if (!referrerHost) return { source: "direct", medium: "none" };
+    if (/google\./i.test(referrerHost)) return { source: "google", medium: "organic_search" };
+    if (/(^|\.)bing\.com$/i.test(referrerHost)) return { source: "bing", medium: "organic_search" };
+    if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(referrerHost)) return { source: "chatgpt", medium: "ai_referral" };
+    if (/instagram/i.test(referrerHost)) return { source: "instagram", medium: "organic_social" };
+    if (/facebook|fb\.com/i.test(referrerHost)) return { source: "facebook", medium: "organic_social" };
+    if (/tiktok|twitter|x\.com|linkedin|youtube/i.test(referrerHost)) return { source: "social", medium: "organic_social" };
+    return { source: referrerHost.replace(/^www\./, ""), medium: "referral" };
+  })();
   const attribution = {
-    source: normalizeAttributionToken(params.get("utm_source") || params.get("source") || stored.source || detectedSource, appChannel()),
-    medium: normalizeAttributionToken(params.get("utm_medium") || stored.medium, appChannel() === "haode_app" ? "app" : "website"),
+    source: normalizeAttributionToken(params.get("utm_source") || params.get("source") || stored.source || detected.source, "direct"),
+    medium: normalizeAttributionToken(params.get("utm_medium") || stored.medium || detected.medium, "none"),
     campaign: normalizeAttributionToken(params.get("utm_campaign") || stored.campaign),
     content: normalizeAttributionToken(params.get("utm_content") || stored.content),
     term: normalizeAttributionToken(hasIncomingCampaign ? params.get("utm_term") : stored.term),
@@ -291,18 +294,33 @@ function trafficAttribution() {
   return attribution;
 }
 
+function analyticsAttributionParameters(attribution = state.attribution) {
+  if (window.HaodeCampaign?.analyticsParameters) {
+    return window.HaodeCampaign.analyticsParameters(attribution);
+  }
+  return {
+    attribution_source: attribution.source,
+    attribution_medium: attribution.medium,
+    attribution_campaign: attribution.campaign,
+    attribution_content: attribution.content,
+    landing_page: attribution.landingPage,
+    campaign_reference: [attribution.source, attribution.campaign, attribution.content].filter(Boolean).join("/"),
+    entry_channel: attribution.entryChannel || appChannel()
+  };
+}
+
 function trackGrowthEvent(name, parameters = {}) {
   return window.HaodeAnalytics?.event?.(name, parameters) === true;
 }
 
-function ga4Item(product, quantity = 1) {
+function ga4Item(product, quantity = 1, pricingQuantity = quantity) {
   return {
     item_id: product.sku || product.reference || product.id,
     item_name: product.name,
     item_brand: "HAODE",
     item_category: product.category || "",
     item_variant: product.model || "",
-    price: Number(priceFor(product, quantity)) || 0,
+    price: Number(priceFor(product, pricingQuantity)) || 0,
     quantity
   };
 }
@@ -1252,7 +1270,7 @@ function renderHome() {
         <div class="category-rail app-home-categories" data-category-rail>${categoryCardsHtml()}</div>
 
         <div class="app-hero-actions">
-          <a class="whatsapp-button" href="${largeListWhatsappUrl("App inicio")}" target="_blank" rel="noopener noreferrer">Enviar lista por WhatsApp</a>
+          <a class="whatsapp-button" href="${largeListWhatsappUrl("App inicio")}" target="_blank" rel="noopener noreferrer" data-contact-area="home_hero">Enviar lista por WhatsApp</a>
           <a class="outline-button" href="#lista">Ver catálogo</a>
         </div>
 
@@ -1797,7 +1815,7 @@ function renderCartPage() {
             </div>
             <strong>${formatPrice(subtotal)}</strong>
           </div>
-          <p>Precio aplicado: ${escapeHtml(priceRule.label)} · ${formatPrice(priceRule.unitPrice)} c/u</p>
+          <p>Precio estimado: ${escapeHtml(priceRule.label)} · ${formatPrice(priceRule.unitPrice)} c/u</p>
           <div class="cart-row">
             <button class="remove-button" type="button" data-remove="${productIdAttr}">Eliminar</button>
           </div>
@@ -1835,6 +1853,7 @@ function renderCartPage() {
       ${items.length ? `
         <section class="cart-page-card">
           <div class="cart-items-page">${itemsMarkup}</div>
+          <p class="cart-pricing-note"><strong>Precio estimado de Menudeo.</strong> Mayoreo, Caja y VIP se confirman con un asesor por WhatsApp.</p>
           <div class="cart-total">
             <span>Total estimado</span>
             <strong>${formatPrice(cartTotal())}</strong>
@@ -2051,13 +2070,14 @@ function buildWhatsappUrl() {
     `Cliente: ${clientName || "Sin nombre"}`,
     `Telefono: ${clientPhone || "Sin telefono"}`,
     `Ciudad: ${clientCity || "Sin ciudad"}`,
-    "Tipo de precio: automatico por cantidad",
+    "Referencia del carrito: precio estimado de Menudeo",
+    "Mayoreo / Caja / VIP: confirmar por WhatsApp",
     "",
     ...items.map((item) => {
       const priceRule = priceRuleFor(item.product, item.quantity);
       const subtotal = priceRule.unitPrice * item.quantity;
       const referenceLabel = item.product.officialSkuPending ? "Referencia web" : "SKU";
-      return `- ${item.product.name} | ${referenceLabel}: ${item.product.sku || item.product.reference || item.product.id} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio aplicado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
+      return `- ${item.product.name} | ${referenceLabel}: ${item.product.sku || item.product.reference || item.product.id} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio estimado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
     }),
     "",
     `Total estimado: ${formatPrice(cartTotal())}`,
@@ -2128,7 +2148,7 @@ async function submitWebOrder() {
       trackGrowthEvent("generate_lead", {
         currency: "MXN",
         value: payload.total,
-        source: state.attribution.source,
+        ...analyticsAttributionParameters(),
         lead_registered: true,
         items: ga4CartItems()
       });
@@ -2204,7 +2224,7 @@ function renderCart() {
             </div>
             <strong>${formatPrice(subtotal)}</strong>
           </div>
-          <p>Precio aplicado: ${escapeHtml(priceRule.label)} · ${formatPrice(priceRule.unitPrice)} c/u</p>
+          <p>Precio estimado: ${escapeHtml(priceRule.label)} · ${formatPrice(priceRule.unitPrice)} c/u</p>
           <div class="cart-row">
             <button class="remove-button" type="button" data-remove="${productIdAttr}">Eliminar</button>
           </div>
@@ -2224,20 +2244,29 @@ function addProduct(productId) {
   const product = products.find((item) => item.id === productId);
   if (!product?.salesAvailable) return;
   resetCheckoutRequest();
-  state.cart.set(productId, (state.cart.get(productId) || 0) + 1);
-  const item = ga4Item(product, 1);
+  const nextQuantity = (state.cart.get(productId) || 0) + 1;
+  state.cart.set(productId, nextQuantity);
+  const item = ga4Item(product, 1, nextQuantity);
   trackGrowthEvent("add_to_cart", { currency: "MXN", value: item.price, items: [item] });
   renderCart();
 }
 
 function changeQuantity(productId, delta) {
+  const product = products.find((item) => item.id === productId);
+  const previousQuantity = state.cart.get(productId) || 0;
+  if (!product || !previousQuantity || !Number.isFinite(delta) || delta === 0) return;
   resetCheckoutRequest();
-  const nextQuantity = (state.cart.get(productId) || 0) + delta;
+  const nextQuantity = previousQuantity + delta;
+  const changedQuantity = Math.min(Math.abs(delta), delta < 0 ? previousQuantity : Math.abs(delta));
+  const removedItem = delta < 0 ? ga4Item(product, changedQuantity, previousQuantity) : null;
   if (nextQuantity <= 0) {
     state.cart.delete(productId);
   } else {
     state.cart.set(productId, nextQuantity);
   }
+  const eventName = delta > 0 ? "add_to_cart" : "remove_from_cart";
+  const item = removedItem || ga4Item(product, changedQuantity, nextQuantity);
+  trackGrowthEvent(eventName, { currency: "MXN", value: item.price * changedQuantity, items: [item] });
   renderCart();
   if (state.route.name === "cart") {
     renderCartPage();
@@ -2245,8 +2274,17 @@ function changeQuantity(productId, delta) {
 }
 
 function removeProduct(productId) {
+  const product = products.find((item) => item.id === productId);
+  const removedQuantity = state.cart.get(productId) || 0;
+  if (!product || !removedQuantity) return;
   resetCheckoutRequest();
+  const item = ga4Item(product, removedQuantity, removedQuantity);
   state.cart.delete(productId);
+  trackGrowthEvent("remove_from_cart", {
+    currency: "MXN",
+    value: item.price * removedQuantity,
+    items: [item]
+  });
   renderCart();
   if (state.route.name === "cart") {
     renderCartPage();
@@ -2389,7 +2427,7 @@ async function handleDocumentClick(event) {
     trackGrowthEvent("begin_checkout", {
       currency: "MXN",
       value: cartTotal(),
-      source: state.attribution.source,
+      ...analyticsAttributionParameters(),
       items: ga4CartItems()
     });
     window.open(url, "_blank", "noopener,noreferrer");
@@ -2399,7 +2437,11 @@ async function handleDocumentClick(event) {
   if (productWhatsappLink) {
     const product = products.find((item) => item.id === productWhatsappLink.dataset.productWhatsapp);
     if (product && !window.HaodeCampaign?.wasContactTracked?.(event)) {
-      trackGrowthEvent("contact", { method: "whatsapp", item_id: product.sku, source: state.attribution.source });
+      trackGrowthEvent("contact", {
+        method: "whatsapp",
+        item_id: product.sku || product.reference || product.id,
+        ...analyticsAttributionParameters()
+      });
     }
   }
   if (closeCartButton || event.target === cartDrawerEl) {

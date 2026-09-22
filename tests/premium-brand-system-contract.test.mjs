@@ -68,9 +68,9 @@ test('customer App maps to the same restrained brand roles', () => {
 });
 
 test('brand refinement preserves core website and App commerce hooks', () => {
-  assert.match(homepage, /data-home-hero-carousel/);
+  assert.match(homepage, /data-home-c-section="hero"/);
   assert.match(homepage, /data-home-catalog-search-form/);
-  assert.match(homepage, /data-reference-menu-button/);
+  assert.match(homepage, /class="c-menu-button"/);
   assert.match(catalog, /data-product-sections/);
   assert.match(catalog, /data-site-catalog-search-form/);
   assert.match(productTemplate, /data-product-detail/);

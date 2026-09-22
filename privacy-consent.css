@@ -9,6 +9,10 @@
   letter-spacing: 0;
 }
 
+body:has([data-haode-privacy-banner]:not([hidden])) .haode-mobile-checkout-bar {
+  display: none !important;
+}
+
 [data-haode-privacy-root] [hidden] {
   display: none !important;
 }

@@ -24,7 +24,7 @@ test('footer address and Cómo llegar open the confirmed store destination', asy
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'load' });
 
-  const footer = page.locator('[data-v3-footer]');
+  const footer = page.locator('[data-ui-id="site-footer"]');
   const address = footer.locator('[data-store-address-link]');
   const directions = footer.locator('[data-store-directions]');
   await expectDirectionsLink(address);
@@ -59,8 +59,12 @@ test('390px directions controls stay tappable and overflow-free', async ({ page 
 
   for (const route of ['/', '/contacto/', '/tienda-oficial-hl-cdmx/']) {
     await page.goto(`${BASE_URL}${route}`, { waitUntil: 'load' });
+    if (route === '/') {
+      const contactAccordion = page.locator('.c-footer-accordion').filter({ has: page.locator('[data-store-directions]') });
+      await contactAccordion.locator('summary').click();
+    }
     const directions = route === '/'
-      ? page.locator('[data-v3-footer] [data-store-directions]')
+      ? page.locator('[data-ui-id="site-footer"] [data-store-directions]')
       : page.locator('[data-store-primary-actions] [data-store-directions]').first();
     await expectDirectionsLink(directions);
     expect(await directions.evaluate((element) => element.getBoundingClientRect().height)).toBeGreaterThanOrEqual(44);

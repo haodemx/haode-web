@@ -72,11 +72,11 @@ test('homepage and shared product footer keep customer actions readable', async 
   }));
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.zay-hero h1')).toBeVisible();
-  await expectReadableText(page, '.zay-hero h1');
-  await expectReadableText(page, '.zay-hero-grid>div>p:not(.zay-kicker)');
-  await expectReadableText(page, '.zay-final p');
-  await expectReadableText(page, '.zay-footer p');
+  await expect(page.locator('.c-hero h1')).toBeVisible();
+  await expectReadableText(page, '.c-hero h1');
+  await expectReadableText(page, '.c-hero-lead');
+  await expectReadableText(page, '.reference-footer-cta p');
+  await expectReadableText(page, '.reference-footer-brand p');
 
   await page.goto(`${BASE_URL}/producto/iphone-incell-14/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('.zay-footer')).toBeVisible();

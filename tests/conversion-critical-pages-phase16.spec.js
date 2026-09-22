@@ -6,7 +6,7 @@ const criticalPages = [
   {
     path: '/',
     name: 'home',
-    texts: ['Pantallas y tecnología para vender y reparar.', 'Hidrogel', 'WhatsApp'],
+    texts: ['Pantallas y tecnología', 'para vender y reparar', 'Hidrogel', 'WhatsApp'],
   },
   {
     path: '/app/',
@@ -90,13 +90,13 @@ async function checkCriticalPage(page, pageCase, viewport) {
     await expectReferenceDesktopWordmark(page);
   }
   if (pageCase.name === 'home') {
-    const productImages = page.locator('.zay-hero figure img');
+    const productImages = page.locator('.c-hero-media img');
     await expect(productImages).toHaveCount(1);
     expect(await productImages.evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
     if (viewport.width <= 430) {
-      await expect(page.locator('.zay-floating')).toBeVisible();
+      await expect(page.locator('.c-sticky-whatsapp')).toBeVisible();
     } else {
-      await expect(page.locator('.zay-hero-actions a[href*="wa.me"]')).toBeVisible();
+      await expect(page.locator('.c-hero-actions a[href*="wa.me"]')).toBeVisible();
     }
   }
   await expectNoHorizontalOverflow(page);
@@ -124,7 +124,7 @@ async function expectHomepageStickyWhatsapp(page, viewportHeight) {
 }
 
 async function expectMobileHomeVisual(page) {
-  const visual = page.locator('.zay-hero figure');
+  const visual = page.locator('.c-hero-media');
   await expect(visual).toBeVisible();
   await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   const box = await visual.evaluate((el) => {

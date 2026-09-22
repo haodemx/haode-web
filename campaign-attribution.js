@@ -64,16 +64,23 @@
     }
   }
 
-  function referrerSource() {
+  function referrerAttribution() {
     try {
-      const host = global.document.referrer ? new URL(global.document.referrer).hostname : "";
-      if (/facebook|instagram/i.test(host)) return /instagram/i.test(host) ? "instagram" : "facebook";
-      if (/tiktok/i.test(host)) return "tiktok";
-      if (/google/i.test(host)) return "google";
+      const host = global.document.referrer ? new URL(global.document.referrer).hostname.toLowerCase() : "";
+      if (!host) return { source: "direct", medium: "none" };
+      if (/google\./i.test(host)) return { source: "google", medium: "organic_search" };
+      if (/(^|\.)bing\.com$/i.test(host)) return { source: "bing", medium: "organic_search" };
+      if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(host)) return { source: "chatgpt", medium: "ai_referral" };
+      if (/instagram/i.test(host)) return { source: "instagram", medium: "organic_social" };
+      if (/facebook|fb\.com/i.test(host)) return { source: "facebook", medium: "organic_social" };
+      if (/tiktok/i.test(host)) return { source: "tiktok", medium: "organic_social" };
+      if (/(^|\.)(x\.com|twitter\.com|linkedin\.com|youtube\.com|youtu\.be)$/i.test(host)) {
+        return { source: normalizeToken(host.replace(/^www\./, ""), "social"), medium: "organic_social" };
+      }
+      return { source: normalizeToken(host.replace(/^www\./, ""), "referral"), medium: "referral" };
     } catch {
-      return "";
+      return { source: "direct", medium: "none" };
     }
-    return "";
   }
 
   function capture({ channel = "haode_web" } = {}) {
@@ -81,22 +88,19 @@
     const stored = readStored();
     const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
       .some((key) => params.has(key));
-    const defaultMedium = channel === "haode_app" ? "owned_app" : "owned_web";
-    const storedOrReferrerSource = normalizeToken(stored.source || referrerSource(), channel);
-    const inferredMedium = storedOrReferrerSource === "google"
-      ? "organic_search"
-      : ["facebook", "instagram", "tiktok"].includes(storedOrReferrerSource)
-        ? "referral"
-        : defaultMedium;
+    const incomingReferrer = referrerAttribution();
+    const storedOrReferrerSource = normalizeToken(stored.source || incomingReferrer.source, "direct");
+    const inferredMedium = normalizeToken(stored.medium || incomingReferrer.medium, "none");
 
     const attribution = hasIncomingCampaign
       ? {
-          source: normalizeToken(params.get("utm_source") || params.get("source"), channel),
-          medium: normalizeToken(params.get("utm_medium"), defaultMedium),
+          source: normalizeToken(params.get("utm_source") || params.get("source"), "direct"),
+          medium: normalizeToken(params.get("utm_medium"), "campaign"),
           campaign: normalizeToken(params.get("utm_campaign")),
           content: normalizeToken(params.get("utm_content")),
           term: normalizeToken(params.get("utm_term")),
           landingPage: global.location.pathname || "/",
+          entryChannel: normalizeToken(channel, "haode_web"),
           capturedAt: Date.now()
         }
       : {
@@ -106,6 +110,7 @@
           content: normalizeToken(stored.content),
           term: normalizeToken(stored.term),
           landingPage: String(stored.landingPage || global.location.pathname || "/").slice(0, 240),
+          entryChannel: normalizeToken(stored.entryChannel || channel, "haode_web"),
           capturedAt: Number(stored.capturedAt || Date.now())
         };
 
@@ -115,6 +120,18 @@
 
   function reference(attribution) {
     return [attribution?.source, attribution?.campaign, attribution?.content].filter(Boolean).join("/");
+  }
+
+  function analyticsParameters(attribution) {
+    return {
+      attribution_source: attribution.source,
+      attribution_medium: attribution.medium,
+      attribution_campaign: attribution.campaign,
+      attribution_content: attribution.content,
+      landing_page: attribution.landingPage,
+      campaign_reference: reference(attribution),
+      entry_channel: attribution.entryChannel
+    };
   }
 
   function decorateWhatsAppLink(link, attribution = capture()) {
@@ -156,7 +173,13 @@
     if (link.hasAttribute("data-whatsapp-link")) return "cart";
     if (link.hasAttribute("data-product-whatsapp") || link.hasAttribute("data-detail-whatsapp")) return "product";
     if (link.hasAttribute("data-detail-header-whatsapp")) return "header";
-    if (link.classList.contains("floating-cta")) return "floating_cta";
+    if (link.closest?.(".c-nav-actions, header")) return "header";
+    if (link.closest?.(".c-hero-actions")) return "home_hero";
+    if (link.classList.contains("haode-hero-primary")) return "home_hero";
+    if (link.matches?.(".floating-cta, .reference-sticky-whatsapp, .zay-floating, .haode-mobile-checkout-bar a")) return "floating";
+    if (link.closest?.("footer")) return "footer";
+    if ((global.location.pathname || "").startsWith("/contacto")) return "contacto";
+    if ((global.location.pathname || "").startsWith("/tienda-oficial-hl-cdmx")) return "tienda";
     return "site_link";
   }
 
@@ -168,7 +191,9 @@
     capture,
     normalizeToken,
     reference,
+    analyticsParameters,
     decorateWhatsAppLink,
+    contactArea,
     wasContactTracked
   });
 
@@ -194,13 +219,8 @@
     decorateWhatsAppLink(link, attribution);
     const tracked = global.HaodeAnalytics?.event?.("contact", {
       method: "whatsapp",
-      source: attribution.source,
-      medium: attribution.medium,
-      campaign: attribution.campaign,
-      content: attribution.content,
-      landing_page: attribution.landingPage,
+      ...analyticsParameters(attribution),
       page_path: global.location.pathname || "/",
-      campaign_reference: reference(attribution),
       contact_area: contactArea(link)
     });
     if (tracked) {
@@ -213,12 +233,7 @@
     if (!link) return;
     const attribution = capture();
     global.HaodeAnalytics?.event?.("app_open", {
-      source: attribution.source,
-      medium: attribution.medium,
-      campaign: attribution.campaign,
-      content: attribution.content,
-      landing_page: attribution.landingPage,
-      campaign_reference: reference(attribution)
+      ...analyticsParameters(attribution)
     });
   }, true);
 })(window);

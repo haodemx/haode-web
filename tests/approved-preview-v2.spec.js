@@ -10,25 +10,25 @@ async function expectNoOverflow(page) {
   expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
 }
 
-test('homepage desktop matches the approved Zay sales master', async ({ page }) => {
+test('homepage desktop matches the approved current C-layout sales master', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.zay-hero h1')).toContainText('Pantallas y tecnología');
-  await expect(page.locator('.zay-brand img')).toHaveAttribute('src', '/assets/images/haode-header-logo-horizontal-preview.png');
-  await expect(page.locator('.zay-hero figure img')).toHaveAttribute('src', '/assets/products/iphone-incell/16e/gallery-01.png');
-  await expect(page.locator('.zay-category-card')).toHaveCount(3);
+  await expect(page.locator('.c-hero h1')).toContainText('Pantallas y tecnología');
+  await expect(page.locator('.c-logo img')).toHaveAttribute('src', '/assets/images/homepage-c/phase3/brand/haode-official-trimmed.webp');
+  await expect(page.locator('.c-hero-media img')).toHaveAttribute('src', '/assets/images/homepage-c/phase3/hero/iphone-16pro-composition-a-1200.webp');
+  await expect(page.locator('.c-category-card')).toHaveCount(9);
   await expect(page.locator('[data-home-hero-carousel]')).toHaveCount(0);
   await expectNoOverflow(page);
 });
 
-test('homepage mobile preserves the approved Zay composition and readable hierarchy', async ({ page }) => {
+test('homepage mobile preserves the approved current C-layout composition and readable hierarchy', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('.zay-hero h1')).toBeVisible();
-  await expect(page.locator('.zay-hero figure img')).toBeVisible();
-  const metrics = await page.locator('.zay-hero h1').evaluate((title) => ({ size: parseFloat(getComputedStyle(title).fontSize), line: parseFloat(getComputedStyle(title).lineHeight) }));
-  expect(metrics.size).toBeGreaterThanOrEqual(40);
-  expect(metrics.line).toBeGreaterThanOrEqual(40);
+  await expect(page.locator('.c-hero h1')).toBeVisible();
+  await expect(page.locator('.c-hero-media img')).toBeVisible();
+  const metrics = await page.locator('.c-hero h1').evaluate((title) => ({ size: parseFloat(getComputedStyle(title).fontSize), line: parseFloat(getComputedStyle(title).lineHeight) }));
+  expect(metrics.size).toBeGreaterThanOrEqual(38);
+  expect(metrics.line).toBeGreaterThanOrEqual(38);
   await expectNoOverflow(page);
 });
 

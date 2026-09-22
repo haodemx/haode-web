@@ -14,7 +14,7 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       path: "/productos-ai/",
       zay: true,
       surface: ".zay-shell",
-      text: "Gafas AI confirmadas",
+      text: "Productos AI confirmados",
       cta: "Cotizar por WhatsApp"
     },
     {

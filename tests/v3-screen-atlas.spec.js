@@ -20,11 +20,13 @@ test('V3 renders every complete route with the shared navigation and footer', as
     const response = await page.goto(`${baseURL}${route}`, { waitUntil: 'domcontentloaded' });
     expect(response?.status(), route).toBe(200);
     await expect(page.locator('h1')).toContainText(heading);
-    await expect(page.locator('[data-v3-header]')).toBeVisible();
-    await expect(page.locator('[data-v3-footer]')).toBeAttached();
-    await expect(page.locator('.zay-nav')).toContainText('Pantallas');
-    await expect(page.locator('.zay-nav')).toContainText('Hidrogel');
-    await expect(page.locator('.zay-nav')).not.toContainText('Fundas');
+    const isHomepage = route === '/';
+    await expect(page.locator(isHomepage ? '[data-ui-id="site-header"]' : '[data-v3-header]')).toBeVisible();
+    await expect(page.locator(isHomepage ? '[data-ui-id="site-footer"]' : '[data-v3-footer]')).toBeAttached();
+    const navigation = page.locator(isHomepage ? '.c-primary-nav' : '.zay-nav');
+    await expect(navigation).toContainText('Pantallas');
+    await expect(navigation).toContainText('Hidrogel');
+    await expect(navigation).not.toContainText('Fundas');
     await expect(page.locator('a[href="/app/"]').first()).toBeAttached();
   }
 });
@@ -36,10 +38,10 @@ test('390px layouts do not overflow and mobile navigation is usable', async ({ p
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
   }
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
-  const menu = page.locator('.zay-menu-button');
+  const menu = page.locator('.c-menu-button');
   await expect(menu).toBeVisible();
   await menu.click();
-  await expect(page.locator('#zay-nav')).toBeVisible();
+  await expect(page.locator('#c-primary-nav')).toBeVisible();
   await expect(menu).toHaveAttribute('aria-expanded', 'true');
 });
 
@@ -74,35 +76,36 @@ test('Baterías exposes no invented catalog entries', async ({ page }) => {
   await expect(page.locator('body')).not.toContainText(/comprar batería|precio de batería/i);
 });
 
-test('approved Zay homepage uses a real product hero and the three truthful categories', async ({ page }) => {
+test('approved current C-layout homepage uses real product media and nine truthful categories', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('body')).toHaveClass(/zay-candidate/);
-  const hero = page.locator('.zay-hero figure img');
+  await expect(page.locator('body')).toHaveClass(/home-page-c/);
+  const hero = page.locator('.c-hero-media img');
   await expect(hero).toBeVisible();
   await expect(hero).not.toHaveAttribute('src', /placeholder/);
-  await expect(page.locator('.zay-steps>div')).toHaveCount(4);
-  await expect(page.locator('.zay-category-card')).toHaveCount(3);
-  await expect(page.locator('.zay-category-card')).toContainText(['Pantallas', 'Hidrogel', 'Productos AI']);
+  await expect(page.locator('.c-proof-row article')).toHaveCount(4);
+  await expect(page.locator('.c-category-card')).toHaveCount(9);
+  await expect(page.locator('.c-category-rail')).toContainText('Hidrogel');
+  await expect(page.locator('.c-category-rail')).toContainText('Productos AI');
   await expect(page.locator('body')).not.toContainText('Baterías');
 });
 
-test('approved Zay homepage avoids synthetic background and placeholder effects', async ({ page }) => {
+test('approved current C-layout homepage avoids placeholder effects', async ({ page }) => {
   await page.goto(`${baseURL}/`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('body')).toHaveClass(/zay-candidate/);
+  await expect(page.locator('body')).toHaveClass(/home-page-c/);
   await page.waitForFunction(() => {
-    const hero = document.querySelector('.zay-hero');
-    return hero && getComputedStyle(hero).backgroundImage.includes('linear-gradient');
+    const hero = document.querySelector('.c-hero-backdrop');
+    return hero && getComputedStyle(hero).backgroundImage !== 'none';
   });
   const visualStyle = await page.evaluate(() => {
-    const hero = getComputedStyle(document.querySelector('.zay-hero'));
-    const image = document.querySelector('.zay-hero figure img');
+    const hero = getComputedStyle(document.querySelector('.c-hero-backdrop'));
+    const image = document.querySelector('.c-hero-media img');
     return {
       heroBackgroundImage: hero.backgroundImage,
       heroBackdropFilter: hero.backdropFilter,
       imageSrc: image?.getAttribute('src') || '',
     };
   });
-  expect(visualStyle.heroBackgroundImage).toContain('linear-gradient');
+  expect(visualStyle.heroBackgroundImage).not.toBe('none');
   expect(visualStyle.heroBackdropFilter).toBe('none');
   expect(visualStyle.imageSrc).not.toContain('placeholder');
 });

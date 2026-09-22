@@ -57,8 +57,8 @@ test.describe('HAODE growth attribution phase 37', () => {
     expect(result.events.map(({ name }) => name)).not.toContain('whatsapp_click');
     expect(result.events.find(({ name }) => name === 'contact').parameters)
       .toMatchObject({
-        source: 'facebook',
-        campaign: 'mayoreo_julio',
+        attribution_source: 'facebook',
+        attribution_campaign: 'mayoreo_julio',
         campaign_reference: 'facebook/mayoreo_julio/video_1',
       });
   });

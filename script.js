@@ -286,8 +286,31 @@ function setupReferenceMenu() {
   syncViewport();
 }
 
+function setupFooterAccordions() {
+  const accordions = Array.from(document.querySelectorAll('.c-footer-accordion'));
+  if (!accordions.length) return;
+  const mobile = window.matchMedia('(max-width: 760px)');
+  const syncViewport = () => accordions.forEach((accordion) => { accordion.open = !mobile.matches; });
+  if (typeof mobile.addEventListener === 'function') mobile.addEventListener('change', syncViewport);
+  else mobile.addListener(syncViewport);
+  syncViewport();
+}
+
 document.addEventListener('DOMContentLoaded', attachWhatsAppTracking);
 document.addEventListener('DOMContentLoaded', attachHoverVideos);
 document.addEventListener('DOMContentLoaded', setupHomeHeroCarousels);
 document.addEventListener('DOMContentLoaded', setupReferenceMenu);
+document.addEventListener('DOMContentLoaded', setupFooterAccordions);
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('.c-menu-button');
+  const nav = document.querySelector('.c-primary-nav');
+  if (!button || !nav) return;
+  const close = () => button.setAttribute('aria-expanded', 'false');
+  button.addEventListener('click', () => button.setAttribute('aria-expanded', String(button.getAttribute('aria-expanded') !== 'true')));
+  nav.addEventListener('click', (event) => { if (event.target.closest('a')) close(); });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { close(); button.focus(); }
+  });
+  window.matchMedia('(max-width: 1100px)').addEventListener('change', close);
+});
 })();
