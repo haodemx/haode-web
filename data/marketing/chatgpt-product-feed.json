@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "LOCAL_PREPARED_NOT_UPLOAD_READY",
   "source": "data/products.generated.js",
-  "content_sha256": "ee9abe6b4c26863e723cebf2d79cd663ad18d2c0e0e22cade5a44613506cc56d",
+  "content_sha256": "72e4d1b9c1a1ec1797ffe9ed9204c5d91df675eb8bc6b13e1c2b7d33ff0493eb",
   "price_policy": "Consultar por WhatsApp; no se publica un precio sin confirmación vigente.",
   "availability_policy": "unknown no significa disponible ni agotado.",
   "items": [
@@ -609,25 +609,26 @@
       "title": "Pantalla para iPhone 11 Bolsa Protectora",
       "description": "Pantalla para iPhone 11 Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-11-bolsa-protectora/",
-      "image_link": "https://haode.com.mx/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+      "image_link": null,
       "availability": "unknown",
       "price": null,
       "price_status": "quote_required",
       "availability_status": "not_live_verified",
-      "image_status": "existing_public_asset",
+      "image_status": "asset_rejected",
       "category": "iphone-incell",
       "priority_group": "Pantallas",
       "source": {
         "catalog": "data/products.generated.js",
         "product_id": "iphone-incell-11-bolsa-protectora",
-        "image_sha256": "e1899f090fb8267125923ff9bd32f78297816d13f59ff230a567d56f8d4f9dd8"
+        "image_sha256": null
       },
       "platform_ready": false,
       "blockers": [
         "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
-        "ads_asset_approval_required"
+        "confirmed_product_image_required",
+        "asset_qc_failed"
       ]
     },
     {
@@ -1389,25 +1390,26 @@
       "title": "Pantalla para iPhone XR Bolsa Protectora",
       "description": "Pantalla para iPhone XR Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-xr-bolsa-protectora/",
-      "image_link": "https://haode.com.mx/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+      "image_link": null,
       "availability": "unknown",
       "price": null,
       "price_status": "quote_required",
       "availability_status": "not_live_verified",
-      "image_status": "existing_public_asset",
+      "image_status": "asset_rejected",
       "category": "iphone-incell",
       "priority_group": "Pantallas",
       "source": {
         "catalog": "data/products.generated.js",
         "product_id": "iphone-incell-xr-bolsa-protectora",
-        "image_sha256": "e1899f090fb8267125923ff9bd32f78297816d13f59ff230a567d56f8d4f9dd8"
+        "image_sha256": null
       },
       "platform_ready": false,
       "blockers": [
         "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
-        "ads_asset_approval_required"
+        "confirmed_product_image_required",
+        "asset_qc_failed"
       ]
     },
     {
@@ -2169,25 +2171,26 @@
       "title": "Pantalla para Samsung Note 10 Lite",
       "description": "Pantalla para Samsung Note 10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-10-lite/",
-      "image_link": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "image_link": null,
       "availability": "unknown",
       "price": null,
       "price_status": "quote_required",
       "availability_status": "not_live_verified",
-      "image_status": "existing_public_asset",
+      "image_status": "asset_rejected",
       "category": "samsung-incell",
       "priority_group": "Pantallas",
       "source": {
         "catalog": "data/products.generated.js",
         "product_id": "samsung-incell-note-10-lite",
-        "image_sha256": "dc09a3a6cc3dc320747f3a7281d8dbd2a4be9c36c081bc7845d6bcc5e115ec88"
+        "image_sha256": null
       },
       "platform_ready": false,
       "blockers": [
         "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
-        "ads_asset_approval_required"
+        "confirmed_product_image_required",
+        "asset_qc_failed"
       ]
     },
     {
@@ -2221,25 +2224,26 @@
       "title": "Pantalla para Samsung Note 20",
       "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-20/",
-      "image_link": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "image_link": null,
       "availability": "unknown",
       "price": null,
       "price_status": "quote_required",
       "availability_status": "not_live_verified",
-      "image_status": "existing_public_asset",
+      "image_status": "asset_rejected",
       "category": "samsung-incell",
       "priority_group": "Pantallas",
       "source": {
         "catalog": "data/products.generated.js",
         "product_id": "samsung-incell-note-20",
-        "image_sha256": "dc09a3a6cc3dc320747f3a7281d8dbd2a4be9c36c081bc7845d6bcc5e115ec88"
+        "image_sha256": null
       },
       "platform_ready": false,
       "blockers": [
         "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
-        "ads_asset_approval_required"
+        "confirmed_product_image_required",
+        "asset_qc_failed"
       ]
     },
     {
@@ -2351,25 +2355,26 @@
       "title": "Pantalla para Samsung S10 Lite",
       "description": "Pantalla para Samsung S10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s10-lite/",
-      "image_link": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "image_link": null,
       "availability": "unknown",
       "price": null,
       "price_status": "quote_required",
       "availability_status": "not_live_verified",
-      "image_status": "existing_public_asset",
+      "image_status": "asset_rejected",
       "category": "samsung-incell",
       "priority_group": "Pantallas",
       "source": {
         "catalog": "data/products.generated.js",
         "product_id": "samsung-incell-s10-lite",
-        "image_sha256": "dc09a3a6cc3dc320747f3a7281d8dbd2a4be9c36c081bc7845d6bcc5e115ec88"
+        "image_sha256": null
       },
       "platform_ready": false,
       "blockers": [
         "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
-        "ads_asset_approval_required"
+        "confirmed_product_image_required",
+        "asset_qc_failed"
       ]
     },
     {
@@ -3131,25 +3136,26 @@
       "title": "Pantalla para Samsung Note 20",
       "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-note-20/",
-      "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-20/main.jpg",
+      "image_link": null,
       "availability": "unknown",
       "price": null,
       "price_status": "quote_required",
       "availability_status": "not_live_verified",
-      "image_status": "existing_public_asset",
+      "image_status": "asset_rejected",
       "category": "samsung-oled",
       "priority_group": "Pantallas",
       "source": {
         "catalog": "data/products.generated.js",
         "product_id": "samsung-oled-note-20",
-        "image_sha256": "c2088783cccffc8b992945bcda7c7b11f87e3e5222879d88b439b3b14e9f0e86"
+        "image_sha256": null
       },
       "platform_ready": false,
       "blockers": [
         "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
-        "ads_asset_approval_required"
+        "confirmed_product_image_required",
+        "asset_qc_failed"
       ]
     },
     {

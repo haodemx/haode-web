@@ -2,6 +2,10 @@
 
 状态：**本地准备；未配置外部 Ads Manager；未发布、未花费。** 本目录保存项目 B 的交付合同。候选 feed 不是平台合规上传文件，不可把本次生成成功当作平台接入成功。
 
+2026-09-24 收尾复核见 `feed-closeout-audit.md` / `feed-closeout-audit.json`：146 个候选与客户版、老板版工作簿逐项映射；156 行中明确排除 10 行，没有扩充 feed。官网、App、结构化数据只有 73/146 与当前客户版四档销售层级一致；14 项物理缺图，另有 6 项现有主图明确 QC 失败并被候选 feed 拒绝，因此 feed 只保留 126 条图片链接、图片阻塞共 20 项。所有价格和库存差异仅记录，未写公开价格、库存、网站图片或平台状态。
+
+用户确认 2026-09-24 客户版为本次新价格来源，但尚未指定允许公开的价格档位；因此它用于差异审计，不自动覆盖现有 2026-09-21 公开价格发布合同。70 项为新来源版本差异，2 项仅 VIP 档差异，`samsung-original-z-flip7` 另有官网/App/结构化数据彼此数值不一致；这些值均未写入本报告或候选 feed。
+
 ## 范围与数据流
 
 本线仅改变官网广告/feed/tracking、测试与交付说明。复用落地页另用独立 ad-landing.css 修正两页桌面图片与文字重叠和 Logo 尺寸，不替换图片或文案。未修改 ERP、Owner Agent、CRM、Automation 或长期 checkout；没有改变产品源、价格、库存、图片、保修、兼容性、联系方式。基础版本是 `262994f53eaace6dd28ebc0f19176a3fc280c4aa`；目标功能分支为 `feat/chatgpt-ads-feed-tracking-20260924`。
@@ -26,12 +30,12 @@
 
 ## 候选 feed 合同
 
-- 生成：`npm run feed:chatgpt`；校验：`npm run test:chatgpt-ads`。无网络依赖，无 ERP 认证参数。
+- 生成：`npm run feed:chatgpt`；校验：`npm run test:chatgpt-ads`。收尾审计契约另由 `npm run test:chatgpt-feed-closeout` 校验。无网络依赖，无 ERP 认证参数。
 - 146 条：Pantallas 141、Hydrogel 4、X200T 1。其余公开品类不在本次优先 feed 中。
 - `id` 使用现有官网产品 id，排序稳定，不使用 SKU 猜测、行号、价格或随机值构造身份。
 - `title` 原样取现有公开名称；`description` 是名称加询价指引，不复制旧描述里可能嵌入的静态价格或承诺。
 - `link` 为现有 canonical `/producto/{id}/`，必须同时存在于 sitemap。
-- 132 条有原公开主图链接与本地 SHA256，14 条 `image_link:null`、`image_status:asset_missing`。无替代图、无重绘、无素材上传。原站使用证明与新广告素材审批是不同状态，故仍保留 `ads_asset_approval_required`。
+- 官网源有 132 条原公开主图路径与本地 SHA256，14 条物理缺图。逐图 QC 明确拒绝其中 6 条错型号/促销主图，因此生成的 feed 为 126 条 `existing_public_asset`、14 条 `asset_missing`、6 条 `asset_rejected`。无替代图、无重绘、无素材上传；原站使用证明与新广告素材审批是不同状态。
 - 所有 `price:null`、`price_status:quote_required`；用户用语为 **Consultar por WhatsApp**。不把缺失值改为 0，也不把询价文字塞进货币字段。
 - 所有 `availability:unknown`、`availability_status:not_live_verified`；未知不表示在售或售罄。静态 `ask_stock`、App 的旧 `disponible` 标记、接口可用都不构成实时库存承诺。
 - 所有 `platform_ready:false`。平台直接上传准备好：**0 条**。已缺少真实售价，另有品牌映射/广告素材审批/账户注册门槛。iPhone/Samsung 可能表示适配对象，不能自动当作原厂制造商品牌。
