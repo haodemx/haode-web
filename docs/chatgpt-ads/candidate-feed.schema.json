@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HAODE local candidate feed - not an OpenAI upload",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "source",
+    "content_sha256",
+    "price_policy",
+    "availability_policy",
+    "items"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "status": {
+      "const": "LOCAL_PREPARED_NOT_UPLOAD_READY"
+    },
+    "source": {
+      "const": "data/products.generated.js"
+    },
+    "content_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "price_policy": {
+      "const": "Consultar por WhatsApp; no se publica un precio sin confirmación vigente."
+    },
+    "availability_policy": {
+      "const": "unknown no significa disponible ni agotado."
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "description",
+          "link",
+          "image_link",
+          "availability",
+          "price",
+          "price_status",
+          "availability_status",
+          "image_status",
+          "category",
+          "priority_group",
+          "source",
+          "platform_ready",
+          "blockers"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "image_link": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "availability": {
+            "const": "unknown"
+          },
+          "price": {
+            "type": "null"
+          },
+          "price_status": {
+            "const": "quote_required"
+          },
+          "availability_status": {
+            "const": "not_live_verified"
+          },
+          "image_status": {
+            "enum": [
+              "existing_public_asset",
+              "asset_missing"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "priority_group": {
+            "enum": [
+              "Pantallas",
+              "Hydrogel",
+              "X200T"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "catalog",
+              "product_id",
+              "image_sha256"
+            ],
+            "properties": {
+              "catalog": {
+                "const": "data/products.generated.js"
+              },
+              "product_id": {
+                "type": "string"
+              },
+              "image_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "platform_ready": {
+            "const": false
+          },
+          "blockers": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "confirmed_current_price_required",
+                "ads_feed_registration_required",
+                "brand_mapping_review_required",
+                "ads_asset_approval_required",
+                "confirmed_product_image_required"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

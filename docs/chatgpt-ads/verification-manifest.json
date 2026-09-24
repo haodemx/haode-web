@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-09-24T20:54:20.328892+00:00",
+  "base_commit": "262994f53eaace6dd28ebc0f19176a3fc280c4aa",
+  "branch": "feat/chatgpt-ads-feed-tracking-20260924",
+  "remote_main_read_only_snapshot": "54d7e29e9aae9a00896148a8bfa854ecb0a06827",
+  "implementation_sha256": {
+    "ad-landing.css": "8bd7b3459e1f5f61a5a23148b99280f56cf05cdfe2081b9099596cc39525d048",
+    "conversion-tracking.js": "8f841101168eaee50240b3722ce8cdbde56cc7228801224cbcb7a145ce4709e2",
+    "data/marketing/chatgpt-launch-pack.json": "f761cd363ce33a079f2936fb51d0739b631781cf6a8882543f9987266b129d7d",
+    "data/marketing/chatgpt-product-feed.json": "49b668e47652889692fd407fc75bd4822eaebb377136e3b50de9a3e41f8b2bca",
+    "playwright.config.js": "0fc4cbaf172b2e1d7a1111ddb0aa5a981c9e4fdd6390f3ebccd2c7f5de1d0a8b",
+    "scripts/audit-chatgpt-local-qa.mjs": "9624fca50d4463d9d7dc9ff0815ed2ae09f8e1380c6c36ee24a30a935a3d29f9",
+    "scripts/audit-chatgpt-public-sources.mjs": "b7979f409c6d6009008c25a8273ad8aa143e3954e8b0e971489dc5f24813c4c5",
+    "scripts/build-chatgpt-product-feed.mjs": "24a481274c36965215ca75ce70b7f64b32ff6ec199cdff7eb060bfd17e97c7c6",
+    "scripts/chatgpt-event-mapping.mjs": "2f4620e918c4d8b108538c40060ba923ec6eb97da8bb301e7d991f04f48aab7c",
+    "tests/chatgpt-conversions.spec.js": "72f1df97db8c0a90a52d010705118607440297913eab236eff28ec89b060cbab",
+    "tests/chatgpt-feed.test.mjs": "be04ad8abd9105999ce98c779433e2748d588a9d502092c2d4ccb0a6c49fb276",
+    "tests/chatgpt-tracking.test.mjs": "f64123b535f0c8b3e9cb8a8e7a4d31284dfd92f98ebf382675aec596ad161a6e",
+    ".gitignore": "fd8254e232407eb35f0f74069241ba1ffb0e21a6a1ff341b13dd3fa2c1223e9d",
+    "analytics.js": "11783bcc8a221a5a84ec0b7e21984dce636ce3a62ecb15eb96ee7379e75c68ad",
+    "app/app.js": "d0fe8cda31c374e0170bea57db77f6fbcca2e5ffa4984f837b3a43fb0a03e997",
+    "micas-hidrogel-mayoreo-mexico/index.html": "c33ddd7782fc73ef89e978322b7968eac9ff52dccef90ba124c21f0590fd8cd1",
+    "package.json": "85386e23f42ece6ea6a30ba5338f06bff6bfa5b11ed06bbe2d5c3714397c9e7d",
+    "products.js": "1a9070ca0d605110adb9ccca8a33eb0056c4529f743a3a3cee23ea5a94d778d5",
+    "refacciones-celulares-mayoreo-mexico/index.html": "03bb5fc49e31ca45ea04ac477c205a5a3f8caa7a9d5756636657c399b6f3e27e",
+    "tests/campaign-attribution.spec.js": "a832348ce6832ce84f3bab7a2e0ee08b3ea5803c955e4cb30789d8700d0fdca5"
+  },
+  "protected_files_sha256": {
+    "data/products.generated.js": "39ebd54d0bf0aadff2f89f2af613b0f3a6f7ae2c7f656bb4bb4115b7d06433fa",
+    "app/products.json": "8e8c62225d896d7d9405c1c451fa9440147b1eccba19209ce96f85a198f19278",
+    "sitemap.xml": "cf927178affc94bfb4e4906756acf4beb7608ebd42663ea994e50509693e5162"
+  },
+  "local_evidence_sha256": {
+    "artifacts/chatgpt-ads/haode-chatgpt-final-browser.log": "327bf27751888e42ac0b36aa9266fff8953289ffc6451a01ae0f0cb638c5b0f2",
+    "artifacts/chatgpt-ads/haode-chatgpt-final-build.log": "ea94e6897331568799958e2755d348bc54cf3ce7d3b578643f30084ff58fc4be",
+    "artifacts/chatgpt-ads/haode-chatgpt-final-target-unit.log": "696309858533ebc247a4264405202d008b3c573bd25cc7c555a3bac0ded96d55",
+    "artifacts/chatgpt-ads/haode-chatgpt-final-target.log": "23f91c0f6b200831bcc0e7db5a40c953149976a4ffb6de3d6f00b9a5bcf2889d",
+    "artifacts/chatgpt-ads/qa/hydrogel_mayoreo-1280.png": "2ea21005dba20a01e9ece7a89fe7f25c1dea129e3ac5b5c47a50e7e5ae37f538",
+    "artifacts/chatgpt-ads/qa/hydrogel_mayoreo-390.png": "b07e6126b1174109e3d15d57f05342b2e981eb7135c92d9de5f2a272cc12f06b",
+    "artifacts/chatgpt-ads/qa/pantallas_tecnicos-1280.png": "835829d6d81c6902dfabde3152dd68dae1254321a79f7081b290bcb95ff9a4d0",
+    "artifacts/chatgpt-ads/qa/pantallas_tecnicos-390.png": "572d530822eb34e6e2d314c9b2de9bd2babe4bea5aff9e9793f1f40a5d0bcbcc",
+    "artifacts/chatgpt-ads/qa/proveedor_taller-1280.png": "9aa5c7614b1847c3216f56394cd30826dcd31104e64d3a63f549b8c194017f84",
+    "artifacts/chatgpt-ads/qa/proveedor_taller-390.png": "6d5af91fc5a08f6cfe1f682033417047f2aede64e34dc37e92806ac279c39b2d"
+  }
+}
