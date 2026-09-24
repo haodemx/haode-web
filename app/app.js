@@ -1470,6 +1470,8 @@ function premiumSelectionHtml() {
 }
 
 function renderList({ group = "", category = "Todos" } = {}) {
+  window.HaodeConversionProductId = null;
+  window.HaodeConversions?.viewProduct(null);
   const activeSearchInput = document.activeElement?.matches?.("[data-search-products]")
     ? document.activeElement
     : null;
@@ -1640,6 +1642,8 @@ function renderProductDetail(productId) {
     renderList();
     return;
   }
+  window.HaodeConversionProductId = product.id;
+  window.HaodeConversions?.viewProduct(product.id);
   state.route = { name: "product", productId };
   trackProductView(product);
   state.selectedGalleryIndex = Math.min(state.selectedGalleryIndex, galleryImagesFor(product).length - 1);
@@ -2004,7 +2008,11 @@ function focusProductSearch(attempt = 0) {
 
 function renderRoute({ resetScroll = false } = {}) {
   const route = parseRoute();
-  if (route.name !== "product") state.lastTrackedProductViewId = "";
+  if (route.name !== "product") {
+    state.lastTrackedProductViewId = "";
+    window.HaodeConversionProductId = null;
+    window.HaodeConversions?.viewProduct(null);
+  }
   state.selectedGalleryIndex = 0;
   state.viewerIndex = 0;
   if (route.name === "product") {
@@ -2152,6 +2160,7 @@ async function submitWebOrder() {
         lead_registered: true,
         items: ga4CartItems()
       });
+      globalThis.window?.HaodeConversionBridge?.recordLead(payload.client_request_id);
     }
     return result;
   } catch (error) {

@@ -1185,7 +1185,15 @@ function trafficSource() {
 }
 
 function trafficReference() {
-  if (!window.HaodeCampaign) return trafficSource();
+  if (!window.HaodeCampaign) {
+    const params = new URLSearchParams(window.location.search);
+    return ['utm_source', 'utm_campaign', 'utm_content'].map(key => {
+      const value = params.get(key) || '';
+      if (/@/.test(value) || /\d{10,}/.test(value.replace(/[()+.\s_-]/g, ''))) return '';
+      return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+        .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 80);
+    }).filter(Boolean).join('/') || 'website';
+  }
   return window.HaodeCampaign.reference(window.HaodeCampaign.capture({ channel: 'haode_web' })) || 'haode_web';
 }
 
@@ -1841,6 +1849,7 @@ function createProductCard(product, { deferMedia = false, compact = false } = {}
 
   const whatsapp = document.createElement('a');
   whatsapp.className = 'btn btn-primary shop-cta';
+  whatsapp.setAttribute('data-product-whatsapp', product.id);
   whatsapp.href = buildWhatsAppUrl(product.whatsappText);
   whatsapp.target = '_blank';
   whatsapp.rel = 'noopener noreferrer';
@@ -3303,6 +3312,9 @@ function renderProductDetailPage() {
     setMetaContent('meta[property="og:url"]', detailUrl);
     setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
   }
+
+  window.HaodeConversionProductId = product.id;
+  window.HaodeConversions?.viewProduct(product.id);
 
   if (titleEl) titleEl.textContent = preservesCuratedSeo && titleEl.dataset.detailSeoTitle
     ? titleEl.dataset.detailSeoTitle : product.name;

@@ -1,0 +1,3806 @@
+{
+  "schema_version": 1,
+  "status": "LOCAL_PREPARED_NOT_UPLOAD_READY",
+  "source": "data/products.generated.js",
+  "content_sha256": "ee9abe6b4c26863e723cebf2d79cd663ad18d2c0e0e22cade5a44613506cc56d",
+  "price_policy": "Consultar por WhatsApp; no se publica un precio sin confirmación vigente.",
+  "availability_policy": "unknown no significa disponible ni agotado.",
+  "items": [
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-11-pro-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/11-pro-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
+        "image_sha256": "a4f6b6a905f506b483d8ed67d8dad25977b5d0c14372d85ed68a33e5e09ffb72"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-12-pro/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/12-12-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
+        "image_sha256": "bdafef5eba41a1b9f299008053fee6856a3d54bd1382552e570e4d71aba41672"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-pro-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/12-pro-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
+        "image_sha256": "9b351629d8d070b93e5bdd6bfc19b2740b7043cb399e61b19e77ecdec898407c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 13",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-13",
+        "image_sha256": "c885f9f7800af0dbfc6704d45100a4e1ffcf01a98f27efcea91546eab2a4eccb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
+        "image_sha256": "c885f9f7800af0dbfc6704d45100a4e1ffcf01a98f27efcea91546eab2a4eccb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-pro-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
+        "image_sha256": "4ddc4040c4a397c7012a195159d708dd40da84b5ea77118278c421e46f3701c2"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-14",
+        "image_sha256": "717fe7d93c1c0bbc00b7e066cc6c77ccd015f928dfc0606a19a27ba2fd31d7bb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-plus/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-plus.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
+        "image_sha256": "fc6756f7beb6ec5f549168c72e51b2f65d95ec2b78ffadf9989c1ecae85c89d3"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
+        "image_sha256": "717fe7d93c1c0bbc00b7e066cc6c77ccd015f928dfc0606a19a27ba2fd31d7bb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-pro-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
+        "image_sha256": "8e8ac36c20a3cb24fb45dcca8cff8aa38b35b8e03d7e7d440ff1f88168368e12"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-15",
+        "image_sha256": "5d60bc9ca38e17a962b8319b1290afc3d81702ae1ac8d441ef7812d3f78fcca4"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-plus/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-plus.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
+        "image_sha256": "3b6c0a8f2be49efba9d2a60278575bd20ca7abd8eb389a9e8a43f61ed6367fa4"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
+        "image_sha256": "8aae772369ec200a9c5d54f08762fb9748518f12a7e95a6603590a55c826f7e2"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
+        "image_sha256": "438a124e04dcce7eb03ad742e49302685c6021a3f4a14a579b51041aa8557502"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-16",
+        "image_sha256": "3ea008c6a8cf93343dabc6aaf9d45e17456bd4f47bc34bd48d166e418191a523"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-plus/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-plus.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
+        "image_sha256": "4da1884cd09db9bfc6f4ba5138363bea4a0fe3228e274e2e122dca693e3426c3"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
+        "image_sha256": "0b0e91c8ffd72c4de040184d1f6d0f493721add8979f7a9f12a1a5780a8c4853"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
+        "image_sha256": "d33355b88e4daa50a4bacf71211ef00c2c7770e589d1d719911ccab438a1bf10"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 17",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-17",
+        "image_sha256": "cabb6757fba02fdd13921a1d04090a570faa4b681bac9cbcfba95ff4ba298421"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
+        "image_sha256": "b54ee1b46b14d5db964b44ff6173d86267224e5680b80e1a7ae52b50d7c1c282"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
+        "image_sha256": "efcd37672685fa6673a50515bff2311c6505baee8b7dc8d13e9a400b38e833bb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
+      "title": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-xs-max/",
+      "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/xs-max.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
+        "image_sha256": "64b6509cde5fde03ec3b6569100a8b3ec607f52afef469117cb2c37b3ba8f5d9"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-11",
+      "title": "Pantalla iPhone 11 INCELL FHD",
+      "description": "Pantalla iPhone 11 INCELL FHD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-11/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/11/fhd-main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-11",
+        "image_sha256": "f0b6568e13f8b7ac6c987cbddbbcefcc5364fa07f9214e18ebf5a72eea97cb33"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-11-bolsa-protectora",
+      "title": "Pantalla para iPhone 11 Bolsa Protectora",
+      "description": "Pantalla para iPhone 11 Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-11-bolsa-protectora/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-11-bolsa-protectora",
+        "image_sha256": "e1899f090fb8267125923ff9bd32f78297816d13f59ff230a567d56f8d4f9dd8"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-11pro",
+      "title": "Pantalla para iPhone 11 Pro",
+      "description": "Pantalla para iPhone 11 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-11pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/11pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-11pro",
+        "image_sha256": "fc08f0d08f6a641c1a45917242d8907e546686174ac2abcef230c4f751fbcb8d"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-11promax",
+      "title": "Pantalla para iPhone 11 Pro Max",
+      "description": "Pantalla para iPhone 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-11promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/11promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-11promax",
+        "image_sha256": "c93b88c128d591a1273be20f153958ab9a783805c8f197ea0e759e05436f9c85"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-12-12pro",
+      "title": "Pantalla para iPhone 12 / 12 Pro",
+      "description": "Pantalla para iPhone 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/12-12pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-12-12pro",
+        "image_sha256": "4a7dfccd6ed0c637fb915e0c45f0527486c580c3efd2629ccace8268b9f5924e"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-12mini",
+      "title": "Pantalla para iPhone 12 mini",
+      "description": "Pantalla para iPhone 12 mini. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-12mini/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/12mini/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-12mini",
+        "image_sha256": "1ae09d77ef4e77ab5da24795016e39fde2b887a5f1baedf8043736abe9e8ef5c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-12promax",
+      "title": "Pantalla para iPhone 12 Pro Max",
+      "description": "Pantalla para iPhone 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-12promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/12promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-12promax",
+        "image_sha256": "1b38b1f797d410269e55ac8f76e39c2948f4db9cc6aedeb97341a4fa3a9bf651"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-13",
+      "title": "Pantalla para iPhone 13",
+      "description": "Pantalla para iPhone 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-13/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/13/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-13",
+        "image_sha256": "8d2afc182baef0deb395a2f577a5ab8d31595374abf858dca4c5bbb75db46062"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-13mini",
+      "title": "Pantalla para iPhone 13 mini",
+      "description": "Pantalla para iPhone 13 mini. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-13mini/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/13mini/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-13mini",
+        "image_sha256": "bf0993cd1677c68e9fa6ecb62886b10acba453096e7a44e6fd3e6e17ebed2bbf"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-13pro",
+      "title": "Pantalla para iPhone 13 Pro",
+      "description": "Pantalla para iPhone 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-13pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/13pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-13pro",
+        "image_sha256": "dcd5fc809ea42ce5f98d2c0783685a16af05949452689263add8566b25527e8c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-13promax",
+      "title": "Pantalla para iPhone 13 Pro Max",
+      "description": "Pantalla para iPhone 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-13promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/13promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-13promax",
+        "image_sha256": "7466794fb800eaa484a9e6cbd1df23a67f59dee764e14b658351cb15ea49bf56"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-14",
+      "title": "Pantalla para iPhone 14",
+      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-14/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/14/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-14",
+        "image_sha256": "820529aec4d3456e0373c52cb5cb44e7748545bd33daabbf5c57a7284679bee7"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-14plus",
+      "title": "Pantalla para iPhone 14 Plus",
+      "description": "Pantalla para iPhone 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-14plus/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/14plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-14plus",
+        "image_sha256": "7f6fba0626f977bd75efceda950966e8cf08c3c61f5484cc0aeeb29ceeeb4a3f"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-14pro",
+      "title": "Pantalla para iPhone 14 Pro",
+      "description": "Pantalla para iPhone 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-14pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/14pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-14pro",
+        "image_sha256": "24a9ab9ac6367b31af9a8d9a1736d795525aba334e8f93ba01fd88d16f603c59"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-14promax",
+      "title": "Pantalla para iPhone 14 Pro Max",
+      "description": "Pantalla para iPhone 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-14promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/14promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-14promax",
+        "image_sha256": "4bbf47d53e6e7e48f88646b02751bb9efdbceb07e38d010049d5ce094ce06e07"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-15",
+      "title": "Pantalla para iPhone 15",
+      "description": "Pantalla para iPhone 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-15/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/15/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-15",
+        "image_sha256": "38a39d1b5c5383f221b3911b9dd9cdcaaaff04ad75f40d51fd877916f395919f"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-15plus",
+      "title": "Pantalla para iPhone 15 Plus",
+      "description": "Pantalla para iPhone 15 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-15plus/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/15plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-15plus",
+        "image_sha256": "dd2b1a406c0f2882197f9febecc3a2670f59b948169fef0ce5a8cc320725bf5c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-15pro",
+      "title": "Pantalla para iPhone 15 Pro",
+      "description": "Pantalla para iPhone 15 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-15pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/15pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-15pro",
+        "image_sha256": "120283cd6fe65ceb2d22ddc976591a9ea775a951c7b8929646af0971e95533f3"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-15promax",
+      "title": "Pantalla para iPhone 15 Pro Max",
+      "description": "Pantalla para iPhone 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-15promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/15promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-15promax",
+        "image_sha256": "d30747f70a8b77ee20c027ba7603c3efbf36718278a98e2ab37e988b71830f9b"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-16",
+      "title": "Pantalla para iPhone 16",
+      "description": "Pantalla para iPhone 16. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-16/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/16/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-16",
+        "image_sha256": "e9003ff4e31ce875b37a8b89b237a73159d0507abc923ad6428f3cb302df31a3"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-16e",
+      "title": "Pantalla para iPhone 16e",
+      "description": "Pantalla para iPhone 16e. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-16e/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/16e/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-16e",
+        "image_sha256": "32f056ed9383f6d24dc5fc3c9bf023c6213461a1238d24499456f7e3da7dce3a"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-16plus",
+      "title": "Pantalla para iPhone 16 Plus",
+      "description": "Pantalla para iPhone 16 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-16plus/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/16plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-16plus",
+        "image_sha256": "91565566ffd6b75b448864f07631f6b126df0804858f3de6be2d08ee1dcaa770"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-16pro",
+      "title": "Pantalla para iPhone 16 Pro",
+      "description": "Pantalla para iPhone 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-16pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/16pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-16pro",
+        "image_sha256": "fe22d7239dae6204d8a46e602e192273e303ea876c1a1f73f4f8ee8f67d96814"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-16promax",
+      "title": "Pantalla para iPhone 16 Pro Max",
+      "description": "Pantalla para iPhone 16 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-16promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/16promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-16promax",
+        "image_sha256": "0e412ee0718f6ef47cb82cfd8aeaae41f1669ea15f3117735c60333654059f4c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-17",
+      "title": "Pantalla para iPhone 17",
+      "description": "Pantalla para iPhone 17. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-17/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/17/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-17",
+        "image_sha256": "f8c1f5d6c6dfde304b59cfa61848a540465157ddda54f28c59b80ecdf723d039"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-17air",
+      "title": "Pantalla para iPhone 17 Air",
+      "description": "Pantalla para iPhone 17 Air. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-17air/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/17air/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-17air",
+        "image_sha256": "d007bbcf504fb0295a9507d9a835656c4ddb6c9c227fc2232fac15be3e225094"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-17e",
+      "title": "Pantalla para iPhone 17E",
+      "description": "Pantalla para iPhone 17E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-17e/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-17e",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-17pro",
+      "title": "Pantalla para iPhone 17 Pro",
+      "description": "Pantalla para iPhone 17 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-17pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/17pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-17pro",
+        "image_sha256": "27f0ef6596ecbba75c6a253b76912fa8486ac1d07a2f8e72fde61bc39ed6f531"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-17promax",
+      "title": "Pantalla para iPhone 17 Pro Max",
+      "description": "Pantalla para iPhone 17 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-17promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/17promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-17promax",
+        "image_sha256": "3509f2d102bec5fbcd99e55d4e376037ed88742438e28ca80cf1db4479763fa5"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-x",
+      "title": "Pantalla para iPhone X",
+      "description": "Pantalla para iPhone X. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-x/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/x/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-x",
+        "image_sha256": "2bacfce04a3ab5d9513d4a3d929c3f2399bc2c70ff2461efaf6ee274b1a3129a"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-xr",
+      "title": "Pantalla para iPhone XR",
+      "description": "Pantalla para iPhone XR. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-xr/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/xr/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-xr",
+        "image_sha256": "8a9fd2ae26f78c8211ffa5a15109056439e4c38bfd1a4feb65998594b9d4c732"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-xr-bolsa-protectora",
+      "title": "Pantalla para iPhone XR Bolsa Protectora",
+      "description": "Pantalla para iPhone XR Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-xr-bolsa-protectora/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-xr-bolsa-protectora",
+        "image_sha256": "e1899f090fb8267125923ff9bd32f78297816d13f59ff230a567d56f8d4f9dd8"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-xs",
+      "title": "Pantalla para iPhone XS",
+      "description": "Pantalla para iPhone XS. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-xs/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/xs/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-xs",
+        "image_sha256": "ea7616e44afc687113ffa93404871654c50158212b4a9ed60dc598e761f70bcf"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-incell-xsmax",
+      "title": "Pantalla para iPhone XS Max",
+      "description": "Pantalla para iPhone XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-incell-xsmax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-incell/xsmax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-incell-xsmax",
+        "image_sha256": "9e657a0ac56c22ad176eb77aa8d4e69576cafe179d0ef4b9d351e38b5caa66b7"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-11promax",
+      "title": "Pantalla para iPhone 11 Pro Max",
+      "description": "Pantalla para iPhone 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-11promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/11promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-11promax",
+        "image_sha256": "c6bf8d15d099b501564fff3dacde7eb4ea7b0cc5cfe9783a2dcac0b38080ed59"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-12-12pro",
+      "title": "Pantalla para iPhone 12 / 12 Pro",
+      "description": "Pantalla para iPhone 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-12-12pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/12-12pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-12-12pro",
+        "image_sha256": "6d47dff5040dc3af52045eaca3e479b909507ff08ba89457968fbfc9b2ac57eb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-12promax",
+      "title": "Pantalla para iPhone 12 Pro Max",
+      "description": "Pantalla para iPhone 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-12promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/12promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-12promax",
+        "image_sha256": "630a3623d491dde6c1be580a1ebfc99088d1f875cf5489549759121b66019d55"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-13",
+      "title": "Pantalla para iPhone 13",
+      "description": "Pantalla para iPhone 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-13/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/13/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-13",
+        "image_sha256": "3cfbdaf9620ba261af83e35b3957c29212dd38c6697e6da5f696a77d3da39159"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-13pro",
+      "title": "Pantalla para iPhone 13 Pro",
+      "description": "Pantalla para iPhone 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-13pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/13pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-13pro",
+        "image_sha256": "dbe5b0d443d8b39550ef2ef3ee435897e7ebdc809dee891f033807dfdeee20be"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-13promax",
+      "title": "Pantalla para iPhone 13 Pro Max",
+      "description": "Pantalla para iPhone 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-13promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/13promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-13promax",
+        "image_sha256": "e39dbb6032e332ed5159d82213c424c903c71e1bf7952f05da1e5be18d5ad988"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-14",
+      "title": "Pantalla para iPhone 14",
+      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-14/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/14/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-14",
+        "image_sha256": "abac116e7439d1c42c287fc43a91a6fdea2a7cd1f4dd7e4efecb9cb05af40364"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-14plus",
+      "title": "Pantalla para iPhone 14 Plus",
+      "description": "Pantalla para iPhone 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-14plus/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/14plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-14plus",
+        "image_sha256": "f9534be93c8c386540b22987ef0651e51c494b623fca8d68ac0605d00e963d8f"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-14pro",
+      "title": "Pantalla para iPhone 14 Pro",
+      "description": "Pantalla para iPhone 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-14pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/14pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-14pro",
+        "image_sha256": "79426440f5ebd7a40dbbc5b4b02d32609f5ced1ecea7d867bc5194cd098cecb4"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-14promax",
+      "title": "Pantalla para iPhone 14 Pro Max",
+      "description": "Pantalla para iPhone 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-14promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/14promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-14promax",
+        "image_sha256": "aa7bdf1a4768ff6c0f006059ef039a40a68ba70ff593dcd0cf5afcbbc54c1f82"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-15",
+      "title": "Pantalla para iPhone 15",
+      "description": "Pantalla para iPhone 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-15/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/15/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-15",
+        "image_sha256": "f0c1a551c7f532d29e7400351a5610f2cc0efafa9ef0bc9c25a8502d0b80f9fa"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-15promax",
+      "title": "Pantalla para iPhone 15 Pro Max",
+      "description": "Pantalla para iPhone 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-15promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/15promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-15promax",
+        "image_sha256": "757a9024b4056b4730491c8cc7df779c72927b5290b00b9d8b83070ca655b5fb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-16e",
+      "title": "Pantalla para iPhone 16E",
+      "description": "Pantalla para iPhone 16E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-16e/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-16e",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-16pro",
+      "title": "Pantalla para iPhone 16 Pro",
+      "description": "Pantalla para iPhone 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-16pro/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/16pro/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-16pro",
+        "image_sha256": "5e3fef19db36185c43427c1ab3d6e83319c287a343bb1dadce7fc08a0dedd757"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-16promax",
+      "title": "Pantalla para iPhone 16 Pro Max Soft OLED",
+      "description": "Pantalla para iPhone 16 Pro Max Soft OLED. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-16promax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/16promax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-16promax",
+        "image_sha256": "8b8685e0a2623204ec8db339d0b9be4e9da1a8c3c1250715b2744726dd153eb0"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-16promax-hard",
+      "title": "Pantalla para iPhone 16 Pro Max Hard OLED",
+      "description": "Pantalla para iPhone 16 Pro Max Hard OLED. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-16promax-hard/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/16promax-hard/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-16promax-hard",
+        "image_sha256": "14e32de4fe0a32c099d85d6ec35b12e926055df27efc01d0c08c74e71bd4e4f4"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-soft-14",
+      "title": "Pantalla para iPhone 14",
+      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-soft-14/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-soft-14",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-soft-14-plus",
+      "title": "Pantalla para iPhone 14 plus",
+      "description": "Pantalla para iPhone 14 plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-soft-14-plus/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-soft-14-plus",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-soft-15pro",
+      "title": "Pantalla para iPhone 15PRO",
+      "description": "Pantalla para iPhone 15PRO. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-soft-15pro/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-soft-15pro",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "iphone-oled-xsmax",
+      "title": "Pantalla para iPhone XS Max",
+      "description": "Pantalla para iPhone XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/iphone-oled-xsmax/",
+      "image_link": "https://haode.com.mx/assets/products/iphone-oled/xsmax/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "iphone-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "iphone-oled-xsmax",
+        "image_sha256": "6c082ad29074b10285a709e78f163751047b46448f448e011fbc127a78a15777"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "mica-hd",
+      "title": "MICA HD",
+      "description": "MICA HD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/mica-hd/",
+      "image_link": "https://haode.com.mx/assets/products/micas/hd/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "micas",
+      "priority_group": "Hydrogel",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "mica-hd",
+        "image_sha256": "df542437288941c231905d692d9462149a3567a03bfaed7d0cf57d31a62d0f4e"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "mica-matte",
+      "title": "MICA MATTE",
+      "description": "MICA MATTE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/mica-matte/",
+      "image_link": "https://haode.com.mx/assets/products/micas/matte/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "micas",
+      "priority_group": "Hydrogel",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "mica-matte",
+        "image_sha256": "ed0bf69572a19da5d8602512e9339f04e8a2c28484e325af73ede2ee30f75ab6"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "mica-privacidad-hd",
+      "title": "MICA PRIVACIDAD HD",
+      "description": "MICA PRIVACIDAD HD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/mica-privacidad-hd/",
+      "image_link": "https://haode.com.mx/assets/products/micas/privacidad-hd/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "micas",
+      "priority_group": "Hydrogel",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "mica-privacidad-hd",
+        "image_sha256": "03a7c7ca2eac23327e98c303671de3ea56d1515a64bb70f86243f1185289a894"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "mica-privacidad-matte",
+      "title": "MICA PRIVACIDAD MATTE",
+      "description": "MICA PRIVACIDAD MATTE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/mica-privacidad-matte/",
+      "image_link": "https://haode.com.mx/assets/products/micas/privacidad-matte/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "micas",
+      "priority_group": "Hydrogel",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "mica-privacidad-matte",
+        "image_sha256": "27c3e03dfcf2be1bafaf8bda976b713cb95ced9a8efc38b6aaf49ac17302983e"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "oled-diagnostica-12mini-hard",
+      "title": "Pantalla OLED Diagnóstica para iPhone 12MINI",
+      "description": "Pantalla OLED Diagnóstica para iPhone 12MINI. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/oled-diagnostica-12mini-hard/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "oled-diagnostica-12mini-hard",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "oled-diagnostica-16e-soft",
+      "title": "Pantalla OLED Diagnóstica para iPhone 16E",
+      "description": "Pantalla OLED Diagnóstica para iPhone 16E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/oled-diagnostica-16e-soft/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "oled-diagnostica",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "oled-diagnostica-16e-soft",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-note-10",
+      "title": "Pantalla para Samsung Note 10",
+      "description": "Pantalla para Samsung Note 10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-note-10/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-10/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-note-10",
+        "image_sha256": "159141d9b85d69fa80a6f80add0ceefa9ad5c2c6723223f45fb706ab80080e00"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-note-10-lite",
+      "title": "Pantalla para Samsung Note 10 Lite",
+      "description": "Pantalla para Samsung Note 10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-note-10-lite/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-note-10-lite",
+        "image_sha256": "dc09a3a6cc3dc320747f3a7281d8dbd2a4be9c36c081bc7845d6bcc5e115ec88"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-note-10-plus",
+      "title": "Pantalla para Samsung Note 10 Plus",
+      "description": "Pantalla para Samsung Note 10 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-note-10-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-10-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-note-10-plus",
+        "image_sha256": "8da054767de4dc410db7c4abf76f84ae3e2a22b6b098ffd34ffe08d731daa5c4"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-note-20",
+      "title": "Pantalla para Samsung Note 20",
+      "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-note-20/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-note-20",
+        "image_sha256": "dc09a3a6cc3dc320747f3a7281d8dbd2a4be9c36c081bc7845d6bcc5e115ec88"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-note-20-ultra",
+      "title": "Pantalla para Samsung Note 20 Ultra",
+      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-note-20-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-20-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-note-20-ultra",
+        "image_sha256": "cab0ae311140083f669c09d1ee2d77e04546e98e3f5303b61c5ca85d94a96662"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-note-8",
+      "title": "Pantalla para Samsung Note 8",
+      "description": "Pantalla para Samsung Note 8. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-note-8/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-8/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-note-8",
+        "image_sha256": "58975beee58b0fe94b9d403658fbaf4a43e7584c913500b30d681d7813611a6c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-note-9",
+      "title": "Pantalla para Samsung Note 9",
+      "description": "Pantalla para Samsung Note 9. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-note-9/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-9/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-note-9",
+        "image_sha256": "5766af1385c7f825cdd0f83eb080ef60573e3021e37e8d265ca61dcf942a248e"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s10",
+      "title": "Pantalla para Samsung S10",
+      "description": "Pantalla para Samsung S10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s10/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s10",
+        "image_sha256": "77d1c302bb088dcb1992c0c178bf68d8437f8a613f6170c316b5251819cb4436"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s10-lite",
+      "title": "Pantalla para Samsung S10 Lite",
+      "description": "Pantalla para Samsung S10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s10-lite/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s10-lite",
+        "image_sha256": "dc09a3a6cc3dc320747f3a7281d8dbd2a4be9c36c081bc7845d6bcc5e115ec88"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s10-plus",
+      "title": "Pantalla para Samsung S10 Plus",
+      "description": "Pantalla para Samsung S10 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s10-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s10-plus",
+        "image_sha256": "8d879229051605f0a1003ee665d2ee80151d045a7b666e88ba67bd842d70d0af"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s10e",
+      "title": "Pantalla para Samsung S10E",
+      "description": "Pantalla para Samsung S10E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s10e/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10e/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s10e",
+        "image_sha256": "cc65b18a44c90a0e462f0694ec2d2c7bef817a1f09d997d3eeead1387e83036a"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s20-4g",
+      "title": "Pantalla para Samsung S20 4G",
+      "description": "Pantalla para Samsung S20 4G. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s20-4g/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s20-4g",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s20-5g",
+      "title": "Pantalla para Samsung S20 5G",
+      "description": "Pantalla para Samsung S20 5G. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s20-5g/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s20-5g",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s20-fe",
+      "title": "Pantalla para Samsung S20 FE",
+      "description": "Pantalla para Samsung S20 FE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s20-fe/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-fe/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s20-fe",
+        "image_sha256": "e8be26a1e8b71b3185d1a655291cdb64b84f1a6e62a1f917ea43a6dba70a77fa"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s20-plus",
+      "title": "Pantalla para Samsung S20 Plus",
+      "description": "Pantalla para Samsung S20 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s20-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s20-plus",
+        "image_sha256": "0953ace38474eb4e5238e2e05c22be19805e07513b58b849ce87c062bdc78ef1"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s20-ultra",
+      "title": "Pantalla para Samsung S20 Ultra",
+      "description": "Pantalla para Samsung S20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s20-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s20-ultra",
+        "image_sha256": "18dfeb45324e24e423058ce439e9fbfe96cdbd1baf7400fc36529481df02f1f2"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s21",
+      "title": "Pantalla para Samsung S21",
+      "description": "Pantalla para Samsung S21. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s21/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s21",
+        "image_sha256": "134e7646961635c2fbdeee03dedd87405542a2f63e2b35f2bf03284316aad1bd"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s21-fe",
+      "title": "Pantalla para Samsung S21 FE",
+      "description": "Pantalla para Samsung S21 FE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s21-fe/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-fe/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s21-fe",
+        "image_sha256": "9bd83d098274695b074f6caf0b86b9581c995a3eb225482cd4e8776467dce7e9"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s21-plus",
+      "title": "Pantalla para Samsung S21 Plus",
+      "description": "Pantalla para Samsung S21 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s21-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s21-plus",
+        "image_sha256": "642cc24510f74023e0f8893d5515ceeb5c68be5f5fff6f815aca24f55c8e2ae1"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s21-ultra",
+      "title": "Pantalla para Samsung S21 Ultra",
+      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s21-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s21-ultra",
+        "image_sha256": "c4bc1e65e5f3cf70b5226cffede3073253ce0070e35f0bafecad7be4602de883"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s22",
+      "title": "Pantalla para Samsung S22",
+      "description": "Pantalla para Samsung S22. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s22/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s22",
+        "image_sha256": "6ccfe625800eec30cd72c536fda2b7701ece2e1c1c3cbc9427b67e7999f3f1ff"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s22-plus",
+      "title": "Pantalla para Samsung S22 Plus",
+      "description": "Pantalla para Samsung S22 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s22-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s22-plus",
+        "image_sha256": "37188c5bf8b4c9d8cc6a465678baf6666d99af2b9a8c1d84db5c736faca8554c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s22-ultra",
+      "title": "Pantalla para Samsung S22 Ultra",
+      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s22-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s22-ultra",
+        "image_sha256": "dd1f13491da840e52efac93c828bd4e663c67092d0ba6f915f2fc5fc33915b5a"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s23",
+      "title": "Pantalla para Samsung S23",
+      "description": "Pantalla para Samsung S23. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s23/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s23",
+        "image_sha256": "d60ec49669258690464b217427def90cb876e865c6863be723d7f91f65b6d2b4"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s23-plus",
+      "title": "Pantalla para Samsung S23 Plus",
+      "description": "Pantalla para Samsung S23 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s23-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s23-plus",
+        "image_sha256": "60419f488e931f4b2d856b9772ef0c1b5847a12c710b6232e8f7721bcbc59604"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s23-ultra",
+      "title": "Pantalla para Samsung S23 Ultra",
+      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s23-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s23-ultra",
+        "image_sha256": "c2088783cccffc8b992945bcda7c7b11f87e3e5222879d88b439b3b14e9f0e86"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s24",
+      "title": "Pantalla para Samsung S24",
+      "description": "Pantalla para Samsung S24. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s24/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s24",
+        "image_sha256": "23d1aed546c6732b2e8f0a58bf45d0faef206502065915210858613d829d26e1"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s24-plus",
+      "title": "Pantalla para Samsung S24 Plus",
+      "description": "Pantalla para Samsung S24 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s24-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s24-plus",
+        "image_sha256": "dcb4c3d4e5c6b1f3d421ddcb156c0621279f5587db7c9938fc43a07af3b6b48f"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s24-ultra",
+      "title": "Pantalla para Samsung S24 Ultra",
+      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s24-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s24-ultra",
+        "image_sha256": "b1f451f297f2dd95b09b7a1b7fb7e4a448ada4cf5217baca779072e8bb25be52"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s8",
+      "title": "Pantalla para Samsung S8",
+      "description": "Pantalla para Samsung S8. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s8/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s8/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s8",
+        "image_sha256": "a06b13f73df9969bf9a857689dd8927a939855fd254f198eea3f05d564e01ea0"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s8-plus",
+      "title": "Pantalla para Samsung S8 Plus",
+      "description": "Pantalla para Samsung S8 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s8-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s8-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s8-plus",
+        "image_sha256": "d965b8222fb3010efc0a2d157a598f766a08c170ef60e35559eb18aaccae576a"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s9",
+      "title": "Pantalla para Samsung S9",
+      "description": "Pantalla para Samsung S9. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s9/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s9/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s9",
+        "image_sha256": "4bc847c7de3597f1fb44511b7ff9521e952654682fe20bdbddd7c4ab3dc3f06f"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-s9-plus",
+      "title": "Pantalla para Samsung S9 Plus",
+      "description": "Pantalla para Samsung S9 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-s9-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-incell/s9-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-s9-plus",
+        "image_sha256": "c629f8ee8dea841a22a1737798d2943aa6de47ea21d36083fbdfb75be8180cdc"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-z-flip3",
+      "title": "Pantalla para Samsung Z FLIP3",
+      "description": "Pantalla para Samsung Z FLIP3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-z-flip3/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-z-flip3",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-z-flip4",
+      "title": "Pantalla para Samsung Z FLIP4",
+      "description": "Pantalla para Samsung Z FLIP4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-z-flip4/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-z-flip4",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-z-flip5",
+      "title": "Pantalla para Samsung Z FLIP5",
+      "description": "Pantalla para Samsung Z FLIP5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-z-flip5/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-z-flip5",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-incell-z-flip6",
+      "title": "Pantalla para Samsung Z FLIP6",
+      "description": "Pantalla para Samsung Z FLIP6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-incell-z-flip6/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "samsung-incell",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-incell-z-flip6",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-note-10",
+      "title": "Pantalla para Samsung Note 10",
+      "description": "Pantalla para Samsung Note 10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-note-10/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-10/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-note-10",
+        "image_sha256": "f397a507c74ec9cf62a7bdf0a2c0053778f529b4ce3708c0429f220280ed5c8c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-note-20",
+      "title": "Pantalla para Samsung Note 20",
+      "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-note-20/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-20/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-note-20",
+        "image_sha256": "c2088783cccffc8b992945bcda7c7b11f87e3e5222879d88b439b3b14e9f0e86"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-note-20-ultra",
+      "title": "Pantalla para Samsung Note 20 Ultra",
+      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-note-20-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-20-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-note-20-ultra",
+        "image_sha256": "2643838db8c683bf540d68e5d99d7ae3859dfdccaadbe2f3b4de2128e8e05bf4"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-s20-plus",
+      "title": "Pantalla para Samsung S20 Plus",
+      "description": "Pantalla para Samsung S20 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-s20-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/s20-plus/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-s20-plus",
+        "image_sha256": "85e58e37e5458cffe793ebc4fc5b042b7be907666a97e2856820d1ab5750994f"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-s21-ultra",
+      "title": "Pantalla para Samsung S21 Ultra",
+      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-s21-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/s21-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-s21-ultra",
+        "image_sha256": "b1af4826fe0783fd9155478e3bb23b5556862d16da7fadf1a505c34d4e2ce8ef"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-s22-ultra",
+      "title": "Pantalla para Samsung S22 Ultra",
+      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-s22-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/s22-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-s22-ultra",
+        "image_sha256": "6c8c24b4b63e20f6b2177c53f9cab143cd768963690abf6de3f328fdce42cb7d"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-s23-ultra",
+      "title": "Pantalla para Samsung S23 Ultra",
+      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-s23-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/s23-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-s23-ultra",
+        "image_sha256": "05554ed0fe35a716ad92107174bf8bd20cf12076b86f6377d06d1da34f3c3fdf"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-s24-ultra",
+      "title": "Pantalla para Samsung S24 Ultra",
+      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-s24-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/s24-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-s24-ultra",
+        "image_sha256": "0ff422516a9347a253939128b67101b3dfb580b0943378f091726c11c80abc44"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-oled-s25-ultra",
+      "title": "Pantalla para Samsung S25 Ultra",
+      "description": "Pantalla para Samsung S25 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-oled-s25-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-oled/s25-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-oled",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-oled-s25-ultra",
+        "image_sha256": "198fa5e33ae6866233584b630976903b8018d00c3abb6c3a04a542294c0e6d67"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-note-20-ultra",
+      "title": "Pantalla para Samsung Note 20 Ultra",
+      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-note-20-ultra/",
+      "image_link": null,
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "asset_missing",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-note-20-ultra",
+        "image_sha256": null
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "confirmed_product_image_required"
+      ]
+    },
+    {
+      "id": "samsung-original-s21-ultra",
+      "title": "Pantalla para Samsung S21 Ultra",
+      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-s21-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/s21-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-s21-ultra",
+        "image_sha256": "b1af4826fe0783fd9155478e3bb23b5556862d16da7fadf1a505c34d4e2ce8ef"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-s22-plus",
+      "title": "Pantalla para Samsung S22 Plus",
+      "description": "Pantalla para Samsung S22 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-s22-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/s22-plus/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-s22-plus",
+        "image_sha256": "425e1bca1f1afc196b1a9d0c54bcf7dc17491d035c8c6dd05236936486cdd571"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-s22-ultra",
+      "title": "Pantalla para Samsung S22 Ultra",
+      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-s22-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/s22-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-s22-ultra",
+        "image_sha256": "6c8c24b4b63e20f6b2177c53f9cab143cd768963690abf6de3f328fdce42cb7d"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-s23-plus",
+      "title": "Pantalla para Samsung S23 Plus",
+      "description": "Pantalla para Samsung S23 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-s23-plus/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/s23-plus/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-s23-plus",
+        "image_sha256": "5b8903179112afab4a72ff10836c91407560a4b8f00385fbcddc2f143f29b0d9"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-s23-ultra",
+      "title": "Pantalla para Samsung S23 Ultra",
+      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-s23-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/s23-ultra/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-s23-ultra",
+        "image_sha256": "05554ed0fe35a716ad92107174bf8bd20cf12076b86f6377d06d1da34f3c3fdf"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-s24-ultra",
+      "title": "Pantalla para Samsung S24 Ultra",
+      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-s24-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/s24-ultra/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-s24-ultra",
+        "image_sha256": "45ef035227b9b784d7cebc2d71b2d5e907536d82f94a3fca0b2c678bc1e7253c"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-s25-ultra",
+      "title": "Pantalla para Samsung S25 Ultra",
+      "description": "Pantalla para Samsung S25 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-s25-ultra/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/s25-ultra/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-s25-ultra",
+        "image_sha256": "3f0b0e286c78026a4f8fd57d64cc2d53151ddd829db1e1efb7fed9a104aa1fd1"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-flip3",
+      "title": "Pantalla para Samsung Z Flip3",
+      "description": "Pantalla para Samsung Z Flip3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-flip3/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip3/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-flip3",
+        "image_sha256": "935e4783584ea69cdb2a6c7d9e180e8739763f1a34e2e8ffbd0b8047c04051fb"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-flip4",
+      "title": "Pantalla para Samsung Z Flip4",
+      "description": "Pantalla para Samsung Z Flip4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-flip4/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip4/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-flip4",
+        "image_sha256": "64b153d50363785791034dcad9719400a8c5eb700ded9eed64fbfff58cfea53b"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-flip5",
+      "title": "Pantalla para Samsung Z Flip5",
+      "description": "Pantalla para Samsung Z Flip5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-flip5/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip5/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-flip5",
+        "image_sha256": "3f902b6bcd64329837c63b034d2240e0db129d83cf762be67dda2c0876f6cebe"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-flip6",
+      "title": "Pantalla para Samsung Z Flip6",
+      "description": "Pantalla para Samsung Z Flip6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-flip6/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip6/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-flip6",
+        "image_sha256": "45854430449a81eb670754ef9da71308a8c5c1a3aa10d4a60fd9b4fd830acd97"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-flip7",
+      "title": "Pantalla Samsung Z Flip7",
+      "description": "Pantalla Samsung Z Flip7. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-flip7/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip7/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-flip7",
+        "image_sha256": "804d0e9123030e656369b983338e8130eab35047526d0ca0212b5b7f5046b0b0"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-fold3",
+      "title": "Pantalla Samsung Z Fold3",
+      "description": "Pantalla Samsung Z Fold3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-fold3/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold3/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-fold3",
+        "image_sha256": "584eff30199207f8f147d188ac665247b6bf516a5467d627a48e1cdd116bc8e3"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-fold4",
+      "title": "Pantalla Samsung Z Fold4",
+      "description": "Pantalla Samsung Z Fold4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-fold4/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold4/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-fold4",
+        "image_sha256": "f59c19676cbe573130b5533fdb253f3ed9ddeee0a36b311319eee0a2401cd4c6"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-fold5",
+      "title": "Pantalla Samsung Z Fold5",
+      "description": "Pantalla Samsung Z Fold5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-fold5/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold5/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-fold5",
+        "image_sha256": "5511c07561860f96d46ff771ca3157a2c11d709ced9c93065419a6e9be091706"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "samsung-original-z-fold6",
+      "title": "Pantalla Samsung Z Fold6",
+      "description": "Pantalla Samsung Z Fold6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/samsung-original-z-fold6/",
+      "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold6/main.png",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "samsung-tipo-original",
+      "priority_group": "Pantallas",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "samsung-original-z-fold6",
+        "image_sha256": "281c55d7841dc44228e4978328f5ce7a8a3e6b141eb05e174e766e405690e104"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    },
+    {
+      "id": "x200t-cortadora-micas",
+      "title": "HAODE X200T Cortadora Inteligente de Micas",
+      "description": "HAODE X200T Cortadora Inteligente de Micas. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "link": "https://haode.com.mx/producto/x200t-cortadora-micas/",
+      "image_link": "https://haode.com.mx/assets/products/cut-machine/x200t/main.jpg",
+      "availability": "unknown",
+      "price": null,
+      "price_status": "quote_required",
+      "availability_status": "not_live_verified",
+      "image_status": "existing_public_asset",
+      "category": "micas",
+      "priority_group": "X200T",
+      "source": {
+        "catalog": "data/products.generated.js",
+        "product_id": "x200t-cortadora-micas",
+        "image_sha256": "b1ddba6da770ea592c4bf47034cd26055549bc51fba27619b080fee5c4a1d514"
+      },
+      "platform_ready": false,
+      "blockers": [
+        "confirmed_current_price_required",
+        "ads_feed_registration_required",
+        "brand_mapping_review_required",
+        "ads_asset_approval_required"
+      ]
+    }
+  ]
+}

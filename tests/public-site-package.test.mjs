@@ -103,3 +103,12 @@ test("dependency audit checks resources referenced by root-level scripts", async
   const result = await auditPublicDependencies(root);
   assert.deepEqual(result.missing, ["service-worker.js -> app/missing.js"]);
 });
+
+test("ChatGPT conversion assets are included in the controlled public package", async () => {
+  const manifest = JSON.parse(await readFile(path.join(repoRoot, "public-site-files.json"), "utf8"));
+  assert.ok(manifest.files.includes("ad-landing.css"));
+  assert.ok(manifest.files.includes("conversion-tracking.js"));
+
+  const analytics = await readFile(path.join(repoRoot, "analytics.js"), "utf8");
+  assert.match(analytics, /conversion-tracking\.js\?v=20260924/);
+});
