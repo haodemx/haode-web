@@ -15,12 +15,25 @@
 | 图片来源与 QC | FAIL | 5 项有完整审批证据；6 项明确错型号/促销主图且已在 feed 失败关闭；10 项跨品质或系列共图待人工确认；其余公开文件缺标准化审批链 |
 | Feed 就绪 | BLOCKED | 146/146 仍为 price=null、availability=unknown、platform_ready=false；可上传 0 |
 | 专项回归 | PASS | Feed/追踪/收尾审计 24/24；含同档不同值分类、QC 源图消失/placeholder/unsafe 失败关闭、公开数据与 146 个候选主图物理文件 SHA256 新鲜度门禁 |
-| 完整浏览器 | PARTIAL | 最新完整运行 335/336；唯一失败为未修改的 Z Fold6 首屏位置用例，随后单用例重跑 1/1 通过。前一轮 334/336 的两项失败也分别单跑通过，表现为并发测量抖动，不冒充完整 336/336 |
+| 完整浏览器 | PASS | exact head `f1a5055b` 的 push 与 pull_request 两次独立 CI 均实际运行 336 项并全部通过；本地仍保留 335/336 与更早 334/336 的失败记录，见下方“本地抖动记录”，不以单用例重跑替代全量证据 |
+| CI | PASS | push run `36071149616` 与 pull_request run `36071196216` 均对应 `f1a5055b5c0b0b4b83965b0a0a95a8945d0da0d7`；`haode-check`、`critical-business-gate`、`verify-transferred-artifact` 全部通过 |
 | 生产与外部动作 | NOT RUN | 未改公开价格/库存/图片，未上传、未发布、未投放、未部署 |
 
 机器可读证据：`feed-closeout-audit.json`；可读报告：`feed-closeout-audit.md`；契约测试：`npm run test:chatgpt-feed-closeout`。
 
-## 当前集成验收
+### exact-head CI 浏览器证据
+
+- [push run 36071149616](https://github.com/haodemx/haode-web/actions/runs/36071149616)：Ubuntu 24.04、Node 24.21.0、Chrome for Testing 148.0.7778.96 / Playwright Chromium v1223；完整浏览器 `336 passed (2.3m)`，2 workers。
+- [pull_request run 36071196216](https://github.com/haodemx/haode-web/actions/runs/36071196216)：同一运行环境；完整浏览器 `336 passed (2.0m)`，2 workers。
+- 两轮均先通过 13 项购买路径检查和 1 项构建产物检查，再运行完整 336 项；两轮均上传 1197 文件的浏览器测试后公开产物并通过传递完整性校验。
+
+### 本地抖动记录
+
+- 提交前最新本地完整运行是 335/336；唯一失败为未修改的 Z Fold6 首屏布局测量，随后该用例单独重跑 1/1 通过。更早一轮为 334/336，两个不同的未修改布局用例也分别单跑通过。
+- 当前证据只支持“本地并行负载或环境敏感的布局测量抖动”这一假设，尚不足以确认唯一根因；因此保留原始本地失败，不将单跑结果记为本地 336/336。
+- exact head 在相同 2 workers 配置的独立 CI 环境连续两次 336/336，且本任务没有修改 UI、布局或相关浏览器测试，因此未为不稳定假设弱化断言、增加超时或改动无关 UI。
+
+## 历史集成基线验收（PR #91 前置阶段，仅作来源基线）
 
 | 验收项 | 状态 | 当前证据 |
 | --- | --- | --- |
@@ -33,10 +46,10 @@
 | 专项单元 | PASS | 16/16 |
 | 专项浏览器 | PASS | 18/18；三页 1280px/390px、同意/撤回、成功/空/失败登记及晚加载事件 |
 | 完整构建 | PASS | `npm run build` 退出 0；质量检查 325 个源文件、0 错误、0 警告；公开包 1197 文件完整性通过 |
-| 完整浏览器 | PASS | `BASE_URL=http://127.0.0.1:4173 npm run browser-test`：336/336，46.3 秒 |
+| 完整浏览器 | PASS | 当时的历史基线运行：`BASE_URL=http://127.0.0.1:4173 npm run browser-test`，336/336，46.3 秒；不是本轮提交前本地结果 |
 | 公共依赖 | PASS | `ad-landing.css` 与 `conversion-tracking.js` 已纳入受控公开包并有契约测试 |
 | Feed 上传资格 | BLOCKED | 0 条可直接上传；缺批准价格/库存/品牌映射、14 张确认图及平台审批 |
-| CI | NOT RUN | 功能分支推送和 PR 创建后单独记录，不把本机结果冒充 CI |
+| CI | NOT RUN | 此行仅描述 PR #91 前置阶段；本轮 exact-head CI 状态以上方收尾审计为准 |
 | 合并、部署、上传、投放、付费 | NOT RUN | 不在当前授权范围 |
 
 ## 集成中发现并修复
