@@ -1,0 +1,52 @@
+/* Scoped repair for the two reused campaign landing pages. */
+body.chatgpt-ad-landing.conversion-reference-page:not(.product-detail-page) .catalog-topbar .brand {
+  width: 184px;
+  min-width: 184px;
+}
+
+body.chatgpt-ad-landing.conversion-reference-page:not(.product-detail-page) .catalog-topbar .brand-logo {
+  width: 184px;
+  height: auto;
+  max-height: 58px;
+  padding: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+body.chatgpt-ad-landing.conversion-reference-page .reference-conversion-panel {
+  grid-template-columns: 180px minmax(0, 1fr) minmax(160px, 220px);
+  gap: 24px;
+}
+
+body.chatgpt-ad-landing.conversion-reference-page .reference-conversion-panel > img {
+  width: 100%;
+  max-width: 180px;
+  height: 150px;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  body.chatgpt-ad-landing.conversion-reference-page:not(.product-detail-page) .catalog-topbar .brand,
+  body.chatgpt-ad-landing.conversion-reference-page:not(.product-detail-page) .catalog-topbar .brand-logo {
+    width: 128px;
+    min-width: 128px;
+  }
+
+  body.chatgpt-ad-landing.conversion-reference-page .reference-conversion-panel {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  body.chatgpt-ad-landing.conversion-reference-page .reference-conversion-panel > img {
+    justify-self: center;
+  }
+
+  body.chatgpt-ad-landing.conversion-reference-page .reference-conversion-panel p:not(.reference-panel-kicker) {
+    display: block;
+  }
+
+  body.chatgpt-ad-landing.conversion-reference-page .reference-conversion-panel h2 {
+    font-size: 22px;
+    line-height: 1.15;
+  }
+}

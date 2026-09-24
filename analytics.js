@@ -1,6 +1,7 @@
 (function attachHaodeAnalytics(global) {
   "use strict";
 
+  const analyticsScriptUrl = global.document.currentScript?.src;
   const MEASUREMENT_ID = "G-22TCLJDXYS";
   const CONSENT_STORAGE_KEY = "haode-privacy-consent-v1";
   const CONSENT_VERSION = 1;
@@ -15,6 +16,7 @@
     "gbraid",
     "wbraid"
   ]);
+  const pendingConversions = [];
   const dataLayer = global.dataLayer = global.dataLayer || [];
 
   if (typeof global.gtag !== "function") {
@@ -112,6 +114,7 @@
       analytics: Boolean(choice.analytics),
       advertising: Boolean(choice.advertising)
     };
+    if (!currentConsent.analytics || !currentConsent.advertising) pendingConversions.length = 0;
     saveConsent(currentConsent);
     global.gtag("consent", "update", consentParameters(currentConsent));
     global.gtag("config", MEASUREMENT_ID, {
@@ -297,4 +300,38 @@
     },
     updateConsent
   });
+  global.HaodeConversionBridge = Object.freeze({
+    recordLead(requestId) {
+      if (!currentConsent.analytics || !currentConsent.advertising) return;
+      if (typeof requestId !== "string" || !/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(requestId || "")) return;
+      const parameters = { request_id: requestId, lead_registered: true };
+      if (global.HaodeConversions) global.HaodeConversions.track("Lead", parameters);
+      else if (pendingConversions.length < 100) pendingConversions.push({ name: "Lead", parameters });
+    }
+  });
+  // Capture already-consented clicks while the optional module is still loading.
+  global.document.addEventListener("click", event => {
+    if (global.HaodeConversions || !currentConsent.analytics || !currentConsent.advertising) return;
+    const link = event.target.closest?.("a[href]");
+    if (!link || link.classList.contains("disabled") || link.getAttribute("aria-disabled") === "true") return;
+    let url;
+    try { url = new URL(link.href, global.location.href); } catch { return; }
+    if (url.protocol !== "https:" || !["wa.me", "api.whatsapp.com", "web.whatsapp.com"].includes(url.hostname)) return;
+    const area = link.hasAttribute("data-whatsapp-link") ? "cart"
+      : link.hasAttribute("data-product-whatsapp") || link.hasAttribute("data-detail-whatsapp") ? "product"
+      : link.hasAttribute("data-detail-header-whatsapp") ? "header" : "site_link";
+    const id = link.getAttribute("data-product-whatsapp") || (area === "product" ? global.HaodeConversionProductId : "");
+    const parameters = { contact_area: area };
+    if (typeof id === "string" && id.length <= 100 && /^[a-zA-Z0-9_-]+$/.test(id) && !/\d{10,}/.test(id.replace(/[-_]/g, ""))) parameters.product_id = id;
+    if (pendingConversions.length < 100) pendingConversions.push({ name: "WhatsAppClick", parameters });
+  }, true);
+  const conversionScript = global.document.createElement("script");
+  conversionScript.src = new URL("conversion-tracking.js?v=20260924", analyticsScriptUrl || global.location.href).href;
+  conversionScript.async = true;
+  conversionScript.onload = () => {
+    for (const { name, parameters } of pendingConversions.splice(0)) {
+      global.HaodeConversions?.track(name, parameters);
+    }
+  };
+  global.document.head.appendChild(conversionScript);
 })(window);

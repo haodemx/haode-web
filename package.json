@@ -44,7 +44,9 @@
     "verify:live": "node scripts/verify-live-deploy.mjs",
     "haode:product-sync": "node scripts/validate-products-sync.js",
     "haode:quality-check": "node scripts/haode-quality-check.js",
-    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:geo-seo && npm run test:target-seo-geo && npm run test:hl-brand-local && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check"
+    "haode:check": "npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:geo-seo && npm run test:target-seo-geo && npm run test:hl-brand-local && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check && npm run test:chatgpt-ads",
+    "feed:chatgpt": "node scripts/build-chatgpt-product-feed.mjs",
+    "test:chatgpt-ads": "node scripts/build-chatgpt-product-feed.mjs --check && node --test tests/chatgpt-feed.test.mjs tests/chatgpt-tracking.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"

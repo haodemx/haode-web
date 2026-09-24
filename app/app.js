@@ -1435,6 +1435,8 @@ function premiumSelectionHtml() {
 }
 
 function renderList({ group = "", category = "Todos" } = {}) {
+  window.HaodeConversionProductId = null;
+  window.HaodeConversions?.viewProduct(null);
   const activeSearchInput = document.activeElement?.matches?.("[data-search-products]")
     ? document.activeElement
     : null;
@@ -1605,6 +1607,8 @@ function renderProductDetail(productId) {
     renderList();
     return;
   }
+  window.HaodeConversionProductId = product.id;
+  window.HaodeConversions?.viewProduct(product.id);
   state.route = { name: "product", productId };
   state.selectedGalleryIndex = Math.min(state.selectedGalleryIndex, galleryImagesFor(product).length - 1);
   const gallery = galleryImagesFor(product);
@@ -1966,6 +1970,10 @@ function focusProductSearch(attempt = 0) {
 
 function renderRoute({ resetScroll = false } = {}) {
   const route = parseRoute();
+  if (route.name !== "product") {
+    window.HaodeConversionProductId = null;
+    window.HaodeConversions?.viewProduct(null);
+  }
   state.selectedGalleryIndex = 0;
   state.viewerIndex = 0;
   if (route.name === "product") {
@@ -2099,6 +2107,9 @@ async function submitWebOrder() {
     });
     if (!response.ok) throw new Error(`ERP web order ${response.status}`);
     const result = await response.json();
+    if (result.order_number) {
+      window.HaodeConversionBridge?.recordLead(payload.client_request_id);
+    }
     trackGrowthEvent("generate_lead", {
       currency: "MXN",
       value: payload.total,

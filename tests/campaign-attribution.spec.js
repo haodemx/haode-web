@@ -41,6 +41,8 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
       return null;
     };
   });
+  await page.route("https://www.googletagmanager.com/**", route => route.fulfill({ contentType: "application/javascript", body: "/* measurement disabled in QA */" }));
+  await page.route("**/public-stock.json**", route => route.fulfill({ json: [] }));
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: catalog }));
   await page.route("**/api/public/web-orders", async (route) => {
     submitted = route.request().postDataJSON();

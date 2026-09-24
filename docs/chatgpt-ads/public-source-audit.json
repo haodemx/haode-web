@@ -1,0 +1,1761 @@
+{
+  "checked_at": "2026-09-24T20:42:03.729Z",
+  "method": "Unauthenticated public GET/HEAD only; no private ERP access",
+  "sources": [
+    {
+      "url": "https://haode.com.mx/data/products.generated.js",
+      "status": 200,
+      "body_sha256": "74fc4baa1ea336b89778038dbc13e438a51e994c85df28b7b830fa9ee2e3dc5c",
+      "count": 186,
+      "public_fields": [
+        "id",
+        "category",
+        "brand",
+        "model",
+        "name",
+        "quality",
+        "images",
+        "videos",
+        "prices",
+        "priceSource",
+        "whatsappText",
+        "description",
+        "stockStatus",
+        "internalId",
+        "officialSkuPending",
+        "sourceRows"
+      ]
+    },
+    {
+      "url": "https://erp.haode.com.mx/api/public/catalog",
+      "status": 200,
+      "body_sha256": "502a27d72c415d5b67d2d54db4f9a637b8d9d27bbd77a84b2311f0eb910a7da5",
+      "count": 252,
+      "public_fields": [
+        "sku",
+        "slug",
+        "public_name_es",
+        "brand",
+        "category",
+        "quality",
+        "model",
+        "description_es",
+        "image_url",
+        "public_price_mxn",
+        "public_price_tiers",
+        "price_status",
+        "sales_available",
+        "stock_status",
+        "stock_label",
+        "pickup_available",
+        "delivery_available",
+        "updated_at"
+      ]
+    },
+    {
+      "url": "https://erp.haode.com.mx/public-stock.json",
+      "status": 200,
+      "body_sha256": "8758c7fec9fcada4cba7ac21dd4fa228ede7ae426553d7cf646b672453b8cc9e",
+      "count": 252,
+      "public_fields": [
+        "sku",
+        "public_name_es",
+        "category",
+        "quality",
+        "model",
+        "image_url",
+        "public_price_mxn",
+        "stock_status",
+        "stock_label",
+        "pickup_available",
+        "delivery_available",
+        "updated_at"
+      ]
+    }
+  ],
+  "product_projection_differences": [
+    {
+      "id": "mica-hd",
+      "fields": [
+        "images"
+      ]
+    }
+  ],
+  "feed_projection_differences": [],
+  "urls": [
+    {
+      "url": "https://haode.com.mx/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/cut-machine/x200t/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/cut-machine/x200t/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/11/fhd-main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/11/fhd-main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/11pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/11pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/11promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/11promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/12-12pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/12-12pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/12mini/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/12mini/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/12promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/12promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/13/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/13/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/13mini/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/13mini/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/13pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/13pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/13promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/13promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/14/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/14/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/14plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/14plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/14pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/14pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/14promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/14promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/15/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/15/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/15plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/15plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/15pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/15pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/15promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/15promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/16/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/16/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/16e/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/16e/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/16plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/16plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/16pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/16pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/16promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/16promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/17/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/17/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/17air/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/17air/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/17pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/17pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/17promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/17promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/x/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/x/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/xr/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/xr/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/xs/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/xs/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-incell/xsmax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-incell/xsmax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/11promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/11promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/12-12pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/12-12pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/12promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/12promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/13/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/13/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/13pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/13pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/13promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/13promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/14/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/14/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/14plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/14plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/14pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/14pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/14promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/14promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/15/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/15/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/15promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/15promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/16pro/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/16pro/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/16promax-hard/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/16promax-hard/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/16promax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/16promax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/iphone-oled/xsmax/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/iphone-oled/xsmax/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/micas/hd/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/micas/hd/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/micas/matte/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/micas/matte/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/micas/privacidad-hd/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/micas/privacidad-hd/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/micas/privacidad-matte/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/micas/privacidad-matte/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/11-pro-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/11-pro-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/12-12-pro.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/12-12-pro.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/12-pro-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/12-pro-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/13-pro-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/13-pro-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/14-plus.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/14-plus.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/14-pro-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/14-pro-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/15-plus.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/15-plus.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/15.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/15.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/16-plus.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/16-plus.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/16.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/16.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/17.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/17.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/oled-diagnostica/xs-max.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/oled-diagnostica/xs-max.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/note-10-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/note-10-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/note-10/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/note-10/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/note-20-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/note-20-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/note-8/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/note-8/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/note-9/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/note-9/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s10-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s10-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s10/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s10/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s10e/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s10e/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s20-fe/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s20-fe/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s20-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s20-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s20-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s20-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s21-fe/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s21-fe/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s21-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s21-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s21-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s21-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s21/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s21/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s22-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s22-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s22-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s22-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s22/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s22/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s23-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s23-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s23-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s23-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s23/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s23/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s24-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s24-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s24-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s24-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s24/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s24/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s8-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s8-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s8/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s8/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s9-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s9-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-incell/s9/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-incell/s9/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/note-10/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/note-10/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/note-20-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/note-20-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/note-20/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/note-20/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/s20-plus/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/s20-plus/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/s21-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/s21-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/s22-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/s22-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/s23-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/s23-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/s24-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/s24-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-oled/s25-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-oled/s25-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/s21-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/s21-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/s22-plus/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/s22-plus/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/s22-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/s22-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/s23-plus/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/s23-plus/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/s23-ultra/main.jpg",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/s23-ultra/main.jpg",
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/s24-ultra/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/s24-ultra/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/s25-ultra/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/s25-ultra/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-flip3/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-flip3/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-flip4/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-flip4/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-flip5/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-flip5/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-flip6/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-flip6/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-flip7/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-flip7/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-fold3/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-fold3/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-fold4/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-fold4/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-fold5/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-fold5/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/assets/products/samsung-original/z-fold6/main.png",
+      "status": 200,
+      "final_url": "https://haode.com.mx/assets/products/samsung-original/z-fold6/main.png",
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/pantallas-premium-iphone-samsung-fabrica/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/pantallas-premium-iphone-samsung-fabrica/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-11-pro-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-11-pro-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-12-pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-12-pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-pro-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-pro-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-xs-max/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-xs-max/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-11-bolsa-protectora/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-11-bolsa-protectora/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-11/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-11/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-11pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-11pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-11promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-11promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-12mini/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-12mini/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-12promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-12promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-13/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-13/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-13mini/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-13mini/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-13pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-13pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-13promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-13promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-14/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-14/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-14plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-14plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-14pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-14pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-14promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-14promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-15/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-15/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-15plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-15plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-15pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-15pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-15promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-15promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-16/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-16/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-16e/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-16e/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-16plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-16plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-16pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-16pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-16promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-16promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-17/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-17/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-17air/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-17air/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-17e/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-17e/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-17pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-17pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-17promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-17promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-x/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-x/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-xr-bolsa-protectora/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-xr-bolsa-protectora/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-xr/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-xr/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-xs/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-xs/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-incell-xsmax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-incell-xsmax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-11promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-11promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-12-12pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-12-12pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-12promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-12promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-13/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-13/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-13pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-13pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-13promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-13promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-14/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-14/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-14plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-14plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-14pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-14pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-14promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-14promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-15/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-15/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-15promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-15promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-16e/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-16e/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-16pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-16pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-16promax-hard/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-16promax-hard/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-16promax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-16promax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-soft-14-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-soft-14-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-soft-14/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-soft-14/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-soft-15pro/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-soft-15pro/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/iphone-oled-xsmax/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/iphone-oled-xsmax/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/mica-hd/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/mica-hd/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/mica-matte/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/mica-matte/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/mica-privacidad-hd/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/mica-privacidad-hd/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/mica-privacidad-matte/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/mica-privacidad-matte/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/oled-diagnostica-12mini-hard/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/oled-diagnostica-12mini-hard/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/oled-diagnostica-16e-soft/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/oled-diagnostica-16e-soft/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-note-10-lite/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-note-10-lite/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-note-10-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-note-10-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-note-10/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-note-10/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-note-20-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-note-20-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-note-20/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-note-20/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-note-8/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-note-8/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-note-9/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-note-9/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s10-lite/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s10-lite/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s10-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s10-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s10/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s10/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s10e/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s10e/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s20-4g/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s20-4g/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s20-5g/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s20-5g/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s20-fe/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s20-fe/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s20-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s20-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s20-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s20-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s21-fe/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s21-fe/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s21-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s21-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s21-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s21-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s21/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s21/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s22-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s22-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s22-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s22-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s22/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s22/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s23-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s23-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s23-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s23-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s23/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s23/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s24-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s24-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s24-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s24-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s24/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s24/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s8-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s8-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s8/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s8/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s9-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s9-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-s9/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-s9/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-z-flip3/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-z-flip3/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-z-flip4/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-z-flip4/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-z-flip5/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-z-flip5/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-incell-z-flip6/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-incell-z-flip6/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-note-10/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-note-10/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-note-20-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-note-20-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-note-20/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-note-20/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-s20-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-s20-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-s21-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-s21-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-s22-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-s22-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-s23-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-s23-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-s24-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-s24-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-oled-s25-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-oled-s25-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-note-20-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-note-20-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-s21-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-s21-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-s22-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-s22-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-s22-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-s22-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-s23-plus/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-s23-plus/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-s23-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-s23-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-s24-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-s24-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-s25-ultra/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-s25-ultra/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-flip3/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-flip3/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-flip4/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-flip4/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-flip5/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-flip5/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-flip6/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-flip6/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-flip7/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-flip7/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-fold3/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-fold3/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-fold4/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-fold4/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-fold5/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-fold5/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/samsung-original-z-fold6/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/samsung-original-z-fold6/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/producto/x200t-cortadora-micas/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/producto/x200t-cortadora-micas/",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/",
+      "status": 200,
+      "final_url": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/",
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "summary": {
+    "urls": 278,
+    "non_200": 0,
+    "product_projection_differences": 1,
+    "feed_projection_differences": 0
+  }
+}

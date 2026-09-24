@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "status": "LOCAL_DRAFT_NOT_PUBLISHED",
+  "locale": "es-MX",
+  "context_hints_status": "PLANNING_ONLY_CONFIRM_ACCOUNT_SUPPORT",
+  "campaigns": [
+    {
+      "id": "pantallas_tecnicos",
+      "group": "Pantallas para técnicos",
+      "headlines": ["Pantallas para técnicos", "Cotiza pantallas con HAODE", "Consulta por modelo exacto"],
+      "descriptions": ["Consulta pantallas para iPhone y Samsung. Envía modelo, versión, cantidad y ciudad por WhatsApp.", "Revisa el catálogo HAODE y confirma precio y disponibilidad antes de ordenar."],
+      "context_hints": ["buscar proveedor de pantallas para reparación", "cotizar pantallas por modelo y cantidad", "abastecer un taller de reparación celular"],
+      "landing_page": "https://haode.com.mx/pantallas-premium-iphone-samsung-fabrica/",
+      "url": "https://haode.com.mx/pantallas-premium-iphone-samsung-fabrica/?utm_source=chatgpt&utm_medium=paid&utm_campaign=haode_pilot_pantallas&utm_content=tecnicos_v1&utm_term=pantallas",
+      "cta": "Consultar por WhatsApp"
+    },
+    {
+      "id": "hydrogel_mayoreo",
+      "group": "Hydrogel Mayoreo",
+      "headlines": ["Hidrogel para tu tienda", "Consulta micas con HAODE", "Cotiza micas por cantidad"],
+      "descriptions": ["Consulta micas HD, matte y privacidad. Confirma presentación, cantidad y disponibilidad por WhatsApp.", "¿Buscas micas para tu negocio? Comparte tipo de mica, cantidad y ciudad para cotizar con HAODE."],
+      "context_hints": ["proveedor de micas de hidrogel", "cotizar micas para tienda", "consultar tipos de mica para corte"],
+      "landing_page": "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/",
+      "url": "https://haode.com.mx/micas-hidrogel-mayoreo-mexico/?utm_source=chatgpt&utm_medium=paid&utm_campaign=haode_pilot_hydrogel&utm_content=mayoreo_v1&utm_term=hidrogel",
+      "cta": "Cotizar por WhatsApp"
+    },
+    {
+      "id": "proveedor_taller",
+      "group": "Proveedor para tienda de reparación",
+      "headlines": ["Proveedor para tu taller", "Consulta el catálogo HAODE", "Cotiza tu lista de modelos"],
+      "descriptions": ["Pantallas, micas y accesorios para tu negocio. Envía tu lista de modelos, cantidades y ciudad.", "Habla con HAODE por WhatsApp para confirmar los productos y condiciones de tu pedido."],
+      "context_hints": ["buscar proveedor para taller de celulares", "cotizar refacciones para tienda", "abastecimiento de negocio de reparación"],
+      "landing_page": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/",
+      "url": "https://haode.com.mx/refacciones-celulares-mayoreo-mexico/?utm_source=chatgpt&utm_medium=paid&utm_campaign=haode_pilot_proveedor&utm_content=taller_v1&utm_term=refacciones",
+      "cta": "Consultar catálogo"
+    }
+  ]
+}
