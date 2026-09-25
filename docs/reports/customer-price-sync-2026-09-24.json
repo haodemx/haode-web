@@ -7,7 +7,9 @@
     "appMatched": 152,
     "ambiguous": 0,
     "unmatchedWebsite": 34,
-    "unmatchedSource": 4
+    "unmatchedSource": 4,
+    "websiteQualityAligned": 152,
+    "appQualityAligned": 152
   },
   "unmatchedWebsite": [
     "lk-007-camara-digital-4k",
@@ -856,5 +858,10 @@
       "sheet": "08 SAMSUNG ORIGINAL",
       "row": 24
     }
-  ]
+  ],
+  "qualityLabels": {
+    "source": "2026-09-24 workbook column B",
+    "websiteAligned": 152,
+    "appAligned": 152
+  }
 }

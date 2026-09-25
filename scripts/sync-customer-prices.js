@@ -350,6 +350,21 @@ function updateCustomerPriceCopy(value, row) {
     .replace(/caja\/modelo \$[0-9,.]+ MXN por pieza/gi, `Caja $${box.toLocaleString('es-MX')} MXN por pieza`);
 }
 
+function updateCustomerQualityCopy(value, previousQuality, sourceQuality) {
+  const previous = String(previousQuality || '').trim();
+  const next = String(sourceQuality || '').trim();
+  if (!value || !previous || !next || previous === next) return value;
+  const screenQuality = /(INCELL|OLED|AMOLED|ORIGINAL|DIAGN)/i;
+  if (!screenQuality.test(previous) || !screenQuality.test(next)) return value;
+  const escaped = previous.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return String(value).replace(new RegExp(escaped, 'gi'), next);
+}
+
+function updateInventoryCopy(value) {
+  return String(value || '')
+    .replace(/\bDisponible para técnicos, tiendas y mayoreo HAODE\b/gi, 'Para técnicos, tiendas y mayoreo HAODE');
+}
+
 function updateSpecialOfferPricing(product, row) {
   if (!(product.specialOffer || product.offerActive)) return;
   const box = money(row.prices.box);
@@ -777,12 +792,17 @@ function main() {
     publishedProducts: [],
     createdStaticRoutes: [],
     updatedLegacyAiPages: [],
+    qualityLabels: {
+      website: [],
+      app: [],
+    },
   };
   const masterChanges = new Map();
   const matchedById = new Map();
   const matchedIdByIdentity = new Map();
   const websiteDirectMatches = new Set();
   const usedSourceRows = new Set();
+  const previousWebsiteQualityById = new Map();
 
   function findRow(product, appProduct) {
     const identity = productIdentity(product, appProduct);
@@ -822,12 +842,21 @@ function main() {
     }
     const nextPrices = websitePrices(row);
     const previousDescription = product.description;
+    const previousQuality = String(product.quality || '').trim();
+    const sourceQuality = String(row.quality || '').trim();
+    previousWebsiteQualityById.set(product.id, previousQuality);
     const before = JSON.stringify(product.prices || []);
     const after = JSON.stringify(nextPrices);
     product.prices = nextPrices;
+    if (sourceQuality) product.quality = sourceQuality;
     product.description = updateCustomerPriceCopy(product.description, row);
+    product.description = updateCustomerQualityCopy(product.description, previousQuality, sourceQuality);
+    product.description = updateInventoryCopy(product.description);
     product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== after) report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
+    if (sourceQuality && previousQuality !== sourceQuality) {
+      report.qualityLabels.website.push({ id: product.id, row: row.sourceRow, from: previousQuality, to: sourceQuality });
+    }
     websiteDirectMatches.add(product.id);
     recordMatch(product, row, previousDescription !== product.description ? product.description : '');
   });
@@ -842,15 +871,24 @@ function main() {
     const wholesale5 = Number(row.prices.wholesale || row.prices.retail);
     const tiers = appPriceTiers(row);
     const previousDescription = product.descripcion;
+    const previousQuality = String(product.calidad || '').trim();
+    const sourceQuality = String(row.quality || '').trim();
+    const previousCopyQuality = previousQuality || previousWebsiteQualityById.get(product.id) || '';
     const before = JSON.stringify({ retail: product.precioPublico, wholesale5: product.precioMayoreo, tiers: product.priceTiers || [] });
     product.precioPublico = retail;
     product.precioMayoreo = wholesale5;
     product.priceTiers = tiers;
+    if (sourceQuality) product.calidad = sourceQuality;
     product.descripcion = updateCustomerPriceCopy(product.descripcion, row);
+    product.descripcion = updateCustomerQualityCopy(product.descripcion, previousCopyQuality, sourceQuality);
+    product.descripcion = updateInventoryCopy(product.descripcion);
     updateSpecialOfferPricing(product, row);
     product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     const after = JSON.stringify({ retail, wholesale5, tiers });
     if (before !== after) report.app.push({ id: product.id, row: row.sourceRow, retail, wholesale5, tiers });
+    if (sourceQuality && previousQuality !== sourceQuality) {
+      report.qualityLabels.app.push({ id: product.id, row: row.sourceRow, from: previousQuality, to: sourceQuality });
+    }
     recordMatch(product, row, previousDescription !== product.descripcion ? product.descripcion : '');
   });
 
@@ -862,6 +900,7 @@ function main() {
     const before = JSON.stringify(product.prices || []);
     product.prices = nextPrices;
     product.description = updateCustomerPriceCopy(product.description, row);
+    product.description = updateInventoryCopy(product.description);
     product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== JSON.stringify(nextPrices)) {
       report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
@@ -973,10 +1012,12 @@ function main() {
     websiteProducts: websiteProducts.length,
     websiteMatched: matchedById.size,
     websiteChanged: report.website.length,
+    websiteQualityChanged: report.qualityLabels.website.length,
     websiteDeleted: websiteProducts.length - retainedWebsiteProducts.length,
     appProducts: appProducts.length,
     appMatched: matchedById.size,
     appChanged: report.app.length,
+    appQualityChanged: report.qualityLabels.app.length,
     appDeleted: appProducts.length - retainedAppProducts.length,
     retainedSkus: matchedById.size,
     deletedSkus: deletedIds.size,
@@ -990,6 +1031,14 @@ function main() {
     publishedProducts: report.publishedProducts.length,
     createdStaticRoutes: 0,
     updatedLegacyAiPages: 0,
+    websiteQualityAligned: [...matchedById.entries()].filter(([id, row]) => {
+      const product = websiteProducts.find((candidate) => candidate.id === id);
+      return !row.quality || product?.quality === row.quality;
+    }).length,
+    appQualityAligned: [...matchedById.entries()].filter(([id, row]) => {
+      const product = appProducts.find((candidate) => candidate.id === id);
+      return !row.quality || product?.calidad === row.quality;
+    }).length,
   };
 
   if (APPLY) {
@@ -1016,6 +1065,8 @@ function main() {
       `- Source price rows: ${summary.sourceRows}`,
       `- Website exact matches updated: ${summary.websiteMatched}/${summary.websiteProducts}`,
       `- App exact matches updated: ${summary.appMatched}/${summary.appProducts}`,
+      `- Website quality labels aligned to source column B: ${summary.websiteQualityAligned}/${summary.websiteMatched}`,
+      `- App quality labels aligned to source column B: ${summary.appQualityAligned}/${summary.appMatched}`,
       `- Ambiguous matches: ${summary.ambiguous}`,
       `- Source rows without an exact website product: ${summary.unmatchedSource}`,
       '',
@@ -1061,6 +1112,8 @@ function main() {
       ambiguous: summary.ambiguous,
       unmatchedWebsite: summary.unmatchedWebsite,
       unmatchedSource: summary.unmatchedSource,
+      websiteQualityAligned: summary.websiteQualityAligned,
+      appQualityAligned: summary.appQualityAligned,
     };
     const matched = report.retained.map((item) => ({
       id: item.id,
@@ -1072,6 +1125,11 @@ function main() {
       unmatchedWebsite: report.unmatchedWebsite,
       unmatchedSource,
       matched,
+      qualityLabels: {
+        source: '2026-09-24 workbook column B',
+        websiteAligned: summary.websiteQualityAligned,
+        appAligned: summary.appQualityAligned,
+      },
     }, null, 2)}\n`, 'utf8');
   }
 

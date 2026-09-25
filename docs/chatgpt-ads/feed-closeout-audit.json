@@ -16,16 +16,16 @@
     },
     "website": {
       "path": "data/products.generated.js",
-      "sha256": "dd5ba399b0905d5b6faa88646c042e324225e59bc38cc783e7f41b117cdb45b9"
+      "sha256": "dd0316a430b0b3dfbf88e9e6d82e828c17b6d92747b3297ff4913ffc8aa226b5"
     },
     "app": {
       "path": "app/products.json",
-      "sha256": "c258708cf25c2f1929c1ead9a3c3660c52d3df0004f1d8cc69b018da39ce7c35"
+      "sha256": "71a22239445b3f7db1cf2c08f571976da03fe77495ccfbca4306b886648fbae2"
     },
     "structured_data": {
       "path": "producto/{id}/index.html",
       "product_pages": 146,
-      "sha256": "19bf5f2597d343834e9e9ab81e324d244f9148e0bd81f58370e98aabf60ca6bf"
+      "sha256": "2eb6b5c9c0f45977ad1f31d76e0e64f8bbafc4e730a8c5912f075980606ccdaa"
     },
     "feed": {
       "path": "data/marketing/chatgpt-product-feed.json",
@@ -55,7 +55,7 @@
     "website_sales_tiers_match_customer": 146,
     "app_sales_tiers_match_customer": 146,
     "structured_data_tiers_match_customer": 146,
-    "quality_mapping_review_required": 34,
+    "quality_mapping_review_required": 0,
     "unit_currency_mapping_complete": 146,
     "feed_price_matches_customer": 146,
     "existing_public_images": 132,
@@ -234,7 +234,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
       "category": "oled-diagnostica",
       "model": "Modelo 11 Pro Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -247,7 +247,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -286,7 +286,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
       "category": "oled-diagnostica",
       "model": "Modelo 12 / 12 Pro",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -299,7 +299,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -338,7 +338,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
       "category": "oled-diagnostica",
       "model": "Modelo 12 Pro Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -351,7 +351,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -390,7 +390,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-13",
       "category": "oled-diagnostica",
       "model": "Modelo 13",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -403,7 +403,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -442,7 +442,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
       "category": "oled-diagnostica",
       "model": "Modelo 13 Pro",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -455,7 +455,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -494,7 +494,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
       "category": "oled-diagnostica",
       "model": "Modelo 13 Pro Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -507,7 +507,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -546,7 +546,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-14",
       "category": "oled-diagnostica",
       "model": "Modelo 14",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -559,7 +559,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -598,7 +598,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
       "category": "oled-diagnostica",
       "model": "Modelo 14 Plus",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -611,7 +611,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -650,7 +650,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
       "category": "oled-diagnostica",
       "model": "Modelo 14 Pro",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -663,7 +663,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -702,7 +702,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
       "category": "oled-diagnostica",
       "model": "Modelo 14 Pro Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -715,7 +715,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -754,7 +754,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-15",
       "category": "oled-diagnostica",
       "model": "Modelo 15",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -767,7 +767,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -806,7 +806,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
       "category": "oled-diagnostica",
       "model": "Modelo 15 Plus",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -819,7 +819,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -858,7 +858,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
       "category": "oled-diagnostica",
       "model": "Modelo 15 Pro",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -871,7 +871,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -910,7 +910,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
       "category": "oled-diagnostica",
       "model": "Modelo 15 Pro Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -923,7 +923,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -962,7 +962,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-16",
       "category": "oled-diagnostica",
       "model": "Modelo 16",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -975,7 +975,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1014,7 +1014,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
       "category": "oled-diagnostica",
       "model": "Modelo 16 Plus",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -1027,7 +1027,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1066,7 +1066,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
       "category": "oled-diagnostica",
       "model": "Modelo 16 Pro",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -1079,7 +1079,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1118,7 +1118,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
       "category": "oled-diagnostica",
       "model": "Modelo 16 Pro Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -1131,7 +1131,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1170,7 +1170,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-17",
       "category": "oled-diagnostica",
       "model": "Modelo 17",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -1183,7 +1183,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1222,7 +1222,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
       "category": "oled-diagnostica",
       "model": "Modelo 17 Pro",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -1235,7 +1235,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1274,7 +1274,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
       "category": "oled-diagnostica",
       "model": "Modelo 17 Pro Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -1287,7 +1287,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1326,7 +1326,7 @@
       "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
       "category": "oled-diagnostica",
       "model": "Modelo XS Max",
-      "quality": "OLED Diagnóstica · Tamaño original",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -1339,7 +1339,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -1378,7 +1378,7 @@
       "id": "iphone-incell-11",
       "category": "iphone-incell",
       "model": "iPhone 11",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "pending",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1430,7 +1430,7 @@
       "id": "iphone-incell-11-bolsa-protectora",
       "category": "iphone-incell",
       "model": "iPhone 11 Bolsa Protectora",
-      "quality": "INCELL FHD",
+      "quality": "INCELL HD+ C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1482,7 +1482,7 @@
       "id": "iphone-incell-11pro",
       "category": "iphone-incell",
       "model": "iPhone 11 Pro",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1534,7 +1534,7 @@
       "id": "iphone-incell-11promax",
       "category": "iphone-incell",
       "model": "iPhone 11 Pro Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1586,7 +1586,7 @@
       "id": "iphone-incell-12-12pro",
       "category": "iphone-incell",
       "model": "iPhone 12 / 12 Pro",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1638,7 +1638,7 @@
       "id": "iphone-incell-12mini",
       "category": "iphone-incell",
       "model": "iPhone 12 mini",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1690,7 +1690,7 @@
       "id": "iphone-incell-12promax",
       "category": "iphone-incell",
       "model": "iPhone 12 Pro Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1742,7 +1742,7 @@
       "id": "iphone-incell-13",
       "category": "iphone-incell",
       "model": "iPhone 13",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1794,7 +1794,7 @@
       "id": "iphone-incell-13mini",
       "category": "iphone-incell",
       "model": "iPhone 13 mini",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1846,7 +1846,7 @@
       "id": "iphone-incell-13pro",
       "category": "iphone-incell",
       "model": "iPhone 13 Pro",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1898,7 +1898,7 @@
       "id": "iphone-incell-13promax",
       "category": "iphone-incell",
       "model": "iPhone 13 Pro Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -1950,7 +1950,7 @@
       "id": "iphone-incell-14",
       "category": "iphone-incell",
       "model": "iPhone 14",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2002,7 +2002,7 @@
       "id": "iphone-incell-14plus",
       "category": "iphone-incell",
       "model": "iPhone 14 Plus",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2054,7 +2054,7 @@
       "id": "iphone-incell-14pro",
       "category": "iphone-incell",
       "model": "iPhone 14 Pro",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2106,7 +2106,7 @@
       "id": "iphone-incell-14promax",
       "category": "iphone-incell",
       "model": "iPhone 14 Pro Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2158,7 +2158,7 @@
       "id": "iphone-incell-15",
       "category": "iphone-incell",
       "model": "iPhone 15",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2210,7 +2210,7 @@
       "id": "iphone-incell-15plus",
       "category": "iphone-incell",
       "model": "iPhone 15 Plus",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2262,7 +2262,7 @@
       "id": "iphone-incell-15pro",
       "category": "iphone-incell",
       "model": "iPhone 15 Pro",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2314,7 +2314,7 @@
       "id": "iphone-incell-15promax",
       "category": "iphone-incell",
       "model": "iPhone 15 Pro Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2366,7 +2366,7 @@
       "id": "iphone-incell-16",
       "category": "iphone-incell",
       "model": "iPhone 16",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2418,7 +2418,7 @@
       "id": "iphone-incell-16e",
       "category": "iphone-incell",
       "model": "iPhone 16e",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2470,7 +2470,7 @@
       "id": "iphone-incell-16plus",
       "category": "iphone-incell",
       "model": "iPhone 16 Plus",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2522,7 +2522,7 @@
       "id": "iphone-incell-16pro",
       "category": "iphone-incell",
       "model": "iPhone 16 Pro",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2574,7 +2574,7 @@
       "id": "iphone-incell-16promax",
       "category": "iphone-incell",
       "model": "iPhone 16 Pro Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2626,7 +2626,7 @@
       "id": "iphone-incell-17",
       "category": "iphone-incell",
       "model": "iPhone 17",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2678,7 +2678,7 @@
       "id": "iphone-incell-17air",
       "category": "iphone-incell",
       "model": "iPhone 17 Air",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2730,7 +2730,7 @@
       "id": "iphone-incell-17e",
       "category": "iphone-incell",
       "model": "iPhone 17E",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "pending",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2774,7 +2774,7 @@
       "id": "iphone-incell-17pro",
       "category": "iphone-incell",
       "model": "iPhone 17 Pro",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2826,7 +2826,7 @@
       "id": "iphone-incell-17promax",
       "category": "iphone-incell",
       "model": "iPhone 17 Pro Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2878,7 +2878,7 @@
       "id": "iphone-incell-x",
       "category": "iphone-incell",
       "model": "iPhone X",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2930,7 +2930,7 @@
       "id": "iphone-incell-xr",
       "category": "iphone-incell",
       "model": "iPhone XR",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -2982,7 +2982,7 @@
       "id": "iphone-incell-xr-bolsa-protectora",
       "category": "iphone-incell",
       "model": "iPhone XR Bolsa Protectora",
-      "quality": "INCELL FHD",
+      "quality": "INCELL HD+ C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -3034,7 +3034,7 @@
       "id": "iphone-incell-xs",
       "category": "iphone-incell",
       "model": "iPhone XS",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -3086,7 +3086,7 @@
       "id": "iphone-incell-xsmax",
       "category": "iphone-incell",
       "model": "iPhone XS Max",
-      "quality": "INCELL FHD",
+      "quality": "INCELL FHD C/IC",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "03 IPHONE INCELL",
@@ -3554,7 +3554,7 @@
       "id": "iphone-oled-14pro",
       "category": "iphone-oled",
       "model": "iPhone 14 Pro",
-      "quality": "OLED PREMIUM",
+      "quality": "SOFT OLED PREMIUM",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "04 IPHONE OLED",
@@ -3567,7 +3567,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -3658,7 +3658,7 @@
       "id": "iphone-oled-15",
       "category": "iphone-oled",
       "model": "iPhone 15",
-      "quality": "OLED PREMIUM",
+      "quality": "SOFT OLED PREMIUM",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "04 IPHONE OLED",
@@ -3671,7 +3671,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -3858,7 +3858,7 @@
       "id": "iphone-oled-16promax",
       "category": "iphone-oled",
       "model": "iPhone 16 Pro Max",
-      "quality": "SOFT OLED PREMIUM MOVE IC",
+      "quality": "SOFT OLED PREMIUM",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "04 IPHONE OLED",
@@ -3910,7 +3910,7 @@
       "id": "iphone-oled-16promax-hard",
       "category": "iphone-oled",
       "model": "iPhone 16 Pro Max",
-      "quality": "OLED PREMIUM MOVE IC",
+      "quality": "OLED PREMIUM",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "04 IPHONE OLED",
@@ -4146,7 +4146,7 @@
       "id": "mica-hd",
       "category": "micas",
       "model": "MICA HD",
-      "quality": "Contenido: 50 pzs · Precio por volumen",
+      "quality": "Paquete 50 pzs",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "01 HIDROGEL",
@@ -4198,7 +4198,7 @@
       "id": "mica-matte",
       "category": "micas",
       "model": "MICA MATTE",
-      "quality": "Contenido: 50 pzs · Precio por volumen",
+      "quality": "Paquete 50 pzs",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "01 HIDROGEL",
@@ -4250,7 +4250,7 @@
       "id": "mica-privacidad-hd",
       "category": "micas",
       "model": "MICA PRIVACIDAD HD",
-      "quality": "Contenido: 50 pzs · Precio por volumen",
+      "quality": "Paquete 50 pzs",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "01 HIDROGEL",
@@ -4302,7 +4302,7 @@
       "id": "mica-privacidad-matte",
       "category": "micas",
       "model": "MICA PRIVACIDAD MATTE",
-      "quality": "Contenido: 50 pzs · Precio por volumen",
+      "quality": "Paquete 50 pzs",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "01 HIDROGEL",
@@ -4354,7 +4354,7 @@
       "id": "oled-diagnostica-12mini-hard",
       "category": "oled-diagnostica",
       "model": "iPhone 12MINI",
-      "quality": "DIAGNOTICO HARD OLED",
+      "quality": "DIAGNÓSTICO HARD OLED",
       "official_sku_status": "pending",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -4398,7 +4398,7 @@
       "id": "oled-diagnostica-16e-soft",
       "category": "oled-diagnostica",
       "model": "iPhone 16E",
-      "quality": "DIAGNOTICO  SOFT OLED",
+      "quality": "DIAGNÓSTICO SOFT OLED",
       "official_sku_status": "pending",
       "customer_source": {
         "sheet": "05 IPHONE DIAGNOSTICO",
@@ -4442,7 +4442,7 @@
       "id": "samsung-incell-note-10",
       "category": "samsung-incell",
       "model": "Samsung Note 10",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -4546,7 +4546,7 @@
       "id": "samsung-incell-note-10-plus",
       "category": "samsung-incell",
       "model": "Samsung Note 10 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -4650,7 +4650,7 @@
       "id": "samsung-incell-note-20-ultra",
       "category": "samsung-incell",
       "model": "Samsung Note 20 Ultra",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -4702,7 +4702,7 @@
       "id": "samsung-incell-note-8",
       "category": "samsung-incell",
       "model": "Samsung Note 8",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -4754,7 +4754,7 @@
       "id": "samsung-incell-note-9",
       "category": "samsung-incell",
       "model": "Samsung Note 9",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -4806,7 +4806,7 @@
       "id": "samsung-incell-s10",
       "category": "samsung-incell",
       "model": "Samsung S10",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -4910,7 +4910,7 @@
       "id": "samsung-incell-s10-plus",
       "category": "samsung-incell",
       "model": "Samsung S10 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -4962,7 +4962,7 @@
       "id": "samsung-incell-s10e",
       "category": "samsung-incell",
       "model": "Samsung S10E",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5102,7 +5102,7 @@
       "id": "samsung-incell-s20-fe",
       "category": "samsung-incell",
       "model": "Samsung S20 FE",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5154,7 +5154,7 @@
       "id": "samsung-incell-s20-plus",
       "category": "samsung-incell",
       "model": "Samsung S20 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5206,7 +5206,7 @@
       "id": "samsung-incell-s20-ultra",
       "category": "samsung-incell",
       "model": "Samsung S20 Ultra",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5258,7 +5258,7 @@
       "id": "samsung-incell-s21",
       "category": "samsung-incell",
       "model": "Samsung S21",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5310,7 +5310,7 @@
       "id": "samsung-incell-s21-fe",
       "category": "samsung-incell",
       "model": "Samsung S21 FE",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5362,7 +5362,7 @@
       "id": "samsung-incell-s21-plus",
       "category": "samsung-incell",
       "model": "Samsung S21 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5414,7 +5414,7 @@
       "id": "samsung-incell-s21-ultra",
       "category": "samsung-incell",
       "model": "Samsung S21 Ultra",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5466,7 +5466,7 @@
       "id": "samsung-incell-s22",
       "category": "samsung-incell",
       "model": "Samsung S22",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5518,7 +5518,7 @@
       "id": "samsung-incell-s22-plus",
       "category": "samsung-incell",
       "model": "Samsung S22 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5570,7 +5570,7 @@
       "id": "samsung-incell-s22-ultra",
       "category": "samsung-incell",
       "model": "Samsung S22 Ultra",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5622,7 +5622,7 @@
       "id": "samsung-incell-s23",
       "category": "samsung-incell",
       "model": "Samsung S23",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5674,7 +5674,7 @@
       "id": "samsung-incell-s23-plus",
       "category": "samsung-incell",
       "model": "Samsung S23 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5726,7 +5726,7 @@
       "id": "samsung-incell-s23-ultra",
       "category": "samsung-incell",
       "model": "Samsung S23 Ultra",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5778,7 +5778,7 @@
       "id": "samsung-incell-s24",
       "category": "samsung-incell",
       "model": "Samsung S24",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5830,7 +5830,7 @@
       "id": "samsung-incell-s24-plus",
       "category": "samsung-incell",
       "model": "Samsung S24 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5882,7 +5882,7 @@
       "id": "samsung-incell-s24-ultra",
       "category": "samsung-incell",
       "model": "Samsung S24 Ultra",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5934,7 +5934,7 @@
       "id": "samsung-incell-s8",
       "category": "samsung-incell",
       "model": "Samsung S8",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -5986,7 +5986,7 @@
       "id": "samsung-incell-s8-plus",
       "category": "samsung-incell",
       "model": "Samsung S8 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -6038,7 +6038,7 @@
       "id": "samsung-incell-s9",
       "category": "samsung-incell",
       "model": "Samsung S9",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -6090,7 +6090,7 @@
       "id": "samsung-incell-s9-plus",
       "category": "samsung-incell",
       "model": "Samsung S9 Plus",
-      "quality": "INCELL CON MARCO",
+      "quality": "INCELL FHD C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "06 SAMSUNG INCELL",
@@ -6318,7 +6318,7 @@
       "id": "samsung-oled-note-10",
       "category": "samsung-oled",
       "model": "Samsung Note 10",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6331,7 +6331,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6370,7 +6370,7 @@
       "id": "samsung-oled-note-20",
       "category": "samsung-oled",
       "model": "Samsung Note 20",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6383,7 +6383,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6422,7 +6422,7 @@
       "id": "samsung-oled-note-20-ultra",
       "category": "samsung-oled",
       "model": "Samsung Note 20 Ultra",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6435,7 +6435,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6474,7 +6474,7 @@
       "id": "samsung-oled-s20-plus",
       "category": "samsung-oled",
       "model": "Samsung S20 Plus",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6487,7 +6487,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6526,7 +6526,7 @@
       "id": "samsung-oled-s21-ultra",
       "category": "samsung-oled",
       "model": "Samsung S21 Ultra",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6539,7 +6539,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6578,7 +6578,7 @@
       "id": "samsung-oled-s22-ultra",
       "category": "samsung-oled",
       "model": "Samsung S22 Ultra",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6591,7 +6591,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6630,7 +6630,7 @@
       "id": "samsung-oled-s23-ultra",
       "category": "samsung-oled",
       "model": "Samsung S23 Ultra",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6643,7 +6643,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6682,7 +6682,7 @@
       "id": "samsung-oled-s24-ultra",
       "category": "samsung-oled",
       "model": "Samsung S24 Ultra",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6695,7 +6695,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -6734,7 +6734,7 @@
       "id": "samsung-oled-s25-ultra",
       "category": "samsung-oled",
       "model": "Samsung S25 Ultra",
-      "quality": "OLED CON MARCO",
+      "quality": "1:1 AMOLED PREMIUM C/M",
       "official_sku_status": "existing_id_only",
       "customer_source": {
         "sheet": "07 SAMSUNG OLED",
@@ -6747,7 +6747,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
@@ -7662,7 +7662,7 @@
       "id": "x200t-cortadora-micas",
       "category": "micas",
       "model": "Máquina de Micas（X200T）",
-      "quality": "Mayor cantidad, menor precio.",
+      "quality": "Equipo",
       "official_sku_status": "pending",
       "customer_source": {
         "sheet": "01 HIDROGEL",
@@ -7675,7 +7675,7 @@
         "workbook_sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709"
       },
       "model_mapping": "exact",
-      "quality_mapping": "review_required",
+      "quality_mapping": "exact_or_semantic_match",
       "currency": "MXN",
       "unit": "equipment",
       "customer_owner_sales_tiers_match": true,

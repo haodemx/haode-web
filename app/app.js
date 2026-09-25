@@ -495,7 +495,10 @@ function normalizeProduct(product) {
   const name = product.nombre || product.name || product.public_name_es || "Producto HAODE";
   const model = product.modelo || product.model || "Consultar modelo";
   const qualityText = product.calidad || product.quality || "";
-  const quality = samsungQualityFor(category, `${model} ${qualityText}`) || (qualityText ? { label: qualityText, spec: qualityText } : null);
+  const quality = qualityText
+    ? { label: qualityText, spec: qualityText }
+    : samsungQualityFor(category, model);
+  const isErpCatalogSource = product.erpCatalogSource === true;
   const publicPrice = Number(product.precioPublico ?? product.publicPrice ?? product.public_price_mxn ?? 0);
   const officialSkuPending = product.officialSkuPending === true;
   const reference = product.sku || product.SKU || productId || productDocId;
@@ -518,12 +521,14 @@ function normalizeProduct(product) {
     priceTiers: normalizePriceTiers(product.priceTiers || product.public_price_tiers || product.quantityPricing || product.preciosPorCantidad),
     image,
     usesPlaceholder: String(image).includes("placeholder.svg"),
-    stock: normalizeStock(product.stock || product.stock_status || product.stock_label),
+    stock: isErpCatalogSource
+      ? normalizeStock(product.stock || product.stock_status || product.stock_label)
+      : "consultar inventario",
     salesAvailable: product.sales_available !== false && publicPrice > 0,
-    erpStockStatus: product.erpStockStatus || product.stock_status || "",
-    erpStockLabel: product.erpStockLabel || product.stock_label || "",
-    erpStockUpdatedAt: product.erpStockUpdatedAt || product.updated_at || "",
-    erpCatalogSource: product.erpCatalogSource === true,
+    erpStockStatus: isErpCatalogSource ? product.erpStockStatus || product.stock_status || "" : "",
+    erpStockLabel: isErpCatalogSource ? product.erpStockLabel || product.stock_label || "" : "",
+    erpStockUpdatedAt: isErpCatalogSource ? product.erpStockUpdatedAt || product.updated_at || "" : "",
+    erpCatalogSource: isErpCatalogSource,
     priceSource: product.priceSource || "",
     active: product.activo !== false,
     order: Number(product.orden ?? product.order ?? 9999),

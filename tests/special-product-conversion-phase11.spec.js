@@ -17,7 +17,7 @@ test.describe('HAODE special product conversion UI phase 11', () => {
 
       await expect(page.locator('body')).toHaveClass(/conversion-reference-page/);
       await expect(page.locator('body')).toHaveClass(/special-product-reference-page/);
-      await expect(page.locator('.reference-conversion-strip')).toContainText('Stock en México');
+      await expect(page.locator('.reference-conversion-strip')).toContainText('Inventario ERP');
       await expect(page.locator('.reference-conversion-strip')).toContainText('WhatsApp privado');
       await expect(page.locator(`[data-reference-conversion="${panelId}"]`)).toContainText(/WhatsApp privado|Cotiza/);
       await expect(page.locator(`[data-reference-conversion="${panelId}"] a[href*="wa.me"]`)).toBeVisible();

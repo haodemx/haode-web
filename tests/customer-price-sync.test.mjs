@@ -40,6 +40,21 @@ test('website and App received all exact matched prices', () => {
   assert.equal(byId(app,'iphone-incell-11').precioMayoreo,150);
 });
 
+test('website and App quality labels use workbook column B for every exact match', () => {
+  const sourceByLocation = new Map(source.rows.map((row) => [`${row.sourceSheet}:${row.sourceRow}`, row]));
+  for (const match of report.matched) {
+    const sourceRow = sourceByLocation.get(`${match.sheet}:${match.row}`);
+    assert.ok(sourceRow, `Missing source row ${match.sheet}:${match.row}`);
+    if (!sourceRow.quality) continue;
+    assert.equal(byId(website, match.id).quality, sourceRow.quality, `${match.id} website quality`);
+    assert.equal(byId(app, match.id).calidad, sourceRow.quality, `${match.id} App quality`);
+  }
+  assert.equal(report.summary.websiteQualityAligned, 152);
+  assert.equal(report.summary.appQualityAligned, 152);
+  assert.doesNotMatch(byId(website, 'iphone-incell-xr').description, /Disponible para técnicos/i);
+  assert.doesNotMatch(byId(app, 'iphone-incell-xr').descripcion, /Disponible para técnicos/i);
+});
+
 test('representative OLED, diagnostic, Samsung, hydrogel and AI prices match workbook', () => {
   assert.equal(price(byId(website,'iphone-oled-13pro'),'Menudeo'),'$620 MXN');
   assert.equal(price(byId(website,'haode-pantalla-oled-diagnostica-modelo-13-pro'),'Menudeo'),'$980 MXN');
@@ -151,7 +166,7 @@ test('static detail fallback updater writes four named tiers and matching Produc
     prices: [{ quantity: '1 pza', price: '$999 MXN' }],
   };
   fs.writeFileSync(path.join(root, 'data/products.generated.js'), `window.HAODE_PRODUCTS_DATA = ${JSON.stringify([byId(website, 'x200t-cortadora-micas'), unmatchedProduct])};\n`);
-  fs.writeFileSync(path.join(root, 'producto/x200t-cortadora-micas/index.html'), `<!doctype html><body><p class="detail-price-note" data-detail-price>$6,500 MXN</p><h2>Precios por volumen</h2><p>Precios por equipo.</p><table><tbody data-detail-price-body><tr><th>Precio público</th><td>$6,500 MXN</td></tr><tr><th>Mayoreo 5+</th><td>$6,200 MXN</td></tr><tr><th>Volumen 10+</th><td>$6,000 MXN</td></tr></tbody></table><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","offers":{"@type":"Offer","priceCurrency":"MXN","price":"6500"}}</script></body>`);
+  fs.writeFileSync(path.join(root, 'producto/x200t-cortadora-micas/index.html'), `<!doctype html><head><meta name="description" content="Texto anterior" /><meta property="og:description" content="Texto anterior" /></head><body><p>Pantalla con stock local en CDMX.</p><div><span>Stock en México bajo confirmación</span></div><p class="detail-meta" data-detail-quality>Texto anterior</p><p class="detail-description" data-detail-description>Texto anterior</p><p class="detail-price-note" data-detail-price>$6,500 MXN</p><h2>Precios por volumen</h2><p>Precios por equipo.</p><table><tbody data-detail-price-body><tr><th>Precio público</th><td>$6,500 MXN</td></tr><tr><th>Mayoreo 5+</th><td>$6,200 MXN</td></tr><tr><th>Volumen 10+</th><td>$6,000 MXN</td></tr></tbody></table><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","description":"Texto anterior","offers":{"@type":"Offer","priceCurrency":"MXN","price":"6500"}}</script></body>`);
   fs.writeFileSync(path.join(root, 'producto/x200t-legacy-route/index.html'), `<!doctype html><head><link rel="canonical" href="https://haode.com.mx/producto/x200t-cortadora-micas/" /></head><body><p class="detail-price-note" data-detail-price>$6,500 MXN</p><table><tbody data-detail-price-body><tr><th>Precio público</th><td>$6,500 MXN</td></tr></tbody></table><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","offers":{"@type":"Offer","priceCurrency":"MXN","price":"6500"}}</script></body>`);
   const unmatchedHtml = '<!doctype html><body><p class="detail-price-note" data-detail-price>$999 MXN</p><table><tbody data-detail-price-body><tr><th>1 pza</th><td>$999 MXN</td></tr></tbody></table></body>';
   fs.writeFileSync(path.join(root, 'producto/unmatched-product/index.html'), unmatchedHtml);
@@ -168,9 +183,16 @@ test('static detail fallback updater writes four named tiers and matching Produc
   assert.match(html, /<th scope="row">Mayoreo<\/th>/);
   assert.match(html, /<th scope="row">Caja<\/th>/);
   assert.match(html, /<th scope="row">⭐ VIP<\/th>/);
+  assert.match(html, /data-detail-quality>Equipo<\/p>/);
+  assert.match(html, /data-detail-description>Texto anterior<\/p>/);
   const schemaText = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/)?.[1];
   const schema = JSON.parse(schemaText);
   assert.deepEqual(schema.offers.map((offer) => offer.name), ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
+  assert.equal(schema.description, 'Texto anterior');
+  assert.match(html, /<meta name="description" content="Texto anterior" \/>/);
+  assert.match(html, /<meta property="og:description" content="Texto anterior" \/>/);
+  assert.doesNotMatch(html, /stock local en CDMX|Stock en México bajo confirmación/);
+  assert.match(html, /Inventario ERP por confirmar/);
   const aliasHtml = fs.readFileSync(path.join(root, 'producto/x200t-legacy-route/index.html'), 'utf8');
   assert.match(aliasHtml, /Menudeo: \$6,000 MXN/);
   assert.match(aliasHtml, /<th scope="row">⭐ VIP<\/th>/);

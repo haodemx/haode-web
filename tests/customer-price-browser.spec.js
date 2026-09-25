@@ -57,6 +57,23 @@ test("App uses retail price for one Samsung S8 instead of box price", async ({ p
   await saveEvidence(page, "app-samsung-s8-retail-price.png");
 });
 
+test("App shows inventory only when the exact ERP stock feed supplies it", async ({ page }) => {
+  const consoleErrors = captureConsoleErrors(page);
+  await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: { products: [] } }));
+  await page.route("**/public-stock.json**", (route) => route.fulfill({
+    json: [{
+      sku: "iphone-incell-14",
+      stock_status: "available",
+      stock_label: "Disponible ERP",
+      updated_at: "2026-09-24T20:00:00-06:00"
+    }]
+  }));
+
+  await page.goto(`${BASE_URL}/app/#producto/iphone-incell-14`, { waitUntil: "domcontentloaded" });
+  await expect(page.locator(".stock-badge").first()).toContainText("Disponible ERP");
+  expect(consoleErrors).toEqual([]);
+});
+
 test("iPhone 11 standard FHD uses the confirmed image on website and App", async ({ page }) => {
   const consoleErrors = captureConsoleErrors(page);
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: { products: [] } }));
@@ -64,7 +81,7 @@ test("iPhone 11 standard FHD uses the confirmed image on website and App", async
 
   await page.goto(`${BASE_URL}/producto/iphone-incell-11/`, { waitUntil: "networkidle" });
   await expect(page.locator("[data-detail-title]")).toHaveText("Pantalla iPhone 11 INCELL FHD");
-  await expect(page.locator("[data-detail-quality]")).toHaveText("INCELL FHD");
+  await expect(page.locator("[data-detail-quality]")).toHaveText("INCELL FHD C/IC");
   await expect(page.locator("[data-detail-main-image]")).toHaveAttribute(
     "src",
     "/assets/products/iphone-incell/11/fhd-main.display.webp"
@@ -79,6 +96,8 @@ test("iPhone 11 standard FHD uses the confirmed image on website and App", async
   await page.goto(`${BASE_URL}/app/#producto/iphone-incell-11`, { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { name: "Pantalla iPhone 11 INCELL FHD" })).toBeVisible();
   await expect(page.locator(".spec-grid")).toContainText("iPhone 11 INCELL FHD");
+  await expect(page.locator(".spec-grid")).toContainText("INCELL FHD C/IC");
+  await expect(page.locator(".stock-badge").first()).toContainText("consultar inventario");
   await expect(page.locator("[data-product-gallery] img").first()).toHaveAttribute(
     "src",
     "/assets/products/iphone-incell/11/fhd-main.jpg"

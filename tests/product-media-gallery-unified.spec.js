@@ -47,7 +47,7 @@ for (const viewport of [
     await expect(stageVideo).toHaveAttribute('poster', /iphone-incell\/11\/fhd-main\.display\.webp/);
     await expect(stageVideo).toHaveAttribute('src', /iphone-incell\/11\/video-02\.mp4/);
     await expect(stage.locator('[data-detail-media-title]')).toHaveCount(0);
-    await expect(stageVideo).toHaveAttribute('aria-label', 'Prueba real — iPhone 11 INCELL FHD');
+    await expect(stageVideo).toHaveAttribute('aria-label', 'Prueba real — iPhone 11 INCELL FHD C/IC');
     await stageVideo.evaluate(async (video) => {
       video.muted = true;
       await video.play();
@@ -85,14 +85,14 @@ test('ambiguous diagnostic and foldable series videos stay unbound', async ({ pa
 
 test('representative exact-match media keeps brand, model, and quality identity', async ({ page }) => {
   const products = [
-    ['iphone-incell-11', /iPhone 11/i, /INCELL FHD/i, 1],
-    ['iphone-oled-13', /iPhone 13/i, /OLED PREMIUM/i, 1],
-    ['haode-pantalla-oled-diagnostica-modelo-14', /Modelo 14/i, /OLED Diagnóstica/i, 0],
-    ['samsung-incell-s22-ultra', /Samsung S22 Ultra/i, /INCELL CON MARCO/i, 2],
-    ['samsung-oled-s24-ultra', /Samsung S24 Ultra/i, /OLED CON MARCO/i, 1],
-    ['samsung-original-s22-plus', /S22 PLUS/i, /TIPO ORIGINAL C\/M/i, 0],
-    ['samsung-original-z-flip3', /Z FLIP3/i, /TIPO ORIGINAL C\/M/i, 0],
-    ['samsung-original-z-fold3', /Z FOLD3/i, /ORIGINAL C\/M/i, 0],
+    ['iphone-incell-11', /iPhone 11/i, 'INCELL FHD C/IC', 1],
+    ['iphone-oled-13', /iPhone 13/i, 'OLED PREMIUM', 1],
+    ['haode-pantalla-oled-diagnostica-modelo-14', /Modelo 14/i, 'DIAGNÓSTICO SOFT OLED', 0],
+    ['samsung-incell-s22-ultra', /Samsung S22 Ultra/i, 'INCELL FHD C/M', 2],
+    ['samsung-oled-s24-ultra', /Samsung S24 Ultra/i, '1:1 AMOLED PREMIUM C/M', 1],
+    ['samsung-original-s22-plus', /S22 PLUS/i, 'TIPO ORIGINAL C/M', 0],
+    ['samsung-original-z-flip3', /Z FLIP3/i, 'TIPO ORIGINAL C/M', 0],
+    ['samsung-original-z-fold3', /Z FOLD3/i, 'ORIGINAL C/M', 0],
   ];
 
   for (const [productId, model, quality, videoCount] of products) {

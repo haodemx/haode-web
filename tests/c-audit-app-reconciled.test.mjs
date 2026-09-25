@@ -18,8 +18,8 @@ function withoutPriceFields(products, file) {
   return products.map((product) => {
     const copy = { ...product };
     const fields = file.startsWith('app/')
-      ? ['precioPublico', 'precioMayoreo', 'priceTiers', 'priceSource', 'descripcion', 'offerBadge', 'offerDisplayPrice']
-      : ['prices', 'priceSource', 'description'];
+      ? ['precioPublico', 'precioMayoreo', 'priceTiers', 'priceSource', 'descripcion', 'calidad', 'offerBadge', 'offerDisplayPrice']
+      : ['prices', 'priceSource', 'description', 'quality'];
     fields.forEach((field) => delete copy[field]);
     return copy;
   });
@@ -29,7 +29,7 @@ function numericPrice(value) {
   return Number(String(value || '').replace(/[^0-9.]/g, ''));
 }
 
-test('2026-09-24 sync changes only price surfaces and keeps non-price product data equal to deployed main', () => {
+test('2026-09-24 sync changes only approved price and quality surfaces', () => {
   for (const file of files) {
     const before = parse(execFileSync('git', ['show', `${base}:${file}`], { cwd: repo, encoding: 'utf8' }));
     const after = read(repo, file);
