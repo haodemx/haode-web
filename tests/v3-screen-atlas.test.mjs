@@ -4,9 +4,13 @@ import fs from 'node:fs';
 
 const read = (file) => fs.readFileSync(new URL(`../${file}`, import.meta.url), 'utf8');
 
-test('V3 entry pages load the shared Screen Atlas system', () => {
+test('entry pages load their approved shared visual systems', () => {
+  const homepage = read('index.html');
+  assert.match(homepage, /<body class=["']home-page-c["']>/, 'index.html misses its approved C-layout marker');
+  assert.match(homepage, /homepage-c\.css/, 'index.html misses approved C-layout styles');
+  assert.match(homepage, /script\.js/, 'index.html misses approved C-layout behavior');
+
   const pages = [
-    ['index.html', 'home'],
     ['productos/index.html', 'pantallas'],
     ['micas.html', 'hidrogel'],
     ['productos-ai/index.html', 'ai'],
