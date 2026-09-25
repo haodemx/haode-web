@@ -339,7 +339,10 @@
     measurementId: MEASUREMENT_ID,
     event(name, parameters = {}) {
       if (!currentConsent.analytics) return false;
-      if (!isProductionAnalyticsHost()) return false;
+      // Local previews retain an in-page dataLayer so purchase-path tests can
+      // observe legacy UI events. They never load or configure the Google tag,
+      // and the exact Growth events remain production-only.
+      if (!isProductionAnalyticsHost() && CONVERSION_EVENTS.has(name)) return false;
       global.gtag("event", name, parameters);
       return true;
     }
