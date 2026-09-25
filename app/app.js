@@ -777,7 +777,9 @@ function mergeErpCatalog(localProducts, catalogRows) {
       name: incoming.name || current.name,
       displayName: incoming.displayName || current.displayName,
       model: incoming.model || current.model,
-      quality: incoming.quality || current.quality,
+      // The confirmed customer workbook owns the public quality label.
+      // ERP enriches inventory metadata only and must not replace that label.
+      quality: current.quality || incoming.quality,
       description: incoming.description || current.description,
       publicPrice: hasAuthoritativeLocalPrices ? current.publicPrice : incoming.publicPrice,
       wholesalePrice: hasAuthoritativeLocalPrices ? current.wholesalePrice : incoming.wholesalePrice,

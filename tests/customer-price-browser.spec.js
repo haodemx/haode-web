@@ -74,6 +74,38 @@ test("App shows inventory only when the exact ERP stock feed supplies it", async
   expect(consoleErrors).toEqual([]);
 });
 
+test("App keeps the confirmed workbook quality when ERP refreshes inventory", async ({ page }) => {
+  const consoleErrors = captureConsoleErrors(page);
+  await page.route("**/api/public/catalog**", (route) => route.fulfill({
+    json: {
+      schema_version: "2.0",
+      products: [{
+        sku: "IP-11-INCELL-FHD",
+        slug: "iphone-incell-11",
+        public_name_es: "Pantalla iPhone 11 INCELL FHD",
+        category: "Pantallas iPhone INCELL",
+        quality: "INCELL FHD",
+        model: "Pantalla iPhone 11 INCELL FHD",
+        description_es: "Descripción ERP",
+        image_url: "/assets/products/iphone-incell/11/fhd-main.jpg",
+        public_price_mxn: 999,
+        public_price_tiers: [],
+        sales_available: true,
+        stock_status: "available",
+        stock_label: "Disponible ERP",
+        updated_at: "2026-09-24T20:00:00-06:00"
+      }]
+    }
+  }));
+  await page.route("**/public-stock.json**", (route) => route.fulfill({ json: [] }));
+
+  await page.goto(`${BASE_URL}/app/#producto/iphone-incell-11`, { waitUntil: "domcontentloaded" });
+  await expect(page.locator(".stock-badge").first()).toContainText("Disponible ERP");
+  await expect(page.locator(".spec-grid")).toContainText("INCELL FHD C/IC");
+  await expect(page.locator(".price-stack")).toContainText("$160 MXN");
+  expect(consoleErrors).toEqual([]);
+});
+
 test("iPhone 11 standard FHD uses the confirmed image on website and App", async ({ page }) => {
   const consoleErrors = captureConsoleErrors(page);
   await page.route("**/api/public/catalog**", (route) => route.fulfill({ json: { products: [] } }));
