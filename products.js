@@ -3314,7 +3314,8 @@ function renderProductDetailPage() {
   }
 
   window.HaodeConversionProductId = product.id;
-  window.HaodeConversions?.viewProduct(product.id);
+  window.HaodeConversionProductSku = product.sku || product.reference || '';
+  window.HaodeConversions?.viewProduct(product.id, window.HaodeConversionProductSku);
 
   if (titleEl) titleEl.textContent = preservesCuratedSeo && titleEl.dataset.detailSeoTitle
     ? titleEl.dataset.detailSeoTitle : product.name;

@@ -22,9 +22,11 @@ for (const [referer, source, medium] of [
     expect(event).toMatchObject({ contact_area: area, attribution_source: source, attribution_medium: medium });
     for (const key of ['source', 'medium', 'campaign', 'campaign_source', 'campaign_medium', 'traffic_source']) expect(event).not.toHaveProperty(key);
   }
-  const config = await page.evaluate(() => [...window.dataLayer].find(x => x[0] === 'config')[2]);
-  expect(config).not.toHaveProperty('source');
-  expect(config).not.toHaveProperty('medium');
+  const transmission = await page.evaluate(() => ({
+    hasConfig: [...window.dataLayer].some(x => x[0] === 'config'),
+    hasLoader: Boolean(document.querySelector('[data-haode-analytics-loader]')),
+  }));
+  expect(transmission).toEqual({ hasConfig: false, hasLoader: false });
 });
 
 test('product WhatsApp click has its own contact area', async ({ page }) => {

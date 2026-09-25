@@ -268,9 +268,13 @@ function trafficAttribution() {
   })();
   const detected = (() => {
     if (!referrerHost) return { source: "direct", medium: "none" };
+    if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(referrerHost)) return { source: "chatgpt", medium: "ai_referral" };
+    if (/(^|\.)perplexity\.ai$/i.test(referrerHost)) return { source: "perplexity", medium: "ai_referral" };
+    if (/(^|\.)gemini\.google\.com$/i.test(referrerHost)) return { source: "gemini", medium: "ai_referral" };
+    if (/(^|\.)copilot\.microsoft\.com$/i.test(referrerHost)) return { source: "copilot", medium: "ai_referral" };
+    if (/(^|\.)claude\.ai$/i.test(referrerHost)) return { source: "claude", medium: "ai_referral" };
     if (/google\./i.test(referrerHost)) return { source: "google", medium: "organic_search" };
     if (/(^|\.)bing\.com$/i.test(referrerHost)) return { source: "bing", medium: "organic_search" };
-    if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(referrerHost)) return { source: "chatgpt", medium: "ai_referral" };
     if (/instagram/i.test(referrerHost)) return { source: "instagram", medium: "organic_social" };
     if (/facebook|fb\.com/i.test(referrerHost)) return { source: "facebook", medium: "organic_social" };
     if (/tiktok|twitter|x\.com|linkedin|youtube/i.test(referrerHost)) return { source: "social", medium: "organic_social" };
@@ -282,7 +286,8 @@ function trafficAttribution() {
     campaign: normalizeAttributionToken(params.get("utm_campaign") || stored.campaign),
     content: normalizeAttributionToken(params.get("utm_content") || stored.content),
     term: normalizeAttributionToken(hasIncomingCampaign ? params.get("utm_term") : stored.term),
-    landingPage: stored.landingPage || window.location.pathname || "/"
+    landingPage: stored.landingPage || window.location.pathname || "/",
+    referrerHost: String(stored.referrerHost || referrerHost || "").replace(/^www\./, "").slice(0, 160)
   };
   if (canPersist) {
     try {
@@ -304,6 +309,7 @@ function analyticsAttributionParameters(attribution = state.attribution) {
     attribution_campaign: attribution.campaign,
     attribution_content: attribution.content,
     landing_page: attribution.landingPage,
+    referrer_host: attribution.referrerHost,
     campaign_reference: [attribution.source, attribution.campaign, attribution.content].filter(Boolean).join("/"),
     entry_channel: attribution.entryChannel || appChannel()
   };
@@ -1471,6 +1477,7 @@ function premiumSelectionHtml() {
 
 function renderList({ group = "", category = "Todos" } = {}) {
   window.HaodeConversionProductId = null;
+  window.HaodeConversionProductSku = null;
   window.HaodeConversions?.viewProduct(null);
   const activeSearchInput = document.activeElement?.matches?.("[data-search-products]")
     ? document.activeElement
@@ -1643,7 +1650,8 @@ function renderProductDetail(productId) {
     return;
   }
   window.HaodeConversionProductId = product.id;
-  window.HaodeConversions?.viewProduct(product.id);
+  window.HaodeConversionProductSku = product.sku || product.reference || "";
+  window.HaodeConversions?.viewProduct(product.id, window.HaodeConversionProductSku);
   state.route = { name: "product", productId };
   trackProductView(product);
   state.selectedGalleryIndex = Math.min(state.selectedGalleryIndex, galleryImagesFor(product).length - 1);
@@ -2011,6 +2019,7 @@ function renderRoute({ resetScroll = false } = {}) {
   if (route.name !== "product") {
     state.lastTrackedProductViewId = "";
     window.HaodeConversionProductId = null;
+    window.HaodeConversionProductSku = null;
     window.HaodeConversions?.viewProduct(null);
   }
   state.selectedGalleryIndex = 0;
@@ -2121,6 +2130,9 @@ function webOrderPayload() {
     utm_content: state.attribution.content,
     utm_term: state.attribution.term,
     landing_page: state.attribution.landingPage,
+    referrer_host: state.attribution.referrerHost,
+    analytics_session_id: window.HaodeConversions?.getSessionId?.() || "",
+    product_id: items[0]?.product?.id || "",
     client_request_id: checkoutRequestId(),
     total: cartTotal(),
     items: items.map((item) => {
