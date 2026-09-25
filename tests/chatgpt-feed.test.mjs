@@ -13,60 +13,6 @@ test('feed deterministic serialization, stable ids, priority coverage and public
   assert.equal(feed.items.length, 146);
   assert.deepEqual(Object.fromEntries(['Pantallas', 'Hydrogel', 'X200T'].map(g => [g, feed.items.filter(p => p.priority_group === g).length])), { Pantallas: 141, Hydrogel: 4, X200T: 1 });
   assert.doesNotMatch(JSON.stringify(feed), /"(?:precioMayoreo|cost_price|landed_cost|sourceRows|customer_name|phone|priceSource)"\s*:/);
-  assert.deepEqual(feed.readiness_summary, { candidates: 146, platform_ready: 0, missing_images: 14 });
-  for (const item of feed.items) {
-    assert.equal(item.sku, null);
-    assert.equal(item.brand, null);
-    assert.equal(item.currency, null);
-    assert.equal(item.inventory_quantity, null);
-    assert.equal(item.platform_ready, false);
-    assert.deepEqual(item.platform_targets, []);
-  }
-});
-
-test('a row becomes platform ready only from a complete owner-verified ERP and asset record', () => {
-  const product = products.find(p => p.id === 'mica-hd');
-  const approval = {
-    schema_version: 1,
-    status: 'OWNER_VERIFICATION_REQUIRED',
-    products: {
-      'mica-hd': {
-        sku: 'MICA-HD-001',
-        brand: 'HAODE',
-        price: 199,
-        currency: 'MXN',
-        inventory_quantity: 12,
-        availability: 'in_stock',
-        inventory_checked_at: '2026-09-24T12:00:00.000Z',
-        image_approved: true,
-        platform_targets: ['google_merchant', 'meta_catalog', 'chatgpt_ads'],
-        platform_registration_status: 'verified',
-        approval_status: 'owner_verified',
-        approved_by: 'owner',
-        approved_at: '2026-09-24T12:05:00.000Z',
-        evidence_refs: ['erp:product:MICA-HD-001', 'asset:sha256']
-      }
-    }
-  };
-  const now = new Date('2026-09-24T18:00:00.000Z');
-  const ready = buildFeed([product], ROOT, approval, now).items[0];
-  assert.equal(ready.platform_ready, true);
-  assert.deepEqual(ready.blockers, []);
-  assert.equal(ready.sku, 'MICA-HD-001');
-  assert.equal(ready.brand, 'HAODE');
-  assert.equal(ready.price, 199);
-  assert.equal(ready.currency, 'MXN');
-  assert.equal(ready.inventory_quantity, 12);
-  assert.equal(ready.availability, 'in_stock');
-
-  for (const missing of ['sku', 'brand', 'price', 'currency', 'inventory_quantity', 'inventory_checked_at', 'image_approved', 'platform_targets', 'platform_registration_status', 'approval_status', 'approved_by', 'approved_at', 'evidence_refs']) {
-    const incomplete = structuredClone(approval);
-    delete incomplete.products['mica-hd'][missing];
-    assert.equal(buildFeed([product], ROOT, incomplete, now).items[0].platform_ready, false, missing);
-  }
-  const stale = structuredClone(approval);
-  stale.products['mica-hd'].inventory_checked_at = '2026-09-22T17:59:59.000Z';
-  assert.equal(buildFeed([product], ROOT, stale, now).items[0].platform_ready, false, 'stale inventory');
 });
 
 test('every product and exact image resolve locally, with canonical and sitemap', () => {

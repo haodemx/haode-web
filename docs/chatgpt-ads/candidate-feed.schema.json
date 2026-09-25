@@ -1,74 +1,145 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "HAODE verified multi-platform candidate feed - local only",
+  "title": "HAODE local candidate feed - not an OpenAI upload",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "status", "source", "readiness_source", "content_sha256", "price_policy", "availability_policy", "inventory_freshness_sla_hours", "readiness_summary", "items"],
+  "required": [
+    "schema_version",
+    "status",
+    "source",
+    "content_sha256",
+    "price_policy",
+    "availability_policy",
+    "items"
+  ],
   "properties": {
-    "schema_version": { "const": 2 },
-    "status": { "const": "LOCAL_PREPARED_NOT_UPLOAD_READY" },
-    "source": { "const": "data/products.generated.js" },
-    "readiness_source": { "const": "data/marketing/product-feed-readiness-input.json" },
-    "content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-    "price_policy": { "const": "Consultar por WhatsApp; no se publica un precio sin confirmación vigente." },
-    "availability_policy": { "const": "unknown no significa disponible ni agotado." },
-    "inventory_freshness_sla_hours": { "const": 24 },
-    "readiness_summary": {
-      "type": "object", "additionalProperties": false,
-      "required": ["candidates", "platform_ready", "missing_images"],
-      "properties": {
-        "candidates": { "type": "integer", "minimum": 0 },
-        "platform_ready": { "type": "integer", "minimum": 0 },
-        "missing_images": { "type": "integer", "minimum": 0 }
-      }
+    "schema_version": {
+      "const": 1
+    },
+    "status": {
+      "const": "LOCAL_PREPARED_NOT_UPLOAD_READY"
+    },
+    "source": {
+      "const": "data/products.generated.js"
+    },
+    "content_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "price_policy": {
+      "const": "Consultar por WhatsApp; no se publica un precio sin confirmación vigente."
+    },
+    "availability_policy": {
+      "const": "unknown no significa disponible ni agotado."
     },
     "items": {
       "type": "array",
       "items": {
-        "type": "object", "additionalProperties": false,
-        "required": ["id", "sku", "sku_status", "title", "description", "brand", "brand_status", "link", "image_link", "image_approval_status", "availability", "price", "currency", "price_status", "inventory_quantity", "inventory_status", "inventory_checked_at", "availability_status", "image_status", "category", "priority_group", "source", "platform_targets", "platform_target_status", "platform_ready", "blockers"],
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "description",
+          "link",
+          "image_link",
+          "availability",
+          "price",
+          "price_status",
+          "availability_status",
+          "image_status",
+          "category",
+          "priority_group",
+          "source",
+          "platform_ready",
+          "blockers"
+        ],
         "properties": {
-          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-          "sku": { "type": ["string", "null"] },
-          "sku_status": { "enum": ["erp_verified", "not_erp_reconciled"] },
-          "title": { "type": "string" },
-          "description": { "type": "string" },
-          "brand": { "type": ["string", "null"] },
-          "brand_status": { "enum": ["owner_verified", "mapping_required"] },
-          "link": { "type": "string" },
-          "image_link": { "type": ["string", "null"] },
-          "image_approval_status": { "enum": ["owner_verified", "approval_required", "asset_missing"] },
-          "availability": { "enum": ["unknown", "in_stock", "out_of_stock", "preorder", "backorder"] },
-          "price": { "type": ["number", "null"] },
-          "currency": { "enum": ["MXN", null] },
-          "price_status": { "enum": ["current_verified", "quote_required"] },
-          "inventory_quantity": { "type": ["integer", "null"], "minimum": 0 },
-          "inventory_status": { "enum": ["erp_verified", "not_live_verified"] },
-          "inventory_checked_at": { "type": ["string", "null"], "format": "date-time" },
-          "availability_status": { "enum": ["erp_verified", "not_live_verified"] },
-          "image_status": { "enum": ["existing_public_asset", "asset_missing"] },
-          "category": { "type": "string" },
-          "priority_group": { "enum": ["Pantallas", "Hydrogel", "X200T"] },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "image_link": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "availability": {
+            "const": "unknown"
+          },
+          "price": {
+            "type": "null"
+          },
+          "price_status": {
+            "const": "quote_required"
+          },
+          "availability_status": {
+            "const": "not_live_verified"
+          },
+          "image_status": {
+            "enum": [
+              "existing_public_asset",
+              "asset_missing"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "priority_group": {
+            "enum": [
+              "Pantallas",
+              "Hydrogel",
+              "X200T"
+            ]
+          },
           "source": {
-            "type": "object", "additionalProperties": false,
-            "required": ["catalog", "product_id", "image_sha256", "readiness_manifest", "approval_status", "approved_by", "approved_at", "evidence_refs"],
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "catalog",
+              "product_id",
+              "image_sha256"
+            ],
             "properties": {
-              "catalog": { "const": "data/products.generated.js" },
-              "product_id": { "type": "string" },
-              "image_sha256": { "type": ["string", "null"] },
-              "readiness_manifest": { "const": "data/marketing/product-feed-readiness-input.json" },
-              "approval_status": { "enum": ["owner_verified", null] },
-              "approved_by": { "type": ["string", "null"] },
-              "approved_at": { "type": ["string", "null"], "format": "date-time" },
-              "evidence_refs": { "type": "array", "items": { "type": "string" } }
+              "catalog": {
+                "const": "data/products.generated.js"
+              },
+              "product_id": {
+                "type": "string"
+              },
+              "image_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
             }
           },
-          "platform_targets": { "type": "array", "uniqueItems": true, "items": { "enum": ["google_merchant", "meta_catalog", "chatgpt_ads"] } },
-          "platform_target_status": { "enum": ["registration_verified", "not_registered"] },
-          "platform_ready": { "type": "boolean" },
+          "platform_ready": {
+            "const": false
+          },
           "blockers": {
-            "type": "array", "uniqueItems": true,
-            "items": { "enum": ["sku_mapping_required", "confirmed_current_price_required", "currency_required", "inventory_verification_required", "availability_verification_required", "ads_feed_registration_required", "brand_mapping_review_required", "ads_asset_approval_required", "confirmed_product_image_required"] }
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "confirmed_current_price_required",
+                "ads_feed_registration_required",
+                "brand_mapping_review_required",
+                "ads_asset_approval_required",
+                "confirmed_product_image_required"
+              ]
+            }
           }
         }
       }
