@@ -72,11 +72,12 @@ test('closeout audit maps the 156 workbook rows without expanding the 146-item f
     unmapped_feed_rows: 0,
     workbook_rows_excluded_from_feed: 10,
     customer_owner_sales_tiers_match: 146,
-    website_sales_tiers_match_customer: 73,
-    app_sales_tiers_match_customer: 73,
-    structured_data_tiers_match_customer: 73,
+    website_sales_tiers_match_customer: 146,
+    app_sales_tiers_match_customer: 146,
+    structured_data_tiers_match_customer: 146,
     quality_mapping_review_required: 34,
     unit_currency_mapping_complete: 146,
+    feed_price_matches_customer: 146,
     existing_public_images: 132,
     asset_missing: 14,
     feed_usable_images: 126,
@@ -88,9 +89,9 @@ test('closeout audit maps the 156 workbook rows without expanding the 146-item f
     exact_duplicate_asset_groups: 8,
     platform_ready: 0,
     owner_confirmed_cost_checks: 3,
-    price_source_revision_review: 70,
-    vip_only_policy_difference: 2,
-    public_surface_divergence: 1,
+    price_source_revision_review: 0,
+    vip_only_policy_difference: 0,
+    public_surface_divergence: 0,
   });
   assert.deepEqual(audit.items.map(item => item.id).sort(), feed.items.map(item => item.id).sort());
   assert.deepEqual(
@@ -99,9 +100,10 @@ test('closeout audit maps the 156 workbook rows without expanding the 146-item f
   );
 });
 
-test('unconfirmed commerce data remains closed and private values are not exported', () => {
+test('confirmed retail prices are exported while inventory and private values remain closed', () => {
   for (const item of audit.items) {
-    assert.equal(item.feed_price, null, item.id);
+    assert.equal(item.feed_price, 'confirmed_retail_mxn', item.id);
+    assert.equal(item.feed_price_matches_customer, true, item.id);
     assert.equal(item.feed_availability, 'unknown', item.id);
     assert.equal(item.platform_ready, false, item.id);
     assert.equal(item.inventory_source.current_live_verified, false, item.id);
@@ -110,8 +112,8 @@ test('unconfirmed commerce data remains closed and private values are not export
     assert.ok(['piece', 'pack_50', 'equipment'].includes(item.unit), item.id);
   }
   assert.equal(audit.sources.owner_workbook.private_values_exported, false);
-  assert.equal(audit.sources.customer_workbook.confirmation, 'USER_CONFIRMED_NEW_PRICE_SOURCE');
-  assert.equal(audit.sources.customer_workbook.public_price_tier_approved, false);
+  assert.equal(audit.sources.customer_workbook.confirmation, 'USER_CONFIRMED_PUBLIC_PRICE_SYNC');
+  assert.equal(audit.sources.customer_workbook.public_price_tier_approved, true);
   assert.equal(audit.owner_cost_confirmation_checks.every(item => item.confirmed_match), true);
 
   const serialized = `${fs.readFileSync(auditPath, 'utf8')}\n${fs.readFileSync(reportPath, 'utf8')}`;
@@ -165,8 +167,8 @@ test('the committed audit fingerprints every mutable public input', () => {
   const report = fs.readFileSync(reportPath, 'utf8');
   assert.match(report, /Feed 候选：146/);
   assert.match(report, /图片阻塞：20/);
-  assert.match(report, /70 项属于新价格来源版本差异/);
-  assert.match(report, /跨公开表面自身不一致：1/);
+  assert.match(report, /官网 \/ App \/ 结构化数据与 2026-09-24 客户表四档一致：146 \/ 146 \/ 146/);
+  assert.match(report, /跨公开表面自身不一致：0/);
 });
 
 test('rejected image deletion or byte replacement invalidates the physical asset fingerprint', () => {

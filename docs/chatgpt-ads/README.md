@@ -2,9 +2,9 @@
 
 状态：**本地准备；未配置外部 Ads Manager；未发布、未花费。** 本目录保存项目 B 的交付合同。候选 feed 不是平台合规上传文件，不可把本次生成成功当作平台接入成功。
 
-2026-09-24 收尾复核见 `feed-closeout-audit.md` / `feed-closeout-audit.json`：146 个候选与客户版、老板版工作簿逐项映射；156 行中明确排除 10 行，没有扩充 feed。官网、App、结构化数据只有 73/146 与当前客户版四档销售层级一致；14 项物理缺图，另有 6 项现有主图明确 QC 失败并被候选 feed 拒绝，因此 feed 只保留 126 条图片链接、图片阻塞共 20 项。所有价格和库存差异仅记录，未写公开价格、库存、网站图片或平台状态。
+2026-09-24 收尾复核见 `feed-closeout-audit.md` / `feed-closeout-audit.json`：146 个候选与客户版、老板版工作簿逐项映射；156 行中明确排除 10 行，没有扩充 feed。官网、App、结构化数据已 146/146 与当前客户版四档销售层级一致；14 项物理缺图，另有 6 项现有主图明确 QC 失败并被候选 feed 拒绝，因此 feed 只保留 126 条图片链接、图片阻塞共 20 项。Menudeo 价已进入本地候选 feed，库存、网站图片和平台状态没有改动。
 
-用户确认 2026-09-24 客户版为本次新价格来源，但尚未指定允许公开的价格档位；因此它用于差异审计，不自动覆盖现有 2026-09-21 公开价格发布合同。70 项为新来源版本差异，2 项仅 VIP 档差异，`samsung-original-z-flip7` 另有官网/App/结构化数据彼此数值不一致；这些值均未写入本报告或候选 feed。
+用户确认 2026-09-24 客户版为本次新价格来源。官网、App 与结构化数据同步四档销售价；本地候选 feed 只导出 Menudeo 价。Mayoreo、Caja、VIP 继续作为人工报价档，不触发自动折扣；审计报告保持脱敏，不列出具体价格数值。
 
 ## 范围与数据流
 
@@ -36,9 +36,9 @@
 - `title` 原样取现有公开名称；`description` 是名称加询价指引，不复制旧描述里可能嵌入的静态价格或承诺。
 - `link` 为现有 canonical `/producto/{id}/`，必须同时存在于 sitemap。
 - 官网源有 132 条原公开主图路径与本地 SHA256，14 条物理缺图。逐图 QC 明确拒绝其中 6 条错型号/促销主图，因此生成的 feed 为 126 条 `existing_public_asset`、14 条 `asset_missing`、6 条 `asset_rejected`。无替代图、无重绘、无素材上传；原站使用证明与新广告素材审批是不同状态。
-- 所有 `price:null`、`price_status:quote_required`；用户用语为 **Consultar por WhatsApp**。不把缺失值改为 0，也不把询价文字塞进货币字段。
+- 所有候选使用 2026-09-24 客户表确认的 Menudeo 价，格式为 `{amount, currency: "MXN"}`，`price_status:confirmed_retail_2026-09-24`。Mayoreo、Caja、VIP 不进入该单价字段。
 - 所有 `availability:unknown`、`availability_status:not_live_verified`；未知不表示在售或售罄。静态 `ask_stock`、App 的旧 `disponible` 标记、接口可用都不构成实时库存承诺。
-- 所有 `platform_ready:false`。平台直接上传准备好：**0 条**。已缺少真实售价，另有品牌映射/广告素材审批/账户注册门槛。iPhone/Samsung 可能表示适配对象，不能自动当作原厂制造商品牌。
+- 所有 `platform_ready:false`。平台直接上传准备好：**0 条**。价格门槛已解除；仍有实时库存、品牌映射、广告素材审批和账户注册门槛。iPhone/Samsung 可能表示适配对象，不能自动当作原厂制造商品牌。
 - `candidate-feed.schema.json` 是 HAODE 本地合同；`validateFeed` 与测试校验身份、字段和缺失语义。它不是 OpenAI 官方 schema。
 
 公开可访问性审计共 278 个唯一页面/主图链接，全部 HTTP 200。官网源与基线有一处画廊数组差异：MICA HD 的画廊图已移除，主图未变；候选 feed 不导出画廊。审计只是当时的快照，投放前必须重新验证价格、素材与链接。
@@ -53,7 +53,7 @@
 | title / description | 同名 | 同名 | 来自公开名称及询价指引 |
 | link | url | link | 原 canonical |
 | image_link | image_url | image_link | 缺图为空；投放前素材批准 |
-| price | price | price | null，阻止上传 |
+| price | price | price | 已确认 Menudeo MXN；外部格式待账户注册后转换 |
 | availability | availability | availability | 本地 unknown；兼容格式不可用 unknown |
 | category / priority_group | 仅已注册的 ads_metadata 键 | 仅已支持列 | 不自创平台 targeting 字段 |
 | 品牌/销售方 | brand / seller_name | brand / 注册商户名称 | 品牌语义人工核实；销售方 HAODE |

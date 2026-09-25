@@ -9,9 +9,18 @@ export const OUTPUT = 'data/marketing/chatgpt-product-feed.json';
 const SOURCE = 'data/products.generated.js';
 const ASSET_QC_SOURCE = 'data/marketing/chatgpt-feed-asset-qc.json';
 const PRIORITY = new Set(['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'samsung-tipo-original', 'oled-diagnostica', 'micas']);
-const PRICE_POLICY = 'Consultar por WhatsApp; no se publica un precio sin confirmación vigente.';
+const PRICE_POLICY = 'Precio de menudeo confirmado por la lista comercial del 2026-09-24; confirma cantidad y disponibilidad por WhatsApp.';
 const AVAILABILITY_POLICY = 'unknown no significa disponible ni agotado.';
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
+
+function confirmedRetailPrice(product) {
+  const tier = product.prices?.find(item => item.quantity === 'Menudeo');
+  const match = /^\$([0-9][0-9,]*(?:\.[0-9]{1,2})?) MXN$/.exec(tier?.price ?? '');
+  if (!match || !String(product.priceSource ?? '').startsWith('HAODE_Lista_de_Precios_2026-09-24.xlsx')) {
+    throw new Error(`Missing confirmed 2026-09-24 retail price: ${product.id}`);
+  }
+  return { amount: Number(match[1].replaceAll(',', '')), currency: 'MXN' };
+}
 
 export function readPublicProducts(root = ROOT) {
   const text = fs.readFileSync(path.join(root, SOURCE), 'utf8');
@@ -51,15 +60,16 @@ export function buildFeed(products = readPublicProducts(), root = ROOT, assetQc 
     // clearing the policy requires new exact-model approval evidence.
     const rejectedImage = Object.hasOwn(assetQc, p.id);
     const usableImage = hasImage && !rejectedImage;
+    const retailPrice = confirmedRetailPrice(p);
     return {
       id: p.id,
       title: p.name,
-      description: `${p.name}. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.`,
+      description: `${p.name}. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.`,
       link,
       image_link: usableImage ? `${ORIGIN}/${main}` : null,
       availability: 'unknown',
-      price: null,
-      price_status: 'quote_required',
+      price: retailPrice,
+      price_status: 'confirmed_retail_2026-09-24',
       availability_status: 'not_live_verified',
       image_status: rejectedImage ? 'asset_rejected' : usableImage ? 'existing_public_asset' : 'asset_missing',
       category: p.category,
@@ -70,7 +80,7 @@ export function buildFeed(products = readPublicProducts(), root = ROOT, assetQc 
         image_sha256: usableImage ? hash(fs.readFileSync(path.join(root, main))) : null
       },
       platform_ready: false,
-      blockers: ['confirmed_current_price_required', 'ads_feed_registration_required', 'brand_mapping_review_required',
+      blockers: ['ads_feed_registration_required', 'brand_mapping_review_required',
         ...(usableImage ? ['ads_asset_approval_required'] : ['confirmed_product_image_required']),
         ...(rejectedImage ? ['asset_qc_failed'] : [])]
     };
@@ -114,11 +124,13 @@ export function validateFeed(feed, assetQc = readAssetQc()) {
       if (row.image_status !== 'existing_public_asset' || typeof row.source.image_sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(row.source.image_sha256)) throw new Error('Invalid image provenance');
     } else if (!['asset_missing', 'asset_rejected'].includes(row.image_status) || row.source.image_sha256 !== null) throw new Error('Missing image semantics');
     if (row.title.length > 150 || row.description.length > 5000) throw new Error('Text too long');
-    if (row.price !== null || row.availability !== 'unknown' || row.platform_ready !== false) throw new Error('Unverified commerce claim');
-    if (row.price_status !== 'quote_required' || row.availability_status !== 'not_live_verified') throw new Error('Missing data semantics');
+    exactKeys(row.price, ['amount', 'currency']);
+    if (!Number.isFinite(row.price.amount) || row.price.amount <= 0 || row.price.currency !== 'MXN') throw new Error('Invalid confirmed retail price');
+    if (row.availability !== 'unknown' || row.platform_ready !== false) throw new Error('Unverified availability or platform claim');
+    if (row.price_status !== 'confirmed_retail_2026-09-24' || row.availability_status !== 'not_live_verified') throw new Error('Missing data semantics');
     const qcRejected = Object.hasOwn(assetQc, row.id);
     if (qcRejected !== (row.image_status === 'asset_rejected')) throw new Error('Asset QC policy mismatch');
-    const requiredBlockers = ['confirmed_current_price_required', 'ads_feed_registration_required', 'brand_mapping_review_required', row.image_link ? 'ads_asset_approval_required' : 'confirmed_product_image_required', ...(qcRejected ? ['asset_qc_failed'] : [])];
+    const requiredBlockers = ['ads_feed_registration_required', 'brand_mapping_review_required', row.image_link ? 'ads_asset_approval_required' : 'confirmed_product_image_required', ...(qcRejected ? ['asset_qc_failed'] : [])];
     if (!Array.isArray(row.blockers) || row.blockers.length !== requiredBlockers.length || row.blockers.some((value, index) => value !== requiredBlockers[index])) throw new Error('Invalid platform gates');
     if (!PRIORITY.has(row.category)) throw new Error('Invalid category');
   }

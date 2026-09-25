@@ -174,6 +174,19 @@ def parse_money(value):
     return round(float(match.group(1).replace(',', '')), 2) if match else None
 
 
+def feed_price_matches(feed_price, customer_retail):
+    feed_price = feed_price or {}
+    feed_amount = parse_money(feed_price.get('amount'))
+    return bool(
+        feed_amount is not None
+        and feed_amount > 0
+        and customer_retail is not None
+        and customer_retail > 0
+        and feed_price.get('currency') == 'MXN'
+        and feed_amount == customer_retail
+    )
+
+
 def product_rows(workbook_path, include_internal=False):
     from openpyxl import load_workbook
 
@@ -296,7 +309,7 @@ def image_metadata(path):
         return {'width': image.width, 'height': image.height, 'format': image.format, 'has_alpha': 'A' in image.getbands()}
 
 
-def build_audit(customer_path, owner_path, expected_cost_confirmations):
+def build_audit(customer_path, owner_path, expected_cost_confirmations, public_price_confirmed=False):
     feed = json.loads((ROOT / 'data/marketing/chatgpt-product-feed.json').read_text(encoding='utf-8'))
     products = read_products()
     product_by_id = {product['id']: product for product in products}
@@ -388,6 +401,10 @@ def build_audit(customer_path, owner_path, expected_cost_confirmations):
                 'shared_path': len(image_path_to_ids[relative]) > 1,
             }
 
+        feed_price = feed_item.get('price') or {}
+        customer_retail = customer['tiers'][0] if customer else None
+        feed_price_matches_customer = feed_price_matches(feed_price, customer_retail)
+
         rows.append({
             'id': feed_item['id'],
             'category': feed_item['category'],
@@ -413,7 +430,8 @@ def build_audit(customer_path, owner_path, expected_cost_confirmations):
                 'current_live_verified': False,
                 'feed_value': 'unknown',
             },
-            'feed_price': None,
+            'feed_price': 'confirmed_retail_mxn' if feed_price_matches_customer else 'customer_retail_mismatch',
+            'feed_price_matches_customer': feed_price_matches_customer,
             'feed_availability': 'unknown',
             'platform_ready': False,
             'image': image,
@@ -450,6 +468,7 @@ def build_audit(customer_path, owner_path, expected_cost_confirmations):
         'structured_data_tiers_match_customer': sum(row['structured_data_tiers_match_customer'] for row in rows),
         'quality_mapping_review_required': sum(row['quality_mapping'] == 'review_required' for row in rows),
         'unit_currency_mapping_complete': sum(row['currency'] == 'MXN' and row['unit'] in {'piece', 'pack_50', 'equipment'} for row in rows),
+        'feed_price_matches_customer': sum(row['feed_price_matches_customer'] for row in rows),
         'existing_public_images': sum(row['image']['status'] == 'existing_public_asset' for row in rows),
         'asset_missing': sum(row['image']['status'] == 'ASSET_MISSING' for row in rows),
         'feed_usable_images': sum(item['image_link'] is not None for item in feed['items']),
@@ -465,16 +484,26 @@ def build_audit(customer_path, owner_path, expected_cost_confirmations):
         'vip_only_policy_difference': sum(row['commerce_difference_class'] == 'vip_only_policy_difference_do_not_export' for row in rows),
         'public_surface_divergence': sum(row['commerce_difference_class'] == 'public_surface_divergence' for row in rows),
     }
+    price_gates_pass = bool(rows) and all(
+        row['model_mapping'] == 'exact'
+        and row['customer_owner_sales_tiers_match']
+        and row['website_sales_tiers_match_customer']
+        and row['app_sales_tiers_match_customer']
+        and row['structured_data_tiers_match_customer']
+        and row['feed_price_matches_customer']
+        for row in rows
+    )
+    public_price_sync_confirmed = bool(public_price_confirmed and price_gates_pass)
     return {
         'schema_version': 2,
         'audit_date': '2026-09-24',
-        'status': 'LOCAL_AUDIT_NO_COMMERCE_WRITE',
+        'status': 'PUBLIC_PRICE_SYNC_CONFIRMED' if public_price_sync_confirmed else 'PUBLIC_PRICE_SYNC_NOT_CONFIRMED',
         'sources': {
             'customer_workbook': {
                 'sha256': customer_hash,
                 'product_rows': len(customer_rows),
-                'confirmation': 'USER_CONFIRMED_NEW_PRICE_SOURCE',
-                'public_price_tier_approved': False,
+                'confirmation': 'USER_CONFIRMED_PUBLIC_PRICE_SYNC' if public_price_confirmed else 'PUBLIC_PRICE_CONFIRMATION_REQUIRED',
+                'public_price_tier_approved': public_price_sync_confirmed,
             },
             'owner_workbook': {'sha256': owner_hash, 'product_rows': len(owner_rows), 'private_values_exported': False},
             'website': {'path': 'data/products.generated.js', 'sha256': sha256(website_source_path)},
@@ -505,17 +534,20 @@ def markdown(audit):
     image_findings = [item for item in audit['items'] if item['image']['qc_status'].startswith(('QC_FAIL_', 'MANUAL_REVIEW_'))]
     lines = [
         '# ChatGPT Feed 收尾审计（脱敏）', '',
-        '状态：**LOCAL_AUDIT_NO_COMMERCE_WRITE**。本报告不包含成本、库存数量或任何价格数值；没有修改公开价格、库存、图片或 Feed 就绪状态。', '',
+        f"状态：**{audit['status']}**。本报告不包含成本、库存数量或任何价格数值；库存、图片和 Feed 就绪状态未开放。", '',
         '## 结论', '',
         f"- Feed 候选：{summary['feed_candidates']}；两份工作簿产品行：{summary['workbook_product_rows']}；逐项映射：{summary['mapped_feed_rows']}；未映射：{summary['unmapped_feed_rows']}。",
         f"- 工作簿有 {summary['workbook_rows_excluded_from_feed']} 行不属于 146 候选，保留为排除项，没有强行配对。",
         f"- 客户表与老板表四档销售价一致：{summary['customer_owner_sales_tiers_match']}/{summary['feed_candidates']}。",
-        f"- 官网 / App / 结构化数据与 2026-09-24 客户表四档一致：{summary['website_sales_tiers_match_customer']} / {summary['app_sales_tiers_match_customer']} / {summary['structured_data_tiers_match_customer']}，其余只记录差异，不自动改价。",
-        f"- 差异归类：{summary['price_source_revision_review']} 项属于新价格来源版本差异、仍需明确公开档位批准；{summary['vip_only_policy_difference']} 项仅 VIP 档不同且不得导出；跨公开表面自身不一致：{summary['public_surface_divergence']}。",
+        f"- 官网 / App / 结构化数据与 2026-09-24 客户表四档一致：{summary['website_sales_tiers_match_customer']} / {summary['app_sales_tiers_match_customer']} / {summary['structured_data_tiers_match_customer']}。",
+        (f"- Feed Menudeo 价与客户表逐项一致：{summary['feed_price_matches_customer']}/{summary['feed_candidates']}；已满足确认门槛。"
+         if audit['status'] == 'PUBLIC_PRICE_SYNC_CONFIRMED'
+         else f"- Feed Menudeo 价与客户表逐项一致：{summary['feed_price_matches_customer']}/{summary['feed_candidates']}；未满足确认门槛，不得视为已批准。"),
+        f"- 差异归类：{summary['price_source_revision_review']} 项仍有新价格来源版本差异；{summary['vip_only_policy_difference']} 项仅 VIP 档不同；跨公开表面自身不一致：{summary['public_surface_divergence']}。",
         f"- 现有公开图片：{summary['existing_public_images']}；缺图：{summary['asset_missing']}；具有当前审批证据：{summary['approved_for_web_assets']}；仅有公开路径、缺少标准化审批证据：{summary['source_unconfirmed_assets']}。",
         f"- 现有图片中明确 QC 失败：{summary['asset_qc_fail']}；需按系列/品质人工确认：{summary['asset_manual_review']}。这些状态不改变原公开文件，只阻止把它们视为可交付广告素材。",
         f"- Feed 允许保留的图片：{summary['feed_usable_images']}；图片阻塞：{summary['feed_image_blockers']}（14 项物理缺图 + 6 项 QC 拒绝）。",
-        f"- Feed 保持 price=null、availability=unknown、platform_ready=false；可上传：{summary['platform_ready']}。", '',
+        f"- Feed 已带确认的 Menudeo 价；availability=unknown、platform_ready=false；可上传：{summary['platform_ready']}。", '',
         '## 缺图与最小补拍需求', '',
         '以下均为现有产品 ID，不是已确认的官方 SKU；14 项的官方 SKU 仍为 pending。', '',
         '| 产品 ID | 型号 | 品质 | 最小补拍需求 |', '| --- | --- | --- | --- |',
@@ -531,7 +563,7 @@ def markdown(audit):
     else:
         lines.append('- 无。')
     lines.extend(['', '## 四方价格一致性差异（不含数值）', ''])
-    lines.append(f"- 存在官网、App 或结构化数据与客户表不一致的候选：{len(price_mismatch)}。本次未自动覆盖。")
+    lines.append(f"- 存在官网、App 或结构化数据与客户表不一致的候选：{len(price_mismatch)}。")
     lines.extend(['', '| 产品 ID | 分类 | 官网差异档 | App 差异档 | 结构化数据差异档 |', '| --- | --- | --- | --- | --- |'])
     for item in price_mismatch:
         lines.append(f"| `{item['id']}` | {item['commerce_difference_class']} | {', '.join(item['website_mismatch_fields']) or '-'} | {', '.join(item['app_mismatch_fields']) or '-'} | {', '.join(item['structured_data_mismatch_fields']) or '-'} |")
@@ -550,7 +582,7 @@ def markdown(audit):
         '## 外部状态', '',
         '- Feed 上传：NOT RUN。',
         '- 广告启用与花费：NOT RUN。',
-        '- 生产价格/库存/图片写入：NOT RUN。',
+        '- 生产价格发布：待本次部署后验证；库存/图片写入：NOT RUN。',
     ])
     return '\n'.join(lines) + '\n'
 
@@ -561,6 +593,7 @@ def main():
     parser.add_argument('--customer', type=Path)
     parser.add_argument('--owner', type=Path)
     parser.add_argument('--private-cost-confirmations', type=Path)
+    parser.add_argument('--public-price-confirmed', action='store_true')
     parser.add_argument('--json', default=ROOT / 'docs/chatgpt-ads/feed-closeout-audit.json', type=Path)
     parser.add_argument('--markdown', default=ROOT / 'docs/chatgpt-ads/feed-closeout-audit.md', type=Path)
     args = parser.parse_args()
@@ -570,6 +603,9 @@ def main():
         assert commerce_difference_class((110, 90, 80, 70), (120, 90, 80, 70), (130, 90, 80, 70), source) == 'public_surface_divergence'
         assert commerce_difference_class((100, 90, 80, 75), (100, 90, 80, 75), (100, 90, 80, 75), source) == 'vip_only_policy_difference_do_not_export'
         assert commerce_difference_class((110, 90, 80, 70), (110, 90, 80, 70), (110, 90, 80, 70), source) == 'new_source_revision_requires_public_price_approval'
+        assert feed_price_matches({'amount': 100, 'currency': 'MXN'}, 100)
+        assert not feed_price_matches({'currency': 'MXN'}, None)
+        assert not feed_price_matches({'amount': 100, 'currency': 'USD'}, 100)
         print('feed-closeout policy self-test: PASS')
         return
     if not args.customer or not args.owner or not args.private_cost_confirmations:
@@ -579,7 +615,7 @@ def main():
         (item['sheet'], item['model_key']): round(float(item['expected']), 2)
         for item in private_checks
     }
-    audit = build_audit(args.customer, args.owner, expected_cost_confirmations)
+    audit = build_audit(args.customer, args.owner, expected_cost_confirmations, args.public_price_confirmed)
     args.json.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     args.markdown.write_text(markdown(audit), encoding='utf-8')
     print(json.dumps(audit['summary'], ensure_ascii=False))

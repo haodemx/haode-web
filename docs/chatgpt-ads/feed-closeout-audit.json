@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "audit_date": "2026-09-24",
-  "status": "LOCAL_AUDIT_NO_COMMERCE_WRITE",
+  "status": "PUBLIC_PRICE_SYNC_CONFIRMED",
   "sources": {
     "customer_workbook": {
       "sha256": "3afbebfaa59bbf599545ad385b7727f9b41353ebd0750abaa62be3812a609f5a",
       "product_rows": 156,
-      "confirmation": "USER_CONFIRMED_NEW_PRICE_SOURCE",
-      "public_price_tier_approved": false
+      "confirmation": "USER_CONFIRMED_PUBLIC_PRICE_SYNC",
+      "public_price_tier_approved": true
     },
     "owner_workbook": {
       "sha256": "5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709",
@@ -16,20 +16,20 @@
     },
     "website": {
       "path": "data/products.generated.js",
-      "sha256": "74fc4baa1ea336b89778038dbc13e438a51e994c85df28b7b830fa9ee2e3dc5c"
+      "sha256": "dd5ba399b0905d5b6faa88646c042e324225e59bc38cc783e7f41b117cdb45b9"
     },
     "app": {
       "path": "app/products.json",
-      "sha256": "92ac3d4e2244e6b0b4106ed90ee7ba487be5cbdf44e249ab3e90cf30a8875a3d"
+      "sha256": "c258708cf25c2f1929c1ead9a3c3660c52d3df0004f1d8cc69b018da39ce7c35"
     },
     "structured_data": {
       "path": "producto/{id}/index.html",
       "product_pages": 146,
-      "sha256": "6a1d8aca63114df2f4f348423aaa91780cb51c49689b64cfb67c69180577f834"
+      "sha256": "19bf5f2597d343834e9e9ab81e324d244f9148e0bd81f58370e98aabf60ca6bf"
     },
     "feed": {
       "path": "data/marketing/chatgpt-product-feed.json",
-      "sha256": "85519e74d1165a6949cec5fec5ac870a9313e519f2f04c539d0112e7c42d8a23"
+      "sha256": "f4a88a7e38d72eca0189687d8560a15785551bb434a9bb8e8b4875c58fd584fb"
     },
     "asset_qc_policy": {
       "path": "data/marketing/chatgpt-feed-asset-qc.json",
@@ -52,11 +52,12 @@
     "unmapped_feed_rows": 0,
     "workbook_rows_excluded_from_feed": 10,
     "customer_owner_sales_tiers_match": 146,
-    "website_sales_tiers_match_customer": 73,
-    "app_sales_tiers_match_customer": 73,
-    "structured_data_tiers_match_customer": 73,
+    "website_sales_tiers_match_customer": 146,
+    "app_sales_tiers_match_customer": 146,
+    "structured_data_tiers_match_customer": 146,
     "quality_mapping_review_required": 34,
     "unit_currency_mapping_complete": 146,
+    "feed_price_matches_customer": 146,
     "existing_public_images": 132,
     "asset_missing": 14,
     "feed_usable_images": 126,
@@ -68,9 +69,9 @@
     "exact_duplicate_asset_groups": 8,
     "platform_ready": 0,
     "owner_confirmed_cost_checks": 3,
-    "price_source_revision_review": 70,
-    "vip_only_policy_difference": 2,
-    "public_surface_divergence": 1
+    "price_source_revision_review": 0,
+    "vip_only_policy_difference": 0,
+    "public_surface_divergence": 0
   },
   "owner_cost_confirmation_checks": [
     {
@@ -262,7 +263,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -301,34 +303,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -367,34 +355,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -433,34 +407,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -499,34 +459,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -565,34 +511,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -631,34 +563,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -697,34 +615,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -775,7 +679,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -814,34 +719,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -880,34 +771,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -946,34 +823,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1024,7 +887,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1063,34 +927,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1129,34 +979,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1195,34 +1031,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1261,34 +1083,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1327,34 +1135,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1393,34 +1187,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1459,34 +1239,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1525,34 +1291,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1603,7 +1355,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1642,34 +1395,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1720,7 +1459,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1759,34 +1499,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1825,34 +1551,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1891,34 +1603,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -1969,7 +1667,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2008,34 +1707,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2074,34 +1759,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2140,34 +1811,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2206,34 +1863,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2272,34 +1915,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2338,34 +1967,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2404,34 +2019,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2470,34 +2071,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2536,34 +2123,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2602,34 +2175,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2668,34 +2227,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2734,34 +2279,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2800,34 +2331,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2866,31 +2383,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2929,34 +2435,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -2995,34 +2487,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3061,34 +2539,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3127,34 +2591,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3193,34 +2643,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3259,34 +2695,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3325,34 +2747,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3383,34 +2791,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3449,34 +2843,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3515,34 +2895,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3581,34 +2947,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3659,7 +3011,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3698,34 +3051,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3764,34 +3103,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3842,7 +3167,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3893,7 +3219,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3932,34 +3259,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -3998,34 +3311,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4064,34 +3363,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4130,34 +3415,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4196,34 +3467,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4274,7 +3531,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4325,7 +3583,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4364,34 +3623,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4442,7 +3687,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4493,7 +3739,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4532,34 +3779,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4590,34 +3823,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4668,7 +3887,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4707,34 +3927,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4785,7 +3991,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4828,7 +4035,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4871,7 +4079,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4902,34 +4111,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -4980,7 +4175,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5031,7 +4227,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5082,7 +4279,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5133,7 +4331,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5184,7 +4383,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5215,34 +4415,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5285,7 +4471,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5336,7 +4523,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5387,7 +4575,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5426,34 +4615,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5504,7 +4679,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5555,7 +4731,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5594,34 +4771,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5672,7 +4835,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5723,7 +4887,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5774,7 +4939,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5825,7 +4991,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5876,7 +5043,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5919,7 +5087,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -5950,34 +5119,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6028,7 +5183,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6079,7 +5235,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6130,7 +5287,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6181,7 +5339,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6232,7 +5391,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6271,34 +5431,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6349,7 +5495,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6400,7 +5547,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6451,7 +5599,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6502,7 +5651,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6553,7 +5703,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6604,7 +5755,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6655,7 +5807,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6706,7 +5859,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6757,7 +5911,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6808,7 +5963,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6847,34 +6003,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6925,7 +6067,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -6976,7 +6119,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7015,25 +6159,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "vip"
-      ],
-      "commerce_difference_class": "vip_only_policy_difference_do_not_export",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7064,25 +6203,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "vip"
-      ],
-      "commerce_difference_class": "vip_only_policy_difference_do_not_export",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7113,34 +6247,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7183,7 +6303,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7226,7 +6347,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7277,7 +6399,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7328,7 +6451,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7379,7 +6503,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7430,7 +6555,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7481,7 +6607,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7532,7 +6659,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7583,7 +6711,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7634,7 +6763,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7685,7 +6815,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7728,7 +6859,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7779,7 +6911,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7830,7 +6963,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7881,7 +7015,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7920,34 +7055,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -7998,7 +7119,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8049,7 +7171,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8100,7 +7223,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8139,34 +7263,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8205,34 +7315,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8271,34 +7367,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "new_source_revision_requires_public_price_approval",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8337,34 +7419,20 @@
       "currency": "MXN",
       "unit": "piece",
       "customer_owner_sales_tiers_match": true,
-      "website_sales_tiers_match_customer": false,
-      "app_sales_tiers_match_customer": false,
-      "structured_data_tiers_match_customer": false,
-      "website_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "app_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "structured_data_mismatch_fields": [
-        "retail",
-        "wholesale",
-        "box",
-        "vip"
-      ],
-      "commerce_difference_class": "public_surface_divergence",
+      "website_sales_tiers_match_customer": true,
+      "app_sales_tiers_match_customer": true,
+      "structured_data_tiers_match_customer": true,
+      "website_mismatch_fields": [],
+      "app_mismatch_fields": [],
+      "structured_data_mismatch_fields": [],
+      "commerce_difference_class": "aligned",
       "inventory_source": {
         "snapshot_date": "2026-09-14",
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8415,7 +7483,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8466,7 +7535,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8517,7 +7587,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8568,7 +7639,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {
@@ -8619,7 +7691,8 @@
         "current_live_verified": false,
         "feed_value": "unknown"
       },
-      "feed_price": null,
+      "feed_price": "confirmed_retail_mxn",
+      "feed_price_matches_customer": true,
       "feed_availability": "unknown",
       "platform_ready": false,
       "image": {

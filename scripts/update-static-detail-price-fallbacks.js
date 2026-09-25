@@ -50,7 +50,7 @@ function priceTableHtml(rows) {
 
 function hasApprovedCustomerPrice(product) {
   const priceSource = String(product?.priceSource || '');
-  return priceSource.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx');
+  return priceSource.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx');
 }
 
 function updateStaticPage(file, product, rows) {
