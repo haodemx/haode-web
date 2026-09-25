@@ -16,8 +16,35 @@
     "gbraid",
     "wbraid"
   ]);
+  const PRODUCTION_ANALYTICS_HOSTS = new Set(["haode.com.mx", "www.haode.com.mx"]);
+  const CONVERSION_EVENTS = new Set(["ViewProduct", "WhatsAppClick", "Lead"]);
+  const CONVERSION_PARAMETERS = new Set([
+    "event_id",
+    "session_id",
+    "source",
+    "medium",
+    "campaign",
+    "content",
+    "term",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term",
+    "landing_page",
+    "page_path",
+    "referrer_host",
+    "product_id",
+    "product_sku",
+    "contact_area",
+    "lead_registered"
+  ]);
   const pendingConversions = [];
   const dataLayer = global.dataLayer = global.dataLayer || [];
+
+  function isProductionAnalyticsHost() {
+    return PRODUCTION_ANALYTICS_HOSTS.has(String(global.location.hostname || "").toLowerCase());
+  }
 
   if (typeof global.gtag !== "function") {
     global.gtag = function gtag() {
@@ -82,6 +109,7 @@
   global.gtag("set", "ads_data_redaction", true);
 
   function ensureGoogleTagLoaded() {
+    if (!isProductionAnalyticsHost()) return;
     if (!currentConsent.analytics && !currentConsent.advertising) return;
     if (global.document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}"]`)) return;
     const loader = global.document.createElement("script");
@@ -91,12 +119,14 @@
     global.document.head.appendChild(loader);
   }
 
-  global.gtag("js", new Date());
-  global.gtag("config", MEASUREMENT_ID, {
-    allow_google_signals: false,
-    allow_ad_personalization_signals: currentConsent.advertising,
-    page_location: analyticsPageLocation()
-  });
+  if (isProductionAnalyticsHost()) {
+    global.gtag("js", new Date());
+    global.gtag("config", MEASUREMENT_ID, {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: currentConsent.advertising,
+      page_location: analyticsPageLocation()
+    });
+  }
   ensureGoogleTagLoaded();
 
   function saveConsent(choice) {
@@ -120,11 +150,13 @@
     if (!currentConsent.analytics || !currentConsent.advertising) pendingConversions.length = 0;
     saveConsent(currentConsent);
     global.gtag("consent", "update", consentParameters(currentConsent));
-    global.gtag("config", MEASUREMENT_ID, {
-      allow_google_signals: false,
-      allow_ad_personalization_signals: currentConsent.advertising,
-      send_page_view: false
-    });
+    if (isProductionAnalyticsHost()) {
+      global.gtag("config", MEASUREMENT_ID, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: currentConsent.advertising,
+        send_page_view: false
+      });
+    }
     ensureGoogleTagLoaded();
     global.dispatchEvent(new CustomEvent("haode:privacy-consent", {
       detail: { ...currentConsent }
@@ -307,9 +339,21 @@
     measurementId: MEASUREMENT_ID,
     event(name, parameters = {}) {
       if (!currentConsent.analytics) return false;
+      if (!isProductionAnalyticsHost()) return false;
       global.gtag("event", name, parameters);
       return true;
     }
+  });
+
+  global.addEventListener?.("haode:conversion", (conversionEvent) => {
+    if (!currentConsent.analytics || !currentConsent.advertising) return;
+    const detail = conversionEvent?.detail;
+    if (!detail || !CONVERSION_EVENTS.has(detail.event)) return;
+    const parameters = {};
+    for (const key of CONVERSION_PARAMETERS) {
+      if (["string", "boolean", "number"].includes(typeof detail[key])) parameters[key] = detail[key];
+    }
+    global.HaodeAnalytics.event(detail.event, parameters);
   });
 
   global.HaodePrivacy = Object.freeze({
@@ -342,6 +386,8 @@
     const id = link.getAttribute("data-product-whatsapp") || (area === "product" ? global.HaodeConversionProductId : "");
     const parameters = { contact_area: area };
     if (typeof id === "string" && id.length <= 100 && /^[a-zA-Z0-9_-]+$/.test(id) && !/\d{10,}/.test(id.replace(/[-_]/g, ""))) parameters.product_id = id;
+    const sku = area === "product" ? global.HaodeConversionProductSku : "";
+    if (typeof sku === "string" && sku.length <= 100 && /^[a-zA-Z0-9_-]+$/.test(sku) && !/\d{10,}/.test(sku.replace(/[-_]/g, ""))) parameters.product_sku = sku;
     if (pendingConversions.length < 100) pendingConversions.push({ name: "WhatsAppClick", parameters });
   }, true);
   const conversionScript = global.document.createElement("script");

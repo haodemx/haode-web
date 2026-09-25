@@ -4,11 +4,11 @@ import vm from 'node:vm';
 import test from 'node:test';
 import { prepareOpenAIEvent } from '../scripts/chatgpt-event-mapping.mjs';
 const source = fs.readFileSync(new URL('../conversion-tracking.js', import.meta.url), 'utf8');
-function harness({ consent = { analytics: true, advertising: true }, search = '', stored = new Map(), restricted = false } = {}) {
+function harness({ consent = { analytics: true, advertising: true }, search = '', stored = new Map(), restricted = false, referrer = 'https://chatgpt.com/' } = {}) {
   const handlers = {};
   const window = {
     location: { pathname: '/producto/mica-hd/', hash: '', search, href: `https://haode.com.mx/producto/mica-hd/${search}` },
-    document: { referrer: 'https://chatgpt.com/', addEventListener(name, fn) { handlers[`document:${name}`] = fn; } },
+    document: { referrer, addEventListener(name, fn) { handlers[`document:${name}`] = fn; } },
     HaodePrivacy: { getConsent: () => consent },
     sessionStorage: { getItem(k) { if (restricted) throw Error('denied'); return stored.get(k); }, setItem(k, v) { if (restricted) throw Error('denied'); stored.set(k, v); }, removeItem(k) { if (restricted) throw Error('denied'); stored.delete(k); } },
     crypto: { randomUUID: () => crypto.randomUUID() },
@@ -53,6 +53,32 @@ test('allowlist strips customer payload and URLs, preserves all campaign tokens 
   const event = newer.api.track('WhatsAppClick').event;
   assert.equal(event.source, 'google');
   assert.equal('utm_content' in event, false);
+});
+
+test('conversion identity includes session, referrer and product SKU without customer data', () => {
+  const h = harness({ search: '?utm_source=chatgpt&utm_medium=ai_referral&utm_campaign=pilot' });
+  const result = h.api.viewProduct('mica-hd', 'MICA-HD-001');
+  assert.equal(result.event.product_sku, 'MICA-HD-001');
+  assert.equal(result.event.referrer_host, 'chatgpt.com');
+  assert.equal(result.event.medium, 'ai_referral');
+  assert.equal(result.event.campaign, 'pilot');
+  assert.match(result.event.session_id, /^[a-f0-9-]{36}$/i);
+  assert.equal(h.api.getSessionId(), result.event.session_id);
+  const next = harness({ stored: h.stored });
+  assert.equal(next.api.getSessionId(), result.event.session_id);
+});
+
+test('organic search and AI referrers retain distinct source taxonomy', () => {
+  for (const [referrer, expectedSource, expectedMedium] of [
+    ['https://www.google.com/search?q=haode', 'google', 'organic_search'],
+    ['https://www.bing.com/search?q=haode', 'bing', 'organic_search'],
+    ['https://www.perplexity.ai/search/haode', 'perplexity', 'ai_referral'],
+    ['https://gemini.google.com/app/abc', 'gemini', 'ai_referral']
+  ]) {
+    const event = harness({ referrer }).api.track('ViewProduct', { product_id: 'mica-hd' }).event;
+    assert.equal(event.source, expectedSource, referrer);
+    assert.equal(event.medium, expectedMedium, referrer);
+  }
 });
 
 test('sensitive/invalid attribution is omitted and storage failures are safe', () => {

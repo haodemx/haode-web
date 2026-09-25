@@ -4,11 +4,11 @@ import test from 'node:test';
 import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../campaign-attribution.js', import.meta.url), 'utf8');
-function harness(search, consent = true) {
+function harness(search, consent = true, referrer = '') {
   const makeStorage = () => { const data = new Map(); return {getItem: k => data.get(k) ?? null, setItem: (k,v) => data.set(k,v), removeItem: k => data.delete(k)}; };
   const window = {
     location: {search, pathname: '/categoria/oled-diagnostica/', origin: 'https://haode.com.mx'},
-    document: {referrer: '', readyState: 'loading', addEventListener() {}},
+    document: {referrer, readyState: 'loading', addEventListener() {}},
     localStorage: makeStorage(), sessionStorage: makeStorage(), addEventListener() {},
     HaodePrivacy: {getConsent: () => ({analytics: consent})}
   };
@@ -42,6 +42,23 @@ for (const value of ['cliente@example.com', '+52 55 1234 5678', '5512345678']) {
 test('no keyword is invented for an organic referral', () => {
   const w = harness(''); w.document.referrer = 'https://www.google.com/';
   assert.equal(w.HaodeCampaign.capture().term, '');
+});
+
+test('search and AI referrers keep distinct source, medium and host', () => {
+  for (const [referrer, source, medium] of [
+    ['https://www.google.com/search?q=haode', 'google', 'organic_search'],
+    ['https://www.bing.com/search?q=haode', 'bing', 'organic_search'],
+    ['https://chatgpt.com/c/abc', 'chatgpt', 'ai_referral'],
+    ['https://www.perplexity.ai/search/haode', 'perplexity', 'ai_referral'],
+    ['https://gemini.google.com/app/abc', 'gemini', 'ai_referral'],
+    ['https://copilot.microsoft.com/chats/abc', 'copilot', 'ai_referral'],
+    ['https://claude.ai/chat/abc', 'claude', 'ai_referral']
+  ]) {
+    const result = harness('', true, referrer).HaodeCampaign.capture();
+    assert.equal(result.source, source, referrer);
+    assert.equal(result.medium, medium, referrer);
+    assert.equal(result.referrerHost, new URL(referrer).hostname.replace(/^www\./, ''), referrer);
+  }
 });
 
 test('without consent a current keyword is not persisted across pages', () => {

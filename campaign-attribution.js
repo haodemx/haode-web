@@ -67,19 +67,24 @@
   function referrerAttribution() {
     try {
       const host = global.document.referrer ? new URL(global.document.referrer).hostname.toLowerCase() : "";
-      if (!host) return { source: "direct", medium: "none" };
-      if (/google\./i.test(host)) return { source: "google", medium: "organic_search" };
-      if (/(^|\.)bing\.com$/i.test(host)) return { source: "bing", medium: "organic_search" };
-      if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(host)) return { source: "chatgpt", medium: "ai_referral" };
-      if (/instagram/i.test(host)) return { source: "instagram", medium: "organic_social" };
-      if (/facebook|fb\.com/i.test(host)) return { source: "facebook", medium: "organic_social" };
-      if (/tiktok/i.test(host)) return { source: "tiktok", medium: "organic_social" };
+      const referrerHost = host.replace(/^www\./, "").slice(0, 160);
+      if (!host) return { source: "direct", medium: "none", referrerHost: "" };
+      if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(host)) return { source: "chatgpt", medium: "ai_referral", referrerHost };
+      if (/(^|\.)perplexity\.ai$/i.test(host)) return { source: "perplexity", medium: "ai_referral", referrerHost };
+      if (/(^|\.)gemini\.google\.com$/i.test(host)) return { source: "gemini", medium: "ai_referral", referrerHost };
+      if (/(^|\.)copilot\.microsoft\.com$/i.test(host)) return { source: "copilot", medium: "ai_referral", referrerHost };
+      if (/(^|\.)claude\.ai$/i.test(host)) return { source: "claude", medium: "ai_referral", referrerHost };
+      if (/google\./i.test(host)) return { source: "google", medium: "organic_search", referrerHost };
+      if (/(^|\.)bing\.com$/i.test(host)) return { source: "bing", medium: "organic_search", referrerHost };
+      if (/instagram/i.test(host)) return { source: "instagram", medium: "organic_social", referrerHost };
+      if (/facebook|fb\.com/i.test(host)) return { source: "facebook", medium: "organic_social", referrerHost };
+      if (/tiktok/i.test(host)) return { source: "tiktok", medium: "organic_social", referrerHost };
       if (/(^|\.)(x\.com|twitter\.com|linkedin\.com|youtube\.com|youtu\.be)$/i.test(host)) {
-        return { source: normalizeToken(host.replace(/^www\./, ""), "social"), medium: "organic_social" };
+        return { source: normalizeToken(host.replace(/^www\./, ""), "social"), medium: "organic_social", referrerHost };
       }
-      return { source: normalizeToken(host.replace(/^www\./, ""), "referral"), medium: "referral" };
+      return { source: normalizeToken(host.replace(/^www\./, ""), "referral"), medium: "referral", referrerHost };
     } catch {
-      return { source: "direct", medium: "none" };
+      return { source: "direct", medium: "none", referrerHost: "" };
     }
   }
 
@@ -101,6 +106,7 @@
           term: normalizeToken(params.get("utm_term")),
           landingPage: global.location.pathname || "/",
           entryChannel: normalizeToken(channel, "haode_web"),
+          referrerHost: incomingReferrer.referrerHost,
           capturedAt: Date.now()
         }
       : {
@@ -111,6 +117,7 @@
           term: normalizeToken(stored.term),
           landingPage: String(stored.landingPage || global.location.pathname || "/").slice(0, 240),
           entryChannel: normalizeToken(stored.entryChannel || channel, "haode_web"),
+          referrerHost: String(stored.referrerHost || incomingReferrer.referrerHost || "").slice(0, 160),
           capturedAt: Number(stored.capturedAt || Date.now())
         };
 
@@ -130,7 +137,8 @@
       attribution_content: attribution.content,
       landing_page: attribution.landingPage,
       campaign_reference: reference(attribution),
-      entry_channel: attribution.entryChannel
+      entry_channel: attribution.entryChannel,
+      referrer_host: attribution.referrerHost
     };
   }
 
