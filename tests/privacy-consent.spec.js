@@ -23,7 +23,6 @@ test('Consent Mode starts denied and saves an explicit analytics choice', async 
 
   const initialCommands = await page.evaluate(() => window.dataLayer.map((entry) => Array.from(entry)));
   const defaultConsent = initialCommands.find((entry) => entry[0] === 'consent' && entry[1] === 'default');
-  const configIndex = initialCommands.findIndex((entry) => entry[0] === 'config');
   const consentIndex = initialCommands.indexOf(defaultConsent);
   expect(defaultConsent[2]).toMatchObject({
     analytics_storage: 'denied',
@@ -32,7 +31,7 @@ test('Consent Mode starts denied and saves an explicit analytics choice', async 
     ad_personalization: 'denied',
   });
   expect(consentIndex).toBeGreaterThanOrEqual(0);
-  expect(configIndex).toBeGreaterThan(consentIndex);
+  expect(initialCommands.some((entry) => entry[0] === 'config')).toBe(false);
   expect(await page.locator('[data-haode-analytics-loader]').count()).toBe(0);
 
   await page.getByRole('button', { name: 'Configurar' }).click();
@@ -57,7 +56,10 @@ test('Consent Mode starts denied and saves an explicit analytics choice', async 
     ad_storage: 'denied',
     ad_user_data: 'denied',
   });
-  await expect(page.locator('[data-haode-analytics-loader]')).toHaveCount(1);
+  await expect(page.locator('[data-haode-analytics-loader]')).toHaveCount(0);
+  expect(await page.evaluate(() => window.dataLayer
+    .map((entry) => Array.from(entry))
+    .some((entry) => entry[0] === 'config'))).toBe(false);
 
   await page.reload({ waitUntil: 'domcontentloaded' });
   await expect(banner).toBeHidden();
@@ -76,8 +78,8 @@ test('analytics strips sensitive query values and does not persist them', async 
   });
 
   const commands = await page.evaluate(() => window.dataLayer.map((entry) => Array.from(entry)));
-  const config = commands.find((entry) => entry[0] === 'config');
-  expect(config[2].page_location).toBe(`${baseURL}/`);
+  expect(commands.some((entry) => entry[0] === 'config')).toBe(false);
+  expect(await page.locator('[data-haode-analytics-loader]')).toHaveCount(0);
   expect(JSON.stringify(commands)).not.toContain('cliente@example.com');
   expect(JSON.stringify(commands)).not.toContain('5512345678');
   expect(await page.evaluate(() => localStorage.getItem('haode-campaign-attribution-v1'))).toBeNull();
