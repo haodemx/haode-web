@@ -21,13 +21,13 @@
 
 | 产品 ID | 型号 | 品质 | 最小补拍需求 |
 | --- | --- | --- | --- |
-| `iphone-incell-17e` | iPhone 17E | INCELL FHD | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
+| `iphone-incell-17e` | iPhone 17E | INCELL FHD C/IC | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
 | `iphone-oled-16e` | iPhone 16E | OLED PREMIUM | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
 | `iphone-oled-soft-14` | iPhone 14 | SOFT OLED PREMIUM | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
 | `iphone-oled-soft-14-plus` | iPhone 14 plus | SOFT OLED PREMIUM | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
 | `iphone-oled-soft-15pro` | iPhone 15PRO | SOFT OLED PREMIUM | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
-| `oled-diagnostica-12mini-hard` | iPhone 12MINI | DIAGNOTICO HARD OLED | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
-| `oled-diagnostica-16e-soft` | iPhone 16E | DIAGNOTICO  SOFT OLED | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
+| `oled-diagnostica-12mini-hard` | iPhone 12MINI | DIAGNÓSTICO HARD OLED | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
+| `oled-diagnostica-16e-soft` | iPhone 16E | DIAGNÓSTICO SOFT OLED | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
 | `samsung-incell-s20-4g` | S20 4G | INCELL FHD C/M | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
 | `samsung-incell-s20-5g` | S20 5G | INCELL FHD C/M | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
 | `samsung-incell-z-flip3` | Z FLIP3 | INCELL S/M | 同一产品、同一型号与同一品质的真实正面主图；完整产品入镜，文字/Logo/排线不遮挡，建议原图短边 ≥1200px；附包装或标签同框作为型号证据。 |
@@ -38,42 +38,7 @@
 
 ## 品质映射需人工确认
 
-| 产品 ID | 官网品质 | 来源位置 |
-| --- | --- | --- |
-| `haode-pantalla-oled-diagnostica-modelo-11-pro-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 8 行 |
-| `haode-pantalla-oled-diagnostica-modelo-12-12-pro` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 9 行 |
-| `haode-pantalla-oled-diagnostica-modelo-12-pro-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 10 行 |
-| `haode-pantalla-oled-diagnostica-modelo-13` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 12 行 |
-| `haode-pantalla-oled-diagnostica-modelo-13-pro` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 13 行 |
-| `haode-pantalla-oled-diagnostica-modelo-13-pro-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 14 行 |
-| `haode-pantalla-oled-diagnostica-modelo-14` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 15 行 |
-| `haode-pantalla-oled-diagnostica-modelo-14-plus` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 18 行 |
-| `haode-pantalla-oled-diagnostica-modelo-14-pro` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 16 行 |
-| `haode-pantalla-oled-diagnostica-modelo-14-pro-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 17 行 |
-| `haode-pantalla-oled-diagnostica-modelo-15` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 19 行 |
-| `haode-pantalla-oled-diagnostica-modelo-15-plus` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 22 行 |
-| `haode-pantalla-oled-diagnostica-modelo-15-pro` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 20 行 |
-| `haode-pantalla-oled-diagnostica-modelo-15-pro-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 21 行 |
-| `haode-pantalla-oled-diagnostica-modelo-16` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 24 行 |
-| `haode-pantalla-oled-diagnostica-modelo-16-plus` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 27 行 |
-| `haode-pantalla-oled-diagnostica-modelo-16-pro` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 25 行 |
-| `haode-pantalla-oled-diagnostica-modelo-16-pro-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 26 行 |
-| `haode-pantalla-oled-diagnostica-modelo-17` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 28 行 |
-| `haode-pantalla-oled-diagnostica-modelo-17-pro` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 29 行 |
-| `haode-pantalla-oled-diagnostica-modelo-17-pro-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 30 行 |
-| `haode-pantalla-oled-diagnostica-modelo-xs-max` | OLED Diagnóstica · Tamaño original | 05 IPHONE DIAGNOSTICO 第 7 行 |
-| `iphone-oled-14pro` | OLED PREMIUM | 04 IPHONE OLED 第 18 行 |
-| `iphone-oled-15` | OLED PREMIUM | 04 IPHONE OLED 第 20 行 |
-| `samsung-oled-note-10` | OLED CON MARCO | 07 SAMSUNG OLED 第 13 行 |
-| `samsung-oled-note-20` | OLED CON MARCO | 07 SAMSUNG OLED 第 14 行 |
-| `samsung-oled-note-20-ultra` | OLED CON MARCO | 07 SAMSUNG OLED 第 15 行 |
-| `samsung-oled-s20-plus` | OLED CON MARCO | 07 SAMSUNG OLED 第 7 行 |
-| `samsung-oled-s21-ultra` | OLED CON MARCO | 07 SAMSUNG OLED 第 8 行 |
-| `samsung-oled-s22-ultra` | OLED CON MARCO | 07 SAMSUNG OLED 第 9 行 |
-| `samsung-oled-s23-ultra` | OLED CON MARCO | 07 SAMSUNG OLED 第 10 行 |
-| `samsung-oled-s24-ultra` | OLED CON MARCO | 07 SAMSUNG OLED 第 11 行 |
-| `samsung-oled-s25-ultra` | OLED CON MARCO | 07 SAMSUNG OLED 第 12 行 |
-| `x200t-cortadora-micas` | Mayor cantidad, menor precio. | 01 HIDROGEL 第 7 行 |
+- 无。
 
 ## 四方价格一致性差异（不含数值）
 

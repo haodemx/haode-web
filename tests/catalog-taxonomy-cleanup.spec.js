@@ -55,14 +55,13 @@ test('iPhone quality architecture reflects the real catalog and exposes OLED var
 
   await page.goto(`${baseURL}/productos/?category=pantallas&sub=iphone&technology=OLED`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('[data-result-count]')).toHaveText('20 productos encontrados');
-  await expect(page.locator('.zay-variant-panel')).toContainText(/OLED Premium\s*16/s);
-  await expect(page.locator('.zay-variant-panel')).toContainText(/Soft OLED Premium\s*4/s);
+  await expect(page.locator('.zay-variant-panel')).toContainText(/OLED Premium\s*14/s);
+  await expect(page.locator('.zay-variant-panel')).toContainText(/Soft OLED Premium\s*6/s);
 
   await page.goto(`${baseURL}/productos/?category=pantallas&sub=iphone&technology=OLED%20diagn%C3%B3stica`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('[data-result-count]')).toHaveText('24 productos encontrados');
-  await expect(page.locator('.zay-variant-panel')).toContainText(/Tamaño original\s*22/s);
-  await expect(page.locator('.zay-variant-panel')).toContainText(/Hard OLED\s*1/s);
-  await expect(page.locator('.zay-variant-panel')).toContainText(/Soft OLED\s*1/s);
+  await expect(page.locator('.zay-variant-panel')).toContainText(/Hard OLED\s*10/s);
+  await expect(page.locator('.zay-variant-panel')).toContainText(/Soft OLED\s*14/s);
 });
 
 test('Samsung quality architecture separates technology before model', async ({ page }) => {

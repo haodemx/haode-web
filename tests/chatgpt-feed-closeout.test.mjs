@@ -75,7 +75,7 @@ test('closeout audit maps the 156 workbook rows without expanding the 146-item f
     website_sales_tiers_match_customer: 146,
     app_sales_tiers_match_customer: 146,
     structured_data_tiers_match_customer: 146,
-    quality_mapping_review_required: 34,
+    quality_mapping_review_required: 0,
     unit_currency_mapping_complete: 146,
     feed_price_matches_customer: 146,
     existing_public_images: 132,

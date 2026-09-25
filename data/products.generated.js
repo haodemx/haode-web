@@ -909,7 +909,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Gafas AI deportivas",
     "name": "AIMB-G5 AI SPORTS",
-    "quality": "Gafas AI deportivas",
+    "quality": "LENTE AI",
     "images": [
       "assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg"
     ],
@@ -1018,7 +1018,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Gafas AI M89",
     "name": "Gafas AI M89",
-    "quality": "Producto AI",
+    "quality": "LENTE AI",
     "images": [
       "assets/products/placeholder.svg"
     ],
@@ -1057,7 +1057,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Gafas AI M95",
     "name": "Gafas AI M95",
-    "quality": "Producto AI",
+    "quality": "LENTE AI",
     "images": [
       "assets/products/placeholder.svg"
     ],
@@ -1096,7 +1096,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "HAODE AI G3 Smart Glasses",
     "name": "Gafas Inteligentes AI G3",
-    "quality": "HAODE AI G3 Smart Glasses",
+    "quality": "LENTE AI",
     "images": [
       "assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg"
     ],
@@ -1135,7 +1135,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "HAODE AI W610 Smart Glasses",
     "name": "Gafas Inteligentes AI W610",
-    "quality": "HAODE AI W610 Smart Glasses",
+    "quality": "LENTE AI",
     "images": [
       "assets/products/productos-ai/w610-ai-smart-glasses/main.jpg"
     ],
@@ -1205,7 +1205,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Gafas AI blancas",
     "name": "W630 AI PRO",
-    "quality": "Gafas AI blancas",
+    "quality": "LENTE AI",
     "images": [
       "assets/products/productos-ai/w630-ai-smart-glasses/main.jpg"
     ],
@@ -1244,7 +1244,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 11",
     "name": "Pantalla iPhone 11 INCELL FHD",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/11/fhd-main.jpg"
     ],
@@ -1269,7 +1269,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla iPhone 11 INCELL FHD",
-    "description": "INCELL FHD versión estándar para reparación de iPhone 11. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "description": "INCELL FHD C/IC versión estándar para reparación de iPhone 11. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": true,
     "officialSkuPending": true,
@@ -1283,7 +1283,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 11 Bolsa Protectora",
     "name": "Pantalla para iPhone 11 Bolsa Protectora",
-    "quality": "INCELL FHD",
+    "quality": "INCELL HD+ C/IC",
     "images": [
       "assets/products/iphone-incell/11-bolsa-protectora/main.jpg"
     ],
@@ -1310,7 +1310,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Bolsa Protectora",
-    "description": "Pantalla para iPhone 11 Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "description": "Pantalla para iPhone 11 Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "localOnly": true,
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -1325,7 +1325,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 11 Pro",
     "name": "Pantalla para iPhone 11 Pro",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/11pro/main.jpg",
       "assets/products/iphone-incell/11pro/gallery-01.jpg",
@@ -1356,7 +1356,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro",
-    "description": "INCELL FHD para reparación de iPhone 11 Pro. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para reparación de iPhone 11 Pro. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1370,7 +1370,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 11 Pro Max",
     "name": "Pantalla para iPhone 11 Pro Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/11promax/main.jpg",
       "assets/products/iphone-incell/11promax/gallery-01.jpg",
@@ -1400,7 +1400,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
-    "description": "INCELL FHD para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1414,7 +1414,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 12 / 12 Pro",
     "name": "Pantalla para iPhone 12 / 12 Pro",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/12-12pro/main.jpg",
       "assets/products/iphone-incell/12-12pro/gallery-01.jpg",
@@ -1444,7 +1444,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
-    "description": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1458,7 +1458,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 12 mini",
     "name": "Pantalla para iPhone 12 mini",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/12mini/main.jpg",
       "assets/products/iphone-incell/12mini/gallery-01.jpg",
@@ -1488,7 +1488,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
-    "description": "INCELL FHD para iPhone 12 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 12 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1502,7 +1502,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 12 Pro Max",
     "name": "Pantalla para iPhone 12 Pro Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/12promax/main.jpg",
       "assets/products/iphone-incell/12promax/gallery-01.jpg",
@@ -1532,7 +1532,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
-    "description": "INCELL FHD para iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1546,7 +1546,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 13",
     "name": "Pantalla para iPhone 13",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/13/main.jpg",
       "assets/products/iphone-incell/13/gallery-01.jpg",
@@ -1576,7 +1576,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 22",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
-    "description": "INCELL FHD para iPhone 13. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 13. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1590,7 +1590,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 13 mini",
     "name": "Pantalla para iPhone 13 mini",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/13mini/main.jpg",
       "assets/products/iphone-incell/13mini/gallery-01.jpg",
@@ -1620,7 +1620,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 21",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
-    "description": "INCELL FHD para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1634,7 +1634,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 13 Pro",
     "name": "Pantalla para iPhone 13 Pro",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/13pro/main.jpg",
       "assets/products/iphone-incell/13pro/gallery-01.jpg",
@@ -1664,7 +1664,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 23",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
-    "description": "INCELL FHD para iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1678,7 +1678,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 13 Pro Max",
     "name": "Pantalla para iPhone 13 Pro Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/13promax/main.jpg",
       "assets/products/iphone-incell/13promax/gallery-01.jpg",
@@ -1708,7 +1708,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
-    "description": "INCELL FHD para iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1722,7 +1722,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 14",
     "name": "Pantalla para iPhone 14",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/14/main.jpg",
       "assets/products/iphone-incell/14/gallery-01.jpg",
@@ -1752,7 +1752,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
-    "description": "INCELL FHD para iPhone 14. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 14. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1766,7 +1766,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 14 Plus",
     "name": "Pantalla para iPhone 14 Plus",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/14plus/main.jpg",
       "assets/products/iphone-incell/14plus/gallery-01.jpg",
@@ -1796,7 +1796,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
-    "description": "INCELL FHD para iPhone 14 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 14 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1810,7 +1810,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 14 Pro",
     "name": "Pantalla para iPhone 14 Pro",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/14pro/main.jpg",
       "assets/products/iphone-incell/14pro/gallery-01.jpg",
@@ -1840,7 +1840,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 27",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
-    "description": "INCELL FHD para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1854,7 +1854,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 14 Pro Max",
     "name": "Pantalla para iPhone 14 Pro Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/14promax/main.jpg",
       "assets/products/iphone-incell/14promax/gallery-01.jpg",
@@ -1884,7 +1884,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 28",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
-    "description": "INCELL FHD para iPhone 14 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 14 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1898,7 +1898,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 15",
     "name": "Pantalla para iPhone 15",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/15/main.jpg",
       "assets/products/iphone-incell/15/gallery-01.jpg",
@@ -1927,7 +1927,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
-    "description": "INCELL FHD para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1941,7 +1941,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 15 Plus",
     "name": "Pantalla para iPhone 15 Plus",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/15plus/main.jpg",
       "assets/products/iphone-incell/15plus/gallery-01.jpg",
@@ -1970,7 +1970,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 30",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Plus",
-    "description": "INCELL FHD para iPhone 15 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 15 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -1984,7 +1984,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 15 Pro",
     "name": "Pantalla para iPhone 15 Pro",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/15pro/main.jpg",
       "assets/products/iphone-incell/15pro/gallery-01.jpg"
@@ -2012,7 +2012,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 31",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro",
-    "description": "INCELL FHD para iPhone 15 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 15 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2026,7 +2026,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 15 Pro Max",
     "name": "Pantalla para iPhone 15 Pro Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/15promax/main.jpg",
       "assets/products/iphone-incell/15promax/gallery-01.jpg",
@@ -2056,7 +2056,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
-    "description": "INCELL FHD para iPhone 15 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 15 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2070,7 +2070,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 16",
     "name": "Pantalla para iPhone 16",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/16/main.jpg",
       "assets/products/iphone-incell/16/gallery-01.jpg",
@@ -2100,7 +2100,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 33",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
-    "description": "INCELL FHD para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2114,7 +2114,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 16e",
     "name": "Pantalla para iPhone 16e",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/16e/main.jpg",
       "assets/products/iphone-incell/16e/gallery-01.png",
@@ -2144,7 +2144,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
-    "description": "INCELL FHD para iPhone 16e. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 16e. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2158,7 +2158,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 16 Plus",
     "name": "Pantalla para iPhone 16 Plus",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/16plus/main.jpg",
       "assets/products/iphone-incell/16plus/gallery-01.png",
@@ -2188,7 +2188,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
-    "description": "INCELL FHD para iPhone 16 Plus. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 16 Plus. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2202,7 +2202,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 16 Pro",
     "name": "Pantalla para iPhone 16 Pro",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/16pro/main.jpg",
       "assets/products/iphone-incell/16pro/gallery-01.png",
@@ -2232,7 +2232,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
-    "description": "INCELL FHD para iPhone 16 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 16 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2246,7 +2246,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 16 Pro Max",
     "name": "Pantalla para iPhone 16 Pro Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/16promax/main.jpg",
       "assets/products/iphone-incell/16promax/gallery-01.png",
@@ -2276,7 +2276,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
-    "description": "INCELL FHD para iPhone 16 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 16 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2290,7 +2290,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 17",
     "name": "Pantalla para iPhone 17",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/17/main.jpg",
       "assets/products/iphone-incell/17/gallery-01.jpg",
@@ -2318,7 +2318,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
-    "description": "INCELL FHD para iPhone 17. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 17. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2332,7 +2332,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 17 Air",
     "name": "Pantalla para iPhone 17 Air",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/17air/main.jpg",
       "assets/products/iphone-incell/17air/gallery-01.png",
@@ -2360,7 +2360,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 40",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
-    "description": "INCELL FHD para iPhone 17 Air. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 17 Air. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2374,7 +2374,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 17E",
     "name": "Pantalla para iPhone 17E",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/placeholder.svg"
     ],
@@ -2399,7 +2399,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 41",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17E",
-    "description": "INCELL FHD para reparación de iPhone 17E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "description": "INCELL FHD C/IC para reparación de iPhone 17E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": true,
     "officialSkuPending": true,
@@ -2413,7 +2413,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 17 Pro",
     "name": "Pantalla para iPhone 17 Pro",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/17pro/main.jpg",
       "assets/products/iphone-incell/17pro/gallery-01.jpg",
@@ -2441,7 +2441,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 39",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
-    "description": "INCELL FHD para iPhone 17 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 17 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2455,7 +2455,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 17 Pro Max",
     "name": "Pantalla para iPhone 17 Pro Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/17promax/main.jpg",
       "assets/products/iphone-incell/17promax/gallery-01.jpg",
@@ -2485,7 +2485,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 42",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
-    "description": "INCELL FHD para iPhone 17 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "description": "INCELL FHD C/IC para iPhone 17 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2499,7 +2499,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone X",
     "name": "Pantalla para iPhone X",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/x/main.jpg",
       "assets/products/iphone-incell/x/gallery-01.jpg",
@@ -2529,7 +2529,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 7",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone X",
-    "description": "INCELL FHD para reparación de iPhone X. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para reparación de iPhone X. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2543,7 +2543,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone XR",
     "name": "Pantalla para iPhone XR",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/xr/main.jpg",
       "assets/products/iphone-incell/xr/gallery-01.jpg",
@@ -2573,7 +2573,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR",
-    "description": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
+    "description": "Pantalla para iPhone XR INCELL FHD C/IC versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora. Para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2587,7 +2587,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone XR Bolsa Protectora",
     "name": "Pantalla para iPhone XR Bolsa Protectora",
-    "quality": "INCELL FHD",
+    "quality": "INCELL HD+ C/IC",
     "images": [
       "assets/products/iphone-incell/xr-bolsa-protectora/main.jpg"
     ],
@@ -2614,7 +2614,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR Bolsa Protectora",
-    "description": "Pantalla para iPhone XR Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "description": "Pantalla para iPhone XR Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "localOnly": true,
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -2629,7 +2629,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone XS",
     "name": "Pantalla para iPhone XS",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/xs/main.jpg",
       "assets/products/iphone-incell/xs/gallery-01.jpg",
@@ -2659,7 +2659,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS",
-    "description": "INCELL FHD para reparación de iPhone XS. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para reparación de iPhone XS. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -2673,7 +2673,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone XS Max",
     "name": "Pantalla para iPhone XS Max",
-    "quality": "INCELL FHD",
+    "quality": "INCELL FHD C/IC",
     "images": [
       "assets/products/iphone-incell/xsmax/main.jpg",
       "assets/products/iphone-incell/xsmax/gallery-01.jpg",
@@ -2703,7 +2703,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
-    "description": "INCELL FHD para reparación de iPhone XS Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "description": "INCELL FHD C/IC para reparación de iPhone XS Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -3059,7 +3059,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 14 Pro",
     "name": "Pantalla para iPhone 14 Pro",
-    "quality": "OLED PREMIUM",
+    "quality": "SOFT OLED PREMIUM",
     "images": [
       "assets/products/iphone-oled/14pro/main.jpg"
     ],
@@ -3086,7 +3086,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
-    "description": "OLED PREMIUM para reparación de iPhone 14 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "description": "SOFT OLED PREMIUM para reparación de iPhone 14 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -3143,7 +3143,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 15",
     "name": "Pantalla para iPhone 15",
-    "quality": "OLED PREMIUM",
+    "quality": "SOFT OLED PREMIUM",
     "images": [
       "assets/products/iphone-oled/15/main.jpg"
     ],
@@ -3170,7 +3170,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
-    "description": "OLED PREMIUM para reparación de iPhone 15. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "description": "SOFT OLED PREMIUM para reparación de iPhone 15. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -3305,7 +3305,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 16 Pro Max",
     "name": "Pantalla para iPhone 16 Pro Max Soft OLED",
-    "quality": "SOFT OLED PREMIUM MOVE IC",
+    "quality": "SOFT OLED PREMIUM",
     "images": [
       "assets/products/iphone-oled/16promax/main.jpg",
       "assets/products/iphone-oled/16promax/gallery-01.jpg",
@@ -3337,7 +3337,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Soft OLED",
-    "description": "SOFT OLED PREMIUM MOVE IC para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "description": "SOFT OLED PREMIUM para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -3351,7 +3351,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "iPhone",
     "model": "iPhone 16 Pro Max",
     "name": "Pantalla para iPhone 16 Pro Max Hard OLED",
-    "quality": "OLED PREMIUM MOVE IC",
+    "quality": "OLED PREMIUM",
     "images": [
       "assets/products/iphone-oled/16promax-hard/main.jpg"
     ],
@@ -3378,7 +3378,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Hard OLED",
-    "description": "OLED PREMIUM MOVE IC para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "description": "OLED PREMIUM para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -3552,7 +3552,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "MICA HD",
     "name": "MICA HD",
-    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "quality": "Paquete 50 pzs",
     "images": [
       "assets/products/micas/hd/main.png"
     ],
@@ -3591,7 +3591,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "MICA MATTE",
     "name": "MICA MATTE",
-    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "quality": "Paquete 50 pzs",
     "images": [
       "assets/products/micas/matte/main.png"
     ],
@@ -3630,7 +3630,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "MICA PRIVACIDAD HD",
     "name": "MICA PRIVACIDAD HD",
-    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "quality": "Paquete 50 pzs",
     "images": [
       "assets/products/micas/privacidad-hd/main.png"
     ],
@@ -3669,7 +3669,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "MICA PRIVACIDAD MATTE",
     "name": "MICA PRIVACIDAD MATTE",
-    "quality": "Contenido: 50 pzs · Precio por volumen",
+    "quality": "Paquete 50 pzs",
     "images": [
       "assets/products/micas/privacidad-matte/main.png",
       "assets/products/micas/privacidad-matte/gallery-01.png"
@@ -3709,7 +3709,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Máquina de Micas（X200T）",
     "name": "HAODE X200T Cortadora Inteligente de Micas",
-    "quality": "Mayor cantidad, menor precio.",
+    "quality": "Equipo",
     "images": [
       "assets/products/cut-machine/x200t/main.jpg"
     ],
@@ -3748,7 +3748,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 11 Pro Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/11-pro-max.png"
     ],
@@ -3790,7 +3790,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 12 / 12 Pro",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/12-12-pro.png"
     ],
@@ -3832,7 +3832,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 12 Pro Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/12-pro-max.png"
     ],
@@ -3874,7 +3874,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 13",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 13",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/13-13-pro.png"
     ],
@@ -3916,7 +3916,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 13 Pro",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/13-13-pro.png"
     ],
@@ -3958,7 +3958,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 13 Pro Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/13-pro-max.png"
     ],
@@ -4000,7 +4000,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 14",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 14",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/14-14-pro.png"
     ],
@@ -4042,7 +4042,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 14 Plus",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/14-plus.png"
     ],
@@ -4084,7 +4084,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 14 Pro",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/14-14-pro.png"
     ],
@@ -4126,7 +4126,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 14 Pro Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/14-pro-max.png"
     ],
@@ -4168,7 +4168,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 15",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 15",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/15.png"
     ],
@@ -4210,7 +4210,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 15 Plus",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/15-plus.png"
     ],
@@ -4252,7 +4252,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 15 Pro",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/15-pro.png"
     ],
@@ -4294,7 +4294,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 15 Pro Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/15-pro-max.png"
     ],
@@ -4336,7 +4336,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 16",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 16",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/16.png"
     ],
@@ -4378,7 +4378,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 16 Plus",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/oled-diagnostica/16-plus.png"
     ],
@@ -4420,7 +4420,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 16 Pro",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/16-pro.png"
     ],
@@ -4462,7 +4462,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 16 Pro Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/16-pro-max.png"
     ],
@@ -4504,7 +4504,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 17",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 17",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/17.png"
     ],
@@ -4546,7 +4546,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 17 Pro",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/17-pro.png"
     ],
@@ -4588,7 +4588,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo 17 Pro Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/17-pro-max.png"
     ],
@@ -4630,7 +4630,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Modelo XS Max",
     "name": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max",
-    "quality": "OLED Diagnóstica · Tamaño original",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/oled-diagnostica/xs-max.png"
     ],
@@ -4672,7 +4672,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "iPhone 12MINI",
     "name": "Pantalla OLED Diagnóstica para iPhone 12MINI",
-    "quality": "DIAGNOTICO HARD OLED",
+    "quality": "DIAGNÓSTICO HARD OLED",
     "images": [
       "assets/products/placeholder.svg"
     ],
@@ -4711,7 +4711,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "iPhone 16E",
     "name": "Pantalla OLED Diagnóstica para iPhone 16E",
-    "quality": "DIAGNOTICO  SOFT OLED",
+    "quality": "DIAGNÓSTICO SOFT OLED",
     "images": [
       "assets/products/placeholder.svg"
     ],
@@ -4750,7 +4750,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 10",
     "name": "Pantalla para Samsung Note 10",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/note-10/main.jpg",
       "assets/products/samsung-incell/note-10/gallery-01.jpg",
@@ -4780,7 +4780,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
-    "description": "Pantalla INCELL con marco para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -4833,7 +4833,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 10 Plus",
     "name": "Pantalla para Samsung Note 10 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/note-10-plus/main.jpg",
       "assets/products/samsung-incell/note-10-plus/gallery-01.jpg",
@@ -4863,7 +4863,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung Note 10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -4916,7 +4916,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 20 Ultra",
     "name": "Pantalla para Samsung Note 20 Ultra",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/note-20-ultra/main.jpg",
       "assets/products/samsung-incell/note-20-ultra/gallery-01.jpg",
@@ -4946,7 +4946,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 39",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
-    "description": "Pantalla INCELL con marco para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -4960,7 +4960,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 8",
     "name": "Pantalla para Samsung Note 8",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/note-8/main.jpg",
       "assets/products/samsung-incell/note-8/gallery-01.jpg",
@@ -4990,7 +4990,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 33",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 8",
-    "description": "Pantalla INCELL con marco para reparación de Samsung Note 8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5004,7 +5004,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 9",
     "name": "Pantalla para Samsung Note 9",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/note-9/main.jpg",
       "assets/products/samsung-incell/note-9/gallery-01.jpg",
@@ -5034,7 +5034,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
-    "description": "Pantalla INCELL con marco para reparación de Samsung Note 9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5048,7 +5048,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S10",
     "name": "Pantalla para Samsung S10",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s10/main.jpg",
       "assets/products/samsung-incell/s10/gallery-01.jpg",
@@ -5079,7 +5079,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5132,7 +5132,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S10 Plus",
     "name": "Pantalla para Samsung S10 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s10-plus/main.jpg",
       "assets/products/samsung-incell/s10-plus/gallery-01.jpg",
@@ -5162,7 +5162,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5176,7 +5176,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S10E",
     "name": "Pantalla para Samsung S10E",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s10e/main.jpg"
     ],
@@ -5203,7 +5203,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10E",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S10E. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S10E. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5296,7 +5296,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S20 FE",
     "name": "Pantalla para Samsung S20 FE",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s20-fe/main.jpg",
       "assets/products/samsung-incell/s20-fe/gallery-01.jpg",
@@ -5326,7 +5326,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 FE",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S20 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5340,7 +5340,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S20 Plus",
     "name": "Pantalla para Samsung S20 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s20-plus/main.jpg",
       "assets/products/samsung-incell/s20-plus/gallery-01.jpg",
@@ -5370,7 +5370,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5384,7 +5384,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S20 Ultra",
     "name": "Pantalla para Samsung S20 Ultra",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s20-ultra/main.jpg",
       "assets/products/samsung-incell/s20-ultra/gallery-01.jpg",
@@ -5414,7 +5414,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5428,7 +5428,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S21",
     "name": "Pantalla para Samsung S21",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s21/main.jpg",
       "assets/products/samsung-incell/s21/gallery-01.jpg",
@@ -5458,7 +5458,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S21. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5472,7 +5472,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S21 FE",
     "name": "Pantalla para Samsung S21 FE",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s21-fe/main.jpg"
     ],
@@ -5497,7 +5497,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 21",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 FE",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S21 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5512,7 +5512,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S21 Plus",
     "name": "Pantalla para Samsung S21 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s21-plus/main.jpg"
     ],
@@ -5539,7 +5539,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 22",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S21 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5554,7 +5554,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S21 Ultra",
     "name": "Pantalla para Samsung S21 Ultra",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s21-ultra/main.jpg",
       "assets/products/samsung-incell/s21-ultra/gallery-01.jpg",
@@ -5582,7 +5582,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 23",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5596,7 +5596,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S22",
     "name": "Pantalla para Samsung S22",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s22/main.jpg"
     ],
@@ -5623,7 +5623,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S22. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S22. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5638,7 +5638,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S22 Plus",
     "name": "Pantalla para Samsung S22 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s22-plus/main.jpg"
     ],
@@ -5665,7 +5665,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S22 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S22 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5680,7 +5680,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S22 Ultra",
     "name": "Pantalla para Samsung S22 Ultra",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s22-ultra/main.jpg",
       "assets/products/samsung-incell/s22-ultra/gallery-01.jpg",
@@ -5711,7 +5711,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5725,7 +5725,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S23",
     "name": "Pantalla para Samsung S23",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s23/main.jpg"
     ],
@@ -5752,7 +5752,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 27",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S23. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S23. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5767,7 +5767,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S23 Plus",
     "name": "Pantalla para Samsung S23 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s23-plus/main.jpg"
     ],
@@ -5792,7 +5792,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 28",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S23 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S23 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5807,7 +5807,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S23 Ultra",
     "name": "Pantalla para Samsung S23 Ultra",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s23-ultra/main.jpg",
       "assets/products/samsung-incell/s23-ultra/gallery-01.jpg",
@@ -5837,7 +5837,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5851,7 +5851,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S24",
     "name": "Pantalla para Samsung S24",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s24/main.png"
     ],
@@ -5878,7 +5878,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 30",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S24. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S24. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5893,7 +5893,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S24 Plus",
     "name": "Pantalla para Samsung S24 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s24-plus/main.jpg"
     ],
@@ -5918,7 +5918,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 31",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S24 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S24 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -5933,7 +5933,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S24 Ultra",
     "name": "Pantalla para Samsung S24 Ultra",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s24-ultra/main.jpg",
       "assets/products/samsung-incell/s24-ultra/gallery-01.jpg",
@@ -5960,7 +5960,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -5974,7 +5974,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S8",
     "name": "Pantalla para Samsung S8",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s8/main.jpg",
       "assets/products/samsung-incell/s8/gallery-01.jpg",
@@ -6004,7 +6004,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 7",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6018,7 +6018,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S8 Plus",
     "name": "Pantalla para Samsung S8 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s8-plus/main.jpg",
       "assets/products/samsung-incell/s8-plus/gallery-01.jpg",
@@ -6048,7 +6048,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S8 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S8 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6062,7 +6062,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S9",
     "name": "Pantalla para Samsung S9",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s9/main.jpg",
       "assets/products/samsung-incell/s9/gallery-01.jpg"
@@ -6090,7 +6090,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6104,7 +6104,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S9 Plus",
     "name": "Pantalla para Samsung S9 Plus",
-    "quality": "INCELL CON MARCO",
+    "quality": "INCELL FHD C/M",
     "images": [
       "assets/products/samsung-incell/s9-plus/main.jpg",
       "assets/products/samsung-incell/s9-plus/gallery-01.jpg"
@@ -6132,7 +6132,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 10",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
-    "description": "Pantalla INCELL con marco para reparación de Samsung S9 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla INCELL FHD C/M para reparación de Samsung S9 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6302,7 +6302,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 10",
     "name": "Pantalla para Samsung Note 10",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/note-10/main.jpg"
     ],
@@ -6327,7 +6327,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
-    "description": "Pantalla OLED con marco para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6341,7 +6341,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 20",
     "name": "Pantalla para Samsung Note 20",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/note-20/main.jpg"
     ],
@@ -6366,7 +6366,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20",
-    "description": "Pantalla OLED con marco para reparación de Samsung Note 20. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 20. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6380,7 +6380,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung Note 20 Ultra",
     "name": "Pantalla para Samsung Note 20 Ultra",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/note-20-ultra/main.jpg"
     ],
@@ -6405,7 +6405,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
-    "description": "Pantalla OLED con marco para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6419,7 +6419,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S20 Plus",
     "name": "Pantalla para Samsung S20 Plus",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/s20-plus/main.jpg",
       "assets/products/samsung-oled/s20-plus/gallery-01.jpg",
@@ -6448,7 +6448,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 7",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
-    "description": "Pantalla OLED con marco para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6462,7 +6462,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S21 Ultra",
     "name": "Pantalla para Samsung S21 Ultra",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/s21-ultra/main.jpg",
       "assets/products/samsung-oled/s21-ultra/gallery-01.jpg",
@@ -6491,7 +6491,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
-    "description": "Pantalla OLED con marco para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6505,7 +6505,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S22 Ultra",
     "name": "Pantalla para Samsung S22 Ultra",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/s22-ultra/main.jpg",
       "assets/products/samsung-oled/s22-ultra/gallery-01.jpg",
@@ -6534,7 +6534,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
-    "description": "Pantalla OLED con marco para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6548,7 +6548,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S23 Ultra",
     "name": "Pantalla para Samsung S23 Ultra",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/s23-ultra/main.jpg",
       "assets/products/samsung-oled/s23-ultra/gallery-01.jpg",
@@ -6577,7 +6577,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 10",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
-    "description": "Pantalla OLED con marco para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6591,7 +6591,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S24 Ultra",
     "name": "Pantalla para Samsung S24 Ultra",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/s24-ultra/main.jpg",
       "assets/products/samsung-oled/s24-ultra/gallery-01.jpg",
@@ -6620,7 +6620,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
-    "description": "Pantalla OLED con marco para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -6634,7 +6634,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "Samsung",
     "model": "Samsung S25 Ultra",
     "name": "Pantalla para Samsung S25 Ultra",
-    "quality": "OLED CON MARCO",
+    "quality": "1:1 AMOLED PREMIUM C/M",
     "images": [
       "assets/products/samsung-oled/s25-ultra/main.jpg",
       "assets/products/samsung-oled/s25-ultra/gallery-01.jpg",
@@ -6663,7 +6663,7 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S25 Ultra",
-    "description": "Pantalla OLED con marco para reparación de Samsung S25 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S25 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
     "internalId": false,
     "officialSkuPending": false,
@@ -7334,4 +7334,4 @@ window.HAODE_PRODUCTS_DATA = [
       23
     ]
   }
-];;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;

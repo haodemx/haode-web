@@ -53,6 +53,10 @@ function hasApprovedCustomerPrice(product) {
   return priceSource.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx');
 }
 
+function isScreenProduct(product) {
+  return /^(?:iphone-|samsung-|oled-diagnostica$)/.test(String(product?.category || ''));
+}
+
 function updateStaticPage(file, product, rows) {
   let text = fs.readFileSync(file, 'utf8');
   const original = text;
@@ -62,10 +66,44 @@ function updateStaticPage(file, product, rows) {
   text = replacePriceHeading(text);
   text = replacePriceTable(text, priceTableHtml(rows));
   text = replaceProductOffers(text, product, rows);
+  text = replaceProductQuality(text, product);
+  if (isScreenProduct(product)) text = replaceProductDescription(text, product);
 
   if (text === original) return false;
   fs.writeFileSync(file, text, 'utf8');
   return true;
+}
+
+function updateStaticInventoryCopy(file) {
+  const original = fs.readFileSync(file, 'utf8');
+  const text = original
+    .replace(/Pantalla con stock local en CDMX\./g, 'Pantalla con inventario por confirmar en ERP.')
+    .replace(/<span>Stock en México bajo confirmación<\/span>/g, '<span>Inventario ERP por confirmar</span>')
+    .replace(/Confirma stock en México y precio por cantidad por WhatsApp\./g, 'Confirma inventario ERP y precio por cantidad por WhatsApp.')
+    .replace(/<strong>Stock en México<\/strong><small>Disponibilidad bajo confirmación<\/small>/g, '<strong>Inventario ERP</strong><small>Disponibilidad bajo confirmación</small>');
+  if (text === original) return false;
+  fs.writeFileSync(file, text, 'utf8');
+  return true;
+}
+
+function replaceProductQuality(text, product) {
+  const quality = escapeHtml(product.quality || '');
+  if (!quality) return text;
+  return text
+    .replace(
+      /<p class="detail-meta" data-detail-quality>.*?<\/p>/,
+      `<p class="detail-meta" data-detail-quality>${quality}</p>`
+    )
+    .replace(/La calidad registrada es [^;]+;/g, `La calidad registrada es ${quality};`);
+}
+
+function replaceProductDescription(text, product) {
+  const description = escapeHtml(product.description || '');
+  if (!description) return text;
+  return text.replace(
+    /<p class="detail-description" data-detail-description>.*?<\/p>/,
+    `<p class="detail-description" data-detail-description>${description}</p>`
+  );
 }
 
 function replacePriceNote(text, lowest) {
@@ -130,6 +168,7 @@ function main() {
   const skippedNoPrice = [];
   const missingPage = [];
   const updatedAliases = [];
+  const inventoryCopyUpdated = [];
   const processedFiles = new Set();
   const productsById = new Map(products.map((product) => [product.id, product]));
 
@@ -140,6 +179,7 @@ function main() {
       continue;
     }
     processedFiles.add(file);
+    if (updateStaticInventoryCopy(file)) inventoryCopyUpdated.push(product.id);
 
     if (!hasApprovedCustomerPrice(product)) {
       skippedUnmatchedSource.push(product.id);
@@ -168,6 +208,8 @@ function main() {
       || text.match(/<link[^>]+href=["']https:\/\/haode\.com\.mx\/producto\/([^/"']+)\/?["'][^>]+rel=["']canonical["']/i);
     if (!canonicalMatch) continue;
 
+    if (updateStaticInventoryCopy(file)) inventoryCopyUpdated.push(entry.name);
+
     const product = productsById.get(canonicalMatch[1]);
     if (!product || !hasApprovedCustomerPrice(product)) continue;
     const rows = priceRows(product);
@@ -181,9 +223,11 @@ function main() {
     skippedNoPrice: skippedNoPrice.length,
     missingPage: missingPage.length,
     updatedAliases: updatedAliases.length,
+    inventoryCopyUpdated: inventoryCopyUpdated.length,
     updatedSkus: updated,
     skippedUnmatchedSource,
     updatedAliasRoutes: updatedAliases,
+    inventoryCopyUpdatedRoutes: inventoryCopyUpdated,
   }, null, 2));
 }
 

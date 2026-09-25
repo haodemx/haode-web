@@ -4,6 +4,8 @@
 - Source price rows: 156
 - Website exact matches updated: 152/186
 - App exact matches updated: 152/186
+- Website quality labels aligned to source column B: 152/152
+- App quality labels aligned to source column B: 152/152
 - Ambiguous matches: 0
 - Source rows without an exact website product: 4
 

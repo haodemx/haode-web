@@ -45,7 +45,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       8
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-12-12pro",
@@ -93,7 +94,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-12promax",
@@ -141,7 +143,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       10
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-13",
@@ -189,7 +192,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-13pro",
@@ -237,7 +241,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       12
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-13promax",
@@ -285,7 +290,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       13
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-14",
@@ -333,7 +339,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       14
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-14plus",
@@ -381,14 +388,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       16
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-14pro",
     "categoria": "Pantallas iPhone OLED",
     "nombre": "Pantalla para iPhone 14 Pro",
     "modelo": "iPhone 14 Pro OLED PREMIUM",
-    "descripcion": "OLED PREMIUM para reparación de iPhone 14 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "descripcion": "SOFT OLED PREMIUM para reparación de iPhone 14 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "precioPublico": 1025,
     "precioMayoreo": 1000,
     "imagen": "/assets/products/iphone-oled/14pro/main.jpg",
@@ -429,7 +437,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       18
-    ]
+    ],
+    "calidad": "SOFT OLED PREMIUM"
   },
   {
     "id": "iphone-oled-14promax",
@@ -477,14 +486,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       19
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-15",
     "categoria": "Pantallas iPhone OLED",
     "nombre": "Pantalla para iPhone 15",
     "modelo": "iPhone 15 OLED PREMIUM",
-    "descripcion": "OLED PREMIUM para reparación de iPhone 15. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "descripcion": "SOFT OLED PREMIUM para reparación de iPhone 15. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "precioPublico": 1025,
     "precioMayoreo": 1000,
     "imagen": "/assets/products/iphone-oled/15/main.jpg",
@@ -525,7 +535,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       20
-    ]
+    ],
+    "calidad": "SOFT OLED PREMIUM"
   },
   {
     "id": "iphone-oled-15promax",
@@ -573,7 +584,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       22
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-16pro",
@@ -621,14 +633,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       24
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-16promax",
     "categoria": "Pantallas iPhone OLED",
     "nombre": "Pantalla para iPhone 16 Pro Max Soft OLED",
     "modelo": "iPhone 16 Pro Max SOFT OLED PREMIUM MOVE IC",
-    "descripcion": "SOFT OLED PREMIUM MOVE IC para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "descripcion": "SOFT OLED PREMIUM para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "precioPublico": 1805,
     "precioMayoreo": 1760,
     "imagen": "/assets/products/iphone-oled/16promax/main.jpg",
@@ -672,7 +685,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       26
-    ]
+    ],
+    "calidad": "SOFT OLED PREMIUM"
   },
   {
     "id": "iphone-oled-xsmax",
@@ -720,14 +734,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-oled-16promax-hard",
     "categoria": "Pantallas iPhone OLED",
     "nombre": "Pantalla para iPhone 16 Pro Max Hard OLED",
     "modelo": "iPhone 16 Pro Max OLED PREMIUM MOVE IC",
-    "descripcion": "OLED PREMIUM MOVE IC para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "descripcion": "OLED PREMIUM para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "precioPublico": 845,
     "precioMayoreo": 825,
     "imagen": "/assets/products/iphone-oled/16promax-hard/main.jpg",
@@ -768,14 +783,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       25
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-incell-11-bolsa-protectora",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 11 Bolsa Protectora",
     "modelo": "iPhone 11 Bolsa Protectora INCELL FHD",
-    "descripcion": "Pantalla para iPhone 11 Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "descripcion": "Pantalla para iPhone 11 Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "precioPublico": 155,
     "precioMayoreo": 145,
     "imagen": "/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
@@ -830,14 +846,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       13
-    ]
+    ],
+    "calidad": "INCELL HD+ C/IC"
   },
   {
     "id": "iphone-incell-11pro",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 11 Pro",
     "modelo": "iPhone 11 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para reparación de iPhone 11 Pro. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para reparación de iPhone 11 Pro. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 195,
     "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/11pro/main.jpg",
@@ -888,14 +905,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       15
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-11promax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 11 Pro Max",
     "modelo": "iPhone 11 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 185,
     "precioMayoreo": 175,
     "imagen": "/assets/products/iphone-incell/11promax/main.jpg",
@@ -936,14 +954,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       17
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-12-12pro",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 12 / 12 Pro",
     "modelo": "iPhone 12 / 12 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 195,
     "precioMayoreo": 180,
     "imagen": "/assets/products/iphone-incell/12-12pro/main.jpg",
@@ -984,14 +1003,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       19
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-12mini",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 12 mini",
     "modelo": "iPhone 12 mini INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 12 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 12 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 210,
     "precioMayoreo": 195,
     "imagen": "/assets/products/iphone-incell/12mini/main.jpg",
@@ -1032,14 +1052,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       18
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-12promax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 12 Pro Max",
     "modelo": "iPhone 12 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 210,
     "precioMayoreo": 195,
     "imagen": "/assets/products/iphone-incell/12promax/main.jpg",
@@ -1080,14 +1101,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       20
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-13",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 13",
     "modelo": "iPhone 13 INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 13. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 13. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 195,
     "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/13/main.jpg",
@@ -1128,14 +1150,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       22
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-13mini",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 13 mini",
     "modelo": "iPhone 13 mini INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 215,
     "precioMayoreo": 205,
     "imagen": "/assets/products/iphone-incell/13mini/main.jpg",
@@ -1176,14 +1199,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       21
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-13pro",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 13 Pro",
     "modelo": "iPhone 13 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 240,
     "precioMayoreo": 225,
     "imagen": "/assets/products/iphone-incell/13pro/main.jpg",
@@ -1224,14 +1248,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       23
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-13promax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 13 Pro Max",
     "modelo": "iPhone 13 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 260,
     "precioMayoreo": 245,
     "imagen": "/assets/products/iphone-incell/13promax/main.jpg",
@@ -1272,14 +1297,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       24
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-14",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 14",
     "modelo": "iPhone 14 INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 14. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 14. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 205,
     "precioMayoreo": 190,
     "imagen": "/assets/products/iphone-incell/14/main.jpg",
@@ -1330,14 +1356,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       25
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-14plus",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 14 Plus",
     "modelo": "iPhone 14 Plus INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 14 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 14 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 240,
     "precioMayoreo": 225,
     "imagen": "/assets/products/iphone-incell/14plus/main.jpg",
@@ -1378,14 +1405,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       26
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-14pro",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 14 Pro",
     "modelo": "iPhone 14 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 245,
     "precioMayoreo": 230,
     "imagen": "/assets/products/iphone-incell/14pro/main.jpg",
@@ -1426,14 +1454,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       27
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-14promax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 14 Pro Max",
     "modelo": "iPhone 14 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 14 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 14 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 260,
     "precioMayoreo": 245,
     "imagen": "/assets/products/iphone-incell/14promax/main.jpg",
@@ -1474,14 +1503,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       28
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-15",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 15",
     "modelo": "iPhone 15 INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 260,
     "precioMayoreo": 240,
     "imagen": "/assets/products/iphone-incell/15/main.jpg",
@@ -1522,14 +1552,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       29
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-15plus",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 15 Plus",
     "modelo": "iPhone 15 Plus INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 15 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 260,
     "precioMayoreo": 240,
     "imagen": "/assets/products/iphone-incell/15plus/main.jpg",
@@ -1570,14 +1601,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       30
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-15pro",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 15 Pro",
     "modelo": "iPhone 15 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 15 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 250,
     "precioMayoreo": 235,
     "imagen": "/assets/products/iphone-incell/15pro/main.jpg",
@@ -1618,14 +1650,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       31
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-15promax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 15 Pro Max",
     "modelo": "iPhone 15 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 15 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 260,
     "precioMayoreo": 245,
     "imagen": "/assets/products/iphone-incell/15promax/main.jpg",
@@ -1666,14 +1699,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       32
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-16",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 16",
     "modelo": "iPhone 16 INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 280,
     "precioMayoreo": 260,
     "imagen": "/assets/products/iphone-incell/16/main.jpg",
@@ -1714,14 +1748,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       33
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-x",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone X",
     "modelo": "iPhone X INCELL FHD",
-    "descripcion": "INCELL FHD para reparación de iPhone X. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para reparación de iPhone X. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 160,
     "precioMayoreo": 155,
     "imagen": "/assets/products/iphone-incell/x/main.jpg",
@@ -1762,14 +1797,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-xr",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone XR",
     "modelo": "iPhone XR INCELL FHD",
-    "descripcion": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
+    "descripcion": "Pantalla para iPhone XR INCELL FHD C/IC versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora. Para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
     "precioPublico": 160,
     "precioMayoreo": 150,
     "imagen": "/assets/products/iphone-incell/xr/main.jpg",
@@ -1810,14 +1846,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       12
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-xr-bolsa-protectora",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone XR Bolsa Protectora",
     "modelo": "iPhone XR Bolsa Protectora INCELL FHD",
-    "descripcion": "Pantalla para iPhone XR Bolsa Protectora INCELL FHD para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "descripcion": "Pantalla para iPhone XR Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "precioPublico": 155,
     "precioMayoreo": 145,
     "imagen": "/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
@@ -1872,14 +1909,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "INCELL HD+ C/IC"
   },
   {
     "id": "iphone-incell-xs",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone XS",
     "modelo": "iPhone XS INCELL FHD",
-    "descripcion": "INCELL FHD para reparación de iPhone XS. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para reparación de iPhone XS. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 160,
     "precioMayoreo": 155,
     "imagen": "/assets/products/iphone-incell/xs/main.jpg",
@@ -1920,14 +1958,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s8",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S8",
     "modelo": "Samsung S8 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 365,
     "precioMayoreo": 345,
     "imagen": "/assets/products/samsung-incell/s8/main.jpg",
@@ -1968,14 +2007,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-xsmax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone XS Max",
     "modelo": "iPhone XS Max INCELL FHD",
-    "descripcion": "INCELL FHD para reparación de iPhone XS Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para reparación de iPhone XS Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "precioPublico": 175,
     "precioMayoreo": 165,
     "imagen": "/assets/products/iphone-incell/xsmax/main.jpg",
@@ -2016,14 +2056,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       16
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s8-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S8 Plus",
     "modelo": "Samsung S8 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S8 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S8 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 375,
     "precioMayoreo": 355,
     "imagen": "/assets/products/samsung-incell/s8-plus/main.jpg",
@@ -2064,14 +2105,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       8
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-16e",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 16e",
     "modelo": "iPhone 16e INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 16e. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 16e. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 245,
     "precioMayoreo": 230,
     "imagen": "/assets/products/iphone-incell/16e/main.jpg",
@@ -2112,14 +2154,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       34
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s9",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S9",
     "modelo": "Samsung S9 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 340,
     "precioMayoreo": 320,
     "imagen": "/assets/products/samsung-incell/s9/main.jpg",
@@ -2163,14 +2206,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-16plus",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 16 Plus",
     "modelo": "iPhone 16 Plus INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 16 Plus. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 16 Plus. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 280,
     "precioMayoreo": 260,
     "imagen": "/assets/products/iphone-incell/16plus/main.jpg",
@@ -2211,14 +2255,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       35
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s9-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S9 Plus",
     "modelo": "Samsung S9 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S9 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S9 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 350,
     "precioMayoreo": 325,
     "imagen": "/assets/products/samsung-incell/s9-plus/main.jpg",
@@ -2262,14 +2307,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       10
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-16pro",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 16 Pro",
     "modelo": "iPhone 16 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 16 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 16 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 455,
     "precioMayoreo": 425,
     "imagen": "/assets/products/iphone-incell/16pro/main.jpg",
@@ -2310,14 +2356,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       36
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s10",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S10",
     "modelo": "Samsung S10 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 375,
     "precioMayoreo": 355,
     "imagen": "/assets/products/samsung-incell/s10/main.jpg",
@@ -2358,14 +2405,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-16promax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 16 Pro Max",
     "modelo": "iPhone 16 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 16 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 16 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 455,
     "precioMayoreo": 425,
     "imagen": "/assets/products/iphone-incell/16promax/main.jpg",
@@ -2409,14 +2457,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       37
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s10-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S10 Plus",
     "modelo": "Samsung S10 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 385,
     "precioMayoreo": 360,
     "imagen": "/assets/products/samsung-incell/s10-plus/main.jpg",
@@ -2457,14 +2506,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       12
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-17",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 17",
     "modelo": "iPhone 17 INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 17. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 17. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 555,
     "precioMayoreo": 520,
     "imagen": "/assets/products/iphone-incell/17/main.jpg",
@@ -2505,14 +2555,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       38
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s10e",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S10E",
     "modelo": "Samsung S10E INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S10E. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S10E. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 555,
     "precioMayoreo": 520,
     "imagen": "/assets/products/samsung-incell/s10e/main.jpg",
@@ -2556,14 +2607,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       13
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-17air",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 17 Air",
     "modelo": "iPhone 17 Air INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 17 Air. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 17 Air. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 1040,
     "precioMayoreo": 975,
     "imagen": "/assets/products/iphone-incell/17air/main.jpg",
@@ -2604,7 +2656,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       40
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s10-lite",
@@ -2652,14 +2705,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       14
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "iphone-incell-17pro",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 17 Pro",
     "modelo": "iPhone 17 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 17 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 17 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 555,
     "precioMayoreo": 520,
     "imagen": "/assets/products/iphone-incell/17pro/main.jpg",
@@ -2700,14 +2754,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       39
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-incell-17promax",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 17 Pro Max",
     "modelo": "iPhone 17 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 17 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para iPhone 17 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "precioPublico": 555,
     "precioMayoreo": 520,
     "imagen": "/assets/products/iphone-incell/17promax/main.jpg",
@@ -2748,14 +2803,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       42
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "samsung-incell-s20-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S20 Plus",
     "modelo": "Samsung S20 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 420,
     "precioMayoreo": 390,
     "imagen": "/assets/products/samsung-incell/s20-plus/main.jpg",
@@ -2796,14 +2852,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       17
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s20-fe",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S20 FE",
     "modelo": "Samsung S20 FE INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S20 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S20 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 295,
     "precioMayoreo": 280,
     "imagen": "/assets/products/samsung-incell/s20-fe/main.jpg",
@@ -2844,14 +2901,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       18
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s20-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S20 Ultra",
     "modelo": "Samsung S20 Ultra INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 440,
     "precioMayoreo": 415,
     "imagen": "/assets/products/samsung-incell/s20-ultra/main.jpg",
@@ -2892,14 +2950,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       19
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s21",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S21",
     "modelo": "Samsung S21 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S21. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S21. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 410,
     "precioMayoreo": 385,
     "imagen": "/assets/products/samsung-incell/s21/main.jpg",
@@ -2940,14 +2999,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       20
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s21-fe",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S21 FE",
     "modelo": "Samsung S21 FE INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S21 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S21 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 455,
     "precioMayoreo": 430,
     "imagen": "/assets/products/samsung-incell/s21-fe/main.jpg",
@@ -2988,14 +3048,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       21
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s21-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S21 Plus",
     "modelo": "Samsung S21 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S21 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S21 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 400,
     "precioMayoreo": 375,
     "imagen": "/assets/products/samsung-incell/s21-plus/main.jpg",
@@ -3036,14 +3097,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       22
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s21-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S21 Ultra",
     "modelo": "Samsung S21 Ultra INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 440,
     "precioMayoreo": 415,
     "imagen": "/assets/products/samsung-incell/s21-ultra/main.jpg",
@@ -3084,14 +3146,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       23
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s22",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S22",
     "modelo": "Samsung S22 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S22. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S22. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 505,
     "precioMayoreo": 475,
     "imagen": "/assets/products/samsung-incell/s22/main.jpg",
@@ -3132,14 +3195,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       24
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s22-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S22 Plus",
     "modelo": "Samsung S22 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S22 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S22 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 505,
     "precioMayoreo": 475,
     "imagen": "/assets/products/samsung-incell/s22-plus/main.jpg",
@@ -3180,14 +3244,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       25
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s22-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S22 Ultra",
     "modelo": "Samsung S22 Ultra INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 515,
     "precioMayoreo": 485,
     "imagen": "/assets/products/samsung-incell/s22-ultra/main.jpg",
@@ -3228,14 +3293,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       26
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s23",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S23",
     "modelo": "Samsung S23 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S23. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S23. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 505,
     "precioMayoreo": 475,
     "imagen": "/assets/products/samsung-incell/s23/main.jpg",
@@ -3276,14 +3342,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       27
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s23-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S23 Plus",
     "modelo": "Samsung S23 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S23 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S23 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 505,
     "precioMayoreo": 475,
     "imagen": "/assets/products/samsung-incell/s23-plus/main.jpg",
@@ -3324,14 +3391,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       28
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s23-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S23 Ultra",
     "modelo": "Samsung S23 Ultra INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 440,
     "precioMayoreo": 415,
     "imagen": "/assets/products/samsung-incell/s23-ultra/main.jpg",
@@ -3372,14 +3440,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       29
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s24",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S24",
     "modelo": "Samsung S24 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S24. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S24. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 680,
     "precioMayoreo": 635,
     "imagen": "/assets/products/samsung-incell/s24/main.png",
@@ -3420,14 +3489,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       30
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s24-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S24 Plus",
     "modelo": "Samsung S24 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S24 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S24 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 655,
     "precioMayoreo": 615,
     "imagen": "/assets/products/samsung-incell/s24-plus/main.jpg",
@@ -3468,14 +3538,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       31
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s24-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung S24 Ultra",
     "modelo": "Samsung S24 Ultra INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 625,
     "precioMayoreo": 585,
     "imagen": "/assets/products/samsung-incell/s24-ultra/main.jpg",
@@ -3516,14 +3587,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       32
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-note-8",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung Note 8",
     "modelo": "Samsung Note 8 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung Note 8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung Note 8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 455,
     "precioMayoreo": 425,
     "imagen": "/assets/products/samsung-incell/note-8/main.jpg",
@@ -3564,14 +3636,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       33
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-note-9",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung Note 9",
     "modelo": "Samsung Note 9 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung Note 9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung Note 9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 455,
     "precioMayoreo": 425,
     "imagen": "/assets/products/samsung-incell/note-9/main.jpg",
@@ -3612,14 +3685,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       34
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-note-10",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung Note 10",
     "modelo": "Samsung Note 10 INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 475,
     "precioMayoreo": 445,
     "imagen": "/assets/products/samsung-incell/note-10/main.jpg",
@@ -3660,14 +3734,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       35
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-note-10-plus",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung Note 10 Plus",
     "modelo": "Samsung Note 10 Plus INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung Note 10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung Note 10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 505,
     "precioMayoreo": 475,
     "imagen": "/assets/products/samsung-incell/note-10-plus/main.jpg",
@@ -3711,7 +3786,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       36
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-note-10-lite",
@@ -3759,7 +3835,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       37
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-note-20",
@@ -3807,14 +3884,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       38
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-oled-s20-plus",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung S20 Plus",
     "modelo": "Samsung S20 Plus OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1100,
     "precioMayoreo": 1025,
     "imagen": "/assets/products/samsung-oled/s20-plus/main.jpg",
@@ -3855,14 +3933,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-incell-note-20-ultra",
     "categoria": "Pantallas Samsung INCELL",
     "nombre": "Pantalla para Samsung Note 20 Ultra",
     "modelo": "Samsung Note 20 Ultra INCELL CON MARCO",
-    "descripcion": "Pantalla INCELL con marco para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 470,
     "precioMayoreo": 440,
     "imagen": "/assets/products/samsung-incell/note-20-ultra/main.jpg",
@@ -3903,14 +3982,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       39
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-oled-s21-ultra",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung S21 Ultra",
     "modelo": "Samsung S21 Ultra OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1365,
     "precioMayoreo": 1275,
     "imagen": "/assets/products/samsung-oled/s21-ultra/main.jpg",
@@ -3951,14 +4031,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       8
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-oled-s22-ultra",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung S22 Ultra",
     "modelo": "Samsung S22 Ultra OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1340,
     "precioMayoreo": 1250,
     "imagen": "/assets/products/samsung-oled/s22-ultra/main.jpg",
@@ -3999,14 +4080,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-oled-s23-ultra",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung S23 Ultra",
     "modelo": "Samsung S23 Ultra OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1295,
     "precioMayoreo": 1210,
     "imagen": "/assets/products/samsung-oled/s23-ultra/main.jpg",
@@ -4047,14 +4129,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       10
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-oled-s24-ultra",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung S24 Ultra",
     "modelo": "Samsung S24 Ultra OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1525,
     "precioMayoreo": 1425,
     "imagen": "/assets/products/samsung-oled/s24-ultra/main.jpg",
@@ -4095,14 +4178,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-oled-s25-ultra",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung S25 Ultra",
     "modelo": "Samsung S25 Ultra OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung S25 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S25 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 2080,
     "precioMayoreo": 1945,
     "imagen": "/assets/products/samsung-oled/s25-ultra/main.jpg",
@@ -4143,14 +4227,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       12
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-oled-note-10",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung Note 10",
     "modelo": "Samsung Note 10 OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1380,
     "precioMayoreo": 1290,
     "imagen": "/assets/products/samsung-oled/note-10/main.jpg",
@@ -4191,14 +4276,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       13
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-oled-note-20",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung Note 20",
     "modelo": "Samsung Note 20 OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung Note 20. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 20. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1100,
     "precioMayoreo": 1025,
     "imagen": "/assets/products/samsung-oled/note-20/main.jpg",
@@ -4239,14 +4325,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       14
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "samsung-oled-note-20-ultra",
     "categoria": "Pantallas Samsung OLED",
     "nombre": "Pantalla para Samsung Note 20 Ultra",
     "modelo": "Samsung Note 20 Ultra OLED CON MARCO",
-    "descripcion": "Pantalla OLED con marco para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "descripcion": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "precioPublico": 1420,
     "precioMayoreo": 1325,
     "imagen": "/assets/products/samsung-oled/note-20-ultra/main.jpg",
@@ -4287,7 +4374,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       15
-    ]
+    ],
+    "calidad": "1:1 AMOLED PREMIUM C/M"
   },
   {
     "id": "mica-hd",
@@ -4335,7 +4423,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       8
-    ]
+    ],
+    "calidad": "Paquete 50 pzs"
   },
   {
     "id": "mica-matte",
@@ -4383,7 +4472,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "Paquete 50 pzs"
   },
   {
     "id": "mica-privacidad-hd",
@@ -4431,7 +4521,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       10
-    ]
+    ],
+    "calidad": "Paquete 50 pzs"
   },
   {
     "id": "samsung-original-s21-ultra",
@@ -4479,7 +4570,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "mica-privacidad-matte",
@@ -4527,7 +4619,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "Paquete 50 pzs"
   },
   {
     "id": "samsung-original-s22-plus",
@@ -4575,7 +4668,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       8
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "x200t-cortadora-micas",
@@ -4628,7 +4722,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "Equipo"
   },
   {
     "id": "samsung-original-s22-ultra",
@@ -4676,7 +4771,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "w630-ai-pro",
@@ -4724,7 +4820,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       8
-    ]
+    ],
+    "calidad": "LENTE AI"
   },
   {
     "id": "aimb-g5-ai-sports",
@@ -4772,7 +4869,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "LENTE AI"
   },
   {
     "id": "samsung-original-s23-plus",
@@ -4820,7 +4918,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       10
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "s1-ai-classic",
@@ -4897,7 +4996,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "haode-ai-g3-smart-glasses",
@@ -4945,7 +5045,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       10
-    ]
+    ],
+    "calidad": "LENTE AI"
   },
   {
     "id": "haode-ai-w610-smart-glasses",
@@ -4993,7 +5094,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "LENTE AI"
   },
   {
     "id": "samsung-original-s24-ultra",
@@ -5041,7 +5143,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       12
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "samsung-original-s25-ultra",
@@ -5089,7 +5192,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       13
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "samsung-original-note-20-ultra",
@@ -5137,7 +5241,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       15
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "lk-007-camara-digital-4k",
@@ -5217,7 +5322,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       16
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "lk-030-mini-camara-retro-digital",
@@ -5359,7 +5465,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       17
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "samsung-original-z-flip5",
@@ -5410,7 +5517,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       18
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "samsung-original-z-flip6",
@@ -5461,7 +5569,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       19
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "samsung-original-z-flip7",
@@ -5516,7 +5625,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       148
-    ]
+    ],
+    "calidad": "TIPO ORIGINAL C/M"
   },
   {
     "id": "samsung-original-z-fold3",
@@ -5568,7 +5678,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       20
-    ]
+    ],
+    "calidad": "ORIGINAL C/M"
   },
   {
     "id": "samsung-original-z-fold4",
@@ -5620,7 +5731,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       21
-    ]
+    ],
+    "calidad": "ORIGINAL C/M"
   },
   {
     "id": "samsung-original-z-fold5",
@@ -5672,7 +5784,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       22
-    ]
+    ],
+    "calidad": "ORIGINAL C/M"
   },
   {
     "id": "samsung-original-z-fold6",
@@ -5724,7 +5837,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       23
-    ]
+    ],
+    "calidad": "ORIGINAL C/M"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
@@ -5776,7 +5890,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       7
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
@@ -5828,7 +5943,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       8
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
@@ -5880,7 +5996,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       9
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
@@ -5932,7 +6049,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       10
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13",
@@ -5984,7 +6102,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       12
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
@@ -6036,7 +6155,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       13
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
@@ -6088,7 +6208,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       14
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14",
@@ -6140,7 +6261,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       15
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
@@ -6192,7 +6314,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       16
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
@@ -6244,7 +6367,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       17
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
@@ -6296,7 +6420,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       18
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15",
@@ -6348,7 +6473,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       19
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
@@ -6400,7 +6526,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       20
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
@@ -6452,7 +6579,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       21
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
@@ -6504,7 +6632,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       22
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16",
@@ -6556,7 +6685,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       24
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
@@ -6608,7 +6738,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       25
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
@@ -6660,7 +6791,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       26
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
@@ -6712,7 +6844,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       27
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17",
@@ -6764,7 +6897,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       28
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
@@ -6816,7 +6950,8 @@
     "officialSkuPending": false,
     "sourceRows": [
       29
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
@@ -6868,14 +7003,15 @@
     "officialSkuPending": false,
     "sourceRows": [
       30
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "iphone-incell-11",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla iPhone 11 INCELL FHD",
     "modelo": "iPhone 11 INCELL FHD",
-    "descripcion": "INCELL FHD versión estándar para reparación de iPhone 11. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC versión estándar para reparación de iPhone 11. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "precioPublico": 160,
     "precioMayoreo": 150,
     "imagen": "/assets/products/iphone-incell/11/fhd-main.jpg",
@@ -6916,7 +7052,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       14
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "iphone-oled-soft-14",
@@ -6964,7 +7101,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       15
-    ]
+    ],
+    "calidad": "SOFT OLED PREMIUM"
   },
   {
     "id": "iphone-oled-soft-14-plus",
@@ -7012,7 +7150,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       17
-    ]
+    ],
+    "calidad": "SOFT OLED PREMIUM"
   },
   {
     "id": "iphone-oled-soft-15pro",
@@ -7060,7 +7199,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       21
-    ]
+    ],
+    "calidad": "SOFT OLED PREMIUM"
   },
   {
     "id": "iphone-oled-16e",
@@ -7108,14 +7248,15 @@
     "officialSkuPending": true,
     "sourceRows": [
       23
-    ]
+    ],
+    "calidad": "OLED PREMIUM"
   },
   {
     "id": "iphone-incell-17e",
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone 17E",
     "modelo": "iPhone 17E INCELL FHD",
-    "descripcion": "INCELL FHD para reparación de iPhone 17E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
+    "descripcion": "INCELL FHD C/IC para reparación de iPhone 17E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "precioPublico": 245,
     "precioMayoreo": 230,
     "imagen": "/assets/products/placeholder.svg",
@@ -7156,7 +7297,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       41
-    ]
+    ],
+    "calidad": "INCELL FHD C/IC"
   },
   {
     "id": "oled-diagnostica-12mini-hard",
@@ -7204,7 +7346,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO HARD OLED"
   },
   {
     "id": "oled-diagnostica-16e-soft",
@@ -7252,7 +7395,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       23
-    ]
+    ],
+    "calidad": "DIAGNÓSTICO SOFT OLED"
   },
   {
     "id": "samsung-incell-s20-4g",
@@ -7300,7 +7444,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       15
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-s20-5g",
@@ -7348,7 +7493,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       16
-    ]
+    ],
+    "calidad": "INCELL FHD C/M"
   },
   {
     "id": "samsung-incell-z-flip3",
@@ -7396,7 +7542,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       40
-    ]
+    ],
+    "calidad": "INCELL S/M"
   },
   {
     "id": "samsung-incell-z-flip4",
@@ -7444,7 +7591,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       41
-    ]
+    ],
+    "calidad": "INCELL S/M"
   },
   {
     "id": "samsung-incell-z-flip5",
@@ -7492,7 +7640,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       42
-    ]
+    ],
+    "calidad": "INCELL S/M"
   },
   {
     "id": "samsung-incell-z-flip6",
@@ -7540,7 +7689,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       43
-    ]
+    ],
+    "calidad": "INCELL S/M"
   },
   {
     "id": "fundas-kit-carcasa-metalica-con-flex-carcasas-xr-17pro",
@@ -7852,7 +8002,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       11
-    ]
+    ],
+    "calidad": "LENTE AI"
   },
   {
     "id": "gafas-ai-gafas-ai-m08",
@@ -7978,7 +8129,8 @@
     "officialSkuPending": true,
     "sourceRows": [
       14
-    ]
+    ],
+    "calidad": "LENTE AI"
   },
   {
     "id": "celular-samsung-s9-6-plus-64",
