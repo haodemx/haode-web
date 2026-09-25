@@ -42,16 +42,20 @@ test('every product and exact image resolve locally, with canonical and sitemap'
   }
 });
 
-test('unknown price and stock stay null/unknown even if ERP-like fields are injected', () => {
-  const modified = products.map(p => ({ ...p, prices: [], stockStatus: 'in_stock', public_price_mxn: 123, sales_available: true, cost_price: 17 }));
+test('confirmed retail prices are used while unverified stock and ERP-like fields stay closed', () => {
+  const modified = products.map(p => ({ ...p, stockStatus: 'in_stock', public_price_mxn: 123, sales_available: true, cost_price: 17 }));
   const result = buildFeed(modified);
-  for (const item of result.items) {
-    assert.equal(item.price, null);
+  for (const [index, item] of result.items.entries()) {
+    assert.deepEqual(item.price, feed.items[index].price);
+    assert.equal(item.price_status, 'confirmed_retail_2026-09-24');
     assert.equal(item.availability, 'unknown');
     assert.equal(item.platform_ready, false);
+    assert.equal(item.blockers.includes('confirmed_current_price_required'), false);
   }
   assert.equal(JSON.stringify(result).includes('cost_price'), false);
-  assert.throws(() => validateFeed({ ...feed, items: [{ ...feed.items[0], price: 0 }] }));
+  assert.throws(() => validateFeed({ ...feed, items: [{ ...feed.items[0], price: { amount: 0, currency: 'MXN' } }] }));
+  assert.throws(() => validateFeed({ ...feed, items: [{ ...feed.items[0], price: { amount: 100, currency: 'USD' } }] }));
+  assert.throws(() => buildFeed(products.map(p => p.id === feed.items[0].id ? { ...p, prices: [] } : p)));
   assert.throws(() => buildFeed([...products, products.find(p => p.category === 'micas')]));
 });
 

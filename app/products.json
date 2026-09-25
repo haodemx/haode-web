@@ -40,7 +40,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 8",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -88,7 +88,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 9",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -101,8 +101,8 @@
     "nombre": "Pantalla para iPhone 12 Pro Max",
     "modelo": "iPhone 12 Pro Max OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 590,
-    "precioMayoreo": 575,
+    "precioPublico": 620,
+    "precioMayoreo": 605,
     "imagen": "/assets/products/iphone-oled/12promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -112,7 +112,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 575,
+        "price": 605,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -121,7 +121,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 530,
+        "price": 555,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -130,13 +130,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 510,
+        "price": 535,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 10",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -149,8 +149,8 @@
     "nombre": "Pantalla para iPhone 13",
     "modelo": "iPhone 13 OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 13. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 690,
-    "precioMayoreo": 675,
+    "precioPublico": 530,
+    "precioMayoreo": 515,
     "imagen": "/assets/products/iphone-oled/13/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -160,7 +160,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 675,
+        "price": 515,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -169,7 +169,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 615,
+        "price": 470,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -178,13 +178,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 595,
+        "price": 455,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 11",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -197,8 +197,8 @@
     "nombre": "Pantalla para iPhone 13 Pro",
     "modelo": "iPhone 13 Pro OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 835,
-    "precioMayoreo": 815,
+    "precioPublico": 620,
+    "precioMayoreo": 605,
     "imagen": "/assets/products/iphone-oled/13pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -208,7 +208,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 815,
+        "price": 605,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -217,7 +217,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 745,
+        "price": 555,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -226,13 +226,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 720,
+        "price": 535,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 12",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -245,8 +245,8 @@
     "nombre": "Pantalla para iPhone 13 Pro Max",
     "modelo": "iPhone 13 Pro Max OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 905,
-    "precioMayoreo": 885,
+    "precioPublico": 640,
+    "precioMayoreo": 620,
     "imagen": "/assets/products/iphone-oled/13promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -256,7 +256,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 885,
+        "price": 620,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -265,7 +265,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 810,
+        "price": 570,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -274,13 +274,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 780,
+        "price": 550,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 13",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -293,8 +293,8 @@
     "nombre": "Pantalla para iPhone 14",
     "modelo": "iPhone 14 OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 14. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 690,
-    "precioMayoreo": 675,
+    "precioPublico": 530,
+    "precioMayoreo": 515,
     "imagen": "/assets/products/iphone-oled/14/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -304,7 +304,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 675,
+        "price": 515,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -313,7 +313,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 615,
+        "price": 470,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -322,13 +322,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 595,
+        "price": 455,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 14",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -376,7 +376,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 16",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -424,7 +424,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 18",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -437,8 +437,8 @@
     "nombre": "Pantalla para iPhone 14 Pro Max",
     "modelo": "iPhone 14 Pro Max OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 14 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 880,
-    "precioMayoreo": 860,
+    "precioPublico": 620,
+    "precioMayoreo": 605,
     "imagen": "/assets/products/iphone-oled/14promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -448,7 +448,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 860,
+        "price": 605,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -457,7 +457,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 785,
+        "price": 555,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -466,13 +466,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 760,
+        "price": 535,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 19",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -520,7 +520,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 20",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -568,7 +568,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 22",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -581,8 +581,8 @@
     "nombre": "Pantalla para iPhone 16 Pro",
     "modelo": "iPhone 16 Pro OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 16 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1365,
-    "precioMayoreo": 1330,
+    "precioPublico": 845,
+    "precioMayoreo": 825,
     "imagen": "/assets/products/iphone-oled/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -592,7 +592,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1330,
+        "price": 825,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -601,7 +601,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1220,
+        "price": 755,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -610,13 +610,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1175,
+        "price": 730,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 24",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -664,7 +664,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 26",
     "videos": [
       "/assets/products/iphone-oled/16promax/video-01.mp4"
     ],
@@ -680,8 +680,8 @@
     "nombre": "Pantalla para iPhone XS Max",
     "modelo": "iPhone XS Max OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone XS Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 580,
-    "precioMayoreo": 565,
+    "precioPublico": 540,
+    "precioMayoreo": 525,
     "imagen": "/assets/products/iphone-oled/xsmax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -691,7 +691,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 565,
+        "price": 525,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -700,7 +700,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 520,
+        "price": 480,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -709,13 +709,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 500,
+        "price": 465,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 7",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -728,8 +728,8 @@
     "nombre": "Pantalla para iPhone 16 Pro Max Hard OLED",
     "modelo": "iPhone 16 Pro Max OLED PREMIUM MOVE IC",
     "descripcion": "OLED PREMIUM MOVE IC para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1400,
-    "precioMayoreo": 1365,
+    "precioPublico": 845,
+    "precioMayoreo": 825,
     "imagen": "/assets/products/iphone-oled/16promax-hard/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -739,7 +739,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1365,
+        "price": 825,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -748,7 +748,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1250,
+        "price": 755,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -757,13 +757,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1205,
+        "price": 730,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 25",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -822,7 +822,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 13",
     "videos": [
       "/assets/products/iphone-incell/11-bolsa-protectora/video-01.mp4"
     ],
@@ -838,8 +838,8 @@
     "nombre": "Pantalla para iPhone 11 Pro",
     "modelo": "iPhone 11 Pro INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone 11 Pro. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 210,
-    "precioMayoreo": 195,
+    "precioPublico": 195,
+    "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/11pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -848,9 +848,9 @@
     "offerActive": true,
     "offerTitle": "Pantalla iPhone 11 Pro FHD",
     "offerSubtitle": "Alto brillo 591 cd/m²",
-    "offerBadge": "Caja $185",
+    "offerBadge": "Caja $175",
     "offerPromoLabel": "PROMOCIÓN DE FÁBRICA",
-    "offerDisplayPrice": "$185 MXN / pieza",
+    "offerDisplayPrice": "$175 MXN / pieza",
     "offerDisplayNote": "Caja · confirmar por WhatsApp",
     "offerImage": "/assets/promotions/iphone-11-pro-fhd/factory-promo.png",
     "offerSort": 1,
@@ -859,7 +859,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 195,
+        "price": 185,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -868,7 +868,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 185,
+        "price": 175,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -877,13 +877,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 180,
+        "price": 170,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 15",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -896,8 +896,8 @@
     "nombre": "Pantalla para iPhone 11 Pro Max",
     "modelo": "iPhone 11 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 210,
-    "precioMayoreo": 195,
+    "precioPublico": 185,
+    "precioMayoreo": 175,
     "imagen": "/assets/products/iphone-incell/11promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -907,7 +907,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 195,
+        "price": 175,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -916,7 +916,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 185,
+        "price": 165,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -925,13 +925,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 180,
+        "price": 160,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 17",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -944,8 +944,8 @@
     "nombre": "Pantalla para iPhone 12 / 12 Pro",
     "modelo": "iPhone 12 / 12 Pro INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 210,
-    "precioMayoreo": 195,
+    "precioPublico": 195,
+    "precioMayoreo": 180,
     "imagen": "/assets/products/iphone-incell/12-12pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -955,7 +955,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 195,
+        "price": 180,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -964,7 +964,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 185,
+        "price": 170,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -973,13 +973,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 180,
+        "price": 165,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 19",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1027,7 +1027,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 18",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1040,8 +1040,8 @@
     "nombre": "Pantalla para iPhone 12 Pro Max",
     "modelo": "iPhone 12 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 240,
-    "precioMayoreo": 225,
+    "precioPublico": 210,
+    "precioMayoreo": 195,
     "imagen": "/assets/products/iphone-incell/12promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1051,7 +1051,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 225,
+        "price": 195,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -1060,7 +1060,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 210,
+        "price": 185,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -1069,13 +1069,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 205,
+        "price": 180,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 20",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1088,12 +1088,108 @@
     "nombre": "Pantalla para iPhone 13",
     "modelo": "iPhone 13 INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 13. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 240,
-    "precioMayoreo": 225,
+    "precioPublico": 195,
+    "precioMayoreo": 185,
     "imagen": "/assets/products/iphone-incell/13/main.jpg",
     "stock": "disponible",
     "activo": true,
     "orden": 250,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 185,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 175,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 170,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 22",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      22
+    ]
+  },
+  {
+    "id": "iphone-incell-13mini",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 13 mini",
+    "modelo": "iPhone 13 mini INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "precioPublico": 215,
+    "precioMayoreo": 205,
+    "imagen": "/assets/products/iphone-incell/13mini/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 260,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 205,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 190,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 185,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 21",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      21
+    ]
+  },
+  {
+    "id": "iphone-incell-13pro",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 13 Pro",
+    "modelo": "iPhone 13 Pro INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
+    "precioPublico": 240,
+    "precioMayoreo": 225,
+    "imagen": "/assets/products/iphone-incell/13pro/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 270,
     "priceTiers": [
       {
         "code": "WHOLESALE",
@@ -1123,103 +1219,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 22",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      22
-    ]
-  },
-  {
-    "id": "iphone-incell-13mini",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 13 mini",
-    "modelo": "iPhone 13 mini INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 255,
-    "precioMayoreo": 235,
-    "imagen": "/assets/products/iphone-incell/13mini/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 260,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 235,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 225,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 215,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 21",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      21
-    ]
-  },
-  {
-    "id": "iphone-incell-13pro",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 13 Pro",
-    "modelo": "iPhone 13 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 305,
-    "precioMayoreo": 285,
-    "imagen": "/assets/products/iphone-incell/13pro/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 270,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 285,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 270,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 260,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 23",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1232,8 +1232,8 @@
     "nombre": "Pantalla para iPhone 13 Pro Max",
     "modelo": "iPhone 13 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 340,
-    "precioMayoreo": 320,
+    "precioPublico": 260,
+    "precioMayoreo": 245,
     "imagen": "/assets/products/iphone-incell/13promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1243,7 +1243,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 320,
+        "price": 245,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -1252,7 +1252,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 300,
+        "price": 230,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -1261,13 +1261,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 290,
+        "price": 225,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 24",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1280,8 +1280,8 @@
     "nombre": "Pantalla para iPhone 14",
     "modelo": "iPhone 14 INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 14. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 245,
-    "precioMayoreo": 230,
+    "precioPublico": 205,
+    "precioMayoreo": 190,
     "imagen": "/assets/products/iphone-incell/14/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1290,12 +1290,108 @@
     "offerActive": true,
     "offerTitle": "Pantalla iPhone 14 FHD",
     "offerSubtitle": "Alto brillo 709 cd/m²",
-    "offerBadge": "Caja $215",
+    "offerBadge": "Caja $180",
     "offerPromoLabel": "PROMOCIÓN DE FÁBRICA",
-    "offerDisplayPrice": "$215 MXN / pieza",
+    "offerDisplayPrice": "$180 MXN / pieza",
     "offerDisplayNote": "Caja · confirmar por WhatsApp",
     "offerImage": "/assets/promotions/iphone-14-fhd/factory-promo.png",
     "offerSort": 2,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 190,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 180,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 175,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 25",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      25
+    ]
+  },
+  {
+    "id": "iphone-incell-14plus",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 14 Plus",
+    "modelo": "iPhone 14 Plus INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 14 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "precioPublico": 240,
+    "precioMayoreo": 225,
+    "imagen": "/assets/products/iphone-incell/14plus/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 300,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 225,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 210,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 205,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 26",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      26
+    ]
+  },
+  {
+    "id": "iphone-incell-14pro",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 14 Pro",
+    "modelo": "iPhone 14 Pro INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "precioPublico": 245,
+    "precioMayoreo": 230,
+    "imagen": "/assets/products/iphone-incell/14pro/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 310,
     "priceTiers": [
       {
         "code": "WHOLESALE",
@@ -1325,25 +1421,265 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 27",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
-      25
+      27
     ]
   },
   {
-    "id": "iphone-incell-14plus",
+    "id": "iphone-incell-14promax",
     "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 14 Plus",
-    "modelo": "iPhone 14 Plus INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 14 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 280,
-    "precioMayoreo": 260,
-    "imagen": "/assets/products/iphone-incell/14plus/main.jpg",
+    "nombre": "Pantalla para iPhone 14 Pro Max",
+    "modelo": "iPhone 14 Pro Max INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 14 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "precioPublico": 260,
+    "precioMayoreo": 245,
+    "imagen": "/assets/products/iphone-incell/14promax/main.jpg",
     "stock": "disponible",
     "activo": true,
-    "orden": 300,
+    "orden": 320,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 245,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 225,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 28",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      28
+    ]
+  },
+  {
+    "id": "iphone-incell-15",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 15",
+    "modelo": "iPhone 15 INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "precioPublico": 260,
+    "precioMayoreo": 240,
+    "imagen": "/assets/products/iphone-incell/15/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 330,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 240,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 220,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 29",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      29
+    ]
+  },
+  {
+    "id": "iphone-incell-15plus",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 15 Plus",
+    "modelo": "iPhone 15 Plus INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 15 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "precioPublico": 260,
+    "precioMayoreo": 240,
+    "imagen": "/assets/products/iphone-incell/15plus/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 340,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 240,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 220,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 30",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      30
+    ]
+  },
+  {
+    "id": "iphone-incell-15pro",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 15 Pro",
+    "modelo": "iPhone 15 Pro INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 15 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "precioPublico": 250,
+    "precioMayoreo": 235,
+    "imagen": "/assets/products/iphone-incell/15pro/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 350,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 235,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 220,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 215,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 31",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      31
+    ]
+  },
+  {
+    "id": "iphone-incell-15promax",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 15 Pro Max",
+    "modelo": "iPhone 15 Pro Max INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 15 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
+    "precioPublico": 260,
+    "precioMayoreo": 245,
+    "imagen": "/assets/products/iphone-incell/15promax/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 360,
+    "priceTiers": [
+      {
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 245,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "BOX",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 230,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 225,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
+      }
+    ],
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 32",
+    "internalId": false,
+    "officialSkuPending": false,
+    "sourceRows": [
+      32
+    ]
+  },
+  {
+    "id": "iphone-incell-16",
+    "categoria": "Pantallas iPhone INCELL",
+    "nombre": "Pantalla para iPhone 16",
+    "modelo": "iPhone 16 INCELL FHD",
+    "descripcion": "INCELL FHD para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
+    "precioPublico": 280,
+    "precioMayoreo": 260,
+    "imagen": "/assets/products/iphone-incell/16/main.jpg",
+    "stock": "disponible",
+    "activo": true,
+    "orden": 370,
     "priceTiers": [
       {
         "code": "WHOLESALE",
@@ -1373,343 +1709,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 26",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      26
-    ]
-  },
-  {
-    "id": "iphone-incell-14pro",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 14 Pro",
-    "modelo": "iPhone 14 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 340,
-    "precioMayoreo": 320,
-    "imagen": "/assets/products/iphone-incell/14pro/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 310,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 320,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 300,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 290,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 27",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      27
-    ]
-  },
-  {
-    "id": "iphone-incell-14promax",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 14 Pro Max",
-    "modelo": "iPhone 14 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 14 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 350,
-    "precioMayoreo": 325,
-    "imagen": "/assets/products/iphone-incell/14promax/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 320,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 325,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 310,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 300,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 28",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      28
-    ]
-  },
-  {
-    "id": "iphone-incell-15",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 15",
-    "modelo": "iPhone 15 INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 305,
-    "precioMayoreo": 285,
-    "imagen": "/assets/products/iphone-incell/15/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 330,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 285,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 270,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 260,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 29",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      29
-    ]
-  },
-  {
-    "id": "iphone-incell-15plus",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 15 Plus",
-    "modelo": "iPhone 15 Plus INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 305,
-    "precioMayoreo": 285,
-    "imagen": "/assets/products/iphone-incell/15plus/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 340,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 285,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 270,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 260,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 30",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      30
-    ]
-  },
-  {
-    "id": "iphone-incell-15pro",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 15 Pro",
-    "modelo": "iPhone 15 Pro INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 340,
-    "precioMayoreo": 320,
-    "imagen": "/assets/products/iphone-incell/15pro/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 350,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 320,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 300,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 290,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 31",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      31
-    ]
-  },
-  {
-    "id": "iphone-incell-15promax",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 15 Pro Max",
-    "modelo": "iPhone 15 Pro Max INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 15 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 355,
-    "precioMayoreo": 335,
-    "imagen": "/assets/products/iphone-incell/15promax/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 360,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 335,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 315,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 305,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 32",
-    "internalId": false,
-    "officialSkuPending": false,
-    "sourceRows": [
-      32
-    ]
-  },
-  {
-    "id": "iphone-incell-16",
-    "categoria": "Pantallas iPhone INCELL",
-    "nombre": "Pantalla para iPhone 16",
-    "modelo": "iPhone 16 INCELL FHD",
-    "descripcion": "INCELL FHD para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 285,
-    "precioMayoreo": 265,
-    "imagen": "/assets/products/iphone-incell/16/main.jpg",
-    "stock": "disponible",
-    "activo": true,
-    "orden": 370,
-    "priceTiers": [
-      {
-        "code": "WHOLESALE",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 265,
-        "label": "Mayoreo · confirmar condiciones",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "BOX",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 250,
-        "label": "Caja · confirmar presentación",
-        "scope": "manual_quote",
-        "autoApply": false
-      },
-      {
-        "code": "VIP",
-        "minQty": 1,
-        "maxQty": null,
-        "price": 240,
-        "label": "VIP · cliente autorizado",
-        "scope": "manual_quote",
-        "autoApply": false
-      }
-    ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 33",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 33",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1722,8 +1722,8 @@
     "nombre": "Pantalla para iPhone X",
     "modelo": "iPhone X INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone X. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 170,
-    "precioMayoreo": 160,
+    "precioPublico": 160,
+    "precioMayoreo": 155,
     "imagen": "/assets/products/iphone-incell/x/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1733,7 +1733,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 160,
+        "price": 155,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -1742,7 +1742,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 150,
+        "price": 145,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -1751,13 +1751,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 145,
+        "price": 140,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 7",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1769,9 +1769,9 @@
     "categoria": "Pantallas iPhone INCELL",
     "nombre": "Pantalla para iPhone XR",
     "modelo": "iPhone XR INCELL FHD",
-    "descripcion": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora: Caja $155 MXN por pieza. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
-    "precioPublico": 175,
-    "precioMayoreo": 165,
+    "descripcion": "Pantalla para iPhone XR INCELL FHD versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora. Disponible para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
+    "precioPublico": 160,
+    "precioMayoreo": 150,
     "imagen": "/assets/products/iphone-incell/xr/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1781,7 +1781,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 165,
+        "price": 150,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -1790,7 +1790,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 155,
+        "price": 145,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -1799,13 +1799,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 150,
+        "price": 140,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 12",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1864,7 +1864,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 11",
     "videos": [
       "/assets/products/iphone-incell/xr-bolsa-protectora/video-01.mp4"
     ],
@@ -1880,8 +1880,8 @@
     "nombre": "Pantalla para iPhone XS",
     "modelo": "iPhone XS INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone XS. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 170,
-    "precioMayoreo": 160,
+    "precioPublico": 160,
+    "precioMayoreo": 155,
     "imagen": "/assets/products/iphone-incell/xs/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1891,7 +1891,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 160,
+        "price": 155,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -1900,7 +1900,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 150,
+        "price": 145,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -1909,13 +1909,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 145,
+        "price": 140,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 9",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1963,7 +1963,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 7",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -1976,8 +1976,8 @@
     "nombre": "Pantalla para iPhone XS Max",
     "modelo": "iPhone XS Max INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone XS Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
-    "precioPublico": 195,
-    "precioMayoreo": 180,
+    "precioPublico": 175,
+    "precioMayoreo": 165,
     "imagen": "/assets/products/iphone-incell/xsmax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -1987,7 +1987,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 180,
+        "price": 165,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -1996,7 +1996,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 170,
+        "price": 155,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2005,13 +2005,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 165,
+        "price": 150,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 16",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2024,8 +2024,8 @@
     "nombre": "Pantalla para Samsung S8 Plus",
     "modelo": "Samsung S8 Plus INCELL CON MARCO",
     "descripcion": "Pantalla INCELL con marco para reparación de Samsung S8 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 310,
-    "precioMayoreo": 295,
+    "precioPublico": 375,
+    "precioMayoreo": 355,
     "imagen": "/assets/products/samsung-incell/s8-plus/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2035,7 +2035,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 295,
+        "price": 355,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2044,7 +2044,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 275,
+        "price": 335,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2053,13 +2053,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 265,
+        "price": 320,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 8",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2072,8 +2072,8 @@
     "nombre": "Pantalla para iPhone 16e",
     "modelo": "iPhone 16e INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16e. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 350,
-    "precioMayoreo": 325,
+    "precioPublico": 245,
+    "precioMayoreo": 230,
     "imagen": "/assets/products/iphone-incell/16e/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2083,7 +2083,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 325,
+        "price": 230,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2092,7 +2092,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 310,
+        "price": 215,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2101,13 +2101,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 300,
+        "price": 210,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 34",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 34",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2155,7 +2155,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 9",
     "videos": [
       "/assets/products/samsung-incell/s9/video-01.mp4"
     ],
@@ -2171,8 +2171,8 @@
     "nombre": "Pantalla para iPhone 16 Plus",
     "modelo": "iPhone 16 Plus INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16 Plus. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 295,
-    "precioMayoreo": 275,
+    "precioPublico": 280,
+    "precioMayoreo": 260,
     "imagen": "/assets/products/iphone-incell/16plus/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2182,7 +2182,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 275,
+        "price": 260,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2191,7 +2191,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 260,
+        "price": 245,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2200,13 +2200,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 250,
+        "price": 240,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 35",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 35",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2254,7 +2254,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 10",
     "videos": [
       "/assets/products/samsung-incell/s9-plus/video-01.mp4"
     ],
@@ -2270,8 +2270,8 @@
     "nombre": "Pantalla para iPhone 16 Pro",
     "modelo": "iPhone 16 Pro INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 415,
-    "precioMayoreo": 390,
+    "precioPublico": 455,
+    "precioMayoreo": 425,
     "imagen": "/assets/products/iphone-incell/16pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2281,7 +2281,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 390,
+        "price": 425,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2290,7 +2290,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 365,
+        "price": 400,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2299,13 +2299,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 355,
+        "price": 385,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 36",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 36",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2353,7 +2353,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 11",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2366,8 +2366,8 @@
     "nombre": "Pantalla para iPhone 16 Pro Max",
     "modelo": "iPhone 16 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 16 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 730,
-    "precioMayoreo": 685,
+    "precioPublico": 455,
+    "precioMayoreo": 425,
     "imagen": "/assets/products/iphone-incell/16promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2377,7 +2377,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 685,
+        "price": 425,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2386,7 +2386,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 645,
+        "price": 400,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2395,13 +2395,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 625,
+        "price": 385,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 37",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 37",
     "videos": [
       "/assets/products/iphone-incell/16promax/video-01.mp4"
     ],
@@ -2452,7 +2452,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 12",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2465,8 +2465,8 @@
     "nombre": "Pantalla para iPhone 17",
     "modelo": "iPhone 17 INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 465,
-    "precioMayoreo": 435,
+    "precioPublico": 555,
+    "precioMayoreo": 520,
     "imagen": "/assets/products/iphone-incell/17/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2476,7 +2476,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 435,
+        "price": 520,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2485,7 +2485,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 410,
+        "price": 490,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2494,13 +2494,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 400,
+        "price": 475,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 38",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 38",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2548,7 +2548,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 13",
     "videos": [
       "/assets/products/samsung-incell/s10e/video-01.mp4"
     ],
@@ -2564,8 +2564,8 @@
     "nombre": "Pantalla para iPhone 17 Air",
     "modelo": "iPhone 17 Air INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17 Air. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 2175,
-    "precioMayoreo": 2040,
+    "precioPublico": 1040,
+    "precioMayoreo": 975,
     "imagen": "/assets/products/iphone-incell/17air/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2575,7 +2575,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 2040,
+        "price": 975,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2584,7 +2584,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1920,
+        "price": 920,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2593,13 +2593,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1855,
+        "price": 890,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 40",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 40",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2647,7 +2647,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 14",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2660,8 +2660,8 @@
     "nombre": "Pantalla para iPhone 17 Pro",
     "modelo": "iPhone 17 Pro INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 465,
-    "precioMayoreo": 435,
+    "precioPublico": 555,
+    "precioMayoreo": 520,
     "imagen": "/assets/products/iphone-incell/17pro/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2671,7 +2671,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 435,
+        "price": 520,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2680,7 +2680,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 410,
+        "price": 490,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2689,13 +2689,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 400,
+        "price": 475,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 39",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 39",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2708,8 +2708,8 @@
     "nombre": "Pantalla para iPhone 17 Pro Max",
     "modelo": "iPhone 17 Pro Max INCELL FHD",
     "descripcion": "INCELL FHD para iPhone 17 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
-    "precioPublico": 465,
-    "precioMayoreo": 435,
+    "precioPublico": 555,
+    "precioMayoreo": 520,
     "imagen": "/assets/products/iphone-incell/17promax/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2719,7 +2719,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 435,
+        "price": 520,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2728,7 +2728,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 410,
+        "price": 490,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2737,13 +2737,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 400,
+        "price": 475,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 42",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 42",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2791,7 +2791,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 17",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2804,8 +2804,8 @@
     "nombre": "Pantalla para Samsung S20 FE",
     "modelo": "Samsung S20 FE INCELL CON MARCO",
     "descripcion": "Pantalla INCELL con marco para reparación de Samsung S20 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 280,
-    "precioMayoreo": 260,
+    "precioPublico": 295,
+    "precioMayoreo": 280,
     "imagen": "/assets/products/samsung-incell/s20-fe/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -2815,7 +2815,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 260,
+        "price": 280,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -2824,7 +2824,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 245,
+        "price": 260,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -2833,13 +2833,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 235,
+        "price": 255,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 18",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2887,7 +2887,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 19",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2935,7 +2935,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 20",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -2983,7 +2983,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 21",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3031,7 +3031,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 22",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3044,8 +3044,8 @@
     "nombre": "Pantalla para Samsung S21 Ultra",
     "modelo": "Samsung S21 Ultra INCELL CON MARCO",
     "descripcion": "Pantalla INCELL con marco para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 370,
-    "precioMayoreo": 350,
+    "precioPublico": 440,
+    "precioMayoreo": 415,
     "imagen": "/assets/products/samsung-incell/s21-ultra/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -3055,7 +3055,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 350,
+        "price": 415,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -3064,7 +3064,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 330,
+        "price": 390,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -3073,13 +3073,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 315,
+        "price": 375,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 23",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3127,7 +3127,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 24",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3175,7 +3175,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 25",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3223,7 +3223,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 26",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3271,7 +3271,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 27",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 27",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3319,7 +3319,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 28",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 28",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3367,7 +3367,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 29",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 29",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3415,7 +3415,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 30",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 30",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3463,7 +3463,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 31",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 31",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3511,7 +3511,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 32",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 32",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3559,7 +3559,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 33",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 33",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3572,8 +3572,8 @@
     "nombre": "Pantalla para Samsung Note 9",
     "modelo": "Samsung Note 9 INCELL CON MARCO",
     "descripcion": "Pantalla INCELL con marco para reparación de Samsung Note 9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
-    "precioPublico": 400,
-    "precioMayoreo": 375,
+    "precioPublico": 455,
+    "precioMayoreo": 425,
     "imagen": "/assets/products/samsung-incell/note-9/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -3583,7 +3583,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 375,
+        "price": 425,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -3592,7 +3592,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 350,
+        "price": 400,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -3601,13 +3601,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 340,
+        "price": 385,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 34",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 34",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3655,7 +3655,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 35",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 35",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3703,7 +3703,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 36",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 36",
     "videos": [
       "/assets/products/samsung-incell/note-10-plus/video-01.mp4"
     ],
@@ -3754,7 +3754,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 37",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 37",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3767,8 +3767,8 @@
     "nombre": "Pantalla para Samsung Note 20",
     "modelo": "Samsung Note 20 INCELL CON MARCO",
     "descripcion": "Pantalla INCELL FHD C/M para reparación de Samsung NOTE 20. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 425,
-    "precioMayoreo": 395,
+    "precioPublico": 575,
+    "precioMayoreo": 540,
     "imagen": "/assets/products/samsung-incell/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
@@ -3778,7 +3778,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 395,
+        "price": 540,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -3787,7 +3787,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 375,
+        "price": 505,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -3796,13 +3796,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 360,
+        "price": 490,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 38",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 38",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3850,7 +3850,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 7",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3898,7 +3898,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 39",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 39",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3946,7 +3946,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 8",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -3994,7 +3994,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 9",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4042,7 +4042,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 10",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4090,7 +4090,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 11",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4138,7 +4138,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 12",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4186,7 +4186,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 13",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4234,7 +4234,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 14",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4282,7 +4282,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 15",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4330,7 +4330,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01 HIDROGEL · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 8",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4378,7 +4378,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 9",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4426,7 +4426,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 10",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4474,7 +4474,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 7",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4522,7 +4522,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 11",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4570,7 +4570,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 8",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4618,7 +4618,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 7",
     "videos": [
       "/assets/videos/cut-machine/x200t/video-01.mp4",
       "/assets/videos/cut-machine/x200t/video-02.mp4",
@@ -4671,7 +4671,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 9",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4684,8 +4684,8 @@
     "nombre": "W630 AI PRO",
     "modelo": "Gafas AI blancas",
     "descripcion": "Gafas AI blancas de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1100,
-    "precioMayoreo": 1000,
+    "precioPublico": 1092,
+    "precioMayoreo": 1042,
     "imagen": "/assets/products/productos-ai/w630-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -4695,7 +4695,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1000,
+        "price": 1042,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -4704,13 +4704,22 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 950,
+        "price": 972,
         "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 952,
+        "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 8",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4723,8 +4732,8 @@
     "nombre": "AIMB-G5 AI SPORTS",
     "modelo": "Gafas AI deportivas",
     "descripcion": "Gafas AI deportivas de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 900,
-    "precioMayoreo": 850,
+    "precioPublico": 855,
+    "precioMayoreo": 805,
     "imagen": "/assets/products/productos-ai/aimb-g5-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -4734,7 +4743,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 850,
+        "price": 805,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -4743,13 +4752,22 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 750,
+        "price": 735,
         "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 715,
+        "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 7",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4797,7 +4815,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 10",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4839,8 +4857,8 @@
     "nombre": "Pantalla para Samsung S23 Ultra",
     "modelo": "Samsung S23 Ultra TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1525,
-    "precioMayoreo": 1425,
+    "precioPublico": 2570,
+    "precioMayoreo": 2395,
     "imagen": "/assets/products/samsung-original/s23-ultra/main.jpg",
     "stock": "bajo pedido",
     "activo": true,
@@ -4850,7 +4868,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1425,
+        "price": 2395,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -4859,7 +4877,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1335,
+        "price": 2245,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -4868,13 +4886,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1255,
+        "price": 2115,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 11",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4887,8 +4905,8 @@
     "nombre": "Gafas Inteligentes AI G3",
     "modelo": "HAODE AI G3 Smart Glasses",
     "descripcion": "HAODE AI G3 Smart Glasses de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 900,
-    "precioMayoreo": 850,
+    "precioPublico": 855,
+    "precioMayoreo": 805,
     "imagen": "/assets/products/other/ai-smart-glasses-aimb-g3-main.jpeg",
     "stock": "disponible",
     "activo": true,
@@ -4898,7 +4916,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 850,
+        "price": 805,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -4907,13 +4925,22 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 750,
+        "price": 735,
         "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 715,
+        "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 10",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -4926,8 +4953,8 @@
     "nombre": "Gafas Inteligentes AI W610",
     "modelo": "HAODE AI W610 Smart Glasses",
     "descripcion": "HAODE AI W610 Smart Glasses de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 1000,
-    "precioMayoreo": 900,
+    "precioPublico": 946,
+    "precioMayoreo": 896,
     "imagen": "/assets/products/productos-ai/w610-ai-smart-glasses/main.jpg",
     "stock": "disponible",
     "activo": true,
@@ -4937,7 +4964,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 900,
+        "price": 896,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -4946,13 +4973,22 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 800,
+        "price": 826,
         "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 806,
+        "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 9",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5000,7 +5036,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 12",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5048,7 +5084,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 13",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5096,7 +5132,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 15",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5173,7 +5209,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 16",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5280,8 +5316,8 @@
     "nombre": "Pantalla para Samsung Z Flip4",
     "modelo": "Samsung Z Flip4 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP4. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 2580,
-    "precioMayoreo": 2410,
+    "precioPublico": 3300,
+    "precioMayoreo": 3080,
     "imagen": "/assets/products/samsung-original/z-flip4/main.png",
     "stock": "bajo pedido",
     "activo": true,
@@ -5291,7 +5327,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 2410,
+        "price": 3080,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -5300,7 +5336,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 2260,
+        "price": 2885,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -5309,13 +5345,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 2125,
+        "price": 2720,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 17",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5331,8 +5367,8 @@
     "nombre": "Pantalla para Samsung Z Flip5",
     "modelo": "Samsung Z Flip5 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP5. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 3215,
-    "precioMayoreo": 3000,
+    "precioPublico": 4060,
+    "precioMayoreo": 3790,
     "imagen": "/assets/products/samsung-original/z-flip5/main.png",
     "stock": "bajo pedido",
     "activo": true,
@@ -5342,7 +5378,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 3000,
+        "price": 3790,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -5351,7 +5387,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 2810,
+        "price": 3550,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -5360,13 +5396,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 2645,
+        "price": 3345,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 18",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5382,8 +5418,8 @@
     "nombre": "Pantalla para Samsung Z Flip6",
     "modelo": "Samsung Z Flip6 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP6. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 3585,
-    "precioMayoreo": 3345,
+    "precioPublico": 4690,
+    "precioMayoreo": 4380,
     "imagen": "/assets/products/samsung-original/z-flip6/main.png",
     "stock": "bajo pedido",
     "activo": true,
@@ -5393,7 +5429,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 3345,
+        "price": 4380,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -5402,7 +5438,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 3135,
+        "price": 4105,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -5411,13 +5447,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 2955,
+        "price": 3865,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 19",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5433,35 +5469,46 @@
     "nombre": "Pantalla Samsung Z Flip7",
     "modelo": "Samsung Z Flip7 TIPO ORIGINAL CON MARCO",
     "descripcion": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP7. Cotiza cantidad y confirma compatibilidad por WhatsApp. Producto bajo pedido.",
-    "precioPublico": 5800,
-    "precioMayoreo": 5600,
+    "precioPublico": 5325,
+    "precioMayoreo": 4970,
     "imagen": "/assets/products/samsung-original/z-flip7/main.png",
     "stock": "bajo pedido",
     "activo": true,
     "orden": 940,
     "priceTiers": [
       {
-        "code": "WHOLESALE_5",
-        "minQty": 5,
-        "maxQty": 99,
-        "price": 5600,
-        "label": "Mayoreo 5 pzs",
-        "scope": "single_product"
+        "code": "WHOLESALE",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 4970,
+        "label": "Mayoreo · confirmar condiciones",
+        "scope": "manual_quote",
+        "autoApply": false
       },
       {
-        "code": "MIXED_100",
-        "minQty": 100,
+        "code": "BOX",
+        "minQty": 1,
         "maxQty": null,
-        "price": 5500,
-        "label": "100 pzs surtido",
-        "scope": "mixed_order"
+        "price": 4660,
+        "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 4385,
+        "label": "VIP · cliente autorizado",
+        "scope": "manual_quote",
+        "autoApply": false
       }
     ],
     "categoriaSeo": "Samsung TIPO ORIGINAL",
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 162",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 20",
     "videos": [
       "/assets/products/samsung-original/z-flip-series-video-01.mp4"
     ],
@@ -5516,7 +5563,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 21",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5568,7 +5615,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 22",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5620,7 +5667,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 23",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5672,7 +5719,7 @@
     "tipo": "TIPO ORIGINAL",
     "subtipo": "TIPO ORIGINAL CON MARCO",
     "estado": "bajo pedido",
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 24",
     "internalId": false,
     "officialSkuPending": false,
     "sourceRows": [
@@ -5720,7 +5767,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 7",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -5772,7 +5819,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 8",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -5789,8 +5836,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro",
     "modelo": "Modelo 12 / 12 Pro",
     "descripcion": "OLED diagnóstica para reparación de iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 735,
-    "precioMayoreo": 685,
+    "precioPublico": 760,
+    "precioMayoreo": 710,
     "imagen": "/assets/products/oled-diagnostica/12-12-pro.png",
     "stock": "disponible",
     "activo": true,
@@ -5800,7 +5847,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 685,
+        "price": 710,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -5809,7 +5856,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 640,
+        "price": 665,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -5818,13 +5865,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 605,
+        "price": 625,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 9",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -5841,8 +5888,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
     "modelo": "Modelo 12 Pro Max",
     "descripcion": "OLED diagnóstica para reparación de iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 865,
-    "precioMayoreo": 805,
+    "precioPublico": 900,
+    "precioMayoreo": 840,
     "imagen": "/assets/products/oled-diagnostica/12-pro-max.png",
     "stock": "disponible",
     "activo": true,
@@ -5852,7 +5899,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 805,
+        "price": 840,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -5861,7 +5908,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 755,
+        "price": 790,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -5870,13 +5917,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 710,
+        "price": 740,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 10",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -5893,8 +5940,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 13",
     "modelo": "Modelo 13",
     "descripcion": "OLED diagnóstica para reparación de iPhone 13. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 865,
-    "precioMayoreo": 805,
+    "precioPublico": 890,
+    "precioMayoreo": 830,
     "imagen": "/assets/products/oled-diagnostica/13-13-pro.png",
     "stock": "disponible",
     "activo": true,
@@ -5904,7 +5951,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 805,
+        "price": 830,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -5913,7 +5960,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 755,
+        "price": 780,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -5922,13 +5969,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 710,
+        "price": 735,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 12",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -5945,8 +5992,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro",
     "modelo": "Modelo 13 Pro",
     "descripcion": "OLED diagnóstica para reparación de iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 975,
-    "precioMayoreo": 910,
+    "precioPublico": 980,
+    "precioMayoreo": 915,
     "imagen": "/assets/products/oled-diagnostica/13-13-pro.png",
     "stock": "disponible",
     "activo": true,
@@ -5956,7 +6003,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 910,
+        "price": 915,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -5965,7 +6012,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 855,
+        "price": 860,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -5974,13 +6021,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 805,
+        "price": 810,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 13",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -5997,8 +6044,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
     "modelo": "Modelo 13 Pro Max",
     "descripcion": "OLED diagnóstica para reparación de iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 920,
-    "precioMayoreo": 860,
+    "precioPublico": 965,
+    "precioMayoreo": 900,
     "imagen": "/assets/products/oled-diagnostica/13-pro-max.png",
     "stock": "disponible",
     "activo": true,
@@ -6008,7 +6055,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 860,
+        "price": 900,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6017,7 +6064,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 805,
+        "price": 845,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6026,13 +6073,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 755,
+        "price": 795,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 14",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6049,8 +6096,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 14",
     "modelo": "Modelo 14",
     "descripcion": "OLED diagnóstica para reparación de iPhone 14. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 865,
-    "precioMayoreo": 805,
+    "precioPublico": 890,
+    "precioMayoreo": 830,
     "imagen": "/assets/products/oled-diagnostica/14-14-pro.png",
     "stock": "disponible",
     "activo": true,
@@ -6060,7 +6107,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 805,
+        "price": 830,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6069,7 +6116,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 755,
+        "price": 780,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6078,13 +6125,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 710,
+        "price": 735,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 15",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6136,7 +6183,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 16",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6153,8 +6200,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
     "modelo": "Modelo 14 Pro Max",
     "descripcion": "OLED diagnóstica para reparación de iPhone 14 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 975,
-    "precioMayoreo": 910,
+    "precioPublico": 965,
+    "precioMayoreo": 900,
     "imagen": "/assets/products/oled-diagnostica/14-pro-max.png",
     "stock": "disponible",
     "activo": true,
@@ -6164,7 +6211,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 910,
+        "price": 900,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6173,7 +6220,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 855,
+        "price": 845,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6182,13 +6229,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 805,
+        "price": 795,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 17",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6205,8 +6252,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus",
     "modelo": "Modelo 14 Plus",
     "descripcion": "OLED diagnóstica para reparación de iPhone 14 Plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 920,
-    "precioMayoreo": 860,
+    "precioPublico": 945,
+    "precioMayoreo": 880,
     "imagen": "/assets/products/oled-diagnostica/14-plus.png",
     "stock": "disponible",
     "activo": true,
@@ -6216,7 +6263,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 860,
+        "price": 880,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6225,7 +6272,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 805,
+        "price": 825,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6234,13 +6281,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 755,
+        "price": 780,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 18",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6257,8 +6304,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 15",
     "modelo": "Modelo 15",
     "descripcion": "OLED diagnóstica para reparación de iPhone 15. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1270,
-    "precioMayoreo": 1185,
+    "precioPublico": 1335,
+    "precioMayoreo": 1245,
     "imagen": "/assets/products/oled-diagnostica/15.png",
     "stock": "disponible",
     "activo": true,
@@ -6268,7 +6315,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1185,
+        "price": 1245,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6277,7 +6324,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1115,
+        "price": 1170,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6286,13 +6333,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1050,
+        "price": 1100,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 19",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6344,7 +6391,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 20",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6361,8 +6408,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max",
     "modelo": "Modelo 15 Pro Max",
     "descripcion": "OLED diagnóstica para reparación de iPhone 15 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1270,
-    "precioMayoreo": 1185,
+    "precioPublico": 1410,
+    "precioMayoreo": 1315,
     "imagen": "/assets/products/oled-diagnostica/15-pro-max.png",
     "stock": "disponible",
     "activo": true,
@@ -6372,7 +6419,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1185,
+        "price": 1315,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6381,7 +6428,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1115,
+        "price": 1235,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6390,13 +6437,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1050,
+        "price": 1160,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 21",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6413,8 +6460,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
     "modelo": "Modelo 15 Plus",
     "descripcion": "OLED diagnóstica para reparación de iPhone 15 Plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1255,
-    "precioMayoreo": 1170,
+    "precioPublico": 1390,
+    "precioMayoreo": 1300,
     "imagen": "/assets/products/oled-diagnostica/15-plus.png",
     "stock": "disponible",
     "activo": true,
@@ -6424,7 +6471,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1170,
+        "price": 1300,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6433,7 +6480,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1095,
+        "price": 1215,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6442,13 +6489,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1030,
+        "price": 1145,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 22",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6465,8 +6512,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 16",
     "modelo": "Modelo 16",
     "descripcion": "OLED diagnóstica para reparación de iPhone 16. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1400,
-    "precioMayoreo": 1310,
+    "precioPublico": 1390,
+    "precioMayoreo": 1300,
     "imagen": "/assets/products/oled-diagnostica/16.png",
     "stock": "disponible",
     "activo": true,
@@ -6476,7 +6523,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1310,
+        "price": 1300,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6485,7 +6532,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1225,
+        "price": 1215,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6494,13 +6541,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1155,
+        "price": 1145,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 24",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6517,8 +6564,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro",
     "modelo": "Modelo 16 Pro",
     "descripcion": "OLED diagnóstica para reparación de iPhone 16 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1440,
-    "precioMayoreo": 1345,
+    "precioPublico": 1615,
+    "precioMayoreo": 1505,
     "imagen": "/assets/products/oled-diagnostica/16-pro.png",
     "stock": "disponible",
     "activo": true,
@@ -6528,7 +6575,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1345,
+        "price": 1505,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6537,7 +6584,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1260,
+        "price": 1410,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6546,13 +6593,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1185,
+        "price": 1330,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 25",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6569,8 +6616,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max",
     "modelo": "Modelo 16 Pro Max",
     "descripcion": "OLED diagnóstica para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1920,
-    "precioMayoreo": 1795,
+    "precioPublico": 1650,
+    "precioMayoreo": 1540,
     "imagen": "/assets/products/oled-diagnostica/16-pro-max.png",
     "stock": "disponible",
     "activo": true,
@@ -6580,7 +6627,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1795,
+        "price": 1540,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6589,7 +6636,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1680,
+        "price": 1445,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6598,13 +6645,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1585,
+        "price": 1360,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 26",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6621,8 +6668,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus",
     "modelo": "Modelo 16 Plus",
     "descripcion": "OLED diagnóstica para reparación de iPhone 16 Plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1420,
-    "precioMayoreo": 1325,
+    "precioPublico": 1615,
+    "precioMayoreo": 1505,
     "imagen": "/assets/products/oled-diagnostica/16-plus.png",
     "stock": "disponible",
     "activo": true,
@@ -6632,7 +6679,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1325,
+        "price": 1505,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6641,7 +6688,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1245,
+        "price": 1410,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6650,13 +6697,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1170,
+        "price": 1330,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 27",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 27",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6673,8 +6720,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 17",
     "modelo": "Modelo 17",
     "descripcion": "OLED diagnóstica para reparación de iPhone 17. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1530,
-    "precioMayoreo": 1430,
+    "precioPublico": 1865,
+    "precioMayoreo": 1740,
     "imagen": "/assets/products/oled-diagnostica/17.png",
     "stock": "disponible",
     "activo": true,
@@ -6684,7 +6731,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1430,
+        "price": 1740,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6693,7 +6740,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1340,
+        "price": 1635,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6702,13 +6749,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1260,
+        "price": 1540,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 28",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 28",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6725,8 +6772,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro",
     "modelo": "Modelo 17 Pro",
     "descripcion": "OLED diagnóstica para reparación de iPhone 17 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1530,
-    "precioMayoreo": 1430,
+    "precioPublico": 1905,
+    "precioMayoreo": 1775,
     "imagen": "/assets/products/oled-diagnostica/17-pro.png",
     "stock": "disponible",
     "activo": true,
@@ -6736,7 +6783,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1430,
+        "price": 1775,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6745,7 +6792,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1340,
+        "price": 1665,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6754,13 +6801,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1260,
+        "price": 1570,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 29",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 29",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6777,8 +6824,8 @@
     "nombre": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
     "modelo": "Modelo 17 Pro Max",
     "descripcion": "OLED diagnóstica para reparación de iPhone 17 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 2275,
-    "precioMayoreo": 2125,
+    "precioPublico": 1905,
+    "precioMayoreo": 1775,
     "imagen": "/assets/products/oled-diagnostica/17-pro-max.png",
     "stock": "disponible",
     "activo": true,
@@ -6788,7 +6835,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 2125,
+        "price": 1775,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6797,7 +6844,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1990,
+        "price": 1665,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6806,13 +6853,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1875,
+        "price": 1570,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 30",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 30",
     "videos": [
       "/assets/products/oled-diagnostica/video-01.mp4",
       "/assets/products/oled-diagnostica/video-02.mp4"
@@ -6829,8 +6876,8 @@
     "nombre": "Pantalla iPhone 11 INCELL FHD",
     "modelo": "iPhone 11 INCELL FHD",
     "descripcion": "INCELL FHD versión estándar para reparación de iPhone 11. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 175,
-    "precioMayoreo": 165,
+    "precioPublico": 160,
+    "precioMayoreo": 150,
     "imagen": "/assets/products/iphone-incell/11/fhd-main.jpg",
     "stock": "consultar inventario",
     "activo": true,
@@ -6840,7 +6887,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 165,
+        "price": 150,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -6849,7 +6896,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 155,
+        "price": 145,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -6858,13 +6905,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 150,
+        "price": 140,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 14",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -6912,7 +6959,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 15",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -6960,7 +7007,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 17",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7008,7 +7055,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 21",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7021,8 +7068,8 @@
     "nombre": "Pantalla para iPhone 16E",
     "modelo": "iPhone 16E OLED PREMIUM",
     "descripcion": "OLED PREMIUM para reparación de iPhone 16E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 725,
-    "precioMayoreo": 710,
+    "precioPublico": 600,
+    "precioMayoreo": 585,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -7032,7 +7079,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 710,
+        "price": 585,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -7041,7 +7088,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 650,
+        "price": 535,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -7050,13 +7097,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 625,
+        "price": 515,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 23",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7069,8 +7116,8 @@
     "nombre": "Pantalla para iPhone 17E",
     "modelo": "iPhone 17E INCELL FHD",
     "descripcion": "INCELL FHD para reparación de iPhone 17E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 350,
-    "precioMayoreo": 325,
+    "precioPublico": 245,
+    "precioMayoreo": 230,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -7080,7 +7127,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 325,
+        "price": 230,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -7089,7 +7136,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 310,
+        "price": 215,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -7098,13 +7145,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 300,
+        "price": 210,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 41",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 41",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7152,7 +7199,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 11",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7165,8 +7212,8 @@
     "nombre": "Pantalla OLED Diagnóstica para iPhone 16E",
     "modelo": "iPhone 16E DIAGNOTICO  SOFT OLED",
     "descripcion": "OLED diagnóstica para reparación de iPhone 16E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 880,
-    "precioMayoreo": 825,
+    "precioPublico": 965,
+    "precioMayoreo": 900,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -7176,7 +7223,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 825,
+        "price": 900,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -7185,7 +7232,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 770,
+        "price": 845,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -7194,13 +7241,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 725,
+        "price": 795,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 23",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7248,7 +7295,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 15",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7296,7 +7343,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 16",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7338,13 +7385,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 590,
+        "price": 585,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 40",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 40",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7386,13 +7433,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 590,
+        "price": 585,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 41",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 41",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7405,8 +7452,8 @@
     "nombre": "Pantalla para Samsung Z FLIP5",
     "modelo": "Z FLIP5 INCELL S/M",
     "descripcion": "Pantalla INCELL S/M para reparación de Samsung Z FLIP5. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
-    "precioPublico": 1700,
-    "precioMayoreo": 1600,
+    "precioPublico": 830,
+    "precioMayoreo": 775,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -7416,7 +7463,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 1600,
+        "price": 775,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -7425,7 +7472,7 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 1400,
+        "price": 730,
         "label": "Caja · confirmar presentación",
         "scope": "manual_quote",
         "autoApply": false
@@ -7434,13 +7481,13 @@
         "code": "VIP",
         "minQty": 1,
         "maxQty": null,
-        "price": 1300,
+        "price": 705,
         "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 42",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 42",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7488,7 +7535,7 @@
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 43",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 43",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7765,8 +7812,8 @@
     "nombre": "Gafas AI M89",
     "modelo": "Gafas AI M89",
     "descripcion": "Gafas AI M89 de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 550,
-    "precioMayoreo": 500,
+    "precioPublico": 631,
+    "precioMayoreo": 581,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -7776,7 +7823,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 500,
+        "price": 581,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -7785,13 +7832,22 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 480,
+        "price": 511,
         "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 491,
+        "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 11",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [
@@ -7882,8 +7938,8 @@
     "nombre": "Gafas AI M95",
     "modelo": "Gafas AI M95",
     "descripcion": "Gafas AI M95 de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
-    "precioPublico": 700,
-    "precioMayoreo": 650,
+    "precioPublico": 709,
+    "precioMayoreo": 659,
     "imagen": "/assets/products/placeholder.svg",
     "stock": "consultar inventario",
     "activo": true,
@@ -7893,7 +7949,7 @@
         "code": "WHOLESALE",
         "minQty": 1,
         "maxQty": null,
-        "price": 650,
+        "price": 659,
         "label": "Mayoreo · confirmar condiciones",
         "scope": "manual_quote",
         "autoApply": false
@@ -7902,13 +7958,22 @@
         "code": "BOX",
         "minQty": 1,
         "maxQty": null,
-        "price": 600,
+        "price": 589,
         "label": "Caja · confirmar presentación",
+        "scope": "manual_quote",
+        "autoApply": false
+      },
+      {
+        "code": "VIP",
+        "minQty": 1,
+        "maxQty": null,
+        "price": 569,
+        "label": "VIP · cliente autorizado",
         "scope": "manual_quote",
         "autoApply": false
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 13",
     "internalId": true,
     "officialSkuPending": true,
     "sourceRows": [

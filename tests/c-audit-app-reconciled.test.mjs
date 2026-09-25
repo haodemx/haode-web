@@ -7,57 +7,86 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 
 const repo = fileURLToPath(new URL('../', import.meta.url));
-const base = 'e53d6c0102c80d84bd73b746e3e18b499df5eea0';
+const base = '5dd00d207e91e2bf3fa0a1a67495653ccea165ee';
 const files = ['app/products.json', 'data/products.generated.js'];
 const parse = (text) => JSON.parse(text.slice(text.indexOf('['), text.lastIndexOf(']') + 1));
 const read = (root, file) => parse(fs.readFileSync(path.join(root, file), 'utf8'));
-const withoutProvenance = (products) => products.map(({ priceSource, ...product }) => product);
+const source = JSON.parse(fs.readFileSync(path.join(repo, 'data/customer-price-list-2026-09-24.json'), 'utf8'));
+const report = JSON.parse(fs.readFileSync(path.join(repo, 'docs/reports/customer-price-sync-2026-09-24.json'), 'utf8'));
 
-test('only MICA HD provenance changes: every price, tier, identity, inventory and asset stays equal to the assigned base', () => {
+function withoutPriceFields(products, file) {
+  return products.map((product) => {
+    const copy = { ...product };
+    const fields = file.startsWith('app/')
+      ? ['precioPublico', 'precioMayoreo', 'priceTiers', 'priceSource', 'descripcion', 'offerBadge', 'offerDisplayPrice']
+      : ['prices', 'priceSource', 'description'];
+    fields.forEach((field) => delete copy[field]);
+    return copy;
+  });
+}
+
+function numericPrice(value) {
+  return Number(String(value || '').replace(/[^0-9.]/g, ''));
+}
+
+test('2026-09-24 sync changes only price surfaces and keeps non-price product data equal to deployed main', () => {
   for (const file of files) {
     const before = parse(execFileSync('git', ['show', `${base}:${file}`], { cwd: repo, encoding: 'utf8' }));
     const after = read(repo, file);
-    assert.deepEqual(withoutProvenance(after), withoutProvenance(before));
-    assert.deepEqual(after.filter((product, index) => product.priceSource !== before[index].priceSource).map((product) => product.id), ['mica-hd']);
-    assert.match(after.find((product) => product.id === 'mica-hd').priceSource, /01 HIDROGEL · fila 8$/);
+    assert.deepEqual(withoutPriceFields(after, file), withoutPriceFields(before, file));
   }
-  const mica = read(repo, 'app/products.json').find((product) => product.id === 'mica-hd');
-  assert.deepEqual([mica.precioPublico, ...mica.priceTiers.map((tier) => tier.price)], [350, 300, 275, 250]);
 });
 
-test('isolated resync uses each row sheet and preserves the baseline generator business output', () => {
-  const roots = [];
-  const inputs = ['scripts/sync-customer-prices.js', 'data/customer-price-list-2026-09-21.json', ...files, 'docs/master-data/products-master.csv'];
+test('every matched product uses the exact workbook row and named manual tiers', () => {
+  const website = new Map(read(repo, 'data/products.generated.js').map((product) => [product.id, product]));
+  const app = new Map(read(repo, 'app/products.json').map((product) => [product.id, product]));
+  const sourceByCoordinate = new Map(source.rows.map((row) => [`${row.sourceSheet}:${row.sourceRow}`, row]));
+  assert.equal(report.summary.websiteMatched, 152);
+  assert.equal(report.summary.appMatched, 152);
+
+  for (const match of report.matched) {
+    const row = sourceByCoordinate.get(`${match.sheet}:${match.row}`);
+    const websiteProduct = website.get(match.id);
+    const appProduct = app.get(match.id);
+    assert.ok(row, `Missing source row for ${match.id}`);
+    assert.ok(websiteProduct, `Missing website product ${match.id}`);
+    assert.ok(appProduct, `Missing App product ${match.id}`);
+    assert.match(websiteProduct.priceSource, /HAODE_Lista_de_Precios_2026-09-24\.xlsx/);
+    assert.match(appProduct.priceSource, /HAODE_Lista_de_Precios_2026-09-24\.xlsx/);
+    assert.deepEqual(websiteProduct.prices.map((tier) => numericPrice(tier.price)), [
+      row.prices.retail,
+      row.prices.wholesale,
+      row.prices.box,
+      row.prices.vip,
+    ].filter((value) => value !== null));
+    assert.equal(appProduct.precioPublico, row.prices.retail);
+    assert.equal(appProduct.precioMayoreo, row.prices.wholesale || row.prices.retail);
+    assert.ok(appProduct.priceTiers.every((tier) => tier.autoApply === false), `${match.id} has an automatic tier`);
+  }
+});
+
+test('isolated 2026-09-24 resync is idempotent', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'haode-price-resync-'));
+  const inputs = [
+    'scripts/sync-customer-prices.js',
+    'data/customer-price-list-2026-09-24.json',
+    ...files,
+    'docs/master-data/products-master.csv',
+  ];
   try {
-    for (const version of ['baseline', 'reconciled']) {
-      const root = fs.mkdtempSync(path.join(os.tmpdir(), `haode-app-reconciled-${version}-`));
-      roots.push(root);
-      fs.mkdirSync(path.join(root, 'docs/reports'), { recursive: true });
-      for (const file of inputs) {
-        fs.mkdirSync(path.dirname(path.join(root, file)), { recursive: true });
-        fs.copyFileSync(path.join(repo, file), path.join(root, file));
-      }
-      if (version === 'baseline') fs.writeFileSync(path.join(root, 'scripts/sync-customer-prices.js'), execFileSync('git', ['show', `${base}:scripts/sync-customer-prices.js`], { cwd: repo }));
-      const result = spawnSync(process.execPath, ['scripts/sync-customer-prices.js', '--apply', '--summary-only'], { cwd: root, encoding: 'utf8' });
-      assert.equal(result.status, 0, result.stderr || result.stdout);
+    fs.mkdirSync(path.join(root, 'docs/reports'), { recursive: true });
+    for (const file of inputs) {
+      fs.mkdirSync(path.dirname(path.join(root, file)), { recursive: true });
+      fs.copyFileSync(path.join(repo, file), path.join(root, file));
     }
-    for (const file of files) {
-      assert.deepEqual(withoutProvenance(read(roots[1], file)), withoutProvenance(read(roots[0], file)));
-      assert.match(read(roots[1], file).find((product) => product.id === 'mica-hd').priceSource, /01 HIDROGEL · fila 8$/);
-    }
-    const report = JSON.parse(fs.readFileSync(path.join(roots[1], 'docs/reports/customer-price-sync-2026-09-21.json'), 'utf8'));
-    for (const match of report.matched) {
-      for (const file of files) {
-        const product = read(roots[1], file).find((product) => product.id === match.id);
-        if (product) assert.ok(product.priceSource.includes(`${match.sheet} · fila ${match.row}`), `${file}: ${match.id}: ${product.priceSource}`);
-      }
-    }
-    const firstPass = files.map((file) => read(roots[1], file));
-    const repeat = spawnSync(process.execPath, ['scripts/sync-customer-prices.js', '--apply', '--summary-only'], { cwd: roots[1], encoding: 'utf8' });
-    assert.equal(repeat.status, 0, repeat.stderr || repeat.stdout);
-    assert.deepEqual(files.map((file) => read(roots[1], file)), firstPass);
+    const run = () => spawnSync(process.execPath, ['scripts/sync-customer-prices.js', '--apply', '--summary-only'], { cwd: root, encoding: 'utf8' });
+    const first = run();
+    assert.equal(first.status, 0, first.stderr || first.stdout);
+    const firstPass = files.map((file) => read(root, file));
+    const second = run();
+    assert.equal(second.status, 0, second.stderr || second.stdout);
+    assert.deepEqual(files.map((file) => read(root, file)), firstPass);
   } finally {
-    // Only directories created by this test are removed, never a checkout or source file.
-    for (const root of roots) fs.rmSync(root, { recursive: true, force: true });
+    fs.rmSync(root, { recursive: true, force: true });
   }
 });

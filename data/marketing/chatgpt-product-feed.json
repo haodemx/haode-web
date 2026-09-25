@@ -2,19 +2,22 @@
   "schema_version": 1,
   "status": "LOCAL_PREPARED_NOT_UPLOAD_READY",
   "source": "data/products.generated.js",
-  "content_sha256": "72e4d1b9c1a1ec1797ffe9ed9204c5d91df675eb8bc6b13e1c2b7d33ff0493eb",
-  "price_policy": "Consultar por WhatsApp; no se publica un precio sin confirmación vigente.",
+  "content_sha256": "b2ecedfe5d00ea505f2db254138fffda5ef1946bb3193cfef3a9850505940250",
+  "price_policy": "Precio de menudeo confirmado por la lista comercial del 2026-09-24; confirma cantidad y disponibilidad por WhatsApp.",
   "availability_policy": "unknown no significa disponible ni agotado.",
   "items": [
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-11-pro-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-11-pro-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/11-pro-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 685,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -26,7 +29,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -35,12 +37,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-12-12-pro",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-12-pro/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/12-12-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 760,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -52,7 +57,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -61,12 +65,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-12-pro-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-12-pro-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/12-pro-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 900,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -78,7 +85,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -87,12 +93,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-13",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 13",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 890,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -104,7 +113,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -113,12 +121,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-13-pro",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 980,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -130,7 +141,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -139,12 +149,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-13-pro-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-13-pro-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-pro-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 965,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -156,7 +169,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -165,12 +177,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-14",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 890,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -182,7 +197,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -191,12 +205,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-14-plus",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-plus/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-plus.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 945,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -208,7 +225,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -217,12 +233,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-14-pro",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1390,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -234,7 +253,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -243,12 +261,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-14-pro-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-14-pro-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-pro-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 965,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -260,7 +281,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -269,12 +289,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-15",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1335,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -286,7 +309,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -295,12 +317,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-15-plus",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-plus/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-plus.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1390,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -312,7 +337,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -321,12 +345,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-15-pro",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1390,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -338,7 +365,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -347,12 +373,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-15-pro-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-15-pro-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1410,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -364,7 +393,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -373,12 +401,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-16",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1390,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -390,7 +421,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -399,12 +429,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-16-plus",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-plus/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-plus.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1615,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -416,7 +449,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -425,12 +457,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-16-pro",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1615,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -442,7 +477,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -451,12 +485,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-16-pro-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-16-pro-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1650,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -468,7 +505,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -477,12 +513,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-17",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 17",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1865,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -494,7 +533,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -503,12 +541,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-17-pro",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1905,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -520,7 +561,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -529,12 +569,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-17-pro-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-17-pro-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1905,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -546,7 +589,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -555,12 +597,15 @@
     {
       "id": "haode-pantalla-oled-diagnostica-modelo-xs-max",
       "title": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max",
-      "description": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE Pantalla OLED Diagnóstica - Modelo XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/haode-pantalla-oled-diagnostica-modelo-xs-max/",
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/xs-max.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 650,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -572,7 +617,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -581,12 +625,15 @@
     {
       "id": "iphone-incell-11",
       "title": "Pantalla iPhone 11 INCELL FHD",
-      "description": "Pantalla iPhone 11 INCELL FHD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla iPhone 11 INCELL FHD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-11/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/11/fhd-main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 160,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -598,7 +645,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -607,12 +653,15 @@
     {
       "id": "iphone-incell-11-bolsa-protectora",
       "title": "Pantalla para iPhone 11 Bolsa Protectora",
-      "description": "Pantalla para iPhone 11 Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 11 Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-11-bolsa-protectora/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 155,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "iphone-incell",
@@ -624,7 +673,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required",
@@ -634,12 +682,15 @@
     {
       "id": "iphone-incell-11pro",
       "title": "Pantalla para iPhone 11 Pro",
-      "description": "Pantalla para iPhone 11 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 11 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-11pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/11pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 195,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -651,7 +702,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -660,12 +710,15 @@
     {
       "id": "iphone-incell-11promax",
       "title": "Pantalla para iPhone 11 Pro Max",
-      "description": "Pantalla para iPhone 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-11promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/11promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 185,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -677,7 +730,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -686,12 +738,15 @@
     {
       "id": "iphone-incell-12-12pro",
       "title": "Pantalla para iPhone 12 / 12 Pro",
-      "description": "Pantalla para iPhone 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-12-12pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/12-12pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 195,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -703,7 +758,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -712,12 +766,15 @@
     {
       "id": "iphone-incell-12mini",
       "title": "Pantalla para iPhone 12 mini",
-      "description": "Pantalla para iPhone 12 mini. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 12 mini. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-12mini/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/12mini/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 210,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -729,7 +786,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -738,12 +794,15 @@
     {
       "id": "iphone-incell-12promax",
       "title": "Pantalla para iPhone 12 Pro Max",
-      "description": "Pantalla para iPhone 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-12promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/12promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 210,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -755,7 +814,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -764,12 +822,15 @@
     {
       "id": "iphone-incell-13",
       "title": "Pantalla para iPhone 13",
-      "description": "Pantalla para iPhone 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-13/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 195,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -781,7 +842,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -790,12 +850,15 @@
     {
       "id": "iphone-incell-13mini",
       "title": "Pantalla para iPhone 13 mini",
-      "description": "Pantalla para iPhone 13 mini. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 13 mini. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-13mini/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13mini/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 215,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -807,7 +870,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -816,12 +878,15 @@
     {
       "id": "iphone-incell-13pro",
       "title": "Pantalla para iPhone 13 Pro",
-      "description": "Pantalla para iPhone 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-13pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 240,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -833,7 +898,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -842,12 +906,15 @@
     {
       "id": "iphone-incell-13promax",
       "title": "Pantalla para iPhone 13 Pro Max",
-      "description": "Pantalla para iPhone 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-13promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 260,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -859,7 +926,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -868,12 +934,15 @@
     {
       "id": "iphone-incell-14",
       "title": "Pantalla para iPhone 14",
-      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-14/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 205,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -885,7 +954,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -894,12 +962,15 @@
     {
       "id": "iphone-incell-14plus",
       "title": "Pantalla para iPhone 14 Plus",
-      "description": "Pantalla para iPhone 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-14plus/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 240,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -911,7 +982,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -920,12 +990,15 @@
     {
       "id": "iphone-incell-14pro",
       "title": "Pantalla para iPhone 14 Pro",
-      "description": "Pantalla para iPhone 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-14pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 245,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -937,7 +1010,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -946,12 +1018,15 @@
     {
       "id": "iphone-incell-14promax",
       "title": "Pantalla para iPhone 14 Pro Max",
-      "description": "Pantalla para iPhone 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-14promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 260,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -963,7 +1038,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -972,12 +1046,15 @@
     {
       "id": "iphone-incell-15",
       "title": "Pantalla para iPhone 15",
-      "description": "Pantalla para iPhone 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-15/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 260,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -989,7 +1066,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -998,12 +1074,15 @@
     {
       "id": "iphone-incell-15plus",
       "title": "Pantalla para iPhone 15 Plus",
-      "description": "Pantalla para iPhone 15 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 15 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-15plus/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 260,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1015,7 +1094,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1024,12 +1102,15 @@
     {
       "id": "iphone-incell-15pro",
       "title": "Pantalla para iPhone 15 Pro",
-      "description": "Pantalla para iPhone 15 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 15 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-15pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 250,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1041,7 +1122,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1050,12 +1130,15 @@
     {
       "id": "iphone-incell-15promax",
       "title": "Pantalla para iPhone 15 Pro Max",
-      "description": "Pantalla para iPhone 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-15promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 260,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1067,7 +1150,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1076,12 +1158,15 @@
     {
       "id": "iphone-incell-16",
       "title": "Pantalla para iPhone 16",
-      "description": "Pantalla para iPhone 16. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-16/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 280,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1093,7 +1178,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1102,12 +1186,15 @@
     {
       "id": "iphone-incell-16e",
       "title": "Pantalla para iPhone 16e",
-      "description": "Pantalla para iPhone 16e. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16e. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-16e/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16e/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 245,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1119,7 +1206,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1128,12 +1214,15 @@
     {
       "id": "iphone-incell-16plus",
       "title": "Pantalla para iPhone 16 Plus",
-      "description": "Pantalla para iPhone 16 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-16plus/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 280,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1145,7 +1234,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1154,12 +1242,15 @@
     {
       "id": "iphone-incell-16pro",
       "title": "Pantalla para iPhone 16 Pro",
-      "description": "Pantalla para iPhone 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-16pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 455,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1171,7 +1262,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1180,12 +1270,15 @@
     {
       "id": "iphone-incell-16promax",
       "title": "Pantalla para iPhone 16 Pro Max",
-      "description": "Pantalla para iPhone 16 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-16promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 455,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1197,7 +1290,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1206,12 +1298,15 @@
     {
       "id": "iphone-incell-17",
       "title": "Pantalla para iPhone 17",
-      "description": "Pantalla para iPhone 17. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 17. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-17/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 555,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1223,7 +1318,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1232,12 +1326,15 @@
     {
       "id": "iphone-incell-17air",
       "title": "Pantalla para iPhone 17 Air",
-      "description": "Pantalla para iPhone 17 Air. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 17 Air. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-17air/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17air/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1040,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1249,7 +1346,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1258,12 +1354,15 @@
     {
       "id": "iphone-incell-17e",
       "title": "Pantalla para iPhone 17E",
-      "description": "Pantalla para iPhone 17E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 17E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-17e/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 245,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-incell",
@@ -1275,7 +1374,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -1284,12 +1382,15 @@
     {
       "id": "iphone-incell-17pro",
       "title": "Pantalla para iPhone 17 Pro",
-      "description": "Pantalla para iPhone 17 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 17 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-17pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 555,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1301,7 +1402,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1310,12 +1410,15 @@
     {
       "id": "iphone-incell-17promax",
       "title": "Pantalla para iPhone 17 Pro Max",
-      "description": "Pantalla para iPhone 17 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 17 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-17promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 555,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1327,7 +1430,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1336,12 +1438,15 @@
     {
       "id": "iphone-incell-x",
       "title": "Pantalla para iPhone X",
-      "description": "Pantalla para iPhone X. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone X. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-x/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/x/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 160,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1353,7 +1458,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1362,12 +1466,15 @@
     {
       "id": "iphone-incell-xr",
       "title": "Pantalla para iPhone XR",
-      "description": "Pantalla para iPhone XR. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone XR. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-xr/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/xr/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 160,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1379,7 +1486,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1388,12 +1494,15 @@
     {
       "id": "iphone-incell-xr-bolsa-protectora",
       "title": "Pantalla para iPhone XR Bolsa Protectora",
-      "description": "Pantalla para iPhone XR Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone XR Bolsa Protectora. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-xr-bolsa-protectora/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 155,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "iphone-incell",
@@ -1405,7 +1514,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required",
@@ -1415,12 +1523,15 @@
     {
       "id": "iphone-incell-xs",
       "title": "Pantalla para iPhone XS",
-      "description": "Pantalla para iPhone XS. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone XS. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-xs/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/xs/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 160,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1432,7 +1543,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1441,12 +1551,15 @@
     {
       "id": "iphone-incell-xsmax",
       "title": "Pantalla para iPhone XS Max",
-      "description": "Pantalla para iPhone XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-incell-xsmax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/xsmax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 175,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1458,7 +1571,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1467,12 +1579,15 @@
     {
       "id": "iphone-oled-11promax",
       "title": "Pantalla para iPhone 11 Pro Max",
-      "description": "Pantalla para iPhone 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 11 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-11promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/11promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 620,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1484,7 +1599,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1493,12 +1607,15 @@
     {
       "id": "iphone-oled-12-12pro",
       "title": "Pantalla para iPhone 12 / 12 Pro",
-      "description": "Pantalla para iPhone 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 12 / 12 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-12-12pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/12-12pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 655,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1510,7 +1627,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1519,12 +1635,15 @@
     {
       "id": "iphone-oled-12promax",
       "title": "Pantalla para iPhone 12 Pro Max",
-      "description": "Pantalla para iPhone 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 12 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-12promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/12promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 620,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1536,7 +1655,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1545,12 +1663,15 @@
     {
       "id": "iphone-oled-13",
       "title": "Pantalla para iPhone 13",
-      "description": "Pantalla para iPhone 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 13. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-13/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/13/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 530,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1562,7 +1683,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1571,12 +1691,15 @@
     {
       "id": "iphone-oled-13pro",
       "title": "Pantalla para iPhone 13 Pro",
-      "description": "Pantalla para iPhone 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 13 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-13pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/13pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 620,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1588,7 +1711,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1597,12 +1719,15 @@
     {
       "id": "iphone-oled-13promax",
       "title": "Pantalla para iPhone 13 Pro Max",
-      "description": "Pantalla para iPhone 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 13 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-13promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/13promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 640,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1614,7 +1739,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1623,12 +1747,15 @@
     {
       "id": "iphone-oled-14",
       "title": "Pantalla para iPhone 14",
-      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-14/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 530,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1640,7 +1767,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1649,12 +1775,15 @@
     {
       "id": "iphone-oled-14plus",
       "title": "Pantalla para iPhone 14 Plus",
-      "description": "Pantalla para iPhone 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-14plus/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 940,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1666,7 +1795,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1675,12 +1803,15 @@
     {
       "id": "iphone-oled-14pro",
       "title": "Pantalla para iPhone 14 Pro",
-      "description": "Pantalla para iPhone 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-14pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1025,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1692,7 +1823,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1701,12 +1831,15 @@
     {
       "id": "iphone-oled-14promax",
       "title": "Pantalla para iPhone 14 Pro Max",
-      "description": "Pantalla para iPhone 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-14promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 620,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1718,7 +1851,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1727,12 +1859,15 @@
     {
       "id": "iphone-oled-15",
       "title": "Pantalla para iPhone 15",
-      "description": "Pantalla para iPhone 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 15. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-15/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/15/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1025,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1744,7 +1879,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1753,12 +1887,15 @@
     {
       "id": "iphone-oled-15promax",
       "title": "Pantalla para iPhone 15 Pro Max",
-      "description": "Pantalla para iPhone 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 15 Pro Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-15promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/15promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 935,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1770,7 +1907,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1779,12 +1915,15 @@
     {
       "id": "iphone-oled-16e",
       "title": "Pantalla para iPhone 16E",
-      "description": "Pantalla para iPhone 16E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-16e/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 600,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -1796,7 +1935,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -1805,12 +1943,15 @@
     {
       "id": "iphone-oled-16pro",
       "title": "Pantalla para iPhone 16 Pro",
-      "description": "Pantalla para iPhone 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16 Pro. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-16pro/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/16pro/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 845,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1822,7 +1963,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1831,12 +1971,15 @@
     {
       "id": "iphone-oled-16promax",
       "title": "Pantalla para iPhone 16 Pro Max Soft OLED",
-      "description": "Pantalla para iPhone 16 Pro Max Soft OLED. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16 Pro Max Soft OLED. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-16promax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/16promax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1805,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1848,7 +1991,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1857,12 +1999,15 @@
     {
       "id": "iphone-oled-16promax-hard",
       "title": "Pantalla para iPhone 16 Pro Max Hard OLED",
-      "description": "Pantalla para iPhone 16 Pro Max Hard OLED. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 16 Pro Max Hard OLED. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-16promax-hard/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/16promax-hard/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 845,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1874,7 +2019,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1883,12 +2027,15 @@
     {
       "id": "iphone-oled-soft-14",
       "title": "Pantalla para iPhone 14",
-      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-soft-14/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1070,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -1900,7 +2047,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -1909,12 +2055,15 @@
     {
       "id": "iphone-oled-soft-14-plus",
       "title": "Pantalla para iPhone 14 plus",
-      "description": "Pantalla para iPhone 14 plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 14 plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-soft-14-plus/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1070,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -1926,7 +2075,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -1935,12 +2083,15 @@
     {
       "id": "iphone-oled-soft-15pro",
       "title": "Pantalla para iPhone 15PRO",
-      "description": "Pantalla para iPhone 15PRO. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone 15PRO. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-soft-15pro/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1025,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -1952,7 +2103,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -1961,12 +2111,15 @@
     {
       "id": "iphone-oled-xsmax",
       "title": "Pantalla para iPhone XS Max",
-      "description": "Pantalla para iPhone XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para iPhone XS Max. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/iphone-oled-xsmax/",
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/xsmax/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 540,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1978,7 +2131,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -1987,12 +2139,15 @@
     {
       "id": "mica-hd",
       "title": "MICA HD",
-      "description": "MICA HD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "MICA HD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/mica-hd/",
       "image_link": "https://haode.com.mx/assets/products/micas/hd/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 350,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2004,7 +2159,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2013,12 +2167,15 @@
     {
       "id": "mica-matte",
       "title": "MICA MATTE",
-      "description": "MICA MATTE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "MICA MATTE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/mica-matte/",
       "image_link": "https://haode.com.mx/assets/products/micas/matte/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 350,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2030,7 +2187,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2039,12 +2195,15 @@
     {
       "id": "mica-privacidad-hd",
       "title": "MICA PRIVACIDAD HD",
-      "description": "MICA PRIVACIDAD HD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "MICA PRIVACIDAD HD. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/mica-privacidad-hd/",
       "image_link": "https://haode.com.mx/assets/products/micas/privacidad-hd/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 800,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2056,7 +2215,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2065,12 +2223,15 @@
     {
       "id": "mica-privacidad-matte",
       "title": "MICA PRIVACIDAD MATTE",
-      "description": "MICA PRIVACIDAD MATTE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "MICA PRIVACIDAD MATTE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/mica-privacidad-matte/",
       "image_link": "https://haode.com.mx/assets/products/micas/privacidad-matte/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 800,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2082,7 +2243,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2091,12 +2251,15 @@
     {
       "id": "oled-diagnostica-12mini-hard",
       "title": "Pantalla OLED Diagnóstica para iPhone 12MINI",
-      "description": "Pantalla OLED Diagnóstica para iPhone 12MINI. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla OLED Diagnóstica para iPhone 12MINI. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/oled-diagnostica-12mini-hard/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1065,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "oled-diagnostica",
@@ -2108,7 +2271,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -2117,12 +2279,15 @@
     {
       "id": "oled-diagnostica-16e-soft",
       "title": "Pantalla OLED Diagnóstica para iPhone 16E",
-      "description": "Pantalla OLED Diagnóstica para iPhone 16E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla OLED Diagnóstica para iPhone 16E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/oled-diagnostica-16e-soft/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 965,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "oled-diagnostica",
@@ -2134,7 +2299,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -2143,12 +2307,15 @@
     {
       "id": "samsung-incell-note-10",
       "title": "Pantalla para Samsung Note 10",
-      "description": "Pantalla para Samsung Note 10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-10/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-10/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 475,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2160,7 +2327,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2169,12 +2335,15 @@
     {
       "id": "samsung-incell-note-10-lite",
       "title": "Pantalla para Samsung Note 10 Lite",
-      "description": "Pantalla para Samsung Note 10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-10-lite/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 695,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-incell",
@@ -2186,7 +2355,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required",
@@ -2196,12 +2364,15 @@
     {
       "id": "samsung-incell-note-10-plus",
       "title": "Pantalla para Samsung Note 10 Plus",
-      "description": "Pantalla para Samsung Note 10 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 10 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-10-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-10-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 505,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2213,7 +2384,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2222,12 +2392,15 @@
     {
       "id": "samsung-incell-note-20",
       "title": "Pantalla para Samsung Note 20",
-      "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-20/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 575,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-incell",
@@ -2239,7 +2412,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required",
@@ -2249,12 +2421,15 @@
     {
       "id": "samsung-incell-note-20-ultra",
       "title": "Pantalla para Samsung Note 20 Ultra",
-      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-20-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-20-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 470,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2266,7 +2441,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2275,12 +2449,15 @@
     {
       "id": "samsung-incell-note-8",
       "title": "Pantalla para Samsung Note 8",
-      "description": "Pantalla para Samsung Note 8. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 8. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-8/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-8/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 455,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2292,7 +2469,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2301,12 +2477,15 @@
     {
       "id": "samsung-incell-note-9",
       "title": "Pantalla para Samsung Note 9",
-      "description": "Pantalla para Samsung Note 9. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 9. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-note-9/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-9/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 455,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2318,7 +2497,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2327,12 +2505,15 @@
     {
       "id": "samsung-incell-s10",
       "title": "Pantalla para Samsung S10",
-      "description": "Pantalla para Samsung S10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s10/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 375,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2344,7 +2525,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2353,12 +2533,15 @@
     {
       "id": "samsung-incell-s10-lite",
       "title": "Pantalla para Samsung S10 Lite",
-      "description": "Pantalla para Samsung S10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S10 Lite. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s10-lite/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 290,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-incell",
@@ -2370,7 +2553,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required",
@@ -2380,12 +2562,15 @@
     {
       "id": "samsung-incell-s10-plus",
       "title": "Pantalla para Samsung S10 Plus",
-      "description": "Pantalla para Samsung S10 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S10 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s10-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 385,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2397,7 +2582,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2406,12 +2590,15 @@
     {
       "id": "samsung-incell-s10e",
       "title": "Pantalla para Samsung S10E",
-      "description": "Pantalla para Samsung S10E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S10E. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s10e/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10e/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 555,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2423,7 +2610,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2432,12 +2618,15 @@
     {
       "id": "samsung-incell-s20-4g",
       "title": "Pantalla para Samsung S20 4G",
-      "description": "Pantalla para Samsung S20 4G. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S20 4G. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s20-4g/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 410,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -2449,7 +2638,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -2458,12 +2646,15 @@
     {
       "id": "samsung-incell-s20-5g",
       "title": "Pantalla para Samsung S20 5G",
-      "description": "Pantalla para Samsung S20 5G. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S20 5G. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s20-5g/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 410,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -2475,7 +2666,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -2484,12 +2674,15 @@
     {
       "id": "samsung-incell-s20-fe",
       "title": "Pantalla para Samsung S20 FE",
-      "description": "Pantalla para Samsung S20 FE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S20 FE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s20-fe/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-fe/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 295,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2501,7 +2694,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2510,12 +2702,15 @@
     {
       "id": "samsung-incell-s20-plus",
       "title": "Pantalla para Samsung S20 Plus",
-      "description": "Pantalla para Samsung S20 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S20 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s20-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 420,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2527,7 +2722,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2536,12 +2730,15 @@
     {
       "id": "samsung-incell-s20-ultra",
       "title": "Pantalla para Samsung S20 Ultra",
-      "description": "Pantalla para Samsung S20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s20-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 440,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2553,7 +2750,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2562,12 +2758,15 @@
     {
       "id": "samsung-incell-s21",
       "title": "Pantalla para Samsung S21",
-      "description": "Pantalla para Samsung S21. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S21. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s21/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 410,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2579,7 +2778,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2588,12 +2786,15 @@
     {
       "id": "samsung-incell-s21-fe",
       "title": "Pantalla para Samsung S21 FE",
-      "description": "Pantalla para Samsung S21 FE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S21 FE. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s21-fe/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-fe/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 455,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2605,7 +2806,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2614,12 +2814,15 @@
     {
       "id": "samsung-incell-s21-plus",
       "title": "Pantalla para Samsung S21 Plus",
-      "description": "Pantalla para Samsung S21 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S21 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s21-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 400,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2631,7 +2834,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2640,12 +2842,15 @@
     {
       "id": "samsung-incell-s21-ultra",
       "title": "Pantalla para Samsung S21 Ultra",
-      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s21-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 440,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2657,7 +2862,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2666,12 +2870,15 @@
     {
       "id": "samsung-incell-s22",
       "title": "Pantalla para Samsung S22",
-      "description": "Pantalla para Samsung S22. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S22. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s22/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 505,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2683,7 +2890,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2692,12 +2898,15 @@
     {
       "id": "samsung-incell-s22-plus",
       "title": "Pantalla para Samsung S22 Plus",
-      "description": "Pantalla para Samsung S22 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S22 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s22-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 505,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2709,7 +2918,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2718,12 +2926,15 @@
     {
       "id": "samsung-incell-s22-ultra",
       "title": "Pantalla para Samsung S22 Ultra",
-      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s22-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 515,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2735,7 +2946,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2744,12 +2954,15 @@
     {
       "id": "samsung-incell-s23",
       "title": "Pantalla para Samsung S23",
-      "description": "Pantalla para Samsung S23. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S23. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s23/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 505,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2761,7 +2974,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2770,12 +2982,15 @@
     {
       "id": "samsung-incell-s23-plus",
       "title": "Pantalla para Samsung S23 Plus",
-      "description": "Pantalla para Samsung S23 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S23 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s23-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 505,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2787,7 +3002,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2796,12 +3010,15 @@
     {
       "id": "samsung-incell-s23-ultra",
       "title": "Pantalla para Samsung S23 Ultra",
-      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s23-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 440,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2813,7 +3030,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2822,12 +3038,15 @@
     {
       "id": "samsung-incell-s24",
       "title": "Pantalla para Samsung S24",
-      "description": "Pantalla para Samsung S24. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S24. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s24/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 680,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2839,7 +3058,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2848,12 +3066,15 @@
     {
       "id": "samsung-incell-s24-plus",
       "title": "Pantalla para Samsung S24 Plus",
-      "description": "Pantalla para Samsung S24 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S24 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s24-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 655,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2865,7 +3086,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2874,12 +3094,15 @@
     {
       "id": "samsung-incell-s24-ultra",
       "title": "Pantalla para Samsung S24 Ultra",
-      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s24-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 625,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2891,7 +3114,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2900,12 +3122,15 @@
     {
       "id": "samsung-incell-s8",
       "title": "Pantalla para Samsung S8",
-      "description": "Pantalla para Samsung S8. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S8. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s8/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s8/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 365,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2917,7 +3142,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2926,12 +3150,15 @@
     {
       "id": "samsung-incell-s8-plus",
       "title": "Pantalla para Samsung S8 Plus",
-      "description": "Pantalla para Samsung S8 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S8 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s8-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s8-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 375,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2943,7 +3170,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2952,12 +3178,15 @@
     {
       "id": "samsung-incell-s9",
       "title": "Pantalla para Samsung S9",
-      "description": "Pantalla para Samsung S9. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S9. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s9/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s9/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 340,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2969,7 +3198,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -2978,12 +3206,15 @@
     {
       "id": "samsung-incell-s9-plus",
       "title": "Pantalla para Samsung S9 Plus",
-      "description": "Pantalla para Samsung S9 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S9 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-s9-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s9-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 350,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2995,7 +3226,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3004,12 +3234,15 @@
     {
       "id": "samsung-incell-z-flip3",
       "title": "Pantalla para Samsung Z FLIP3",
-      "description": "Pantalla para Samsung Z FLIP3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z FLIP3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-z-flip3/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 690,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3021,7 +3254,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -3030,12 +3262,15 @@
     {
       "id": "samsung-incell-z-flip4",
       "title": "Pantalla para Samsung Z FLIP4",
-      "description": "Pantalla para Samsung Z FLIP4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z FLIP4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-z-flip4/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 690,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3047,7 +3282,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -3056,12 +3290,15 @@
     {
       "id": "samsung-incell-z-flip5",
       "title": "Pantalla para Samsung Z FLIP5",
-      "description": "Pantalla para Samsung Z FLIP5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z FLIP5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-z-flip5/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 830,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3073,7 +3310,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -3082,12 +3318,15 @@
     {
       "id": "samsung-incell-z-flip6",
       "title": "Pantalla para Samsung Z FLIP6",
-      "description": "Pantalla para Samsung Z FLIP6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z FLIP6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-incell-z-flip6/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 830,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3099,7 +3338,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -3108,12 +3346,15 @@
     {
       "id": "samsung-oled-note-10",
       "title": "Pantalla para Samsung Note 10",
-      "description": "Pantalla para Samsung Note 10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 10. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-note-10/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-10/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1380,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3125,7 +3366,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3134,12 +3374,15 @@
     {
       "id": "samsung-oled-note-20",
       "title": "Pantalla para Samsung Note 20",
-      "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 20. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-note-20/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1100,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-oled",
@@ -3151,7 +3394,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required",
@@ -3161,12 +3403,15 @@
     {
       "id": "samsung-oled-note-20-ultra",
       "title": "Pantalla para Samsung Note 20 Ultra",
-      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-note-20-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-20-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1420,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3178,7 +3423,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3187,12 +3431,15 @@
     {
       "id": "samsung-oled-s20-plus",
       "title": "Pantalla para Samsung S20 Plus",
-      "description": "Pantalla para Samsung S20 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S20 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-s20-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s20-plus/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1100,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3204,7 +3451,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3213,12 +3459,15 @@
     {
       "id": "samsung-oled-s21-ultra",
       "title": "Pantalla para Samsung S21 Ultra",
-      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-s21-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s21-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1365,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3230,7 +3479,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3239,12 +3487,15 @@
     {
       "id": "samsung-oled-s22-ultra",
       "title": "Pantalla para Samsung S22 Ultra",
-      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-s22-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s22-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1340,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3256,7 +3507,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3265,12 +3515,15 @@
     {
       "id": "samsung-oled-s23-ultra",
       "title": "Pantalla para Samsung S23 Ultra",
-      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-s23-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s23-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1295,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3282,7 +3535,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3291,12 +3543,15 @@
     {
       "id": "samsung-oled-s24-ultra",
       "title": "Pantalla para Samsung S24 Ultra",
-      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-s24-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s24-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1525,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3308,7 +3563,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3317,12 +3571,15 @@
     {
       "id": "samsung-oled-s25-ultra",
       "title": "Pantalla para Samsung S25 Ultra",
-      "description": "Pantalla para Samsung S25 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S25 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-oled-s25-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s25-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2080,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3334,7 +3591,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3343,12 +3599,15 @@
     {
       "id": "samsung-original-note-20-ultra",
       "title": "Pantalla para Samsung Note 20 Ultra",
-      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Note 20 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-note-20-ultra/",
       "image_link": null,
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2870,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-tipo-original",
@@ -3360,7 +3619,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "confirmed_product_image_required"
@@ -3369,12 +3627,15 @@
     {
       "id": "samsung-original-s21-ultra",
       "title": "Pantalla para Samsung S21 Ultra",
-      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S21 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-s21-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s21-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2720,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3386,7 +3647,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3395,12 +3655,15 @@
     {
       "id": "samsung-original-s22-plus",
       "title": "Pantalla para Samsung S22 Plus",
-      "description": "Pantalla para Samsung S22 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S22 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-s22-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s22-plus/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1320,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3412,7 +3675,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3421,12 +3683,15 @@
     {
       "id": "samsung-original-s22-ultra",
       "title": "Pantalla para Samsung S22 Ultra",
-      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S22 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-s22-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s22-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2850,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3438,7 +3703,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3447,12 +3711,15 @@
     {
       "id": "samsung-original-s23-plus",
       "title": "Pantalla para Samsung S23 Plus",
-      "description": "Pantalla para Samsung S23 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S23 Plus. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-s23-plus/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s23-plus/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 1320,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3464,7 +3731,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3473,12 +3739,15 @@
     {
       "id": "samsung-original-s23-ultra",
       "title": "Pantalla para Samsung S23 Ultra",
-      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S23 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-s23-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s23-ultra/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2570,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3490,7 +3759,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3499,12 +3767,15 @@
     {
       "id": "samsung-original-s24-ultra",
       "title": "Pantalla para Samsung S24 Ultra",
-      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S24 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-s24-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s24-ultra/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2660,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3516,7 +3787,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3525,12 +3795,15 @@
     {
       "id": "samsung-original-s25-ultra",
       "title": "Pantalla para Samsung S25 Ultra",
-      "description": "Pantalla para Samsung S25 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung S25 Ultra. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-s25-ultra/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s25-ultra/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2650,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3542,7 +3815,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3551,12 +3823,15 @@
     {
       "id": "samsung-original-z-flip3",
       "title": "Pantalla para Samsung Z Flip3",
-      "description": "Pantalla para Samsung Z Flip3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z Flip3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-flip3/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip3/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 2930,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3568,7 +3843,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3577,12 +3851,15 @@
     {
       "id": "samsung-original-z-flip4",
       "title": "Pantalla para Samsung Z Flip4",
-      "description": "Pantalla para Samsung Z Flip4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z Flip4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-flip4/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip4/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 3300,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3594,7 +3871,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3603,12 +3879,15 @@
     {
       "id": "samsung-original-z-flip5",
       "title": "Pantalla para Samsung Z Flip5",
-      "description": "Pantalla para Samsung Z Flip5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z Flip5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-flip5/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip5/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 4060,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3620,7 +3899,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3629,12 +3907,15 @@
     {
       "id": "samsung-original-z-flip6",
       "title": "Pantalla para Samsung Z Flip6",
-      "description": "Pantalla para Samsung Z Flip6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla para Samsung Z Flip6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-flip6/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip6/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 4690,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3646,7 +3927,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3655,12 +3935,15 @@
     {
       "id": "samsung-original-z-flip7",
       "title": "Pantalla Samsung Z Flip7",
-      "description": "Pantalla Samsung Z Flip7. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla Samsung Z Flip7. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-flip7/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip7/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 5325,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3672,7 +3955,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3681,12 +3963,15 @@
     {
       "id": "samsung-original-z-fold3",
       "title": "Pantalla Samsung Z Fold3",
-      "description": "Pantalla Samsung Z Fold3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla Samsung Z Fold3. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-fold3/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold3/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 4100,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3698,7 +3983,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3707,12 +3991,15 @@
     {
       "id": "samsung-original-z-fold4",
       "title": "Pantalla Samsung Z Fold4",
-      "description": "Pantalla Samsung Z Fold4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla Samsung Z Fold4. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-fold4/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold4/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 5585,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3724,7 +4011,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3733,12 +4019,15 @@
     {
       "id": "samsung-original-z-fold5",
       "title": "Pantalla Samsung Z Fold5",
-      "description": "Pantalla Samsung Z Fold5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla Samsung Z Fold5. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-fold5/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold5/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 7440,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3750,7 +4039,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3759,12 +4047,15 @@
     {
       "id": "samsung-original-z-fold6",
       "title": "Pantalla Samsung Z Fold6",
-      "description": "Pantalla Samsung Z Fold6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "Pantalla Samsung Z Fold6. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/samsung-original-z-fold6/",
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold6/main.png",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 11455,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3776,7 +4067,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"
@@ -3785,12 +4075,15 @@
     {
       "id": "x200t-cortadora-micas",
       "title": "HAODE X200T Cortadora Inteligente de Micas",
-      "description": "HAODE X200T Cortadora Inteligente de Micas. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.",
+      "description": "HAODE X200T Cortadora Inteligente de Micas. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar disponibilidad.",
       "link": "https://haode.com.mx/producto/x200t-cortadora-micas/",
       "image_link": "https://haode.com.mx/assets/products/cut-machine/x200t/main.jpg",
       "availability": "unknown",
-      "price": null,
-      "price_status": "quote_required",
+      "price": {
+        "amount": 6000,
+        "currency": "MXN"
+      },
+      "price_status": "confirmed_retail_2026-09-24",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -3802,7 +4095,6 @@
       },
       "platform_ready": false,
       "blockers": [
-        "confirmed_current_price_required",
         "ads_feed_registration_required",
         "brand_mapping_review_required",
         "ads_asset_approval_required"

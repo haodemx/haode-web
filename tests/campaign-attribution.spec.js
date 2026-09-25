@@ -64,7 +64,7 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   );
   const approvedCard = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
   await expect(approvedCard).toBeVisible();
-  await expect(approvedCard).toContainText("$245");
+  await expect(approvedCard).toContainText("$205");
   await expect(approvedCard).not.toContainText("$999");
 
   await page.goto(`${APP_URL}#lista`, { waitUntil: "domcontentloaded" });

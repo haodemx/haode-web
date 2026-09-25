@@ -2,22 +2,28 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-09-21.json');
+const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-09-24.json');
 const WEBSITE_FILE = path.join(ROOT, 'data', 'products.generated.js');
 const APP_FILE = path.join(ROOT, 'app', 'products.json');
 const MASTER_FILE = path.join(ROOT, 'docs', 'master-data', 'products-master.csv');
-const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-21.md');
-const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-21.json');
+const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-24.md');
+const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-24.json');
 const PRODUCT_DIR = path.join(ROOT, 'producto');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const APPLY = process.argv.includes('--apply');
 const DELETE_UNLISTED = process.argv.includes('--delete-unlisted');
 const PUBLISH_UNLISTED = process.argv.includes('--publish-unlisted');
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
-const TODAY = '2026-09-21';
+const TODAY = '2026-09-24';
 const STATIC_ROUTE_ALIASES = {
   'funda-magnetica-17-pro-max': ['funda-magnetica-estilo-iphone-17-pro-max'],
   'funda-premium-17-pro-max': ['funda-premium-aluminio-estilo-iphone-17-pro-max'],
+};
+const LEGACY_AI_ROUTES = {
+  'aimb-g5-ai-sports': 'ai-smart-glasses-aimb-g5.html',
+  'haode-ai-g3-smart-glasses': 'ai-smart-glasses-aimb-g3.html',
+  'haode-ai-w610-smart-glasses': 'ai-smart-glasses-w610.html',
+  'w630-ai-pro': 'ai-smart-glasses-w630.html',
 };
 const REDIRECT_PRODUCT_IDS = new Set([
   'aimb-g5-ai-sports',
@@ -359,6 +365,62 @@ function priceNumber(value) {
   return Number.isFinite(parsed) ? parsed : 0;
 }
 
+function updateLegacyAiPage(file, product) {
+  if (!fs.existsSync(file)) return false;
+  let text = fs.readFileSync(file, 'utf8');
+  const original = text;
+  const rows = Array.isArray(product.prices) ? product.prices : [];
+  if (!rows.length) return false;
+
+  const priceBox = rows
+    .map((row) => `                <div class="ai-price-row"><span>${escapeHtml(row.quantity)}</span><strong>${escapeHtml(row.price)}</strong></div>`)
+    .join('\n');
+  text = text.replace(
+    /(<div class="ai-price-box"[^>]*>)[\s\S]*?(\n\s*<\/div>)/,
+    (_match, opening, closing) => `${opening}\n${priceBox}${closing}`
+  );
+
+  const contactRows = rows
+    .map((row) => `              <p><span>Precio ${escapeHtml(row.quantity.toLowerCase())}:</span> ${escapeHtml(row.price)}</p>`)
+    .join('\n');
+  text = text.replace(
+    /(<div class="contact-data">)[\s\S]*?(\n\s*<\/div>)/,
+    (_match, opening, closing) => `${opening}\n${contactRows}${closing}`
+  );
+
+  text = text.replace(/<script([^>]*type=["']application\/ld\+json["'][^>]*)>([\s\S]*?)<\/script>/gi, (full, attrs, jsonText) => {
+    let data;
+    try {
+      data = JSON.parse(jsonText);
+    } catch {
+      return full;
+    }
+    const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
+    const productNode = nodes.find((node) => node?.['@type'] === 'Product');
+    if (!productNode) return full;
+    const pageUrl = productNode.url || `https://haode.com.mx/${path.basename(file)}`;
+    productNode.offers = rows.map((row) => ({
+      '@type': 'Offer',
+      name: row.quantity,
+      url: pageUrl,
+      priceCurrency: 'MXN',
+      price: String(priceNumber(row.price)),
+    }));
+    return `<script${attrs}>${JSON.stringify(data, null, 2)}\n    </script>`;
+  });
+
+  if (text === original) return false;
+  fs.writeFileSync(file, text, 'utf8');
+  return true;
+}
+
+function updateLegacyAiPages(products) {
+  return products
+    .filter((product) => LEGACY_AI_ROUTES[product.id])
+    .filter((product) => updateLegacyAiPage(path.join(ROOT, LEGACY_AI_ROUTES[product.id]), product))
+    .map((product) => product.id);
+}
+
 function csvRows(text) {
   const rows = [];
   let row = [];
@@ -400,8 +462,13 @@ function updateMasterCsv(changes, deletedIds, sourceVersion) {
   const idIndex = headers.indexOf('id');
   const publicIndex = headers.indexOf('precio_publico');
   const wholesaleIndex = headers.indexOf('precio_mayoreo');
+  const websitePublicIndex = headers.indexOf('website_precio_publico');
+  const websiteWholesaleIndex = headers.indexOf('website_precio_mayoreo');
+  const appPublicIndex = headers.indexOf('app_precio_publico');
+  const appWholesaleIndex = headers.indexOf('app_precio_mayoreo');
   const descriptionIndex = headers.indexOf('descripcion');
-  const updatedIndex = headers.indexOf('last_updated');
+  const sourceIndex = headers.indexOf('source');
+  const checkedIndex = headers.indexOf('last_checked');
   const byId = new Map(changes.map((change) => [change.id, change]));
   const retainedRows = rows.slice(1).filter((row) => !deletedIds.has(row[idIndex]));
   retainedRows.forEach((row) => {
@@ -409,11 +476,23 @@ function updateMasterCsv(changes, deletedIds, sourceVersion) {
     if (!change) return;
     row[publicIndex] = String(change.retail);
     row[wholesaleIndex] = String(change.wholesale5 || change.retail);
+    for (const index of [websitePublicIndex, appPublicIndex]) {
+      if (index >= 0) row[index] = String(change.retail);
+    }
+    for (const index of [websiteWholesaleIndex, appWholesaleIndex]) {
+      if (index >= 0) row[index] = String(change.wholesale5 || change.retail);
+    }
     if (descriptionIndex >= 0) {
       row[descriptionIndex] = change.description
         || updateCustomerPriceCopy(row[descriptionIndex], { prices: { box: change.box } });
     }
-    row[updatedIndex] = sourceVersion;
+    if (sourceIndex >= 0) {
+      const retainedSources = String(row[sourceIndex] || '')
+        .split('|')
+        .filter((item) => item && !/Lista_de_Precios/i.test(item));
+      row[sourceIndex] = [...retainedSources, `HAODE_Lista_de_Precios_2026-09-24.xlsx · ${sourceVersion}`].join('|');
+    }
+    if (checkedIndex >= 0) row[checkedIndex] = TODAY;
   });
   return `${[headers, ...retainedRows].map((row) => row.map(csvCell).join(',')).join('\n')}\n`;
 }
@@ -697,6 +776,7 @@ function main() {
     duplicateSourceRows: [],
     publishedProducts: [],
     createdStaticRoutes: [],
+    updatedLegacyAiPages: [],
   };
   const masterChanges = new Map();
   const matchedById = new Map();
@@ -909,11 +989,14 @@ function main() {
     duplicateSourceRows: report.duplicateSourceRows.reduce((count, item) => count + item.duplicateRows.length, 0),
     publishedProducts: report.publishedProducts.length,
     createdStaticRoutes: 0,
+    updatedLegacyAiPages: 0,
   };
 
   if (APPLY) {
     fs.writeFileSync(WEBSITE_FILE, `window.HAODE_PRODUCTS_DATA = ${JSON.stringify(retainedWebsiteProducts, null, 2)};${buildText}`, 'utf8');
     fs.writeFileSync(APP_FILE, `${JSON.stringify(retainedAppProducts, null, 2)}\n`, 'utf8');
+    report.updatedLegacyAiPages = updateLegacyAiPages(retainedWebsiteProducts);
+    summary.updatedLegacyAiPages = report.updatedLegacyAiPages.length;
     fs.writeFileSync(MASTER_FILE, PUBLISH_UNLISTED
       ? rebuildMasterCsv(retainedWebsiteProducts, retainedAppProducts, sourceRowsById, source)
       : updateMasterCsv([...masterChanges.values()], deletedIds, source.sourceVersion || source.importedAt), 'utf8');
@@ -927,7 +1010,7 @@ function main() {
       updateSitemap(retainedWebsiteProducts);
     }
     const lines = [
-      '# Customer Price Sync 2026-09-21',
+      '# Customer Price Sync 2026-09-24',
       '',
       `- Source: ${source.sourceWorkbook}`,
       `- Source price rows: ${summary.sourceRows}`,

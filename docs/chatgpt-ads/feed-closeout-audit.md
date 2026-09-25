@@ -1,18 +1,19 @@
 # ChatGPT Feed 收尾审计（脱敏）
 
-状态：**LOCAL_AUDIT_NO_COMMERCE_WRITE**。本报告不包含成本、库存数量或任何价格数值；没有修改公开价格、库存、图片或 Feed 就绪状态。
+状态：**PUBLIC_PRICE_SYNC_CONFIRMED**。本报告不包含成本、库存数量或任何价格数值；库存、图片和 Feed 就绪状态未开放。
 
 ## 结论
 
 - Feed 候选：146；两份工作簿产品行：156；逐项映射：146；未映射：0。
 - 工作簿有 10 行不属于 146 候选，保留为排除项，没有强行配对。
 - 客户表与老板表四档销售价一致：146/146。
-- 官网 / App / 结构化数据与 2026-09-24 客户表四档一致：73 / 73 / 73，其余只记录差异，不自动改价。
-- 差异归类：70 项属于新价格来源版本差异、仍需明确公开档位批准；2 项仅 VIP 档不同且不得导出；跨公开表面自身不一致：1。
+- 官网 / App / 结构化数据与 2026-09-24 客户表四档一致：146 / 146 / 146。
+- Feed Menudeo 价与客户表逐项一致：146/146；已满足确认门槛。
+- 差异归类：0 项仍有新价格来源版本差异；0 项仅 VIP 档不同；跨公开表面自身不一致：0。
 - 现有公开图片：132；缺图：14；具有当前审批证据：5；仅有公开路径、缺少标准化审批证据：127。
 - 现有图片中明确 QC 失败：6；需按系列/品质人工确认：10。这些状态不改变原公开文件，只阻止把它们视为可交付广告素材。
 - Feed 允许保留的图片：126；图片阻塞：20（14 项物理缺图 + 6 项 QC 拒绝）。
-- Feed 保持 price=null、availability=unknown、platform_ready=false；可上传：0。
+- Feed 已带确认的 Menudeo 价；availability=unknown、platform_ready=false；可上传：0。
 
 ## 缺图与最小补拍需求
 
@@ -76,83 +77,10 @@
 
 ## 四方价格一致性差异（不含数值）
 
-- 存在官网、App 或结构化数据与客户表不一致的候选：73。本次未自动覆盖。
+- 存在官网、App 或结构化数据与客户表不一致的候选：0。
 
 | 产品 ID | 分类 | 官网差异档 | App 差异档 | 结构化数据差异档 |
 | --- | --- | --- | --- | --- |
-| `haode-pantalla-oled-diagnostica-modelo-12-12-pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-12-pro-max` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-13` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-13-pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-13-pro-max` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-14` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-14-plus` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-14-pro-max` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-15` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-15-plus` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-15-pro-max` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-16` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-16-plus` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-16-pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-16-pro-max` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-17` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-17-pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `haode-pantalla-oled-diagnostica-modelo-17-pro-max` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-11` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-11pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-11promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-12-12pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-12promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-13` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-13mini` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-13pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-13promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-14` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-14plus` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-14pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-14promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-15` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-15plus` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-15pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-15promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-16` | new_source_revision_requires_public_price_approval | retail, wholesale, box | retail, wholesale, box | retail, wholesale, box |
-| `iphone-incell-16e` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-16plus` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-16pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-16promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-17` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-17air` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-17e` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-17pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-17promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-x` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-xr` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-xs` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-incell-xsmax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-12promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-13` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-13pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-13promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-14` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-14promax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-16e` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-16pro` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-16promax-hard` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `iphone-oled-xsmax` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `oled-diagnostica-16e-soft` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-incell-note-20` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-incell-note-9` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-incell-s20-fe` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-incell-s21-ultra` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-incell-s8-plus` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-incell-z-flip3` | vip_only_policy_difference_do_not_export | vip | vip | vip |
-| `samsung-incell-z-flip4` | vip_only_policy_difference_do_not_export | vip | vip | vip |
-| `samsung-incell-z-flip5` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-original-s23-ultra` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-original-z-flip4` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-original-z-flip5` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-original-z-flip6` | new_source_revision_requires_public_price_approval | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
-| `samsung-original-z-flip7` | public_surface_divergence | retail, wholesale, box, vip | retail, wholesale, box, vip | retail, wholesale, box, vip |
 
 ## 工作簿排除项
 
@@ -198,4 +126,4 @@
 
 - Feed 上传：NOT RUN。
 - 广告启用与花费：NOT RUN。
-- 生产价格/库存/图片写入：NOT RUN。
+- 生产价格发布：待本次部署后验证；库存/图片写入：NOT RUN。

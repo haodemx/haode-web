@@ -27,7 +27,7 @@
       "pattern": "^[a-f0-9]{64}$"
     },
     "price_policy": {
-      "const": "Consultar por WhatsApp; no se publica un precio sin confirmación vigente."
+      "const": "Precio de menudeo confirmado por la lista comercial del 2026-09-24; confirma cantidad y disponibilidad por WhatsApp."
     },
     "availability_policy": {
       "const": "unknown no significa disponible ni agotado."
@@ -78,10 +78,24 @@
             "const": "unknown"
           },
           "price": {
-            "type": "null"
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "amount",
+              "currency"
+            ],
+            "properties": {
+              "amount": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "currency": {
+                "const": "MXN"
+              }
+            }
           },
           "price_status": {
-            "const": "quote_required"
+            "const": "confirmed_retail_2026-09-24"
           },
           "availability_status": {
             "const": "not_live_verified"
@@ -134,7 +148,6 @@
             "minItems": 1,
             "items": {
               "enum": [
-                "confirmed_current_price_required",
                 "ads_feed_registration_required",
                 "brand_mapping_review_required",
                 "ads_asset_approval_required",
