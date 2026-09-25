@@ -2,9 +2,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import test from 'node:test';
-import { buildFeed, readPublicProducts, validateFeed, ROOT, OUTPUT, ORIGIN } from '../scripts/build-chatgpt-product-feed.mjs';
+import { buildFeed, readAssetQc, readPublicProducts, validateFeed, ROOT, OUTPUT, ORIGIN } from '../scripts/build-chatgpt-product-feed.mjs';
 const products = readPublicProducts();
 const feed = buildFeed();
+const assetQc = readAssetQc();
 
 test('feed deterministic serialization, stable ids, priority coverage and public projection', () => {
   assert.equal(validateFeed(feed), true);
@@ -24,7 +25,12 @@ test('every product and exact image resolve locally, with canonical and sitemap'
     const source = products.find(p => p.id === row.id);
     assert.equal(row.title, source.name);
     assert.ok(html.includes('wa.me/'), row.id);
-    if (row.image_link) {
+    if (Object.hasOwn(assetQc, row.id)) {
+      assert.equal(row.image_link, null);
+      assert.equal(row.image_status, 'asset_rejected');
+      assert.ok(row.blockers.includes('confirmed_product_image_required'));
+      assert.ok(row.blockers.includes('asset_qc_failed'));
+    } else if (row.image_link) {
       const imagePath = new URL(row.image_link).pathname.slice(1);
       assert.equal(imagePath, source.images[0]);
       assert.ok(html.includes(imagePath));
@@ -55,6 +61,24 @@ test('missing/unsafe image never uses a replacement and invalid routes fail clos
     assert.equal(buildFeed([{ ...row, images }]).items[0].image_link, null);
   }
   assert.throws(() => buildFeed([{ ...row, id: '../private' }]));
+});
+
+test('known wrong-model and promotional main images are rejected from the candidate feed', () => {
+  assert.equal(Object.keys(assetQc).length, 6);
+  const rejected = feed.items.filter(item => item.image_status === 'asset_rejected');
+  assert.deepEqual(rejected.map(item => item.id).sort(), Object.keys(assetQc).sort());
+  assert.equal(rejected.every(item => item.image_link === null && item.source.image_sha256 === null && item.platform_ready === false), true);
+});
+
+test('QC rejection remains fail-closed when the former source image disappears or becomes unsafe', () => {
+  const blocked = products.find(product => product.id === 'samsung-oled-note-20');
+  for (const images of [[], ['assets/products/placeholder.svg'], ['https://private.example/image.png'], ['assets/products/../../private.jpg']]) {
+    const result = buildFeed([{ ...blocked, images }]);
+    assert.equal(result.items[0].image_link, null);
+    assert.equal(result.items[0].image_status, 'asset_rejected');
+    assert.deepEqual(result.items[0].blockers.slice(-2), ['confirmed_product_image_required', 'asset_qc_failed']);
+    assert.equal(validateFeed(result), true);
+  }
 });
 
 test('three Spanish campaigns reuse canonical landing pages and safe UTM', () => {

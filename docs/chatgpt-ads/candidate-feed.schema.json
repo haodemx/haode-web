@@ -89,7 +89,8 @@
           "image_status": {
             "enum": [
               "existing_public_asset",
-              "asset_missing"
+              "asset_missing",
+              "asset_rejected"
             ]
           },
           "category": {
@@ -137,7 +138,8 @@
                 "ads_feed_registration_required",
                 "brand_mapping_review_required",
                 "ads_asset_approval_required",
-                "confirmed_product_image_required"
+                "confirmed_product_image_required",
+                "asset_qc_failed"
               ]
             }
           }
