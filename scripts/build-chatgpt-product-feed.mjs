@@ -7,6 +7,7 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const ORIGIN = 'https://haode.com.mx';
 export const OUTPUT = 'data/marketing/chatgpt-product-feed.json';
 const SOURCE = 'data/products.generated.js';
+const ASSET_QC_SOURCE = 'data/marketing/chatgpt-feed-asset-qc.json';
 const PRIORITY = new Set(['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'samsung-tipo-original', 'oled-diagnostica', 'micas']);
 const PRICE_POLICY = 'Consultar por WhatsApp; no se publica un precio sin confirmación vigente.';
 const AVAILABILITY_POLICY = 'unknown no significa disponible ni agotado.';
@@ -18,7 +19,18 @@ export function readPublicProducts(root = ROOT) {
   return JSON.parse(text.slice(text.indexOf('['), text.lastIndexOf(']') + 1));
 }
 
-export function buildFeed(products = readPublicProducts(), root = ROOT) {
+export function readAssetQc(root = ROOT) {
+  const policy = JSON.parse(fs.readFileSync(path.join(root, ASSET_QC_SOURCE), 'utf8'));
+  if (policy.schema_version !== 1 || policy.status !== 'LOCAL_QC_POLICY' || !policy.items || Array.isArray(policy.items)) {
+    throw new Error('Invalid asset QC policy');
+  }
+  for (const [id, status] of Object.entries(policy.items)) {
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(id) || !/^QC_FAIL_/.test(status)) throw new Error(`Invalid asset QC entry: ${id}`);
+  }
+  return policy.items;
+}
+
+export function buildFeed(products = readPublicProducts(), root = ROOT, assetQc = readAssetQc(root)) {
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
   const seen = new Set();
   const items = products.filter(p => PRIORITY.has(p.category)).map(p => {
@@ -35,27 +47,32 @@ export function buildFeed(products = readPublicProducts(), root = ROOT) {
     const hasImage = typeof main === 'string' && /^assets\/products\/[a-zA-Z0-9_./-]+\.(jpg|jpeg|png|webp)$/.test(main)
       && !main.split('/').includes('..') && !/placeholder/i.test(main)
       && html.includes(main) && fs.existsSync(path.join(root, main));
+    // A recorded QC failure remains rejected even if the bad file later disappears;
+    // clearing the policy requires new exact-model approval evidence.
+    const rejectedImage = Object.hasOwn(assetQc, p.id);
+    const usableImage = hasImage && !rejectedImage;
     return {
       id: p.id,
       title: p.name,
       description: `${p.name}. Consulta modelo exacto, cantidad y ciudad por WhatsApp para confirmar precio y disponibilidad.`,
       link,
-      image_link: hasImage ? `${ORIGIN}/${main}` : null,
+      image_link: usableImage ? `${ORIGIN}/${main}` : null,
       availability: 'unknown',
       price: null,
       price_status: 'quote_required',
       availability_status: 'not_live_verified',
-      image_status: hasImage ? 'existing_public_asset' : 'asset_missing',
+      image_status: rejectedImage ? 'asset_rejected' : usableImage ? 'existing_public_asset' : 'asset_missing',
       category: p.category,
       priority_group: p.id === 'x200t-cortadora-micas' ? 'X200T' : p.category === 'micas' ? 'Hydrogel' : 'Pantallas',
       source: {
         catalog: SOURCE,
         product_id: p.id,
-        image_sha256: hasImage ? hash(fs.readFileSync(path.join(root, main))) : null
+        image_sha256: usableImage ? hash(fs.readFileSync(path.join(root, main))) : null
       },
       platform_ready: false,
       blockers: ['confirmed_current_price_required', 'ads_feed_registration_required', 'brand_mapping_review_required',
-        ...(hasImage ? ['ads_asset_approval_required'] : ['confirmed_product_image_required'])]
+        ...(usableImage ? ['ads_asset_approval_required'] : ['confirmed_product_image_required']),
+        ...(rejectedImage ? ['asset_qc_failed'] : [])]
     };
   }).sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
   const publicProjection = items.map(({ source, ...item }) => item);
@@ -75,7 +92,7 @@ function exactKeys(value, keys) {
     || Object.keys(value).sort().join(',') !== [...keys].sort().join(',')) throw new Error('Unexpected feed fields');
 }
 
-export function validateFeed(feed) {
+export function validateFeed(feed, assetQc = readAssetQc()) {
   exactKeys(feed, ['schema_version', 'status', 'source', 'content_sha256', 'price_policy', 'availability_policy', 'items']);
   if (feed.schema_version !== 1 || feed.status !== 'LOCAL_PREPARED_NOT_UPLOAD_READY' || !Array.isArray(feed.items)) throw new Error('Invalid feed envelope');
   if (feed.source !== SOURCE || typeof feed.content_sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(feed.content_sha256)) throw new Error('Invalid provenance');
@@ -95,11 +112,13 @@ export function validateFeed(feed) {
       const url = new URL(row.image_link);
       if (url.origin !== ORIGIN || url.href !== row.image_link || url.search || url.hash || !/^\/assets\/products\/[a-zA-Z0-9_./-]+\.(jpg|jpeg|png|webp)$/.test(url.pathname)) throw new Error('Nonpublic image');
       if (row.image_status !== 'existing_public_asset' || typeof row.source.image_sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(row.source.image_sha256)) throw new Error('Invalid image provenance');
-    } else if (row.image_status !== 'asset_missing' || row.source.image_sha256 !== null) throw new Error('Missing image semantics');
+    } else if (!['asset_missing', 'asset_rejected'].includes(row.image_status) || row.source.image_sha256 !== null) throw new Error('Missing image semantics');
     if (row.title.length > 150 || row.description.length > 5000) throw new Error('Text too long');
     if (row.price !== null || row.availability !== 'unknown' || row.platform_ready !== false) throw new Error('Unverified commerce claim');
     if (row.price_status !== 'quote_required' || row.availability_status !== 'not_live_verified') throw new Error('Missing data semantics');
-    const requiredBlockers = ['confirmed_current_price_required', 'ads_feed_registration_required', 'brand_mapping_review_required', row.image_link ? 'ads_asset_approval_required' : 'confirmed_product_image_required'];
+    const qcRejected = Object.hasOwn(assetQc, row.id);
+    if (qcRejected !== (row.image_status === 'asset_rejected')) throw new Error('Asset QC policy mismatch');
+    const requiredBlockers = ['confirmed_current_price_required', 'ads_feed_registration_required', 'brand_mapping_review_required', row.image_link ? 'ads_asset_approval_required' : 'confirmed_product_image_required', ...(qcRejected ? ['asset_qc_failed'] : [])];
     if (!Array.isArray(row.blockers) || row.blockers.length !== requiredBlockers.length || row.blockers.some((value, index) => value !== requiredBlockers[index])) throw new Error('Invalid platform gates');
     if (!PRIORITY.has(row.category)) throw new Error('Invalid category');
   }

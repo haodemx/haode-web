@@ -64,7 +64,8 @@
     "haode:quality-check": "node scripts/haode-quality-check.js",
     "haode:check": "npm run test:public-package && npm run test:phase4-closeout && npm run test:ci-artifact-chain && npm run test:approved-editorial-release && npm run test:premium-brand-system && npm run test:homepage-human-design && npm run test:final-fix-c-layout && npm run test:customer-prices && npm run test:campaign-links && npm run test:analytics-privacy && npm run test:ga4-conversions && npm run test:geo-seo && npm run test:seo-geo-audit-remediation && npm run test:hl-brand-local && npm run test:seo-exposure-pages && npm run test:seo-exposure-readiness && npm run test:seo-technical && npm run test:seo-index-strengthening && npm run test:mica-machine-seo && npm run test:static-product-directory && npm run test:daily-ad-catalog && npm run test:catalog-gap-audit && npm run test:whatsapp-links && npm run test:whatsapp-sales && npm run test:product-sync-aliases && npm run test:media-quality && npm run test:erp-maintenance-sync && npm run test:live-deploy-verifier && npm run haode:product-sync && npm run haode:quality-check && npm run test:chatgpt-ads",
     "feed:chatgpt": "node scripts/build-chatgpt-product-feed.mjs",
-    "test:chatgpt-ads": "node scripts/build-chatgpt-product-feed.mjs --check && node --test tests/chatgpt-feed.test.mjs tests/chatgpt-tracking.test.mjs"
+    "test:chatgpt-feed-closeout": "python3 scripts/audit-chatgpt-feed-closeout.py --self-test && node --test tests/chatgpt-feed-closeout.test.mjs",
+    "test:chatgpt-ads": "node scripts/build-chatgpt-product-feed.mjs --check && python3 scripts/audit-chatgpt-feed-closeout.py --self-test && node --test tests/chatgpt-feed.test.mjs tests/chatgpt-tracking.test.mjs tests/chatgpt-feed-closeout.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0"

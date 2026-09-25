@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "LOCAL_QC_POLICY",
+  "items": {
+    "iphone-incell-11-bolsa-protectora": "QC_FAIL_PROMO_WRONG_MAIN_IMAGE",
+    "iphone-incell-xr-bolsa-protectora": "QC_FAIL_PROMO_WRONG_MAIN_IMAGE",
+    "samsung-incell-note-10-lite": "QC_FAIL_WRONG_MODEL",
+    "samsung-incell-note-20": "QC_FAIL_WRONG_MODEL",
+    "samsung-incell-s10-lite": "QC_FAIL_WRONG_MODEL",
+    "samsung-oled-note-20": "QC_FAIL_WRONG_MODEL"
+  }
+}
