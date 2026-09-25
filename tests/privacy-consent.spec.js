@@ -79,7 +79,7 @@ test('analytics strips sensitive query values and does not persist them', async 
 
   const commands = await page.evaluate(() => window.dataLayer.map((entry) => Array.from(entry)));
   expect(commands.some((entry) => entry[0] === 'config')).toBe(false);
-  expect(await page.locator('[data-haode-analytics-loader]')).toHaveCount(0);
+  await expect(page.locator('[data-haode-analytics-loader]')).toHaveCount(0);
   expect(JSON.stringify(commands)).not.toContain('cliente@example.com');
   expect(JSON.stringify(commands)).not.toContain('5512345678');
   expect(await page.evaluate(() => localStorage.getItem('haode-campaign-attribution-v1'))).toBeNull();
