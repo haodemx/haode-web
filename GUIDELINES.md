@@ -19,9 +19,9 @@ Website-specific defaults:
 
 ## Directory Skill Binding
 
-- Default Skills: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.
+- Website/App file changes and release checks: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, and `testing-qa` as applicable. Add `devops-deploy` only for authorized deployment.
 - Use `haode-browser-qa` for homepage, APP page, product card, product image, price display, quantity-price logic, cart, WhatsApp checkout, ofertas especiales, and GitHub Pages deployment verification.
-- Add `firecrawl` only for live/external page extraction or verification.
+- Verify live pages with browser/HTTP checks; add `firecrawl` only for approved competitor or supplier extraction.
 - Use `HAODE-AUTOMATION/WORKFLOWS/WEBSITE_QA_WORKFLOW.md` for website QA and deployment checks.
 - Use product-upload and marketing Skills only when a website task explicitly includes new product preparation or marketing output.
 - Product upload verification must include website/app product consistency before commit or push.
