@@ -25,9 +25,9 @@ Required website workflow:
 
 ## Connected Skills
 
-- Website/App: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.
+- Website/App file changes and release checks: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, and `testing-qa` as applicable. Add `devops-deploy` only for authorized deployment.
 - Browser QA: `haode-browser-qa` is required for homepage, APP page, product card, product image, price display, quantity-price logic, cart, WhatsApp checkout, ofertas especiales, and GitHub Pages deployment verification.
-- Live/external verification: `firecrawl` when needed.
+- Live website verification uses browser/HTTP checks; `firecrawl` is limited to approved competitor or supplier extraction.
 - Workflow source: `/Users/mac/Documents/haode/HAODE-AUTOMATION/WORKFLOWS/WEBSITE_QA_WORKFLOW.md`.
 - Guardrail: do not change website content, prices, categories, or images unless the task explicitly asks for it.
 
