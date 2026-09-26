@@ -71,7 +71,8 @@ Also follow the root HAODE rules:
 - `haode-product-control-center`
 - `haode-marketing-design`
 - `haode-crm-sales`
-- `haode-browser-qa`
+
+促销文案或计划本身不触发 `haode-browser-qa`；只有下方所列页面、商品卡、价格显示、结账或部署验证实际受影响时才调用。
 
 凡涉及首页、APP 页面、商品卡、产品图片、价格显示、数量价格逻辑、购物车、WhatsApp 下单、Ofertas especiales 或 GitHub Pages 部署验证，自动调用：
 - `haode-browser-qa`
