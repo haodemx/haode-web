@@ -129,9 +129,9 @@ Also follow the root HAODE rules:
 
 This website repository is formally connected to the new HAODE Skills.
 
-- Website/App repairs, image paths, data sync, SEO, QA, deploy: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.
+- Website/App file changes and release checks: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, and `testing-qa` as applicable. Add `devops-deploy` only for authorized deployment.
 - Browser QA gate for homepage, APP pages, product cards, images, price display, quantity-price logic, cart, WhatsApp checkout, ofertas especiales, and GitHub Pages verification: `haode-browser-qa`.
-- Live/external verification: add `firecrawl` only when needed.
+- Live website verification uses browser/HTTP checks. Add `firecrawl` only for approved competitor or supplier extraction.
 - New product handoff: use `haode-product-upload` and `haode-marketing-factory` only after product facts, prices, and assets are confirmed.
 - Video/material handoff: use `video-use`, `remotion-skills`, `seedance2-skill`, or `generative-media-skills` only when the website task explicitly includes media output.
 - Workflow source: `/Users/mac/Documents/haode/HAODE-AUTOMATION/WORKFLOWS/WEBSITE_QA_WORKFLOW.md`.
@@ -244,8 +244,10 @@ Do not modify public website content, prices, categories, or images unless the t
 - 只提交与当前任务相关的文件。
 - 不回滚老板或其他流程留下的无关改动。
 - 不使用交互式 Git。
-- 默认提交到当前分支。
-- 任务明确要求推送时，执行 `git push origin main`。
+- 先以本任务实际文件所在 checkout（包括工作树）确定 `task_repo`，检查 `git -C "$task_repo" status --short --branch`、`branch --show-current` 和 `rev-parse HEAD`；不要固定检查原始目录，也不要切换其他任务的分支。
+- 在该 checkout 检查 `git remote`、当前分支的 upstream 与拟推送 remote 的 push URL（不要输出 URL 中的凭据）。将仓库、源 HEAD、目标 remote/分支、环境逐项与授权匹配；upstream 仅是线索，不代表授权。
+- 提交只包含本任务文件。推送前按 `/Users/mac/Documents/haode/.codex/skills/devops-deploy/SKILL.md` 的目标核对步骤设置 `task_remote`、`task_branch`，执行 `git -C "$task_repo" push "$task_remote" "HEAD:refs/heads/$task_branch"`。不默认推向 main。
+- detached HEAD、目标不明或目标与授权不符时暂停提交/推送，保留已完成验证并继续独立的已授权工作。发布仍须通过原有 QA、指定 HEAD CI、必要独立审查及发布后验证。
 - 如果 push 失败，报告失败原因。
 - 完成后中文报告必须包含 commit id 和 push 结果。
 
