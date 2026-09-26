@@ -129,9 +129,9 @@ Also follow the root HAODE rules:
 
 This website repository is formally connected to the new HAODE Skills.
 
-- Website/App repairs, image paths, data sync, SEO, QA, deploy: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, `testing-qa`, `devops-deploy`.
+- Website/App file changes and release checks: `superpowers`, `guidelines`, `karpathy-rules`, `code-review`, and `testing-qa` as applicable. Add `devops-deploy` only for authorized deployment.
 - Browser QA gate for homepage, APP pages, product cards, images, price display, quantity-price logic, cart, WhatsApp checkout, ofertas especiales, and GitHub Pages verification: `haode-browser-qa`.
-- Live/external verification: add `firecrawl` only when needed.
+- Live website verification uses browser/HTTP checks. Add `firecrawl` only for approved competitor or supplier extraction.
 - New product handoff: use `haode-product-upload` and `haode-marketing-factory` only after product facts, prices, and assets are confirmed.
 - Video/material handoff: use `video-use`, `remotion-skills`, `seedance2-skill`, or `generative-media-skills` only when the website task explicitly includes media output.
 - Workflow source: `/Users/mac/Documents/haode/HAODE-AUTOMATION/WORKFLOWS/WEBSITE_QA_WORKFLOW.md`.
