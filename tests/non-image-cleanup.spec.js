@@ -23,7 +23,7 @@ for (const width of [1440, 768, 390]) {
     await expect(page.locator('h1')).toHaveText('Pantallas y tecnologíapara vender y reparar');
     await expect(page.locator('.c-category-card')).toHaveCount(9);
     await page.goto(base+'/productos-ai/');
-    await expect(page.locator('h1')).toHaveText('Productos AI');
+    await expect(page.locator('h1')).toHaveText('Gafas inteligentes y productos AI');
     expect(await page.locator('body').innerText()).not.toMatch(/clasificación interna|cargar un producto|Base lista para crecer|módulos pendientes|backend|auditoría/i);
     expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
   });

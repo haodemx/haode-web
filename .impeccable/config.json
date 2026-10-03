@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "productos-ai/index.html"
+        ],
+        "createdAt": "2026-10-03T18:45:14.628Z",
+        "reason": "Agent: current 390/1440px JS and static computed renders use light surfaces and offset elevation shadows or none; shared inactive dark selectors are not a halo on this page."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "tienda-oficial-hl-cdmx/index.html"
+        ],
+        "createdAt": "2026-10-03T18:45:14.648Z",
+        "reason": "Agent: current 390/1440px JS and static computed renders use light surfaces and offset elevation shadows or none; shared inactive dark selectors are not a halo on this page."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "tienda-oficial-hl-cdmx/index.html"
+        ],
+        "createdAt": "2026-10-03T18:45:59.042Z",
+        "reason": "Agent: scoped CSS overrides the flagged legacy orange. Current rendered store brand facts and kicker use rgb(168,50,7) on the light surface; current 390/1440 headings and CTA colors verified. Legacy linked stylesheet scan does not resolve this cascade."
+      }
+    ]
+  }
+}
