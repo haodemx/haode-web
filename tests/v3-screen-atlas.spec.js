@@ -6,7 +6,7 @@ const pages = [
   ['/productos/', 'Productos publicados'],
   ['/producto/iphone-oled-11promax/', 'Pantalla para iPhone 11 Pro Max'],
   ['/micas.html', 'Hidrogel'],
-  ['/productos-ai/', 'Productos AI'],
+  ['/productos-ai/', 'Gafas inteligentes y productos AI'],
   ['/novedades/', 'Novedades'],
   ['/contacto/', 'HAODE México'],
 ];

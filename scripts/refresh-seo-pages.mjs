@@ -33,6 +33,14 @@ const CATEGORY_CONTEXT = new Map([
 ]);
 
 const PRIORITY_PAGES = new Map([
+  ['productos-ai/index.html', {
+    title: 'Gafas y productos AI en México | HAODE',
+    description: 'Consulta gafas inteligentes y productos AI en HAODE México. Envía modelo, cantidad y ciudad por WhatsApp para confirmar versión, disponibilidad y precio.',
+  }],
+  ['tienda-oficial-hl-cdmx/index.html', {
+    title: 'Cómo llegar a HAODE en CDMX | Piso 2, Local 225',
+    description: 'Cómo llegar a HAODE México en Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, CDMX. Consulta el mapa, el video de la ruta y el contacto antes de visitar.',
+  }],
   ['app/index.html', {
     title: 'Catálogo de pantallas y refacciones | HAODE México',
     description: 'Cotiza pantallas iPhone y Samsung, OLED, INCELL, micas y accesorios en el catálogo HAODE México. Busca el modelo y envía cantidad y ciudad por WhatsApp.',

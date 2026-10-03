@@ -46,7 +46,7 @@ test.describe("HAODE secondary pages conversion UI phase 4", () => {
       await page.locator(".zay-menu-button").click();
       await expect(page.locator(".zay-nav a").first()).toBeVisible();
       await expect(page.locator(".zay-floating")).toBeVisible();
-      await expectHeaderWhatsAppGreen(page);
+      await expectHeaderWhatsAppGreen(page, pageCase.path === "/productos-ai/" ? "rgb(8, 124, 59)" : "rgb(21, 154, 85)");
       await expectHeaderHeightAtMost(page, ".zay-header", 200);
       await page.locator(".zay-menu-button").click();
       await expect(panel).toBeVisible();
@@ -68,9 +68,13 @@ async function expectHeaderHeightAtMost(page, selector, maxHeight) {
   expect(height).toBeLessThanOrEqual(maxHeight);
 }
 
-async function expectHeaderWhatsAppGreen(page) {
+async function expectHeaderWhatsAppGreen(page, expected) {
   const background = await page.locator(".zay-floating").evaluate((el) => getComputedStyle(el).backgroundColor);
-  expect(background).toBe("rgb(21, 154, 85)");
+  expect(background).toBe(expected);
+  if (expected === "rgb(8, 124, 59)") {
+    const foreground = await page.locator(".zay-floating").evaluate((el) => getComputedStyle(el).color);
+    expect(foreground).toBe("rgb(255, 255, 255)");
+  }
 }
 
 async function expectContactPanelCtaInView(page) {

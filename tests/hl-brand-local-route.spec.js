@@ -11,7 +11,8 @@ for (const viewport of [
     const response = await page.goto(`${baseURL}/tienda-oficial-hl-cdmx/`, { waitUntil: 'domcontentloaded' });
 
     expect(response?.status()).toBe(200);
-    await expect(page.getByRole('heading', { level: 1, name: /Tienda oficial de fábrica HL en CDMX/i })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Cómo llegar a HAODE en CDMX', exact: true })).toBeVisible();
+    await expect(page.getByText('Tienda oficial HL en CDMX', { exact: true })).toBeVisible();
     await expect(page.getByText(/HAODE México es el nombre de nuestra tienda/i)).toBeVisible();
     await expect(page.locator('video')).toHaveAttribute('poster', /haode-como-llegar-local-225\.png$/);
     await expect(page.getByRole('heading', { name: /Cómo llegar al Piso 2, Local 225/i })).toBeVisible();

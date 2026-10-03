@@ -82,7 +82,7 @@ test('category, product, conversion, and footer journeys remain intact', async (
   const routes = [
     ['/productos/?category=pantallas', 'Pantallas'],
     ['/micas.html', 'Hidrogel'],
-    ['/productos-ai/', 'Productos AI'],
+    ['/productos-ai/', 'Gafas inteligentes y productos AI'],
     ['/producto/iphone-incell-11/', 'Pantalla iPhone 11 INCELL FHD'],
   ];
 

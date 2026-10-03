@@ -1,0 +1,39 @@
+/* Bounded accessibility fixes for the AI and store candidate pages only. */
+body.growth-local-candidate {
+  --z-green: #087c3b;
+  --z-orange: #b83b06;
+  --z-orange-dark: #a83207;
+  --brand-orange-deep: #a83207;
+}
+body.growth-local-candidate main h1,
+body.growth-local-candidate .new-page-hero h1 { letter-spacing: -0.025em; }
+/* The no-JavaScript header remains a supported fallback. Shared legacy mobile
+   rules are important; match that priority only within these two candidates. */
+body.growth-local-candidate .reference-nav-shell:has(.reference-menu-toggle) .reference-menu-button {
+  background: #b83b06;
+  border-color: #b83b06;
+  color: #ffffff;
+}
+body.growth-local-candidate .reference-nav-actions a[href*="wa.me"] {
+  background: #087c3b !important;
+  border-color: #087c3b !important;
+  color: #ffffff !important;
+}
+.growth-local-candidate .zay-button.zay-whatsapp,
+.growth-local-candidate .zay-card-quote {
+  background: #087c3b;
+  border-color: #087c3b;
+  color: #ffffff;
+}
+.growth-local-candidate .zay-button.zay-orange {
+  background: #b83b06;
+  border-color: #b83b06;
+  color: #ffffff;
+}
+.growth-local-candidate summary,
+.growth-local-candidate .zay-family-card strong,
+.growth-local-candidate .zay-family-card b,
+.growth-local-candidate .zay-family-card a,
+body.growth-local-candidate .section-kicker,
+.growth-local-candidate .store-brand-facts strong { color: #a83207; }
+.growth-local-candidate .btn-primary { box-shadow: 0 10px 22px rgba(25, 31, 36, 0.12); }
