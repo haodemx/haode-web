@@ -1176,13 +1176,20 @@ function sortProducts(items) {
   return sorted.sort((a, b) => a.order - b.order || a.displayName.localeCompare(b.displayName, "es"));
 }
 
+// Match common model spellings without treating a different model number as a match.
+function catalogSearchWords(value) {
+  return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/([a-z])(\d)/g, "$1 $2").replace(/(\d)([a-z])/g, "$1 $2")
+    .replace(/\bpromax\b/g, "pro max").split(/[^a-z0-9]+/).filter(Boolean);
+}
+
 function visibleProducts() {
-  const query = state.searchQuery.trim().toLowerCase();
-  const queryTokens = query.split(/\s+/).filter(Boolean);
+  const queryTokens = catalogSearchWords(state.searchQuery);
   const source = state.activeGroup ? getProductsForGroup(state.activeGroup) : products;
   const filtered = source.filter((product) => {
     const matchesCategory = state.activeCategory === "Todos" || product.category === state.activeCategory;
-    const searchText = [
+    const searchWords = catalogSearchWords([
+      product.sku,
       product.name,
       product.displayName,
       product.model,
@@ -1191,8 +1198,9 @@ function visibleProducts() {
       product.description,
       product.category,
       categorySearchAliases[product.category]
-    ].map((value) => String(value || "").toLowerCase()).join(" ");
-    const matchesSearch = !queryTokens.length || queryTokens.every((token) => searchText.includes(token));
+    ].filter(Boolean).join(" "));
+    const matchesSearch = (!state.searchQuery.trim() || queryTokens.length > 0) && queryTokens.every((token) => searchWords.some((word) =>
+      /^\d+$/.test(token) ? word === token : word.startsWith(token)));
     return matchesCategory && matchesSearch;
   });
   return sortProducts(filtered);

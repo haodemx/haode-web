@@ -82,6 +82,13 @@
   const uniqueValues = (list,getter) => [...new Set(list.map(getter).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true,sensitivity:'base'}));
   const withParams = (values) => {const u=new URL('/productos/',location.origin);Object.entries(values).forEach(([key,value])=>value&&u.searchParams.set(key,value));return `${u.pathname}?${u.searchParams}`;};
 
+  // Keep model spelling normalization aligned with the App catalog search.
+  function catalogSearchWords(value) {
+    return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/([a-z])(\d)/g, '$1 $2').replace(/(\d)([a-z])/g, '$1 $2')
+      .replace(/\bpromax\b/g, 'pro max').split(/[^a-z0-9]+/).filter(Boolean);
+  }
+
   function header(active='') {
     const groups=[['pantallas','Pantallas','/productos/?category=pantallas'],['hidrogel','Hidrogel','/micas.html'],['ai','Productos AI','/productos-ai/']];
     return `<header class="zay-header" data-zay-header data-v3-header data-ui-id="site-header"><div class="zay-header-inner" data-ui-id="site-header-inner"><a class="zay-brand" href="/" aria-label="HAODE México, inicio" data-ui-id="header-brand" data-ui-action="navigate-home"><img src="/assets/images/haode-header-logo-horizontal-preview.png" alt="HAODE" width="190" height="55" data-ui-id="header-brand-image"></a><button class="zay-menu-button" type="button" aria-expanded="false" aria-controls="zay-nav" data-ui-id="header-menu-button" data-ui-action="toggle-primary-navigation">${menuIcon}<span class="zay-visually-hidden">Abrir menú</span></button><nav class="zay-nav" id="zay-nav" aria-label="Navegación principal" data-ui-id="header-navigation" data-ui-project-menu><a href="/"${active==='home'?' class="is-active"':''} data-ui-id="nav-home" data-ui-action="navigate-home">Inicio</a>${groups.map(([key,label,href])=>`<details class="zay-nav-group"${active===key?' data-active="true"':''} ${uiId(`nav-group-${key}`)}><summary>${label}</summary><div><a href="${href}" ${uiId(`nav-${key}`)} data-ui-action="navigate-${key}">Ver ${label}</a>${FAMILIES[key].map(([s,l])=>`<a href="${familyHref(key,s)}" ${uiId(`nav-${key}-${s}`)} data-ui-action="navigate-${key}-${s}">${l}</a>`).join('')}</div></details>`).join('')}<a href="/novedades/" data-ui-id="nav-news" data-ui-action="navigate-news">Novedades</a><a href="/contacto/" data-ui-id="nav-contact" data-ui-action="navigate-contact">Contacto</a></nav><div class="zay-header-actions" data-ui-id="header-actions"><a class="zay-search-icon" href="/productos/" aria-label="Buscar productos" data-ui-id="header-search" data-ui-action="open-catalog-search">${searchIcon}</a><a class="zay-button zay-whatsapp" data-detail-header-whatsapp data-contact-area="header" href="${quote()}" target="_blank" rel="noopener noreferrer" data-ui-id="header-whatsapp" data-ui-action="open-whatsapp">WhatsApp</a><a class="zay-button zay-orange" data-detail-header-app href="/app/" data-ui-id="header-app" data-ui-action="open-app">APP</a></div></div></header>`;
@@ -132,7 +139,7 @@
     const selected=['pantallas','hidrogel','ai'].includes(params.get('category'))?params.get('category'):'all';
     const requestedSub=params.get('sub')||'',legacy=LEGACY_SUB[requestedSub];
     const sub=legacy?.[0]||requestedSub;
-    const qRaw=(params.get('q')||'').slice(0,120),q=qRaw.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    const qRaw=(params.get('q')||'').slice(0,120),q=qRaw.trim(),queryTokens=catalogSearchWords(q);
     const selectedTechnology=(params.get('technology')||legacy?.[1]||'').slice(0,80);
     const selectedQuality=(params.get('quality')||'').slice(0,120);
     const selectedModel=(params.get('model')||'').slice(0,120);
@@ -149,7 +156,8 @@
       &&(except==='model'||!selectedModel||p.model===selectedModel)
       &&(!selectedQualityGroup||qualityGroup(p)===selectedQualityGroup)
       &&(!selectedSeries||foldSeries(p)===selectedSeries)
-      &&(!q||searchText(p).includes(q));
+      &&(!q||queryTokens.length>0)
+      &&queryTokens.every(token=>catalogSearchWords(searchText(p)).some(word=>/^\d+$/.test(token)?word===token:word.startsWith(token)));
     const matches=all.filter(p=>matchesExcept(p));
     const hasSearchOrFilter = Boolean(q.trim() || selected !== 'all' || sub || selectedTechnology || selectedQuality || selectedModel || selectedQualityGroup || selectedSeries);
     const showEmpty = hasSearchOrFilter && matches.length === 0;
