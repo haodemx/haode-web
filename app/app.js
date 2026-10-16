@@ -40,6 +40,7 @@ const OPTIMIZED_DETAIL_IMAGE_BY_PATH = {
 };
 const EXTERNAL_CATALOG_TIMEOUT_MS = 3000;
 const EXTERNAL_DIAGNOSTICS_TIMEOUT_MS = 3000;
+const WEB_ORDER_TIMEOUT_MS = 15000;
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
   "AI-GAFAS-G3": "haode-ai-g3-smart-glasses",
   "MICA-X200T": "x200t-cortadora-micas"
@@ -2461,15 +2462,22 @@ async function handleDocumentClick(event) {
     if (whatsappOrderLink.classList.contains("disabled") || state.orderSubmitting) return;
     const url = buildWhatsappUrl();
     state.orderSubmitting = true;
-    trackGrowthEvent("begin_checkout", {
-      currency: "MXN",
-      value: cartTotal(),
-      ...analyticsAttributionParameters(),
-      items: ga4CartItems()
-    });
-    window.open(url, "_blank", "noopener,noreferrer");
-    await submitWebOrder();
-    state.orderSubmitting = false;
+    try {
+      trackGrowthEvent("begin_checkout", {
+        currency: "MXN",
+        value: cartTotal(),
+        ...analyticsAttributionParameters(),
+        items: ga4CartItems()
+      });
+      window.open(url, "_blank", "noopener,noreferrer");
+      // A slow acknowledgement must not lock future WhatsApp quotation attempts.
+      // Keep the request ID: a timeout does not prove the server rejected the order.
+      await withTimeout(submitWebOrder(), WEB_ORDER_TIMEOUT_MS, "Registro del pedido");
+    } catch (error) {
+      console.info("HAODE app no pudo completar el envío:", error.message);
+    } finally {
+      state.orderSubmitting = false;
+    }
   }
   if (productWhatsappLink) {
     const product = products.find((item) => item.id === productWhatsappLink.dataset.productWhatsapp);

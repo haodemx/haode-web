@@ -46,6 +46,8 @@ test('warranty header spans the viewport and navigation remains readable', async
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto(`${BASE_URL}/garantia/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('.zay-header')).toBeVisible();
+  // The shared header is inserted before its dynamically loaded stylesheet settles.
+  await expect(page.locator('.zay-header .zay-nav a').first()).toHaveCSS('color', 'rgb(21, 21, 21)');
 
   const presentation = await page.evaluate(() => {
     const header = document.querySelector('header.zay-header');
