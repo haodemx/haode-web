@@ -105,7 +105,7 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
   expect(submitted.utm_campaign).toBe("verano_2026");
   expect(submitted.utm_content).toBe("video_a");
   expect(submitted.utm_term).toBe("pantallas_diagnostico_iphone");
-  expect(submitted.landing_page).toBe("/app/");
+  expect(submitted.landing_page).toBe(`${SERVER_URL}/app/`);
   const unexpectedConsoleErrors = consoleErrors.filter((message) => (
     !message.includes("@firebase/firestore") || !message.includes("Could not reach Cloud Firestore backend")
   ));
@@ -135,3 +135,35 @@ test("decorates new SEO exposure page WhatsApp links with the campaign reference
   expect(text).toContain("stock en México");
   expect(text).toContain("precio por cantidad");
 });
+
+for (const [label, storedLanding, expectedPath] of [
+  ["legacy path strips query and fragment", "/productos/?email=qa%40example.invalid#private", "/productos/"],
+  ["foreign stored URL falls back safely", "https://foreign.invalid/private?phone=5512345678", "/app/"],
+  ["malformed stored URL falls back safely", "http://[", "/app/"]
+]) {
+  test(`ERP brand landing: ${label}`, async ({ page }) => {
+    let submitted;
+    await page.addInitScript((landingPage) => {
+      localStorage.setItem("haode-privacy-consent-v1", JSON.stringify({ version: 1, analytics: true, advertising: false }));
+      localStorage.setItem("haode-campaign-attribution-v1", JSON.stringify({ source: "google", medium: "organic_search", landingPage, capturedAt: Date.now() }));
+      window.open = () => ({ closed: false, location: { href: "" } });
+    }, storedLanding);
+    await page.route("**/public-stock.json**", route => route.fulfill({ json: [] }));
+    await page.route("**/api/public/catalog**", route => route.fulfill({ json: catalog }));
+    await page.route("**/api/public/web-orders", route => {
+      submitted = route.request().postDataJSON();
+      return route.fulfill({ status: 201, json: { ok: true, order_number: "WEB-LANDING-QA" } });
+    });
+    await page.goto(`${APP_URL}#lista`, { waitUntil: "domcontentloaded" });
+    await page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" }).getByRole("button", { name: "Agregar" }).click();
+    await page.locator("[data-customer-name]").fill("Cliente QA aislado");
+    await page.locator("[data-customer-phone]").fill("5512345678");
+    await page.locator("[data-customer-city]").fill("CDMX");
+    await page.locator("[data-whatsapp-link]").click();
+    await expect.poll(() => submitted?.landing_page).toBe(`${SERVER_URL}${expectedPath}`);
+    expect(submitted.utm_source).toBe("google");
+    expect(submitted.utm_medium).toBe("organic_search");
+    expect(submitted.landing_page).not.toContain("?");
+    expect(submitted.landing_page).not.toContain("#");
+  });
+}

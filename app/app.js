@@ -2126,6 +2126,18 @@ function buildWhatsappUrl() {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
 
+function webOrderLandingPage() {
+  // ERP needs the host to distinguish brand traffic. Never forward query text.
+  const origin = window.location.origin;
+  try {
+    const landing = new URL(state.attribution.landingPage || "/", origin);
+    if (landing.origin === origin) return `${origin}${landing.pathname}`;
+  } catch {
+    // Invalid or foreign stored attribution must not block quotation.
+  }
+  return `${origin}/app/`;
+}
+
 function webOrderPayload() {
   const items = getCartItems();
   const clientName = (customerNameEl?.value || "").trim();
@@ -2147,7 +2159,7 @@ function webOrderPayload() {
     utm_campaign: state.attribution.campaign,
     utm_content: state.attribution.content,
     utm_term: state.attribution.term,
-    landing_page: state.attribution.landingPage,
+    landing_page: webOrderLandingPage(),
     referrer_host: state.attribution.referrerHost,
     analytics_session_id: window.HaodeConversions?.getSessionId?.() || "",
     product_id: items[0]?.product?.id || "",
