@@ -17,8 +17,8 @@ async function ready(page,mode){
     const requests=window.quoteAudit.requests;
     requests.push({payload:JSON.parse(options.body),key:options.headers['Idempotency-Key']});
     if(requests.length===1){
-     if(mode==='stalled-request')return new Promise(()=>{});
-     if(mode==='stalled-body')return Promise.resolve({ok:true,json:()=>new Promise(()=>{})});
+     if(mode==='stalled-request')return new Promise(resolve=>{window.quoteAudit.finish=()=>resolve(new Response(JSON.stringify({ok:true,replayed:false,order_number:'WEB-QA-ISOLATED'}),{status:200}));});
+     if(mode==='stalled-body')return Promise.resolve({ok:true,json:()=>new Promise(resolve=>{window.quoteAudit.finish=()=>resolve({ok:true,replayed:false,order_number:'WEB-QA-ISOLATED'});})});
      if(mode==='network-error')return Promise.reject(new Error('Network unavailable'));
      if(mode==='http-error')return Promise.resolve(new Response('{}',{status:503}));
     }
@@ -35,8 +35,12 @@ for(const mode of ['stalled-request','stalled-body'])test(`quotation retry recov
  expect(await page.evaluate(()=>window.quoteAudit.opens)).toBe(1);
  await page.clock.fastForward(15001);
  await page.locator('[data-whatsapp-link]').click();
- const audit=await page.evaluate(()=>window.quoteAudit);
- expect(audit.opens).toBe(2);expect(audit.requests).toHaveLength(2);
+ const pending=await page.evaluate(()=>({opens:window.quoteAudit.opens,requests:window.quoteAudit.requests}));
+ expect(pending.opens).toBe(2);expect(pending.requests).toHaveLength(1);
+ await page.evaluate(()=>window.quoteAudit.finish());
+ await page.locator('[data-whatsapp-link]').click();
+ const audit=await page.evaluate(()=>({opens:window.quoteAudit.opens,requests:window.quoteAudit.requests}));
+ expect(audit.opens).toBe(3);expect(audit.requests).toHaveLength(2);
  expect(audit.requests[1].key).toBe(audit.requests[0].key);
  expect(audit.requests[1].payload).toEqual(audit.requests[0].payload);
 });
@@ -47,4 +51,15 @@ for(const mode of ['success','network-error','http-error','popup-error'])test(`q
  const audit=await page.evaluate(()=>window.quoteAudit);
  expect(audit.opens).toBe(2);expect(audit.requests).toHaveLength(mode==='popup-error'?1:2);
  if(audit.requests.length===2)expect(audit.requests[1].key).toBe(audit.requests[0].key);
+});
+test('a changed cart uses a separate request identity while an earlier acknowledgement is pending',async({page})=>{
+ await ready(page,'stalled-request');await page.clock.install();
+ await page.locator('[data-whatsapp-link]').click();
+ await page.clock.fastForward(15001);
+ await page.locator('[data-increase]').first().click();
+ await page.locator('[data-whatsapp-link]').click();
+ const requests=await page.evaluate(()=>window.quoteAudit.requests);
+ expect(requests).toHaveLength(2);
+ expect(requests[1].key).not.toBe(requests[0].key);
+ expect(requests[1].payload.items[0].quantity).toBe(requests[0].payload.items[0].quantity+1);
 });
