@@ -142,6 +142,7 @@ const state = {
   attribution: {},
   orderRequestId: "",
   orderSubmitting: false,
+  orderAcknowledgement: null,
   lastTrackedProductViewId: "",
   diagnostics: {
     firestoreTotal: null,
@@ -2198,6 +2199,21 @@ async function submitWebOrder() {
   }
 }
 
+function pendingWebOrderAcknowledgement() {
+  const requestId = checkoutRequestId();
+  // Reopening WhatsApp must not start another write while this request is unresolved.
+  if (state.orderAcknowledgement?.requestId === requestId) {
+    return state.orderAcknowledgement.promise;
+  }
+  const pending = { requestId, promise: submitWebOrder() };
+  state.orderAcknowledgement = pending;
+  const clearPending = () => {
+    if (state.orderAcknowledgement === pending) state.orderAcknowledgement = null;
+  };
+  pending.promise.then(clearPending, clearPending);
+  return pending.promise;
+}
+
 function singleProductWhatsappUrl(product) {
   const referenceLabel = product.officialSkuPending ? "Referencia web" : "SKU";
   const lines = [
@@ -2472,7 +2488,7 @@ async function handleDocumentClick(event) {
       window.open(url, "_blank", "noopener,noreferrer");
       // A slow acknowledgement must not lock future WhatsApp quotation attempts.
       // Keep the request ID: a timeout does not prove the server rejected the order.
-      await withTimeout(submitWebOrder(), WEB_ORDER_TIMEOUT_MS, "Registro del pedido");
+      await withTimeout(pendingWebOrderAcknowledgement(), WEB_ORDER_TIMEOUT_MS, "Registro del pedido");
     } catch (error) {
       console.info("HAODE app no pudo completar el envío:", error.message);
     } finally {
