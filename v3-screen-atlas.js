@@ -89,6 +89,24 @@
       .replace(/\bpromax\b/g, 'pro max').split(/[^a-z0-9]+/).filter(Boolean);
   }
 
+  function catalogSearchCompactModel(value, queryTokens) {
+    const query = queryTokens.join('');
+    const segments = String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().split(/[^a-z0-9\s]+/);
+    // Remove whitespace only; never join alternatives such as iPhone 12 / 12 Pro.
+    return /[a-z]/.test(query) && /\d/.test(query) && segments.some((segment) => {
+      const words = segment.split(/\s+/).filter(Boolean);
+      return words.some((_, start) => {
+        let compact = '';
+        for (let end = start; end < words.length && compact.length < query.length; end += 1) {
+          compact += words[end];
+          if (compact === query) return true;
+        }
+        return false;
+      });
+    });
+  }
+
   function header(active='') {
     const groups=[['pantallas','Pantallas','/productos/?category=pantallas'],['hidrogel','Hidrogel','/micas.html'],['ai','Productos AI','/productos-ai/']];
     return `<header class="zay-header" data-zay-header data-v3-header data-ui-id="site-header"><div class="zay-header-inner" data-ui-id="site-header-inner"><a class="zay-brand" href="/" aria-label="HAODE México, inicio" data-ui-id="header-brand" data-ui-action="navigate-home"><img src="/assets/images/haode-header-logo-horizontal-preview.png" alt="HAODE" width="190" height="55" data-ui-id="header-brand-image"></a><button class="zay-menu-button" type="button" aria-expanded="false" aria-controls="zay-nav" data-ui-id="header-menu-button" data-ui-action="toggle-primary-navigation">${menuIcon}<span class="zay-visually-hidden">Abrir menú</span></button><nav class="zay-nav" id="zay-nav" aria-label="Navegación principal" data-ui-id="header-navigation" data-ui-project-menu><a href="/"${active==='home'?' class="is-active"':''} data-ui-id="nav-home" data-ui-action="navigate-home">Inicio</a>${groups.map(([key,label,href])=>`<details class="zay-nav-group"${active===key?' data-active="true"':''} ${uiId(`nav-group-${key}`)}><summary>${label}</summary><div><a href="${href}" ${uiId(`nav-${key}`)} data-ui-action="navigate-${key}">Ver ${label}</a>${FAMILIES[key].map(([s,l])=>`<a href="${familyHref(key,s)}" ${uiId(`nav-${key}-${s}`)} data-ui-action="navigate-${key}-${s}">${l}</a>`).join('')}</div></details>`).join('')}<a href="/novedades/" data-ui-id="nav-news" data-ui-action="navigate-news">Novedades</a><a href="/contacto/" data-ui-id="nav-contact" data-ui-action="navigate-contact">Contacto</a></nav><div class="zay-header-actions" data-ui-id="header-actions"><a class="zay-search-icon" href="/productos/" aria-label="Buscar productos" data-ui-id="header-search" data-ui-action="open-catalog-search">${searchIcon}</a><a class="zay-button zay-whatsapp" data-detail-header-whatsapp data-contact-area="header" href="${quote()}" target="_blank" rel="noopener noreferrer" data-ui-id="header-whatsapp" data-ui-action="open-whatsapp">WhatsApp</a><a class="zay-button zay-orange" data-detail-header-app href="/app/" data-ui-id="header-app" data-ui-action="open-app">APP</a></div></div></header>`;
@@ -157,7 +175,8 @@
       &&(!selectedQualityGroup||qualityGroup(p)===selectedQualityGroup)
       &&(!selectedSeries||foldSeries(p)===selectedSeries)
       &&(!q||queryTokens.length>0)
-      &&queryTokens.every(token=>catalogSearchWords(searchText(p)).some(word=>/^\d+$/.test(token)?word===token:word.startsWith(token)));
+      &&(queryTokens.every(token=>catalogSearchWords(searchText(p)).some(word=>/^\d+$/.test(token)?word===token:word.startsWith(token)))
+        ||[p.model,p.name].some(value=>catalogSearchCompactModel(value,queryTokens)));
     const matches=all.filter(p=>matchesExcept(p));
     const hasSearchOrFilter = Boolean(q.trim() || selected !== 'all' || sub || selectedTechnology || selectedQuality || selectedModel || selectedQualityGroup || selectedSeries);
     const showEmpty = hasSearchOrFilter && matches.length === 0;
