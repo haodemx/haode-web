@@ -22186,3 +22186,21 @@ body.product-detail-page.conversion-reference-page[data-v3-detail="true"] .detai
     text-align: center;
   }
 }
+/* X200T category: keep the existing quote panel and actions readable. */
+body.maquinas-entry-page .reference-conversion-panel {
+  background: #101012 !important;
+}
+
+body.maquinas-entry-page .new-page-hero .section-kicker {
+  color: #8b4a14;
+}
+
+body.maquinas-entry-page .btn-primary,
+body.maquinas-entry-page .zay-whatsapp,
+body.maquinas-entry-page .zay-floating {
+  background: #087a42 !important;
+}
+
+body.maquinas-entry-page .zay-orange {
+  background: #c9360c !important;
+}
