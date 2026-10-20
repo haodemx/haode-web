@@ -3,6 +3,8 @@ import path from 'node:path';
 import vm from 'node:vm';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import schemaTrust from './product-schema-trust.cjs';
+const { stripProductAvailability } = schemaTrust;
 import { SCREEN_DATE, SCREEN_LANDINGS, isScreen, screenName, screenGuide, refreshScreenProduct, refreshScreenLanding } from './screen-seo-content.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -474,45 +476,11 @@ function regexEscape(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-function stripProductAvailability(jsonSource, relativePath) {
-  let parsed;
-  try {
-    parsed = JSON.parse(jsonSource.trim());
-  } catch {
-    return jsonSource;
-  }
-
-  const products = (parsed['@graph'] || [parsed])
-    .filter((node) => node?.['@type'] === 'Product' && Object.hasOwn(node.offers || {}, 'availability'));
-  if (!products.length) return jsonSource;
-
-  let updated = jsonSource;
-  for (const product of products) {
-    const encodedValue = regexEscape(JSON.stringify(product.offers.availability));
-    const trailingComma = new RegExp(`\\s*"availability"\\s*:\\s*${encodedValue}\\s*,`);
-    const finalProperty = new RegExp(`,\\s*"availability"\\s*:\\s*${encodedValue}(?=\\s*})`);
-
-    if (trailingComma.test(updated)) {
-      updated = updated.replace(trailingComma, '');
-    } else if (finalProperty.test(updated)) {
-      updated = updated.replace(finalProperty, '');
-    } else {
-      throw new Error(`Unable to remove Product availability from ${relativePath}`);
-    }
-  }
-
-  const reparsed = JSON.parse(updated.trim());
-  const remaining = (reparsed['@graph'] || [reparsed])
-    .filter((node) => node?.['@type'] === 'Product' && Object.hasOwn(node.offers || {}, 'availability'));
-  if (remaining.length) throw new Error(`Product availability remains in ${relativePath}`);
-  return updated;
-}
-
 function removeUnconfirmedProductAvailability(html, relativePath) {
   return html.replace(
     /(<script[^>]+type=["']application\/ld\+json["'][^>]*>)([\s\S]*?)(<\/script>)/gi,
     (block, opening, jsonSource, closing) => {
-      const updatedJson = stripProductAvailability(jsonSource, relativePath);
+      const updatedJson = stripProductAvailability(jsonSource);
       return updatedJson === jsonSource ? block : `${opening}${updatedJson}${closing}`;
     },
   );

@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
+import schemaTrust from '../scripts/product-schema-trust.cjs';
+const { unconfirmedProductOffers } = schemaTrust;
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE_URL = 'https://haode.com.mx';
@@ -229,10 +231,8 @@ test('all sitemap Product schema omits unconfirmed availability', () => {
       .flatMap((block) => block['@graph'] || [block])
       .filter((node) => node['@type'] === 'Product');
 
-    for (const product of products) {
-      if (Object.hasOwn(product.offers || {}, 'availability')) {
-        violations.push(`${relativePath}: ${product.offers.availability}`);
-      }
+    for (const offer of unconfirmedProductOffers({ '@graph': products })) {
+      violations.push(`${relativePath}: ${offer.availability}`);
     }
   }
 

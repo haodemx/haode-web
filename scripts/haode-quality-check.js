@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { unconfirmedProductOffers } = require('./product-schema-trust.cjs');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://haode.com.mx';
@@ -222,11 +223,9 @@ function main() {
     const rel = relative(file);
     const canonicalUrl = extractCanonicalUrl(text);
     const noindex = extractRobotsContent(text).includes('noindex');
-    jsonLdNodes(text)
-      .filter((node) => node?.['@type'] === 'Product' && Object.hasOwn(node.offers || {}, 'availability'))
-      .forEach((node) => {
-        add(issues, 'error', 'UNCONFIRMED_SCHEMA_AVAILABILITY', file, String(node.offers.availability));
-      });
+    unconfirmedProductOffers({ '@graph': jsonLdNodes(text) }).forEach((offer) => {
+      add(issues, 'error', 'UNCONFIRMED_SCHEMA_AVAILABILITY', file, String(offer.availability));
+    });
     if (canonicalUrl && !canonicalUrl.startsWith(SITE_URL)) {
       add(issues, 'error', 'CANONICAL_DOMAIN', file, canonicalUrl);
     }
