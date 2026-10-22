@@ -167,6 +167,7 @@ const cartPanelEl = cartDrawerEl?.querySelector(".cart-panel");
 const cartItemsEl = document.querySelector("[data-cart-items]");
 const cartTotalEl = document.querySelector("[data-cart-total]");
 const whatsappLinkEl = document.querySelector("[data-whatsapp-link]");
+const checkoutStatusEl = document.querySelector("[data-checkout-status]");
 const customerNameEl = document.querySelector("[data-customer-name]");
 const customerPhoneEl = document.querySelector("[data-customer-phone]");
 const customerCityEl = document.querySelector("[data-customer-city]");
@@ -1185,6 +1186,24 @@ function catalogSearchWords(value) {
     .replace(/\bpromax\b/g, "pro max").split(/[^a-z0-9]+/).filter(Boolean);
 }
 
+function catalogSearchCompactModel(value, queryTokens) {
+  const query = queryTokens.join("");
+  const segments = String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().split(/[^a-z0-9\s]+/);
+  // Remove whitespace only; never join alternatives such as iPhone 12 / 12 Pro.
+  return /[a-z]/.test(query) && /\d/.test(query) && segments.some((segment) => {
+    const words = segment.split(/\s+/).filter(Boolean);
+    return words.some((_, start) => {
+      let compact = "";
+      for (let end = start; end < words.length && compact.length < query.length; end += 1) {
+        compact += words[end];
+        if (compact === query) return true;
+      }
+      return false;
+    });
+  });
+}
+
 function visibleProducts() {
   const queryTokens = catalogSearchWords(state.searchQuery);
   const source = state.activeGroup ? getProductsForGroup(state.activeGroup) : products;
@@ -1201,8 +1220,10 @@ function visibleProducts() {
       product.category,
       categorySearchAliases[product.category]
     ].filter(Boolean).join(" "));
-    const matchesSearch = (!state.searchQuery.trim() || queryTokens.length > 0) && queryTokens.every((token) => searchWords.some((word) =>
-      /^\d+$/.test(token) ? word === token : word.startsWith(token)));
+    const matchesSearch = (!state.searchQuery.trim() || queryTokens.length > 0) && (
+      queryTokens.every((token) => searchWords.some((word) =>
+        /^\d+$/.test(token) ? word === token : word.startsWith(token))) ||
+      [product.model, product.name, product.displayName].some((value) => catalogSearchCompactModel(value, queryTokens)));
     return matchesCategory && matchesSearch;
   });
   return sortProducts(filtered);
@@ -2178,8 +2199,7 @@ function webOrderPayload() {
   };
 }
 
-async function submitWebOrder() {
-  const payload = webOrderPayload();
+async function submitWebOrder(payload) {
   if (!payload.customer_name || !payload.whatsapp || !payload.items.length) return null;
   try {
     const response = await fetch(ERP_WEB_ORDER_URL, {
@@ -2211,18 +2231,49 @@ async function submitWebOrder() {
   }
 }
 
-function pendingWebOrderAcknowledgement() {
+function checkoutSubmissionSnapshot() {
   const requestId = checkoutRequestId();
-  // Reopening WhatsApp must not start another write while this request is unresolved.
   if (state.orderAcknowledgement?.requestId === requestId) {
-    return state.orderAcknowledgement.promise;
+    return state.orderAcknowledgement;
   }
-  const pending = { requestId, promise: submitWebOrder() };
+  const payload = webOrderPayload();
+  payload.items.forEach(Object.freeze);
+  Object.freeze(payload.items);
+  return Object.freeze({
+    requestId,
+    payload: Object.freeze(payload),
+    whatsappUrl: buildWhatsappUrl(),
+    formValues: Object.freeze(checkoutInputs.map(input => input.value.trim()))
+  });
+}
+
+function renderCheckoutStatus() {
+  if (!checkoutStatusEl) return;
+  const submission = state.orderAcknowledgement?.requestId === state.orderRequestId ? state.orderAcknowledgement : null;
+  checkoutStatusEl.hidden = !submission;
+  if (!submission) {
+    checkoutStatusEl.textContent = "";
+    return;
+  }
+  const changed = checkoutInputs.some((input, index) => input.value.trim() !== submission.formValues[index]);
+  const status = submission.status === "confirmed" ? "Registro confirmado."
+    : submission.status === "unknown" ? "Sin confirmación del registro." : "Confirmación pendiente.";
+  checkoutStatusEl.textContent = `${status} ${changed ? "Tus cambios no se han enviado. WhatsApp conserva los datos originales." : "WhatsApp conserva la lista enviada."} Reabrir WhatsApp no enviará otra solicitud de registro.`;
+}
+
+function pendingWebOrderAcknowledgement(snapshot) {
+  if (state.orderAcknowledgement?.requestId === snapshot.requestId) return state.orderAcknowledgement.promise;
+  const pending = { ...snapshot, status: "pending", promise: submitWebOrder(snapshot.payload) };
   state.orderAcknowledgement = pending;
-  const clearPending = () => {
-    if (state.orderAcknowledgement === pending) state.orderAcknowledgement = null;
-  };
-  pending.promise.then(clearPending, clearPending);
+  // Keep the same snapshot/promise even after an unknown result; never blindly POST again.
+  pending.promise.then(result => {
+    pending.status = typeof result?.order_number === "string" && result.order_number.trim() && result.ignored !== true ? "confirmed" : "unknown";
+    renderCheckoutStatus();
+  }, () => {
+    pending.status = "unknown";
+    renderCheckoutStatus();
+  });
+  renderCheckoutStatus();
   return pending.promise;
 }
 
@@ -2245,6 +2296,7 @@ function singleProductWhatsappUrl(product) {
 }
 
 function renderCart() {
+  renderCheckoutStatus();
   const items = getCartItems();
   const totalItems = cartCount();
   const customerReady = [
@@ -2488,7 +2540,7 @@ async function handleDocumentClick(event) {
   if (whatsappOrderLink) {
     event.preventDefault();
     if (whatsappOrderLink.classList.contains("disabled") || state.orderSubmitting) return;
-    const url = buildWhatsappUrl();
+    const snapshot = checkoutSubmissionSnapshot();
     state.orderSubmitting = true;
     try {
       trackGrowthEvent("begin_checkout", {
@@ -2497,10 +2549,10 @@ async function handleDocumentClick(event) {
         ...analyticsAttributionParameters(),
         items: ga4CartItems()
       });
-      window.open(url, "_blank", "noopener,noreferrer");
+      window.open(snapshot.whatsappUrl, "_blank", "noopener,noreferrer");
       // A slow acknowledgement must not lock future WhatsApp quotation attempts.
       // Keep the request ID: a timeout does not prove the server rejected the order.
-      await withTimeout(pendingWebOrderAcknowledgement(), WEB_ORDER_TIMEOUT_MS, "Registro del pedido");
+      await withTimeout(pendingWebOrderAcknowledgement(snapshot), WEB_ORDER_TIMEOUT_MS, "Registro del pedido");
     } catch (error) {
       console.info("HAODE app no pudo completar el envío:", error.message);
     } finally {
