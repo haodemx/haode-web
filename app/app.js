@@ -992,7 +992,7 @@ function formatPrice(value) {
 }
 
 function priceLines(product) {
-  if (product.category === "Micas") {
+  if (HYDROGEL_BOX_PRODUCT_IDS.has(product.id)) {
     return `
       <div class="price-lines">
         <span>Paquete 50 pzs <strong>${formatPrice(product.publicPrice)}</strong></span>
