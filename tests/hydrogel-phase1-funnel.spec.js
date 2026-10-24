@@ -89,6 +89,11 @@ test('four-style comparison and visible FAQ agree with schema on a narrow screen
   expect(audit.faq).toEqual(audit.visible);
   expect(audit.faq).toHaveLength(6);
   expect(audit.broken).toEqual([]);
+  const anchor = await page.locator('#comparar-micas').evaluate(e => {
+    e.scrollIntoView({block: 'start', behavior: 'instant'});
+    return {top: e.getBoundingClientRect().top, headerBottom: document.querySelector('.zay-header').getBoundingClientRect().bottom};
+  });
+  expect(anchor.top).toBeGreaterThanOrEqual(anchor.headerBottom);
   const readability = await page.evaluate(() => {
     const rgb = v => (v.match(/[\d.]+/g) || []).map(Number).slice(0, 3);
     const luminance = values => values.map(v => v / 255).map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4).reduce((n, v, i) => n + v * [.2126, .7152, .0722][i], 0);
