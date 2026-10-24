@@ -29,6 +29,24 @@
         ],
         "createdAt": "2026-10-03T18:45:59.042Z",
         "reason": "Agent: scoped CSS overrides the flagged legacy orange. Current rendered store brand facts and kicker use rgb(168,50,7) on the light surface; current 390/1440 headings and CTA colors verified. Legacy linked stylesheet scan does not resolve this cascade."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "micas-hidrogel-mayoreo-mexico/index.html"
+        ],
+        "createdAt": "2026-10-24T02:53:30.386Z",
+        "reason": "Agent decision: computed 390/1440px current page has no orange ff5a14 box shadow; the detector matches shared inactive dark selectors. Scope is this existing landing only; no global disable."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "micas-hidrogel-mayoreo-mexico/index.html"
+        ],
+        "createdAt": "2026-10-24T02:53:30.401Z",
+        "reason": "Agent decision: real white panel heading and header CTA contrast fixed with page-scoped CSS. Rendered visible white text audit finds no white-on-white text; remaining finding matches inactive shared styles. Scope is this landing only; maintain computed contrast regression checks."
       }
     ]
   }

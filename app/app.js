@@ -11,6 +11,7 @@ const PRODUCTS_JSON_URL = sitePath("/app/products.json");
 const ERP_PUBLIC_CATALOG_URL = "https://erp.haode.com.mx/api/public/catalog";
 const ERP_PUBLIC_STOCK_URL = "https://erp.haode.com.mx/public-stock.json";
 const ERP_WEB_ORDER_URL = "https://erp.haode.com.mx/api/public/web-orders";
+const HYDROGEL_BOX_PRODUCT_IDS = new Set(["mica-hd", "mica-matte", "mica-privacidad-hd", "mica-privacidad-matte"]);
 const SERVICE_WORKER_URL = sitePath("/service-worker.js");
 const SERVICE_WORKER_SCOPE = `${APP_BASE_PATH || ""}/`;
 const PLACEHOLDER_IMAGE = sitePath("/assets/products/placeholder.svg");
@@ -2171,6 +2172,7 @@ function webOrderPayload() {
         product_sku: item.product.sku || item.product.reference || item.product.id,
         product_name: item.product.name,
         quantity: item.quantity,
+        ...(HYDROGEL_BOX_PRODUCT_IDS.has(item.product.id) ? {quantity_unit: "box_50"} : {}),
         unit_price: priceRule.unitPrice
       };
     }),
@@ -2196,6 +2198,7 @@ async function submitWebOrder() {
       && result.ignored !== true;
     if (newLeadRegistered) {
       trackGrowthEvent("generate_lead", {
+        request_id: payload.client_request_id,
         currency: "MXN",
         value: payload.total,
         ...analyticsAttributionParameters(),
