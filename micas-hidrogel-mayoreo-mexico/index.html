@@ -16,6 +16,23 @@
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
   <link rel="stylesheet" href="/style.css?v=20260813-final-ui-seo" />
   <link rel="stylesheet" href="/ad-landing.css?v=20260924" />
+  <style>
+    #comparar-micas { scroll-margin-top: 96px; }
+    body.hydrogel-phase1-page .reference-conversion-panel h2 { color: #151515; }
+    body.hydrogel-phase1-page .zay-button.zay-orange { background: #c9360c !important; color: #fff; min-height: 44px; }
+    body.hydrogel-phase1-page .zay-button.zay-whatsapp { background: #087a42 !important; color: #fff; min-height: 44px; }
+    body.hydrogel-phase1-page .new-page-links .btn[href^="/app/"],
+    body.hydrogel-phase1-page .new-page-links .btn[href="#comparar-micas"] { display: inline-flex; color: #151515; background: #fff; border-color: #dce4e8; }
+    .hydrogel-comparison { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .hydrogel-comparison th, .hydrogel-comparison td { padding: 16px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #dce4e8; overflow-wrap: anywhere; }
+    .hydrogel-comparison thead { background: #f1f5f7; }
+    .hydrogel-comparison caption { text-align: left; padding: 0 0 16px; }
+    .hydrogel-comparison a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; }
+    .hydrogel-comparison-note { margin-top: 20px; line-height: 1.6; }
+    @media (max-width: 600px) {
+      .hydrogel-comparison th, .hydrogel-comparison td { padding: 12px 6px; font-size: 14px; }
+    }
+  </style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,11 +48,36 @@
       "name": "Micas de hidrogel y máquina de corte publicadas por HAODE",
       "numberOfItems": 5,
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "MICA HD", "url": "https://haode.com.mx/producto/mica-hd/" },
-        { "@type": "ListItem", "position": 2, "name": "MICA MATTE", "url": "https://haode.com.mx/producto/mica-matte/" },
-        { "@type": "ListItem", "position": 3, "name": "MICA PRIVACIDAD HD", "url": "https://haode.com.mx/producto/mica-privacidad-hd/" },
-        { "@type": "ListItem", "position": 4, "name": "MICA PRIVACIDAD MATTE", "url": "https://haode.com.mx/producto/mica-privacidad-matte/" },
-        { "@type": "ListItem", "position": 5, "name": "HAODE X200T Cortadora Inteligente de Micas", "url": "https://haode.com.mx/producto/x200t-cortadora-micas/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "MICA HD",
+          "url": "https://haode.com.mx/producto/mica-hd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "MICA MATTE",
+          "url": "https://haode.com.mx/producto/mica-matte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "MICA PRIVACIDAD HD",
+          "url": "https://haode.com.mx/producto/mica-privacidad-hd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "MICA PRIVACIDAD MATTE",
+          "url": "https://haode.com.mx/producto/mica-privacidad-matte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "HAODE X200T Cortadora Inteligente de Micas",
+          "url": "https://haode.com.mx/producto/x200t-cortadora-micas/"
+        }
       ]
     },
     {
@@ -81,6 +123,30 @@
             "@type": "Answer",
             "text": "Producto, modelo si aplica, cantidad y ciudad."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántas láminas incluye cada caja?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada caja de MICA HD, MICA MATTE, MICA PRIVACIDAD HD y MICA PRIVACIDAD MATTE contiene 50 láminas. Indica cajas y piezas al cotizar; por ejemplo, 2 cajas son 100 láminas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo elijo entre las cuatro opciones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compara HD transparente, acabado mate, privacidad HD y privacidad mate. Revisa la ficha de cada opción y confirma el acabado antes de preparar tu lista."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué debo confirmar si ya tengo una cortadora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Envía la marca y el modelo exacto de tu cortadora, la mica elegida, la cantidad y tu ciudad. La compatibilidad debe confirmarse antes del pedido; no se presupone para todas las máquinas."
+          }
         }
       ]
     }
@@ -88,7 +154,7 @@
 }
   </script>
 </head>
-<body class="chatgpt-ad-landing new-page seo-conversion-page conversion-reference-page seo-exposure-page">
+<body class="chatgpt-ad-landing new-page seo-conversion-page conversion-reference-page seo-exposure-page hydrogel-phase1-page">
   <header class="topbar catalog-topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="/" aria-label="HAODE MÉXICO"><img class="brand-logo" src="/assets/logo/logo.png" alt="Logo oficial de HAODE" /><span class="brand-copy"><strong>HAODE</strong><small>MÉXICO</small></span></a>
@@ -112,7 +178,8 @@
         </div>
         <div class="new-page-links">
           <a class="btn btn-primary" href="https://wa.me/523326684296?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20cotizar%20micas%20de%20hidrogel.%0AProducto%3A%0ACantidad%3A%0ACiudad%3A%0A%C2%BFMe%20pueden%20confirmar%20stock%20en%20M%C3%A9xico%2C%20precio%20por%20cantidad%2C%20garant%C3%ADa%20local%20y%20env%C3%ADo%3F" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
-          <a class="btn btn-primary" href="/app/?utm_source=seo&utm_medium=organic&utm_campaign=micas_hidrogel_mayoreo&utm_content=landing_cta#categoria/Micas">Abrir en App</a>
+          <a class="btn btn-secondary" href="/app/#categoria/Micas">Preparar lista en App</a>
+          <a class="btn btn-secondary" href="#comparar-micas">Comparar las cuatro micas</a>
           <a class="btn btn-secondary" href="/productos/">Ver catálogo</a>
         </div>
       </div>
@@ -137,6 +204,26 @@
           <article class="high-end-seo-card"><h3>Marca propia desde 5,000 piezas</h3><p>Consulta opciones de marca, logo y empaque para producción por volumen.</p><a href="/micas-hidrogel-marca-propia/">Solicitar cotización</a></article>
           <article class="high-end-seo-card"><h3>Cotización rápida</h3><p>Envía producto, cantidad y ciudad por WhatsApp.</p><a href="/app/#lista">Ver ruta</a></article>
         </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="comparar-micas">
+      <div class="wrap section-shell">
+        <div class="section-head section-head-compact">
+          <div><p class="section-kicker">Elige tu mica</p><h2 id="comparar-micas">Compara las cuatro opciones de hidrogel</h2></div>
+          <p>Elige el acabado para tu primera compra o repón las opciones que ya utilizas.</p>
+        </div>
+        <table class="hydrogel-comparison">
+          <caption>Cada caja contiene 50 láminas. Consulta la ficha y prepara tu lista por opción.</caption>
+          <thead><tr><th scope="col">Mica</th><th scope="col">Acabado</th><th scope="col">Prepara tu pedido</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="/producto/mica-hd/">MICA HD</a></th><td>Transparente · 50 láminas por caja</td><td><a href="/app/#producto/mica-hd">Elegir HD en App</a></td></tr>
+            <tr><th scope="row"><a href="/producto/mica-matte/">MICA MATTE</a></th><td>Mate · 50 láminas por caja</td><td><a href="/app/#producto/mica-matte">Elegir Matte en App</a></td></tr>
+            <tr><th scope="row"><a href="/producto/mica-privacidad-hd/">MICA PRIVACIDAD HD</a></th><td>Privacidad HD · 50 láminas por caja</td><td><a href="/app/#producto/mica-privacidad-hd">Elegir Privacidad HD en App</a></td></tr>
+            <tr><th scope="row"><a href="/producto/mica-privacidad-matte/">MICA PRIVACIDAD MATTE</a></th><td>Privacidad mate · 50 láminas por caja</td><td><a href="/app/#producto/mica-privacidad-matte">Elegir Privacidad Matte en App</a></td></tr>
+          </tbody>
+        </table>
+        <p class="hydrogel-comparison-note">Indica cajas y piezas al cotizar: 2 cajas son 100 láminas. Si ya tienes cortadora, envía su marca y modelo exacto para confirmar compatibilidad antes del pedido. Disponibilidad, precio final y envío se confirman por WhatsApp.</p>
       </div>
     </section>
 
@@ -186,6 +273,9 @@
           <article class="trust-card"><strong>¿HAODE vende micas de hidrogel?</strong><span>Sí. La página publica micas de hidrogel, máquinas y productos relacionados para tiendas y técnicos.</span></article>
           <article class="trust-card"><strong>¿La disponibilidad es inmediata?</strong><span>Debe confirmarse por WhatsApp antes de preparar el pedido.</span></article>
           <article class="trust-card"><strong>¿Qué datos debo enviar?</strong><span>Producto, modelo si aplica, cantidad y ciudad.</span></article>
+          <article class="trust-card"><strong>¿Cuántas láminas incluye cada caja?</strong><span>Cada caja de MICA HD, MICA MATTE, MICA PRIVACIDAD HD y MICA PRIVACIDAD MATTE contiene 50 láminas. Indica cajas y piezas al cotizar; por ejemplo, 2 cajas son 100 láminas.</span></article>
+          <article class="trust-card"><strong>¿Cómo elijo entre las cuatro opciones?</strong><span>Compara HD transparente, acabado mate, privacidad HD y privacidad mate. Revisa la ficha de cada opción y confirma el acabado antes de preparar tu lista.</span></article>
+          <article class="trust-card"><strong>¿Qué debo confirmar si ya tengo una cortadora?</strong><span>Envía la marca y el modelo exacto de tu cortadora, la mica elegida, la cantidad y tu ciudad. La compatibilidad debe confirmarse antes del pedido; no se presupone para todas las máquinas.</span></article>
         </div>
       </div>
     </section>

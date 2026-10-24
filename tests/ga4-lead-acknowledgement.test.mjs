@@ -12,7 +12,7 @@ function harness(responses) {
   const events = [];
   const context = vm.createContext({
     ERP_WEB_ORDER_URL: 'https://example.invalid/orders',
-    webOrderPayload: () => ({customer_name: 'QA', whatsapp: 'not-a-real-phone', items: [{}], client_request_id: 'QA', total: 100}),
+    webOrderPayload: () => ({customer_name: 'QA', whatsapp: 'not-a-real-phone', items: [{}], client_request_id: '8a09165a-4a5a-4ca9-8c31-c4e35c603c2d', total: 100}),
     state: {attribution: {source: 'google'}},
     analyticsAttributionParameters: () => ({attribution_source: 'google'}),
     ga4CartItems: () => [{item_id: 'QA', quantity: 1}],
@@ -35,6 +35,7 @@ test('new acknowledged order produces one lead without customer identifiers', as
   assert.equal(h.events.length, 1);
   assert.equal(h.events[0].name, 'generate_lead');
   assert.equal(h.events[0].parameters.lead_registered, true);
+  assert.equal(h.events[0].parameters.request_id, '8a09165a-4a5a-4ca9-8c31-c4e35c603c2d');
   assert.doesNotMatch(JSON.stringify(h.events), /not-a-real-phone|WEB-QA|customer_name/);
 });
 

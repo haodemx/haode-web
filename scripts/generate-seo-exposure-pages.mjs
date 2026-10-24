@@ -182,7 +182,7 @@ const pages = [
     h1: "Micas e hidrogel para tiendas",
     hero: "Entrada para tiendas que venden proteccion de pantalla. Consulta micas, maquinas y consumibles con modelo, cantidad y ciudad.",
     campaign: "micas_hidrogel_mayoreo",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=micas_hidrogel_mayoreo&utm_content=landing_cta#categoria/Micas",
+    appPath: "/app/#categoria/Micas",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar micas o hidrogel.\nProducto:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad y condiciones?",
     proof: ["Micas", "Hidrogel", "Maquinas"],
     cards: [

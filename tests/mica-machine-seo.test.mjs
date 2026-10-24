@@ -70,6 +70,7 @@ test('sitemap exposes the machine and MICA landing paths with current release da
     ...productPages.map(([, , canonical]) => canonical),
   ];
   for (const url of urls) {
-    assert.match(sitemap, new RegExp(`<loc>${url.replaceAll('.', '\\\.')}</loc>\\s*<lastmod>2026-09-18</lastmod>`));
+    const lastmod = url.endsWith('/micas-hidrogel-mayoreo-mexico/') ? '2026-10-23' : '2026-09-18';
+    assert.match(sitemap, new RegExp(`<loc>${url.replaceAll('.', '\\\.')}</loc>\\s*<lastmod>${lastmod}</lastmod>`));
   }
 });

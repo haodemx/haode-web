@@ -56,6 +56,10 @@ test.describe('HAODE dynamic category conversion UI phase 12', () => {
 });
 
 async function expectCompactMobileTopbar(page, maxHeight) {
+  // The shared header inserts its stylesheet asynchronously. A visible menu
+  // exists before CSS arrives; measure only once that stylesheet is available.
+  await page.waitForFunction(() => Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .some(link => link.href.includes('/zay-full-candidate.css') && link.sheet));
   const layout = await page.evaluate(() => {
     const topbar = document.querySelector('.zay-header')?.getBoundingClientRect();
     const brand = document.querySelector('.zay-brand')?.getBoundingClientRect();
