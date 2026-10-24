@@ -111,3 +111,35 @@ test('four-style comparison and visible FAQ agree with schema on a narrow screen
     expect(item.height, item.text).toBeGreaterThanOrEqual(44);
   }
 });
+
+for (const width of [390, 1280]) {
+  test(`only the four hydrogel consumables show a 50-sheet box on ${width}px cards`, async ({page}) => {
+    await isolate(page, false);
+    let catalogueFailures = 0;
+    await page.route("**/api/public/catalog**", route => {
+      catalogueFailures++;
+      return route.fulfill({status: 503, json: {error: "isolated catalogue unavailable"}});
+    });
+    await page.setViewportSize({width, height: 1000});
+    await page.goto(`${BASE_URL}/app/#producto/mica-hd`);
+    const machine = page.locator('.product-card').filter({has: page.locator('[data-add-product="x200t-cortadora-micas"]')});
+    await expect(machine).toHaveCount(1);
+    await expect(machine.locator('.product-kicker')).toHaveText('Equipo');
+    await expect(machine.locator('.price-lines')).toContainText('Precio menudeo');
+    await expect(machine.locator('.price-lines')).not.toContainText('Paquete 50 pzs');
+    for (const id of ['mica-matte', 'mica-privacidad-hd', 'mica-privacidad-matte']) {
+      const card = page.locator('.product-card').filter({has: page.locator(`[data-add-product="${id}"]`)});
+      await expect(card.locator('.price-lines')).toContainText('Paquete 50 pzs');
+    }
+    await page.goto(`${BASE_URL}/app/#categoria/Micas`);
+    for (const id of ['mica-hd', 'mica-matte', 'mica-privacidad-hd', 'mica-privacidad-matte']) {
+      const card = page.locator('.product-card').filter({has: page.locator(`[data-add-product="${id}"]`)});
+      await expect(card.locator('.price-lines')).toContainText('Paquete 50 pzs');
+    }
+    const listedMachine = page.locator('.product-card').filter({has: page.locator('[data-add-product="x200t-cortadora-micas"]')});
+    await expect(listedMachine.locator('.price-lines')).toContainText('Precio menudeo');
+    await expect(listedMachine.locator('.price-lines')).not.toContainText('Paquete 50 pzs');
+    await expect.poll(() => catalogueFailures).toBeGreaterThan(0);
+    await expect(listedMachine.locator('.price-lines')).not.toContainText('Paquete 50 pzs');
+  });
+}
