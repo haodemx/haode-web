@@ -65,12 +65,12 @@ test('declined consent emits no contact and detail quote has exact canonical pag
  expect(text).toContain('1:1 AMOLED PREMIUM C/M');
  expect(await page.evaluate(()=>Array.from(window.dataLayer||[]).filter(e=>e[0]==='event').length)).toBe(0);
 });
-for(const width of [390,1440]) test(`homepage three acquisition lines remain accessible at ${width}`,async({page})=>{
+for(const width of [390,1440]) test(`homepage three acquisition lines remain accessible at ${width}`,async({page},testInfo)=>{
  await page.setViewportSize({width,height:900});await isolate(page);await page.goto(BASE+'/');
  const section=page.locator('.acquisition-business-lines');
  await expect(section.locator('article')).toHaveCount(3);
  for(const path of ['pantallas-iphone-mayoreo-mexico','pantallas-samsung-mayoreo-mexico','micas-hidrogel-mayoreo-mexico']) await expect(section.locator(`a[href="/${path}/"]`)).toBeVisible();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  expect(await page.locator('img').evaluateAll(images=>images.filter(i=>i.complete&&i.naturalWidth===0).length)).toBe(0);
- await page.screenshot({path:`/Users/mac/Documents/haode/HAODE-AUTOMATION/OUTPUT/WEBSITE/2026-10-26/acquisition-phase1/home-${width}.png`,fullPage:true});
+ await page.screenshot({path:testInfo.outputPath(`home-${width}.png`),fullPage:true});
 });
