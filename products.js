@@ -1509,7 +1509,11 @@ function applyErpPublicCatalog(rows) {
     if (!hasConfirmedCustomerPrices || !product.quality) {
       product.quality = row.quality || product.quality;
     }
-    product.description = row.description_es || product.description;
+    // ERP descriptions can embed superseded price tiers; keep approved copy
+    // together with its confirmed prices and quality.
+    if (!hasConfirmedCustomerPrices) {
+      product.description = row.description_es || product.description;
+    }
     if (!hasConfirmedCustomerPrices) {
       product.priceTable = buildPriceTable(prices);
     }
@@ -3108,7 +3112,8 @@ function enhanceV3ProductDetail(page, product) {
 
 function syncRuntimeProductJsonLd(product) {
   if (!product || !Array.isArray(product.priceTable)) return;
-  const pageUrl = window.location.href.split('?')[0].split('#')[0];
+  const pageUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(product.id))}/`);
+  const description = document.querySelector('[data-product-detail] [data-detail-description]')?.textContent?.trim();
   document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
     let data;
     try {
@@ -3119,6 +3124,7 @@ function syncRuntimeProductJsonLd(product) {
     const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
     const productNode = nodes.find((node) => node?.['@type'] === 'Product');
     if (!productNode) return;
+    if (description) productNode.description = description;
     productNode.offers = product.priceTable
       .filter((row) => row.price && row.price !== 'Consultar')
       .map((row) => ({

@@ -95,3 +95,12 @@ GA4 有 Lead 事件不证明线索有效或实际成交；有效线索、员工�
 任务类型：官网 SEO/获客体验开发与只读分析。实际 Skills：superpowers、guidelines、karpathy-rules、haode-engineering、seo-audit、code-review、testing-qa、haode-browser-qa、haode-product-control-center、copywriting、cro、product-marketing（已有产品事实/定位核查）。devops-deploy 只读取既有推送目标规则；本轮不启用部署。Firecrawl、生成媒体、额外 GEO 工具未使用：没有竞品抽取或新素材任务，也无需增加工具。
 
 建议下一阶段：Owner 确认 XR 首页档位差异；补三款真实型号素材；独立验收精确候选后另走远端 CI/PR 与生产发布授权。上线后再观察完整周期的型号询价和有效线索，不把一期技术交付当作销售增长证明。
+
+
+## 2026-10-26 Schema 本地续查（覆盖本轮状态）
+
+沿用原任务与隔离工作树，基线 b4fff2979ef5fada8bd09fb4e2288fd8036346bb；前两轮原 Master 验收历史保留。本轮使用项目 schema Skill，复现公开 ERP XR 描述中的旧价格仍回流到正文的问题，已保护已确认描述；运行时 Product 描述同步可见正文，Offer URL 使用正式产品路由。价格值、库存、图片与产品源未变。
+
+PASS：Build；14 项定向浏览器测试；全量 385 PASS / 0 FAIL / 0 SKIP / 0 FLAKY；231 个本地构建 URL 200。231 页静态 JSON-LD 含 187 Product、204 BreadcrumbList、78 Organization，逐条已提供报价与源匹配，面包屑与组织标识检查通过。原始 b4 两个失败复现及修复后日志全部保留。未把可选评价、认证或库存属性补成虚假事实。
+
+本地修复提交及当前唯一 Master 最终结论，以冻结证据目录 `HAODE-AUTOMATION/OUTPUT/WEBSITE/2026-10-26/acquisition-phase1/schema-audit/` 下 `SCHEMA_PACKET.json`、`Schema中文验收报告.md` 和 Master 当前轮验收凭据为准；此提交内的复核状态是提交时快照，不以历史验收替代新门。远端 CI、Google 在线验证器及候选生产效果 NOT RUN；独立 lint NOT CONFIGURED。本轮不推送、不建 PR、不合并、不部署。既有首页 XR $155 差异与三款 Samsung 真实素材审批仍未修改。
