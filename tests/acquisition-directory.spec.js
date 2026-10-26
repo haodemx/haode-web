@@ -11,6 +11,7 @@ for(const width of [390,1440]){
   const root=page.locator('[data-acquisition-directory]');
   await root.locator('[data-acquisition-search]').fill('S24 Ultra');
   await expect(root.locator('details:visible')).toHaveCount(1);
+  await expect(root.locator('[data-acquisition-count]')).toHaveText('1 modelo encontrado');
   await expect(root.locator('li:visible')).toHaveCount(3);
   const link=root.locator('[data-product-whatsapp="samsung-oled-s24-ultra"]');
   const href=await link.getAttribute('href'),text=new URL(href).searchParams.get('text');
@@ -24,10 +25,13 @@ for(const width of [390,1440]){
   expect(JSON.stringify(events)).not.toContain('1:1 AMOLED'); // product attributes stay in the quote; no chat payload enters analytics.
   await root.locator('[data-acquisition-search]').fill('not-existing-999');
   await expect(root.locator('[data-acquisition-empty]')).toBeVisible();
+  await expect(root.locator('[data-acquisition-count]')).toHaveText('0 modelos encontrados');
   await root.locator('[data-acquisition-reset]').click();
   await expect(root.locator('details:visible')).toHaveCount(34);
+  await expect(root.locator('[data-acquisition-count]')).toHaveText('34 modelos encontrados');
   await root.locator('[data-acquisition-series]').selectOption('Note');
   await expect(root.locator('details:visible')).toHaveCount(6);
+  await expect(root.locator('[data-acquisition-count]')).toHaveText('6 modelos encontrados');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  });
 }

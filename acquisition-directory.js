@@ -14,7 +14,7 @@
         if (match) count++;
         model.open=match && !!query;
       });
-      root.querySelector('[data-acquisition-count]').textContent=`${count} modelos encontrados`;
+      root.querySelector('[data-acquisition-count]').textContent=`${count} ${count === 1 ? 'modelo encontrado' : 'modelos encontrados'}`;
       root.querySelector('[data-acquisition-empty]').hidden=count!==0;
     };
     root.querySelector('[data-acquisition-filters]').hidden=false;
