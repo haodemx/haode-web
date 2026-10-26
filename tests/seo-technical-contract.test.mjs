@@ -259,6 +259,34 @@ test('public LocalBusiness schema omits unconfirmed opening hours', () => {
   assert.deepEqual(violations, []);
 });
 
+// Approved fixed store: AGENTS.md and docs/agents/GOOGLE_BUSINESS.md.
+// Optional priceRange has no approved business-wide value; SKU prices are not a substitute.
+test('canonical HAODE store entities retain approved street and postal code without inventing priceRange', () => {
+  const street = 'Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro';
+  const violations = [];
+  let businesses = 0;
+  assert.ok(read('AGENTS.md').includes(`${street}, Cuauhtémoc, 06070`));
+  assert.ok(read('docs/agents/GOOGLE_BUSINESS.md').includes(`${street}, Cuauhtémoc, 06070`));
+
+  for (const url of sitemapLocs()) {
+    const relativePath = sitemapHtmlPath(url);
+    for (const business of jsonLdBlocks(read(relativePath))
+      .flatMap(block => block['@graph'] || [block])
+      .filter(node => node['@type'] === 'LocalBusiness')) {
+      businesses += 1;
+      assert.equal(business.name, 'HAODE México', relativePath);
+      assert.equal(business.url, `${SITE_URL}/`, relativePath);
+      if (business.address?.streetAddress !== street || business.address?.postalCode !== '06070') {
+        violations.push(relativePath);
+      }
+      assert.equal(business.address?.addressCountry, 'MX', relativePath);
+      assert.equal(Object.hasOwn(business, 'priceRange'), false, `${relativePath}: unapproved priceRange`);
+    }
+  }
+  assert.ok(businesses > 0, 'must inspect existing LocalBusiness entities');
+  assert.deepEqual(violations, [], `incomplete approved store addresses: ${violations.join(', ')}`);
+});
+
 test('generic product renderer is a noindex fallback without unsupported Product schema', () => {
   const html = read('producto.html');
   const graph = jsonLdBlocks(html).flatMap((block) => block['@graph'] || [block]);

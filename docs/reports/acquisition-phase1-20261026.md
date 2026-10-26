@@ -115,3 +115,24 @@ Owner 本轮明确授权：将标准 XR 首页卡片 Caja155→145、推送既�
 新增6项浏览器回归：390/1440px × 空ERP/旧报价ERP/503，验证真实目录请求发生、标准首页/详情/JSON-LD145、Bolsa135与返回首页不回流。修复前390px旧ERP用例实际FAIL155≠145，修复后20项定向全PASS；原只读价格检查3PASS。当前Build PASS，全量391PASS/0FAIL/0SKIP/0FLAKY，231页Schema仍为187Product/204BreadcrumbList/78Organization且无错误。所有日志保留于本地xr-pr-delivery证据目录。
 
 三款Samsung主图仍待真实SKU/等级/权利确认，0替换；不生成假实物。Google在线验证NOT RUN。原始e585独立验收证据、风险与回滚边界仍保留；当前提交/PR链接与远端真实CI结果以本轮后续冻结交付报告为准，此处为提交前的本地验证快照，不把CI启动当PASS。
+
+
+## 2026-10-26 PR #110 非严重 Schema 提示事实核对
+
+本轮任务类型：结构化数据事实核验及最小修复。基线为 d8d88837b8c8648e2808f08f02c09a27eddf6251；沿用原隔离工作树和 Draft PR #110，原 Master 的 PASS/CLOSED 不重开，本轮结果不冒称新的 Master 验收。
+
+PASS：已批准的固定门店地址来自本工作树 AGENTS.md「固定门店地址 / Google Business Agent」及 docs/agents/GOOGLE_BUSINESS.md「固定门店地址」：Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro, Cuauhtémoc, 06070, Ciudad de México, México。231 个 canonical 页有 75 个现有 LocalBusiness；3 个已完整，72 个缺 streetAddress / postalCode。本次仅为后 72 个补这两个已批准字段，原 locality / region / country 保留。其中 1 个旧节点无 @id，通过同名 HAODE México、官网根 URL 与既有 CDMX 门店照片确认；未新建商家或新增 @id。
+
+NOT CONFIGURED / 待确认：未发现经批准的门店整体 priceRange；既有 geo-seo 和首页技术合同也要求缺省。不能把个别 SKU 的 $145、价格最小/最大值或示例 $$ 当作门店整体价位。保留 Google 可选提示。XR 本地商家另有 telephone 非严重提示；当前公开销售 WhatsApp 不在本次核对中扩展为新门店语音服务承诺，保持原状。Product 的 review、aggregateRating、availability，以及 Merchant Listings 的库存/配送/退货等可选字段，缺乏对应批准数据时同样不补造。
+
+独立于修改过程的 Git 语义复核 PASS：72 页仅新增地址两字段，其他 JSON-LD 完全一致；正文与非 Schema HTML 不变，Product、Offer、BreadcrumbList、Organization 未变；首页、商品 JS、产品源、App JSON、sitemap、Feed 均与基线逐字节相同。Feed 审计包含商品 HTML 全文哈希，因地址变更同步更新其 structured_data 指纹；未修改任何商品或私有数据。
+
+当前本地验证 PASS：新地址合同先真实 FAIL（72 页不完整），修复后技术合同 17 PASS / 0 FAIL / 0 SKIP；Build PASS；使用原 4188 构建服务全量浏览器 391 PASS / 0 FAIL / 0 SKIP / 0 FLAKY；231 页原构建与源逐字节一致、HTTP 200、canonical 匹配、JSON-LD 可解析，75 个门店实体地址均完整。首次 Build 因全文审计指纹过期失败，更新指纹后复测通过；首次浏览器运行遗漏 BASE_URL 导致默认端口连接失败，已中止并以正确原服务重跑，未作为通过证据。
+
+在线候选完整 XR HTML：Google Rich Results 检测 6 项有效内容，原组织 streetAddress / postalCode 缺失提示消除；单独 LocalBusiness 识别有效，仍有 priceRange / telephone 两项可选提示。Product 仍有效，Google 实际读取 Caja 145 MXN，6 项非严重提示为 review、aggregateRating、4 档 availability。Schema.org 为 6 项数据、0 错误 / 0 警告。Google 结果：https://search.google.com/test/rich-results/result?id=v6Lgf9vXwRqJ3CWKaPNcnw 。这些是完整候选代码验证，不是生产部署或 Google 搜索展示承诺。首页源码未变，其前轮完整 Google PASS 可按同文件哈希复用，未重复提交相同输入。
+
+原始证据位于 HAODE-AUTOMATION/OUTPUT/WEBSITE/2026-10-26/acquisition-phase1/schema-remaining-facts/：ADDRESS_CHANGE_PROOF.json、SELF_REVIEW.json、LOCAL_231_SCHEMA_HTTP.json、address-contract-before.log、seo-technical-after.log、build.log、build-retest.log、browser.log、browser-retest.log 及 Google / Schema.org 原始截图与文本。此处为提交前本地验证快照，后续提交 SHA、推送和精确 HEAD 远端 CI 的最终结论以冻结交付回执及 PR 描述为准，不能用旧 d8d88837 CI 替代。
+
+Samsung 三款真实图片继续待补，0 替换；Google 可选未知字段待真实资料。生产效果 NOT RUN，本轮不合并、不部署、不写 ERP。若回滚，仅 revert 本轮地址补齐提交并重新 Build / CI，不修改受保护业务数据。
+
+实际 Skills：schema、superpowers、guidelines、karpathy-rules、haode-engineering、code-review、testing-qa，沿用既有产品事实与价格保护规则。未使用 Firecrawl / 生成媒体：无竞品抽取或图片制作；devops-deploy 未执行部署：本轮明确禁止。无新增依赖、无重复验收任务。
