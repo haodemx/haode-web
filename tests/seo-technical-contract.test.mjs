@@ -287,6 +287,33 @@ test('canonical HAODE store entities retain approved street and postal code with
   assert.deepEqual(violations, [], `incomplete approved store addresses: ${violations.join(', ')}`);
 });
 
+// Accepted primary contact: merged PR #33 / 1ad60523, including tel: and LocalBusiness.
+test('canonical store telephone matches the accepted primary sales contact and visible tel links', () => {
+  const phone = '+52 33 2668 4296';
+  const homepage = read('index.html');
+  assert.ok(homepage.includes('href="tel:+523326684296"'));
+  assert.ok(homepage.includes('https://wa.me/523326684296'));
+  assert.ok(read('contacto/index.html').includes('href="tel:3326684296"'));
+  const homeBusiness = jsonLdBlocks(homepage).flatMap(block => block['@graph'] || [block])
+    .find(node => node['@type'] === 'LocalBusiness');
+  assert.equal(homeBusiness.telephone, phone);
+  const violations = [];
+  let businesses = 0;
+  for (const url of sitemapLocs()) {
+    const relativePath = sitemapHtmlPath(url);
+    for (const business of jsonLdBlocks(read(relativePath)).flatMap(block => block['@graph'] || [block])
+      .filter(node => node['@type'] === 'LocalBusiness')) {
+      businesses += 1;
+      assert.equal(business.name, 'HAODE México', relativePath);
+      assert.equal(business.url, `${SITE_URL}/`, relativePath);
+      if (business.telephone !== phone) violations.push(relativePath);
+      assert.equal(Object.hasOwn(business, 'priceRange'), false, relativePath);
+    }
+  }
+  assert.ok(businesses > 0);
+  assert.deepEqual(violations, [], `missing or inconsistent accepted telephone: ${violations.join(', ')}`);
+});
+
 test('generic product renderer is a noindex fallback without unsupported Product schema', () => {
   const html = read('producto.html');
   const graph = jsonLdBlocks(html).flatMap((block) => block['@graph'] || [block]);

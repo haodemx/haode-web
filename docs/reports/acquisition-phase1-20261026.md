@@ -136,3 +136,26 @@ NOT CONFIGURED / 待确认：未发现经批准的门店整体 priceRange；既�
 Samsung 三款真实图片继续待补，0 替换；Google 可选未知字段待真实资料。生产效果 NOT RUN，本轮不合并、不部署、不写 ERP。若回滚，仅 revert 本轮地址补齐提交并重新 Build / CI，不修改受保护业务数据。
 
 实际 Skills：schema、superpowers、guidelines、karpathy-rules、haode-engineering、code-review、testing-qa，沿用既有产品事实与价格保护规则。未使用 Firecrawl / 生成媒体：无竞品抽取或图片制作；devops-deploy 未执行部署：本轮明确禁止。无新增依赖、无重复验收任务。
+
+
+## 2026-10-26 PR #110 telephone 提示续查（覆盖前轮电话待确认状态）
+
+任务类型：Schema 事实核验及最小修复；基线 cef9c021a393924b3ec6696b2d23123b5bfe1674，沿用原工作树、原开发分支、Draft PR110及原Master CLOSED，不重开或创建重复验收。
+
+电话依据 PASS：已合并PR33（https://github.com/haodemx/haode-web/pull/33），合并提交1ad60523414441d73895483e92aa4ca0753a53a0，为当前候选祖先；明确将+52 33 2668 4296设为主销售WhatsApp。同次提交也明确更新Contacto的tel:3326684296、首页tel:+523326684296、Organization销售ContactPoint及LocalBusiness.telephone。现有tests/whatsapp-primary-sales.test.mjs要求同一主销售号码的Tel文本和WhatsApp链接。当前生产联系页只读核验亦同时提供此tel链接与门店telephone。结论依据是已接受的电话/门店字段映射及其回归合同，不是仅凭旧网页或从WhatsApp猜测可语音接听。
+
+Google现行LocalBusiness说明将telephone定义为客户主要联系用的业务电话号码，需包含国家及区号（https://developers.google.com/search/docs/appearance/structured-data/local-business）；Schema.org电话字段为Text（https://schema.org/telephone）。本次沿用既有批准号码，不新增号码、座机、门店位置、接听时间或保证接通承诺。前轮因未完成电话来源追溯而暂留提示，本轮已找到并核对更完整证据。
+
+最小修复 PASS：231 canonical页共75个LocalBusiness，11个已有正确telephone；仅为64个缺失节点加入同一已批准值。新增合同先真实FAIL64页缺电话，修复后技术合同18 PASS / 0 FAIL / 0 SKIP。第二次Git语义自审确认64页除LocalBusiness.telephone外全部JSON-LD不变、正文逐字节不变；首页、联系页、products.js、商品源、App、sitemap、Feed字节未变。只同步更新既有商品HTML全文审计的structured_data哈希，不修改业务数据。
+
+本地本轮重新执行 PASS：Build；全量浏览器391 PASS / 0 FAIL / 0 SKIP / 0 FLAKY（原4188构建服务，含XR145/Bolsa135及ERP刷新回归）；231页构建与源一致、HTTP200、canonical和JSON-LD检查，75个门店电话全部匹配。未拨号、发送WhatsApp或写ERP真实数据。
+
+在线完整XR候选代码 PASS：https://search.google.com/test/rich-results/result?id=ShT5PXHuusP4owOtGNT0yg ，6项有效内容；Google明确读取telephone +52 33 2668 4296，telephone提示已消除，本地商家仅余priceRange 1项非严重提示。Schema.org同输入6项数据、0错误/0警告。priceRange仍NOT CONFIGURED / 待确认，没有获批门店整体价位，不从SKU价格推导。未知库存、评价、认证、配送/退货字段不补造。原三款Samsung素材待补，0替换。
+
+线上与候选分开：本轮生产联系页已含该联系电话，而生产XR仍缺telephone，本轮修正尚在候选。Google代码验证不是生产部署，也不保证索引、排名或富结果实际展示；231页逐页为本地验证，不冒称全部在线测试。
+
+本提交为本地检查快照；最终SHA、正常fast-forward推送、同一PR110更新和真实远端CI完成结果以schema-telephone-facts证据目录最终回执及PR描述为准，不复用cef9c021 CI代替新提交。报告/原始失败、18项合同、Build/391浏览器、231页语义与HTTP、电话批准证据、在线完整输入及截图位于HAODE-AUTOMATION/OUTPUT/WEBSITE/2026-10-26/acquisition-phase1/schema-telephone-facts/。
+
+回滚：普通revert本轮电话补齐提交后Build/CI，不撤销原地址或XR145价格保护。未合并、未部署，不触碰ERP生产价格/成本/库存。原Master验收历史和门槛不变，不把本轮自审称作新的Master验收。
+
+实际Skills：schema、superpowers、guidelines、karpathy-rules、haode-engineering、code-review、testing-qa、haode-browser-qa。未用Firecrawl/媒体生成：无抽取或制作任务；未执行devops-deploy：明确禁止部署（仅遵循原Git目标核对规则）。
