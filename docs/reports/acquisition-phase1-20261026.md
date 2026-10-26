@@ -104,3 +104,14 @@ GA4 有 Lead 事件不证明线索有效或实际成交；有效线索、员工�
 PASS：Build；14 项定向浏览器测试；全量 385 PASS / 0 FAIL / 0 SKIP / 0 FLAKY；231 个本地构建 URL 200。231 页静态 JSON-LD 含 187 Product、204 BreadcrumbList、78 Organization，逐条已提供报价与源匹配，面包屑与组织标识检查通过。原始 b4 两个失败复现及修复后日志全部保留。未把可选评价、认证或库存属性补成虚假事实。
 
 本地修复提交及当前唯一 Master 最终结论，以冻结证据目录 `HAODE-AUTOMATION/OUTPUT/WEBSITE/2026-10-26/acquisition-phase1/schema-audit/` 下 `SCHEMA_PACKET.json`、`Schema中文验收报告.md` 和 Master 当前轮验收凭据为准；此提交内的复核状态是提交时快照，不以历史验收替代新门。远端 CI、Google 在线验证器及候选生产效果 NOT RUN；独立 lint NOT CONFIGURED。本轮不推送、不建 PR、不合并、不部署。既有首页 XR $155 差异与三款 Samsung 真实素材审批仍未修改。
+
+
+## 2026-10-26 已授权 XR 首页修正与开发分支 PR 交付
+
+Owner 本轮明确授权：将标准 XR 首页卡片 Caja155→145、推送既有开发分支、创建 Draft PR 并运行真实远端 CI；不授权合并、部署或 ERP 生产价格/成本/库存写入。原 Master 对 e5859859 的 PASS/CLOSED 保留，不重开或创建重复验收任务；该历史验收不冒称覆盖新的价格展示提交。
+
+准确对应：网站 iphone-incell-xr，ERP公开SKU IP-XR-INCELL-FHD；已确认工作簿2026-09-24、03 IPHONE INCELL第12行，质量INCELL FHD C/IC、Caja145。仅首页标准卡片一行改为145，Bolsa独立产品仍Caja135，原产品源/App/图片/其他配置价格不变。此前报告中的首页价差待授权描述为历史快照，本轮已获授权并修正候选；生产页面尚未部署。
+
+新增6项浏览器回归：390/1440px × 空ERP/旧报价ERP/503，验证真实目录请求发生、标准首页/详情/JSON-LD145、Bolsa135与返回首页不回流。修复前390px旧ERP用例实际FAIL155≠145，修复后20项定向全PASS；原只读价格检查3PASS。当前Build PASS，全量391PASS/0FAIL/0SKIP/0FLAKY，231页Schema仍为187Product/204BreadcrumbList/78Organization且无错误。所有日志保留于本地xr-pr-delivery证据目录。
+
+三款Samsung主图仍待真实SKU/等级/权利确认，0替换；不生成假实物。Google在线验证NOT RUN。原始e585独立验收证据、风险与回滚边界仍保留；当前提交/PR链接与远端真实CI结果以本轮后续冻结交付报告为准，此处为提交前的本地验证快照，不把CI启动当PASS。
