@@ -1460,7 +1460,8 @@ function hasAuthoritativeCustomerPrices(product) {
   return source.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
     || source.includes('Lista_de_Precios_HAODE_20260721.pdf')
     || source.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx')
-    || source.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx');
+    || source.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx')
+    || source.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx');
 }
 
 function applyErpPublicCatalog(rows) {
@@ -1500,12 +1501,16 @@ function applyErpPublicCatalog(rows) {
     const prices = erpTierPrices(row);
     usedLocalIndexes.add(existingIndex);
     const product = localProducts[existingIndex];
+    const hasConfirmedCustomerPrices = hasAuthoritativeCustomerPrices(product);
     product.sku = row.sku || product.sku;
     product.name = row.public_name_es || product.name;
     product.model = row.model || product.model;
-    product.quality = row.quality || product.quality;
+    // The confirmed catalogue quality stays authoritative when ERP refreshes stock.
+    if (!hasConfirmedCustomerPrices || !product.quality) {
+      product.quality = row.quality || product.quality;
+    }
     product.description = row.description_es || product.description;
-    if (!hasAuthoritativeCustomerPrices(product)) {
+    if (!hasConfirmedCustomerPrices) {
       product.priceTable = buildPriceTable(prices);
     }
     product.lowestPriceText = buildProductPriceText(product.id, product.priceTable);
