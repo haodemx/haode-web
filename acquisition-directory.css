@@ -1,0 +1,22 @@
+.acquisition-directory [hidden]{display:none!important}
+.acquisition-directory .section-shell{display:block}
+.acquisition-filters{display:flex;align-items:end;gap:16px;flex-wrap:wrap;margin:24px 0}
+.acquisition-filters label{display:grid;gap:8px;flex:1 1 220px;font-weight:600}
+.acquisition-filters input,.acquisition-filters select,.acquisition-filters button{font:inherit;min-height:44px;border:1px solid #c8c8c8;border-radius:8px;background:#fff;color:#202020;padding:10px;max-width:100%;min-width:0}
+.acquisition-models{display:grid;gap:12px}
+.acquisition-models details{border:1px solid #ddd;border-radius:12px;background:#fff;padding:16px;min-width:0}
+.acquisition-models summary{cursor:pointer;min-height:44px;font-size:1.1rem;font-weight:700;overflow-wrap:anywhere}
+.acquisition-models summary span{display:inline-block;font-size:.85rem;font-weight:400;margin-left:10px}
+.acquisition-models ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:16px}
+.acquisition-models li{display:flex;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid #eee;padding-top:16px;overflow-wrap:anywhere}
+.acquisition-models li strong,.acquisition-models li span{flex-basis:100%}
+.acquisition-models a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid #ddd;border-radius:8px;color:#252525}
+.acquisition-models a[data-product-whatsapp]{background:#fff2e9;border-color:#e78a47}
+.acquisition-directory :focus-visible{outline:3px solid #b64b00;outline-offset:3px}
+
+.acquisition-business-lines{padding-top:28px;padding-bottom:28px}
+.acquisition-business-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.acquisition-business-grid article{border-top:2px solid #eb7b24;padding:16px 0;min-width:0}
+.acquisition-business-grid h3{font-size:1.2rem;line-height:1.4;margin:0 0 10px}
+.acquisition-business-grid a{display:block;min-height:44px;padding:10px 0;color:#934000;text-decoration:underline}
+@media(max-width:700px){.acquisition-business-grid{grid-template-columns:1fr;gap:8px}}

@@ -13,6 +13,8 @@
     "ai-smart-glasses-w630.html",
     "ad-landing.css",
     "analytics.js",
+    "acquisition-directory.js",
+    "acquisition-directory.css",
     "app/app.css",
     "app/app.js",
     "app/firebase-public-config.js",

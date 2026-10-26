@@ -3017,6 +3017,7 @@ function buildV3DetailCotizacionText(product, quantity) {
     `Producto: ${product.name || 'Producto HAODE'}`,
     `Modelo/SKU: ${product.sku || product.id || 'N/A'}`,
     `Calidad / versión: ${product.quality || 'Por confirmar'}`,
+    `Página del producto: https://haode.com.mx/producto/${product.id}/`,
     `Cantidad: ${quantity}`,
     'Ciudad:',
     `Origen: ${trafficReference()}.`,

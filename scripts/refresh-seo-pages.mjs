@@ -1,3 +1,4 @@
+import { applyDirectories } from './acquisition-directory.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
@@ -511,6 +512,7 @@ const changes = SCREENS_ONLY ? scopedChanges : mergeSchemaTrustChanges(scopedCha
 
 if (APPLY) {
   changes.forEach(({ file, updated }) => fs.writeFileSync(file, updated, 'utf8'));
+  applyDirectories();
   console.log(`SEO refresh applied to ${changes.length} files.`);
 } else if (changes.length) {
   console.error(`SEO refresh required for ${changes.length} files. Run with --apply.`);
