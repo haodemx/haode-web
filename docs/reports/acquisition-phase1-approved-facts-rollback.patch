@@ -1,0 +1,1312 @@
+--- a/ai-mouse.html
++++ b/ai-mouse.html
+@@ -44,6 +44,8 @@
+         "telephone": "+52 33 2668 4296",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "CDMX",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/ai-productos.html
++++ b/ai-productos.html
+@@ -37,12 +37,15 @@
+       },
+       {
+         "@type": "LocalBusiness",
++        "telephone": "+52 33 2668 4296",
+         "@id": "https://haode.com.mx/#localbusiness",
+         "name": "HAODE México",
+         "url": "https://haode.com.mx/",
+         "image": "https://haode.com.mx/assets/logo/logo.png",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "CDMX",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/ai-smart-glasses-aimb-g3.html
++++ b/ai-smart-glasses-aimb-g3.html
+@@ -43,6 +43,8 @@
+       "telephone": "+52 33 2668 4296",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/ai-smart-glasses-aimb-g5.html
++++ b/ai-smart-glasses-aimb-g5.html
+@@ -43,6 +43,8 @@
+       "telephone": "+52 33 2668 4296",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/ai-smart-glasses-s1.html
++++ b/ai-smart-glasses-s1.html
+@@ -44,6 +44,8 @@
+         "telephone": "+52 33 2668 4296",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "CDMX",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/ai-smart-glasses-w630.html
++++ b/ai-smart-glasses-w630.html
+@@ -43,6 +43,8 @@
+       "telephone": "+52 33 2668 4296",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/garantia/index.html
++++ b/garantia/index.html
+@@ -49,6 +49,8 @@
+         "telephone": "+52 33 2668 4296",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "CDMX",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/index.html
++++ b/index.html
+@@ -433,7 +433,7 @@
+           </a>
+           <a class="c-product-card" href="/producto/iphone-incell-xr/">
+             <span class="c-product-media"><img src="/assets/images/homepage-c/phase3/featured/iphone-xr-incell.webp" alt="Pantalla iPhone XR INCELL frente y reverso" width="520" height="390" loading="lazy" decoding="async" data-asset-id="iphone-incell-xr" /></span>
+-            <strong>Pantalla iPhone XR<br />INCELL estándar</strong><small>Caja · confirmar condiciones: $155 MXN</small>
++            <strong>Pantalla iPhone XR<br />INCELL estándar</strong><small>Caja · confirmar condiciones: $145 MXN</small>
+           </a>
+           <a class="c-product-card" href="/producto/samsung-incell-s24/">
+             <span class="c-product-media"><img src="/assets/images/homepage-c/phase3/featured/samsung-s24-incell.webp" alt="Pantalla Samsung S24 INCELL con marco" width="520" height="390" loading="lazy" decoding="async" data-asset-id="samsung-incell-s24" /></span>
+--- a/producto/iphone-incell-11-bolsa-protectora/index.html
++++ b/producto/iphone-incell-11-bolsa-protectora/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/11-bolsa-protectora/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-11pro/index.html
++++ b/producto/iphone-incell-11pro/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/11pro/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-11promax/index.html
++++ b/producto/iphone-incell-11promax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/11promax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-12-12pro/index.html
++++ b/producto/iphone-incell-12-12pro/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/12-12pro/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-12mini/index.html
++++ b/producto/iphone-incell-12mini/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/12mini/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-12promax/index.html
++++ b/producto/iphone-incell-12promax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/12promax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-13/index.html
++++ b/producto/iphone-incell-13/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/13/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-13mini/index.html
++++ b/producto/iphone-incell-13mini/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/13mini/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-13pro/index.html
++++ b/producto/iphone-incell-13pro/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/13pro/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-13promax/index.html
++++ b/producto/iphone-incell-13promax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/13promax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-14/index.html
++++ b/producto/iphone-incell-14/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/14/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-14plus/index.html
++++ b/producto/iphone-incell-14plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/14plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-14pro/index.html
++++ b/producto/iphone-incell-14pro/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/14pro/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-14promax/index.html
++++ b/producto/iphone-incell-14promax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/14promax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-15/index.html
++++ b/producto/iphone-incell-15/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/15/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-15plus/index.html
++++ b/producto/iphone-incell-15plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/15plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-15pro/index.html
++++ b/producto/iphone-incell-15pro/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/15pro/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-15promax/index.html
++++ b/producto/iphone-incell-15promax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/15promax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-16/index.html
++++ b/producto/iphone-incell-16/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/16/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-16e/index.html
++++ b/producto/iphone-incell-16e/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/16e/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-16plus/index.html
++++ b/producto/iphone-incell-16plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/16plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-16pro/index.html
++++ b/producto/iphone-incell-16pro/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/16pro/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-16promax/index.html
++++ b/producto/iphone-incell-16promax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/16promax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-17/index.html
++++ b/producto/iphone-incell-17/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/17/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-17air/index.html
++++ b/producto/iphone-incell-17air/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/17air/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-17pro/index.html
++++ b/producto/iphone-incell-17pro/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/17pro/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-17promax/index.html
++++ b/producto/iphone-incell-17promax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/17promax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-x/index.html
++++ b/producto/iphone-incell-x/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/x/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-xr-bolsa-protectora/index.html
++++ b/producto/iphone-incell-xr-bolsa-protectora/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/xr-bolsa-protectora/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-xr/index.html
++++ b/producto/iphone-incell-xr/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/xr/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-xs/index.html
++++ b/producto/iphone-incell-xs/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/xs/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-incell-xsmax/index.html
++++ b/producto/iphone-incell-xsmax/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-incell/xsmax/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/iphone-oled-16promax-hard/index.html
++++ b/producto/iphone-oled-16promax-hard/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/iphone-oled/16promax-hard/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/lk-030-mini-camara-retro-digital/index.html
++++ b/producto/lk-030-mini-camara-retro-digital/index.html
+@@ -39,6 +39,8 @@
+         "telephone": "+52 33 2668 4296",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "CDMX",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/producto/lk-032-camara-inteligente-con-gimbal/index.html
++++ b/producto/lk-032-camara-inteligente-con-gimbal/index.html
+@@ -39,6 +39,8 @@
+         "telephone": "+52 33 2668 4296",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "CDMX",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/producto/samsung-incell-note-10-plus/index.html
++++ b/producto/samsung-incell-note-10-plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/note-10-plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-note-10/index.html
++++ b/producto/samsung-incell-note-10/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/note-10/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-note-20-ultra/index.html
++++ b/producto/samsung-incell-note-20-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/note-20-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-note-8/index.html
++++ b/producto/samsung-incell-note-8/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/note-8/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-note-9/index.html
++++ b/producto/samsung-incell-note-9/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/note-9/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s10-plus/index.html
++++ b/producto/samsung-incell-s10-plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s10-plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s10/index.html
++++ b/producto/samsung-incell-s10/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s10/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s20-fe/index.html
++++ b/producto/samsung-incell-s20-fe/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s20-fe/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s20-plus/index.html
++++ b/producto/samsung-incell-s20-plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s20-plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s20-ultra/index.html
++++ b/producto/samsung-incell-s20-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s20-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s21-ultra/index.html
++++ b/producto/samsung-incell-s21-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s21-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s21/index.html
++++ b/producto/samsung-incell-s21/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s21/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s22-ultra/index.html
++++ b/producto/samsung-incell-s22-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s22-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s23-ultra/index.html
++++ b/producto/samsung-incell-s23-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s23-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s24-ultra/index.html
++++ b/producto/samsung-incell-s24-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s24-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s8-plus/index.html
++++ b/producto/samsung-incell-s8-plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s8-plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s8/index.html
++++ b/producto/samsung-incell-s8/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s8/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s9-plus/index.html
++++ b/producto/samsung-incell-s9-plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s9-plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-incell-s9/index.html
++++ b/producto/samsung-incell-s9/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-incell/s9/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-note-10/index.html
++++ b/producto/samsung-oled-note-10/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/note-10/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-note-20-ultra/index.html
++++ b/producto/samsung-oled-note-20-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/note-20-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-note-20/index.html
++++ b/producto/samsung-oled-note-20/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/note-20/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-s20-plus/index.html
++++ b/producto/samsung-oled-s20-plus/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/s20-plus/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-s21-ultra/index.html
++++ b/producto/samsung-oled-s21-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/s21-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-s22-ultra/index.html
++++ b/producto/samsung-oled-s22-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/s22-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-s23-ultra/index.html
++++ b/producto/samsung-oled-s23-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/s23-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-s24-ultra/index.html
++++ b/producto/samsung-oled-s24-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/s24-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/producto/samsung-oled-s25-ultra/index.html
++++ b/producto/samsung-oled-s25-ultra/index.html
+@@ -30,12 +30,15 @@
+     },
+     {
+       "@type": "LocalBusiness",
++      "telephone": "+52 33 2668 4296",
+       "@id": "https://haode.com.mx/#localbusiness",
+       "name": "HAODE México",
+       "url": "https://haode.com.mx/",
+       "image": "https://haode.com.mx/assets/products/samsung-oled/s25-ultra/main.jpg",
+       "address": {
+         "@type": "PostalAddress",
++        "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++        "postalCode": "06070",
+         "addressLocality": "CDMX",
+         "addressRegion": "CDMX",
+         "addressCountry": "MX"
+--- a/productos/index.html
++++ b/productos/index.html
+@@ -43,12 +43,15 @@
+       },
+       {
+         "@type": "LocalBusiness",
++        "telephone": "+52 33 2668 4296",
+         "@id": "https://haode.com.mx/#localbusiness",
+         "name": "HAODE México",
+         "url": "https://haode.com.mx/",
+         "image": "https://haode.com.mx/assets/logo/logo.png",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "CDMX",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/refacciones-celulares-mayoreo-mexico/index.html
++++ b/refacciones-celulares-mayoreo-mexico/index.html
+@@ -28,11 +28,14 @@
+       },
+       {
+         "@type": "LocalBusiness",
++        "telephone": "+52 33 2668 4296",
+         "name": "HAODE México",
+         "url": "https://haode.com.mx/",
+         "image": "https://haode.com.mx/assets/images/store-gallery/store-cdmx-01.jpg",
+         "address": {
+           "@type": "PostalAddress",
++          "streetAddress": "Eje Central Lázaro Cárdenas 87, Piso 2, Local 225, Colonia Centro",
++          "postalCode": "06070",
+           "addressLocality": "Ciudad de México",
+           "addressRegion": "CDMX",
+           "addressCountry": "MX"
+--- a/products.js
++++ b/products.js
+@@ -1460,7 +1460,8 @@
+   return source.includes('Lista_de_Precios_HAODE_2026_Clientesxlsx.xlsx')
+     || source.includes('Lista_de_Precios_HAODE_20260721.pdf')
+     || source.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx')
+-    || source.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx');
++    || source.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx')
++    || source.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx');
+ }
+
+ function applyErpPublicCatalog(rows) {
+@@ -1500,12 +1501,20 @@
+     const prices = erpTierPrices(row);
+     usedLocalIndexes.add(existingIndex);
+     const product = localProducts[existingIndex];
++    const hasConfirmedCustomerPrices = hasAuthoritativeCustomerPrices(product);
+     product.sku = row.sku || product.sku;
+     product.name = row.public_name_es || product.name;
+     product.model = row.model || product.model;
+-    product.quality = row.quality || product.quality;
+-    product.description = row.description_es || product.description;
+-    if (!hasAuthoritativeCustomerPrices(product)) {
++    // The confirmed catalogue quality stays authoritative when ERP refreshes stock.
++    if (!hasConfirmedCustomerPrices || !product.quality) {
++      product.quality = row.quality || product.quality;
++    }
++    // ERP descriptions can embed superseded price tiers; keep approved copy
++    // together with its confirmed prices and quality.
++    if (!hasConfirmedCustomerPrices) {
++      product.description = row.description_es || product.description;
++    }
++    if (!hasConfirmedCustomerPrices) {
+       product.priceTable = buildPriceTable(prices);
+     }
+     product.lowestPriceText = buildProductPriceText(product.id, product.priceTable);
+@@ -3017,6 +3026,7 @@
+     `Producto: ${product.name || 'Producto HAODE'}`,
+     `Modelo/SKU: ${product.sku || product.id || 'N/A'}`,
+     `Calidad / versión: ${product.quality || 'Por confirmar'}`,
++    `Página del producto: https://haode.com.mx/producto/${product.id}/`,
+     `Cantidad: ${quantity}`,
+     'Ciudad:',
+     `Origen: ${trafficReference()}.`,
+@@ -3102,7 +3112,8 @@
+
+ function syncRuntimeProductJsonLd(product) {
+   if (!product || !Array.isArray(product.priceTable)) return;
+-  const pageUrl = window.location.href.split('?')[0].split('#')[0];
++  const pageUrl = buildAbsoluteSiteUrl(`producto/${encodeURIComponent(getPublicProductRouteSlug(product.id))}/`);
++  const description = document.querySelector('[data-product-detail] [data-detail-description]')?.textContent?.trim();
+   document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+     let data;
+     try {
+@@ -3113,6 +3124,7 @@
+     const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
+     const productNode = nodes.find((node) => node?.['@type'] === 'Product');
+     if (!productNode) return;
++    if (description) productNode.description = description;
+     productNode.offers = product.priceTable
+       .filter((row) => row.price && row.price !== 'Consultar')
+       .map((row) => ({
