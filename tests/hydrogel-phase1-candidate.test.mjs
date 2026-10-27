@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
+import { refreshProductPage } from '../scripts/refresh-seo-pages.mjs';
+import { readCatalog } from '../scripts/acquisition-directory.mjs';
 
 const read = (path) => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 
@@ -95,4 +97,17 @@ test('all five owner-approved assets pass the final website handoff gate', () =>
   const hdProduct = products.match(/"id": "mica-hd",[\s\S]*?"videos": \[\]/)?.[0] ?? '';
   assert.match(hdProduct, /assets\/products\/micas\/hd\/main\.png/);
   assert.doesNotMatch(hdProduct, /gallery-01\.png/);
+});
+
+
+test('automatic SEO refresh preserves the reviewed hydrogel and machine pages verbatim', () => {
+  const products = readCatalog();
+  for (const [id] of expected) {
+    const original = read(`producto/${id}/index.html`);
+    const product = products.find(product => product.id === id);
+    assert.ok(product, id);
+    const proposed = refreshProductPage(product, products);
+    assert.equal(proposed?.updated ?? original, original,
+      `${id}: generic refresh must preserve reviewed title, equipment/consumable breadcrumb and copy`);
+  }
 });

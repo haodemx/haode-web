@@ -1,3 +1,4 @@
+const { mediaSafeProduct } = require('./product-media-policy.cjs');
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -620,7 +621,7 @@ function buildProductDefinition(config, slug, workbookRows) {
   const prices = matchedPriceRow ? makePriceTable(matchedPriceRow.numbers) : makePriceTable([]);
   const priceSource = matchedPriceRow ? matchedPriceRow.rowText : 'Consultar';
 
-  return {
+  return mediaSafeProduct({
     id: productId,
     category: config.category,
     brand: config.brand,
@@ -633,7 +634,7 @@ function buildProductDefinition(config, slug, workbookRows) {
     priceSource,
     whatsappText: `Hola HAODE, quiero cotizar: Pantalla para ${model}`,
     description: `Pantalla para ${model} disponible en HAODE México para técnicos, talleres de reparación y distribuidores que compran en CDMX o desde otros estados de México. Esta refacción para celular se presenta para venta de mayoreo y menudeo, con atención profesional por WhatsApp, control comercial de calidad y envíos a todo México. Antes de confirmar el pedido, consulta disponibilidad actual, modelo exacto y cantidad requerida para evitar errores de compatibilidad y preparar una cotización clara sin prometer funciones no verificadas.`,
-  };
+  }, false);
 }
 
 function buildCatalog() {

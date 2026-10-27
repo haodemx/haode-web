@@ -1,3 +1,4 @@
+const { mediaSafeProduct, mediaSafeHtml } = require('./product-media-policy.cjs');
 const fs = require('fs');
 const path = require('path');
 
@@ -261,7 +262,7 @@ function makeWebsiteProduct(id, row, rows, source, existing = null, appProduct =
   const appImage = String(appProduct?.imagen || '').replace(/^\/+/, '');
   const existingImages = Array.isArray(existing?.images) ? existing.images.filter(Boolean) : [];
   const image = existingImages[0] || appImage || PLACEHOLDER_IMAGE;
-  return {
+  return mediaSafeProduct({
     ...(existing || {}),
     id,
     category: category.website,
@@ -279,14 +280,14 @@ function makeWebsiteProduct(id, row, rows, source, existing = null, appProduct =
     internalId: existing?.internalId === true || !existing,
     officialSkuPending: existing?.officialSkuPending === true || !existing,
     sourceRows: rows.map((item) => item.sourceRow),
-  };
+  }, false);
 }
 
 function makeAppProduct(id, row, rows, source, existing = null, websiteProduct = null, order = 9999) {
   const category = sourceCategory(row);
   const name = websiteProduct?.name || sourceProductName(row);
   const webImage = String(websiteProduct?.images?.[0] || PLACEHOLDER_IMAGE).replace(/^\/+/, '');
-  return {
+  return mediaSafeProduct({
     ...(existing || {}),
     id,
     categoria: category.app,
@@ -304,7 +305,7 @@ function makeAppProduct(id, row, rows, source, existing = null, websiteProduct =
     internalId: existing?.internalId === true || !existing,
     officialSkuPending: existing?.officialSkuPending === true || !existing,
     sourceRows: rows.map((item) => item.sourceRow),
-  };
+  }, true);
 }
 
 function readWebsiteProducts() {
@@ -588,7 +589,7 @@ function productSeoName(product) {
   return `${name} ${label}`;
 }
 
-function genericProductPage(product) {
+function unguardedGenericProductPage(product) {
   const image = `/${String(product.images?.[0] || PLACEHOLDER_IMAGE).replace(/^\/+/, '')}`;
   const displayImage = image.replace(/\.(?:jpe?g|png)$/i, '.display.webp');
   const canonical = `https://haode.com.mx/producto/${product.id}/`;
@@ -976,9 +977,11 @@ function main() {
       : []
   );
   const retainedWebsiteProducts = websiteProducts
+    .map((product) => mediaSafeProduct(product))
     .filter((product) => !deletedIds.has(product.id))
     .sort((left, right) => left.category.localeCompare(right.category) || left.id.localeCompare(right.id));
   const retainedAppProducts = appProducts
+    .map((product) => mediaSafeProduct(product, true))
     .filter((product) => !deletedIds.has(product.id))
     .sort((left, right) => Number(left.orden || 9999) - Number(right.orden || 9999) || left.id.localeCompare(right.id));
   report.retained = [...matchedById.entries()]
@@ -1137,3 +1140,7 @@ function main() {
 }
 
 main();
+
+
+
+function genericProductPage(product) { return mediaSafeHtml(unguardedGenericProductPage(mediaSafeProduct(product)), product.id); }

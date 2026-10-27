@@ -1,3 +1,5 @@
+import mediaPolicy from './product-media-policy.cjs';
+import { applyDirectories } from './acquisition-directory.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
@@ -18,6 +20,13 @@ const SCREEN_CATEGORIES = new Set([
   'samsung-incell',
   'samsung-oled',
   'samsung-tipo-original',
+]);
+
+// Reviewed hydrogel pages distinguish equipment from consumables and retain
+// their approved editorial copy. Price/catalog synchronization is separate.
+const REVIEWED_HYDROGEL_PRODUCT_IDS = new Set([
+  'mica-hd', 'mica-matte', 'mica-privacidad-hd', 'mica-privacidad-matte',
+  'x200t-cortadora-micas',
 ]);
 
 const CATEGORY_CONTEXT = new Map([
@@ -358,8 +367,9 @@ function strengthenProductPage(html, product, products) {
   return updated;
 }
 
-function refreshProductPage(product, products) {
+export function refreshProductPage(product, products) {
   if (!INDEXABLE_PRODUCT_IDS.has(product.id)) return null;
+  if (REVIEWED_HYDROGEL_PRODUCT_IDS.has(product.id)) return null;
   const relativePath = path.join('producto', product.id, 'index.html');
   const file = path.join(ROOT, relativePath);
   if (!fs.existsSync(file)) return null;
@@ -386,6 +396,7 @@ function refreshProductPage(product, products) {
   );
   if (isScreen(product)) updated = refreshScreenProduct(updated, product);
   updated = strengthenProductPage(updated, product, products);
+  updated = mediaPolicy.mediaSafeHtml(updated, product.id);
 
   return current === updated ? null : { file, relativePath, updated };
 }
@@ -493,28 +504,31 @@ function mergeSchemaTrustChanges(baseChanges) {
     const relativePath = path.relative(ROOT, file);
     const pending = changesByPath.get(relativePath);
     const current = pending?.updated ?? fs.readFileSync(file, 'utf8');
-    const updated = removeUnconfirmedProductAvailability(current, relativePath);
+    const updated = mediaPolicy.mediaSafeHtml(removeUnconfirmedProductAvailability(current, relativePath), relativePath.match(/^producto[\/]([^\/]+)[\/]index\.html$/)?.[1]);
     if (updated !== current) changesByPath.set(relativePath, { file, relativePath, updated });
   }
 
   return [...changesByPath.values()].filter(({ file, updated }) => fs.readFileSync(file, 'utf8') !== updated);
 }
 
-const products = readProducts();
-const pageChanges = [
-  ...products.filter((p) => !SCREENS_ONLY || isScreen(p)).map((product) => refreshProductPage(product, products)).filter(Boolean),
-  ...[...(SCREENS_ONLY ? SCREEN_LANDINGS : new Map([...PRIORITY_PAGES, ...SCREEN_LANDINGS]))].map(([relativePath, metadata]) => refreshPriorityPage(relativePath, metadata)).filter(Boolean),
-  ...(SCREENS_ONLY ? [] : [...SEO_ALIASES].map(([aliasPath, canonicalPath]) => refreshAliasPage(aliasPath, canonicalPath)).filter(Boolean)),
-];
-const scopedChanges = [...pageChanges, refreshSitemap(pageChanges)].filter(Boolean);
-const changes = SCREENS_ONLY ? scopedChanges : mergeSchemaTrustChanges(scopedChanges);
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const products = readProducts();
+  const pageChanges = [
+    ...products.filter((p) => !SCREENS_ONLY || isScreen(p)).map((product) => refreshProductPage(product, products)).filter(Boolean),
+    ...[...(SCREENS_ONLY ? SCREEN_LANDINGS : new Map([...PRIORITY_PAGES, ...SCREEN_LANDINGS]))].map(([relativePath, metadata]) => refreshPriorityPage(relativePath, metadata)).filter(Boolean),
+    ...(SCREENS_ONLY ? [] : [...SEO_ALIASES].map(([aliasPath, canonicalPath]) => refreshAliasPage(aliasPath, canonicalPath)).filter(Boolean)),
+  ];
+  const scopedChanges = [...pageChanges, refreshSitemap(pageChanges)].filter(Boolean);
+  const changes = SCREENS_ONLY ? scopedChanges : mergeSchemaTrustChanges(scopedChanges);
 
-if (APPLY) {
-  changes.forEach(({ file, updated }) => fs.writeFileSync(file, updated, 'utf8'));
-  console.log(`SEO refresh applied to ${changes.length} files.`);
-} else if (changes.length) {
-  console.error(`SEO refresh required for ${changes.length} files. Run with --apply.`);
-  process.exitCode = 1;
-} else {
-  console.log('SEO pages are current.');
+  if (APPLY) {
+    changes.forEach(({ file, updated }) => fs.writeFileSync(file, updated, 'utf8'));
+    applyDirectories();
+    console.log(`SEO refresh applied to ${changes.length} files.`);
+  } else if (changes.length) {
+    console.error(`SEO refresh required for ${changes.length} files. Run with --apply.`);
+    process.exitCode = 1;
+  } else {
+    console.log('SEO pages are current.');
+  }
 }

@@ -1,3 +1,4 @@
+const { mediaSafeProduct } = require('./product-media-policy.cjs');
 const fs = require('fs');
 const path = require('path');
 
@@ -152,7 +153,7 @@ function firestoreProduct(row, order) {
 }
 
 function appProduct(row, order) {
-  return firestoreProduct(row, order);
+  return mediaSafeProduct(firestoreProduct(row, order), true);
 }
 
 function websiteProduct(row) {
@@ -161,7 +162,7 @@ function websiteProduct(row) {
   const images = [websiteAssetPath(row.imagen_path)].filter(Boolean);
   const videos = [websiteAssetPath(row.video_path)].filter(Boolean);
 
-  return {
+  return mediaSafeProduct({
     id: row.id,
     category: websiteCategory(row),
     brand: inferBrand(row),
@@ -177,7 +178,7 @@ function websiteProduct(row) {
     priceSource: 'docs/master-data/products-master.csv',
     whatsappText: `Hola HAODE, quiero cotizar: ${row.producto_nombre}`,
     description: row.descripcion || `${row.producto_nombre} para mayoreo y menudeo en México.`,
-  };
+  }, false);
 }
 
 function writeWebsiteProducts(products) {

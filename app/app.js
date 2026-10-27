@@ -1,3 +1,6 @@
+// Owner-approved MEDIA-01 identities; kept in parity with scripts/product-media-policy.cjs.
+const PENDING_PRODUCT_MEDIA_IDS = new Set(['samsung-incell-note-10-lite', 'samsung-incell-note-20', 'samsung-incell-s10-lite']);
+const PENDING_PRODUCT_MEDIA_TEXT = 'Foto específica de este modelo pendiente de confirmar.';
 import { firebaseConfig, isFirebaseConfigured } from "./firebase-public-config.js";
 
 const WHATSAPP_NUMBER = "523326684296";
@@ -43,6 +46,9 @@ const EXTERNAL_CATALOG_TIMEOUT_MS = 3000;
 const EXTERNAL_DIAGNOSTICS_TIMEOUT_MS = 3000;
 const WEB_ORDER_TIMEOUT_MS = 15000;
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
+  'SS-NOTE10-LITE-INCELL-FHD': 'samsung-incell-note-10-lite',
+  'SS-NOTE-20-INCELL-FHD': 'samsung-incell-note-20',
+  'SS-S10-LITE-INCELL-FHD': 'samsung-incell-s10-lite',
   "AI-GAFAS-G3": "haode-ai-g3-smart-glasses",
   "MICA-X200T": "x200t-cortadora-micas"
 };
@@ -505,7 +511,8 @@ function normalizeProduct(product) {
   const publicPrice = Number(product.precioPublico ?? product.publicPrice ?? product.public_price_mxn ?? 0);
   const officialSkuPending = product.officialSkuPending === true;
   const reference = product.sku || product.SKU || productId || productDocId;
-  const image = product.imagen || product.image || product.image_url || PLACEHOLDER_IMAGE;
+  const mediaPending = PENDING_PRODUCT_MEDIA_IDS.has(productId || productDocId);
+  const image = mediaPending ? PLACEHOLDER_IMAGE : product.imagen || product.image || product.image_url || PLACEHOLDER_IMAGE;
 
   return {
     id: productId || productDocId,
@@ -524,6 +531,7 @@ function normalizeProduct(product) {
     priceTiers: normalizePriceTiers(product.priceTiers || product.public_price_tiers || product.quantityPricing || product.preciosPorCantidad),
     image,
     usesPlaceholder: String(image).includes("placeholder.svg"),
+    mediaPending,
     stock: isErpCatalogSource
       ? normalizeStock(product.stock || product.stock_status || product.stock_label)
       : "consultar inventario",
@@ -788,7 +796,7 @@ function mergeErpCatalog(localProducts, catalogRows) {
       wholesalePrice: hasAuthoritativeLocalPrices ? current.wholesalePrice : incoming.wholesalePrice,
       priceTiers: mergedTiers,
       priceSource: current.priceSource,
-      image: safeImageSrc(row.image_url, current.image),
+      image: current.mediaPending ? PLACEHOLDER_IMAGE : safeImageSrc(row.image_url, current.image),
       stock: incoming.stock,
       salesAvailable: incoming.salesAvailable,
       erpStockStatus: row.stock_status || "",
@@ -1108,8 +1116,8 @@ function productCardHtml(product, compact = false) {
   return `
     <article class="product-card">
       <a class="product-media" href="${productUrl}" aria-label="Ver ${escapeAttr(product.displayName || product.name)}${product.usesPlaceholder ? ' · Imagen en actualización' : ''}">
-        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" width="640" height="640" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
-        ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
+        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name)}" width="640" height="640" loading="${compact ? "eager" : "lazy"}" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        ${product.usesPlaceholder ? `<span class="product-image-status">${product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : 'Imagen en actualización'}</span>` : ""}
       </a>
       <div class="product-body">
         <span class="product-kicker">${escapeHtml(label)}</span>
@@ -1143,8 +1151,8 @@ function homeProductRowHtml(product) {
   return `
     <article class="product-card app-home-product-card">
       <a class="app-home-product-media" href="${escapeAttr(appProductUrl(product))}" aria-label="Ver ${escapeAttr(product.displayName || product.name)}${product.usesPlaceholder ? ' · Imagen en actualización' : ''}">
-        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.name)}" width="700" height="620" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
-        ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
+        <img src="${escapeAttr(safeImageSrc(product.image))}"${optimizedImageSrcset(product.image)} alt="${escapeAttr(product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name)}" width="700" height="620" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        ${product.usesPlaceholder ? `<span class="product-image-status">${product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : 'Imagen en actualización'}</span>` : ""}
       </a>
       <div class="app-home-product-copy">
         <span class="product-kicker">${escapeHtml(label)}</span>
@@ -1410,7 +1418,7 @@ function promoCardHtml(product) {
   return `
     <a class="promo-card" href="${escapeAttr(appProductUrl(product))}">
       <span class="promo-label">Promoción</span>
-      <img src="${escapeAttr(safeImageSrc(media))}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.name)}" width="640" height="640" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+      <img src="${escapeAttr(safeImageSrc(media))}"${optimizedImageSrcset(media)} alt="${escapeAttr(product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name)}" width="640" height="640" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
       <strong>${escapeHtml(product.displayName)}</strong>
       <span class="promo-price">${escapeHtml(displayPrice)}</span>
     </a>
@@ -1486,7 +1494,7 @@ function premiumSelectionHtml() {
           <a class="premium-tile" href="${escapeAttr(appProductUrl(item.product))}">
             <span>${escapeHtml(item.label)}</span>
             <strong>${escapeHtml(item.product.displayName)}</strong>
-            <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" width="640" height="640" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+            <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : item.product.name)}" width="640" height="640" loading="lazy" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
           </a>
         `).join("")}
       </div>
@@ -1748,8 +1756,8 @@ function productGalleryHtml(product, images) {
   return `
     <div class="gallery-stage">
       ${isX200T(product) ? '<span class="gallery-badge">Galería de producto</span>' : ""}
-      <img src="${escapeAttr(safeImageSrc(selected))}"${optimizedImageSrcset(selected, "detail")} alt="${escapeAttr(product.name)}" width="960" height="960" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
-      ${product.usesPlaceholder ? '<span class="product-image-status">Imagen en actualización</span>' : ""}
+      <img src="${escapeAttr(safeImageSrc(selected))}"${optimizedImageSrcset(selected, "detail")} alt="${escapeAttr(product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name)}" width="960" height="960" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+      ${product.usesPlaceholder ? `<span class="product-image-status">${product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : 'Imagen en actualización'}</span>` : ""}
     </div>
     ${thumbStripHtml(images, state.selectedGalleryIndex)}
   `;
@@ -1834,9 +1842,10 @@ function renderCartPage() {
     const productIdAttr = escapeAttr(item.product.id);
     return `
       <article class="cart-item">
-        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" width="240" height="240" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : item.product.name)}" width="240" height="240" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         <div>
           <h3>${escapeHtml(item.product.displayName)}</h3>
+          ${item.product.mediaPending ? `<p class="product-image-status">${PENDING_PRODUCT_MEDIA_TEXT}</p>` : ""}
           <p>${escapeHtml(item.product.model)}</p>
           <div class="cart-row">
             <div class="qty-control" aria-label="Cantidad de ${escapeAttr(item.product.name)}">
@@ -2281,9 +2290,10 @@ function renderCart() {
     const productIdAttr = escapeAttr(item.product.id);
     return `
       <article class="cart-item">
-        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.name)}" width="240" height="240" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
+        <img src="${escapeAttr(safeImageSrc(item.product.image))}"${optimizedImageSrcset(item.product.image)} alt="${escapeAttr(item.product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : item.product.name)}" width="240" height="240" loading="eager" decoding="async" onerror="this.removeAttribute('srcset');this.src='${escapeAttr(PLACEHOLDER_IMAGE)}'" />
         <div>
           <h3>${escapeHtml(item.product.displayName)}</h3>
+          ${item.product.mediaPending ? `<p class="product-image-status">${PENDING_PRODUCT_MEDIA_TEXT}</p>` : ""}
           <p>${escapeHtml(item.product.model)}</p>
           <div class="cart-row">
             <div class="qty-control" aria-label="Cantidad de ${escapeAttr(item.product.name)}">
