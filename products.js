@@ -7,6 +7,8 @@ if (IS_V3_DETAIL_ROUTE) document.body.dataset.v3Detail = 'true';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP'];
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
+  'IP-XR-INCELL-FHD': 'iphone-incell-xr',
+  'IP-INCELL-XR-HD': 'iphone-incell-xr-bolsa-protectora',
   'SS-NOTE10-LITE-INCELL-FHD': 'samsung-incell-note-10-lite',
   'SS-NOTE-20-INCELL-FHD': 'samsung-incell-note-20',
   'SS-S10-LITE-INCELL-FHD': 'samsung-incell-s10-lite',
@@ -1508,9 +1510,13 @@ function applyErpPublicCatalog(rows) {
     usedLocalIndexes.add(existingIndex);
     const product = localProducts[existingIndex];
     const hasConfirmedCustomerPrices = hasAuthoritativeCustomerPrices(product);
+    const hasApprovedXrCopy = hasConfirmedCustomerPrices
+      && ['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(product.id);
     product.sku = row.sku || product.sku;
-    product.name = row.public_name_es || product.name;
-    product.model = row.model || product.model;
+    if (!hasApprovedXrCopy) {
+      product.name = row.public_name_es || product.name;
+      product.model = row.model || product.model;
+    }
     // The confirmed catalogue quality stays authoritative when ERP refreshes stock.
     if (!hasConfirmedCustomerPrices || !product.quality) {
       product.quality = row.quality || product.quality;

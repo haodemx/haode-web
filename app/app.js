@@ -46,6 +46,8 @@ const EXTERNAL_CATALOG_TIMEOUT_MS = 3000;
 const EXTERNAL_DIAGNOSTICS_TIMEOUT_MS = 3000;
 const WEB_ORDER_TIMEOUT_MS = 15000;
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
+  'IP-XR-INCELL-FHD': 'iphone-incell-xr',
+  'IP-INCELL-XR-HD': 'iphone-incell-xr-bolsa-protectora',
   'SS-NOTE10-LITE-INCELL-FHD': 'samsung-incell-note-10-lite',
   'SS-NOTE-20-INCELL-FHD': 'samsung-incell-note-20',
   'SS-S10-LITE-INCELL-FHD': 'samsung-incell-s10-lite',
@@ -779,19 +781,23 @@ function mergeErpCatalog(localProducts, catalogRows) {
     usedLocalIndexes.add(index);
     const current = localCatalog[index];
     const hasAuthoritativeLocalPrices = hasAuthoritativeCustomerPrices(current);
+    // Owner-approved XR facts include the visible model and price copy, not
+    // just numeric tiers. Public ERP imports can still carry the old wording.
+    const hasApprovedXrCopy = hasAuthoritativeLocalPrices
+      && ['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(current.id);
     const mergedTiers = hasAuthoritativeLocalPrices
       ? current.priceTiers
       : incoming.priceTiers;
     result.push({
       ...current,
       sku: incoming.sku || current.sku,
-      name: incoming.name || current.name,
-      displayName: incoming.displayName || current.displayName,
-      model: incoming.model || current.model,
+      name: hasApprovedXrCopy ? current.name : incoming.name || current.name,
+      displayName: hasApprovedXrCopy ? current.displayName : incoming.displayName || current.displayName,
+      model: hasApprovedXrCopy ? current.model : incoming.model || current.model,
       // The confirmed customer workbook owns the public quality label.
       // ERP enriches inventory metadata only and must not replace that label.
       quality: current.quality || incoming.quality,
-      description: incoming.description || current.description,
+      description: hasApprovedXrCopy ? current.description : incoming.description || current.description,
       publicPrice: hasAuthoritativeLocalPrices ? current.publicPrice : incoming.publicPrice,
       wholesalePrice: hasAuthoritativeLocalPrices ? current.wholesalePrice : incoming.wholesalePrice,
       priceTiers: mergedTiers,
@@ -2246,6 +2252,8 @@ function singleProductWhatsappUrl(product) {
     `${product.name}`,
     `${referenceLabel}: ${product.sku || product.reference || product.id}`,
     `Modelo: ${product.model}`,
+    ...(['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(product.id) && product.quality?.label
+      ? [`Calidad: ${product.quality.label}`] : []),
     `Precio menudeo: ${formatPrice(product.publicPrice)}`,
     `Precio mayoreo: ${formatPrice(product.wholesalePrice)}`,
     "",

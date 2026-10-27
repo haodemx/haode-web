@@ -20,7 +20,7 @@
     },
     "app": {
       "path": "app/products.json",
-      "sha256": "65f5b9e7085baccab468098e3bff1aaea6a2bff2546922e5c2f7fced3d4ce4f6"
+      "sha256": "953480ccc2d17e212d2b2bd594761c676b9dd86d69b76680c26d83fabbd2057d"
     },
     "structured_data": {
       "path": "producto/{id}/index.html",
