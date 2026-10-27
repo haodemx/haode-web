@@ -15,6 +15,15 @@ const source = JSON.parse(fs.readFileSync(new URL('../data/customer-price-list-2
 const report = JSON.parse(fs.readFileSync(new URL('../docs/reports/customer-price-sync-2026-09-24.json', import.meta.url), 'utf8'));
 const appJs = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8');
 
+test('APP-QUALITY-01 XR Bolsa model and offer copy use the approved HD+ quality', () => {
+  const product = app.find(item => item.id === 'iphone-incell-xr-bolsa-protectora');
+  assert.equal(product.modelo, 'iPhone XR Bolsa Protectora INCELL HD+ C/IC');
+  assert.equal(product.offerSubtitle, 'INCELL HD+ C/IC · Bolsa Protectora');
+  const masterRow = fs.readFileSync(new URL('../docs/master-data/products-master.csv', import.meta.url), 'utf8')
+    .split('\n').find(line => line.startsWith(`${product.id},`));
+  assert.ok(masterRow.includes(',iPhone XR Bolsa Protectora INCELL HD+ C/IC,'));
+});
+
 function byId(items,id){const p=items.find(x=>x.id===id);assert.ok(p,`Missing product ${id}`);return p;}
 function price(product,label){return product.prices.find(x=>x.quantity===label)?.price;}
 
@@ -135,6 +144,9 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   const appFile = path.join(root, 'app/products.json');
   const staleApp = JSON.parse(fs.readFileSync(appFile, 'utf8'));
   for (const item of staleApp) if (mediaIds.includes(item.id)) item.imagen = '/assets/products/samsung-incell/main.jpg';
+  const staleBag = byId(staleApp, 'iphone-incell-xr-bolsa-protectora');
+  staleBag.modelo = 'iPhone XR Bolsa Protectora INCELL FHD';
+  staleBag.offerSubtitle = 'INCELL FHD · Bolsa Protectora';
   fs.writeFileSync(appFile, JSON.stringify(staleApp));
 
   const result = spawnSync(process.execPath, [path.join(root, 'scripts/sync-customer-prices.js'), '--apply'], {
@@ -146,6 +158,8 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   const syncedWebsiteText = fs.readFileSync(path.join(root, 'data/products.generated.js'), 'utf8');
   const syncedWebsite = JSON.parse(syncedWebsiteText.slice(syncedWebsiteText.indexOf('['), syncedWebsiteText.lastIndexOf(']') + 1));
   const syncedApp = JSON.parse(fs.readFileSync(path.join(root, 'app/products.json'), 'utf8'));
+  assert.equal(byId(syncedApp, 'iphone-incell-xr-bolsa-protectora').modelo, 'iPhone XR Bolsa Protectora INCELL HD+ C/IC');
+  assert.equal(byId(syncedApp, 'iphone-incell-xr-bolsa-protectora').offerSubtitle, 'INCELL HD+ C/IC · Bolsa Protectora');
   for (const id of mediaIds) {
     assert.deepEqual(byId(syncedWebsite, id).images, ['assets/products/placeholder.svg']);
     assert.equal(byId(syncedApp, id).imagen, '/assets/products/placeholder.svg');

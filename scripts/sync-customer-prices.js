@@ -880,6 +880,12 @@ function main() {
     product.precioMayoreo = wholesale5;
     product.priceTiers = tiers;
     if (sourceQuality) product.calidad = sourceQuality;
+    // APP-QUALITY-01: regenerate the approved Bolsa copy from its matched row;
+    // an old import may retain FHD in model/offer text despite correct calidad.
+    if (product.id === 'iphone-incell-xr-bolsa-protectora' && sourceQuality) {
+      product.modelo = `iPhone XR Bolsa Protectora ${sourceQuality}`;
+      product.offerSubtitle = `${sourceQuality} · Bolsa Protectora`;
+    }
     product.descripcion = updateCustomerPriceCopy(product.descripcion, row);
     product.descripcion = updateCustomerQualityCopy(product.descripcion, previousCopyQuality, sourceQuality);
     product.descripcion = updateInventoryCopy(product.descripcion);
