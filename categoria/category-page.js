@@ -1,4 +1,6 @@
 (function () {
+  const PENDING_PRODUCT_MEDIA_IDS = new Set(['samsung-incell-note-10-lite', 'samsung-incell-note-20', 'samsung-incell-s10-lite']);
+  const PENDING_PRODUCT_MEDIA_TEXT = 'Foto específica de este modelo pendiente de confirmar.';
   const WHATSAPP_PHONE = '523326684296';
 
   function escapeHtml(value) {
@@ -143,8 +145,10 @@
   function buildProductCard(item) {
     const article = document.createElement('article');
     article.className = 'new-product-card';
+    const mediaPending = PENDING_PRODUCT_MEDIA_IDS.has(item.id);
+    if (mediaPending) article.dataset.productId = item.id;
 
-    const image = item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
+    const image = mediaPending ? 'assets/products/placeholder.svg' : item.images && item.images.length ? item.images[0] : 'assets/products/placeholder.svg';
     const originalImage = toAssetPath(image);
     const cardImage = toCardImagePath(image);
     const priceRows = priceRowsFor(item);
@@ -153,11 +157,12 @@
 
     article.innerHTML = `
       <div class="new-product-visual">
-        <img src="/assets/products/placeholder.svg" data-product-src="${escapeHtml(cardImage)}" data-product-fallback="${escapeHtml(originalImage)}" alt="${escapeHtml(item.name || item.model || 'Producto')}" loading="lazy" decoding="async" />
+        <img src="/assets/products/placeholder.svg" data-product-src="${escapeHtml(cardImage)}" data-product-fallback="${escapeHtml(originalImage)}" alt="${escapeHtml(mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : item.name || item.model || 'Producto')}" loading="lazy" decoding="async" />
         <span class="new-arrival-tag">SKU ${escapeHtml(item.sku || item.id || 'HAODE')}</span>
       </div>
       <div class="new-product-content">
         <h3>${escapeHtml(item.name || item.model || 'Producto HAODE')}</h3>
+        ${mediaPending ? `<p class="product-image-status">${PENDING_PRODUCT_MEDIA_TEXT}</p>` : ""}
         <div class="new-product-badges" aria-label="Ventajas HAODE">
           <span>Stock en México</span>
           <span>Precio por cantidad</span>

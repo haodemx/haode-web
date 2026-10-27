@@ -16,16 +16,16 @@
     },
     "website": {
       "path": "data/products.generated.js",
-      "sha256": "dd0316a430b0b3dfbf88e9e6d82e828c17b6d92747b3297ff4913ffc8aa226b5"
+      "sha256": "03326083a43bf6fb0cd0b20fbabb2b96e57472ee4fcd8b6b246a5615c8f6f162"
     },
     "app": {
       "path": "app/products.json",
-      "sha256": "71a22239445b3f7db1cf2c08f571976da03fe77495ccfbca4306b886648fbae2"
+      "sha256": "65f5b9e7085baccab468098e3bff1aaea6a2bff2546922e5c2f7fced3d4ce4f6"
     },
     "structured_data": {
       "path": "producto/{id}/index.html",
       "product_pages": 146,
-      "sha256": "747130d88421b4cd602daa6393d0d3b7dbf8c6d0d1db4c5ce02294bf87dd8de0"
+      "sha256": "d9399b73bfcfd25e1e1b99e75b3af9b617caf663a361f1a7a2e9fa5f5982c845"
     },
     "feed": {
       "path": "data/marketing/chatgpt-product-feed.json",
@@ -42,7 +42,7 @@
     "candidate_primary_assets": {
       "candidates": 146,
       "existing_files": 146,
-      "sha256": "d77c06ff63a9e3520678cb3be93008c365504fd40081e39db5118e5b4acda2ae"
+      "sha256": "393ca41fee1c8a3db186ba87ae22c5c20cc7421147fed3e7bf64cba6997d0455"
     }
   },
   "summary": {
@@ -7710,5 +7710,26 @@
         "shared_path": false
       }
     }
-  ]
+  ],
+  "media01_current_display": {
+    "authorization": "Owner explicit neutral pending approval, 2026-10-26",
+    "scope": "Historical rejected image QC records remain unchanged; these three current product displays use a neutral non-product placeholder.",
+    "products": {
+      "samsung-incell-note-10-lite": {
+        "image": "assets/products/placeholder.svg",
+        "specific_photo_status": "ASSET MISSING",
+        "product_schema_image": "NOT CONFIGURED"
+      },
+      "samsung-incell-note-20": {
+        "image": "assets/products/placeholder.svg",
+        "specific_photo_status": "ASSET MISSING",
+        "product_schema_image": "NOT CONFIGURED"
+      },
+      "samsung-incell-s10-lite": {
+        "image": "assets/products/placeholder.svg",
+        "specific_photo_status": "ASSET MISSING",
+        "product_schema_image": "NOT CONFIGURED"
+      }
+    }
+  }
 }

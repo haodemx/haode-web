@@ -1,3 +1,4 @@
+import mediaPolicy from './product-media-policy.cjs';
 import { applyDirectories } from './acquisition-directory.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -395,6 +396,7 @@ export function refreshProductPage(product, products) {
   );
   if (isScreen(product)) updated = refreshScreenProduct(updated, product);
   updated = strengthenProductPage(updated, product, products);
+  updated = mediaPolicy.mediaSafeHtml(updated, product.id);
 
   return current === updated ? null : { file, relativePath, updated };
 }
@@ -502,7 +504,7 @@ function mergeSchemaTrustChanges(baseChanges) {
     const relativePath = path.relative(ROOT, file);
     const pending = changesByPath.get(relativePath);
     const current = pending?.updated ?? fs.readFileSync(file, 'utf8');
-    const updated = removeUnconfirmedProductAvailability(current, relativePath);
+    const updated = mediaPolicy.mediaSafeHtml(removeUnconfirmedProductAvailability(current, relativePath), relativePath.match(/^producto[\/]([^\/]+)[\/]index\.html$/)?.[1]);
     if (updated !== current) changesByPath.set(relativePath, { file, relativePath, updated });
   }
 

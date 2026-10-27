@@ -115,6 +115,8 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   }
   for (const file of [
     'scripts/sync-customer-prices.js',
+    'scripts/product-media-policy.cjs',
+    'sitemap.xml',
     'data/customer-price-list-2026-09-24.json',
     'data/products.generated.js',
     'app/products.json',
@@ -122,6 +124,18 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   ]) {
     fs.copyFileSync(new URL(`../${file}`, import.meta.url), path.join(root, file));
   }
+
+  // Recreate a stale catalog import: the approved hold must win over old photos.
+  const mediaIds = ['samsung-incell-note-10-lite', 'samsung-incell-note-20', 'samsung-incell-s10-lite'];
+  const webFile = path.join(root, 'data/products.generated.js');
+  const webText = fs.readFileSync(webFile, 'utf8');
+  const staleWeb = JSON.parse(webText.slice(webText.indexOf('['), webText.lastIndexOf(']') + 1));
+  for (const item of staleWeb) if (mediaIds.includes(item.id)) item.images = ['assets/products/samsung-incell/main.jpg'];
+  fs.writeFileSync(webFile, `window.HAODE_PRODUCTS_DATA = ${JSON.stringify(staleWeb)};\n`);
+  const appFile = path.join(root, 'app/products.json');
+  const staleApp = JSON.parse(fs.readFileSync(appFile, 'utf8'));
+  for (const item of staleApp) if (mediaIds.includes(item.id)) item.imagen = '/assets/products/samsung-incell/main.jpg';
+  fs.writeFileSync(appFile, JSON.stringify(staleApp));
 
   const result = spawnSync(process.execPath, [path.join(root, 'scripts/sync-customer-prices.js'), '--apply'], {
     cwd: root,
@@ -132,6 +146,18 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   const syncedWebsiteText = fs.readFileSync(path.join(root, 'data/products.generated.js'), 'utf8');
   const syncedWebsite = JSON.parse(syncedWebsiteText.slice(syncedWebsiteText.indexOf('['), syncedWebsiteText.lastIndexOf(']') + 1));
   const syncedApp = JSON.parse(fs.readFileSync(path.join(root, 'app/products.json'), 'utf8'));
+  for (const id of mediaIds) {
+    assert.deepEqual(byId(syncedWebsite, id).images, ['assets/products/placeholder.svg']);
+    assert.equal(byId(syncedApp, id).imagen, '/assets/products/placeholder.svg');
+  }
+  const republish = spawnSync(process.execPath, [path.join(root, 'scripts/sync-customer-prices.js'), '--apply', '--publish-unlisted'], { cwd: root, encoding: 'utf8' });
+  assert.equal(republish.status, 0, republish.stderr || republish.stdout);
+  for (const id of mediaIds) {
+    const regenerated = fs.readFileSync(path.join(root, 'producto', id, 'index.html'), 'utf8');
+    assert.ok(regenerated.includes('Foto específica de este modelo pendiente de confirmar.'));
+    assert.doesNotMatch(regenerated, /samsung-incell\/main\./);
+    assert.doesNotMatch(regenerated, /"image"\s*:/);
+  }
   assert.deepEqual(byId(syncedWebsite, 'samsung-incell-s8').prices.map((row) => row.quantity), ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
   assert.deepEqual(byId(syncedApp, 'samsung-incell-s8').priceTiers.map((tier) => tier.code), ['WHOLESALE', 'BOX', 'VIP']);
   assert.ok(byId(syncedApp, 'samsung-incell-s8').priceTiers.every((tier) => tier.autoApply === false));

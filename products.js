@@ -1,9 +1,15 @@
+// Owner-approved MEDIA-01 identities; kept in parity with scripts/product-media-policy.cjs.
+const PENDING_PRODUCT_MEDIA_IDS = new Set(['samsung-incell-note-10-lite', 'samsung-incell-note-20', 'samsung-incell-s10-lite']);
+const PENDING_PRODUCT_MEDIA_TEXT = 'Foto específica de este modelo pendiente de confirmar.';
 const WHATSAPP_PHONE = '523326684296';
 const IS_V3_DETAIL_ROUTE = /^\/producto(?:\/|\.html(?:$|\?))/.test(window.location.pathname);
 if (IS_V3_DETAIL_ROUTE) document.body.dataset.v3Detail = 'true';
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
 const QUANTITY_LABELS = ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP'];
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
+  'SS-NOTE10-LITE-INCELL-FHD': 'samsung-incell-note-10-lite',
+  'SS-NOTE-20-INCELL-FHD': 'samsung-incell-note-20',
+  'SS-S10-LITE-INCELL-FHD': 'samsung-incell-s10-lite',
   'AI-GAFAS-G3': 'haode-ai-g3-smart-glasses',
   'MICA-X200T': 'x200t-cortadora-micas',
 };
@@ -1524,7 +1530,7 @@ function applyErpPublicCatalog(rows) {
     product.priceStatus = row.price_status || product.priceStatus;
     product.erpStockUpdatedAt = row.updated_at || '';
     product.whatsappText = buildProductCotizacionText(product.name, product.sku);
-    if (row.image_url) product.mainImage = row.image_url;
+    if (row.image_url && !PENDING_PRODUCT_MEDIA_IDS.has(product.id)) product.mainImage = row.image_url;
   });
 }
 
@@ -1684,13 +1690,14 @@ const VERIFIED_PRODUCT_MEDIA_BY_ID = {
 };
 
 function createProduct(definition) {
+  const mediaPending = PENDING_PRODUCT_MEDIA_IDS.has(definition.id);
   const category = normalizeCategory(definition.category);
   const categoryMeta = CATEGORY_META[category];
   const categoryMedia = CATEGORY_MEDIA[category]?.[definition.id] || null;
   const verifiedMedia = VERIFIED_PRODUCT_MEDIA_BY_ID[definition.id] || null;
   const mediaImages = Array.isArray(definition.images) && definition.images.length ? definition.images.filter(Boolean) : null;
   const priceTable = buildPriceTable(definition.prices || definition.priceTable);
-  const originalMainImage = verifiedMedia?.mainImage || definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
+  const originalMainImage = mediaPending ? PLACEHOLDER_IMAGE : verifiedMedia?.mainImage || definition.mainImage || mediaImages?.[0] || categoryMedia?.mainImage || categoryMeta.mainImage || PLACEHOLDER_IMAGE;
   const mainImage = productDisplayImagePath(originalMainImage);
   const galleryImages = verifiedMedia?.galleryImages || definition.galleryImages || (mediaImages ? mediaImages.slice(1) : null) || categoryMedia?.galleryImages || categoryMeta.galleryImages || [];
   const name = definition.name || `Pantalla para ${definition.model || definition.title || definition.id}`;
@@ -1710,9 +1717,10 @@ function createProduct(definition) {
     quality: definition.quality,
     mainImage,
     originalMainImage,
-    cardImage: definition.cardImage || PRODUCT_CARD_IMAGE_BY_ID[definition.id] || mainImage,
-    galleryImages: Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== originalMainImage && src !== mainImage))),
-    videos: verifiedMedia?.videos || definition.videos || categoryMedia?.videos || [],
+    mediaPending,
+    cardImage: mediaPending ? PLACEHOLDER_IMAGE : definition.cardImage || PRODUCT_CARD_IMAGE_BY_ID[definition.id] || mainImage,
+    galleryImages: mediaPending ? [] : Array.from(new Set((galleryImages || []).filter(Boolean).filter((src) => src !== originalMainImage && src !== mainImage))),
+    videos: mediaPending ? [] : verifiedMedia?.videos || definition.videos || categoryMedia?.videos || [],
     priceTable,
     priceSource: definition.priceSource || '',
     description: definition.description || `${name} para mayoreo y menudeo en México.`,
@@ -1762,7 +1770,7 @@ function createProductCard(product, { deferMedia = false, compact = false } = {}
 
   const image = document.createElement('img');
   const imageSource = buildAssetUrl(product.cardImage || product.mainImage || PLACEHOLDER_IMAGE);
-  image.alt = product.name;
+  image.alt = product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name;
   image.loading = 'lazy';
   image.decoding = 'async';
   image.onerror = () => {
@@ -1780,7 +1788,7 @@ function createProductCard(product, { deferMedia = false, compact = false } = {}
   if (product.usesPlaceholder) {
     const imageStatus = document.createElement('span');
     imageStatus.className = 'product-image-status';
-    imageStatus.textContent = 'Imagen en actualización';
+    imageStatus.textContent = product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : 'Imagen en actualización';
     media.appendChild(imageStatus);
   }
 
@@ -1896,7 +1904,7 @@ function refreshRenderedCatalogCards() {
     const image = card.querySelector('.shop-media img');
     if (image) {
       const imageSource = buildAssetUrl(product.cardImage || product.mainImage || PLACEHOLDER_IMAGE);
-      image.alt = product.name;
+      image.alt = product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name;
       const currentSource = image.dataset.performanceSrc || image.getAttribute('src');
       if (currentSource !== imageSource) {
         if (image.dataset.performanceSrc) image.dataset.performanceSrc = imageSource;
@@ -2714,7 +2722,7 @@ function renderCatalogPage() {
   });
 }
 
-function syncDetailMobilePreview(page, { imageSrc, title }) {
+function syncDetailMobilePreview(page, { imageSrc, title, mediaPending = false }) {
   const topCopy = page.querySelector('.detail-top > div');
   if (!topCopy) return;
 
@@ -2742,7 +2750,7 @@ function syncDetailMobilePreview(page, { imageSrc, title }) {
 
   const image = preview.querySelector('img');
   if (image && imageSrc) {
-    image.alt = title ? `Imagen de ${title}` : 'Imagen del producto HAODE';
+    image.alt = mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : title ? `Imagen de ${title}` : 'Imagen del producto HAODE';
     const currentSrc = image.currentSrc || image.getAttribute('src') || '';
     const hasLoadedLocalImage = currentSrc && !isErpHostedAsset(currentSrc) && image.complete && image.naturalWidth > 0;
     if (!(hasLoadedLocalImage && isErpHostedAsset(imageSrc))) {
@@ -2755,7 +2763,7 @@ function syncDetailMobilePreview(page, { imageSrc, title }) {
   }
 
   const strong = preview.querySelector('strong');
-  if (strong) strong.textContent = 'Foto del producto';
+  if (strong) strong.textContent = mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : 'Foto del producto';
 }
 
 function isErpHostedAsset(src) {
@@ -2830,6 +2838,7 @@ class ProductMediaGallery {
   }
 
   mediaTitle(kind) {
+    if (this.product.mediaPending) return PENDING_PRODUCT_MEDIA_TEXT;
     const model = String(this.product.model || this.product.name || '').trim();
     const quality = String(this.product.quality || '').trim();
     if (kind === 'video') return `Prueba real — ${[model, quality].filter(Boolean).join(' ')}`;
@@ -2970,8 +2979,8 @@ class ProductMediaGallery {
       .filter((src) => this.matchesProduct(src)))].slice(0, 5);
     images.forEach((src, index) => this.gallery.appendChild(this.createImageThumbnail(src, index)));
     const heading = this.galleryWrap?.querySelector('h2');
-    if (heading) heading.textContent = 'Fotos y pruebas reales';
-    this.setSectionVisibility(this.galleryWrap, images.length > 0);
+    if (heading) heading.textContent = this.product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : 'Fotos y pruebas reales';
+    this.setSectionVisibility(this.galleryWrap, !this.product.mediaPending && images.length > 0);
     const first = this.gallery.querySelector('[data-detail-media-thumb]');
     if (first) {
       first.classList.add('is-active');
@@ -3124,6 +3133,7 @@ function syncRuntimeProductJsonLd(product) {
     const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
     const productNode = nodes.find((node) => node?.['@type'] === 'Product');
     if (!productNode) return;
+    if (product.mediaPending) delete productNode.image;
     if (description) productNode.description = description;
     productNode.offers = product.priceTable
       .filter((row) => row.price && row.price !== 'Consultar')
@@ -3246,6 +3256,7 @@ function renderProductDetailPage() {
       syncDetailMobilePreview(page, {
         imageSrc: mainImageEl?.getAttribute('src') || buildAssetUrl(PLACEHOLDER_IMAGE),
         title: fallbackTitle || 'Producto HAODE México',
+        mediaPending: PENDING_PRODUCT_MEDIA_IDS.has(id),
       });
       if (!page.querySelector('[data-detail-conversion]')) {
         const conversion = document.createElement('aside');
@@ -3320,11 +3331,15 @@ function renderProductDetailPage() {
     setMetaContent('meta[name="keywords"]', metaKeywords);
     setMetaContent('meta[property="og:title"]', `${seoName} | HAODE México`);
     setMetaContent('meta[property="og:description"]', metaDescription);
-    setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
+    if (!product.mediaPending) setMetaContent('meta[property="og:image"]', new URL(buildAssetUrl(product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE), `${SITE_ORIGIN}/`).href);
     setMetaContent('meta[property="og:url"]', detailUrl);
-    setMetaContent('meta[name="twitter:card"]', 'summary_large_image');
+    setMetaContent('meta[name="twitter:card"]', product.mediaPending ? 'summary' : 'summary_large_image');
   }
 
+  if (product.mediaPending) {
+    document.querySelectorAll('meta[property^="og:image"], meta[name^="twitter:image"]').forEach(node => node.remove());
+    setMetaContent('meta[name="twitter:card"]', 'summary');
+  }
   window.HaodeConversionProductId = product.id;
   window.HaodeConversionProductSku = product.sku || product.reference || '';
   window.HaodeConversions?.viewProduct(product.id, window.HaodeConversionProductSku);
@@ -3465,7 +3480,7 @@ function renderProductDetailPage() {
       ? renderedLocalImage
       : buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE);
     mainImageEl.src = preferredMainImage;
-    mainImageEl.alt = product.name;
+    mainImageEl.alt = product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name;
     mainImageEl.loading = 'eager';
     mainImageEl.fetchPriority = 'high';
     mainImageEl.decoding = 'async';
@@ -3474,7 +3489,7 @@ function renderProductDetailPage() {
       if (mainImageEl.src !== fallback) mainImageEl.src = fallback;
     };
     const zoomMainImage = buildAssetUrl(product.originalMainImage || product.mainImage || PLACEHOLDER_IMAGE);
-    attachZoom(mainImageEl, new URL(zoomMainImage, `${SITE_ORIGIN}/`).href, product.name);
+    attachZoom(mainImageEl, new URL(zoomMainImage, `${SITE_ORIGIN}/`).href, product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : product.name);
     const visual = mainImageEl.closest('.detail-visual');
     let imageStatus = visual?.querySelector('[data-product-image-status]');
     if (product.usesPlaceholder && visual && !imageStatus) {
@@ -3484,13 +3499,14 @@ function renderProductDetailPage() {
       mainImageEl.insertAdjacentElement('afterend', imageStatus);
     }
     if (imageStatus) {
-      imageStatus.textContent = 'REAL ASSET REQUIRED';
+      imageStatus.textContent = product.mediaPending ? PENDING_PRODUCT_MEDIA_TEXT : 'REAL ASSET REQUIRED';
       imageStatus.hidden = !product.usesPlaceholder;
     }
   }
   syncDetailMobilePreview(page, {
     imageSrc: mainImageEl?.getAttribute('src') || buildAssetUrl(product.mainImage || PLACEHOLDER_IMAGE),
     title: product.name,
+    mediaPending: product.mediaPending,
   });
 
   if (priceEl) priceEl.textContent = product.lowestPriceText || 'Consultar';

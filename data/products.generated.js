@@ -4796,7 +4796,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para Samsung Note 10 Lite",
     "quality": "INCELL FHD C/M",
     "images": [
-      "assets/products/samsung-incell/main.jpg"
+      "assets/products/placeholder.svg"
     ],
     "videos": [],
     "prices": [
@@ -4879,7 +4879,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para Samsung Note 20",
     "quality": "INCELL FHD C/M",
     "images": [
-      "assets/products/samsung-incell/main.jpg"
+      "assets/products/placeholder.svg"
     ],
     "videos": [],
     "prices": [
@@ -5095,7 +5095,7 @@ window.HAODE_PRODUCTS_DATA = [
     "name": "Pantalla para Samsung S10 Lite",
     "quality": "INCELL FHD C/M",
     "images": [
-      "assets/products/samsung-incell/main.jpg"
+      "assets/products/placeholder.svg"
     ],
     "videos": [],
     "prices": [
