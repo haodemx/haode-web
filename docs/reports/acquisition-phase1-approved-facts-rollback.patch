@@ -1310,3 +1310,14 @@
      productNode.offers = product.priceTable
        .filter((row) => row.price && row.price !== 'Consultar')
        .map((row) => ({
+--- a/docs/chatgpt-ads/feed-closeout-audit.json
++++ b/docs/chatgpt-ads/feed-closeout-audit.json
+@@ -25,7 +25,7 @@
+     "structured_data": {
+       "path": "producto/{id}/index.html",
+       "product_pages": 146,
+-      "sha256": "2eb6b5c9c0f45977ad1f31d76e0e64f8bbafc4e730a8c5912f075980606ccdaa"
++      "sha256": "747130d88421b4cd602daa6393d0d3b7dbf8c6d0d1db4c5ce02294bf87dd8de0"
+     },
+     "feed": {
+       "path": "data/marketing/chatgpt-product-feed.json",

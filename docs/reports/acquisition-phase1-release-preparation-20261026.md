@@ -73,7 +73,7 @@ Pages现有线上响应cache-control为短期缓存，按实际headers复核，�
 
 默认是“恢复已部署基线结构，保留已批准业务事实”的普通Git提交。**直接恢复旧414包会恢复首页155及移除ERP保护，不作为默认回滚**；若必须紧急原包恢复，Owner需明确批准该业务影响与临时客户处置，不能由自动化决定。
 
-本目录 acquisition-phase1-approved-facts-rollback.patch 以414为基底保留XR145、已批准ERP价格/质量/描述保护、canonical询价和门店地址/主号；仅做git apply --cached --check，使用独立临时index，原工作树/index未改。未来实际回滚构建/部署NOT RUN。新批准素材或其他业务事实变化后，发布前必须重新冻结此补丁，不能套旧补丁撤销新批准照片。
+本目录 acquisition-phase1-approved-facts-rollback.patch 以414为基底保留XR145、已批准ERP价格/质量/描述保护、canonical询价和门店地址/主号，并同步商品页全文审计的唯一派生指纹（不改业务数据）；仅做git apply --cached --check，使用独立临时index，原工作树/index未改。未来实际回滚构建/部署NOT RUN。新批准素材或其他业务事实变化后，发布前必须重新冻结此补丁，不能套旧补丁撤销新批准照片。
 
 以后Owner明确授权回滚时，在专用隔离分支执行，先保存补丁到回退不会删除的临时目录：
 
