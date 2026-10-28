@@ -43,6 +43,7 @@ const OPTIMIZED_DETAIL_IMAGE_BY_PATH = {
   "/assets/products/micas/hd/main.png": sitePath("/assets/products/micas/hd/main-hero.webp")
 };
 const EXTERNAL_CATALOG_TIMEOUT_MS = 3000;
+const ERP_CATALOG_RETRY_DELAY_MS = 1000;
 const EXTERNAL_DIAGNOSTICS_TIMEOUT_MS = 3000;
 const WEB_ORDER_TIMEOUT_MS = 15000;
 const ERP_LOCAL_PRODUCT_ID_BY_SKU = {
@@ -158,7 +159,10 @@ const state = {
     firestoreActive: null,
     normalizedTotal: 0,
     erpStockItems: 0,
-    erpStockLoaded: false
+    erpStockLoaded: false,
+    externalRequests: {},
+    externalRefresh: {},
+    catalogAttempts: []
   }
 };
 
@@ -657,6 +661,11 @@ function withTimeout(promise, timeoutMs, label) {
 }
 
 async function fetchJsonWithTimeout(url, options = {}, timeoutMs = EXTERNAL_CATALOG_TIMEOUT_MS, label = "Solicitud") {
+  // Only bounded timing/status metadata; never retain URLs, payloads or customer data.
+  const started = performance.now();
+  const timing = { startedAtMs: Math.round(started), timeoutMs, phase: "fetch", status: "pending", httpStatus: null, headersMs: null, elapsedMs: null };
+  const key = { "ERP catalog": "catalog", "ERP stock": "stock" }[label];
+  if (key) state.diagnostics.externalRequests[key] = timing;
   const controller = typeof AbortController === "function" ? new AbortController() : null;
   const requestOptions = { ...options };
   let timeoutId;
@@ -668,14 +677,26 @@ async function fetchJsonWithTimeout(url, options = {}, timeoutMs = EXTERNAL_CATA
 
   try {
     const response = await fetch(url, requestOptions);
+    timing.httpStatus = response.status;
+    timing.headersMs = Math.round(performance.now() - started);
+    timing.phase = "headers";
     if (!response.ok) throw new Error(`${label} ${response.status}`);
-    return response.json();
+    timing.phase = "body";
+    // Keep the deadline and catch active until the complete JSON body is read.
+    const payload = await response.json();
+    timing.phase = "complete";
+    timing.status = "success";
+    return payload;
   } catch (error) {
-    if (error.name === "AbortError") {
+    timing.status = controller?.signal.aborted ? "timeout"
+      : timing.httpStatus !== null && (timing.httpStatus < 200 || timing.httpStatus >= 300) ? "http_error"
+        : error.name === "SyntaxError" ? "parse_error" : "network_error";
+    if (timing.status === "timeout") {
       throw timeoutError(label, timeoutMs);
     }
     throw error;
   } finally {
+    timing.elapsedMs = Math.round(performance.now() - started);
     if (timeoutId) window.clearTimeout(timeoutId);
   }
 }
@@ -688,7 +709,9 @@ async function loadErpPublicStock() {
       EXTERNAL_CATALOG_TIMEOUT_MS,
       "ERP stock"
     );
-    return Array.isArray(rows) ? rows : [];
+    const valid = Array.isArray(rows);
+    if (!valid || !rows.length) state.diagnostics.externalRequests.stock.status = valid ? "empty" : "invalid_payload";
+    return valid ? rows : [];
   } catch (error) {
     console.info("HAODE app sin inventario ERP:", error.message);
     return [];
@@ -737,17 +760,31 @@ function erpCatalogProduct(row, order = 9999) {
 }
 
 async function loadErpPublicCatalog() {
-  try {
-    const payload = await fetchJsonWithTimeout(
-      `${ERP_PUBLIC_CATALOG_URL}?v=${Date.now()}`,
-      { cache: "no-store", mode: "cors" },
-      EXTERNAL_CATALOG_TIMEOUT_MS,
-      "ERP catalog"
-    );
-    return Array.isArray(payload) ? payload : Array.isArray(payload.products) ? payload.products : [];
-  } catch (error) {
-    console.info("HAODE app usando catálogo local:", error.message);
-    return [];
+  const attempts = state.diagnostics.catalogAttempts;
+  attempts.length = 0;
+  // One bounded recovery for an observed transient timeout; never poll the ERP.
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const payload = await fetchJsonWithTimeout(
+        `${ERP_PUBLIC_CATALOG_URL}?v=${Date.now()}`,
+        { cache: "no-store", mode: "cors" },
+        EXTERNAL_CATALOG_TIMEOUT_MS,
+        "ERP catalog"
+      );
+      const valid = Array.isArray(payload) || Array.isArray(payload?.products);
+      const rows = Array.isArray(payload) ? payload : Array.isArray(payload?.products) ? payload.products : [];
+      if (!valid || !rows.length) state.diagnostics.externalRequests.catalog.status = valid ? "empty" : "invalid_payload";
+      attempts.push({ attempt, ...state.diagnostics.externalRequests.catalog });
+      return rows;
+    } catch (error) {
+      attempts.push({ attempt, ...state.diagnostics.externalRequests.catalog });
+      if (attempt === 1 && state.diagnostics.externalRequests.catalog.status === "timeout") {
+        await new Promise(resolve => window.setTimeout(resolve, ERP_CATALOG_RETRY_DELAY_MS));
+        continue;
+      }
+      console.info("HAODE app usando catálogo local:", error.message);
+      return [];
+    }
   }
 }
 
@@ -887,7 +924,10 @@ function updateProductDiagnostics(source = "products.json") {
     productosActivos: state.diagnostics.normalizedTotal,
     productosVisibles: Math.max(products.length, 0),
     fuente: source,
-    erpStockItems: state.diagnostics.erpStockItems
+    erpStockItems: state.diagnostics.erpStockItems,
+    externalRequests: state.diagnostics.externalRequests,
+    externalRefresh: state.diagnostics.externalRefresh,
+    catalogAttempts: state.diagnostics.catalogAttempts
   };
 }
 
@@ -911,6 +951,7 @@ async function refreshProductsFromExternal(normalizedProducts) {
         ? "products.json + erp public-stock.json"
         : "products.json"
   );
+  state.diagnostics.externalRefresh.source = erpCatalogRows.length ? "catalog" : erpStockRows.length ? "stock" : "local";
   return Boolean(erpCatalogRows.length || erpStockRows.length);
 }
 
@@ -948,12 +989,22 @@ function afterFirstPaint(callback, delayMs = 0) {
 }
 
 function scheduleBackgroundRefresh(normalizedProducts) {
+  const timing = state.diagnostics.externalRefresh;
+  timing.phase = "scheduled";
+  timing.scheduledAtMs = Math.round(performance.now());
   afterFirstPaint(() => {
+    timing.phase = "requesting";
+    timing.startedAtMs = Math.round(performance.now());
     refreshProductsFromExternal(normalizedProducts).then((externalCatalogChanged) => {
+      timing.phase = "complete";
+      timing.completedAtMs = Math.round(performance.now());
       if (!externalCatalogChanged) return;
       if (state.route.name !== "home") renderRoute();
       renderCart();
+      timing.renderedAtMs = Math.round(performance.now());
     }).catch((error) => {
+      timing.phase = "failed";
+      timing.completedAtMs = Math.round(performance.now());
       console.info("HAODE app no pudo actualizar datos secundarios:", error.message);
     });
   }, 1500);
