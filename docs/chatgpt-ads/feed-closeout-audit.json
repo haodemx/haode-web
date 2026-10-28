@@ -25,7 +25,7 @@
     "structured_data": {
       "path": "producto/{id}/index.html",
       "product_pages": 146,
-      "sha256": "d9399b73bfcfd25e1e1b99e75b3af9b617caf663a361f1a7a2e9fa5f5982c845"
+      "sha256": "c9e0cbbeb7af1dde0902f5c715fd074dae42189dfb3484fa8edf0d551d4e45e9"
     },
     "feed": {
       "path": "data/marketing/chatgpt-product-feed.json",

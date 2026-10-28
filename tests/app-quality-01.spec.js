@@ -41,6 +41,13 @@ for(const width of [390,1440])for(const p of cases)for(const state of ['stale','
   await expect(page.locator('[data-detail-description]')).toContainText(p.quality);
   const nodes=await page.locator('script[type="application/ld+json"]').evaluateAll(xs=>xs.flatMap(x=>{const d=JSON.parse(x.textContent);return d['@graph']||[d];}));
   const schema=nodes.find(x=>x['@type']==='Product');expect(schema.name).toBe(`${p.name} INCELL`);
+  if(p.id.includes('bolsa')) {
+   const business=nodes.find(x=>x['@type']==='LocalBusiness');
+   expect(business).toBeTruthy();
+   expect(business).not.toHaveProperty('description');
+   expect(business.telephone).toBe('+52 33 2668 4296');
+   expect(business).not.toHaveProperty('priceRange');
+  }
   expect(schema.description).toBe((await page.locator('[data-detail-description]').textContent()).trim());
   expect(schema.description).toContain(p.quality);
   expect(schema.offers.map(o=>Number(o.price))).toEqual(p.prices);
