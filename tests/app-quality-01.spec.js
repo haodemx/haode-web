@@ -33,6 +33,10 @@ for(const width of [390,1440])for(const p of cases)for(const state of ['stale','
   await page.goto(`${BASE}/app/#producto/${p.id}`,{waitUntil:'networkidle'});
   if(state==='stale')await expect(page.locator('[data-detail-whatsapp]')).toHaveAttribute('href',new RegExp(encodeURIComponent(`SKU: ${p.sku}`)));
   await assertApp(page,p);
+  await expect.poll(()=>page.evaluate(()=>window.HAODE_DIAGNOSTICS?.externalRefresh?.phase)).toBe('complete');
+  const timing=await page.evaluate(()=>window.HAODE_DIAGNOSTICS.externalRequests.catalog);
+  expect(timing.status).toBe(state==='stale'?'success':state==='empty'?'empty':'http_error');
+  expect(timing.elapsedMs).toBeGreaterThanOrEqual(timing.headersMs);
   await page.screenshot({path:testInfo.outputPath('app-approved-xr.png'),fullPage:false});
   await page.goto(`${BASE}/producto/${p.id}/`,{waitUntil:'networkidle'});
   if(state==='stale')await expect(page.locator('[data-detail-subtitle]')).toContainText('Disponible ERP');
