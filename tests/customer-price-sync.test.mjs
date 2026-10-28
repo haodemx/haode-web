@@ -119,7 +119,7 @@ test('legacy AI product pages expose every source-backed tier and matching Produ
 
 test('reapplying the customer price sync preserves named manual tiers', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'haode-price-sync-'));
-  for (const directory of ['scripts', 'data', 'app', 'docs/master-data', 'docs/reports']) {
+  for (const directory of ['scripts', 'data', 'app', 'docs/master-data', 'docs/reports', 'producto/iphone-incell-xr-bolsa-protectora']) {
     fs.mkdirSync(path.join(root, directory), { recursive: true });
   }
   for (const file of [
@@ -130,6 +130,7 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
     'data/products.generated.js',
     'app/products.json',
     'docs/master-data/products-master.csv',
+    'producto/iphone-incell-xr-bolsa-protectora/index.html',
   ]) {
     fs.copyFileSync(new URL(`../${file}`, import.meta.url), path.join(root, file));
   }
@@ -154,6 +155,8 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
     encoding: 'utf8',
   });
   assert.equal(result.status, 0, result.stderr || result.stdout);
+  const bagPage = path.join(root, 'producto/iphone-incell-xr-bolsa-protectora/index.html');
+  assert.doesNotMatch(fs.readFileSync(bagPage, 'utf8'), /XR Bolsa Protectora INCELL FHD/);
 
   const syncedWebsiteText = fs.readFileSync(path.join(root, 'data/products.generated.js'), 'utf8');
   const syncedWebsite = JSON.parse(syncedWebsiteText.slice(syncedWebsiteText.indexOf('['), syncedWebsiteText.lastIndexOf(']') + 1));
@@ -166,6 +169,7 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   }
   const republish = spawnSync(process.execPath, [path.join(root, 'scripts/sync-customer-prices.js'), '--apply', '--publish-unlisted'], { cwd: root, encoding: 'utf8' });
   assert.equal(republish.status, 0, republish.stderr || republish.stdout);
+  assert.doesNotMatch(fs.readFileSync(bagPage, 'utf8'), /XR Bolsa Protectora INCELL FHD/);
   for (const id of mediaIds) {
     const regenerated = fs.readFileSync(path.join(root, 'producto', id, 'index.html'), 'utf8');
     assert.ok(regenerated.includes('Foto específica de este modelo pendiente de confirmar.'));

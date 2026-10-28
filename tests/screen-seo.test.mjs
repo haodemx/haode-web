@@ -14,6 +14,20 @@ const meta = (html, key) => html.match(new RegExp(`<meta (?:name|property)="${ke
 const nodes = (html) => [...html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
   .flatMap((m) => { const data = JSON.parse(m[1]); return data['@graph'] || [data]; });
 
+test('XR Bolsa omits stale product copy from LocalBusiness before and after SEO refresh', () => {
+  const product = products.find(p => p.id === 'iphone-incell-xr-bolsa-protectora');
+  const html = read(`producto/${product.id}/index.html`);
+  for (const source of [html, refreshScreenProduct(html, product)]) {
+    const business = nodes(source).find(n => n['@type'] === 'LocalBusiness');
+    assert.ok(business);
+    assert.equal(business['@id'], 'https://haode.com.mx/#localbusiness');
+    assert.equal(business.telephone, '+52 33 2668 4296');
+    assert.equal(business.address.postalCode, '06070');
+    assert.equal(business.description, undefined, 'store metadata must not retain XR Bolsa INCELL FHD copy');
+    assert.equal(business.priceRange, undefined);
+  }
+});
+
 test('screen selection covers all six screen families without Samsung whole phones', () => {
   assert.equal(new Set(products.map((p) => p.category)).size, 6);
   assert.ok(products.length >= 141);
