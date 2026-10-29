@@ -637,7 +637,8 @@ function hasAuthoritativeCustomerPrices(product) {
     || source.includes("Lista_de_Precios_HAODE_20260721.pdf")
     || source.includes("HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx")
     || source.includes("HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx")
-    || source.includes("HAODE_Lista_de_Precios_2026-09-24.xlsx");
+    || source.includes("HAODE_Lista_de_Precios_2026-09-24.xlsx")
+    || source.includes("HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf");
 }
 
 function stockClassName(value) {
@@ -795,7 +796,11 @@ function mergeErpCatalog(localProducts, catalogRows) {
   const usedLocalIndexes = new Set();
   const bySku = new Map(localCatalog.map((product, index) => [stockKey(product.sku), index]).filter(([key]) => key));
   const byId = new Map(localCatalog.map((product, index) => [stockKey(product.id), index]).filter(([key]) => key));
-  const byName = new Map(localCatalog.map((product, index) => [stockKey(product.name), index]).filter(([key]) => key));
+  const byName = new Map();
+  localCatalog.forEach((product, index) => {
+    const key = stockKey(product.name);
+    if (key) byName.set(key, byName.has(key) ? null : index);
+  });
   const identityCandidates = new Map();
   localCatalog.forEach((product, index) => {
     const key = catalogIdentityKey(product);
@@ -805,12 +810,17 @@ function mergeErpCatalog(localProducts, catalogRows) {
     identityCandidates.set(key, matches);
   });
   catalogRows.forEach((row) => {
-    const identityMatches = identityCandidates.get(catalogIdentityKey(row)) || [];
+    const rowIdentity = catalogIdentityKey(row);
+    const identityMatches = identityCandidates.get(rowIdentity) || [];
     const identityIndex = identityMatches.length === 1 ? identityMatches[0] : undefined;
+    const namedIndex = byName.get(stockKey(row.public_name_es));
+    const namedIdentity = namedIndex != null ? catalogIdentityKey(localCatalog[namedIndex]) : "";
+    const compatibleNameIndex = namedIndex != null && (!rowIdentity || !namedIdentity || rowIdentity === namedIdentity)
+      ? namedIndex : undefined;
     const candidateIndex = bySku.get(stockKey(row.sku))
       ?? byId.get(stockKey(ERP_LOCAL_PRODUCT_ID_BY_SKU[row.sku]))
-      ?? byName.get(stockKey(row.public_name_es))
-      ?? identityIndex;
+      ?? identityIndex
+      ?? compatibleNameIndex;
     const index = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;
     // The approved local price list is the public allowlist; ERP may only enrich exact matches.
     if (index === undefined) return;
@@ -818,23 +828,24 @@ function mergeErpCatalog(localProducts, catalogRows) {
     usedLocalIndexes.add(index);
     const current = localCatalog[index];
     const hasAuthoritativeLocalPrices = hasAuthoritativeCustomerPrices(current);
-    // Owner-approved XR facts include the visible model and price copy, not
+    // Approved customer facts include the visible model and price copy, not
     // just numeric tiers. Public ERP imports can still carry the old wording.
-    const hasApprovedXrCopy = hasAuthoritativeLocalPrices
-      && ['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(current.id);
+    const hasApprovedCommercialCopy = hasAuthoritativeLocalPrices
+      && (String(current.priceSource).includes('HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf')
+        || ['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(current.id));
     const mergedTiers = hasAuthoritativeLocalPrices
       ? current.priceTiers
       : incoming.priceTiers;
     result.push({
       ...current,
       sku: incoming.sku || current.sku,
-      name: hasApprovedXrCopy ? current.name : incoming.name || current.name,
-      displayName: hasApprovedXrCopy ? current.displayName : incoming.displayName || current.displayName,
-      model: hasApprovedXrCopy ? current.model : incoming.model || current.model,
+      name: hasApprovedCommercialCopy ? current.name : incoming.name || current.name,
+      displayName: hasApprovedCommercialCopy ? current.displayName : incoming.displayName || current.displayName,
+      model: hasApprovedCommercialCopy ? current.model : incoming.model || current.model,
       // The confirmed customer workbook owns the public quality label.
       // ERP enriches inventory metadata only and must not replace that label.
-      quality: current.quality || incoming.quality,
-      description: hasApprovedXrCopy ? current.description : incoming.description || current.description,
+      quality: hasApprovedCommercialCopy ? current.quality : current.quality || incoming.quality,
+      description: hasApprovedCommercialCopy ? current.description : incoming.description || current.description,
       publicPrice: hasAuthoritativeLocalPrices ? current.publicPrice : incoming.publicPrice,
       wholesalePrice: hasAuthoritativeLocalPrices ? current.wholesalePrice : incoming.wholesalePrice,
       priceTiers: mergedTiers,
@@ -862,12 +873,26 @@ function applyErpStock(localProducts, stockRows) {
   if (!stockRows.length) return localProducts;
   const bySku = new Map();
   const byName = new Map();
+  const localNameCounts = new Map();
+  localProducts.forEach(product => {
+    for (const key of new Set([stockKey(product.name), stockKey(product.displayName)].filter(Boolean))) {
+      localNameCounts.set(key, (localNameCounts.get(key) || 0) + 1);
+    }
+  });
   stockRows.forEach((row) => {
     if (row.sku) bySku.set(stockKey(row.sku), row);
-    if (row.public_name_es) byName.set(stockKey(row.public_name_es), row);
+    const alias = ERP_LOCAL_PRODUCT_ID_BY_SKU[row.sku];
+    if (alias) bySku.set(stockKey(alias), row);
+    const key = stockKey(row.public_name_es);
+    if (key) byName.set(key, byName.has(key) ? null : row);
   });
   return localProducts.map((product) => {
-    const match = bySku.get(stockKey(product.sku)) || bySku.get(stockKey(product.id)) || byName.get(stockKey(product.name)) || byName.get(stockKey(product.displayName));
+    const namedMatch = [stockKey(product.name), stockKey(product.displayName)]
+      .filter(key => localNameCounts.get(key) === 1).map(key => byName.get(key)).find(Boolean);
+    const namedIdentity = namedMatch ? catalogIdentityKey(namedMatch) : "";
+    const productIdentity = catalogIdentityKey(product);
+    const compatibleNamedMatch = !namedIdentity || !productIdentity || namedIdentity === productIdentity ? namedMatch : null;
+    const match = bySku.get(stockKey(product.sku)) || bySku.get(stockKey(product.id)) || compatibleNamedMatch;
     if (!match) return product;
     return {
       ...product,
@@ -2179,7 +2204,8 @@ function buildWhatsappUrl() {
       const priceRule = priceRuleFor(item.product, item.quantity);
       const subtotal = priceRule.unitPrice * item.quantity;
       const referenceLabel = item.product.officialSkuPending ? "Referencia web" : "SKU";
-      return `- ${item.product.name} | ${referenceLabel}: ${item.product.sku || item.product.reference || item.product.id} | Modelo: ${item.product.model} | Cantidad: ${item.quantity} | Precio estimado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
+      const quality = item.product.quality?.label ? ` | Calidad: ${item.product.quality.label}` : "";
+      return `- ${item.product.name} | ${referenceLabel}: ${item.product.sku || item.product.reference || item.product.id} | Modelo: ${item.product.model}${quality} | Cantidad: ${item.quantity} | Precio estimado: ${priceRule.label} ${formatPrice(priceRule.unitPrice)} | Subtotal: ${formatPrice(subtotal)}`;
     }),
     "",
     `Total estimado: ${formatPrice(cartTotal())}`,
@@ -2303,7 +2329,7 @@ function singleProductWhatsappUrl(product) {
     `${product.name}`,
     `${referenceLabel}: ${product.sku || product.reference || product.id}`,
     `Modelo: ${product.model}`,
-    ...(['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(product.id) && product.quality?.label
+    ...(product.quality?.label
       ? [`Calidad: ${product.quality.label}`] : []),
     `Precio menudeo: ${formatPrice(product.publicPrice)}`,
     `Precio mayoreo: ${formatPrice(product.wholesalePrice)}`,

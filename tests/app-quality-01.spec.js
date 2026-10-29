@@ -4,8 +4,8 @@ const fs = require('fs');
 const BASE = (process.env.BASE_URL || 'http://127.0.0.1:4188').replace(/\/$/, '');
 const app = JSON.parse(fs.readFileSync('app/products.json', 'utf8'));
 const cases = [
-  {id:'iphone-incell-xr', sku:'IP-XR-INCELL-FHD', name:'Pantalla para iPhone XR', quality:'INCELL FHD C/IC', prices:[160,150,145,140], oldBox:165},
-  {id:'iphone-incell-xr-bolsa-protectora', sku:'IP-INCELL-XR-HD', name:'Pantalla para iPhone XR Bolsa Protectora', quality:'INCELL HD+ C/IC', prices:[155,145,135,130], oldBox:145},
+  {id:'iphone-incell-xr', sku:'IP-XR-INCELL-FHD', name:'Pantalla para iPhone XR', quality:'INCELL FHD C/IC', prices:[175,165,160,155], oldBox:165},
+  {id:'iphone-incell-xr-bolsa-protectora', sku:'IP-INCELL-XR-HD', name:'Pantalla para iPhone XR Bolsa Protectora', quality:'INCELL HD+ C/IC', prices:[170,160,150,145], oldBox:145},
 ];
 function staleRow(p) {
  return {sku:p.sku, public_name_es:`Pantalla iPhone XR ${p.id.includes('bolsa')?'Bolsa Protectora ':''}INCELL FHD`, model:p.id.includes('bolsa')?'iPhone XR Bolsa Protectora':'Pantalla iPhone XR INCELL FHD', category:'iPhone INCELL', quality:'INCELL FHD', description_es:`100 pzs/modelo: ${p.oldBox}; Fuente: Lista_Precios`, public_price_mxn:999, public_price_tiers:[{code:'WHOLESALE_5',unit_price_mxn:998},{code:'BOX_MODEL',unit_price_mxn:997}], sales_available:true,stock_status:'available',stock_label:'Disponible ERP',updated_at:'2026-10-27T12:00:00-06:00'};

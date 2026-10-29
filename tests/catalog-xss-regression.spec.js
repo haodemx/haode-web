@@ -32,7 +32,12 @@ test('ERP catalog text is rendered as text in the public App', async ({ page }) 
   }));
 
   await page.goto(`${SERVER_URL}/app/#lista`, { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('h3', { hasText: 'Pantalla <img src=x' }).first()).toBeVisible();
+  // Approved November product copy cannot be replaced by an ERP name. Stock
+  // labels remain ERP-enriched and must still render hostile text literally.
+  const approved = page.locator('.product-card').filter({ has: page.locator('[data-add-product="haode-ai-g3-smart-glasses"]') });
+  await expect(approved).toBeVisible();
+  await expect(approved.locator('.stock-badge')).toHaveText(ATTACK_TEXT);
+  await expect(page.locator('h3', { hasText: 'Pantalla <img src=x' })).toHaveCount(0);
   await expect(page.locator('img[src="x"]')).toHaveCount(0);
   await expect.poll(() => page.evaluate(() => ({
     textAttack: document.body.dataset.auditXss || null,

@@ -7,11 +7,11 @@ import { readCatalog } from '../scripts/acquisition-directory.mjs';
 const read = (path) => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 
 const expected = [
-  ['mica-hd', ['350', '300', '275', '250']],
-  ['mica-matte', ['350', '300', '275', '250']],
-  ['mica-privacidad-hd', ['800', '750', '700', '650']],
-  ['mica-privacidad-matte', ['800', '750', '700', '650']],
-  ['x200t-cortadora-micas', ['6000', '5800', '5500', '5300']],
+  ['mica-hd', ['375', '325', '300', '275']],
+  ['mica-matte', ['375', '325', '300', '275']],
+  ['mica-privacidad-hd', ['825', '775', '725', '675']],
+  ['mica-privacidad-matte', ['825', '775', '725', '675']],
+  ['x200t-cortadora-micas', ['6100', '5900', '5600', '5400']],
 ];
 
 function schemas(html) {

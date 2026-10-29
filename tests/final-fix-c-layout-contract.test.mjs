@@ -68,13 +68,13 @@ test('cart quantity mutations emit complete consent-aware ecommerce events', () 
   assert.match(appShell, /Mayoreo, Caja y VIP se confirman con un asesor por WhatsApp/i);
 });
 
-test('MICA HD public sources keep exact approved prices and worksheet provenance', () => {
+test('MICA HD public sources keep exact approved prices and PDF provenance', () => {
   const mica = appProducts.find((product) => product.id === 'mica-hd');
   assert.ok(mica);
-  assert.deepEqual([mica.precioPublico, ...mica.priceTiers.map((tier) => tier.price)], [350, 300, 275, 250]);
-  assert.match(mica.priceSource, /01 HIDROGEL · fila 8$/);
-  assert.match(webProducts, /"id": "mica-hd"[\s\S]*?"Menudeo"[\s\S]*?\$350 MXN[\s\S]*?"Mayoreo"[\s\S]*?\$300 MXN[\s\S]*?"Caja"[\s\S]*?\$275 MXN[\s\S]*?"⭐ VIP"[\s\S]*?\$250 MXN[\s\S]*?01 HIDROGEL · fila 8/);
-  assert.match(micas, /aria-label="Precios de MICA HD"[\s\S]*?\$350 MXN[\s\S]*?\$300 MXN[\s\S]*?\$275 MXN[\s\S]*?\$250 MXN/);
+  assert.deepEqual([mica.precioPublico, ...mica.priceTiers.map((tier) => tier.price)], [375, 325, 300, 275]);
+  assert.match(mica.priceSource, /PDF p2 · MICAS HIDROGEL · fila 15$/);
+  assert.match(webProducts, /"id": "mica-hd"[\s\S]*?"Menudeo"[\s\S]*?\$375 MXN[\s\S]*?"Mayoreo"[\s\S]*?\$325 MXN[\s\S]*?"Caja"[\s\S]*?\$300 MXN[\s\S]*?"⭐ VIP"[\s\S]*?\$275 MXN[\s\S]*?PDF p2 · MICAS HIDROGEL · fila 15/);
+  assert.match(micas, /aria-label="Precios de MICA HD"[\s\S]*?\$375 MXN[\s\S]*?\$325 MXN[\s\S]*?\$300 MXN[\s\S]*?\$275 MXN/);
   assert.doesNotMatch(micas, /<\/table>75 MXN|<\/table>50 MXN/);
 });
 

@@ -86,7 +86,7 @@ test("iPhone INCELL category keeps the confirmed Bolsa Protectora box price", as
   const category = await readFile(path.join(root, "categoria", "iphone-incell", "index.html"), "utf8");
   const premium = await readFile(path.join(root, "pantallas-premium-iphone-samsung-fabrica", "index.html"), "utf8");
   assert.doesNotMatch(category, /Bolsa Protectora caja \$140/i);
-  assert.match(category, /Bolsa Protectora caja \$135/i);
+  assert.match(category, /Bolsa Protectora caja \$150/i);
   assert.doesNotMatch(premium, /iPhone 11\/XR desde caja \$140/i);
-  assert.match(premium, /iPhone 11\/XR desde caja \$135/i);
+  assert.match(premium, /iPhone 11\/XR desde caja \$150/i);
 });

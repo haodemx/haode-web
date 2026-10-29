@@ -3,8 +3,8 @@ const fs=require('fs');
 const BASE=(process.env.BASE_URL||'http://127.0.0.1:4188').replace(/\/$/,'');
 const approved=JSON.parse(fs.readFileSync('app/products.json','utf8'));
 const variants=[
- {id:'iphone-incell-xr',sku:'IP-XR-INCELL-FHD',quality:'INCELL FHD C/IC',box:145},
- {id:'iphone-incell-xr-bolsa-protectora',sku:'IP-INCELL-XR-HD',quality:'INCELL HD+ C/IC',box:135}
+ {id:'iphone-incell-xr',sku:'IP-XR-INCELL-FHD',quality:'INCELL FHD C/IC',box:160},
+ {id:'iphone-incell-xr-bolsa-protectora',sku:'IP-INCELL-XR-HD',quality:'INCELL HD+ C/IC',box:150}
 ];
 for(const width of [390,1440])for(const p of variants)for(const mode of ['slow-body','recover-body','success']) {
  test(`App ERP timing ${p.id} ${mode} ${width}`,async({page},info)=>{

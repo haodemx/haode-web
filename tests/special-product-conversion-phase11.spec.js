@@ -3,11 +3,11 @@ const { test, expect } = require('@playwright/test');
 const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4173';
 
 const specialPages = [
-  ['/producto/lk-007-camara-digital-4k/', 'special-camera-lk007', '$500 MXN'],
-  ['/producto/lk-018-camara-accion-hd/', 'special-camera-lk018', '$850 MXN'],
-  ['/producto/lk-030-mini-camara-retro-digital/', 'special-camera-lk030', '$400 MXN'],
-  ['/producto/lk-032-camara-inteligente-con-gimbal/', 'special-camera-lk032', '$500 MXN'],
-  ['/producto/x200t-cortadora-micas/', 'special-machine-x200t', '$6,000 MXN'],
+  ['/producto/lk-007-camara-digital-4k/', 'special-camera-lk007', '$550 MXN'],
+  ['/producto/lk-018-camara-accion-hd/', 'special-camera-lk018', '$930 MXN'],
+  ['/producto/lk-030-mini-camara-retro-digital/', 'special-camera-lk030', '$440 MXN'],
+  ['/producto/lk-032-camara-inteligente-con-gimbal/', 'special-camera-lk032', '$550 MXN'],
+  ['/producto/x200t-cortadora-micas/', 'special-machine-x200t', '$6,100 MXN'],
 ];
 
 test.describe('HAODE special product conversion UI phase 11', () => {

@@ -177,8 +177,8 @@ test("keeps the approved App catalog authoritative and submits an attributed ide
   await expect(page.locator(".product-card", { hasText: "NOTE 10+ OLED PREMIUM" })).toHaveCount(0);
 
   const approvedCard = page.locator(".product-card", { hasText: "HAODE X200T Cortadora Inteligente de Micas" });
-  await expect(approvedCard).toContainText("$6,000");
-  await expect(approvedCard).toContainText("$5,800");
+  await expect(approvedCard).toContainText("$6,100");
+  await expect(approvedCard).toContainText("$5,900");
   await expect(approvedCard).not.toContainText("$6,700");
   await approvedCard.getByRole("button", { name: "Agregar" }).click();
 
@@ -192,16 +192,16 @@ test("keeps the approved App catalog authoritative and submits an attributed ide
   expect(submitted.body.utm_campaign).toBe("omnichannel_2");
   expect(submitted.idempotencyKey).toBe(submitted.body.client_request_id);
 
-  const mergedIphoneCards = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
+  const mergedIphoneCards = page.locator(".product-card").filter({ has: page.locator('[data-add-product="iphone-incell-14"]') });
   await expect(mergedIphoneCards).toHaveCount(1);
 
-  const g3Card = page.locator(".product-card", { hasText: "Gafas AI G3" });
+  const g3Card = page.locator(".product-card").filter({ has: page.locator('[data-add-product="haode-ai-g3-smart-glasses"]') });
   await expect(g3Card).toHaveCount(1);
   await expect(g3Card.locator("img")).toHaveAttribute("src", /ai-smart-glasses-aimb-g3-main\.jpeg/);
 
   const localBolsaCard = page.locator(".product-card", { hasText: "iPhone 11 Bolsa Protectora" });
   await expect(localBolsaCard).toBeVisible();
-  await expect(localBolsaCard).toContainText("$155 MXN");
+  await expect(localBolsaCard).toContainText("$170 MXN");
 
   await page.goto(`${APP_URL}#producto/x200t-cortadora-micas`, { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { name: /X200T/i })).toBeVisible();
@@ -226,6 +226,6 @@ test("keeps the approved desktop catalog authoritative", async ({ page }) => {
   const localBolsaCard = page.locator("[data-catalog-card]", { hasText: "Pantalla para iPhone 11 Bolsa Protectora" });
   await expect(localBolsaCard).toBeAttached();
   await expect(localBolsaCard).toContainText("Menudeo");
-  await expect(localBolsaCard).toContainText("$155 MXN");
+  await expect(localBolsaCard).toContainText("$170 MXN");
   await saveEvidence(page, "website-erp-catalog.png");
 });

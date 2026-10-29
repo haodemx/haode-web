@@ -1469,7 +1469,8 @@ function hasAuthoritativeCustomerPrices(product) {
     || source.includes('Lista_de_Precios_HAODE_20260721.pdf')
     || source.includes('HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx')
     || source.includes('HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx')
-    || source.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx');
+    || source.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx')
+    || source.includes('HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf');
 }
 
 function applyErpPublicCatalog(rows) {
@@ -1483,7 +1484,10 @@ function applyErpPublicCatalog(rows) {
   localProducts.forEach((product, index) => {
     if (product.id) byId.set(stockLookupKey(product.id), index);
     [product.sku, product.id].filter(Boolean).forEach((value) => bySku.set(stockLookupKey(value), index));
-    if (product.name) byName.set(stockLookupKey(product.name), index);
+    if (product.name) {
+      const key = stockLookupKey(product.name);
+      byName.set(key, byName.has(key) ? null : index);
+    }
     const identity = catalogIdentityKey(product);
     if (!identity) return;
     const matches = identityCandidates.get(identity) || [];
@@ -1492,17 +1496,22 @@ function applyErpPublicCatalog(rows) {
   });
 
   rows.forEach((row) => {
-    const identityMatches = identityCandidates.get(catalogIdentityKey({
+    const rowIdentity = catalogIdentityKey({
       category: erpCatalogCategory(row),
       name: row.public_name_es,
       model: row.model,
       quality: row.quality,
-    })) || [];
+    });
+    const identityMatches = identityCandidates.get(rowIdentity) || [];
     const identityIndex = identityMatches.length === 1 ? identityMatches[0] : undefined;
+    const namedIndex = byName.get(stockLookupKey(row.public_name_es));
+    const namedIdentity = namedIndex != null ? catalogIdentityKey(localProducts[namedIndex]) : '';
+    const compatibleNameIndex = namedIndex != null && (!rowIdentity || !namedIdentity || rowIdentity === namedIdentity)
+      ? namedIndex : undefined;
     const candidateIndex = bySku.get(stockLookupKey(row.sku))
       ?? byId.get(stockLookupKey(ERP_LOCAL_PRODUCT_ID_BY_SKU[row.sku]))
-      ?? byName.get(stockLookupKey(row.public_name_es))
-      ?? identityIndex;
+      ?? identityIndex
+      ?? compatibleNameIndex;
     const existingIndex = candidateIndex !== undefined && !usedLocalIndexes.has(candidateIndex) ? candidateIndex : undefined;
     // The approved local price list is the public allowlist; ERP may only enrich exact matches.
     if (existingIndex === undefined) return;
@@ -1510,15 +1519,16 @@ function applyErpPublicCatalog(rows) {
     usedLocalIndexes.add(existingIndex);
     const product = localProducts[existingIndex];
     const hasConfirmedCustomerPrices = hasAuthoritativeCustomerPrices(product);
-    const hasApprovedXrCopy = hasConfirmedCustomerPrices
-      && ['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(product.id);
+    const hasApprovedCommercialCopy = hasConfirmedCustomerPrices
+      && (String(product.priceSource).includes('HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf')
+        || ['iphone-incell-xr', 'iphone-incell-xr-bolsa-protectora'].includes(product.id));
     product.sku = row.sku || product.sku;
-    if (!hasApprovedXrCopy) {
+    if (!hasApprovedCommercialCopy) {
       product.name = row.public_name_es || product.name;
       product.model = row.model || product.model;
     }
     // The confirmed catalogue quality stays authoritative when ERP refreshes stock.
-    if (!hasConfirmedCustomerPrices || !product.quality) {
+    if (!hasApprovedCommercialCopy && (!hasConfirmedCustomerPrices || !product.quality)) {
       product.quality = row.quality || product.quality;
     }
     // ERP descriptions can embed superseded price tiers; keep approved copy
@@ -1542,20 +1552,30 @@ function applyErpPublicCatalog(rows) {
 
 function applyErpPublicStock(rows) {
   if (!Array.isArray(rows) || !rows.length) return;
-  const byKey = new Map();
+  const bySku = new Map();
+  const byText = new Map();
+  const localTextCounts = new Map();
+  PRODUCTS.forEach(product => {
+    for (const key of new Set([product.name, product.model].filter(Boolean).map(stockLookupKey))) {
+      localTextCounts.set(key, (localTextCounts.get(key) || 0) + 1);
+    }
+  });
   rows.forEach((row) => {
-    [
-      row.sku,
-      row.public_name_es,
-      row.model,
-    ].filter(Boolean).forEach((value) => byKey.set(stockLookupKey(value), row));
+    [row.sku, ERP_LOCAL_PRODUCT_ID_BY_SKU[row.sku]].filter(Boolean).forEach(value => bySku.set(stockLookupKey(value), row));
+    for (const key of new Set([row.public_name_es, row.model].filter(Boolean).map(stockLookupKey))) {
+      byText.set(key, byText.has(key) ? null : row);
+    }
   });
 
   PRODUCTS.forEach((product) => {
-    const row = byKey.get(stockLookupKey(product.sku))
-      || byKey.get(stockLookupKey(product.id))
-      || byKey.get(stockLookupKey(product.name))
-      || byKey.get(stockLookupKey(product.model));
+    const textMatch = [product.name, product.model].filter(Boolean).map(stockLookupKey)
+      .filter(key => localTextCounts.get(key) === 1).map(key => byText.get(key)).find(Boolean);
+    const rowIdentity = textMatch ? catalogIdentityKey({...textMatch, category: erpCatalogCategory(textMatch), name: textMatch.public_name_es}) : '';
+    const productIdentity = catalogIdentityKey(product);
+    const compatibleTextMatch = !rowIdentity || !productIdentity || rowIdentity === productIdentity ? textMatch : null;
+    const row = bySku.get(stockLookupKey(product.sku))
+      || bySku.get(stockLookupKey(product.id))
+      || compatibleTextMatch;
     if (!row) return;
     product.sku = row.sku || product.sku;
     product.stockStatus = row.stock_status || 'ask_stock';

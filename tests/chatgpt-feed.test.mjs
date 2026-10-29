@@ -47,7 +47,7 @@ test('confirmed retail prices are used while unverified stock and ERP-like field
   const result = buildFeed(modified);
   for (const [index, item] of result.items.entries()) {
     assert.deepEqual(item.price, feed.items[index].price);
-    assert.equal(item.price_status, 'confirmed_retail_2026-09-24');
+    assert.equal(item.price_status, 'confirmed_retail_2026-11');
     assert.equal(item.availability, 'unknown');
     assert.equal(item.platform_ready, false);
     assert.equal(item.blockers.includes('confirmed_current_price_required'), false);

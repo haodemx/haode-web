@@ -64,10 +64,10 @@ test('C-layout routes, Schema, MICA table and 404 behavior are valid', async ({ 
 
   const micaSource = await (await request.get(`${BASE_URL}/micas.html`)).text();
   const micaTable = micaSource.match(/<table class="detail-price-table" aria-label="Precios de MICA HD">([\s\S]*?)<\/table>/)?.[1] || '';
-  expect(micaTable).toContain('<th scope="row">Menudeo</th><td>$350 MXN</td>');
-  expect(micaTable).toContain('<th scope="row">Mayoreo</th><td>$300 MXN</td>');
-  expect(micaTable).toContain('<th scope="row">Caja</th><td>$275 MXN</td>');
-  expect(micaTable).toContain('<th scope="row">⭐ VIP</th><td>$250 MXN</td>');
+  expect(micaTable).toContain('<th scope="row">Menudeo</th><td>$375 MXN</td>');
+  expect(micaTable).toContain('<th scope="row">Mayoreo</th><td>$325 MXN</td>');
+  expect(micaTable).toContain('<th scope="row">Caja</th><td>$300 MXN</td>');
+  expect(micaTable).toContain('<th scope="row">⭐ VIP</th><td>$275 MXN</td>');
 });
 
 test('cart emits the exact 0→1→2→1→0 ecommerce delta sequence', async ({ page }) => {

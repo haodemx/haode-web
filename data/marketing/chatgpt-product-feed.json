@@ -2,8 +2,8 @@
   "schema_version": 1,
   "status": "LOCAL_PREPARED_NOT_UPLOAD_READY",
   "source": "data/products.generated.js",
-  "content_sha256": "b2ecedfe5d00ea505f2db254138fffda5ef1946bb3193cfef3a9850505940250",
-  "price_policy": "Precio de menudeo confirmado por la lista comercial del 2026-09-24; confirma cantidad y disponibilidad por WhatsApp.",
+  "content_sha256": "9721338eae50f7c132875ec00f58fd9d91a5d9c122d06cde88a60bc644f276e1",
+  "price_policy": "Precio de menudeo confirmado por la lista comercial del 2026-11; confirma cantidad y disponibilidad por WhatsApp.",
   "availability_policy": "unknown no significa disponible ni agotado.",
   "items": [
     {
@@ -14,10 +14,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/11-pro-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 685,
+        "amount": 750,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -42,10 +42,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/12-12-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 760,
+        "amount": 835,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -70,10 +70,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/12-pro-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 900,
+        "amount": 985,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -98,10 +98,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 890,
+        "amount": 975,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -126,10 +126,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-13-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 980,
+        "amount": 1075,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -154,10 +154,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/13-pro-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 965,
+        "amount": 1060,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -182,10 +182,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 890,
+        "amount": 975,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -210,10 +210,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-plus.png",
       "availability": "unknown",
       "price": {
-        "amount": 945,
+        "amount": 1035,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -238,10 +238,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-14-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 1390,
+        "amount": 1525,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -266,10 +266,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/14-pro-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 965,
+        "amount": 1060,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -294,10 +294,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15.png",
       "availability": "unknown",
       "price": {
-        "amount": 1335,
+        "amount": 1465,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -322,10 +322,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-plus.png",
       "availability": "unknown",
       "price": {
-        "amount": 1390,
+        "amount": 1525,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -350,10 +350,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 1390,
+        "amount": 1525,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -378,10 +378,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/15-pro-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 1410,
+        "amount": 1545,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -406,10 +406,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16.png",
       "availability": "unknown",
       "price": {
-        "amount": 1390,
+        "amount": 1525,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -434,10 +434,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-plus.png",
       "availability": "unknown",
       "price": {
-        "amount": 1615,
+        "amount": 1770,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -462,10 +462,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 1615,
+        "amount": 1770,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -490,10 +490,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/16-pro-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 1650,
+        "amount": 1810,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -518,10 +518,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17.png",
       "availability": "unknown",
       "price": {
-        "amount": 1865,
+        "amount": 2045,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -546,10 +546,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro.png",
       "availability": "unknown",
       "price": {
-        "amount": 1905,
+        "amount": 2090,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -574,10 +574,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/17-pro-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 1905,
+        "amount": 2090,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -602,10 +602,10 @@
       "image_link": "https://haode.com.mx/assets/products/oled-diagnostica/xs-max.png",
       "availability": "unknown",
       "price": {
-        "amount": 650,
+        "amount": 715,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "oled-diagnostica",
@@ -630,10 +630,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/11/fhd-main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 160,
+        "amount": 175,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -658,10 +658,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 155,
+        "amount": 170,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "iphone-incell",
@@ -687,10 +687,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/11pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 195,
+        "amount": 215,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -715,10 +715,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/11promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 185,
+        "amount": 205,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -743,10 +743,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/12-12pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 195,
+        "amount": 215,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -771,10 +771,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/12mini/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 210,
+        "amount": 230,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -799,10 +799,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/12promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 210,
+        "amount": 230,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -827,10 +827,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 195,
+        "amount": 215,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -855,10 +855,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13mini/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 215,
+        "amount": 235,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -883,10 +883,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 240,
+        "amount": 265,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -911,10 +911,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/13promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 260,
+        "amount": 285,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -939,10 +939,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 205,
+        "amount": 225,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -967,10 +967,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 240,
+        "amount": 265,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -995,10 +995,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 245,
+        "amount": 270,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1023,10 +1023,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/14promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 260,
+        "amount": 285,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1051,10 +1051,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 260,
+        "amount": 285,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1079,10 +1079,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 260,
+        "amount": 285,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1107,10 +1107,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 250,
+        "amount": 275,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1135,10 +1135,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/15promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 260,
+        "amount": 285,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1163,10 +1163,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 280,
+        "amount": 305,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1191,10 +1191,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16e/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 245,
+        "amount": 270,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1219,10 +1219,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 280,
+        "amount": 305,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1247,10 +1247,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 455,
+        "amount": 500,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1275,10 +1275,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/16promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 455,
+        "amount": 500,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1303,10 +1303,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 555,
+        "amount": 610,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1331,10 +1331,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17air/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1040,
+        "amount": 1140,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1359,10 +1359,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 245,
+        "amount": 270,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-incell",
@@ -1387,10 +1387,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 555,
+        "amount": 610,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1415,10 +1415,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/17promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 555,
+        "amount": 610,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1443,10 +1443,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/x/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 160,
+        "amount": 175,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1471,10 +1471,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/xr/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 160,
+        "amount": 175,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1499,10 +1499,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 155,
+        "amount": 170,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "iphone-incell",
@@ -1528,10 +1528,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/xs/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 160,
+        "amount": 175,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1556,10 +1556,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-incell/xsmax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 175,
+        "amount": 190,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-incell",
@@ -1584,10 +1584,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/11promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 620,
+        "amount": 680,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1612,10 +1612,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/12-12pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 655,
+        "amount": 720,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1640,10 +1640,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/12promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 620,
+        "amount": 680,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1668,10 +1668,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/13/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 530,
+        "amount": 580,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1696,10 +1696,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/13pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 620,
+        "amount": 680,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1724,10 +1724,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/13promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 640,
+        "amount": 700,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1752,10 +1752,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 530,
+        "amount": 580,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1780,10 +1780,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 940,
+        "amount": 1030,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1808,10 +1808,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1025,
+        "amount": 1125,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1836,10 +1836,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/14promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 620,
+        "amount": 680,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1864,10 +1864,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/15/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1025,
+        "amount": 1125,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1892,10 +1892,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/15promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 935,
+        "amount": 1025,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1920,10 +1920,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 600,
+        "amount": 660,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -1948,10 +1948,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/16pro/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 845,
+        "amount": 925,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -1976,10 +1976,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/16promax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1805,
+        "amount": 1980,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -2004,10 +2004,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/16promax-hard/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 845,
+        "amount": 925,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -2032,10 +2032,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 1070,
+        "amount": 1175,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -2060,10 +2060,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 1070,
+        "amount": 1175,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -2088,10 +2088,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 1025,
+        "amount": 1125,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "iphone-oled",
@@ -2116,10 +2116,10 @@
       "image_link": "https://haode.com.mx/assets/products/iphone-oled/xsmax/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 540,
+        "amount": 590,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "iphone-oled",
@@ -2144,10 +2144,10 @@
       "image_link": "https://haode.com.mx/assets/products/micas/hd/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 350,
+        "amount": 375,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2172,10 +2172,10 @@
       "image_link": "https://haode.com.mx/assets/products/micas/matte/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 350,
+        "amount": 375,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2200,10 +2200,10 @@
       "image_link": "https://haode.com.mx/assets/products/micas/privacidad-hd/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 800,
+        "amount": 825,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2228,10 +2228,10 @@
       "image_link": "https://haode.com.mx/assets/products/micas/privacidad-matte/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 800,
+        "amount": 825,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",
@@ -2256,10 +2256,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 1065,
+        "amount": 1165,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "oled-diagnostica",
@@ -2284,10 +2284,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 965,
+        "amount": 1060,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "oled-diagnostica",
@@ -2312,10 +2312,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-10/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 475,
+        "amount": 520,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2340,10 +2340,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 695,
+        "amount": 760,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-incell",
@@ -2369,10 +2369,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-10-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 505,
+        "amount": 555,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2397,10 +2397,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 575,
+        "amount": 630,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-incell",
@@ -2426,10 +2426,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-20-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 470,
+        "amount": 515,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2454,10 +2454,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-8/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 455,
+        "amount": 500,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2482,10 +2482,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/note-9/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 455,
+        "amount": 500,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2510,10 +2510,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 375,
+        "amount": 410,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2538,10 +2538,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 290,
+        "amount": 320,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-incell",
@@ -2567,10 +2567,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 385,
+        "amount": 420,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2595,10 +2595,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s10e/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 555,
+        "amount": 610,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2623,10 +2623,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 410,
+        "amount": 450,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -2651,10 +2651,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 410,
+        "amount": 450,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -2679,10 +2679,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-fe/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 295,
+        "amount": 325,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2707,10 +2707,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 420,
+        "amount": 460,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2735,10 +2735,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s20-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 440,
+        "amount": 480,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2763,10 +2763,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 410,
+        "amount": 450,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2791,10 +2791,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-fe/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 455,
+        "amount": 500,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2819,10 +2819,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 400,
+        "amount": 440,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2847,10 +2847,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s21-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 440,
+        "amount": 480,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2875,10 +2875,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 505,
+        "amount": 555,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2903,10 +2903,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 505,
+        "amount": 555,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2931,10 +2931,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s22-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 515,
+        "amount": 565,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2959,10 +2959,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 505,
+        "amount": 555,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -2987,10 +2987,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 505,
+        "amount": 555,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3015,10 +3015,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s23-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 440,
+        "amount": 480,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3043,10 +3043,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 680,
+        "amount": 745,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3071,10 +3071,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 655,
+        "amount": 720,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3099,10 +3099,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s24-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 625,
+        "amount": 685,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3127,10 +3127,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s8/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 365,
+        "amount": 400,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3155,10 +3155,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s8-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 375,
+        "amount": 410,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3183,10 +3183,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s9/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 340,
+        "amount": 375,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3211,10 +3211,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-incell/s9-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 350,
+        "amount": 385,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-incell",
@@ -3239,10 +3239,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 690,
+        "amount": 755,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3267,10 +3267,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 690,
+        "amount": 755,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3295,10 +3295,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 830,
+        "amount": 910,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3323,10 +3323,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 830,
+        "amount": 910,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-incell",
@@ -3351,10 +3351,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-10/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1380,
+        "amount": 1645,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3379,10 +3379,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 1100,
+        "amount": 1315,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_rejected",
       "category": "samsung-oled",
@@ -3408,10 +3408,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/note-20-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1420,
+        "amount": 1645,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3436,10 +3436,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s20-plus/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1100,
+        "amount": 1205,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3464,10 +3464,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s21-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1365,
+        "amount": 1755,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3492,10 +3492,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s22-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1340,
+        "amount": 1920,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3520,10 +3520,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s23-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1295,
+        "amount": 1755,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3548,10 +3548,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s24-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 1525,
+        "amount": 1975,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3576,10 +3576,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-oled/s25-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 2080,
+        "amount": 2190,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-oled",
@@ -3604,10 +3604,10 @@
       "image_link": null,
       "availability": "unknown",
       "price": {
-        "amount": 2870,
+        "amount": 3290,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "asset_missing",
       "category": "samsung-tipo-original",
@@ -3632,10 +3632,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s21-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 2720,
+        "amount": 2740,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3660,10 +3660,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s22-plus/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 1320,
+        "amount": 1535,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3688,10 +3688,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s22-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 2850,
+        "amount": 2520,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3716,10 +3716,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s23-plus/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 1320,
+        "amount": 1975,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3744,10 +3744,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s23-ultra/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 2570,
+        "amount": 2520,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3772,10 +3772,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s24-ultra/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 2660,
+        "amount": 2740,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3800,10 +3800,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/s25-ultra/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 2650,
+        "amount": 2740,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3828,10 +3828,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip3/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 2930,
+        "amount": 2850,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3856,10 +3856,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip4/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 3300,
+        "amount": 3180,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3884,10 +3884,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip5/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 4060,
+        "amount": 4220,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3912,10 +3912,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip6/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 4690,
+        "amount": 4385,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3940,10 +3940,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-flip7/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 5325,
+        "amount": 5920,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3968,10 +3968,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold3/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 4100,
+        "amount": 4935,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -3996,10 +3996,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold4/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 5585,
+        "amount": 6575,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -4024,10 +4024,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold5/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 7440,
+        "amount": 8220,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -4052,10 +4052,10 @@
       "image_link": "https://haode.com.mx/assets/products/samsung-original/z-fold6/main.png",
       "availability": "unknown",
       "price": {
-        "amount": 11455,
+        "amount": 10740,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "samsung-tipo-original",
@@ -4080,10 +4080,10 @@
       "image_link": "https://haode.com.mx/assets/products/cut-machine/x200t/main.jpg",
       "availability": "unknown",
       "price": {
-        "amount": 6000,
+        "amount": 6100,
         "currency": "MXN"
       },
-      "price_status": "confirmed_retail_2026-09-24",
+      "price_status": "confirmed_retail_2026-11",
       "availability_status": "not_live_verified",
       "image_status": "existing_public_asset",
       "category": "micas",

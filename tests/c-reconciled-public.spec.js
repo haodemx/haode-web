@@ -67,7 +67,7 @@ test('MICA static table and public AI/Samsung text keep approved facts', async (
   const micaSource = await (await request.get(`${BASE}/micas.html`)).text();
   const approvedTables = [...micaSource.matchAll(/<table class="detail-price-table"[^>]*>([\s\S]*?)<\/table>/g)]
     .map((match) => match[1])
-    .filter((table) => ['350', '300', '275', '250'].every((price) => table.includes(price)));
+    .filter((table) => ['375', '325', '300', '275'].every((price) => table.includes(price)));
   expect(approvedTables.length).toBeGreaterThanOrEqual(2);
   await page.goto(`${BASE}/productos-ai/`);
   await expect(page.locator('body')).not.toContainText('revisión de clasificación');

@@ -1,0 +1,2776 @@
+{
+  "sourceDocument": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf",
+  "sourceDocumentSha256": "9f5165b38d4e263922599817ae9044c7086dec4b8c4c328b4b712fee4708cf6d",
+  "sourceVersion": "2026-11",
+  "importedAt": "2026-10-28",
+  "currency": "MXN",
+  "rows": [
+    {
+      "section": "micas",
+      "sourceSheet": "PDF p2 · MICAS HIDROGEL",
+      "sourceRow": 14,
+      "sourcePage": 2,
+      "model": "Máquina de Micas(X200T)",
+      "product": null,
+      "quality": "Equipo",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 6100,
+        "wholesale": 5900,
+        "box": 5600,
+        "vip": 5400
+      },
+      "sourceLine": "Máquina de Micas(X200T)      Equipo                                    HAODE                    $6,100               $5,900                $5,600               $5,400"
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "PDF p2 · MICAS HIDROGEL",
+      "sourceRow": 15,
+      "sourcePage": 2,
+      "model": "MICA HD",
+      "product": null,
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 375,
+        "wholesale": 325,
+        "box": 300,
+        "vip": 275
+      },
+      "sourceLine": "MICA HD                      Paquete 50 pzs                            HAODE                      $375                 $325                 $300                 $275"
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "PDF p2 · MICAS HIDROGEL",
+      "sourceRow": 16,
+      "sourcePage": 2,
+      "model": "MICA MATTE",
+      "product": null,
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 375,
+        "wholesale": 325,
+        "box": 300,
+        "vip": 275
+      },
+      "sourceLine": "MICA MATTE                   Paquete 50 pzs                            HAODE                      $375                 $325                 $300                 $275"
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "PDF p2 · MICAS HIDROGEL",
+      "sourceRow": 17,
+      "sourcePage": 2,
+      "model": "MICA PRIVACIDAD HD",
+      "product": null,
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 825,
+        "wholesale": 775,
+        "box": 725,
+        "vip": 675
+      },
+      "sourceLine": "MICA PRIVACIDAD HD           Paquete 50 pzs                            HAODE                      $825                 $775                 $725                 $675"
+    },
+    {
+      "section": "micas",
+      "sourceSheet": "PDF p2 · MICAS HIDROGEL",
+      "sourceRow": 18,
+      "sourcePage": 2,
+      "model": "MICA PRIVACIDAD MATTE",
+      "product": null,
+      "quality": "Paquete 50 pzs",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 825,
+        "wholesale": 775,
+        "box": 725,
+        "vip": 675
+      },
+      "sourceLine": "MICA PRIVACIDAD MATTE        Paquete 50 pzs                            HAODE                      $825                 $775                 $725                 $675"
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "PDF p2 · PRODUCTOS AI",
+      "sourceRow": 31,
+      "sourcePage": 2,
+      "model": "Gafas AI G5",
+      "product": null,
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 935,
+        "wholesale": 880,
+        "box": 805,
+        "vip": 785
+      },
+      "sourceLine": "Gafas AI G5                  LENTE AI                                  HAODE                      $935                 $880                 $805                 $785"
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "PDF p2 · PRODUCTOS AI",
+      "sourceRow": 32,
+      "sourcePage": 2,
+      "model": "Gafas AI W630",
+      "product": null,
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1195,
+        "wholesale": 1140,
+        "box": 1065,
+        "vip": 1045
+      },
+      "sourceLine": "Gafas AI W630                LENTE AI                                  HAODE                    $1,195               $1,140                $1,065               $1,045"
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "PDF p2 · PRODUCTOS AI",
+      "sourceRow": 33,
+      "sourcePage": 2,
+      "model": "Gafas AI W610",
+      "product": null,
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1035,
+        "wholesale": 980,
+        "box": 905,
+        "vip": 885
+      },
+      "sourceLine": "Gafas AI W610                LENTE AI                                  HAODE                    $1,035                 $980                 $905                 $885"
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "PDF p2 · PRODUCTOS AI",
+      "sourceRow": 34,
+      "sourcePage": 2,
+      "model": "Gafas AI G3",
+      "product": null,
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 935,
+        "wholesale": 880,
+        "box": 805,
+        "vip": 785
+      },
+      "sourceLine": "Gafas AI G3                  LENTE AI                                  HAODE                      $935                 $880                 $805                 $785"
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "PDF p2 · PRODUCTOS AI",
+      "sourceRow": 35,
+      "sourcePage": 2,
+      "model": "Gafas AI M89",
+      "product": null,
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 690,
+        "wholesale": 635,
+        "box": 560,
+        "vip": 540
+      },
+      "sourceLine": "Gafas AI M89                 LENTE AI                                  HAODE                      $690                 $635                 $560                 $540"
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "PDF p2 · PRODUCTOS AI",
+      "sourceRow": 36,
+      "sourcePage": 2,
+      "model": "Gafas AI M08 13MP",
+      "product": null,
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1000,
+        "wholesale": 945,
+        "box": 870,
+        "vip": 845
+      },
+      "sourceLine": "Gafas AI M08 13MP            LENTE AI                                  HAODE                    $1,000                 $945                 $870                 $845"
+    },
+    {
+      "section": "ai",
+      "sourceSheet": "PDF p2 · PRODUCTOS AI",
+      "sourceRow": 37,
+      "sourcePage": 2,
+      "model": "Gafas AI M95",
+      "product": null,
+      "quality": "LENTE AI",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 775,
+        "wholesale": 720,
+        "box": 645,
+        "vip": 625
+      },
+      "sourceLine": "Gafas AI M95                 LENTE AI                                  HAODE                      $775                 $720                 $645                 $625"
+    },
+    {
+      "section": "cameras",
+      "sourceSheet": "PDF p2 · CÁMARAS",
+      "sourceRow": 52,
+      "sourcePage": 2,
+      "model": "LK-030",
+      "product": null,
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 440,
+        "wholesale": 330,
+        "box": null,
+        "vip": null
+      },
+      "sourceLine": "LK-030                                                                                 HAODE                                  $440                             $330"
+    },
+    {
+      "section": "cameras",
+      "sourceSheet": "PDF p2 · CÁMARAS",
+      "sourceRow": 54,
+      "sourcePage": 2,
+      "model": "LK-007",
+      "product": null,
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 550,
+        "wholesale": 440,
+        "box": null,
+        "vip": null
+      },
+      "sourceLine": "LK-007                                                                                 HAODE                                  $550                             $440"
+    },
+    {
+      "section": "cameras",
+      "sourceSheet": "PDF p2 · CÁMARAS",
+      "sourceRow": 56,
+      "sourcePage": 2,
+      "model": "LK-032",
+      "product": null,
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 550,
+        "wholesale": 440,
+        "box": null,
+        "vip": null
+      },
+      "sourceLine": "LK-032                                                                                 HAODE                                  $550                             $440"
+    },
+    {
+      "section": "cameras",
+      "sourceSheet": "PDF p2 · CÁMARAS",
+      "sourceRow": 58,
+      "sourcePage": 2,
+      "model": "LK-018",
+      "product": null,
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 930,
+        "wholesale": 765,
+        "box": null,
+        "vip": null
+      },
+      "sourceLine": "LK-018                                                                                 HAODE                                  $930                             $765"
+    },
+    {
+      "section": "cameras",
+      "sourceSheet": "PDF p2 · CÁMARAS",
+      "sourceRow": 60,
+      "sourcePage": 2,
+      "model": "AI casco C123",
+      "product": null,
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3290,
+        "wholesale": 3070,
+        "box": null,
+        "vip": null
+      },
+      "sourceLine": "AI casco C123                                                                          HAODE                                 $3,290                           $3,070"
+    },
+    {
+      "section": "cameras",
+      "sourceSheet": "PDF p2 · CÁMARAS",
+      "sourceRow": 62,
+      "sourcePage": 2,
+      "model": "Cámara para ciclismo C3 Pro",
+      "product": null,
+      "quality": null,
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1645,
+        "wholesale": 1480,
+        "box": null,
+        "vip": null
+      },
+      "sourceLine": "Cámara para ciclismo C3 Pro                                                            HAODE                                 $1,645                           $1,480"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 14,
+      "sourcePage": 3,
+      "model": "X",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 175,
+        "wholesale": 170,
+        "box": 160,
+        "vip": 155
+      },
+      "sourceLine": "X                           INCELL FHD C/IC                              HL                      $175                 $170                 $160                 $155"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 15,
+      "sourcePage": 3,
+      "model": "X Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 170,
+        "wholesale": 160,
+        "box": 150,
+        "vip": 145
+      },
+      "sourceLine": "X Bolsa Protectora          INCELL FHD C/IC                              HL                      $170                 $160                 $150                 $145"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 16,
+      "sourcePage": 3,
+      "model": "XS",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 175,
+        "wholesale": 170,
+        "box": 160,
+        "vip": 155
+      },
+      "sourceLine": "XS                          INCELL FHD C/IC                              HL                      $175                 $170                 $160                 $155"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 17,
+      "sourcePage": 3,
+      "model": "Xs Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 170,
+        "wholesale": 160,
+        "box": 150,
+        "vip": 145
+      },
+      "sourceLine": "Xs Bolsa Protectora         INCELL FHD C/IC                              HL                      $170                 $160                 $150                 $145"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 18,
+      "sourcePage": 3,
+      "model": "XR Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL HD+ C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 170,
+        "wholesale": 160,
+        "box": 150,
+        "vip": 145
+      },
+      "sourceLine": "XR Bolsa Protectora         INCELL HD+ C/IC                              HL                      $170                 $160                 $150                 $145"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 19,
+      "sourcePage": 3,
+      "model": "XR",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 175,
+        "wholesale": 165,
+        "box": 160,
+        "vip": 155
+      },
+      "sourceLine": "XR                          INCELL FHD C/IC                              HL                      $175                 $165                 $160                 $155"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 20,
+      "sourcePage": 3,
+      "model": "11 Bolsa Protectora",
+      "product": null,
+      "quality": "INCELL HD+ C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 170,
+        "wholesale": 160,
+        "box": 150,
+        "vip": 145
+      },
+      "sourceLine": "11 Bolsa Protectora         INCELL HD+ C/IC                              HL                      $170                 $160                 $150                 $145"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 21,
+      "sourcePage": 3,
+      "model": "11",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 175,
+        "wholesale": 165,
+        "box": 160,
+        "vip": 155
+      },
+      "sourceLine": "11                          INCELL FHD C/IC                              HL                      $175                 $165                 $160                 $155"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 22,
+      "sourcePage": 3,
+      "model": "11 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 215,
+        "wholesale": 205,
+        "box": 190,
+        "vip": 185
+      },
+      "sourceLine": "11 Pro                      INCELL FHD C/IC                              HL                      $215                 $205                 $190                 $185"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 23,
+      "sourcePage": 3,
+      "model": "XS Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 190,
+        "wholesale": 180,
+        "box": 170,
+        "vip": 165
+      },
+      "sourceLine": "XS Max                      INCELL FHD C/IC                              HL                      $190                 $180                 $170                 $165"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 24,
+      "sourcePage": 3,
+      "model": "11 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 205,
+        "wholesale": 190,
+        "box": 180,
+        "vip": 175
+      },
+      "sourceLine": "11 Pro Max                  INCELL FHD C/IC                              HL                      $205                 $190                 $180                 $175"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 25,
+      "sourcePage": 3,
+      "model": "12 mini",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 230,
+        "wholesale": 215,
+        "box": 205,
+        "vip": 195
+      },
+      "sourceLine": "12 mini                     INCELL FHD C/IC                              HL                      $230                 $215                 $205                 $195"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 26,
+      "sourcePage": 3,
+      "model": "12/12 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 215,
+        "wholesale": 195,
+        "box": 185,
+        "vip": 180
+      },
+      "sourceLine": "12/12 Pro                   INCELL FHD C/IC                              HL                      $215                 $195                 $185                 $180"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 27,
+      "sourcePage": 3,
+      "model": "12 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 230,
+        "wholesale": 215,
+        "box": 205,
+        "vip": 195
+      },
+      "sourceLine": "12 Pro Max                  INCELL FHD C/IC                              HL                      $230                 $215                 $205                 $195"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 28,
+      "sourcePage": 3,
+      "model": "13 mini",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 235,
+        "wholesale": 225,
+        "box": 210,
+        "vip": 205
+      },
+      "sourceLine": "13 mini                     INCELL FHD C/IC                              HL                      $235                 $225                 $210                 $205"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 29,
+      "sourcePage": 3,
+      "model": "13",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 215,
+        "wholesale": 205,
+        "box": 190,
+        "vip": 185
+      },
+      "sourceLine": "13                          INCELL FHD C/IC                              HL                      $215                 $205                 $190                 $185"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 30,
+      "sourcePage": 3,
+      "model": "13 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 265,
+        "wholesale": 245,
+        "box": 230,
+        "vip": 225
+      },
+      "sourceLine": "13 Pro                      INCELL FHD C/IC                              HL                      $265                 $245                 $230                 $225"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 31,
+      "sourcePage": 3,
+      "model": "13 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 285,
+        "wholesale": 270,
+        "box": 250,
+        "vip": 245
+      },
+      "sourceLine": "13 Pro Max                  INCELL FHD C/IC                              HL                      $285                 $270                 $250                 $245"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 32,
+      "sourcePage": 3,
+      "model": "14",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 225,
+        "wholesale": 210,
+        "box": 195,
+        "vip": 190
+      },
+      "sourceLine": "14                          INCELL FHD C/IC                              HL                      $225                 $210                 $195                 $190"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 33,
+      "sourcePage": 3,
+      "model": "14 plus",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 265,
+        "wholesale": 245,
+        "box": 230,
+        "vip": 225
+      },
+      "sourceLine": "14 plus                     INCELL FHD C/IC                              HL                      $265                 $245                 $230                 $225"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 34,
+      "sourcePage": 3,
+      "model": "14 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 270,
+        "wholesale": 250,
+        "box": 235,
+        "vip": 230
+      },
+      "sourceLine": "14 Pro                      INCELL FHD C/IC                              HL                      $270                 $250                 $235                 $230"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 35,
+      "sourcePage": 3,
+      "model": "14 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 285,
+        "wholesale": 270,
+        "box": 250,
+        "vip": 245
+      },
+      "sourceLine": "14 Pro Max                  INCELL FHD C/IC                              HL                      $285                 $270                 $250                 $245"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 36,
+      "sourcePage": 3,
+      "model": "15",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 285,
+        "wholesale": 265,
+        "box": 250,
+        "vip": 240
+      },
+      "sourceLine": "15                          INCELL FHD C/IC                              HL                      $285                 $265                 $250                 $240"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 37,
+      "sourcePage": 3,
+      "model": "15 plus",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 285,
+        "wholesale": 265,
+        "box": 250,
+        "vip": 240
+      },
+      "sourceLine": "15 plus                     INCELL FHD C/IC                              HL                      $285                 $265                 $250                 $240"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 38,
+      "sourcePage": 3,
+      "model": "15 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 275,
+        "wholesale": 260,
+        "box": 240,
+        "vip": 235
+      },
+      "sourceLine": "15 Pro                      INCELL FHD C/IC                              HL                      $275                 $260                 $240                 $235"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 39,
+      "sourcePage": 3,
+      "model": "15 Pro Max",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 285,
+        "wholesale": 270,
+        "box": 250,
+        "vip": 245
+      },
+      "sourceLine": "15 Pro Max                  INCELL FHD C/IC                              HL                      $285                 $270                 $250                 $245"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 40,
+      "sourcePage": 3,
+      "model": "16",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 305,
+        "wholesale": 285,
+        "box": 270,
+        "vip": 265
+      },
+      "sourceLine": "16                          INCELL FHD C/IC                              HL                      $305                 $285                 $270                 $265"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 41,
+      "sourcePage": 3,
+      "model": "16E",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 270,
+        "wholesale": 250,
+        "box": 235,
+        "vip": 230
+      },
+      "sourceLine": "16E                         INCELL FHD C/IC                              HL                      $270                 $250                 $235                 $230"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 42,
+      "sourcePage": 3,
+      "model": "16 Plus",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 305,
+        "wholesale": 285,
+        "box": 270,
+        "vip": 265
+      },
+      "sourceLine": "16 Plus                     INCELL FHD C/IC                              HL                      $305                 $285                 $270                 $265"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 43,
+      "sourcePage": 3,
+      "model": "16 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale": 465,
+        "box": 440,
+        "vip": 420
+      },
+      "sourceLine": "16 Pro                      INCELL FHD C/IC                              HL                      $500                 $465                 $440                 $420"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 44,
+      "sourcePage": 3,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale": 465,
+        "box": 440,
+        "vip": 420
+      },
+      "sourceLine": "16 PROMAX                   INCELL FHD C/IC                              HL                      $500                 $465                 $440                 $420"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 45,
+      "sourcePage": 3,
+      "model": "17",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 610,
+        "wholesale": 570,
+        "box": 535,
+        "vip": 520
+      },
+      "sourceLine": "17                          INCELL FHD C/IC                              HL                      $610                 $570                 $535                 $520"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 46,
+      "sourcePage": 3,
+      "model": "17 Pro",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 610,
+        "wholesale": 570,
+        "box": 535,
+        "vip": 520
+      },
+      "sourceLine": "17 Pro                      INCELL FHD C/IC                              HL                      $610                 $570                 $535                 $520"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 47,
+      "sourcePage": 3,
+      "model": "17 AIR",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 1140,
+        "wholesale": 1070,
+        "box": 1010,
+        "vip": 975
+      },
+      "sourceLine": "17 AIR                      INCELL FHD C/IC                              HL                    $1,140               $1,070                $1,010                $975"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 48,
+      "sourcePage": 3,
+      "model": "17E",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 270,
+        "wholesale": 250,
+        "box": 235,
+        "vip": 230
+      },
+      "sourceLine": "17E                         INCELL FHD C/IC                              HL                      $270                 $250                 $235                 $230"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE INCELL",
+      "sourceRow": 49,
+      "sourcePage": 3,
+      "model": "17 PROMAX",
+      "product": null,
+      "quality": "INCELL FHD C/IC",
+      "brand": "HL",
+      "prices": {
+        "retail": 610,
+        "wholesale": 570,
+        "box": 535,
+        "vip": 520
+      },
+      "sourceLine": "17 PROMAX                   INCELL FHD C/IC                              HL                      $610                 $570                 $535                 $520"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE OLED",
+      "sourceRow": 63,
+      "sourcePage": 3,
+      "model": "XS Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 590,
+        "wholesale": 575,
+        "box": 525,
+        "vip": 510
+      },
+      "sourceLine": "XS Max                      OLED PREMIUM                                 HL                      $590                 $575                 $525                 $510"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE OLED",
+      "sourceRow": 64,
+      "sourcePage": 3,
+      "model": "11 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 680,
+        "wholesale": 660,
+        "box": 605,
+        "vip": 585
+      },
+      "sourceLine": "11 Pro Max                  OLED PREMIUM                                 HL                      $680                 $660                 $605                 $585"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE OLED",
+      "sourceRow": 65,
+      "sourcePage": 3,
+      "model": "12/12 Pro",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 720,
+        "wholesale": 700,
+        "box": 640,
+        "vip": 620
+      },
+      "sourceLine": "12/12 Pro                   OLED PREMIUM                                 HL                      $720                 $700                 $640                 $620"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE OLED",
+      "sourceRow": 66,
+      "sourcePage": 3,
+      "model": "12 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 680,
+        "wholesale": 665,
+        "box": 610,
+        "vip": 585
+      },
+      "sourceLine": "12 Pro Max                  OLED PREMIUM                                 HL                      $680                 $665                 $610                 $585"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE OLED",
+      "sourceRow": 67,
+      "sourcePage": 3,
+      "model": "13",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 580,
+        "wholesale": 565,
+        "box": 515,
+        "vip": 500
+      },
+      "sourceLine": "13                          OLED PREMIUM                                 HL                      $580                 $565                 $515                 $500"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE OLED",
+      "sourceRow": 68,
+      "sourcePage": 3,
+      "model": "13 Pro",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 680,
+        "wholesale": 665,
+        "box": 610,
+        "vip": 585
+      },
+      "sourceLine": "13 Pro                      OLED PREMIUM                                 HL                      $680                 $665                 $610                 $585"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p3 · IPHONE OLED",
+      "sourceRow": 69,
+      "sourcePage": 3,
+      "model": "13 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 700,
+        "wholesale": 680,
+        "box": 625,
+        "vip": 605
+      },
+      "sourceLine": "13 Pro Max                  OLED PREMIUM                                 HL                      $700                 $680                 $625                 $605"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 8,
+      "sourcePage": 4,
+      "model": "14",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 580,
+        "wholesale": 565,
+        "box": 515,
+        "vip": 500
+      },
+      "sourceLine": "14                          OLED PREMIUM                                 HL                      $580                 $565                 $515                 $500"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 9,
+      "sourcePage": 4,
+      "model": "14",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1175,
+        "wholesale": 1140,
+        "box": 1045,
+        "vip": 1010
+      },
+      "sourceLine": "14                          SOFT OLED PREMIUM                            HL                    $1,175               $1,140                $1,045               $1,010"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 10,
+      "sourcePage": 4,
+      "model": "14 plus",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1030,
+        "wholesale": 1010,
+        "box": 920,
+        "vip": 895
+      },
+      "sourceLine": "14 plus                     OLED PREMIUM                                 HL                    $1,030               $1,010                 $920                 $895"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 11,
+      "sourcePage": 4,
+      "model": "14 plus",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1175,
+        "wholesale": 1140,
+        "box": 1045,
+        "vip": 1010
+      },
+      "sourceLine": "14 plus                     SOFT OLED PREMIUM                            HL                    $1,175               $1,140                $1,045               $1,010"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 12,
+      "sourcePage": 4,
+      "model": "14 Pro",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1125,
+        "wholesale": 1095,
+        "box": 1005,
+        "vip": 970
+      },
+      "sourceLine": "14 Pro                      SOFT OLED PREMIUM                            HL                    $1,125               $1,095                $1,005                $970"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 13,
+      "sourcePage": 4,
+      "model": "14 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 680,
+        "wholesale": 665,
+        "box": 610,
+        "vip": 585
+      },
+      "sourceLine": "14 Pro Max                  OLED PREMIUM                                 HL                      $680                 $665                 $610                 $585"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 14,
+      "sourcePage": 4,
+      "model": "15",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1125,
+        "wholesale": 1095,
+        "box": 1005,
+        "vip": 970
+      },
+      "sourceLine": "15                          SOFT OLED PREMIUM                            HL                    $1,125               $1,095                $1,005                $970"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 15,
+      "sourcePage": 4,
+      "model": "15 Pro",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1125,
+        "wholesale": 1095,
+        "box": 1005,
+        "vip": 970
+      },
+      "sourceLine": "15 Pro                      SOFT OLED PREMIUM                            HL                    $1,125               $1,095                $1,005                $970"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 16,
+      "sourcePage": 4,
+      "model": "15 Pro Max",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1025,
+        "wholesale": 1000,
+        "box": 915,
+        "vip": 880
+      },
+      "sourceLine": "15 Pro Max                  OLED PREMIUM                                 HL                    $1,025               $1,000                 $915                 $880"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 17,
+      "sourcePage": 4,
+      "model": "16E",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 660,
+        "wholesale": 640,
+        "box": 585,
+        "vip": 565
+      },
+      "sourceLine": "16E                         OLED PREMIUM                                 HL                      $660                 $640                 $585                 $565"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 18,
+      "sourcePage": 4,
+      "model": "16 Pro",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 925,
+        "wholesale": 905,
+        "box": 830,
+        "vip": 800
+      },
+      "sourceLine": "16 Pro                      OLED PREMIUM                                 HL                      $925                 $905                 $830                 $800"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 19,
+      "sourcePage": 4,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 925,
+        "wholesale": 905,
+        "box": 830,
+        "vip": 800
+      },
+      "sourceLine": "16 PROMAX                   OLED PREMIUM                                 HL                      $925                 $905                 $830                 $800"
+    },
+    {
+      "section": "iphone",
+      "sourceSheet": "PDF p4 · IPHONE OLED",
+      "sourceRow": 20,
+      "sourcePage": 4,
+      "model": "16 PROMAX",
+      "product": null,
+      "quality": "SOFT OLED PREMIUM",
+      "brand": "HL",
+      "prices": {
+        "retail": 1980,
+        "wholesale": 1930,
+        "box": 1770,
+        "vip": 1710
+      },
+      "sourceLine": "16 PROMAX                   SOFT OLED PREMIUM                            HL                    $1,980               $1,930                $1,770               $1,710"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 34,
+      "sourcePage": 4,
+      "model": "XS Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 715,
+        "wholesale": 665,
+        "box": 625,
+        "vip": 585
+      },
+      "sourceLine": "XS Max                      DIAGNÓSTICO HARD OLED                      HAODE                     $715                 $665                 $625                 $585"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 35,
+      "sourcePage": 4,
+      "model": "11 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 750,
+        "wholesale": 700,
+        "box": 660,
+        "vip": 620
+      },
+      "sourceLine": "11 Pro Max                  DIAGNÓSTICO HARD OLED                      HAODE                     $750                 $700                 $660                 $620"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 36,
+      "sourcePage": 4,
+      "model": "12/12 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 835,
+        "wholesale": 780,
+        "box": 730,
+        "vip": 685
+      },
+      "sourceLine": "12/12 Pro                   DIAGNÓSTICO HARD OLED                      HAODE                     $835                 $780                 $730                 $685"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 37,
+      "sourcePage": 4,
+      "model": "12 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 985,
+        "wholesale": 920,
+        "box": 865,
+        "vip": 810
+      },
+      "sourceLine": "12 Pro Max                  DIAGNÓSTICO HARD OLED                      HAODE                     $985                 $920                 $865                 $810"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 38,
+      "sourcePage": 4,
+      "model": "12 mini",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1165,
+        "wholesale": 1090,
+        "box": 1020,
+        "vip": 960
+      },
+      "sourceLine": "12 mini                     DIAGNÓSTICO HARD OLED                      HAODE                   $1,165               $1,090                $1,020                $960"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 39,
+      "sourcePage": 4,
+      "model": "13",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 975,
+        "wholesale": 910,
+        "box": 855,
+        "vip": 805
+      },
+      "sourceLine": "13                          DIAGNÓSTICO SOFT OLED                      HAODE                     $975                 $910                 $855                 $805"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 40,
+      "sourcePage": 4,
+      "model": "13 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1075,
+        "wholesale": 1005,
+        "box": 945,
+        "vip": 890
+      },
+      "sourceLine": "13 Pro                      DIAGNÓSTICO SOFT OLED                      HAODE                   $1,075               $1,005                 $945                 $890"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 41,
+      "sourcePage": 4,
+      "model": "13 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1060,
+        "wholesale": 985,
+        "box": 925,
+        "vip": 870
+      },
+      "sourceLine": "13 Pro Max                  DIAGNÓSTICO SOFT OLED                      HAODE                   $1,060                 $985                 $925                 $870"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 42,
+      "sourcePage": 4,
+      "model": "14",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 975,
+        "wholesale": 910,
+        "box": 855,
+        "vip": 805
+      },
+      "sourceLine": "14                          DIAGNÓSTICO SOFT OLED                      HAODE                     $975                 $910                 $855                 $805"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 43,
+      "sourcePage": 4,
+      "model": "14 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1525,
+        "wholesale": 1425,
+        "box": 1330,
+        "vip": 1255
+      },
+      "sourceLine": "14 Pro                      DIAGNÓSTICO SOFT OLED                      HAODE                   $1,525               $1,425                $1,330               $1,255"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 44,
+      "sourcePage": 4,
+      "model": "14 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1060,
+        "wholesale": 985,
+        "box": 925,
+        "vip": 870
+      },
+      "sourceLine": "14 Pro Max                  DIAGNÓSTICO SOFT OLED                      HAODE                   $1,060                 $985                 $925                 $870"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 45,
+      "sourcePage": 4,
+      "model": "14 Plus",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1035,
+        "wholesale": 965,
+        "box": 905,
+        "vip": 855
+      },
+      "sourceLine": "14 Plus                     DIAGNÓSTICO SOFT OLED                      HAODE                   $1,035                 $965                 $905                 $855"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 46,
+      "sourcePage": 4,
+      "model": "15",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1465,
+        "wholesale": 1365,
+        "box": 1285,
+        "vip": 1205
+      },
+      "sourceLine": "15                          DIAGNÓSTICO SOFT OLED                      HAODE                   $1,465               $1,365                $1,285               $1,205"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 47,
+      "sourcePage": 4,
+      "model": "15 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1525,
+        "wholesale": 1425,
+        "box": 1330,
+        "vip": 1255
+      },
+      "sourceLine": "15 Pro                      DIAGNÓSTICO SOFT OLED                      HAODE                   $1,525               $1,425                $1,330               $1,255"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 48,
+      "sourcePage": 4,
+      "model": "15 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1545,
+        "wholesale": 1440,
+        "box": 1355,
+        "vip": 1270
+      },
+      "sourceLine": "15 Pro Max                  DIAGNÓSTICO SOFT OLED                      HAODE                   $1,545               $1,440                $1,355               $1,270"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 49,
+      "sourcePage": 4,
+      "model": "15 Plus",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1525,
+        "wholesale": 1425,
+        "box": 1330,
+        "vip": 1255
+      },
+      "sourceLine": "15 Plus                     DIAGNÓSTICO SOFT OLED                      HAODE                   $1,525               $1,425                $1,330               $1,255"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 50,
+      "sourcePage": 4,
+      "model": "16E",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1060,
+        "wholesale": 985,
+        "box": 925,
+        "vip": 870
+      },
+      "sourceLine": "16E                         DIAGNÓSTICO SOFT OLED                      HAODE                   $1,060                 $985                 $925                 $870"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 51,
+      "sourcePage": 4,
+      "model": "16",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1525,
+        "wholesale": 1425,
+        "box": 1330,
+        "vip": 1255
+      },
+      "sourceLine": "16                          DIAGNÓSTICO SOFT OLED                      HAODE                   $1,525               $1,425                $1,330               $1,255"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 52,
+      "sourcePage": 4,
+      "model": "16 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1770,
+        "wholesale": 1650,
+        "box": 1545,
+        "vip": 1460
+      },
+      "sourceLine": "16 Pro                      DIAGNÓSTICO HARD OLED                      HAODE                   $1,770               $1,650                $1,545               $1,460"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 53,
+      "sourcePage": 4,
+      "model": "16 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1810,
+        "wholesale": 1690,
+        "box": 1585,
+        "vip": 1490
+      },
+      "sourceLine": "16 Pro Max                  DIAGNÓSTICO HARD OLED                      HAODE                   $1,810               $1,690                $1,585               $1,490"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 54,
+      "sourcePage": 4,
+      "model": "16 Plus",
+      "product": null,
+      "quality": "DIAGNÓSTICO SOFT OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1770,
+        "wholesale": 1650,
+        "box": 1545,
+        "vip": 1460
+      },
+      "sourceLine": "16 Plus                     DIAGNÓSTICO SOFT OLED                      HAODE                   $1,770               $1,650                $1,545               $1,460"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 55,
+      "sourcePage": 4,
+      "model": "17",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2045,
+        "wholesale": 1905,
+        "box": 1790,
+        "vip": 1690
+      },
+      "sourceLine": "17                          DIAGNÓSTICO HARD OLED                      HAODE                   $2,045               $1,905                $1,790               $1,690"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 56,
+      "sourcePage": 4,
+      "model": "17 Pro",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2090,
+        "wholesale": 1945,
+        "box": 1825,
+        "vip": 1720
+      },
+      "sourceLine": "17 Pro                      DIAGNÓSTICO HARD OLED                      HAODE                   $2,090               $1,945                $1,825               $1,720"
+    },
+    {
+      "section": "iphone-diagnostic",
+      "sourceSheet": "PDF p4 · IPHONE DIAGNÓSTICO",
+      "sourceRow": 57,
+      "sourcePage": 4,
+      "model": "17 Pro Max",
+      "product": null,
+      "quality": "DIAGNÓSTICO HARD OLED",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2090,
+        "wholesale": 1945,
+        "box": 1825,
+        "vip": 1720
+      },
+      "sourceLine": "17 Pro Max                  DIAGNÓSTICO HARD OLED                      HAODE                   $2,090               $1,945                $1,825               $1,720"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 14,
+      "sourcePage": 5,
+      "model": "S8",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 400,
+        "wholesale": 380,
+        "box": 355,
+        "vip": 345
+      },
+      "sourceLine": "S8                          INCELL FHD C/M                               HL                      $400                 $380                 $355                 $345"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 15,
+      "sourcePage": 5,
+      "model": "S8+",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 410,
+        "wholesale": 390,
+        "box": 365,
+        "vip": 350
+      },
+      "sourceLine": "S8+                         INCELL FHD C/M                               HL                      $410                 $390                 $365                 $350"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 16,
+      "sourcePage": 5,
+      "model": "S9",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 375,
+        "wholesale": 350,
+        "box": 330,
+        "vip": 320
+      },
+      "sourceLine": "S9                          INCELL FHD C/M                               HL                      $375                 $350                 $330                 $320"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 17,
+      "sourcePage": 5,
+      "model": "S9 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 385,
+        "wholesale": 355,
+        "box": 340,
+        "vip": 330
+      },
+      "sourceLine": "S9 PLUS                     INCELL FHD C/M                               HL                      $385                 $355                 $340                 $330"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 18,
+      "sourcePage": 5,
+      "model": "S10",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 410,
+        "wholesale": 390,
+        "box": 365,
+        "vip": 350
+      },
+      "sourceLine": "S10                         INCELL FHD C/M                               HL                      $410                 $390                 $365                 $350"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 19,
+      "sourcePage": 5,
+      "model": "S10 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 420,
+        "wholesale": 395,
+        "box": 375,
+        "vip": 355
+      },
+      "sourceLine": "S10 PLUS                    INCELL FHD C/M                               HL                      $420                 $395                 $375                 $355"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 20,
+      "sourcePage": 5,
+      "model": "S10E",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 610,
+        "wholesale": 570,
+        "box": 535,
+        "vip": 520
+      },
+      "sourceLine": "S10E                        INCELL FHD C/M                               HL                      $610                 $570                 $535                 $520"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 21,
+      "sourcePage": 5,
+      "model": "S10 LITE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 320,
+        "wholesale": 295,
+        "box": 280,
+        "vip": 275
+      },
+      "sourceLine": "S10 LITE                    INCELL FHD C/M                               HL                      $320                 $295                 $280                 $275"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 22,
+      "sourcePage": 5,
+      "model": "S20 4G",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 450,
+        "wholesale": 420,
+        "box": 400,
+        "vip": 385
+      },
+      "sourceLine": "S20 4G                      INCELL FHD C/M                               HL                      $450                 $420                 $400                 $385"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 23,
+      "sourcePage": 5,
+      "model": "S20 5G",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 450,
+        "wholesale": 420,
+        "box": 400,
+        "vip": 385
+      },
+      "sourceLine": "S20 5G                      INCELL FHD C/M                               HL                      $450                 $420                 $400                 $385"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 24,
+      "sourcePage": 5,
+      "model": "S20 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 460,
+        "wholesale": 430,
+        "box": 405,
+        "vip": 390
+      },
+      "sourceLine": "S20 PLUS                    INCELL FHD C/M                               HL                      $460                 $430                 $405                 $390"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 25,
+      "sourcePage": 5,
+      "model": "S20FE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 325,
+        "wholesale": 305,
+        "box": 285,
+        "vip": 280
+      },
+      "sourceLine": "S20FE                       INCELL FHD C/M                               HL                      $325                 $305                 $285                 $280"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 26,
+      "sourcePage": 5,
+      "model": "S20 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 480,
+        "wholesale": 455,
+        "box": 430,
+        "vip": 410
+      },
+      "sourceLine": "S20 Ultra                   INCELL FHD C/M                               HL                      $480                 $455                 $430                 $410"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 27,
+      "sourcePage": 5,
+      "model": "S21",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 450,
+        "wholesale": 420,
+        "box": 400,
+        "vip": 385
+      },
+      "sourceLine": "S21                         INCELL FHD C/M                               HL                      $450                 $420                 $400                 $385"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 28,
+      "sourcePage": 5,
+      "model": "S21 FE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale": 470,
+        "box": 445,
+        "vip": 430
+      },
+      "sourceLine": "S21 FE                      INCELL FHD C/M                               HL                      $500                 $470                 $445                 $430"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 29,
+      "sourcePage": 5,
+      "model": "S21 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 440,
+        "wholesale": 410,
+        "box": 390,
+        "vip": 375
+      },
+      "sourceLine": "S21 PLUS                    INCELL FHD C/M                               HL                      $440                 $410                 $390                 $375"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 30,
+      "sourcePage": 5,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 480,
+        "wholesale": 455,
+        "box": 430,
+        "vip": 410
+      },
+      "sourceLine": "S21 Ultra                   INCELL FHD C/M                               HL                      $480                 $455                 $430                 $410"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 31,
+      "sourcePage": 5,
+      "model": "S22",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 555,
+        "wholesale": 520,
+        "box": 490,
+        "vip": 470
+      },
+      "sourceLine": "S22                         INCELL FHD C/M                               HL                      $555                 $520                 $490                 $470"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 32,
+      "sourcePage": 5,
+      "model": "S22 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 555,
+        "wholesale": 520,
+        "box": 490,
+        "vip": 470
+      },
+      "sourceLine": "S22 PLUS                    INCELL FHD C/M                               HL                      $555                 $520                 $490                 $470"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 33,
+      "sourcePage": 5,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 565,
+        "wholesale": 530,
+        "box": 500,
+        "vip": 480
+      },
+      "sourceLine": "S22 Ultra                   INCELL FHD C/M                               HL                      $565                 $530                 $500                 $480"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 34,
+      "sourcePage": 5,
+      "model": "S23",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 555,
+        "wholesale": 520,
+        "box": 490,
+        "vip": 470
+      },
+      "sourceLine": "S23                         INCELL FHD C/M                               HL                      $555                 $520                 $490                 $470"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 35,
+      "sourcePage": 5,
+      "model": "S23 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 555,
+        "wholesale": 520,
+        "box": 490,
+        "vip": 470
+      },
+      "sourceLine": "S23 PLUS                    INCELL FHD C/M                               HL                      $555                 $520                 $490                 $470"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 36,
+      "sourcePage": 5,
+      "model": "S23 Ultra †",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 480,
+        "wholesale": 455,
+        "box": 430,
+        "vip": 410
+      },
+      "sourceLine": "S23 Ultra †                 INCELL FHD C/M                               HL                      $480                 $455                 $430                 $410"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 37,
+      "sourcePage": 5,
+      "model": "S24",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 745,
+        "wholesale": 695,
+        "box": 660,
+        "vip": 635
+      },
+      "sourceLine": "S24                         INCELL FHD C/M                               HL                      $745                 $695                 $660                 $635"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 38,
+      "sourcePage": 5,
+      "model": "S24 PLUS",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 720,
+        "wholesale": 675,
+        "box": 635,
+        "vip": 615
+      },
+      "sourceLine": "S24 PLUS                    INCELL FHD C/M                               HL                      $720                 $675                 $635                 $615"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 39,
+      "sourcePage": 5,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 685,
+        "wholesale": 640,
+        "box": 610,
+        "vip": 585
+      },
+      "sourceLine": "S24 Ultra                   INCELL FHD C/M                               HL                      $685                 $640                 $610                 $585"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 40,
+      "sourcePage": 5,
+      "model": "NOTE 8",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale": 465,
+        "box": 440,
+        "vip": 420
+      },
+      "sourceLine": "NOTE 8                      INCELL FHD C/M                               HL                      $500                 $465                 $440                 $420"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 41,
+      "sourcePage": 5,
+      "model": "NOTE 9",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 500,
+        "wholesale": 465,
+        "box": 440,
+        "vip": 420
+      },
+      "sourceLine": "NOTE 9                      INCELL FHD C/M                               HL                      $500                 $465                 $440                 $420"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 42,
+      "sourcePage": 5,
+      "model": "NOTE 10",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 520,
+        "wholesale": 490,
+        "box": 460,
+        "vip": 445
+      },
+      "sourceLine": "NOTE 10                     INCELL FHD C/M                               HL                      $520                 $490                 $460                 $445"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 43,
+      "sourcePage": 5,
+      "model": "NOTE 10+",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 555,
+        "wholesale": 520,
+        "box": 490,
+        "vip": 470
+      },
+      "sourceLine": "NOTE 10+                    INCELL FHD C/M                               HL                      $555                 $520                 $490                 $470"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 44,
+      "sourcePage": 5,
+      "model": "NOTE10 LITE",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 760,
+        "wholesale": 715,
+        "box": 675,
+        "vip": 650
+      },
+      "sourceLine": "NOTE10 LITE                 INCELL FHD C/M                               HL                      $760                 $715                 $675                 $650"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 45,
+      "sourcePage": 5,
+      "model": "NOTE 20",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 630,
+        "wholesale": 590,
+        "box": 555,
+        "vip": 535
+      },
+      "sourceLine": "NOTE 20                     INCELL FHD C/M                               HL                      $630                 $590                 $555                 $535"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 46,
+      "sourcePage": 5,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "INCELL FHD C/M",
+      "brand": "HL",
+      "prices": {
+        "retail": 515,
+        "wholesale": 480,
+        "box": 455,
+        "vip": 440
+      },
+      "sourceLine": "NOTE 20 Ultra               INCELL FHD C/M                               HL                      $515                 $480                 $455                 $440"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 47,
+      "sourcePage": 5,
+      "model": "Z FLIP3",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 755,
+        "wholesale": 705,
+        "box": 670,
+        "vip": 640
+      },
+      "sourceLine": "Z FLIP3                     INCELL S/M                                 HAODE                     $755                 $705                 $670                 $640"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 48,
+      "sourcePage": 5,
+      "model": "Z FLIP4",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 755,
+        "wholesale": 705,
+        "box": 670,
+        "vip": 640
+      },
+      "sourceLine": "Z FLIP4                     INCELL S/M                                 HAODE                     $755                 $705                 $670                 $640"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 49,
+      "sourcePage": 5,
+      "model": "Z FLIP5",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 910,
+        "wholesale": 850,
+        "box": 800,
+        "vip": 775
+      },
+      "sourceLine": "Z FLIP5                     INCELL S/M                                 HAODE                     $910                 $850                 $800                 $775"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG INCELL",
+      "sourceRow": 50,
+      "sourcePage": 5,
+      "model": "Z FLIP6",
+      "product": null,
+      "quality": "INCELL S/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 910,
+        "wholesale": 850,
+        "box": 800,
+        "vip": 775
+      },
+      "sourceLine": "Z FLIP6                     INCELL S/M                                 HAODE                     $910                 $850                 $800                 $775"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG AMOLED",
+      "sourceRow": 64,
+      "sourcePage": 5,
+      "model": "S20 PLUS",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1205,
+        "wholesale": 1095,
+        "box": 985,
+        "vip": 930
+      },
+      "sourceLine": "S20 PLUS                    1:1 AMOLED PREMIUM C/M                     HAODE                   $1,205               $1,095                 $985                 $930"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG AMOLED",
+      "sourceRow": 65,
+      "sourcePage": 5,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1755,
+        "wholesale": 1645,
+        "box": 1535,
+        "vip": 1480
+      },
+      "sourceLine": "S21 Ultra                   1:1 AMOLED PREMIUM C/M                     HAODE                   $1,755               $1,645                $1,535               $1,480"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG AMOLED",
+      "sourceRow": 66,
+      "sourcePage": 5,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1920,
+        "wholesale": 1810,
+        "box": 1645,
+        "vip": 1590
+      },
+      "sourceLine": "S22 Ultra                   1:1 AMOLED PREMIUM C/M                     HAODE                   $1,920               $1,810                $1,645               $1,590"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG AMOLED",
+      "sourceRow": 67,
+      "sourcePage": 5,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1755,
+        "wholesale": 1700,
+        "box": 1535,
+        "vip": 1425
+      },
+      "sourceLine": "S23 Ultra                   1:1 AMOLED PREMIUM C/M                     HAODE                   $1,755               $1,700                $1,535               $1,425"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG AMOLED",
+      "sourceRow": 68,
+      "sourcePage": 5,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1975,
+        "wholesale": 1865,
+        "box": 1755,
+        "vip": 1700
+      },
+      "sourceLine": "S24 Ultra                   1:1 AMOLED PREMIUM C/M                     HAODE                   $1,975               $1,865                $1,755               $1,700"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p5 · SAMSUNG AMOLED",
+      "sourceRow": 69,
+      "sourcePage": 5,
+      "model": "S25 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2190,
+        "wholesale": 1975,
+        "box": 1865,
+        "vip": 1810
+      },
+      "sourceLine": "S25 Ultra                   1:1 AMOLED PREMIUM C/M                     HAODE                   $2,190               $1,975                $1,865               $1,810"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG AMOLED",
+      "sourceRow": 8,
+      "sourcePage": 6,
+      "model": "NOTE 10",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1645,
+        "wholesale": 1425,
+        "box": 1205,
+        "vip": 1150
+      },
+      "sourceLine": "NOTE 10                     1:1 AMOLED PREMIUM C/M                     HAODE                   $1,645               $1,425                $1,205                $1,150"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG AMOLED",
+      "sourceRow": 9,
+      "sourcePage": 6,
+      "model": "NOTE 20",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1315,
+        "wholesale": 1095,
+        "box": 930,
+        "vip": 930
+      },
+      "sourceLine": "NOTE 20                     1:1 AMOLED PREMIUM C/M                     HAODE                   $1,315               $1,095                 $930                  $930"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG AMOLED",
+      "sourceRow": 10,
+      "sourcePage": 6,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "1:1 AMOLED PREMIUM C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1645,
+        "wholesale": 1535,
+        "box": 1480,
+        "vip": 1425
+      },
+      "sourceLine": "NOTE 20 Ultra               1:1 AMOLED PREMIUM C/M                     HAODE                   $1,645               $1,535                $1,480                $1,425"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 24,
+      "sourcePage": 6,
+      "model": "S21 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2740,
+        "wholesale": 2520,
+        "box": 2410,
+        "vip": 2355
+      },
+      "sourceLine": "S21 Ultra                   TIPO ORIGINAL C/M                          HAODE                   $2,740               $2,520                $2,410                $2,355"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 25,
+      "sourcePage": 6,
+      "model": "S22 PLUS",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1535,
+        "wholesale": 1315,
+        "box": 1095,
+        "vip": 1095
+      },
+      "sourceLine": "S22 PLUS                    TIPO ORIGINAL C/M                          HAODE                   $1,535               $1,315                $1,095                $1,095"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 26,
+      "sourcePage": 6,
+      "model": "S22 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2520,
+        "wholesale": 2410,
+        "box": 2300,
+        "vip": 2300
+      },
+      "sourceLine": "S22 Ultra                   TIPO ORIGINAL C/M                          HAODE                   $2,520               $2,410                $2,300                $2,300"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 27,
+      "sourcePage": 6,
+      "model": "S23 PLUS",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 1975,
+        "wholesale": 1810,
+        "box": 1645,
+        "vip": 1535
+      },
+      "sourceLine": "S23 PLUS                    TIPO ORIGINAL C/M                          HAODE                   $1,975               $1,810                $1,645                $1,535"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 28,
+      "sourcePage": 6,
+      "model": "S23 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2520,
+        "wholesale": 2410,
+        "box": 2300,
+        "vip": 2245
+      },
+      "sourceLine": "S23 Ultra                   TIPO ORIGINAL C/M                          HAODE                   $2,520               $2,410                $2,300                $2,245"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 29,
+      "sourcePage": 6,
+      "model": "S24 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2740,
+        "wholesale": 2520,
+        "box": 2300,
+        "vip": 2245
+      },
+      "sourceLine": "S24 Ultra                   TIPO ORIGINAL C/M                          HAODE                   $2,740               $2,520                $2,300                $2,245"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 30,
+      "sourcePage": 6,
+      "model": "S25 Ultra †",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2740,
+        "wholesale": 2520,
+        "box": 2300,
+        "vip": 2245
+      },
+      "sourceLine": "S25 Ultra †                 TIPO ORIGINAL C/M                          HAODE                   $2,740               $2,520                $2,300                $2,245"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 31,
+      "sourcePage": 6,
+      "model": "S26 Ultra †",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4385,
+        "wholesale": 4165,
+        "box": 3945,
+        "vip": 3835
+      },
+      "sourceLine": "S26 Ultra †                 TIPO ORIGINAL C/M                          HAODE                   $4,385               $4,165                $3,945                $3,835"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 32,
+      "sourcePage": 6,
+      "model": "NOTE 20 Ultra",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3290,
+        "wholesale": 3070,
+        "box": 2850,
+        "vip": 2740
+      },
+      "sourceLine": "NOTE 20 Ultra               TIPO ORIGINAL C/M                          HAODE                   $3,290               $3,070                $2,850                $2,740"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 33,
+      "sourcePage": 6,
+      "model": "Z FLIP3",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 2850,
+        "wholesale": 2685,
+        "box": 2520,
+        "vip": 2465
+      },
+      "sourceLine": "Z FLIP3                     TIPO ORIGINAL C/M                          HAODE                   $2,850               $2,685                $2,520                $2,465"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 34,
+      "sourcePage": 6,
+      "model": "Z FLIP4",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 3180,
+        "wholesale": 2960,
+        "box": 2740,
+        "vip": 2740
+      },
+      "sourceLine": "Z FLIP4                     TIPO ORIGINAL C/M                          HAODE                   $3,180               $2,960                $2,740                $2,740"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 35,
+      "sourcePage": 6,
+      "model": "Z FLIP5",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4220,
+        "wholesale": 4000,
+        "box": 3780,
+        "vip": 3615
+      },
+      "sourceLine": "Z FLIP5                     TIPO ORIGINAL C/M                          HAODE                   $4,220               $4,000                $3,780                $3,615"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 36,
+      "sourcePage": 6,
+      "model": "Z FLIP6",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4385,
+        "wholesale": 4165,
+        "box": 3945,
+        "vip": 3945
+      },
+      "sourceLine": "Z FLIP6                     TIPO ORIGINAL C/M                          HAODE                   $4,385               $4,165                $3,945                $3,945"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 37,
+      "sourcePage": 6,
+      "model": "Z FLIP7",
+      "product": null,
+      "quality": "TIPO ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 5920,
+        "wholesale": 5480,
+        "box": 5150,
+        "vip": 4825
+      },
+      "sourceLine": "Z FLIP7                     TIPO ORIGINAL C/M                          HAODE                   $5,920               $5,480                $5,150                $4,825"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 38,
+      "sourcePage": 6,
+      "model": "Z FOLD3",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 4935,
+        "wholesale": 4825,
+        "box": 4715,
+        "vip": 4495
+      },
+      "sourceLine": "Z FOLD3                     ORIGINAL C/M                               HAODE                   $4,935               $4,825                $4,715                $4,495"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 39,
+      "sourcePage": 6,
+      "model": "Z FOLD4",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 6575,
+        "wholesale": 6465,
+        "box": 6360,
+        "vip": 6140
+      },
+      "sourceLine": "Z FOLD4                     ORIGINAL C/M                               HAODE                   $6,575               $6,465                $6,360                $6,140"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 40,
+      "sourcePage": 6,
+      "model": "Z FOLD5",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 8220,
+        "wholesale": 8110,
+        "box": 8000,
+        "vip": 7785
+      },
+      "sourceLine": "Z FOLD5                     ORIGINAL C/M                               HAODE                   $8,220               $8,110                $8,000                $7,785"
+    },
+    {
+      "section": "samsung",
+      "sourceSheet": "PDF p6 · SAMSUNG ORIGINAL",
+      "sourceRow": 41,
+      "sourcePage": 6,
+      "model": "Z FOLD6",
+      "product": null,
+      "quality": "ORIGINAL C/M",
+      "brand": "HAODE",
+      "prices": {
+        "retail": 10740,
+        "wholesale": 10635,
+        "box": 10525,
+        "vip": 10195
+      },
+      "sourceLine": "Z FOLD6                     ORIGINAL C/M                               HAODE                  $10,740              $10,635             $10,525                 $10,195"
+    }
+  ],
+  "sourceSheet": "PDF páginas 2–6",
+  "rules": {
+    "exactModelAndQualityOnly": true,
+    "missingRowsAreNotRepriced": true,
+    "automaticQuantityDiscounts": false,
+    "vipRequiresAuthorization": true,
+    "tiers": [
+      "Menudeo",
+      "Mayoreo",
+      "Caja",
+      "VIP"
+    ]
+  }
+}
