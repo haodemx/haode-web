@@ -11,8 +11,8 @@ function websiteProducts() {
 }
 const website = websiteProducts();
 const app = JSON.parse(fs.readFileSync(new URL('../app/products.json', import.meta.url), 'utf8'));
-const source = JSON.parse(fs.readFileSync(new URL('../data/customer-price-list-2026-09-24.json', import.meta.url), 'utf8'));
-const report = JSON.parse(fs.readFileSync(new URL('../docs/reports/customer-price-sync-2026-09-24.json', import.meta.url), 'utf8'));
+const source = JSON.parse(fs.readFileSync(new URL('../data/customer-price-list-2026-11.json', import.meta.url), 'utf8'));
+const report = JSON.parse(fs.readFileSync(new URL('../docs/reports/customer-price-sync-2026-11.json', import.meta.url), 'utf8'));
 const appJs = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8');
 
 test('APP-QUALITY-01 XR Bolsa model and offer copy use the approved HD+ quality', () => {
@@ -27,29 +27,29 @@ test('APP-QUALITY-01 XR Bolsa model and offer copy use the approved HD+ quality'
 function byId(items,id){const p=items.find(x=>x.id===id);assert.ok(p,`Missing product ${id}`);return p;}
 function price(product,label){return product.prices.find(x=>x.quantity===label)?.price;}
 
-test('2026-09-24 workbook is the authoritative customer price source', () => {
-  assert.equal(source.sourceVersion, '2026-09-24');
-  assert.equal(source.sourceWorkbook, 'HAODE_Lista_de_Precios_2026-09-24.xlsx');
-  assert.equal(source.sourceWorkbookSha256, '3afbebfaa59bbf599545ad385b7727f9b41353ebd0750abaa62be3812a609f5a');
-  assert.equal(source.rows.length, 156);
+test('2026-11 PDF is the authoritative customer price source', () => {
+  assert.equal(source.sourceVersion, '2026-11');
+  assert.equal(source.sourceDocument, 'HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf');
+  assert.equal(source.sourceDocumentSha256, '9f5165b38d4e263922599817ae9044c7086dec4b8c4c328b4b712fee4708cf6d');
+  assert.equal(source.rows.length, 162);
   assert.deepEqual(source.rules.tiers, ['Menudeo','Mayoreo','Caja','VIP']);
   assert.equal(source.rules.automaticQuantityDiscounts, false);
 });
 
 test('website and App received all exact matched prices', () => {
-  assert.equal(report.summary.websiteMatched, 152);
-  assert.equal(report.summary.appMatched, 152);
+  assert.equal(report.summary.websiteMatched, 157);
+  assert.equal(report.summary.appMatched, 157);
   assert.equal(report.summary.ambiguous, 0);
-  assert.equal(report.summary.unmatchedSource, 4);
-  assert.equal(price(byId(website,'iphone-incell-11'),'Menudeo'),'$160 MXN');
-  assert.equal(price(byId(website,'iphone-incell-11'),'Mayoreo'),'$150 MXN');
-  assert.equal(price(byId(website,'iphone-incell-11'),'Caja'),'$145 MXN');
-  assert.equal(price(byId(website,'iphone-incell-11'),'⭐ VIP'),'$140 MXN');
-  assert.equal(byId(app,'iphone-incell-11').precioPublico,160);
-  assert.equal(byId(app,'iphone-incell-11').precioMayoreo,150);
+  assert.equal(report.summary.unmatchedSource, 5);
+  assert.equal(price(byId(website,'iphone-incell-11'),'Menudeo'),'$175 MXN');
+  assert.equal(price(byId(website,'iphone-incell-11'),'Mayoreo'),'$165 MXN');
+  assert.equal(price(byId(website,'iphone-incell-11'),'Caja'),'$160 MXN');
+  assert.equal(price(byId(website,'iphone-incell-11'),'⭐ VIP'),'$155 MXN');
+  assert.equal(byId(app,'iphone-incell-11').precioPublico,175);
+  assert.equal(byId(app,'iphone-incell-11').precioMayoreo,165);
 });
 
-test('website and App quality labels use workbook column B for every exact match', () => {
+test('website and App quality labels match the approved PDF for every exact match', () => {
   const sourceByLocation = new Map(source.rows.map((row) => [`${row.sourceSheet}:${row.sourceRow}`, row]));
   for (const match of report.matched) {
     const sourceRow = sourceByLocation.get(`${match.sheet}:${match.row}`);
@@ -58,20 +58,20 @@ test('website and App quality labels use workbook column B for every exact match
     assert.equal(byId(website, match.id).quality, sourceRow.quality, `${match.id} website quality`);
     assert.equal(byId(app, match.id).calidad, sourceRow.quality, `${match.id} App quality`);
   }
-  assert.equal(report.summary.websiteQualityAligned, 152);
-  assert.equal(report.summary.appQualityAligned, 152);
+  assert.equal(report.summary.websiteQualityAligned, 157);
+  assert.equal(report.summary.appQualityAligned, 157);
   assert.doesNotMatch(byId(website, 'iphone-incell-xr').description, /Disponible para técnicos/i);
   assert.doesNotMatch(byId(app, 'iphone-incell-xr').descripcion, /Disponible para técnicos/i);
 });
 
 test('representative OLED, diagnostic, Samsung, hydrogel and AI prices match workbook', () => {
-  assert.equal(price(byId(website,'iphone-oled-13pro'),'Menudeo'),'$620 MXN');
-  assert.equal(price(byId(website,'haode-pantalla-oled-diagnostica-modelo-13-pro'),'Menudeo'),'$980 MXN');
-  assert.equal(price(byId(website,'samsung-incell-s8'),'Menudeo'),'$365 MXN');
-  assert.equal(price(byId(website,'samsung-original-z-fold3'),'Menudeo'),'$4,100 MXN');
-  assert.equal(price(byId(website,'mica-hd'),'Menudeo'),'$350 MXN');
-  assert.equal(price(byId(website,'mica-hd'),'⭐ VIP'),'$250 MXN');
-  assert.equal(price(byId(website,'aimb-g5-ai-sports'),'Menudeo'),'$855 MXN');
+  assert.equal(price(byId(website,'iphone-oled-13pro'),'Menudeo'),'$680 MXN');
+  assert.equal(price(byId(website,'haode-pantalla-oled-diagnostica-modelo-13-pro'),'Menudeo'),'$1,075 MXN');
+  assert.equal(price(byId(website,'samsung-incell-s8'),'Menudeo'),'$400 MXN');
+  assert.equal(price(byId(website,'samsung-original-z-fold3'),'Menudeo'),'$4,935 MXN');
+  assert.equal(price(byId(website,'mica-hd'),'Menudeo'),'$375 MXN');
+  assert.equal(price(byId(website,'mica-hd'),'⭐ VIP'),'$275 MXN');
+  assert.equal(price(byId(website,'aimb-g5-ai-sports'),'Menudeo'),'$935 MXN');
   assert.equal(price(byId(website,'gafas-ai-gafas-ai-m02'),'Caja'),'$680 MXN');
 });
 
@@ -89,7 +89,7 @@ test('manual Mayoreo/Caja/VIP tiers are displayed but never auto-applied', () =>
 });
 
 test('source rows without an exact website product are reported, not guessed', () => {
-  assert.deepEqual(report.unmatchedSource.map(x=>x.model),['Gafas AI M08 13MP','X Bolsa Protectora','Xs Bolsa Protectora','S26 Ultra']);
+  assert.deepEqual(report.unmatchedSource.map(x=>x.model),['AI casco C123','Cámara para ciclismo C3 Pro','X Bolsa Protectora','Xs Bolsa Protectora','S26 Ultra †']);
 });
 
 test('legacy AI product pages expose every source-backed tier and matching Product JSON-LD', () => {
@@ -125,8 +125,9 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   for (const file of [
     'scripts/sync-customer-prices.js',
     'scripts/product-media-policy.cjs',
+    'scripts/customer-price-highlights.cjs',
     'sitemap.xml',
-    'data/customer-price-list-2026-09-24.json',
+    'data/customer-price-list-2026-11.json',
     'data/products.generated.js',
     'app/products.json',
     'docs/master-data/products-master.csv',
@@ -179,7 +180,7 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   assert.deepEqual(byId(syncedWebsite, 'samsung-incell-s8').prices.map((row) => row.quantity), ['Menudeo', 'Mayoreo', 'Caja', '⭐ VIP']);
   assert.deepEqual(byId(syncedApp, 'samsung-incell-s8').priceTiers.map((tier) => tier.code), ['WHOLESALE', 'BOX', 'VIP']);
   assert.ok(byId(syncedApp, 'samsung-incell-s8').priceTiers.every((tier) => tier.autoApply === false));
-  assert.equal(byId(syncedApp, 'iphone-incell-11-bolsa-protectora').offerDisplayPrice, '$135 MXN / pieza');
+  assert.equal(byId(syncedApp, 'iphone-incell-11-bolsa-protectora').offerDisplayPrice, '$150 MXN / pieza');
   assert.doesNotMatch(byId(syncedApp, 'iphone-incell-xr').descripcion, /Caja \$155 MXN/);
 
   const masterLines = fs.readFileSync(path.join(root, 'docs/master-data/products-master.csv'), 'utf8').trim().split('\n');
@@ -187,13 +188,13 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   const masterRow = masterLines.find((line) => line.startsWith('iphone-incell-14,'))?.split(',');
   assert.ok(masterRow, 'master CSV must retain the matched product');
   for (const column of ['precio_publico', 'website_precio_publico', 'app_precio_publico']) {
-    assert.equal(masterRow[masterHeaders.indexOf(column)], '205', `${column} must match the confirmed retail price`);
+    assert.equal(masterRow[masterHeaders.indexOf(column)], '225', `${column} must match the confirmed retail price`);
   }
   for (const column of ['precio_mayoreo', 'website_precio_mayoreo', 'app_precio_mayoreo']) {
-    assert.equal(masterRow[masterHeaders.indexOf(column)], '190', `${column} must match the confirmed wholesale price`);
+    assert.equal(masterRow[masterHeaders.indexOf(column)], '210', `${column} must match the confirmed wholesale price`);
   }
-  assert.match(masterRow[masterHeaders.indexOf('source')], /HAODE_Lista_de_Precios_2026-09-24\.xlsx/);
-  assert.equal(masterRow[masterHeaders.indexOf('last_checked')], '2026-09-24');
+  assert.match(masterRow[masterHeaders.indexOf('source')], /HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas\.pdf/);
+  assert.equal(masterRow[masterHeaders.indexOf('last_checked')], '2026-10-28');
 });
 
 test('static detail fallback updater writes four named tiers and matching Product offers', () => {
@@ -222,7 +223,7 @@ test('static detail fallback updater writes four named tiers and matching Produc
   assert.equal(result.status, 0, result.stderr || result.stdout);
 
   const html = fs.readFileSync(path.join(root, 'producto/x200t-cortadora-micas/index.html'), 'utf8');
-  assert.match(html, /Menudeo: \$6,000 MXN/);
+  assert.match(html, /Menudeo: \$6,100 MXN/);
   assert.match(html, /<th scope="row">Menudeo<\/th>/);
   assert.match(html, /<th scope="row">Mayoreo<\/th>/);
   assert.match(html, /<th scope="row">Caja<\/th>/);
@@ -238,7 +239,7 @@ test('static detail fallback updater writes four named tiers and matching Produc
   assert.doesNotMatch(html, /stock local en CDMX|Stock en México bajo confirmación/);
   assert.match(html, /Inventario ERP por confirmar/);
   const aliasHtml = fs.readFileSync(path.join(root, 'producto/x200t-legacy-route/index.html'), 'utf8');
-  assert.match(aliasHtml, /Menudeo: \$6,000 MXN/);
+  assert.match(aliasHtml, /Menudeo: \$6,100 MXN/);
   assert.match(aliasHtml, /<th scope="row">⭐ VIP<\/th>/);
   assert.equal(fs.readFileSync(path.join(root, 'producto/unmatched-product/index.html'), 'utf8'), unmatchedHtml);
 });

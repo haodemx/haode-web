@@ -23,7 +23,7 @@ test.describe('HAODE legacy entry conversion UI phase 8', () => {
       await expect(page.locator('body')).toHaveClass(/micas-reference-page/);
       await expect(page.locator('.reference-conversion-strip')).toContainText('Paquete 50 pzs');
       await expect(page.locator('[data-reference-conversion="micas-packages"]')).toContainText('Envía tu lista de micas');
-      await expect(page.locator('text=$450 MXN').first()).toBeVisible();
+      await expect(page.locator('text=$375 MXN').first()).toBeVisible();
       await expect(page.locator('a[href*="wa.me"]').first()).toBeVisible();
 
       const floatingDisplay = await page.locator('.floating-cta').evaluate((el) => getComputedStyle(el).display);

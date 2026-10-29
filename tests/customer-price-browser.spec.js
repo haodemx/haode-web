@@ -28,13 +28,13 @@ test("Samsung S8 detail shows all four approved named customer prices", async ({
 
   const priceTable = page.getByRole("table", { name: "Tabla completa de precios" });
   await expect(priceTable).toContainText("Menudeo");
-  await expect(priceTable).toContainText("$365 MXN");
+  await expect(priceTable).toContainText("$400 MXN");
   await expect(priceTable).toContainText("Mayoreo");
-  await expect(priceTable).toContainText("$345 MXN");
+  await expect(priceTable).toContainText("$380 MXN");
   await expect(priceTable).toContainText("Caja");
-  await expect(priceTable).toContainText("$325 MXN");
+  await expect(priceTable).toContainText("$355 MXN");
   await expect(priceTable).toContainText("VIP");
-  await expect(priceTable).toContainText("$315 MXN");
+  await expect(priceTable).toContainText("$345 MXN");
   expect(consoleErrors).toEqual([]);
   await saveEvidence(page, "website-samsung-s8-four-named-prices.png");
 });
@@ -46,13 +46,13 @@ test("App uses retail price for one Samsung S8 instead of box price", async ({ p
   await page.goto(`${BASE_URL}/app/#producto/samsung-incell-s8`, { waitUntil: "domcontentloaded" });
 
   await expect(page.getByRole("heading", { name: /Pantalla Samsung S8$/ })).toBeVisible();
-  await expect(page.locator(".price-stack")).toContainText("$365 MXN");
+  await expect(page.locator(".price-stack")).toContainText("$400 MXN");
   await page.locator("[data-add-product='samsung-incell-s8']").click();
   await page.goto(`${BASE_URL}/app/#carrito`, { waitUntil: "domcontentloaded" });
 
   const cartItem = page.locator(".cart-items-page .cart-item", { hasText: "Pantalla Samsung S8" });
-  await expect(cartItem).toContainText("$365 MXN");
-  await expect(cartItem).not.toContainText("$315 MXN");
+  await expect(cartItem).toContainText("$400 MXN");
+  await expect(cartItem).not.toContainText("$345 MXN");
   expect(consoleErrors).toEqual([]);
   await saveEvidence(page, "app-samsung-s8-retail-price.png");
 });
@@ -102,7 +102,7 @@ test("App keeps the confirmed workbook quality when ERP refreshes inventory", as
   await page.goto(`${BASE_URL}/app/#producto/iphone-incell-11`, { waitUntil: "domcontentloaded" });
   await expect(page.locator(".stock-badge").first()).toContainText("Disponible ERP");
   await expect(page.locator(".spec-grid")).toContainText("INCELL FHD C/IC");
-  await expect(page.locator(".price-stack")).toContainText("$160 MXN");
+  await expect(page.locator(".price-stack")).toContainText("$175 MXN");
   expect(consoleErrors).toEqual([]);
 });
 

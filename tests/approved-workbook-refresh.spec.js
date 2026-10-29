@@ -18,10 +18,10 @@ test.beforeEach(async ({ page }) => {
 });
 
 const cases = [
-  ['iphone-incell-xr', [160, 150, 145, 140], 'INCELL FHD C/IC'],
-  ['samsung-incell-note-10-lite', [695, 650, 615, 595], 'INCELL FHD C/M'],
-  ['samsung-incell-note-20', [575, 540, 505, 490], 'INCELL FHD C/M'],
-  ['samsung-incell-s10-lite', [290, 270, 255, 250], 'INCELL FHD C/M'],
+  ['iphone-incell-xr', [175, 165, 160, 155], 'INCELL FHD C/IC'],
+  ['samsung-incell-note-10-lite', [760, 715, 675, 650], 'INCELL FHD C/M'],
+  ['samsung-incell-note-20', [630, 590, 555, 535], 'INCELL FHD C/M'],
+  ['samsung-incell-s10-lite', [320, 295, 280, 275], 'INCELL FHD C/M'],
 ];
 for (const [id, prices, quality] of cases) {
   test(`${id} preserves confirmed named tiers and quality while ERP refreshes stock`, async ({ page }) => {
@@ -59,6 +59,6 @@ for (const [id, prices, quality] of cases) {
 test('XR keeps approved price and quality when the catalog is unavailable', async ({ page }) => {
   await page.route('**/api/public/catalog**', route => route.fulfill({ status: 503, json: { error: 'isolated catalog unavailable' } }));
   await page.goto(`${BASE}/producto/iphone-incell-xr/`, { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-detail-price-body]').locator('tr').filter({ hasText: 'Caja' })).toContainText('$145 MXN');
+  await expect(page.locator('[data-detail-price-body]').locator('tr').filter({ hasText: 'Caja' })).toContainText('$160 MXN');
   await expect(page.locator('[data-detail-quality]')).toHaveText('INCELL FHD C/IC');
 });

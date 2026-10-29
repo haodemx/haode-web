@@ -9,15 +9,15 @@ export const OUTPUT = 'data/marketing/chatgpt-product-feed.json';
 const SOURCE = 'data/products.generated.js';
 const ASSET_QC_SOURCE = 'data/marketing/chatgpt-feed-asset-qc.json';
 const PRIORITY = new Set(['iphone-incell', 'iphone-oled', 'samsung-incell', 'samsung-oled', 'samsung-tipo-original', 'oled-diagnostica', 'micas']);
-const PRICE_POLICY = 'Precio de menudeo confirmado por la lista comercial del 2026-09-24; confirma cantidad y disponibilidad por WhatsApp.';
+const PRICE_POLICY = 'Precio de menudeo confirmado por la lista comercial del 2026-11; confirma cantidad y disponibilidad por WhatsApp.';
 const AVAILABILITY_POLICY = 'unknown no significa disponible ni agotado.';
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 
 function confirmedRetailPrice(product) {
   const tier = product.prices?.find(item => item.quantity === 'Menudeo');
   const match = /^\$([0-9][0-9,]*(?:\.[0-9]{1,2})?) MXN$/.exec(tier?.price ?? '');
-  if (!match || !String(product.priceSource ?? '').startsWith('HAODE_Lista_de_Precios_2026-09-24.xlsx')) {
-    throw new Error(`Missing confirmed 2026-09-24 retail price: ${product.id}`);
+  if (!match || !String(product.priceSource ?? '').startsWith('HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf')) {
+    throw new Error(`Missing confirmed 2026-11 retail price: ${product.id}`);
   }
   return { amount: Number(match[1].replaceAll(',', '')), currency: 'MXN' };
 }
@@ -69,7 +69,7 @@ export function buildFeed(products = readPublicProducts(), root = ROOT, assetQc 
       image_link: usableImage ? `${ORIGIN}/${main}` : null,
       availability: 'unknown',
       price: retailPrice,
-      price_status: 'confirmed_retail_2026-09-24',
+      price_status: 'confirmed_retail_2026-11',
       availability_status: 'not_live_verified',
       image_status: rejectedImage ? 'asset_rejected' : usableImage ? 'existing_public_asset' : 'asset_missing',
       category: p.category,
@@ -127,7 +127,7 @@ export function validateFeed(feed, assetQc = readAssetQc()) {
     exactKeys(row.price, ['amount', 'currency']);
     if (!Number.isFinite(row.price.amount) || row.price.amount <= 0 || row.price.currency !== 'MXN') throw new Error('Invalid confirmed retail price');
     if (row.availability !== 'unknown' || row.platform_ready !== false) throw new Error('Unverified availability or platform claim');
-    if (row.price_status !== 'confirmed_retail_2026-09-24' || row.availability_status !== 'not_live_verified') throw new Error('Missing data semantics');
+    if (row.price_status !== 'confirmed_retail_2026-11' || row.availability_status !== 'not_live_verified') throw new Error('Missing data semantics');
     const qcRejected = Object.hasOwn(assetQc, row.id);
     if (qcRejected !== (row.image_status === 'asset_rejected')) throw new Error('Asset QC policy mismatch');
     const requiredBlockers = ['ads_feed_registration_required', 'brand_mapping_review_required', row.image_link ? 'ads_asset_approval_required' : 'confirmed_product_image_required', ...(qcRejected ? ['asset_qc_failed'] : [])];

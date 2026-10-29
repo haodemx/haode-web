@@ -68,10 +68,10 @@ test('real cart controls emit exact deltas for add, increase, decrease and zero 
   await drawer.locator('[data-decrease="iphone-incell-14"]').click();
   await drawer.locator('[data-decrease="iphone-incell-14"]').click();
   expect(await events(page)).toEqual([
-    item('add_to_cart', 1, 205, 205, 'iphone-incell-14'),
-    item('add_to_cart', 1, 205, 205, 'iphone-incell-14'),
-    item('remove_from_cart', 1, 205, 205, 'iphone-incell-14'),
-    item('remove_from_cart', 1, 205, 205, 'iphone-incell-14'),
+    item('add_to_cart', 1, 225, 225, 'iphone-incell-14'),
+    item('add_to_cart', 1, 225, 225, 'iphone-incell-14'),
+    item('remove_from_cart', 1, 225, 225, 'iphone-incell-14'),
+    item('remove_from_cart', 1, 225, 225, 'iphone-incell-14'),
   ]);
   expect((await page.evaluate(() => window.__cartAudit.snapshot())).cart).toEqual([]);
 });
@@ -150,13 +150,14 @@ test('manual MICA tiers never auto-apply; cart, WhatsApp and ERP keep identical 
   await boot(page);
   await page.evaluate(() => window.__cartAudit.seed([['mica-hd', 10], ['iphone-incell-14', 2]]));
   const snapshot = await page.evaluate(() => window.__cartAudit.snapshot());
-  expect(snapshot.total).toBe(3910);
-  expect(snapshot.order.total).toBe(3910);
-  expect(snapshot.order.items.map(({ quantity, unit_price }) => [quantity, unit_price])).toEqual([[10, 350], [2, 205]]);
-  expect(snapshot.items.map(({ quantity, price }) => [quantity, price])).toEqual([[10, 350], [2, 205]]);
+  expect(snapshot.total).toBe(4200);
+  expect(snapshot.order.total).toBe(4200);
+  expect(snapshot.order.items.map(({ quantity, unit_price }) => [quantity, unit_price])).toEqual([[10, 375], [2, 225]]);
+  expect(snapshot.items.map(({ quantity, price }) => [quantity, price])).toEqual([[10, 375], [2, 225]]);
   expect(snapshot.message).toContain('precio estimado de Menudeo');
   expect(snapshot.message).toContain('Mayoreo / Caja / VIP: confirmar por WhatsApp');
-  expect(snapshot.message).toContain('Total estimado: $3,910 MXN');
+  expect(snapshot.message).toContain('Total estimado: $4,200 MXN');
+  expect(snapshot.message).toContain('Calidad: INCELL FHD C/IC');
   await page.goto(`${BASE_URL}/app/#carrito`);
   await expect(page.locator('.cart-pricing-note')).toContainText('Mayoreo, Caja y VIP se confirman con un asesor por WhatsApp');
   await page.locator('[data-open-cart]').first().click();
@@ -215,12 +216,12 @@ test('checkout keeps customer details out of DOM URLs and native GA4 attribution
   await expect.poll(async () => (await events(page, ['generate_lead'])).length).toBe(1);
   const checkoutEvents = await events(page, ['begin_checkout', 'generate_lead']);
   for (const payload of checkoutEvents) {
-    expect(payload.value).toBe(205);
+    expect(payload.value).toBe(225);
     for (const key of ['source', 'medium', 'campaign', 'campaign_source', 'campaign_medium']) expect(payload).not.toHaveProperty(key);
     expect(JSON.stringify(payload)).not.toContain('5512345678');
   }
   const order = await page.evaluate(() => window.__cartAudit.snapshot().order);
-  expect(order).toMatchObject({ source: 'haode_web', utm_source: 'instagram', utm_medium: 'social', total: 205 });
+  expect(order).toMatchObject({ source: 'haode_web', utm_source: 'instagram', utm_medium: 'social', total: 225 });
 });
 
 test('static MICA HD and MATTE contain four intact table rows', async ({ request }) => {
@@ -228,9 +229,9 @@ test('static MICA HD and MATTE contain four intact table rows', async ({ request
   for (const label of ['MICA HD', 'MICA MATTE']) {
     const table = source.match(new RegExp(`<table class="detail-price-table" aria-label="Precios de ${label}">([\\s\\S]*?)<\\/table>`))?.[1] || '';
     expect((table.match(/<tr>/g) || [])).toHaveLength(4);
-    expect(table).toContain('<th scope="row">Menudeo</th><td>$350 MXN</td>');
-    expect(table).toContain('<th scope="row">Mayoreo</th><td>$300 MXN</td>');
-    expect(table).toContain('<th scope="row">Caja</th><td>$275 MXN</td>');
-    expect(table).toContain('<th scope="row">⭐ VIP</th><td>$250 MXN</td>');
+    expect(table).toContain('<th scope="row">Menudeo</th><td>$375 MXN</td>');
+    expect(table).toContain('<th scope="row">Mayoreo</th><td>$325 MXN</td>');
+    expect(table).toContain('<th scope="row">Caja</th><td>$300 MXN</td>');
+    expect(table).toContain('<th scope="row">⭐ VIP</th><td>$275 MXN</td>');
   }
 });

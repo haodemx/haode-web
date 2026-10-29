@@ -55,7 +55,7 @@
     "browser-test:ui": "playwright test --ui",
     "haode:app-qa": "playwright test tests/haode-app.spec.js",
     "test-catalog-filters": "node scripts/test-catalog-filters.js",
-    "test:customer-prices": "node --test tests/customer-price-sync.test.mjs",
+    "test:customer-prices": "node --test tests/customer-price-sync.test.mjs tests/november-price-update.test.mjs",
     "product-control": "node scripts/product-control-system.js",
     "product-control-center": "/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/product-control-center.py",
     "product-validate": "/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/product-control-center.py --validate-only",

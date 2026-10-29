@@ -50,7 +50,8 @@ function priceTableHtml(rows) {
 
 function hasApprovedCustomerPrice(product) {
   const priceSource = String(product?.priceSource || '');
-  return priceSource.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx');
+  return priceSource.includes('HAODE_Lista_de_Precios_2026-09-24.xlsx')
+    || priceSource.includes('HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf');
 }
 
 function isScreenProduct(product) {
@@ -65,6 +66,7 @@ function updateStaticPage(file, product, rows) {
   text = replacePriceNote(text, `Menudeo: ${retailPriceText}`);
   text = replacePriceHeading(text);
   text = replacePriceTable(text, priceTableHtml(rows));
+  text = replacePriceHighlights(text, rows);
   text = replaceProductOffers(text, product, rows);
   text = replaceProductQuality(text, product);
   if (isScreenProduct(product)) text = replaceProductDescription(text, product);
@@ -95,6 +97,25 @@ function replaceProductQuality(text, product) {
       `<p class="detail-meta" data-detail-quality>${quality}</p>`
     )
     .replace(/La calidad registrada es [^;]+;/g, `La calidad registrada es ${quality};`);
+}
+
+function replacePriceHighlights(text, rows) {
+  const prices = new Map(rows.map(row => [row.quantity.replace(/⭐\s*/, ''), row.price]));
+  return text.replace(/(<div class="detail-highlights" data-detail-highlights>)([\s\S]*?)(<\/div>)/g,
+    (_match, opening, content, closing) => opening + content.replace(
+      /<span>(Menudeo|Mayoreo|Caja|(?:⭐\s*)?VIP)\s+\$[0-9,.]+ MXN<\/span>/g,
+      (badge, label) => prices.has(label.replace(/⭐\s*/, ''))
+        ? `<span>${label} ${prices.get(label.replace(/⭐\s*/, ''))}</span>` : badge
+    ) + closing)
+    // Older camera details keep their own two-tier summary outside the table.
+    .replace(/(<h3 class="detail-price">)([^<]*)(<\/h3>)/g,
+      (_match, opening, content, closing) => opening + content.replace(
+        /((?:Precio\s+)?)(Menudeo|Mayoreo|Caja|VIP)\s+\$[0-9,.]+ MXN/gi,
+        (summary, prefix, label) => {
+          const tier = rows.find(row => row.quantity.replace(/⭐\s*/, '').toLowerCase() === label.toLowerCase());
+          return tier ? `${prefix}${label} ${tier.price}` : summary;
+        }
+      ) + closing);
 }
 
 function replaceProductDescription(text, product) {
@@ -152,6 +173,8 @@ function replaceProductOffers(text, product, rows) {
 }
 
 function replacePriceTable(text, table) {
+  // Older canonical aliases have a plain tbody rather than the modern hook.
+  text = text.replace(/(<table\b[^>]*class="detail-price-table"[^>]*>\s*)<tbody>/g, '$1<tbody data-detail-price-body>');
   const start = text.indexOf('<tbody data-detail-price-body>');
   if (start < 0) return text;
   const end = text.indexOf('</tbody>', start);
@@ -198,23 +221,26 @@ function main() {
     }
   }
 
-  for (const entry of fs.readdirSync(PRODUCT_DIR, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const file = path.join(PRODUCT_DIR, entry.name, 'index.html');
-    if (processedFiles.has(file) || !fs.existsSync(file)) continue;
+  for (const directory of [PRODUCT_DIR, path.join(ROOT, 'productos')]) {
+    if (!fs.existsSync(directory)) continue;
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue;
+      const file = path.join(directory, entry.name, 'index.html');
+      if (processedFiles.has(file) || !fs.existsSync(file)) continue;
 
-    const text = fs.readFileSync(file, 'utf8');
-    const canonicalMatch = text.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']https:\/\/haode\.com\.mx\/producto\/([^/"']+)\/?["']/i)
-      || text.match(/<link[^>]+href=["']https:\/\/haode\.com\.mx\/producto\/([^/"']+)\/?["'][^>]+rel=["']canonical["']/i);
-    if (!canonicalMatch) continue;
+      const text = fs.readFileSync(file, 'utf8');
+      const canonicalMatch = text.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']https:\/\/haode\.com\.mx\/producto\/([^/"']+)\/?["']/i)
+        || text.match(/<link[^>]+href=["']https:\/\/haode\.com\.mx\/producto\/([^/"']+)\/?["'][^>]+rel=["']canonical["']/i);
+      if (!canonicalMatch) continue;
 
-    if (updateStaticInventoryCopy(file)) inventoryCopyUpdated.push(entry.name);
+      if (updateStaticInventoryCopy(file)) inventoryCopyUpdated.push(entry.name);
 
-    const product = productsById.get(canonicalMatch[1]);
-    if (!product || !hasApprovedCustomerPrice(product)) continue;
-    const rows = priceRows(product);
-    if (!firstPublicPrice(rows)) continue;
-    if (updateStaticPage(file, product, rows)) updatedAliases.push(entry.name);
+      const product = productsById.get(canonicalMatch[1]);
+      if (!product || !hasApprovedCustomerPrice(product)) continue;
+      const rows = priceRows(product);
+      if (!firstPublicPrice(rows)) continue;
+      if (updateStaticPage(file, product, rows)) updatedAliases.push(entry.name);
+    }
   }
 
   console.log(JSON.stringify({

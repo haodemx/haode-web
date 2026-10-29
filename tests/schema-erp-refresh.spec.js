@@ -50,7 +50,7 @@ for (const available of [true, false]) {
     for (const [i, offer] of product.offers.entries()) {
       expect.soft(offer.url).toBe(canonical);
       expect(offer.priceCurrency).toBe('MXN');
-      expect(Number(offer.price)).toBe([160, 150, 145, 140][i]);
+      expect(Number(offer.price)).toBe([175, 165, 160, 155][i]);
       expect(offer).not.toHaveProperty('availability');
     }
     expect(product).not.toHaveProperty('aggregateRating');

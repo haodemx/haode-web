@@ -9,6 +9,7 @@ const reportPath = `${root}/docs/chatgpt-ads/feed-closeout-audit.md`;
 const feedPath = `${root}/data/marketing/chatgpt-product-feed.json`;
 const audit = JSON.parse(fs.readFileSync(auditPath, 'utf8'));
 const feed = JSON.parse(fs.readFileSync(feedPath, 'utf8'));
+const revision = JSON.parse(fs.readFileSync(`${root}/docs/chatgpt-ads/price-revision-2026-11.json`, 'utf8'));
 const sha256File = path => crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex');
 const productSource = fs.readFileSync(`${root}/data/products.generated.js`, 'utf8');
 const products = JSON.parse(productSource.slice(productSource.indexOf('['), productSource.lastIndexOf(']') + 1));
@@ -149,10 +150,18 @@ test('the audit is tied to the exact supplied workbook revisions', () => {
   assert.equal(audit.sources.owner_workbook.sha256, '5ea4a6ca14aada298c43b0ba0e902616d8e4c4899a4086334eb0e3c204da8709');
 });
 
-test('the committed audit fingerprints every mutable public input', () => {
-  assert.equal(audit.sources.website.sha256, sha256File(`${root}/data/products.generated.js`));
-  assert.equal(audit.sources.app.sha256, sha256File(`${root}/app/products.json`));
-  assert.equal(audit.sources.feed.sha256, sha256File(feedPath));
+test('the historical audit stays frozen and the approved price revision binds current public inputs', () => {
+  assert.equal(sha256File(auditPath), revision.historicalAudit.sha256);
+  assert.equal(revision.historicalAudit.currentPriceAuthority, false);
+  assert.equal(revision.exactWebsiteAppPriceMappings, 157);
+  assert.equal(revision.unchangedUnlistedProducts, 29);
+  assert.deepEqual(revision.feedMembership, feed.items.map(p => p.id).sort());
+  assert.equal(revision.platformReady, 0);
+  assert.equal(revision.externalUploadOrERPWrite, false);
+  assert.equal(revision.sourceDocumentSha256, JSON.parse(fs.readFileSync(`${root}/${revision.source}`, 'utf8')).sourceDocumentSha256);
+  assert.equal(revision.inputs.website.sha256, sha256File(`${root}/data/products.generated.js`));
+  assert.equal(revision.inputs.app.sha256, sha256File(`${root}/app/products.json`));
+  assert.equal(revision.inputs.feed.sha256, sha256File(feedPath));
   assert.equal(audit.sources.asset_qc_policy.sha256, sha256File(`${root}/data/marketing/chatgpt-feed-asset-qc.json`));
   assert.equal(audit.sources.approved_asset_manifest.sha256, sha256File(`${root}/docs/reports/hydrogel-asset-owner-review-20260918.json`));
   assert.deepEqual(audit.sources.candidate_primary_assets, primaryAssetsFingerprint());
@@ -162,7 +171,7 @@ test('the committed audit fingerprints every mutable public input', () => {
     structured.update(`${id}\0${sha256File(`${root}/producto/${id}/index.html`)}\n`);
   }
   assert.equal(audit.sources.structured_data.product_pages, 146);
-  assert.equal(audit.sources.structured_data.sha256, structured.digest('hex'));
+  assert.equal(revision.structured_data.sha256, structured.digest('hex'));
 
   const report = fs.readFileSync(reportPath, 'utf8');
   assert.match(report, /Feed 候选：146/);

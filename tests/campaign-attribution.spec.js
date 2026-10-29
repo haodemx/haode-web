@@ -62,13 +62,13 @@ test("keeps canonical campaign attribution through navigation and ERP checkout",
     `${APP_URL}?utm_source=Instagram&utm_medium=Organic%20Social&utm_campaign=Verano%202026&utm_content=Video%20A&utm_term=Pantallas%20Diagn%C3%B3stico%20iPhone#lista`,
     { waitUntil: "domcontentloaded" }
   );
-  const approvedCard = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
+  const approvedCard = page.locator(".product-card").filter({ has: page.locator('[data-add-product="iphone-incell-14"]') });
   await expect(approvedCard).toBeVisible();
-  await expect(approvedCard).toContainText("$205");
+  await expect(approvedCard).toContainText("$225");
   await expect(approvedCard).not.toContainText("$999");
 
   await page.goto(`${APP_URL}#lista`, { waitUntil: "domcontentloaded" });
-  const card = page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" });
+  const card = page.locator(".product-card").filter({ has: page.locator('[data-add-product="iphone-incell-14"]') });
   await card.getByRole("button", { name: "Agregar" }).click();
   await page.locator("[data-customer-name]").fill("Cliente campaña QA");
   await page.locator("[data-customer-phone]").fill("5512345678");
@@ -155,7 +155,7 @@ for (const [label, storedLanding, expectedPath] of [
       return route.fulfill({ status: 201, json: { ok: true, order_number: "WEB-LANDING-QA" } });
     });
     await page.goto(`${APP_URL}#lista`, { waitUntil: "domcontentloaded" });
-    await page.locator(".product-card", { hasText: "Pantalla iPhone 14 INCELL FHD" }).getByRole("button", { name: "Agregar" }).click();
+    await page.locator(".product-card").filter({ has: page.locator('[data-add-product="iphone-incell-14"]') }).getByRole("button", { name: "Agregar" }).click();
     await page.locator("[data-customer-name]").fill("Cliente QA aislado");
     await page.locator("[data-customer-phone]").fill("5512345678");
     await page.locator("[data-customer-city]").fill("CDMX");

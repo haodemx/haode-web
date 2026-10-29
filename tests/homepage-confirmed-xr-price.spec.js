@@ -1,4 +1,4 @@
-// Owner-approved standard XR homepage Caja display: 145 MXN.
+// Owner-approved standard XR homepage Caja display: 160 MXN.
 // Keep Bolsa separate; replay old public ERP tiers without any real business writes.
 const { test, expect } = require('@playwright/test');
 const BASE = (process.env.BASE_URL || 'http://127.0.0.1:4188').replace(/\/$/, '');
@@ -27,15 +27,15 @@ for(const width of [390,1440]) for(const state of ['empty','oldERP','unavailable
   });
   await page.goto(`${BASE}/`,{waitUntil:'networkidle'});
   const card=page.locator('a.c-product-card[href="/producto/iphone-incell-xr/"]');
-  await expect(card).toContainText('Caja · confirmar condiciones: $145 MXN');
-  await expect(page.locator('a.c-product-card[href="/producto/iphone-incell-xr-bolsa-protectora/"]')).toContainText('$135 MXN');
+  await expect(card).toContainText('Caja · confirmar condiciones: $160 MXN');
+  await expect(page.locator('a.c-product-card[href="/producto/iphone-incell-xr-bolsa-protectora/"]')).toContainText('$150 MXN');
   await card.click();await page.waitForLoadState('networkidle');
   expect(catalogRequests).toBeGreaterThan(0);
   await expect(page.locator('[data-detail-quality]')).toHaveText('INCELL FHD C/IC');
-  await expect(page.locator('[data-detail-price-body] tr').filter({hasText:'Caja'})).toContainText('$145 MXN');
+  await expect(page.locator('[data-detail-price-body] tr').filter({hasText:'Caja'})).toContainText('$160 MXN');
   const offers=await page.evaluate(()=>[...document.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>{const d=JSON.parse(s.textContent);return d['@graph']||[d]}).find(n=>n['@type']==='Product').offers);
-  expect(Number(offers.find(o=>o.name==='Caja').price)).toBe(145);
+  expect(Number(offers.find(o=>o.name==='Caja').price)).toBe(160);
   await page.goto(`${BASE}/`,{waitUntil:'networkidle'});
-  await expect(page.locator('a.c-product-card[href="/producto/iphone-incell-xr/"]')).toContainText('$145 MXN');
+  await expect(page.locator('a.c-product-card[href="/producto/iphone-incell-xr/"]')).toContainText('$160 MXN');
  });
 }

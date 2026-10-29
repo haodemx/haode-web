@@ -40,7 +40,7 @@ for (const [source, medium] of [['instagram', 'organic_social'], ['chatgpt', 'ai
     await page.locator('[data-whatsapp-link]').click();
     await expect.poll(async () => (await events(page)).filter(e => e[1] === 'generate_lead').length).toBe(1);
     expect(submitted).toMatchObject({utm_source: source, utm_medium: medium, utm_campaign: 'hydrogel_trial', landing_page: `${new URL(BASE_URL).origin}${LANDING}`});
-    expect(submitted.items[0]).toMatchObject({quantity: 1, quantity_unit: 'box_50', unit_price: 350});
+    expect(submitted.items[0]).toMatchObject({quantity: 1, quantity_unit: 'box_50', unit_price: 375});
     const lead = (await events(page)).find(e => e[1] === 'generate_lead')[2];
     expect(lead).toMatchObject({request_id: submitted.client_request_id, lead_registered: true, attribution_source: source});
     expect(lead.items[0].item_id).toBeTruthy();

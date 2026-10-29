@@ -40,11 +40,11 @@ test('machine and MICA pages provide crawlable links in both directions', async 
 
 test('candidate pricing keeps the four approved named tiers after client rendering', async ({ page }) => {
   const expected = [
-    ['/producto/mica-hd/', '$350 MXN', ['$350 MXN', '$300 MXN', '$275 MXN', '$250 MXN']],
-    ['/producto/mica-matte/', '$350 MXN', ['$350 MXN', '$300 MXN', '$275 MXN', '$250 MXN']],
-    ['/producto/mica-privacidad-hd/', '$800 MXN', ['$800 MXN', '$750 MXN', '$700 MXN', '$650 MXN']],
-    ['/producto/mica-privacidad-matte/', '$800 MXN', ['$800 MXN', '$750 MXN', '$700 MXN', '$650 MXN']],
-    ['/producto/x200t-cortadora-micas/', '$6,000 MXN', ['$6,000 MXN', '$5,800 MXN', '$5,500 MXN', '$5,300 MXN']],
+    ['/producto/mica-hd/', '$375 MXN', ['$375 MXN', '$325 MXN', '$300 MXN', '$275 MXN']],
+    ['/producto/mica-matte/', '$375 MXN', ['$375 MXN', '$325 MXN', '$300 MXN', '$275 MXN']],
+    ['/producto/mica-privacidad-hd/', '$825 MXN', ['$825 MXN', '$775 MXN', '$725 MXN', '$675 MXN']],
+    ['/producto/mica-privacidad-matte/', '$825 MXN', ['$825 MXN', '$775 MXN', '$725 MXN', '$675 MXN']],
+    ['/producto/x200t-cortadora-micas/', '$6,100 MXN', ['$6,100 MXN', '$5,900 MXN', '$5,600 MXN', '$5,400 MXN']],
   ];
   for (const [route, retailPrice, tiers] of expected) {
     await page.goto(`${baseURL}${route}`, { waitUntil: 'networkidle' });

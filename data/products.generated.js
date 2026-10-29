@@ -16,15 +16,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
-        "price": "$500 MXN"
+        "quantity": "Menudeo",
+        "price": "$550 MXN"
       },
       {
-        "quantity": "5+ pzs",
-        "price": "$400 MXN"
+        "quantity": "Mayoreo",
+        "price": "$440 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 206",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · CÁMARAS · fila 54",
     "whatsappText": "Hola HAODE, quiero cotizar: Cámara Digital 4K LK-007",
     "description": "Cámara digital compacta estilo retro con pantalla abatible de 2.4 pulgadas, ideal para tomar fotos, grabar videos y crear contenido diario. Diseño moderno, colores atractivos y uso fácil para jóvenes, viajes, regalos y uso personal.",
     "stockStatus": "ask_stock",
@@ -55,15 +55,15 @@ window.HAODE_PRODUCTS_DATA = [
     ],
     "prices": [
       {
-        "quantity": "1 pza",
-        "price": "$850 MXN"
+        "quantity": "Menudeo",
+        "price": "$930 MXN"
       },
       {
-        "quantity": "5+ pzs",
-        "price": "$700 MXN"
+        "quantity": "Mayoreo",
+        "price": "$765 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 208",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · CÁMARAS · fila 58",
     "whatsappText": "Hola HAODE, quiero cotizar: LK-018 Cámara de Acción HD",
     "description": "Cámara de acción HD compacta con pantalla abatible y diseño magnético. Ideal para grabar contenido diario, viajes, actividades, manos libres y tomas en primera persona.",
     "stockStatus": "ask_stock",
@@ -86,15 +86,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
-        "price": "$400 MXN"
+        "quantity": "Menudeo",
+        "price": "$440 MXN"
       },
       {
-        "quantity": "5+ pzs",
-        "price": "$300 MXN"
+        "quantity": "Mayoreo",
+        "price": "$330 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 205",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · CÁMARAS · fila 52",
     "whatsappText": "Hola HAODE, quiero cotizar: LK-030 Mini Cámara Retro Digital",
     "description": "Mini cámara retro digital con pantalla abatible y formato compacto para fotos, videos, viajes, regalos y contenido diario.",
     "stockStatus": "ask_stock",
@@ -117,15 +117,15 @@ window.HAODE_PRODUCTS_DATA = [
     "videos": [],
     "prices": [
       {
-        "quantity": "1 pza",
-        "price": "$500 MXN"
+        "quantity": "Menudeo",
+        "price": "$550 MXN"
       },
       {
-        "quantity": "5+ pzs",
-        "price": "$400 MXN"
+        "quantity": "Mayoreo",
+        "price": "$440 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026_Clientes_LIMPIA.xlsx · Lista Clientes · fila 207",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · CÁMARAS · fila 56",
     "whatsappText": "Hola HAODE, quiero cotizar: LK-032 Cámara Inteligente con Gimbal",
     "description": "Cámara portátil inteligente con estabilización integrada para contenido profesional, videos, transmisiones, viajes y grabación POV.",
     "stockStatus": "ask_stock",
@@ -917,22 +917,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$855 MXN"
+        "price": "$935 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$805 MXN"
+        "price": "$880 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$735 MXN"
+        "price": "$805 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$715 MXN"
+        "price": "$785 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · PRODUCTOS AI · fila 31",
     "whatsappText": "Hola HAODE, quiero cotizar: AIMB-G5 AI SPORTS",
     "description": "Gafas AI deportivas de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -983,7 +983,7 @@ window.HAODE_PRODUCTS_DATA = [
     "brand": "HAODE",
     "model": "Gafas AI M08",
     "name": "Gafas AI M08",
-    "quality": "Producto AI",
+    "quality": "LENTE AI",
     "images": [
       "assets/products/placeholder.svg"
     ],
@@ -995,14 +995,18 @@ window.HAODE_PRODUCTS_DATA = [
       },
       {
         "quantity": "Mayoreo",
-        "price": "$900 MXN"
+        "price": "$945 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$800 MXN"
+        "price": "$870 MXN"
+      },
+      {
+        "quantity": "⭐ VIP",
+        "price": "$845 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_V3_IPHONE_OLED_25-23-16-13_2026-09-21.xlsx · 01-08 categorías · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · PRODUCTOS AI · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas AI M08",
     "description": "Gafas AI M08 de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1026,22 +1030,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$631 MXN"
+        "price": "$690 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$581 MXN"
+        "price": "$635 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$511 MXN"
+        "price": "$560 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$491 MXN"
+        "price": "$540 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · PRODUCTOS AI · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas AI M89",
     "description": "Gafas AI M89 de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1065,22 +1069,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$709 MXN"
+        "price": "$775 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$659 MXN"
+        "price": "$720 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$589 MXN"
+        "price": "$645 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$569 MXN"
+        "price": "$625 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · PRODUCTOS AI · fila 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas AI M95",
     "description": "Gafas AI M95 de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1104,22 +1108,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$855 MXN"
+        "price": "$935 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$805 MXN"
+        "price": "$880 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$735 MXN"
+        "price": "$805 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$715 MXN"
+        "price": "$785 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · PRODUCTOS AI · fila 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI G3",
     "description": "HAODE AI G3 Smart Glasses de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1143,22 +1147,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$946 MXN"
+        "price": "$1,035 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$896 MXN"
+        "price": "$980 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$826 MXN"
+        "price": "$905 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$806 MXN"
+        "price": "$885 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · PRODUCTOS AI · fila 33",
     "whatsappText": "Hola HAODE, quiero cotizar: Gafas Inteligentes AI W610",
     "description": "HAODE AI W610 Smart Glasses de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1213,22 +1217,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,092 MXN"
+        "price": "$1,195 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,042 MXN"
+        "price": "$1,140 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$972 MXN"
+        "price": "$1,065 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$952 MXN"
+        "price": "$1,045 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 02 PRODUCTOS AI · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · PRODUCTOS AI · fila 32",
     "whatsappText": "Hola HAODE, quiero cotizar: W630 AI PRO",
     "description": "Gafas AI blancas de HAODE. Cotiza cantidad y confirma detalles del modelo por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1252,22 +1256,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$160 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$150 MXN"
+        "price": "$165 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$145 MXN"
+        "price": "$160 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$140 MXN"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 21",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla iPhone 11 INCELL FHD",
     "description": "INCELL FHD C/IC versión estándar para reparación de iPhone 11. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1293,24 +1297,24 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$155 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$145 MXN"
+        "price": "$160 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$135 MXN"
+        "price": "$150 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$130 MXN"
+        "price": "$145 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Bolsa Protectora",
-    "description": "Pantalla para iPhone 11 Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "description": "Pantalla para iPhone 11 Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $150 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "localOnly": true,
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -1339,22 +1343,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$195 MXN"
+        "price": "$215 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$185 MXN"
+        "price": "$205 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$175 MXN"
+        "price": "$190 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$170 MXN"
+        "price": "$185 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 22",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro",
     "description": "INCELL FHD C/IC para reparación de iPhone 11 Pro. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1383,22 +1387,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$185 MXN"
+        "price": "$205 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$175 MXN"
+        "price": "$190 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$165 MXN"
+        "price": "$180 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$160 MXN"
+        "price": "$175 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
     "description": "INCELL FHD C/IC para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1427,22 +1431,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$195 MXN"
+        "price": "$215 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$180 MXN"
+        "price": "$195 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$170 MXN"
+        "price": "$185 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$165 MXN"
+        "price": "$180 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
     "description": "INCELL FHD C/IC para iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1471,22 +1475,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$210 MXN"
+        "price": "$230 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$195 MXN"
+        "price": "$215 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$185 MXN"
+        "price": "$205 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$180 MXN"
+        "price": "$195 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 mini",
     "description": "INCELL FHD C/IC para iPhone 12 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1515,22 +1519,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$210 MXN"
+        "price": "$230 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$195 MXN"
+        "price": "$215 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$185 MXN"
+        "price": "$205 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$180 MXN"
+        "price": "$195 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 27",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
     "description": "INCELL FHD C/IC para iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1559,22 +1563,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$195 MXN"
+        "price": "$215 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$185 MXN"
+        "price": "$205 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$175 MXN"
+        "price": "$190 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$170 MXN"
+        "price": "$185 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
     "description": "INCELL FHD C/IC para iPhone 13. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1603,22 +1607,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$215 MXN"
+        "price": "$235 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$205 MXN"
+        "price": "$225 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$190 MXN"
+        "price": "$210 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$185 MXN"
+        "price": "$205 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 28",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 mini",
     "description": "INCELL FHD C/IC para iPhone 13 mini. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1647,22 +1651,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$240 MXN"
+        "price": "$265 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$225 MXN"
+        "price": "$245 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$210 MXN"
+        "price": "$230 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$205 MXN"
+        "price": "$225 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 30",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
     "description": "INCELL FHD C/IC para iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1691,22 +1695,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$225 MXN"
+        "price": "$245 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 31",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
     "description": "INCELL FHD C/IC para iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1735,22 +1739,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$205 MXN"
+        "price": "$225 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$190 MXN"
+        "price": "$210 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$180 MXN"
+        "price": "$195 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$175 MXN"
+        "price": "$190 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
     "description": "INCELL FHD C/IC para iPhone 14. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1779,22 +1783,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$240 MXN"
+        "price": "$265 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$225 MXN"
+        "price": "$245 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$210 MXN"
+        "price": "$230 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$205 MXN"
+        "price": "$225 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 33",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
     "description": "INCELL FHD C/IC para iPhone 14 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1823,22 +1827,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$215 MXN"
+        "price": "$235 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$210 MXN"
+        "price": "$230 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 27",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
     "description": "INCELL FHD C/IC para iPhone 14 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1867,22 +1871,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$225 MXN"
+        "price": "$245 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 28",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
     "description": "INCELL FHD C/IC para iPhone 14 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1910,22 +1914,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$240 MXN"
+        "price": "$265 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$220 MXN"
+        "price": "$240 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 29",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
     "description": "INCELL FHD C/IC para iPhone 15. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1953,22 +1957,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$240 MXN"
+        "price": "$265 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$220 MXN"
+        "price": "$240 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 30",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Plus",
     "description": "INCELL FHD C/IC para iPhone 15 Plus. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -1995,22 +1999,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$250 MXN"
+        "price": "$275 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$235 MXN"
+        "price": "$260 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$220 MXN"
+        "price": "$240 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$215 MXN"
+        "price": "$235 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 31",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro",
     "description": "INCELL FHD C/IC para iPhone 15 Pro. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2039,22 +2043,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$225 MXN"
+        "price": "$245 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 32",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 39",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
     "description": "INCELL FHD C/IC para iPhone 15 Pro Max. Cotiza por cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2083,22 +2087,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$280 MXN"
+        "price": "$305 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$240 MXN"
+        "price": "$265 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 33",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 40",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16",
     "description": "INCELL FHD C/IC para iPhone 16. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2127,22 +2131,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$215 MXN"
+        "price": "$235 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$210 MXN"
+        "price": "$230 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 34",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 41",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16e",
     "description": "INCELL FHD C/IC para iPhone 16e. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2171,22 +2175,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$280 MXN"
+        "price": "$305 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$240 MXN"
+        "price": "$265 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 35",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 42",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Plus",
     "description": "INCELL FHD C/IC para iPhone 16 Plus. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2215,22 +2219,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$425 MXN"
+        "price": "$465 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$400 MXN"
+        "price": "$440 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 36",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 43",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
     "description": "INCELL FHD C/IC para iPhone 16 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2259,22 +2263,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$425 MXN"
+        "price": "$465 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$400 MXN"
+        "price": "$440 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 37",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 44",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max",
     "description": "INCELL FHD C/IC para iPhone 16 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2301,22 +2305,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$520 MXN"
+        "price": "$570 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$490 MXN"
+        "price": "$535 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 38",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 45",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17",
     "description": "INCELL FHD C/IC para iPhone 17. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2343,22 +2347,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,040 MXN"
+        "price": "$1,140 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$975 MXN"
+        "price": "$1,070 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$920 MXN"
+        "price": "$1,010 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$890 MXN"
+        "price": "$975 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 40",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 47",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Air",
     "description": "INCELL FHD C/IC para iPhone 17 Air. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2382,22 +2386,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$245 MXN"
+        "price": "$270 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$230 MXN"
+        "price": "$250 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$215 MXN"
+        "price": "$235 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$210 MXN"
+        "price": "$230 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 41",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 48",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17E",
     "description": "INCELL FHD C/IC para reparación de iPhone 17E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2424,22 +2428,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$520 MXN"
+        "price": "$570 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$490 MXN"
+        "price": "$535 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 39",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 46",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro",
     "description": "INCELL FHD C/IC para iPhone 17 Pro. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2468,22 +2472,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$520 MXN"
+        "price": "$570 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$490 MXN"
+        "price": "$535 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 42",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 49",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 17 Pro Max",
     "description": "INCELL FHD C/IC para iPhone 17 Pro Max. Confirma versión correcta, cantidad y condiciones por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2512,22 +2516,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$160 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$155 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$145 MXN"
+        "price": "$160 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$140 MXN"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone X",
     "description": "INCELL FHD C/IC para reparación de iPhone X. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2556,22 +2560,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$160 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$150 MXN"
+        "price": "$165 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$145 MXN"
+        "price": "$160 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$140 MXN"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR",
     "description": "Pantalla para iPhone XR INCELL FHD C/IC versión estándar para reparación celular en México. Esta versión se cotiza por separado de XR Bolsa Protectora. Para técnicos, tiendas y mayoreo HAODE con confirmación por WhatsApp antes de ordenar.",
     "stockStatus": "ask_stock",
@@ -2597,24 +2601,24 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$155 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$145 MXN"
+        "price": "$160 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$135 MXN"
+        "price": "$150 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$130 MXN"
+        "price": "$145 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XR Bolsa Protectora",
-    "description": "Pantalla para iPhone XR Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $135 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
+    "description": "Pantalla para iPhone XR Bolsa Protectora INCELL HD+ C/IC para reparación celular en México. Esta versión usa bolsa protectora de espuma y se cotiza por separado de la versión estándar, con precio de Caja confirmado en $150 MXN por pieza. Consulta disponibilidad actual, modelo exacto y cantidad por WhatsApp antes de confirmar el pedido.",
     "localOnly": true,
     "stockStatus": "ask_stock",
     "internalId": false,
@@ -2642,22 +2646,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$160 MXN"
+        "price": "$175 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$155 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$145 MXN"
+        "price": "$160 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$140 MXN"
+        "price": "$155 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS",
     "description": "INCELL FHD C/IC para reparación de iPhone XS. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2686,22 +2690,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$175 MXN"
+        "price": "$190 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$165 MXN"
+        "price": "$180 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$155 MXN"
+        "price": "$170 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$150 MXN"
+        "price": "$165 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 03 IPHONE INCELL · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE INCELL · fila 23",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
     "description": "INCELL FHD C/IC para reparación de iPhone XS Max. Cotiza cantidad y confirma la versión correcta por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2729,22 +2733,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$620 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$600 MXN"
+        "price": "$660 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$550 MXN"
+        "price": "$605 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$535 MXN"
+        "price": "$585 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE OLED · fila 64",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 11 Pro Max",
     "description": "OLED PREMIUM para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2770,22 +2774,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$655 MXN"
+        "price": "$720 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$640 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$585 MXN"
+        "price": "$640 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$565 MXN"
+        "price": "$620 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE OLED · fila 65",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 / 12 Pro",
     "description": "OLED PREMIUM para reparación de iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2813,22 +2817,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$620 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$605 MXN"
+        "price": "$665 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$535 MXN"
+        "price": "$585 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE OLED · fila 66",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 12 Pro Max",
     "description": "OLED PREMIUM para reparación de iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2856,22 +2860,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$530 MXN"
+        "price": "$580 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$515 MXN"
+        "price": "$565 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$470 MXN"
+        "price": "$515 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE OLED · fila 67",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13",
     "description": "OLED PREMIUM para reparación de iPhone 13. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2899,22 +2903,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$620 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$605 MXN"
+        "price": "$665 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$535 MXN"
+        "price": "$585 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE OLED · fila 68",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro",
     "description": "OLED PREMIUM para reparación de iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2942,22 +2946,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$640 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$620 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$570 MXN"
+        "price": "$625 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$550 MXN"
+        "price": "$605 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE OLED · fila 69",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 13 Pro Max",
     "description": "OLED PREMIUM para reparación de iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -2985,22 +2989,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$530 MXN"
+        "price": "$580 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$515 MXN"
+        "price": "$565 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$470 MXN"
+        "price": "$515 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
     "description": "OLED PREMIUM para reparación de iPhone 14. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3028,22 +3032,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$940 MXN"
+        "price": "$1,030 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$920 MXN"
+        "price": "$1,010 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$840 MXN"
+        "price": "$920 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$815 MXN"
+        "price": "$895 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 10",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Plus",
     "description": "OLED PREMIUM para reparación de iPhone 14 Plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3069,22 +3073,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,025 MXN"
+        "price": "$1,125 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,000 MXN"
+        "price": "$1,095 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$915 MXN"
+        "price": "$1,005 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$885 MXN"
+        "price": "$970 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 12",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro",
     "description": "SOFT OLED PREMIUM para reparación de iPhone 14 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3112,22 +3116,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$620 MXN"
+        "price": "$680 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$605 MXN"
+        "price": "$665 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$535 MXN"
+        "price": "$585 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 13",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 Pro Max",
     "description": "OLED PREMIUM para reparación de iPhone 14 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3153,22 +3157,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,025 MXN"
+        "price": "$1,125 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,000 MXN"
+        "price": "$1,095 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$915 MXN"
+        "price": "$1,005 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$885 MXN"
+        "price": "$970 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15",
     "description": "SOFT OLED PREMIUM para reparación de iPhone 15. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3194,22 +3198,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$935 MXN"
+        "price": "$1,025 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$910 MXN"
+        "price": "$1,000 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$835 MXN"
+        "price": "$915 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$805 MXN"
+        "price": "$880 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15 Pro Max",
     "description": "OLED PREMIUM para reparación de iPhone 15 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3233,22 +3237,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$600 MXN"
+        "price": "$660 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$585 MXN"
+        "price": "$640 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$535 MXN"
+        "price": "$585 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$515 MXN"
+        "price": "$565 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16E",
     "description": "OLED PREMIUM para reparación de iPhone 16E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3274,22 +3278,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$845 MXN"
+        "price": "$925 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$825 MXN"
+        "price": "$905 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$755 MXN"
+        "price": "$830 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$730 MXN"
+        "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro",
     "description": "OLED PREMIUM para reparación de iPhone 16 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3320,22 +3324,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,805 MXN"
+        "price": "$1,980 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,760 MXN"
+        "price": "$1,930 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,615 MXN"
+        "price": "$1,770 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,560 MXN"
+        "price": "$1,710 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Soft OLED",
     "description": "SOFT OLED PREMIUM para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3361,22 +3365,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$845 MXN"
+        "price": "$925 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$825 MXN"
+        "price": "$905 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$755 MXN"
+        "price": "$830 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$730 MXN"
+        "price": "$800 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 16 Pro Max Hard OLED",
     "description": "OLED PREMIUM para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3400,22 +3404,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,070 MXN"
+        "price": "$1,175 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,040 MXN"
+        "price": "$1,140 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$955 MXN"
+        "price": "$1,045 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$920 MXN"
+        "price": "$1,010 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14",
     "description": "SOFT OLED PREMIUM para reparación de iPhone 14. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3439,22 +3443,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,070 MXN"
+        "price": "$1,175 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,040 MXN"
+        "price": "$1,140 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$955 MXN"
+        "price": "$1,045 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$920 MXN"
+        "price": "$1,010 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 11",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 14 plus",
     "description": "SOFT OLED PREMIUM para reparación de iPhone 14 plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3478,22 +3482,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,025 MXN"
+        "price": "$1,125 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,000 MXN"
+        "price": "$1,095 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$915 MXN"
+        "price": "$1,005 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$885 MXN"
+        "price": "$970 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE OLED · fila 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone 15PRO",
     "description": "SOFT OLED PREMIUM para reparación de iPhone 15PRO. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3521,22 +3525,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$540 MXN"
+        "price": "$590 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$525 MXN"
+        "price": "$575 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$480 MXN"
+        "price": "$525 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$465 MXN"
+        "price": "$510 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 04 IPHONE OLED · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p3 · IPHONE OLED · fila 63",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para iPhone XS Max",
     "description": "OLED PREMIUM para reparación de iPhone XS Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3560,22 +3564,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$350 MXN"
+        "price": "$375 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$300 MXN"
+        "price": "$325 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$275 MXN"
+        "price": "$300 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$250 MXN"
+        "price": "$275 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · MICAS HIDROGEL · fila 15",
     "whatsappText": "Hola HAODE, quiero cotizar MICA HD por paquete de 50 pzs",
     "description": "Mica transparente para corte profesional. Ideal para uso diario y alta claridad.\n\nBeneficios:\n- Alta transparencia\n- Protección diaria\n- Compatible con corte profesional\n- Paquete de 50 pzs",
     "stockStatus": "ask_stock",
@@ -3599,22 +3603,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$350 MXN"
+        "price": "$375 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$300 MXN"
+        "price": "$325 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$275 MXN"
+        "price": "$300 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$250 MXN"
+        "price": "$275 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · MICAS HIDROGEL · fila 16",
     "whatsappText": "Hola HAODE, quiero cotizar MICA MATTE por paquete de 50 pzs",
     "description": "Mica matte con acabado suave y antirreflejo para uso diario.\n\nBeneficios:\n- Acabado mate\n- Menos reflejo\n- Tacto suave\n- Protección diaria\n- Paquete de 50 pzs",
     "stockStatus": "ask_stock",
@@ -3638,22 +3642,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$800 MXN"
+        "price": "$825 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$750 MXN"
+        "price": "$775 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$700 MXN"
+        "price": "$725 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$650 MXN"
+        "price": "$675 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · MICAS HIDROGEL · fila 17",
     "whatsappText": "Hola HAODE, quiero cotizar MICA PRIVACIDAD HD por paquete de 50 pzs",
     "description": "Mica de privacidad HD para proteger la información en lugares públicos.\n\nBeneficios:\n- Privacidad lateral\n- Protección visual\n- Uso diario\n- Acabado limpio\n- Paquete de 50 pzs",
     "stockStatus": "ask_stock",
@@ -3678,22 +3682,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$800 MXN"
+        "price": "$825 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$750 MXN"
+        "price": "$775 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$700 MXN"
+        "price": "$725 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$650 MXN"
+        "price": "$675 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · MICAS HIDROGEL · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar MICA PRIVACIDAD MATTE por paquete de 50 pzs",
     "description": "Mica de privacidad matte con acabado antirreflejo y protección visual.\n\nBeneficios:\n- Privacidad lateral\n- Acabado matte\n- Menos reflejo\n- Protección diaria\n- Paquete de 50 pzs",
     "stockStatus": "ask_stock",
@@ -3717,22 +3721,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$6,000 MXN"
+        "price": "$6,100 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$5,800 MXN"
+        "price": "$5,900 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$5,500 MXN"
+        "price": "$5,600 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$5,300 MXN"
+        "price": "$5,400 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 01 HIDROGEL · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p2 · MICAS HIDROGEL · fila 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Máquina de Micas（X200T）",
     "description": "Maquina inteligente para corte de micas compatible con catalogo amplio de modelos. Ideal para tiendas de reparacion y negocios de accesorios.",
     "stockStatus": "ask_stock",
@@ -3759,22 +3763,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$685 MXN"
+        "price": "$750 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$640 MXN"
+        "price": "$700 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$600 MXN"
+        "price": "$660 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$565 MXN"
+        "price": "$620 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 11 Pro Max",
     "description": "OLED diagnóstica para reparación de iPhone 11 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3801,22 +3805,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$760 MXN"
+        "price": "$835 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$710 MXN"
+        "price": "$780 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$665 MXN"
+        "price": "$730 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$625 MXN"
+        "price": "$685 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 12 / 12 Pro",
     "description": "OLED diagnóstica para reparación de iPhone 12 / 12 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3843,22 +3847,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$900 MXN"
+        "price": "$985 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$840 MXN"
+        "price": "$920 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$790 MXN"
+        "price": "$865 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$740 MXN"
+        "price": "$810 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 37",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 12 Pro Max",
     "description": "OLED diagnóstica para reparación de iPhone 12 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3885,22 +3889,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$890 MXN"
+        "price": "$975 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$830 MXN"
+        "price": "$910 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$780 MXN"
+        "price": "$855 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$735 MXN"
+        "price": "$805 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 39",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 13",
     "description": "OLED diagnóstica para reparación de iPhone 13. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3927,22 +3931,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$980 MXN"
+        "price": "$1,075 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$915 MXN"
+        "price": "$1,005 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$860 MXN"
+        "price": "$945 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$810 MXN"
+        "price": "$890 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 40",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro",
     "description": "OLED diagnóstica para reparación de iPhone 13 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -3969,22 +3973,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$965 MXN"
+        "price": "$1,060 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$900 MXN"
+        "price": "$985 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$845 MXN"
+        "price": "$925 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$795 MXN"
+        "price": "$870 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 41",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 13 Pro Max",
     "description": "OLED diagnóstica para reparación de iPhone 13 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4011,22 +4015,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$890 MXN"
+        "price": "$975 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$830 MXN"
+        "price": "$910 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$780 MXN"
+        "price": "$855 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$735 MXN"
+        "price": "$805 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 42",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14",
     "description": "OLED diagnóstica para reparación de iPhone 14. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4053,22 +4057,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$945 MXN"
+        "price": "$1,035 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$880 MXN"
+        "price": "$965 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$825 MXN"
+        "price": "$905 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$780 MXN"
+        "price": "$855 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 45",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14 Plus",
     "description": "OLED diagnóstica para reparación de iPhone 14 Plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4095,22 +4099,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,390 MXN"
+        "price": "$1,525 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,300 MXN"
+        "price": "$1,425 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,215 MXN"
+        "price": "$1,330 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,145 MXN"
+        "price": "$1,255 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 43",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro",
     "description": "OLED diagnóstica para reparación de iPhone 14 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4137,22 +4141,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$965 MXN"
+        "price": "$1,060 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$900 MXN"
+        "price": "$985 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$845 MXN"
+        "price": "$925 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$795 MXN"
+        "price": "$870 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 44",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 14 Pro Max",
     "description": "OLED diagnóstica para reparación de iPhone 14 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4179,22 +4183,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,335 MXN"
+        "price": "$1,465 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,245 MXN"
+        "price": "$1,365 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,170 MXN"
+        "price": "$1,285 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,100 MXN"
+        "price": "$1,205 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 46",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15",
     "description": "OLED diagnóstica para reparación de iPhone 15. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4221,22 +4225,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,390 MXN"
+        "price": "$1,525 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,300 MXN"
+        "price": "$1,425 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,215 MXN"
+        "price": "$1,330 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,145 MXN"
+        "price": "$1,255 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 49",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15 Plus",
     "description": "OLED diagnóstica para reparación de iPhone 15 Plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4263,22 +4267,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,390 MXN"
+        "price": "$1,525 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,300 MXN"
+        "price": "$1,425 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,215 MXN"
+        "price": "$1,330 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,145 MXN"
+        "price": "$1,255 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 47",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro",
     "description": "OLED diagnóstica para reparación de iPhone 15 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4305,22 +4309,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,410 MXN"
+        "price": "$1,545 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,315 MXN"
+        "price": "$1,440 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,235 MXN"
+        "price": "$1,355 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,160 MXN"
+        "price": "$1,270 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 48",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 15 Pro Max",
     "description": "OLED diagnóstica para reparación de iPhone 15 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4347,22 +4351,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,390 MXN"
+        "price": "$1,525 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,300 MXN"
+        "price": "$1,425 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,215 MXN"
+        "price": "$1,330 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,145 MXN"
+        "price": "$1,255 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 51",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16",
     "description": "OLED diagnóstica para reparación de iPhone 16. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4389,22 +4393,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,615 MXN"
+        "price": "$1,770 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,505 MXN"
+        "price": "$1,650 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,410 MXN"
+        "price": "$1,545 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,330 MXN"
+        "price": "$1,460 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 27",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 54",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16 Plus",
     "description": "OLED diagnóstica para reparación de iPhone 16 Plus. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4431,22 +4435,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,615 MXN"
+        "price": "$1,770 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,505 MXN"
+        "price": "$1,650 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,410 MXN"
+        "price": "$1,545 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,330 MXN"
+        "price": "$1,460 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 52",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro",
     "description": "OLED diagnóstica para reparación de iPhone 16 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4473,22 +4477,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,650 MXN"
+        "price": "$1,810 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,540 MXN"
+        "price": "$1,690 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,445 MXN"
+        "price": "$1,585 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,360 MXN"
+        "price": "$1,490 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 53",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 16 Pro Max",
     "description": "OLED diagnóstica para reparación de iPhone 16 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4515,22 +4519,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,865 MXN"
+        "price": "$2,045 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,740 MXN"
+        "price": "$1,905 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,635 MXN"
+        "price": "$1,790 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,540 MXN"
+        "price": "$1,690 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 28",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 55",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 17",
     "description": "OLED diagnóstica para reparación de iPhone 17. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4557,22 +4561,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,905 MXN"
+        "price": "$2,090 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,775 MXN"
+        "price": "$1,945 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,665 MXN"
+        "price": "$1,825 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,570 MXN"
+        "price": "$1,720 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 29",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 56",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro",
     "description": "OLED diagnóstica para reparación de iPhone 17 Pro. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4599,22 +4603,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,905 MXN"
+        "price": "$2,090 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,775 MXN"
+        "price": "$1,945 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,665 MXN"
+        "price": "$1,825 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,570 MXN"
+        "price": "$1,720 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 30",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 57",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo 17 Pro Max",
     "description": "OLED diagnóstica para reparación de iPhone 17 Pro Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4641,22 +4645,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$650 MXN"
+        "price": "$715 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$605 MXN"
+        "price": "$665 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$570 MXN"
+        "price": "$625 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$535 MXN"
+        "price": "$585 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 34",
     "whatsappText": "Hola HAODE, quiero cotizar: HAODE Pantalla OLED Diagnóstica - Modelo XS Max",
     "description": "OLED diagnóstica para reparación de iPhone XS Max. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4680,22 +4684,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,065 MXN"
+        "price": "$1,165 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$995 MXN"
+        "price": "$1,090 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$930 MXN"
+        "price": "$1,020 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$875 MXN"
+        "price": "$960 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla OLED Diagnóstica para iPhone 12MINI",
     "description": "OLED diagnóstica para reparación de iPhone 12MINI. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4719,22 +4723,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$965 MXN"
+        "price": "$1,060 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$900 MXN"
+        "price": "$985 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$845 MXN"
+        "price": "$925 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$795 MXN"
+        "price": "$870 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 05 IPHONE DIAGNOSTICO · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p4 · IPHONE DIAGNÓSTICO · fila 50",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla OLED Diagnóstica para iPhone 16E",
     "description": "OLED diagnóstica para reparación de iPhone 16E. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4763,22 +4767,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$445 MXN"
+        "price": "$490 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$420 MXN"
+        "price": "$460 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$405 MXN"
+        "price": "$445 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 35",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 42",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4802,22 +4806,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$695 MXN"
+        "price": "$760 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$650 MXN"
+        "price": "$715 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$615 MXN"
+        "price": "$675 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$595 MXN"
+        "price": "$650 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 37",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 44",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung NOTE10 LITE",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung NOTE10 LITE. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4846,22 +4850,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$505 MXN"
+        "price": "$555 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$445 MXN"
+        "price": "$490 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$430 MXN"
+        "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 36",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 43",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4885,22 +4889,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$575 MXN"
+        "price": "$630 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$540 MXN"
+        "price": "$590 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$505 MXN"
+        "price": "$555 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$490 MXN"
+        "price": "$535 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 38",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 45",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung NOTE 20",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung NOTE 20. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4929,22 +4933,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$470 MXN"
+        "price": "$515 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$440 MXN"
+        "price": "$480 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$415 MXN"
+        "price": "$455 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$400 MXN"
+        "price": "$440 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 39",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 46",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -4973,22 +4977,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$425 MXN"
+        "price": "$465 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$400 MXN"
+        "price": "$440 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 33",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 40",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 8",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5017,22 +5021,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$425 MXN"
+        "price": "$465 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$400 MXN"
+        "price": "$440 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 34",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 41",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 9",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung Note 9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5062,22 +5066,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$375 MXN"
+        "price": "$410 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$355 MXN"
+        "price": "$390 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$335 MXN"
+        "price": "$365 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$320 MXN"
+        "price": "$350 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 18",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5101,22 +5105,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$290 MXN"
+        "price": "$320 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$270 MXN"
+        "price": "$295 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$255 MXN"
+        "price": "$280 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$250 MXN"
+        "price": "$275 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 21",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10 LITE",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S10 LITE. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5145,22 +5149,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$360 MXN"
+        "price": "$395 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$340 MXN"
+        "price": "$375 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$325 MXN"
+        "price": "$355 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 19",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S10 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5186,22 +5190,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$520 MXN"
+        "price": "$570 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$490 MXN"
+        "price": "$535 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 20",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S10E",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S10E. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5226,22 +5230,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$410 MXN"
+        "price": "$450 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$365 MXN"
+        "price": "$400 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$350 MXN"
+        "price": "$385 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 22",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 4G",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 4G. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5265,22 +5269,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$410 MXN"
+        "price": "$450 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$365 MXN"
+        "price": "$400 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$350 MXN"
+        "price": "$385 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 23",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 5G",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 5G. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5309,22 +5313,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$295 MXN"
+        "price": "$325 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$280 MXN"
+        "price": "$305 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$260 MXN"
+        "price": "$285 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$255 MXN"
+        "price": "$280 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 FE",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5353,22 +5357,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$420 MXN"
+        "price": "$460 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$390 MXN"
+        "price": "$430 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$370 MXN"
+        "price": "$405 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$355 MXN"
+        "price": "$390 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5397,22 +5401,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$440 MXN"
+        "price": "$480 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$415 MXN"
+        "price": "$455 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$390 MXN"
+        "price": "$430 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$375 MXN"
+        "price": "$410 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Ultra",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5441,22 +5445,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$410 MXN"
+        "price": "$450 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$385 MXN"
+        "price": "$420 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$365 MXN"
+        "price": "$400 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$350 MXN"
+        "price": "$385 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 27",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5480,22 +5484,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$430 MXN"
+        "price": "$470 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$405 MXN"
+        "price": "$445 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$390 MXN"
+        "price": "$430 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 28",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 FE",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21 FE. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5522,22 +5526,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$400 MXN"
+        "price": "$440 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$375 MXN"
+        "price": "$410 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$355 MXN"
+        "price": "$390 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$340 MXN"
+        "price": "$375 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5565,22 +5569,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$440 MXN"
+        "price": "$480 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$415 MXN"
+        "price": "$455 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$390 MXN"
+        "price": "$430 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$375 MXN"
+        "price": "$410 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 30",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5606,22 +5610,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$505 MXN"
+        "price": "$555 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$445 MXN"
+        "price": "$490 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$430 MXN"
+        "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 31",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S22. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5648,22 +5652,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$505 MXN"
+        "price": "$555 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$445 MXN"
+        "price": "$490 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$430 MXN"
+        "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 25",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S22 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5694,22 +5698,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$515 MXN"
+        "price": "$565 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$485 MXN"
+        "price": "$530 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$455 MXN"
+        "price": "$500 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$440 MXN"
+        "price": "$480 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 26",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 33",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5735,22 +5739,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$505 MXN"
+        "price": "$555 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$445 MXN"
+        "price": "$490 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$430 MXN"
+        "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 27",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S23. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5775,22 +5779,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$505 MXN"
+        "price": "$555 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$475 MXN"
+        "price": "$520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$445 MXN"
+        "price": "$490 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$430 MXN"
+        "price": "$470 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 28",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S23 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5820,22 +5824,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$440 MXN"
+        "price": "$480 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$415 MXN"
+        "price": "$455 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$390 MXN"
+        "price": "$430 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$375 MXN"
+        "price": "$410 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 29",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5861,22 +5865,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$680 MXN"
+        "price": "$745 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$635 MXN"
+        "price": "$695 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$600 MXN"
+        "price": "$660 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$580 MXN"
+        "price": "$635 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 30",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S24. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5901,22 +5905,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$655 MXN"
+        "price": "$720 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$615 MXN"
+        "price": "$675 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$580 MXN"
+        "price": "$635 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$560 MXN"
+        "price": "$615 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 31",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S24 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "seoKeywords": "pantalla Samsung INCELL, Samsung INCELL CDMX, refacciones Samsung, pantalla con marco Samsung, mayoreo pantallas Samsung, HAODE México",
@@ -5943,22 +5947,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$625 MXN"
+        "price": "$685 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$585 MXN"
+        "price": "$640 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$555 MXN"
+        "price": "$610 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$535 MXN"
+        "price": "$585 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 32",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 39",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -5987,22 +5991,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$365 MXN"
+        "price": "$400 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$345 MXN"
+        "price": "$380 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$325 MXN"
+        "price": "$355 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$315 MXN"
+        "price": "$345 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 14",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S8. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6031,22 +6035,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$375 MXN"
+        "price": "$410 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$355 MXN"
+        "price": "$390 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$335 MXN"
+        "price": "$365 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$320 MXN"
+        "price": "$350 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 15",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S8 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S8 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6073,22 +6077,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$340 MXN"
+        "price": "$375 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$320 MXN"
+        "price": "$350 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$300 MXN"
+        "price": "$330 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$290 MXN"
+        "price": "$320 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 16",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S9. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6115,22 +6119,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$350 MXN"
+        "price": "$385 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$325 MXN"
+        "price": "$355 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$310 MXN"
+        "price": "$340 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$300 MXN"
+        "price": "$330 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 17",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S9 Plus",
     "description": "Pantalla INCELL FHD C/M para reparación de Samsung S9 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6154,22 +6158,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$690 MXN"
+        "price": "$755 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$645 MXN"
+        "price": "$705 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$610 MXN"
+        "price": "$670 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$585 MXN"
+        "price": "$640 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 40",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 47",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP3",
     "description": "Pantalla INCELL S/M para reparación de Samsung Z FLIP3. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6193,22 +6197,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$690 MXN"
+        "price": "$755 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$645 MXN"
+        "price": "$705 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$610 MXN"
+        "price": "$670 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$585 MXN"
+        "price": "$640 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 41",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 48",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP4",
     "description": "Pantalla INCELL S/M para reparación de Samsung Z FLIP4. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6232,22 +6236,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$830 MXN"
+        "price": "$910 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$775 MXN"
+        "price": "$850 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$730 MXN"
+        "price": "$800 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$705 MXN"
+        "price": "$775 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 42",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 49",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP5",
     "description": "Pantalla INCELL S/M para reparación de Samsung Z FLIP5. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6271,22 +6275,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$830 MXN"
+        "price": "$910 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$775 MXN"
+        "price": "$850 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$730 MXN"
+        "price": "$800 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$705 MXN"
+        "price": "$775 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 06 SAMSUNG INCELL · fila 43",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG INCELL · fila 50",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP6",
     "description": "Pantalla INCELL S/M para reparación de Samsung Z FLIP6. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6310,22 +6314,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,380 MXN"
+        "price": "$1,645 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,290 MXN"
+        "price": "$1,425 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,210 MXN"
+        "price": "$1,205 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,140 MXN"
+        "price": "$1,150 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG AMOLED · fila 8",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 10",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 10. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6349,22 +6353,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,100 MXN"
+        "price": "$1,315 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,025 MXN"
+        "price": "$1,095 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$960 MXN"
+        "price": "$930 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$905 MXN"
+        "price": "$930 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 14",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG AMOLED · fila 9",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 20. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6388,22 +6392,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,420 MXN"
+        "price": "$1,645 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,325 MXN"
+        "price": "$1,535 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,240 MXN"
+        "price": "$1,480 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,170 MXN"
+        "price": "$1,425 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG AMOLED · fila 10",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Note 20 Ultra",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung Note 20 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6431,22 +6435,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,100 MXN"
+        "price": "$1,205 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,025 MXN"
+        "price": "$1,095 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$960 MXN"
+        "price": "$985 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$905 MXN"
+        "price": "$930 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG AMOLED · fila 64",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S20 Plus",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S20 Plus. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6474,22 +6478,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,365 MXN"
+        "price": "$1,755 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,275 MXN"
+        "price": "$1,645 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,195 MXN"
+        "price": "$1,535 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,125 MXN"
+        "price": "$1,480 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG AMOLED · fila 65",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6517,22 +6521,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,340 MXN"
+        "price": "$1,920 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,250 MXN"
+        "price": "$1,810 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,170 MXN"
+        "price": "$1,645 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,105 MXN"
+        "price": "$1,590 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG AMOLED · fila 66",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6560,22 +6564,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,295 MXN"
+        "price": "$1,755 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,210 MXN"
+        "price": "$1,700 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,130 MXN"
+        "price": "$1,535 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,065 MXN"
+        "price": "$1,425 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG AMOLED · fila 67",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6603,22 +6607,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,525 MXN"
+        "price": "$1,975 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,425 MXN"
+        "price": "$1,865 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,335 MXN"
+        "price": "$1,755 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,255 MXN"
+        "price": "$1,700 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG AMOLED · fila 68",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6646,22 +6650,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,080 MXN"
+        "price": "$2,190 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,945 MXN"
+        "price": "$1,975 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,820 MXN"
+        "price": "$1,865 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,715 MXN"
+        "price": "$1,810 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 07 SAMSUNG OLED · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p5 · SAMSUNG AMOLED · fila 69",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S25 Ultra",
     "description": "Pantalla 1:1 AMOLED PREMIUM C/M para reparación de Samsung S25 Ultra. Cotiza cantidad y confirma compatibilidad antes del pedido por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6685,22 +6689,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,870 MXN"
+        "price": "$3,290 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$2,680 MXN"
+        "price": "$3,070 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,515 MXN"
+        "price": "$2,850 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,365 MXN"
+        "price": "$2,740 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 15",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 32",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung NOTE 20 Ultra",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung NOTE 20 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6724,22 +6728,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,720 MXN"
+        "price": "$2,740 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$2,540 MXN"
+        "price": "$2,520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,380 MXN"
+        "price": "$2,410 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,240 MXN"
+        "price": "$2,355 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 7",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 24",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S21 Ultra",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S21 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6763,22 +6767,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,320 MXN"
+        "price": "$1,535 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,230 MXN"
+        "price": "$1,315 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,155 MXN"
+        "price": "$1,095 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,085 MXN"
+        "price": "$1,095 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 8",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 25",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 PLUS",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S22 PLUS. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6802,22 +6806,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,850 MXN"
+        "price": "$2,520 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$2,660 MXN"
+        "price": "$2,410 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,495 MXN"
+        "price": "$2,300 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,350 MXN"
+        "price": "$2,300 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 9",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 26",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S22 Ultra",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S22 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6841,22 +6845,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$1,320 MXN"
+        "price": "$1,975 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$1,230 MXN"
+        "price": "$1,810 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$1,155 MXN"
+        "price": "$1,645 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$1,085 MXN"
+        "price": "$1,535 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 10",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 27",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 PLUS",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S23 PLUS. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6880,22 +6884,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,570 MXN"
+        "price": "$2,520 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$2,395 MXN"
+        "price": "$2,410 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,245 MXN"
+        "price": "$2,300 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,115 MXN"
+        "price": "$2,245 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 11",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 28",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S23 Ultra",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S23 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6919,22 +6923,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,660 MXN"
+        "price": "$2,740 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$2,480 MXN"
+        "price": "$2,520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,325 MXN"
+        "price": "$2,300 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,190 MXN"
+        "price": "$2,245 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 12",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 29",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S24 Ultra",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S24 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6958,22 +6962,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,650 MXN"
+        "price": "$2,740 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$2,475 MXN"
+        "price": "$2,520 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,320 MXN"
+        "price": "$2,300 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,185 MXN"
+        "price": "$2,245 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 13",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 30",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung S25 Ultra",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung S25 Ultra. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -6997,22 +7001,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$2,930 MXN"
+        "price": "$2,850 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$2,735 MXN"
+        "price": "$2,685 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,560 MXN"
+        "price": "$2,520 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,410 MXN"
+        "price": "$2,465 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 16",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 33",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP3",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP3. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -7036,22 +7040,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$3,300 MXN"
+        "price": "$3,180 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$3,080 MXN"
+        "price": "$2,960 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$2,885 MXN"
+        "price": "$2,740 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$2,720 MXN"
+        "price": "$2,740 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 17",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 34",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP4",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP4. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -7075,22 +7079,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$4,060 MXN"
+        "price": "$4,220 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$3,790 MXN"
+        "price": "$4,000 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$3,550 MXN"
+        "price": "$3,780 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$3,345 MXN"
+        "price": "$3,615 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 18",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 35",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP5",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP5. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -7114,22 +7118,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$4,690 MXN"
+        "price": "$4,385 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$4,380 MXN"
+        "price": "$4,165 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$4,105 MXN"
+        "price": "$3,945 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$3,865 MXN"
+        "price": "$3,945 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 19",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 36",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP6",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP6. Cotiza cantidad y confirma compatibilidad por WhatsApp.",
     "stockStatus": "ask_stock",
@@ -7153,22 +7157,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$5,325 MXN"
+        "price": "$5,920 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$4,970 MXN"
+        "price": "$5,480 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$4,660 MXN"
+        "price": "$5,150 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$4,385 MXN"
+        "price": "$4,825 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 20",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 37",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FLIP7",
     "description": "Pantalla TIPO ORIGINAL C/M para reparación de Samsung Z FLIP7. Cotiza cantidad y confirma compatibilidad por WhatsApp. Producto bajo pedido.",
     "stockStatus": "ask_stock",
@@ -7192,22 +7196,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$4,100 MXN"
+        "price": "$4,935 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$3,825 MXN"
+        "price": "$4,825 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$3,585 MXN"
+        "price": "$4,715 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$3,375 MXN"
+        "price": "$4,495 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 21",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 38",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FOLD3",
     "description": "Pantalla ORIGINAL C/M para reparación de Samsung Z FOLD3. Cotiza cantidad y confirma compatibilidad por WhatsApp. Producto bajo pedido.",
     "stockStatus": "ask_stock",
@@ -7231,22 +7235,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$5,585 MXN"
+        "price": "$6,575 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$5,215 MXN"
+        "price": "$6,465 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$4,885 MXN"
+        "price": "$6,360 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$4,600 MXN"
+        "price": "$6,140 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 22",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 39",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FOLD4",
     "description": "Pantalla ORIGINAL C/M para reparación de Samsung Z FOLD4. Cotiza cantidad y confirma compatibilidad por WhatsApp. Producto bajo pedido.",
     "stockStatus": "ask_stock",
@@ -7270,22 +7274,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$7,440 MXN"
+        "price": "$8,220 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$6,945 MXN"
+        "price": "$8,110 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$6,510 MXN"
+        "price": "$8,000 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$6,130 MXN"
+        "price": "$7,785 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 23",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 40",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FOLD5",
     "description": "Pantalla ORIGINAL C/M para reparación de Samsung Z FOLD5. Cotiza cantidad y confirma compatibilidad por WhatsApp. Producto bajo pedido.",
     "stockStatus": "ask_stock",
@@ -7309,22 +7313,22 @@ window.HAODE_PRODUCTS_DATA = [
     "prices": [
       {
         "quantity": "Menudeo",
-        "price": "$11,455 MXN"
+        "price": "$10,740 MXN"
       },
       {
         "quantity": "Mayoreo",
-        "price": "$10,690 MXN"
+        "price": "$10,635 MXN"
       },
       {
         "quantity": "Caja",
-        "price": "$10,020 MXN"
+        "price": "$10,525 MXN"
       },
       {
         "quantity": "⭐ VIP",
-        "price": "$9,435 MXN"
+        "price": "$10,195 MXN"
       }
     ],
-    "priceSource": "HAODE_Lista_de_Precios_2026-09-24.xlsx · 08 SAMSUNG ORIGINAL · fila 24",
+    "priceSource": "HAODE_Lista_de_Precios_CLIENTES_2026-11_Bolsas_Corregidas.pdf · PDF p6 · SAMSUNG ORIGINAL · fila 41",
     "whatsappText": "Hola HAODE, quiero cotizar: Pantalla para Samsung Z FOLD6",
     "description": "Pantalla ORIGINAL C/M para reparación de Samsung Z FOLD6. Cotiza cantidad y confirma compatibilidad por WhatsApp. Producto bajo pedido.",
     "stockStatus": "ask_stock",
@@ -7334,4 +7338,4 @@ window.HAODE_PRODUCTS_DATA = [
       23
     ]
   }
-];;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;

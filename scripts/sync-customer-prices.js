@@ -1,21 +1,22 @@
 const { mediaSafeProduct, mediaSafeHtml } = require('./product-media-policy.cjs');
+const { syncPriceHighlights } = require('./customer-price-highlights.cjs');
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-09-24.json');
+const SOURCE_FILE = path.join(ROOT, 'data', 'customer-price-list-2026-11.json');
 const WEBSITE_FILE = path.join(ROOT, 'data', 'products.generated.js');
 const APP_FILE = path.join(ROOT, 'app', 'products.json');
 const MASTER_FILE = path.join(ROOT, 'docs', 'master-data', 'products-master.csv');
-const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-24.md');
-const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-09-24.json');
+const REPORT_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-11.md');
+const REPORT_JSON_FILE = path.join(ROOT, 'docs', 'reports', 'customer-price-sync-2026-11.json');
 const PRODUCT_DIR = path.join(ROOT, 'producto');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const APPLY = process.argv.includes('--apply');
 const DELETE_UNLISTED = process.argv.includes('--delete-unlisted');
 const PUBLISH_UNLISTED = process.argv.includes('--publish-unlisted');
 const PLACEHOLDER_IMAGE = 'assets/products/placeholder.svg';
-const TODAY = '2026-09-24';
+const TODAY = '2026-10-28';
 const STATIC_ROUTE_ALIASES = {
   'funda-magnetica-17-pro-max': ['funda-magnetica-estilo-iphone-17-pro-max'],
   'funda-premium-17-pro-max': ['funda-premium-aluminio-estilo-iphone-17-pro-max'],
@@ -42,6 +43,10 @@ function normalize(value) {
     .replace(/PRO MAX/g, 'PROMAX')
     .replace(/\+/g, 'PLUS')
     .replace(/[^A-Z0-9]+/g, '');
+}
+
+function sourceDocumentLabel(source) {
+  return source.sourceDocument || source.sourceWorkbook;
 }
 
 const MODEL_NOISE = [
@@ -112,6 +117,8 @@ const SPECIAL_IDENTITIES = {
   'haode-ai-w610-smart-glasses': ['ai', 'GAFASAIW610'],
   'haode-ai-g3-smart-glasses': ['ai', 'GAFASAIG3'],
   's1-ai-classic': ['ai', 'GAFASAIS1'],
+  // Owner confirmed existing M08 is the PDF M08 13MP version (2026-10-28).
+  'gafas-ai-gafas-ai-m08': ['ai', 'GAFASAIM0813MP'],
   'lk-007-camara-digital-4k': ['cameras', 'LK007'],
   'lk-030-mini-camara-retro-digital': ['cameras', 'LK030'],
   'lk-032-camara-inteligente-con-gimbal': ['cameras', 'LK032'],
@@ -253,7 +260,7 @@ function sourceDescription(row) {
 }
 
 function sourcePriceReference(source, rows) {
-  return `${source.sourceWorkbook} · ${source.sourceSheet} · ${rows.length > 1 ? `filas ${rows.map((row) => row.sourceRow).join(', ')}` : `fila ${rows[0].sourceRow}`}`;
+  return `${sourceDocumentLabel(source)} · ${source.sourceSheet} · ${rows.length > 1 ? `filas ${rows.map((row) => row.sourceRow).join(', ')}` : `fila ${rows[0].sourceRow}`}`;
 }
 
 function makeWebsiteProduct(id, row, rows, source, existing = null, appProduct = null) {
@@ -347,8 +354,8 @@ function updateCustomerPriceCopy(value, row) {
   const box = money(row.prices.box);
   if (!box || !value) return value;
   return String(value)
-    .replace(/precio de caja\/modelo confirmado en \$[0-9,.]+ MXN por pieza/gi, `precio de Caja confirmado en $${box.toLocaleString('es-MX')} MXN por pieza`)
-    .replace(/caja\/modelo \$[0-9,.]+ MXN por pieza/gi, `Caja $${box.toLocaleString('es-MX')} MXN por pieza`);
+    .replace(/precio de caja(?:\/modelo)? confirmado en \$[0-9,.]+ MXN por pieza/gi, `precio de Caja confirmado en $${box.toLocaleString('es-MX')} MXN por pieza`)
+    .replace(/caja(?:\/modelo)? \$[0-9,.]+ MXN por pieza/gi, `Caja $${box.toLocaleString('es-MX')} MXN por pieza`);
 }
 
 function updateCustomerQualityCopy(value, previousQuality, sourceQuality) {
@@ -472,7 +479,7 @@ function csvCell(value) {
   return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
-function updateMasterCsv(changes, deletedIds, sourceVersion) {
+function updateMasterCsv(changes, deletedIds, sourceVersion, sourceLabel) {
   const rows = csvRows(fs.readFileSync(MASTER_FILE, 'utf8'));
   const headers = rows[0];
   const idIndex = headers.indexOf('id');
@@ -506,7 +513,7 @@ function updateMasterCsv(changes, deletedIds, sourceVersion) {
       const retainedSources = String(row[sourceIndex] || '')
         .split('|')
         .filter((item) => item && !/Lista_de_Precios/i.test(item));
-      row[sourceIndex] = [...retainedSources, `HAODE_Lista_de_Precios_2026-09-24.xlsx · ${sourceVersion}`].join('|');
+      row[sourceIndex] = [...retainedSources, `${sourceLabel} · ${sourceVersion}`].join('|');
     }
     if (checkedIndex >= 0) row[checkedIndex] = TODAY;
   });
@@ -551,7 +558,7 @@ function rebuildMasterCsv(websiteProducts, appProducts, sourceRowsById, source) 
       estado: 'Activo',
       source: [...new Set([
         ...String(previous.source || '').split('|').filter(Boolean),
-        sourceRows.length ? sourcePriceReference(source, sourceRows) : source.sourceWorkbook,
+        sourceRows.length ? sourcePriceReference(source, sourceRows) : sourceDocumentLabel(source),
       ])].join('|'),
       last_checked: TODAY,
     };
@@ -853,7 +860,7 @@ function main() {
     product.description = updateCustomerPriceCopy(product.description, row);
     product.description = updateCustomerQualityCopy(product.description, previousQuality, sourceQuality);
     product.description = updateInventoryCopy(product.description);
-    product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
+    product.priceSource = `${sourceDocumentLabel(source)} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== after) report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
     if (sourceQuality && previousQuality !== sourceQuality) {
       report.qualityLabels.website.push({ id: product.id, row: row.sourceRow, from: previousQuality, to: sourceQuality });
@@ -882,15 +889,16 @@ function main() {
     if (sourceQuality) product.calidad = sourceQuality;
     // APP-QUALITY-01: regenerate the approved Bolsa copy from its matched row;
     // an old import may retain FHD in model/offer text despite correct calidad.
-    if (product.id === 'iphone-incell-xr-bolsa-protectora' && sourceQuality) {
-      product.modelo = `iPhone XR Bolsa Protectora ${sourceQuality}`;
+    if (['iphone-incell-xr-bolsa-protectora', 'iphone-incell-11-bolsa-protectora'].includes(product.id) && sourceQuality) {
+      const model = product.id === 'iphone-incell-xr-bolsa-protectora' ? 'XR' : '11';
+      product.modelo = `iPhone ${model} Bolsa Protectora ${sourceQuality}`;
       product.offerSubtitle = `${sourceQuality} · Bolsa Protectora`;
     }
     product.descripcion = updateCustomerPriceCopy(product.descripcion, row);
     product.descripcion = updateCustomerQualityCopy(product.descripcion, previousCopyQuality, sourceQuality);
     product.descripcion = updateInventoryCopy(product.descripcion);
     updateSpecialOfferPricing(product, row);
-    product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
+    product.priceSource = `${sourceDocumentLabel(source)} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     const after = JSON.stringify({ retail, wholesale5, tiers });
     if (before !== after) report.app.push({ id: product.id, row: row.sourceRow, retail, wholesale5, tiers });
     if (sourceQuality && previousQuality !== sourceQuality) {
@@ -908,7 +916,7 @@ function main() {
     product.prices = nextPrices;
     product.description = updateCustomerPriceCopy(product.description, row);
     product.description = updateInventoryCopy(product.description);
-    product.priceSource = `${source.sourceWorkbook} · ${row.sourceSheet} · fila ${row.sourceRow}`;
+    product.priceSource = `${sourceDocumentLabel(source)} · ${row.sourceSheet} · fila ${row.sourceRow}`;
     if (before !== JSON.stringify(nextPrices)) {
       report.website.push({ id: product.id, row: row.sourceRow, prices: nextPrices });
     }
@@ -1054,10 +1062,11 @@ function main() {
     fs.writeFileSync(WEBSITE_FILE, `window.HAODE_PRODUCTS_DATA = ${JSON.stringify(retainedWebsiteProducts, null, 2)};${buildText}`, 'utf8');
     fs.writeFileSync(APP_FILE, `${JSON.stringify(retainedAppProducts, null, 2)}\n`, 'utf8');
     report.updatedLegacyAiPages = updateLegacyAiPages(retainedWebsiteProducts);
+    report.updatedPriceHighlights = syncPriceHighlights(ROOT, retainedWebsiteProducts, sourceDocumentLabel(source));
     summary.updatedLegacyAiPages = report.updatedLegacyAiPages.length;
     fs.writeFileSync(MASTER_FILE, PUBLISH_UNLISTED
       ? rebuildMasterCsv(retainedWebsiteProducts, retainedAppProducts, sourceRowsById, source)
-      : updateMasterCsv([...masterChanges.values()], deletedIds, source.sourceVersion || source.importedAt), 'utf8');
+      : updateMasterCsv([...masterChanges.values()], deletedIds, source.sourceVersion || source.importedAt, sourceDocumentLabel(source)), 'utf8');
     if (DELETE_UNLISTED) {
       report.removedStaticRoutes = pruneStaticProductRoutes(deletedIds);
       summary.removedStaticRoutes = report.removedStaticRoutes.length;
@@ -1068,9 +1077,9 @@ function main() {
       updateSitemap(retainedWebsiteProducts);
     }
     const lines = [
-      '# Customer Price Sync 2026-09-24',
+      '# Customer Price Sync 2026-11',
       '',
-      `- Source: ${source.sourceWorkbook}`,
+      `- Source: ${sourceDocumentLabel(source)}`,
       `- Source price rows: ${summary.sourceRows}`,
       `- Website exact matches updated: ${summary.websiteMatched}/${summary.websiteProducts}`,
       `- App exact matches updated: ${summary.appMatched}/${summary.appProducts}`,
@@ -1135,7 +1144,7 @@ function main() {
       unmatchedSource,
       matched,
       qualityLabels: {
-        source: '2026-09-24 workbook column B',
+        source: '2026-11 approved PDF quality column',
         websiteAligned: summary.websiteQualityAligned,
         appAligned: summary.appQualityAligned,
       },
