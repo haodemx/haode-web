@@ -28,6 +28,7 @@ test('product templates use the shared media slots without coming-soon filler', 
 });
 
 test('unconfirmed product imagery uses the authoritative asset status', () => {
-  assert.match(productsScript, /imageStatus\.textContent = 'REAL ASSET REQUIRED'/);
+  assert.match(productsScript, /imageStatus\.textContent = product\.mediaPending \? PENDING_PRODUCT_MEDIA_TEXT : 'Imagen en actualización'/);
+  assert.match(productsScript, /const PENDING_PRODUCT_MEDIA_TEXT = 'Foto específica de este modelo pendiente de confirmar\.'/);
   assert.match(generator, /REAL ASSET REQUIRED/);
 });
