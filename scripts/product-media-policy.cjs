@@ -14,9 +14,10 @@ function mediaSafeProduct(product, app = false) {
     : { ...product, images: [PLACEHOLDER], videos: [] };
 }
 function mediaSafeHtml(html, id) {
-  if (!pendingMedia(id)) return html;
+  // M08 has no approved real photo. Its neutral UI placeholder must never be
+  // advertised as Product.image, even after price or SEO regeneration.
+  if (!pendingMedia(id) && id !== 'gafas-ai-gafas-ai-m08') return html;
   let result = html
-    .replace(/\s*<meta\b[^>]*(?:property|name)=["'](?:og:image(?::[^"']+)?|twitter:image(?::[^"']+)?)["'][^>]*>/gi, '')
     .replace(/<script([^>]*type=["']application\/ld\+json["'][^>]*)>([\s\S]*?)<\/script>/gi, (block, attrs, source) => {
       const data = JSON.parse(source);
       for (const node of data['@graph'] || [data]) {
@@ -24,7 +25,10 @@ function mediaSafeHtml(html, id) {
         if (types.includes('Product')) delete node.image;
       }
       return `<script${attrs}>${JSON.stringify(data, null, 2)}</script>`;
-    })
+    });
+  if (!pendingMedia(id)) return result;
+  result = result
+    .replace(/\s*<meta\b[^>]*(?:property|name)=["'](?:og:image(?::[^"']+)?|twitter:image(?::[^"']+)?)["'][^>]*>/gi, '')
     .replace(/(<div\b[^>]*\bdata-detail-mobile-preview[^>]*>[\s\S]*?<img\b[^>]*)(>)/gi, (block, image, close) => image.replace(/\s+srcset=["'][^"']*["']/gi, '').replace(/\bsrc=["'][^"']*["']/i, `src="/${PLACEHOLDER}"`) + close)
     .replace(/(<img\b[^>]*\bdata-detail-main-image[^>]*\bsrc=)["'][^"']*["']/gi, `$1"/${PLACEHOLDER}"`)
     .replace(/(<img\b[^>]*\bdata-detail-main-image[^>]*\balt=)["'][^"']*["']/gi, `$1"${PENDING_MEDIA_TEXT}"`)

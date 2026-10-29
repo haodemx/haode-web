@@ -3159,7 +3159,8 @@ function syncRuntimeProductJsonLd(product) {
     const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
     const productNode = nodes.find((node) => node?.['@type'] === 'Product');
     if (!productNode) return;
-    if (product.mediaPending) delete productNode.image;
+    // M08's UI placeholder is not an approved product photograph.
+    if (product.mediaPending || product.id === 'gafas-ai-gafas-ai-m08') delete productNode.image;
     if (description) productNode.description = description;
     productNode.offers = product.priceTable
       .filter((row) => row.price && row.price !== 'Consultar')

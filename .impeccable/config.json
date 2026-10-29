@@ -47,6 +47,15 @@
         ],
         "createdAt": "2026-10-24T02:53:30.401Z",
         "reason": "Agent decision: real white panel heading and header CTA contrast fixed with page-scoped CSS. Rendered visible white text audit finds no white-on-white text; remaining finding matches inactive shared styles. Scope is this landing only; maintain computed contrast regression checks."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "producto/gafas-ai-gafas-ai-m08/index.html"
+        ],
+        "createdAt": "2026-10-29T22:37:28.809Z",
+        "reason": "Agent verified false positive: this HTML contains no shadow or glow declarations; authorized change removes only Product JSON-LD image, with no visual styling changes."
       }
     ]
   }
