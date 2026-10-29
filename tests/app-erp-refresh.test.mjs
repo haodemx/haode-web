@@ -15,21 +15,33 @@ function requestHarness(fetchImpl = fetch) {
 }
 
 test('ERP JSON deadline covers body download after fast headers', async () => {
+  let beginBody;
   const server = http.createServer((_req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.flushHeaders();
-    const timer = setTimeout(() => res.end('{"products":[]}'), 200);
+    let timer;
+    beginBody = () => { timer = setTimeout(() => res.end('{"products":[]}'), 200); };
     res.on('close', () => clearTimeout(timer));
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  const transport = new AbortController();
   try {
-    const { request, state } = requestHarness();
-    await assert.rejects(request(`http://127.0.0.1:${server.address().port}/catalog`, {}, 60, 'ERP catalog'), /tardó/);
+    const url = `http://127.0.0.1:${server.address().port}/catalog`;
+    // Establish real HTTP headers before measuring the body deadline. Cold
+    // connection startup must not turn this body test into a header-timeout test.
+    const response = await fetch(url, { signal: transport.signal });
+    const { request, state } = requestHarness((_url, { signal }) => {
+      signal.addEventListener('abort', () => transport.abort(), { once: true });
+      beginBody();
+      return Promise.resolve(response);
+    });
+    await assert.rejects(request(url, {}, 60, 'ERP catalog'), /tardó/);
     assert.equal(state.diagnostics.externalRequests.catalog.status, 'timeout');
     assert.equal(state.diagnostics.externalRequests.catalog.phase, 'body');
     assert.equal(state.diagnostics.externalRequests.catalog.httpStatus, 200);
     assert.ok(state.diagnostics.externalRequests.catalog.elapsedMs >= 50);
   } finally {
+    transport.abort();
     server.closeAllConnections();
     await new Promise(resolve => server.close(resolve));
   }
