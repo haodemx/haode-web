@@ -13,10 +13,10 @@ const productPages = [
 
 test('machine category targets the measured hydrogel-machine searches', () => {
   const html = read('categoria/maquinas-de-hidrogel/index.html');
-  assert.match(html, /<title>Máquina de hidrogel para cortar micas \| HAODE México<\/title>/);
-  assert.match(html, /<h1>Máquina de hidrogel para cortar micas<\/h1>/);
-  assert.match(html, /meta name="description" content="[^"]*Máquina de hidrogel[^"]*"/);
-  assert.match(html, /meta property="og:title" content="Máquina de hidrogel para cortar micas/);
+  assert.match(html, /<title>Cortadora de micas de hidrogel para tiendas \| HAODE México<\/title>/);
+  assert.match(html, /<h1>Cortadora de micas de hidrogel para tiendas<\/h1>/);
+  assert.match(html, /meta name="description" content="Cortadora de micas de hidrogel[^"]*"/);
+  assert.match(html, /meta property="og:title" content="Cortadora de micas de hidrogel para tiendas/);
   assert.match(html, /href="\/producto\/x200t-cortadora-micas\/"/);
   assert.doesNotMatch(html, /30,000 modelos/);
 });
