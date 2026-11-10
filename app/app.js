@@ -1636,6 +1636,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
         <div class="filter-row">
           <select class="select-box" data-category-select aria-label="Filtrar por categoría">
             <option value="Todos"${state.activeCategory === "Todos" ? " selected" : ""}>Todas las categorías</option>
+            ${state.activeCategory === "Pantallas iPhone" ? '<option value="Pantallas iPhone" selected>Pantallas iPhone</option>' : ""}
             ${categoryOptionsHtml()}
           </select>
           <select class="select-box" data-sort-select aria-label="Ordenar productos">

@@ -369,6 +369,7 @@
     updateConsent,
     mountControls: mountPrivacyControls
   });
+  global.dispatchEvent(new CustomEvent("haode:privacy-ready"));
   global.HaodeConversionBridge = Object.freeze({
     recordLead(requestId) {
       if (!currentConsent.analytics || !currentConsent.advertising) return;
@@ -397,7 +398,7 @@
     if (pendingConversions.length < 100) pendingConversions.push({ name: "WhatsAppClick", parameters });
   }, true);
   const conversionScript = global.document.createElement("script");
-  conversionScript.src = new URL("conversion-tracking.js?v=20260924", analyticsScriptUrl || global.location.href).href;
+  conversionScript.src = new URL("conversion-tracking.js?v=20261109-seo-handoff", analyticsScriptUrl || global.location.href).href;
   conversionScript.async = true;
   conversionScript.onload = () => {
     for (const { name, parameters } of pendingConversions.splice(0)) {

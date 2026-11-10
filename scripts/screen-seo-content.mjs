@@ -196,7 +196,8 @@ export const DIAGNOSTIC_FAQ = [
 export function refreshScreenLanding(html, config, products) {
   let out = metadata(html, config.title, config.description);
   if (!/<body[^>]*data-screen-seo-page/.test(out)) out = out.replace(/<body\b/, '<body data-screen-seo-page');
-  out = out.replace(/href="\/style\.css(?:\?[^"]*)?"/g, 'href="/style.css?v=20260904-screen-seo"');
+  const styleRevision = out.includes('data-seo-app-cta') ? '20261109-seo-handoff' : '20260904-screen-seo';
+  out = out.replace(/href="\/style\.css(?:\?[^"]*)?"/g, `href="/style.css?v=${styleRevision}"`);
   out = out.replace(/<h1\b([^>]*)>[^<]*<\/h1>/i, `<h1$1>${escape(config.heading)}</h1>`);
   out = out.replace(/(<p class="hero-text">)[\s\S]*?(<\/p>)/i, (_, open, close) => `${open}${escape(config.description)}${close}`);
   out = out.replace(/Listado de iPhone OLED Pro Max/g, 'Listado de pantallas iPhone OLED');

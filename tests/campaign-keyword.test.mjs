@@ -91,9 +91,35 @@ test('own-site navigation with no prior attribution does not create a referral',
   assert.equal(w.HaodeCampaign.capture().source, 'direct');
 });
 
+test('a Google or ChatGPT arrival replaces old direct or internal SEO attribution', () => {
+  for (const previous of [{ source: 'direct' }, { source: 'seo', medium: 'organic', content: 'landing_cta' }]) {
+    for (const [referrer, expected] of [['https://www.google.com.mx/', 'google'], ['https://chatgpt.com/', 'chatgpt']]) {
+      const w = harness('', true, referrer);
+      w.sessionStorage.setItem('haode-campaign-attribution-v1', JSON.stringify({ ...previous, landingPage: '/app/' }));
+      const result = w.HaodeCampaign.capture();
+      assert.equal(result.source, expected);
+      assert.equal(result.landingPage, '/categoria/oled-diagnostica/');
+    }
+  }
+});
+
 test('an external campaign on an App link still takes precedence', () => {
   const w = harness('');
   w.location.pathname = '/app/';
   w.location.search = '?utm_source=facebook&utm_medium=organic_social&utm_campaign=test';
   assert.equal(w.HaodeCampaign.capture({channel: 'haode_app'}).source, 'facebook');
+});
+
+test('ChatGPT domain tags and previously stored domain aliases use the same source', () => {
+  for (const domain of ['chatgpt.com', 'chat.openai.com']) {
+    const w = harness(`?utm_source=${domain}`);
+    const tagged = w.HaodeCampaign.capture();
+    assert.equal(tagged.source, 'chatgpt');
+    assert.equal(tagged.medium, 'ai_referral');
+    w.location.search = '';
+    w.sessionStorage.setItem('haode-campaign-attribution-v1', JSON.stringify({ source: domain.replaceAll('.', '_'), medium: 'campaign' }));
+    const stored = w.HaodeCampaign.capture();
+    assert.equal(stored.source, 'chatgpt');
+    assert.equal(stored.medium, 'ai_referral');
+  }
 });

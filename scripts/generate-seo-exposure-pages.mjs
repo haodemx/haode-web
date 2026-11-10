@@ -275,10 +275,12 @@ function renderPage(page) {
   <link rel="canonical" href="${url}" />
   <title>${page.title}</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="/style.css?v=20260813-final-ui-seo" />
+  <link rel="stylesheet" href="/style.css?v=20261109-seo-handoff" />
   <script type="application/ld+json">
 ${JSON.stringify(jsonLdFor(page), null, 2)}
   </script>
+  <script src="/analytics.js?v=20261109-seo-handoff"></script>
+  <script src="/campaign-attribution.js?v=20261109-seo-handoff"></script>
 </head>
 <body class="new-page seo-conversion-page conversion-reference-page seo-exposure-page">
   <header class="topbar catalog-topbar">
@@ -342,7 +344,6 @@ ${faqMarkup(page)}
     </section>
   </main>
 
-  <script src="/campaign-attribution.js?v=20260813-ga4-conversions"></script>
   <script src="/detail-header.js?v=20260727-exposure-pages"></script>
   <script src="/site-footer.js?v=20260813-final-ui-seo"></script>
 </body>

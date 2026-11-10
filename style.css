@@ -18488,9 +18488,13 @@ body.product-detail-page .floating-cta {
     display: none;
   }
 
-  body.conversion-reference-page .new-page-links .btn[href*="wa.me"],
+  body.conversion-reference-page .new-page-links .btn[href*="wa.me"] {
+    display: inline-flex;
+  }
+
   body.seo-conversion-page .new-page-links .btn[data-seo-app-cta] {
     display: inline-flex;
+    color: #151515;
   }
 
   body.category-hub-reference-page .new-page-hero .reference-conversion-strip {

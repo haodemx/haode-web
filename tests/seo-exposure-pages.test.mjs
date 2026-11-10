@@ -34,9 +34,9 @@ test("new SEO exposure pages are indexable, tracked and connected to WhatsApp", 
 
     assert.ok(html.includes(`<link rel="canonical" href="${url}" />`), `${slug} missing canonical`);
     assert.ok(html.includes('meta name="robots" content="index,follow'), `${slug} is not indexable`);
+    assert.match(html, /<script src="\/analytics\.js[^"]*"><\/script>\s*<script src="\/campaign-attribution\.js/, `${slug} must initialize consent before attribution`);
     if (slug === "micas-hidrogel-mayoreo-mexico") {
       assert.ok(html.includes('href="/app/#categoria/Micas"'), `${slug} missing source-preserving App CTA`);
-      assert.match(html, /src="\/campaign-attribution\.js/, `${slug} missing attribution capture`);
     } else {
       assert.match(html, /data-seo-app-cta href="\/app\/#categoria\//, `${slug} missing source-preserving App CTA`);
     }
