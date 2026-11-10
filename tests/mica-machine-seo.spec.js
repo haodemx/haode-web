@@ -3,7 +3,7 @@ const { expect, test } = require('@playwright/test');
 const baseURL = (process.env.BASE_URL || 'http://127.0.0.1:4197').replace(/\/$/, '');
 
 const routes = [
-  ['/categoria/maquinas-de-hidrogel/', 'Máquina de hidrogel para cortar micas'],
+  ['/categoria/maquinas-de-hidrogel/', 'Cortadora de micas de hidrogel para tiendas'],
   ['/producto/x200t-cortadora-micas/', 'HAODE X200T Cortadora Inteligente de Micas'],
   ['/producto/mica-hd/', 'MICA HD'],
   ['/producto/mica-matte/', 'MICA MATTE'],

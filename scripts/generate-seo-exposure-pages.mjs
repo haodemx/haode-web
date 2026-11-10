@@ -16,7 +16,7 @@ const pages = [
     h1: "Pantallas iPhone de mayoreo",
     hero: "Entrada única para clientes que compran pantallas iPhone al por mayor. Separa calidad (INCELL u OLED), modelo y cantidad para una cotización más rápida.",
     campaign: "iphone_mayoreo",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=iphone_mayoreo&utm_content=landing_cta#categoria/Pantallas%20iPhone",
+    appPath: "/app/#categoria/Pantallas%20iPhone",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas iPhone.\nModelos:\nCalidad (INCELL u OLED):\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, precio por cantidad y envio?",
     proof: ["iPhone de mayor rotación", "INCELL y OLED", "Cotización por WhatsApp"],
     cards: [
@@ -40,7 +40,7 @@ const pages = [
     h1: "Pantallas iPhone INCELL de mayoreo",
     hero: "Entrada directa para talleres que compran modelos iPhone de alta rotacion. Separa version, cantidad y ciudad para confirmar disponibilidad, precio aplicable y envio.",
     campaign: "iphone_incell_mayoreo",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=iphone_incell_mayoreo&utm_content=landing_cta#categoria/Pantallas%20iPhone%20INCELL",
+    appPath: "/app/#categoria/Pantallas%20iPhone%20INCELL",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas iPhone INCELL.\nModelos:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, precio por cantidad y envio?",
     proof: ["iPhone X a 17", "INCELL por modelo", "Cotizacion por cantidad"],
     cards: [
@@ -64,7 +64,7 @@ const pages = [
     h1: "Pantallas iPhone OLED para compra profesional",
     hero: "Pagina para clientes que buscan lineas OLED para iPhone. Antes de comprar, confirma modelo, calidad, cantidad y ciudad para evitar diferencias entre versiones.",
     campaign: "iphone_oled_mayoreo",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=iphone_oled_mayoreo&utm_content=landing_cta#categoria/Pantallas%20iPhone%20OLED",
+    appPath: "/app/#categoria/Pantallas%20iPhone%20OLED",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas iPhone OLED.\nModelos:\nCalidad:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, precio por cantidad y envio?",
     proof: ["OLED por modelo", "Pro y Pro Max", "Confirmacion por WhatsApp"],
     cards: [
@@ -88,7 +88,7 @@ const pages = [
     h1: "Pantallas Samsung INCELL de mayoreo",
     hero: "Entrada para talleres que compran Galaxy INCELL por modelo. Separa Samsung INCELL de OLED y TIPO ORIGINAL antes de cotizar.",
     campaign: "samsung_incell_mayoreo",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=samsung_incell_mayoreo&utm_content=landing_cta#categoria/Pantallas%20Samsung%20INCELL",
+    appPath: "/app/#categoria/Pantallas%20Samsung%20INCELL",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas Samsung INCELL.\nModelos Galaxy:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, precio por cantidad y envio?",
     proof: ["Galaxy S y Note", "INCELL separado", "Lista por modelo"],
     cards: [
@@ -112,7 +112,7 @@ const pages = [
     h1: "Pantallas Samsung OLED de mayoreo",
     hero: "Entrada para talleres que buscan pantallas Samsung OLED por modelo. Confirma la serie Galaxy, la calidad y la cantidad antes de solicitar cotización.",
     campaign: "samsung_oled_mayoreo",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=samsung_oled_mayoreo&utm_content=landing_cta#categoria/Pantallas%20Samsung%20OLED",
+    appPath: "/app/#categoria/Pantallas%20Samsung%20OLED",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas Samsung OLED.\nModelos Galaxy:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, precio por cantidad y envio?",
     proof: ["Galaxy por modelo", "OLED separado", "Lista por cantidad"],
     cards: [
@@ -136,7 +136,7 @@ const pages = [
     h1: "Samsung Z Flip y Z Fold TIPO ORIGINAL",
     hero: "Busqueda enfocada en plegables Samsung. Estos modelos requieren confirmar serie, version y calidad antes de preparar una cotizacion.",
     campaign: "samsung_zflip_zfold_original",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=samsung_zflip_zfold_original&utm_content=landing_cta#categoria/Pantallas%20Samsung%20Original",
+    appPath: "/app/#categoria/Pantallas%20Samsung%20Original",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar pantallas Samsung Z Flip o Z Fold.\nModelo:\nVersion:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad, calidad, precio y envio?",
     proof: ["Z Flip", "Z Fold", "TIPO ORIGINAL"],
     cards: [
@@ -159,7 +159,7 @@ const pages = [
     h1: "Fundas para celular de mayoreo",
     hero: "Pagina para productos de rotacion en tienda. Usa WhatsApp para confirmar modelos, cantidades y condiciones antes de preparar el pedido.",
     campaign: "fundas_mayoreo",
-    appPath: "/app/?utm_source=seo&utm_medium=organic&utm_campaign=fundas_mayoreo&utm_content=landing_cta#categoria/Fundas",
+    appPath: "/app/#categoria/Fundas",
     whatsappPrompt: "Hola HAODE Mexico, quiero cotizar fundas por mayoreo.\nModelos:\nCantidad:\nCiudad:\n¿Me pueden confirmar disponibilidad y precio por cantidad?",
     proof: ["Rotacion en tienda", "Modelos por confirmar", "Pedido por lista"],
     cards: [
@@ -275,10 +275,12 @@ function renderPage(page) {
   <link rel="canonical" href="${url}" />
   <title>${page.title}</title>
   <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="/style.css?v=20260813-final-ui-seo" />
+  <link rel="stylesheet" href="/style.css?v=20261109-seo-handoff" />
   <script type="application/ld+json">
 ${JSON.stringify(jsonLdFor(page), null, 2)}
   </script>
+  <script src="/analytics.js?v=20261109-seo-handoff"></script>
+  <script src="/campaign-attribution.js?v=20261109-seo-handoff"></script>
 </head>
 <body class="new-page seo-conversion-page conversion-reference-page seo-exposure-page">
   <header class="topbar catalog-topbar">
@@ -304,7 +306,7 @@ ${JSON.stringify(jsonLdFor(page), null, 2)}
         </div>
         <div class="new-page-links">
           <a class="btn btn-primary" href="${wa}" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
-          <a class="btn btn-primary" href="${page.appPath}">Abrir en App</a>
+          <a class="btn btn-primary" data-seo-app-cta href="${page.appPath}">Abrir en App</a>
           <a class="btn btn-secondary" href="/productos/">Ver catálogo</a>
         </div>
       </div>
@@ -342,7 +344,6 @@ ${faqMarkup(page)}
     </section>
   </main>
 
-  <script src="/campaign-attribution.js?v=20260813-ga4-conversions"></script>
   <script src="/detail-header.js?v=20260727-exposure-pages"></script>
   <script src="/site-footer.js?v=20260813-final-ui-seo"></script>
 </body>

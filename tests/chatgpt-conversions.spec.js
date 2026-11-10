@@ -48,6 +48,60 @@ test('attribution survives same-origin navigation and app renders emit one view'
   expect(event).toMatchObject({ product_id: 'x200t-cortadora-micas', utm_campaign: 'hydrogel', utm_term: 'corte' });
 });
 
+for (const [source, referrer, landing, destination, tag = ''] of [
+  ['google', 'https://www.google.com.mx/', '/pantallas-iphone-mayoreo-mexico/', '/app/#categoria/Pantallas%20iPhone'],
+  ['chatgpt', 'https://chatgpt.com/', '/micas-hidrogel-mayoreo-mexico/', '/categoria/maquinas-de-hidrogel/'],
+  ['chatgpt', undefined, '/pantallas-iphone-mayoreo-mexico/', '/app/#categoria/Pantallas%20iPhone', '?utm_source=chatgpt.com']
+]) {
+  test(`slow scripts preserve ${source} ${tag ? 'tag' : 'referrer'} through catalog and legacy App links`, async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 780 });
+    await page.addInitScript(() => localStorage.setItem('haode-privacy-consent-v1',
+      JSON.stringify({ version: 1, analytics: true, advertising: true })));
+    let held;
+    await page.route('**/analytics.js?*', route => { held = route; }, { times: 1 });
+    await page.route('**/conversion-tracking.js?*', () => {}, { times: 1 });
+    const navigation = page.goto(BASE + landing + tag, { referer: referrer, waitUntil: 'domcontentloaded' });
+    await expect.poll(() => !!held).toBe(true);
+    const link = page.locator(`.new-page-links a[href="${destination}"]`).first();
+    await expect(link).toHaveCount(0);
+    await held.continue();
+    await navigation;
+    await expect(link).toBeVisible();
+    if (source === 'google') {
+      await expect(link).toHaveCSS('color', 'rgb(21, 21, 21)');
+    }
+    await link.click();
+    await expect(page).toHaveURL(BASE + destination);
+    if (source === 'google') {
+      await expect(page.locator('[data-category-select]')).toHaveValue('Pantallas iPhone');
+    }
+    expect(await page.evaluate(() => window.HaodeCampaign.capture())).toMatchObject({ source, landingPage: landing });
+
+    for (const query of ['', '?utm_source=seo&utm_medium=organic&utm_campaign=old&utm_content=landing_cta']) {
+      await page.goto(BASE + '/app/' + query + '#producto/mica-hd');
+      await ready(page);
+      await page.locator('[data-detail-whatsapp], [data-product-whatsapp]').first().evaluate(link => {
+        link.addEventListener('click', event => event.preventDefault(), { once: true });
+        link.click();
+      });
+      expect(await page.evaluate(() => window.HaodeConversions.getEvents().find(event => event.event === 'WhatsAppClick')))
+        .toMatchObject({ source, landing_page: landing });
+    }
+  });
+}
+
+test('the ChatGPT domain UTM identifies a WhatsApp click without a referrer', async ({ page }) => {
+  await page.goto(BASE + '/producto/mica-hd/?utm_source=chatgpt.com');
+  await ready(page);
+  await consent(page);
+  await page.locator('[data-detail-whatsapp]').evaluate(link => {
+    link.addEventListener('click', event => event.preventDefault(), { once: true });
+    link.click();
+  });
+  expect(await page.evaluate(() => window.HaodeConversions.getEvents().find(event => event.event === 'WhatsAppClick')))
+    .toMatchObject({ source: 'chatgpt', utm_source: 'chatgpt', medium: 'ai_referral' });
+});
+
 for (const outcome of ['success', 'empty', 'failure']) {
   test(`Lead is emitted only for confirmed ERP registration: ${outcome}`, async ({ page }) => {
     const posts = [];

@@ -203,6 +203,10 @@ test("keeps the approved App catalog authoritative and submits an attributed ide
   await expect(localBolsaCard).toBeVisible();
   await expect(localBolsaCard).toContainText("$170 MXN");
 
+  await page.goto(`${APP_URL}#categoria/M%C3%A1quinas%20de%20Mica`, { waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("heading", { name: "Máquinas de Mica" })).toBeVisible();
+  await expect(approvedCard).toBeVisible();
+
   await page.goto(`${APP_URL}#producto/x200t-cortadora-micas`, { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { name: /X200T/i })).toBeVisible();
   await expect(page.locator("[data-product-gallery] img").first()).toBeVisible();

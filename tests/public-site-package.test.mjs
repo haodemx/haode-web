@@ -110,5 +110,8 @@ test("ChatGPT conversion assets are included in the controlled public package", 
   assert.ok(manifest.files.includes("conversion-tracking.js"));
 
   const analytics = await readFile(path.join(repoRoot, "analytics.js"), "utf8");
-  assert.match(analytics, /conversion-tracking\.js\?v=20260924/);
+  const conversionAsset = analytics.match(/conversion-tracking\.js\?v=[\w-]+/)?.[0];
+  assert.ok(conversionAsset, "conversion module must be versioned");
+  const serviceWorker = await readFile(path.join(repoRoot, "service-worker.js"), "utf8");
+  assert.ok(serviceWorker.includes(`"/${conversionAsset}"`), "App shell must cache the active conversion module");
 });

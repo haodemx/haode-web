@@ -48,11 +48,18 @@ test("service worker replaces old HAODE caches without clearing site storage", a
     };
   });
 
-  expect(result.cacheNames).toContain("haode-pwa-v2026-09-22-c-layout-release-shell");
+  expect(result.cacheNames).toContain("haode-pwa-v2026-11-09-seo-handoff-shell");
   expect(result.cacheNames).not.toContain("haode-pwa-v2026-07-legacy-shell");
   expect(result.cacheNames).toContain("third-party-test-cache");
   expect(result.legacyResponseFound).toBe(false);
   expect(result.unrelatedResponse).toBe("keep");
   expect(result.localSentinel).toBe("preserved");
   expect(result.sessionAttribution).toBe(JSON.stringify({ source: "upgrade-test" }));
+
+  await page.context().setOffline(true);
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await page.evaluate(() => { location.hash = "#categoria/Pantallas%20iPhone"; });
+  await expect(page.getByRole("heading", { name: "Pantallas iPhone", exact: true })).toBeVisible();
+  await expect(page.locator("[data-category-select]")).toHaveValue("Pantallas iPhone");
+  await page.waitForFunction(() => window.HaodePrivacy && window.HaodeCampaign && window.HaodeConversions);
 });

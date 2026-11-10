@@ -68,7 +68,9 @@
     try {
       const host = global.document.referrer ? new URL(global.document.referrer).hostname.toLowerCase() : "";
       const referrerHost = host.replace(/^www\./, "").slice(0, 160);
-      if (!host) return { source: "direct", medium: "none", referrerHost: "" };
+      if (!host || host === new URL(global.location.origin).hostname) {
+        return { source: "direct", medium: "none", referrerHost: "" };
+      }
       if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(host)) return { source: "chatgpt", medium: "ai_referral", referrerHost };
       if (/(^|\.)perplexity\.ai$/i.test(host)) return { source: "perplexity", medium: "ai_referral", referrerHost };
       if (/(^|\.)gemini\.google\.com$/i.test(host)) return { source: "gemini", medium: "ai_referral", referrerHost };
@@ -88,19 +90,35 @@
     }
   }
 
-  function capture({ channel = "haode_web" } = {}) {
+  function isLegacySeoHandoff(source, medium, content) {
+    return source === "seo" && medium === "organic" && content === "landing_cta";
+  }
+
+  function campaignParams() {
     const params = new URLSearchParams(global.location.search);
-    const stored = readStored();
+    const legacySeoHandoff = global.location.pathname === "/app/"
+      && isLegacySeoHandoff(params.get("utm_source"), params.get("utm_medium"), params.get("utm_content"));
+    return legacySeoHandoff ? new URLSearchParams() : params;
+  }
+
+  function capture({ channel = "haode_web" } = {}) {
+    const params = campaignParams();
+    const previous = readStored();
     const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
       .some((key) => params.has(key));
     const incomingReferrer = referrerAttribution();
-    const storedOrReferrerSource = normalizeToken(stored.source || incomingReferrer.source, "direct");
-    const inferredMedium = normalizeToken(stored.medium || incomingReferrer.medium, "none");
+    const ignorePrevious = isLegacySeoHandoff(previous.source, previous.medium, previous.content)
+      || (previous.source === "direct" && incomingReferrer.referrerHost);
+    const stored = ignorePrevious ? {} : previous;
+    const storedSource = normalizeToken(stored.source || incomingReferrer.source, "direct");
+    const incomingSource = normalizeToken(params.get("utm_source") || params.get("source"), "direct");
+    const isChatGptDomain = (source) => source === "chatgpt_com" || source === "chat_openai_com";
+    const storedMedium = isChatGptDomain(storedSource) && stored.medium === "campaign" ? "ai_referral" : stored.medium;
 
     const attribution = hasIncomingCampaign
       ? {
-          source: normalizeToken(params.get("utm_source") || params.get("source"), "direct"),
-          medium: normalizeToken(params.get("utm_medium"), "campaign"),
+          source: isChatGptDomain(incomingSource) ? "chatgpt" : incomingSource,
+          medium: normalizeToken(params.get("utm_medium"), isChatGptDomain(incomingSource) ? "ai_referral" : "campaign"),
           campaign: normalizeToken(params.get("utm_campaign")),
           content: normalizeToken(params.get("utm_content")),
           term: normalizeToken(params.get("utm_term")),
@@ -110,8 +128,8 @@
           capturedAt: Date.now()
         }
       : {
-          source: storedOrReferrerSource,
-          medium: normalizeToken(stored.medium, inferredMedium),
+          source: isChatGptDomain(storedSource) ? "chatgpt" : storedSource,
+          medium: normalizeToken(storedMedium || incomingReferrer.medium, "none"),
           campaign: normalizeToken(stored.campaign),
           content: normalizeToken(stored.content),
           term: normalizeToken(stored.term),
@@ -149,7 +167,7 @@
       if (url.hostname !== "wa.me" && !url.hostname.endsWith(".whatsapp.com")) return link;
       const text = url.searchParams.get("text") || "";
       const campaignReference = reference(attribution);
-      if (campaignReference) {
+      if (campaignReference && campaignReference !== "direct") {
         const originLine = `Origen: ${campaignReference}`;
         const decoratedText = /(^|\n)Origen:[^\n]*/i.test(text)
           ? text.replace(/(^|\n)Origen:[^\n]*/i, `$1${originLine}`)
@@ -164,11 +182,14 @@
   }
 
   function decorateCurrentPage() {
-    const params = new URLSearchParams(global.location.search);
+    const params = campaignParams();
     const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
       .some((key) => params.has(key));
     const storedAttribution = readStored();
-    if (!hasIncomingCampaign && !reference(storedAttribution)) return;
+    if (!hasIncomingCampaign && !reference(storedAttribution)) {
+      if (hasAnalyticsConsent() && referrerAttribution().referrerHost) capture();
+      return;
+    }
     const attribution = capture();
     global.document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach((link) => {
       decorateWhatsAppLink(link, attribution);
@@ -205,7 +226,18 @@
     wasContactTracked
   });
 
-  if (!hasAnalyticsConsent()) clearStoredAttribution();
+  function syncPrivacyState() {
+    if (!global.HaodePrivacy) return;
+    if (!hasAnalyticsConsent()) clearStoredAttribution();
+    if (global.document.readyState !== "loading") {
+      decorateCurrentPage();
+    } else if (hasAnalyticsConsent() && (referrerAttribution().referrerHost || campaignParams().has("utm_source"))) {
+      capture();
+    }
+  }
+
+  global.addEventListener("haode:privacy-ready", syncPrivacyState);
+  syncPrivacyState();
   global.addEventListener("haode:privacy-consent", (event) => {
     if (event.detail?.analytics) {
       capture();
@@ -216,8 +248,6 @@
 
   if (global.document.readyState === "loading") {
     global.document.addEventListener("DOMContentLoaded", decorateCurrentPage);
-  } else {
-    decorateCurrentPage();
   }
 
   global.document.addEventListener("click", (event) => {

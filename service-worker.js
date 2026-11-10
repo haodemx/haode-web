@@ -1,4 +1,4 @@
-const CACHE_VERSION = "haode-pwa-v2026-09-22-c-layout-release";
+const CACHE_VERSION = "haode-pwa-v2026-11-09-seo-handoff";
 const APP_SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
@@ -13,13 +13,16 @@ const APP_SHELL_URLS = [
   "/v3-screen-atlas.css?v=20260914-v3-transplant",
   "/v3-screen-atlas-fixes.css?v=20260915-final-detail",
   "/analytics.js?v=20260813-ga4-conversions",
+  "/analytics.js?v=20261109-seo-handoff",
+  "/conversion-tracking.js?v=20261109-seo-handoff",
   "/script.js?v=20260813-ga4-conversions",
-  "/campaign-attribution.js?v=20260904-keyword-handoff",
+  "/campaign-attribution.js?v=20260813-ga4-conversions",
+  "/campaign-attribution.js?v=20261109-seo-handoff",
   "/products.js?v=20260915-final-detail",
   "/detail-header.js?v=20260725-ui-phase33",
   "/site-footer.js?v=20260813-final-ui-seo",
   "/app/app.css?v=20260813-final-ui-seo",
-  "/app/app.js?v=20260904-keyword-handoff",
+  "/app/app.js?v=20261109-seo-handoff",
   "/app/products.json",
   "/app/firebase-public-config.js",
   "/manifest.webmanifest",

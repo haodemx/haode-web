@@ -506,7 +506,10 @@ function normalizeProduct(product) {
   const productDocId = String(product.docId || "").trim();
   const productId = String(product.id || "").trim();
   const rawCategory = product.categoria || product.category || categories[0].id;
-  const category = categoryAliases[rawCategory] || rawCategory;
+  // ERP enrichment preserves the local category, so route the cutter before the merge.
+  const category = productId === ERP_LOCAL_PRODUCT_ID_BY_SKU["MICA-X200T"]
+    ? "Máquinas de Mica"
+    : categoryAliases[rawCategory] || rawCategory;
   const name = product.nombre || product.name || product.public_name_es || "Producto HAODE";
   const model = product.modelo || product.model || "Consultar modelo";
   const qualityText = product.calidad || product.quality || "";
@@ -1280,7 +1283,8 @@ function visibleProducts() {
   const queryTokens = catalogSearchWords(state.searchQuery);
   const source = state.activeGroup ? getProductsForGroup(state.activeGroup) : products;
   const filtered = source.filter((product) => {
-    const matchesCategory = state.activeCategory === "Todos" || product.category === state.activeCategory;
+    const matchesCategory = state.activeCategory === "Todos" || product.category === state.activeCategory
+      || (state.activeCategory === "Pantallas iPhone" && product.category.startsWith("Pantallas iPhone "));
     const searchWords = catalogSearchWords([
       product.sku,
       product.name,
@@ -1632,6 +1636,7 @@ function renderList({ group = "", category = "Todos" } = {}) {
         <div class="filter-row">
           <select class="select-box" data-category-select aria-label="Filtrar por categoría">
             <option value="Todos"${state.activeCategory === "Todos" ? " selected" : ""}>Todas las categorías</option>
+            ${state.activeCategory === "Pantallas iPhone" ? '<option value="Pantallas iPhone" selected>Pantallas iPhone</option>' : ""}
             ${categoryOptionsHtml()}
           </select>
           <select class="select-box" data-sort-select aria-label="Ordenar productos">

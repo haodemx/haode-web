@@ -85,16 +85,35 @@
   function capture() {
     if (!consented()) return {};
     const params = new URLSearchParams(global.location.search);
-    if (UTM_KEYS.some(key => params.has(key))) {
+    const legacyHandoff = (source, medium, content) => source === 'seo' && medium === 'organic' && content === 'landing_cta';
+    const legacyUrl = global.location.pathname === '/app/'
+      && legacyHandoff(params.get('utm_source'), params.get('utm_medium'), params.get('utm_content'));
+    const legacyStored = legacyHandoff(attribution.utm_source, attribution.utm_medium, attribution.utm_content);
+    if (legacyStored) attribution = {};
+    if (!legacyUrl && UTM_KEYS.some(key => params.has(key))) {
       attribution = { landing_page: safePath(global.location.pathname) };
       for (const key of UTM_KEYS) if (token(params.get(key))) attribution[key] = token(params.get(key));
+      if (/^(chatgpt\.com|chat\.openai\.com)$/i.test(params.get('utm_source') || '')) {
+        attribution.utm_source = 'chatgpt';
+      }
+    } else if (legacyUrl || !attribution.source || attribution.source === 'haode_web'
+      || (attribution.source === 'other_referral' && attribution.referrer_host === global.location.hostname)) {
+      const original = global.HaodeCampaign?.capture?.();
+      if (original?.source && original.source !== 'direct') {
+        attribution = {
+          source: token(original.source), medium: token(original.medium), campaign: token(original.campaign),
+          content: token(original.content), term: token(original.term),
+          landing_page: safePath(original.landingPage), referrer_host: safeHost(original.referrerHost)
+        };
+      }
     }
     if (!attribution.source || !attribution.referrer_host) {
       let referrer = '';
       let referrerMedium = '';
       let referrerHost = '';
       try {
-        const host = new URL(global.document.referrer).hostname.toLowerCase();
+        const referrerHostname = new URL(global.document.referrer).hostname.toLowerCase();
+        const host = referrerHostname === global.location.hostname ? '' : referrerHostname;
         referrerHost = safeHost(host);
         if (host === 'chatgpt.com' || host === 'chat.openai.com') { referrer = 'chatgpt'; referrerMedium = 'ai_referral'; }
         else if (/(^|\.)perplexity\.ai$/.test(host)) { referrer = 'perplexity'; referrerMedium = 'ai_referral'; }
@@ -108,7 +127,7 @@
         else if (/tiktok/.test(host)) { referrer = 'tiktok'; referrerMedium = 'organic_social'; }
         else if (referrerHost) { referrer = 'other_referral'; referrerMedium = 'referral'; }
       } catch { /* No referrer. */ }
-      attribution.source = attribution.utm_source || referrer || 'haode_web';
+      attribution.source ||= attribution.utm_source || referrer || 'haode_web';
       attribution.referrer_host ||= referrerHost;
       attribution.medium ||= referrerMedium;
     }

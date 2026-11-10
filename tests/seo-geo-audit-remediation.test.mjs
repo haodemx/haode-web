@@ -15,7 +15,7 @@ test('App metadata, visible FAQ and FAQ schema use the same catalog intent', () 
 
 test('priority search pages keep specific Mexico intent and useful snippets', () => {
   assert.match(read('categoria/samsung-oled/index.html'), /Pantallas Samsung OLED y AMOLED en México \| HAODE/);
-  assert.match(read('categoria/maquinas-de-hidrogel/index.html'), /Máquina de hidrogel para cortar micas \| HAODE México/);
+  assert.match(read('categoria/maquinas-de-hidrogel/index.html'), /Cortadora de micas de hidrogel para tiendas \| HAODE México/);
   assert.match(read('producto/iphone-incell-xr/index.html'), /Pantalla para iPhone XR INCELL: precio y cotización \| HAODE/);
 });
 
