@@ -24,7 +24,16 @@
   },
   "structured_data": {
     "product_pages": 146,
-    "sha256": "f62f951974be1fcde06d0eb64026d0ac8c5f57ec519d603490ff5240884fff33"
+    "sha256": "984e15f821fd1f90f718dd63505fbd371abe371ad768cde2b5aee41c73db53a4",
+    "mediaRevision": {
+      "date": "2026-11-10",
+      "product": "x200t-cortadora-micas",
+      "approval": "Owner-confirmed operation video on existing official product page only",
+      "previousSha256": "f62f951974be1fcde06d0eb64026d0ac8c5f57ec519d603490ff5240884fff33",
+      "productSchemaAndOffersUnchanged": true,
+      "websiteAppCatalogUnchanged": true,
+      "feedMembershipAndFieldsUnchanged": true
+    }
   },
   "exactWebsiteAppPriceMappings": 157,
   "unchangedUnlistedProducts": 29,
