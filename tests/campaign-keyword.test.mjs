@@ -4,11 +4,11 @@ import test from 'node:test';
 import vm from 'node:vm';
 
 const source = fs.readFileSync(new URL('../campaign-attribution.js', import.meta.url), 'utf8');
-function harness(search, consent = true, referrer = '') {
+function harness(search, consent = true, referrer = '', readyState = 'loading') {
   const makeStorage = () => { const data = new Map(); return {getItem: k => data.get(k) ?? null, setItem: (k,v) => data.set(k,v), removeItem: k => data.delete(k)}; };
   const window = {
     location: {search, pathname: '/categoria/oled-diagnostica/', origin: 'https://haode.com.mx'},
-    document: {referrer, readyState: 'loading', addEventListener() {}},
+    document: {referrer, readyState, addEventListener() {}, querySelectorAll: () => []},
     localStorage: makeStorage(), sessionStorage: makeStorage(), addEventListener() {},
     HaodePrivacy: {getConsent: () => ({analytics: consent})}
   };
@@ -74,4 +74,26 @@ test('App fallback and ERP payload retain the same normalized field', () => {
   const app = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8');
   assert.ok(app.includes('term: normalizeAttributionToken(hasIncomingCampaign ? params.get("utm_term") : stored.term)'));
   assert.match(app, /utm_term: state\.attribution\.term/);
+});
+
+test('an organic arrival keeps its original page and source through an old tagged App link', () => {
+  const w = harness('', true, 'https://www.google.com/', 'complete');
+  w.location.pathname = '/app/';
+  w.location.search = '?utm_source=seo&utm_medium=organic&utm_campaign=iphone_mayoreo&utm_content=landing_cta';
+  w.document.referrer = 'https://haode.com.mx/categoria/oled-diagnostica/';
+  const result = w.HaodeCampaign.capture({channel: 'haode_app'});
+  assert.equal(result.source, 'google');
+  assert.equal(result.landingPage, '/categoria/oled-diagnostica/');
+});
+
+test('own-site navigation with no prior attribution does not create a referral', () => {
+  const w = harness('', true, 'https://haode.com.mx/productos/');
+  assert.equal(w.HaodeCampaign.capture().source, 'direct');
+});
+
+test('an external campaign on an App link still takes precedence', () => {
+  const w = harness('');
+  w.location.pathname = '/app/';
+  w.location.search = '?utm_source=facebook&utm_medium=organic_social&utm_campaign=test';
+  assert.equal(w.HaodeCampaign.capture({channel: 'haode_app'}).source, 'facebook');
 });

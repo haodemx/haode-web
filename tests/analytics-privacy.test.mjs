@@ -129,6 +129,10 @@ test('GA4 page location keeps external attribution in standard channel formats',
 
 test('GA4 page location removes internal campaign tags that restart sessions', () => {
   assert.equal(
+    configuredPageLocation('https://haode.com.mx/app/?utm_source=seo&utm_medium=organic&utm_campaign=iphone_mayoreo&utm_content=landing_cta#lista'),
+    'https://haode.com.mx/app/',
+  );
+  assert.equal(
     configuredPageLocation('https://haode.com.mx/app/?utm_source=haode_website&utm_medium=owned_web&utm_campaign=interno#lista'),
     'https://haode.com.mx/app/',
   );

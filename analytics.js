@@ -88,7 +88,10 @@
       const current = new URL(global.location.href);
       const safe = new URL(current.pathname, current.origin);
       const source = String(current.searchParams.get("utm_source") || "").toLowerCase();
-      if (source === "haode_website" || source === "haode_app") return safe.toString();
+      const legacySeoHandoff = current.pathname === "/app/" && source === "seo"
+        && current.searchParams.get("utm_medium") === "organic"
+        && current.searchParams.get("utm_content") === "landing_cta";
+      if (source === "haode_website" || source === "haode_app" || legacySeoHandoff) return safe.toString();
       for (const key of SAFE_ANALYTICS_QUERY_KEYS) {
         let value = current.searchParams.get(key);
         if (!value || isSensitiveQueryValue(value)) continue;

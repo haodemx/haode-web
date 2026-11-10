@@ -68,7 +68,9 @@
     try {
       const host = global.document.referrer ? new URL(global.document.referrer).hostname.toLowerCase() : "";
       const referrerHost = host.replace(/^www\./, "").slice(0, 160);
-      if (!host) return { source: "direct", medium: "none", referrerHost: "" };
+      if (!host || host === new URL(global.location.origin).hostname) {
+        return { source: "direct", medium: "none", referrerHost: "" };
+      }
       if (/(^|\.)(chatgpt\.com|chat\.openai\.com)$/i.test(host)) return { source: "chatgpt", medium: "ai_referral", referrerHost };
       if (/(^|\.)perplexity\.ai$/i.test(host)) return { source: "perplexity", medium: "ai_referral", referrerHost };
       if (/(^|\.)gemini\.google\.com$/i.test(host)) return { source: "gemini", medium: "ai_referral", referrerHost };
@@ -88,8 +90,15 @@
     }
   }
 
-  function capture({ channel = "haode_web" } = {}) {
+  function campaignParams() {
     const params = new URLSearchParams(global.location.search);
+    const legacySeoHandoff = global.location.pathname === "/app/" && params.get("utm_source") === "seo"
+      && params.get("utm_medium") === "organic" && params.get("utm_content") === "landing_cta";
+    return legacySeoHandoff ? new URLSearchParams() : params;
+  }
+
+  function capture({ channel = "haode_web" } = {}) {
+    const params = campaignParams();
     const stored = readStored();
     const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
       .some((key) => params.has(key));
@@ -164,11 +173,14 @@
   }
 
   function decorateCurrentPage() {
-    const params = new URLSearchParams(global.location.search);
+    const params = campaignParams();
     const hasIncomingCampaign = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
       .some((key) => params.has(key));
     const storedAttribution = readStored();
-    if (!hasIncomingCampaign && !reference(storedAttribution)) return;
+    if (!hasIncomingCampaign && !reference(storedAttribution)) {
+      if (hasAnalyticsConsent() && referrerAttribution().referrerHost) capture();
+      return;
+    }
     const attribution = capture();
     global.document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach((link) => {
       decorateWhatsAppLink(link, attribution);

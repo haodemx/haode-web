@@ -36,11 +36,11 @@ test("new SEO exposure pages are indexable, tracked and connected to WhatsApp", 
     assert.ok(html.includes('meta name="robots" content="index,follow'), `${slug} is not indexable`);
     if (slug === "micas-hidrogel-mayoreo-mexico") {
       assert.ok(html.includes('href="/app/#categoria/Micas"'), `${slug} missing source-preserving App CTA`);
-      assert.ok(!html.includes("utm_source=seo"), `${slug} must not overwrite incoming attribution`);
       assert.match(html, /src="\/campaign-attribution\.js/, `${slug} missing attribution capture`);
     } else {
-      assert.ok(html.includes("utm_source=seo"), `${slug} missing tracked App CTA`);
+      assert.match(html, /data-seo-app-cta href="\/app\/#categoria\//, `${slug} missing source-preserving App CTA`);
     }
+    assert.ok(!html.includes("utm_source=seo"), `${slug} must not overwrite incoming attribution`);
     assert.match(html, /wa\.me\/523326684296/, `${slug} missing WhatsApp CTA`);
     assert.ok(graph.some((node) => node["@type"] === "CollectionPage"), `${slug} missing CollectionPage schema`);
     assert.ok(graph.some((node) => node["@type"] === "FAQPage"), `${slug} missing FAQPage schema`);
