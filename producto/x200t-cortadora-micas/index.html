@@ -90,6 +90,15 @@
   ]
 }
 </script>
+  <style data-x200t-video-style>
+    .x200t-operation-video { width: 100%; min-width: 0; margin-top: 24px; padding-top: 20px; border-top: 1px solid #e3e3e3; }
+    .x200t-operation-video h2 { font-size: clamp(20px, 2vw, 26px); line-height: 1.3; margin: 0 0 10px; }
+    .x200t-operation-video p { font-size: 15px; line-height: 1.6; margin: 0 0 14px; }
+    .x200t-operation-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 12px; background: #111; }
+    .x200t-operation-video [data-x200t-video-error] { margin-top: 12px; }
+    .x200t-operation-video a { text-decoration: underline; }
+  </style>
+  <script type="application/ld+json" data-x200t-video-schema>{"@context":"https://schema.org","@type":"VideoObject","@id":"https://haode.com.mx/producto/x200t-cortadora-micas/#operacion-x200t","name":"Cómo funciona una cortadora de micas de hidrogel | HAODE X200T","description":"Demostración de operación de la cortadora HAODE X200T: selección del modelo, lámina, corte y revisión de la pieza.","thumbnailUrl":"https://haode.com.mx/assets/products/cut-machine/x200t/haode-x200t-operacion-poster-v01.webp","contentUrl":"https://haode.com.mx/assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.mp4","embedUrl":"https://haode.com.mx/producto/x200t-cortadora-micas/#operacion-x200t","uploadDate":"2026-11-10","duration":"PT1M","inLanguage":"es-MX"}</script>
 </head>
 <body class="product-detail-page conversion-reference-page special-product-reference-page machine-product-reference-page" data-v3-detail="true" data-curated-seo>
   <header class="topbar catalog-topbar">
@@ -116,6 +125,16 @@
           <img class="detail-main-image" data-detail-main-image src="/assets/products/cut-machine/x200t/main.display.webp" alt="HAODE X200T máquina para cortar micas de hidrogel" width="1000" height="1000" loading="eager" fetchpriority="high" decoding="async" />
           <div class="detail-gallery-wrap" hidden aria-hidden="true"><h2>Galería</h2><div class="detail-gallery" data-detail-gallery></div></div>
           <div class="detail-video-wrap" hidden aria-hidden="true"><h2>Video</h2><div class="detail-videos" data-detail-videos></div></div>
+          <section class="x200t-operation-video" id="operacion-x200t" data-approved-operation-video="x200t-v01" aria-labelledby="x200t-operation-title">
+            <h2 id="x200t-operation-title">Cómo funciona una cortadora de micas de hidrogel</h2>
+            <p>Conoce la operación de la HAODE X200T: selección del modelo, lámina, corte y revisión de la pieza.</p>
+            <video data-x200t-operation controls playsinline preload="none" width="1280" height="720" poster="/assets/products/cut-machine/x200t/haode-x200t-operacion-poster-v01.webp" aria-label="Demostración de operación de la cortadora HAODE X200T">
+              <source src="/assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.mp4" type="video/mp4" />
+              <track src="/assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.vtt" kind="subtitles" srclang="es-MX" label="Español" />
+              Tu navegador no permite reproducir este video. <a href="/assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.mp4">Abrir video de operación</a>.
+            </video>
+            <p data-x200t-video-error hidden>No se pudo reproducir el video. <a href="/assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.mp4">Abrir video de operación</a>.</p>
+          </section>
         </section>
         <aside class="detail-info">
           <article class="detail-card"><p class="detail-meta" data-detail-quality>Equipo</p><p class="detail-description" data-detail-description>Máquina para cortar micas de hidrogel dirigida a tiendas, talleres y técnicos. Consulta disponibilidad y condiciones por WhatsApp.</p><div><p class="detail-price">Precio publicado</p><p class="detail-price-note" data-detail-price>Menudeo: $6,100 MXN</p></div><div class="detail-buttons"><a class="btn btn-primary" data-detail-whatsapp href="https://wa.me/523326684296?text=Hola%20HAODE%20M%C3%A9xico%2C%20quiero%20cotizar%20este%20producto%3A%0AProducto%3A%20HAODE%20X200T%20Cortadora%20Inteligente%20de%20Micas%0AReferencia%20web%3A%20x200t-cortadora-micas%0ACantidad%3A%0ACiudad%3A%0A%C2%BFMe%20pueden%20confirmar%20stock%20en%20M%C3%A9xico%2C%20precio%20por%20cantidad%2C%20garant%C3%ADa%20local%20y%20env%C3%ADo%3F" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a><a class="btn btn-secondary" href="/app/">Abrir App HAODE</a></div></article>
@@ -167,5 +186,6 @@
     <script src="/v3-screen-atlas.js?v=20260914-v3-transplant"></script>
   <script src="/products.js?v=20260813-ga4-conversions"></script>
   <script src="/detail-header.js?v=20260725-catalog-complete"></script>
+  <script src="/x200t-video.js?v=20261110-v01" defer></script>
 </body>
 </html>

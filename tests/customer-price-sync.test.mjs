@@ -125,6 +125,7 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   for (const file of [
     'scripts/sync-customer-prices.js',
     'scripts/product-media-policy.cjs',
+    'scripts/x200t-operation-video.cjs',
     'scripts/customer-price-highlights.cjs',
     'sitemap.xml',
     'data/customer-price-list-2026-11.json',
@@ -170,6 +171,9 @@ test('reapplying the customer price sync preserves named manual tiers', () => {
   }
   const republish = spawnSync(process.execPath, [path.join(root, 'scripts/sync-customer-prices.js'), '--apply', '--publish-unlisted'], { cwd: root, encoding: 'utf8' });
   assert.equal(republish.status, 0, republish.stderr || republish.stdout);
+  const machinePage = fs.readFileSync(path.join(root, 'producto/x200t-cortadora-micas/index.html'), 'utf8');
+  assert.match(machinePage, /data-approved-operation-video="x200t-v01"/);
+  assert.match(machinePage, /data-x200t-video-schema/);
   assert.doesNotMatch(fs.readFileSync(bagPage, 'utf8'), /XR Bolsa Protectora INCELL FHD/);
   for (const id of mediaIds) {
     const regenerated = fs.readFileSync(path.join(root, 'producto', id, 'index.html'), 'utf8');

@@ -1,0 +1,46 @@
+{
+  "approval_date": "2026-11-10",
+  "approval": "Owner accepted the female-voice video and confirmed publication only to the existing official X200T product page.",
+  "accepted_1080p_sha256": "bd5aa093d2b37360b22b84bcfc73c8760eea6030a37ccd078824622c5e44bf79",
+  "approved_web_sha256": "c8736b527ed5d9875f0ac613c47b992cd86975a752f7e366c43a3b8bb6df170e",
+  "original_main_image": "UNCHANGED",
+  "price_stock_ads": "UNCHANGED",
+  "assets": [
+    {
+      "web_path": "assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.mp4",
+      "sha256": "c8736b527ed5d9875f0ac613c47b992cd86975a752f7e366c43a3b8bb6df170e",
+      "bytes": 9068509,
+      "role": "PRODUCT_OPERATION_VIDEO",
+      "provenance": "SOURCE_CONFIRMED",
+      "technical_review": "QC_PASS",
+      "handoff_state": "APPROVED_FOR_WEB",
+      "product_id": "x200t-cortadora-micas",
+      "source": "Owner-supplied X200T operation footage; accepted Mexican-Spanish female-voice edit; no synthetic product imagery",
+      "website_usage": "https://haode.com.mx/producto/x200t-cortadora-micas/"
+    },
+    {
+      "web_path": "assets/products/cut-machine/x200t/haode-x200t-operacion-poster-v01.webp",
+      "sha256": "677efc5a3e5264c10af451eef4e5c8a81ba398b1ae7b7c1bf5ef880569bb08d4",
+      "bytes": 79644,
+      "role": "VIDEO_POSTER_NOT_PRODUCT_MAIN",
+      "provenance": "SOURCE_CONFIRMED",
+      "technical_review": "QC_PASS",
+      "handoff_state": "APPROVED_FOR_WEB",
+      "product_id": "x200t-cortadora-micas",
+      "source": "Owner-supplied X200T operation footage; accepted Mexican-Spanish female-voice edit; no synthetic product imagery",
+      "website_usage": "https://haode.com.mx/producto/x200t-cortadora-micas/"
+    },
+    {
+      "web_path": "assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.vtt",
+      "sha256": "9f05a8c10a34f031633feacaf806cdefdc70e359e6062151f5d78d3927907934",
+      "bytes": 805,
+      "role": "SPANISH_CAPTIONS",
+      "provenance": "SOURCE_CONFIRMED",
+      "technical_review": "QC_PASS",
+      "handoff_state": "APPROVED_FOR_WEB",
+      "product_id": "x200t-cortadora-micas",
+      "source": "Owner-supplied X200T operation footage; accepted Mexican-Spanish female-voice edit; no synthetic product imagery",
+      "website_usage": "https://haode.com.mx/producto/x200t-cortadora-micas/"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+const { withX200tOperationVideo } = require('./x200t-operation-video.cjs');
 const { mediaSafeProduct, mediaSafeHtml } = require('./product-media-policy.cjs');
 const { syncPriceHighlights } = require('./customer-price-highlights.cjs');
 const fs = require('fs');
@@ -1158,4 +1159,4 @@ main();
 
 
 
-function genericProductPage(product) { return mediaSafeHtml(unguardedGenericProductPage(mediaSafeProduct(product)), product.id); }
+function genericProductPage(product) { return withX200tOperationVideo(mediaSafeHtml(unguardedGenericProductPage(mediaSafeProduct(product)), product.id), product.id); }

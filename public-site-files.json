@@ -45,6 +45,7 @@
     "productos-ai.html",
     "productos.html",
     "products.js",
+    "x200t-video.js",
     "robots.txt",
     "script.js",
     "service-worker.js",
@@ -58,7 +59,7 @@
     "tiktoklwpc6RW5nXfj97kgUqcTEwk8XRqInKfD.txt"
   ],
   "trees": [
-    { "path": "assets", "extensions": [".avif", ".gif", ".ico", ".jpeg", ".jpg", ".mp4", ".png", ".svg", ".webm", ".webp", ".woff", ".woff2", ".ttf"] },
+    { "path": "assets", "extensions": [".avif", ".gif", ".ico", ".jpeg", ".jpg", ".mp4", ".png", ".svg", ".vtt", ".webm", ".webp", ".woff", ".woff2", ".ttf"] },
     { "path": "baterias", "extensions": [".html"] },
     { "path": "catalogo-modelos", "extensions": [".html"] },
     { "path": "categoria", "extensions": [".html", ".js"] },
