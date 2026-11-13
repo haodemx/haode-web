@@ -4,7 +4,7 @@ import test from 'node:test';
 import vm from 'node:vm';
 
 const app = fs.readFileSync(new URL('../app/app.js', import.meta.url), 'utf8');
-const start = app.indexOf('async function submitWebOrder()');
+const start = app.indexOf('async function submitWebOrder(');
 const end = app.indexOf('\nfunction singleProductWhatsappUrl', start);
 assert.ok(start >= 0 && end > start);
 
@@ -25,7 +25,7 @@ function harness(responses) {
     console: {info() {}},
   });
   vm.runInContext(app.slice(start, end), context);
-  return {events, submit: () => context.submitWebOrder()};
+  return {events, submit: () => context.submitWebOrder(context.webOrderPayload())};
 }
 
 test('new acknowledged order produces one lead without customer identifiers', async () => {
