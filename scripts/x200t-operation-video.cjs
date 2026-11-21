@@ -30,7 +30,7 @@ const HEAD = `<style data-x200t-video-style>
   description: 'Demostración de operación de la cortadora HAODE X200T: selección del modelo, lámina, corte y revisión de la pieza.',
   thumbnailUrl: `https://haode.com.mx${POSTER}`, contentUrl: `https://haode.com.mx${VIDEO}`,
   embedUrl: 'https://haode.com.mx/producto/x200t-cortadora-micas/#operacion-x200t',
-  uploadDate: '2026-11-10', duration: 'PT1M', inLanguage: 'es-MX'
+  uploadDate: '2026-11-10T17:53:10-06:00', duration: 'PT1M', inLanguage: 'es-MX'
 })}</script>`;
 
 function withX200tOperationVideo(html, productId) {

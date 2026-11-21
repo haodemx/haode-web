@@ -81,6 +81,7 @@ test('approved video survives product generation idempotently and never modifies
   assert.doesNotMatch(next, /autoplay|<track[^>]+default/);
   const schema = JSON.parse(next.match(/data-x200t-video-schema>(.*?)<\/script>/s)[1]);
   assert.equal(schema.duration, 'PT1M');
+  assert.equal(schema.uploadDate, '2026-11-10T17:53:10-06:00');
   assert.equal(schema.contentUrl, 'https://haode.com.mx/assets/products/cut-machine/x200t/haode-x200t-operacion-es-mx-v01.mp4');
   assert.throws(() => withX200tOperationVideo('<html></html>', 'x200t-cortadora-micas'), /requires/);
 });
