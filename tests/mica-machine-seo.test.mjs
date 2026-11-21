@@ -18,6 +18,7 @@ test('machine category targets the measured hydrogel-machine searches', () => {
   assert.match(html, /meta name="description" content="Cortadora de micas de hidrogel[^"]*"/);
   assert.match(html, /meta property="og:title" content="Cortadora de micas de hidrogel para tiendas/);
   assert.match(html, /href="\/producto\/x200t-cortadora-micas\/"/);
+  assert.match(html, /href="\/mx5t7-290-cortadora-micas\/"/);
   assert.doesNotMatch(html, /30,000 modelos/);
 });
 
@@ -35,6 +36,33 @@ test('X200T page has exact machine intent and valid product schema', () => {
     .find((schema) => schema['@type'] === 'Product');
   assert.equal(productSchema.name, 'HAODE X200T Cortadora Inteligente de Micas');
   assert.equal(productSchema.category, 'Máquinas de hidrogel');
+});
+
+test('MX5T7-290 page publishes confirmed discovery facts without commercial promises', () => {
+  const html = read('mx5t7-290-cortadora-micas/index.html');
+  assert.match(html, /<title>MX5T7-290 cortadora de micas de hidrogel \| HAODE<\/title>/);
+  assert.match(html, /rel="canonical" href="https:\/\/haode\.com\.mx\/mx5t7-290-cortadora-micas\/"/);
+  assert.match(html, /<h1>MX5T7-290 cortadora inteligente de micas<\/h1>/);
+  assert.doesNotMatch(html, /\/assets\/products\/cut-machine\/mx5t7-290\//);
+  assert.match(html, /src="\/analytics\.js/);
+  assert.match(html, /src="\/campaign-attribution\.js/);
+  assert.match(html, /wa\.me\/523326684296/);
+
+  const graph = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
+    .flatMap((match) => {
+      const block = JSON.parse(match[1]);
+      return block['@graph'] || [block];
+    });
+  const page = graph.find((node) => node['@type'] === 'WebPage');
+  const faq = graph.find((node) => node['@type'] === 'FAQPage');
+  assert.match(page.about.name, /MX5T7-290/);
+  assert.ok(graph.some((node) => node['@type'] === 'BreadcrumbList'));
+  assert.ok(!graph.some((node) => ['Product', 'Offer'].includes(node['@type'])));
+  assert.equal(faq.mainEntity.length, 3);
+  for (const question of faq.mainEntity) {
+    assert.ok(html.includes(`<h3>${question.name}</h3><p>${question.acceptedAnswer.text}</p>`));
+  }
+  assert.doesNotMatch(html, /garantía de|disponible ahora|en stock/i);
 });
 
 test('four official MICA pages target hidrogel without changing master names', () => {
@@ -65,12 +93,17 @@ test('sitemap exposes the machine and MICA landing paths with current release da
   assert.match(sitemap, /<loc>https:\/\/haode\.com\.mx\/categoria\/maquinas-de-hidrogel\/<\/loc>\s*<lastmod>2026-08-21<\/lastmod>/);
   const urls = [
     'https://haode.com.mx/producto/x200t-cortadora-micas/',
+    'https://haode.com.mx/mx5t7-290-cortadora-micas/',
     'https://haode.com.mx/micas-hidrogel-mayoreo-mexico/',
     'https://haode.com.mx/micas-hidrogel-marca-propia/',
     ...productPages.map(([, , canonical]) => canonical),
   ];
   for (const url of urls) {
-    const lastmod = url.endsWith('/micas-hidrogel-mayoreo-mexico/') ? '2026-10-23' : '2026-09-18';
+    const lastmod = url.endsWith('/mx5t7-290-cortadora-micas/')
+      ? '2026-11-21'
+      : url.endsWith('/micas-hidrogel-mayoreo-mexico/')
+        ? '2026-10-23'
+        : '2026-09-18';
     assert.match(sitemap, new RegExp(`<loc>${url.replaceAll('.', '\\\.')}</loc>\\s*<lastmod>${lastmod}</lastmod>`));
   }
 });

@@ -34,7 +34,8 @@ jobs:
 
   critical-business-gate:
     needs: haode-check
-    runs-on: ubuntu-latest
+    # Keep the runner on an OS supported by the locked Playwright version.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -177,7 +178,7 @@ jobs:
   live-verify:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: deploy-pages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v6

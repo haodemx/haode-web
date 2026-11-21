@@ -5,6 +5,7 @@ const baseURL = (process.env.BASE_URL || 'http://127.0.0.1:4197').replace(/\/$/,
 const routes = [
   ['/categoria/maquinas-de-hidrogel/', 'Cortadora de micas de hidrogel para tiendas'],
   ['/producto/x200t-cortadora-micas/', 'HAODE X200T Cortadora Inteligente de Micas'],
+  ['/mx5t7-290-cortadora-micas/', 'MX5T7-290 cortadora inteligente de micas'],
   ['/producto/mica-hd/', 'MICA HD'],
   ['/producto/mica-matte/', 'MICA MATTE'],
   ['/producto/mica-privacidad-hd/', 'MICA PRIVACIDAD HD'],
@@ -29,6 +30,11 @@ for (const [route, heading] of routes) {
 test('machine and MICA pages provide crawlable links in both directions', async ({ page }) => {
   await page.goto(`${baseURL}/categoria/maquinas-de-hidrogel/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('a[href="/producto/x200t-cortadora-micas/"]').first()).toBeVisible();
+  await expect(page.locator('a[href="/mx5t7-290-cortadora-micas/"]').first()).toBeVisible();
+
+  await page.goto(`${baseURL}/mx5t7-290-cortadora-micas/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('a[href="/categoria/maquinas-de-hidrogel/"]').first()).toBeVisible();
+  await expect(page.locator('a[href="/micas-hidrogel-mayoreo-mexico/"]').first()).toBeVisible();
 
   await page.goto(`${baseURL}/producto/x200t-cortadora-micas/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('a[href="/categoria/maquinas-de-hidrogel/"]').first()).toBeVisible();
@@ -37,6 +43,32 @@ test('machine and MICA pages provide crawlable links in both directions', async 
   await page.goto(`${baseURL}/producto/mica-hd/`, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('a[href="/micas-hidrogel-mayoreo-mexico/"]').first()).toBeVisible();
 });
+
+for (const analytics of [true, false]) {
+  test(`MX5T7-290 WhatsApp quote respects analytics consent (${analytics})`, async ({ page }) => {
+    const route = '/mx5t7-290-cortadora-micas/';
+    await page.route('https://www.googletagmanager.com/**', (request) =>
+      request.fulfill({ contentType: 'application/javascript', body: '' }));
+    await page.route('https://*.google-analytics.com/**', (request) => request.abort());
+    await page.route('https://wa.me/**', (request) => request.abort());
+    await page.addInitScript((analytics) => {
+      localStorage.setItem('haode-privacy-consent-v1', JSON.stringify({ version: 1, analytics, advertising: false }));
+    }, analytics);
+    await page.goto(`${baseURL}${route}?utm_source=google`, { waitUntil: 'domcontentloaded' });
+    const quote = page.getByRole('link', { name: 'Cotizar MX5T7-290', exact: true });
+    const destination = new URL(await quote.getAttribute('href'));
+    expect(destination.origin + destination.pathname).toBe('https://wa.me/523326684296');
+    expect(destination.searchParams.get('text')).toMatch(/Modelo: MX5T7-290\nCantidad:\nCiudad:/);
+    await quote.evaluate((link) => link.addEventListener('click', (event) => event.preventDefault(), { once: true }));
+    await quote.click();
+    const contacts = await page.evaluate(() => (window.dataLayer || []).map((event) => Array.from(event))
+      .filter(([kind, name]) => kind === 'event' && name === 'contact'));
+    expect(contacts).toHaveLength(analytics ? 1 : 0);
+    if (analytics) {
+      expect(contacts[0][2]).toMatchObject({ method: 'whatsapp', attribution_source: 'google', page_path: route });
+    }
+  });
+}
 
 test('candidate pricing keeps the four approved named tiers after client rendering', async ({ page }) => {
   const expected = [
