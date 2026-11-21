@@ -68,6 +68,7 @@ const STATIC_SEO_URLS = [
   '/fundas-celular-mayoreo-mexico/',
   '/micas-hidrogel-mayoreo-mexico/',
   '/micas-hidrogel-marca-propia/',
+  '/mx5t7-290-cortadora-micas/',
   '/refacciones-celulares-mayoreo-mexico/',
   '/guia-ia-haode-mexico/',
 ];

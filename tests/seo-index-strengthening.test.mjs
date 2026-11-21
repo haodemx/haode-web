@@ -133,6 +133,7 @@ test('priority landing pages expose every published canonical product route', ()
     '/producto/mica-privacidad-hd/',
     '/producto/mica-privacidad-matte/',
     '/producto/x200t-cortadora-micas/',
+    '/mx5t7-290-cortadora-micas/',
   ];
   const glassesRoutes = [
     '/ai-smart-glasses-s1.html',
@@ -147,7 +148,7 @@ test('priority landing pages expose every published canonical product route', ()
 
   const micaNodes = jsonLdBlocks(micas).flatMap((block) => block['@graph'] || [block]);
   const glassesNodes = jsonLdBlocks(glasses).flatMap((block) => block['@graph'] || [block]);
-  assert.equal(micaNodes.find((node) => node['@type'] === 'ItemList')?.numberOfItems, 5);
+  assert.equal(micaNodes.find((node) => node['@type'] === 'ItemList')?.numberOfItems, 6);
   assert.equal(glassesNodes.find((node) => node['@type'] === 'CollectionPage')?.mainEntity?.itemListElement?.length, 5);
   assert.match(micas, /id="guia-hidrogel"/);
   assert.match(glasses, /id="guia-gafas-ai"/);
