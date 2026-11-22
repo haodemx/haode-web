@@ -22209,3 +22209,26 @@ body.maquinas-entry-page .zay-floating {
 body.maquinas-entry-page .zay-orange {
   background: #c9360c !important;
 }
+
+/* Keep the two AI catalog quote surfaces readable in the existing color system. */
+body:is(.gafas-entry-page, .camaras-entry-page) .section-kicker {
+  color: #8b4a14;
+}
+
+body:is(.gafas-entry-page, .camaras-entry-page) .reference-conversion-strip {
+  border-color: #d9d9d3;
+  background: #f8f8f6;
+}
+
+body:is(.gafas-entry-page, .camaras-entry-page) .reference-conversion-strip span {
+  border-color: #d9d9d3;
+  background: transparent;
+}
+
+body:is(.gafas-entry-page, .camaras-entry-page) .reference-conversion-strip small {
+  color: #4f4f4b;
+}
+
+body:is(.gafas-entry-page, .camaras-entry-page) .reference-conversion-panel {
+  background: #101012 !important;
+}

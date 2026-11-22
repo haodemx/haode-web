@@ -255,11 +255,15 @@
     if (!link) return;
     const attribution = capture();
     decorateWhatsAppLink(link, attribution);
+    const productId = link.getAttribute("data-product-whatsapp") || "";
+    const isPublicProductId = /^[a-z0-9]+(?:-[a-z0-9]+)+$/.test(productId)
+      && productId.length <= 100 && !/\d{10,}/.test(productId.replace(/-/g, ""));
     const tracked = global.HaodeAnalytics?.event?.("contact", {
       method: "whatsapp",
       ...analyticsParameters(attribution),
       page_path: global.location.pathname || "/",
-      contact_area: contactArea(link)
+      contact_area: contactArea(link),
+      ...(isPublicProductId ? { product_id: productId } : {})
     });
     if (tracked) {
       contactTrackedEvents.add(event);

@@ -163,3 +163,26 @@ test('llms.txt follows the v2 discovery format and links to concise markdown sou
     assert.match(markdown, /HAODE/);
   }
 });
+
+test('AI glasses and LK-007 are discoverable from their published catalog entry points', () => {
+  const glasses = read('categoria/gafas-inteligentes-ai/index.html');
+  const cameras = read('categoria/camaras-inteligentes/index.html');
+  const hub = read('productos-ai/index.html');
+  const llms = read('llms.txt');
+  const sitemap = read('sitemap.xml');
+  const collection = parseJsonLd('categoria/gafas-inteligentes-ai/index.html')
+    .find((node) => node['@type'] === 'CollectionPage');
+  for (const model of ['m08', 'm89', 'm95']) {
+    const route = `/producto/gafas-ai-gafas-ai-${model}/`;
+    assert.ok(glasses.includes(`href="${route}"`), route);
+    assert.ok(collection.mainEntity.itemListElement.some(({ url }) => url === `https://haode.com.mx${route}`), route);
+    assert.ok(sitemap.includes(`<loc>https://haode.com.mx${route}</loc>`), route);
+  }
+  const camera = '/producto/lk-007-camara-digital-4k/';
+  assert.ok(cameras.includes(`href="${camera}"`));
+  assert.ok(hub.includes(`href="${camera}"`));
+  for (const route of ['/categoria/camaras-inteligentes/', camera]) {
+    assert.ok(llms.includes(`https://haode.com.mx${route}`), route);
+    assert.ok(sitemap.includes(`<loc>https://haode.com.mx${route}</loc>`), route);
+  }
+});

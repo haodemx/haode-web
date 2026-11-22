@@ -141,6 +141,9 @@ test('priority landing pages expose every published canonical product route', ()
     '/ai-smart-glasses-aimb-g5.html',
     '/ai-smart-glasses-w610.html',
     '/ai-smart-glasses-w630.html',
+    '/producto/gafas-ai-gafas-ai-m08/',
+    '/producto/gafas-ai-gafas-ai-m89/',
+    '/producto/gafas-ai-gafas-ai-m95/',
   ];
 
   for (const route of micaRoutes) assert.match(micas, new RegExp(`href=["']${route}["']`));
@@ -149,7 +152,10 @@ test('priority landing pages expose every published canonical product route', ()
   const micaNodes = jsonLdBlocks(micas).flatMap((block) => block['@graph'] || [block]);
   const glassesNodes = jsonLdBlocks(glasses).flatMap((block) => block['@graph'] || [block]);
   assert.equal(micaNodes.find((node) => node['@type'] === 'ItemList')?.numberOfItems, 6);
-  assert.equal(glassesNodes.find((node) => node['@type'] === 'CollectionPage')?.mainEntity?.itemListElement?.length, 5);
+  assert.deepEqual(
+    glassesNodes.find((node) => node['@type'] === 'CollectionPage')?.mainEntity?.itemListElement?.map(({ url }) => url),
+    glassesRoutes.map((route) => `${SITE_URL}${route}`)
+  );
   assert.match(micas, /id="guia-hidrogel"/);
   assert.match(glasses, /id="guia-gafas-ai"/);
 });
