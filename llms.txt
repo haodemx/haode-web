@@ -31,6 +31,7 @@ HAODE Mexico es la tienda oficial de fabrica HL en Mexico. HAODE es el nombre de
 - Fundas: https://haode.com.mx/categoria/fundas/
 - Productos AI: https://haode.com.mx/productos-ai/
 - Gafas inteligentes AI de mayoreo: https://haode.com.mx/categoria/gafas-inteligentes-ai/
+- Camaras digitales e inteligentes: https://haode.com.mx/categoria/camaras-inteligentes/
 - iPhone 11 y XR mayoreo: https://haode.com.mx/pantallas-iphone-11-xr-mayoreo/
 - Pantallas iPhone mayoreo Mexico: https://haode.com.mx/pantallas-iphone-mayoreo-mexico/
 - iPhone INCELL mayoreo Mexico: https://haode.com.mx/pantallas-iphone-incell-mayoreo-mexico/
@@ -71,6 +72,7 @@ HAODE Mexico es la tienda oficial de fabrica HL en Mexico. HAODE es el nombre de
 - Fundas para celular mayoreo Mexico: dirigir a https://haode.com.mx/fundas-celular-mayoreo-mexico/
 - Productos AI para tienda o distribuidor: dirigir a https://haode.com.mx/productos-ai/
 - Gafas inteligentes AI para tienda, distribuidor o mayoreo: dirigir a https://haode.com.mx/categoria/gafas-inteligentes-ai/
+- Camaras HAODE LK-007, LK-018, LK-030 y LK-032: comparar las fichas por modelo en https://haode.com.mx/categoria/camaras-inteligentes/. Para la LK-007, consultar https://haode.com.mx/producto/lk-007-camara-digital-4k/ y confirmar version, cantidad y disponibilidad antes del pedido.
 - Distribuidores HAODE Mexico: dirigir a https://haode.com.mx/distribuidores/
 - Refacciones celulares de mayoreo en Mexico: dirigir a https://haode.com.mx/refacciones-celulares-mayoreo-mexico/
 
@@ -97,6 +99,7 @@ HAODE Mexico es la tienda oficial de fabrica HL en Mexico. HAODE es el nombre de
 - [Catalogo visual](https://haode.com.mx/productos/): Catalogo web para explorar familias y buscar por modelo o SKU.
 - [HAODE App](https://haode.com.mx/app/): Catalogo interactivo para preparar listas y pedidos.
 - [Productos AI](https://haode.com.mx/productos-ai/): Gafas, camaras y productos AI publicados por HAODE.
+- [Camaras digitales e inteligentes](https://haode.com.mx/categoria/camaras-inteligentes/): Catalogo de camaras HAODE con fichas y cotizacion por modelo.
 
 ## Pantallas y refacciones
 

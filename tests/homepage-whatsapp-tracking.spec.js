@@ -104,3 +104,35 @@ test("shared detail header tracks a warranty WhatsApp click without manual page 
     page_path: "/garantia/",
   }));
 });
+
+for (const [path, productId] of [
+  ["/categoria/gafas-inteligentes-ai/", "aimb-g5-ai-sports"],
+  ["/categoria/camaras-inteligentes/", "lk-007-camara-digital-4k"],
+]) {
+  test(`${productId} category quote sends one consent-aware GA4 contact with the public model ID`, async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("haode-privacy-consent-v1", JSON.stringify({ version: 1, analytics: true, advertising: false }));
+    });
+    await page.goto(`${BASE_URL}${path}?utm_source=google`);
+    await page.waitForFunction(() => Boolean(window.HaodeCampaign && window.HaodeAnalytics));
+    await page.evaluate(() => {
+      window.__haodeTrackedEvents = [];
+      window.gtag = (...args) => window.__haodeTrackedEvents.push(args);
+      document.addEventListener("click", (event) => {
+        if (event.target.closest('a[href*="wa.me"]')) event.preventDefault();
+      }, true);
+    });
+    await page.locator(`[data-product-whatsapp="${productId}"]`).click();
+    const events = await page.evaluate(() => window.__haodeTrackedEvents
+      .filter(([kind, name]) => kind === "event" && name === "contact"));
+    expect(events).toHaveLength(1);
+    expect(events[0][2]).toEqual(expect.objectContaining({
+      method: "whatsapp",
+      contact_area: "product",
+      product_id: productId,
+      attribution_source: "google",
+      page_path: path,
+    }));
+    expect(JSON.stringify(events)).not.toMatch(/wa\.me|quiero|523326684296/i);
+  });
+}
