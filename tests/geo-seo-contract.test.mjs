@@ -102,8 +102,11 @@ test('llms.txt maps high-intent GEO searches to canonical HAODE pages', () => {
     '/categoria/pantallas/',
     '/categoria/iphone-incell/',
     '/categoria/iphone-oled/',
+    '/categoria/oled-diagnostica/',
     '/categoria/samsung-incell/',
     '/categoria/samsung-oled/',
+    '/categoria/samsung-tipo-original/',
+    '/categoria/samsung-plegables/',
     '/micas.html',
     '/categoria/maquinas-de-hidrogel/',
     '/mx5t7-290-cortadora-micas/',
@@ -116,6 +119,20 @@ test('llms.txt maps high-intent GEO searches to canonical HAODE pages', () => {
   assert.match(llms, /Intenciones de busqueda recomendadas/);
   for (const route of routes) {
     assert.ok(llms.includes(`https://haode.com.mx${route}`), `missing llms route: ${route}`);
+  }
+});
+
+test('screen GEO routes distinguish diagnostic OLED and direct buyers to the foldables catalog', () => {
+  const llms = read('llms.txt');
+  const sitemap = read('sitemap.xml');
+  const diagnostic = 'https://haode.com.mx/categoria/oled-diagnostica/';
+  const foldables = 'https://haode.com.mx/categoria/samsung-plegables/';
+
+  assert.match(llms, /Pantallas diagnostico para iPhone:[^\r\n]*\/categoria\/oled-diagnostica\/[^\r\n]*No confundir con el modo diagnostico/);
+  assert.match(llms, /Samsung Z Flip y Z Fold:[^\r\n]*\/categoria\/samsung-plegables\/[^\r\n]*\/pantallas-samsung-zflip-zfold-original-mexico\//);
+  for (const [url, page] of [[diagnostic, 'categoria/oled-diagnostica/index.html'], [foldables, 'categoria/samsung-plegables/index.html']]) {
+    assert.ok(sitemap.includes(`<loc>${url}</loc>`), `${url} missing from sitemap`);
+    assert.ok(read(page).includes(`rel="canonical" href="${url}"`), `${url} is not self-canonical`);
   }
 });
 

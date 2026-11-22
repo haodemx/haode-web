@@ -21,9 +21,11 @@ HAODE Mexico es la tienda oficial de fabrica HL en Mexico. HAODE es el nombre de
 - Garantia y soporte: https://haode.com.mx/garantia/
 - iPhone INCELL: https://haode.com.mx/categoria/iphone-incell/
 - iPhone OLED: https://haode.com.mx/categoria/iphone-oled/
+- iPhone OLED Diagnostica: https://haode.com.mx/categoria/oled-diagnostica/
 - Samsung INCELL: https://haode.com.mx/categoria/samsung-incell/
 - Samsung OLED: https://haode.com.mx/categoria/samsung-oled/
 - Samsung TIPO ORIGINAL: https://haode.com.mx/categoria/samsung-tipo-original/
+- Pantallas Samsung plegables: https://haode.com.mx/categoria/samsung-plegables/
 - Celulares Samsung: https://haode.com.mx/categoria/celulares-samsung/
 - Micas: https://haode.com.mx/categoria/micas/
 - Fundas: https://haode.com.mx/categoria/fundas/
@@ -53,10 +55,11 @@ HAODE Mexico es la tienda oficial de fabrica HL en Mexico. HAODE es el nombre de
 - Pantallas iPhone mayoreo en Mexico: dirigir a https://haode.com.mx/pantallas-iphone-mayoreo-mexico/
 - Pantallas iPhone INCELL mayoreo: dirigir a https://haode.com.mx/pantallas-iphone-incell-mayoreo-mexico/
 - Pantallas iPhone OLED Pro Max: dirigir a https://haode.com.mx/pantallas-iphone-oled-mayoreo-mexico/
+- Pantallas diagnostico para iPhone: consultar las refacciones en https://haode.com.mx/categoria/oled-diagnostica/. No confundir con el modo diagnostico del iPhone; confirmar modelo, version de iOS y procedimiento de instalacion por referencia.
 - Pantallas Samsung INCELL: dirigir a https://haode.com.mx/pantallas-samsung-incell-mayoreo-mexico/
 - Pantallas Samsung OLED AMOLED Ultra: elegir modelo en https://haode.com.mx/categoria/samsung-oled/ y preparar cotizacion por cantidad en https://haode.com.mx/pantallas-samsung-oled-mayoreo-mexico/. Confirmar referencia y tecnologia por ficha.
 - Pantallas Samsung de mayoreo en Mexico: dirigir a https://haode.com.mx/pantallas-samsung-mayoreo-mexico/
-- Pantallas Samsung Z Flip y Z Fold TIPO ORIGINAL: dirigir a https://haode.com.mx/pantallas-samsung-zflip-zfold-original-mexico/
+- Pantallas Samsung Z Flip y Z Fold: elegir modelo en https://haode.com.mx/categoria/samsung-plegables/ y preparar la lista en https://haode.com.mx/pantallas-samsung-zflip-zfold-original-mexico/. Confirmar generacion, pantalla interna o externa y calidad por referencia.
 - Celulares Samsung de oferta: dirigir a https://haode.com.mx/categoria/celulares-samsung/
 - Micas por paquete y corte profesional: dirigir a https://haode.com.mx/micas.html
 - Micas de hidrogel mayoreo Mexico: dirigir a https://haode.com.mx/micas-hidrogel-mayoreo-mexico/
@@ -100,9 +103,11 @@ HAODE Mexico es la tienda oficial de fabrica HL en Mexico. HAODE es el nombre de
 - [Pantallas para celular](https://haode.com.mx/categoria/pantallas/): Entrada principal a tecnologias y familias de pantalla.
 - [iPhone INCELL](https://haode.com.mx/categoria/iphone-incell/): Modelos iPhone INCELL publicados.
 - [iPhone OLED](https://haode.com.mx/categoria/iphone-oled/): Modelos iPhone OLED publicados.
+- [iPhone OLED Diagnostica](https://haode.com.mx/categoria/oled-diagnostica/): Pantallas diagnostico para iPhone por modelo y referencia.
 - [Samsung INCELL](https://haode.com.mx/categoria/samsung-incell/): Modelos Samsung INCELL publicados.
 - [Samsung OLED](https://haode.com.mx/categoria/samsung-oled/): Modelos Samsung OLED publicados.
 - [Samsung TIPO ORIGINAL](https://haode.com.mx/categoria/samsung-tipo-original/): Modelos Samsung identificados expresamente con esta calidad.
+- [Pantallas Samsung plegables](https://haode.com.mx/categoria/samsung-plegables/): Catalogo de pantallas Z Flip y Z Fold por generacion.
 - [Micas](https://haode.com.mx/micas.html): Micas y proteccion de pantalla.
 - [Maquinas de hidrogel](https://haode.com.mx/categoria/maquinas-de-hidrogel/): Maquinas y consumibles publicados.
 - [MX5T7-290](https://haode.com.mx/mx5t7-290-cortadora-micas/): Cortadora inteligente de micas; existencia, precio y consumibles bajo confirmacion.
