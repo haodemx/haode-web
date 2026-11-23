@@ -40,17 +40,17 @@ for(const mode of ['stalled-request','stalled-body'])test(`quotation retry recov
  await page.evaluate(()=>window.quoteAudit.finish());
  await page.locator('[data-whatsapp-link]').click();
  const audit=await page.evaluate(()=>({opens:window.quoteAudit.opens,requests:window.quoteAudit.requests}));
- expect(audit.opens).toBe(3);expect(audit.requests).toHaveLength(2);
- expect(audit.requests[1].key).toBe(audit.requests[0].key);
- expect(audit.requests[1].payload).toEqual(audit.requests[0].payload);
+ expect(audit.opens).toBe(3);expect(audit.requests).toHaveLength(1);
+ expect(audit.requests).toEqual(pending.requests);
+ expect(audit.requests[0].key).toBe(audit.requests[0].payload.client_request_id);
 });
 for(const mode of ['success','network-error','http-error','popup-error'])test(`quotation remains usable after ${mode}`,async({page})=>{
  await ready(page,mode);
  await page.locator('[data-whatsapp-link]').click();
  await page.locator('[data-whatsapp-link]').click();
  const audit=await page.evaluate(()=>window.quoteAudit);
- expect(audit.opens).toBe(2);expect(audit.requests).toHaveLength(mode==='popup-error'?1:2);
- if(audit.requests.length===2)expect(audit.requests[1].key).toBe(audit.requests[0].key);
+ expect(audit.opens).toBe(2);expect(audit.requests).toHaveLength(1);
+ expect(audit.requests[0].key).toBe(audit.requests[0].payload.client_request_id);
 });
 test('a changed cart uses a separate request identity while an earlier acknowledgement is pending',async({page})=>{
  await ready(page,'stalled-request');await page.clock.install();
